@@ -8,7 +8,7 @@ CREATE TABLE Persona
 	fecha_nacimiento DATETIME not null,
 	sexo_masculino bit not null,
 	telefono numeric(10),
-	correo varchar(30),
+	correo varchar(40),
 	calle varchar(40),
 	examen_audiometria bit not null,
 	implante_coclear bit not null,
@@ -50,7 +50,7 @@ CREATE TABLE Delegacion
 (
 	ID_delegacion INT IDENTITY PRIMARY KEY,
 	nombre varchar(30) not null,
-	ID_municipio INT
+	ID_municipio INT not null
 )
 
 
@@ -104,8 +104,8 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Estudiado
 	DROP TABLE Estudiado
 CREATE TABLE Estudiado
 (
-	ID_institucionEducativa INT,
-	ID_nivelEducativo INT,
+	ID_institucionEducativa INT not null,
+	ID_nivelEducativo INT not null,
 	ano numeric(4) not null
 )
 
@@ -121,8 +121,62 @@ CREATE TABLE Periodo
 )
 
 
+--Creacion tabla: LocalizaInstitucionEducativa
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'LocalizaInstitucionEducativa')
+	DROP TABLE LocalizaInstitucionEducativa
+CREATE TABLE LocalizaInstitucionEducativa
+(
+	ID_institucionEducativa INT not null,
+	ID_colonia INT not null
+)
 
 
+--Creacion tabla: Empleo
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Empleo')
+	DROP TABLE Empleo
+CREATE TABLE Empleo
+(
+	ID_empleo INT IDENTITY PRIMARY KEY,
+	descripcion varchar(40) not null,
+	nombre_compania varchar(50) not null,
+	correo varchar(40) not null,
+	telefono numeric(10) not null,
+	calle varchar(50) not null,
+	interpretacion_LSM bit not null,
+	ID_areaTrabajo INT not null
+)
+
+
+--Creacion tabla: Sueldo
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Sueldo')
+    DROP TABLE Sueldo
+CREATE TABLE Sueldo
+(
+    ID_sueldo INT IDENTITY PRIMARY KEY,
+    minimo numeric(10, 2) not null,
+    maximo numeric(10, 2) not null
+)
+
+
+--Creacion tabla: Gana
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Gana')
+    DROP TABLE Gana
+CREATE TABLE Gana
+(
+    ID_empleo INT not null,
+    ID_sueldo INT not null,
+    ano numeric(4) not null
+)
+
+--Creacion table: TieneEmpleo
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TieneEmpleo')
+    DROP TABLE TieneEmpleo
+CREATE TABLE TieneEmpleo
+(
+    CURP numeric(18) not null,
+    ID_empleo INT not null,
+    ano numeric(4) not null
+)
 
 --Contraint (PERSONA)
 ALTER TABLE Persona ADD CONSTRAINT llavePersona PRIMARY KEY(CURP)
@@ -147,4 +201,3 @@ ALTER TABLE TieneNivelEducativo ADD CONSTRAINT llaveTieneNivelEducativo
 --Constraint(ESTUDIADO)
 ALTER TABLE Estudiado ADD CONSTRAINT llaveEstudiado
 			 PRIMARY KEY (ID_institucionEducativa, ID_nivelEducativo, ano)
-
