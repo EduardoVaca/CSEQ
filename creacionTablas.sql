@@ -32,6 +32,16 @@ CREATE TABLE Censo
 	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo)
 )
 
+--Creacion tabla: PerteneceCenso
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'PerteneceCenso')
+	DROP TABLE PerteneceCenso
+CREATE TABLE PerteneceCenso
+(
+	CURP char(18) not null,
+	ID_censo INT not null,
+	CONSTRAINT llavePerteneceCenso PRIMARY KEY (CURP, ID_censo)
+)
+
 
 --Creacion tabla: Colonia
 IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Colonia')
@@ -198,53 +208,252 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TieneEmpl
     DROP TABLE TieneEmpleo
 CREATE TABLE TieneEmpleo
 (
-    CURP numeric(18) not null,
+    CURP char(18) not null,
     ID_empleo INT not null,
     ID_censo INT not null,
     CONSTRAINT llaveTieneEmpleo PRIMARY KEY (CURP, ID_empleo, ID_censo)
 )
---CONSTRAINTS DE LLAVES FORANEAS
 
---Contraint (PERSONA)
-ALTER TABLE Persona ADD CONSTRAINT cfPersonaID_periodo FOREIGN KEY (ID_periodo) REFERENCES Periodo (ID_periodo)
+--Creacion table: LocalizaEmpleo
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'LocalizaEmpleo')
+	DROP TABLE LocalizaEmpleo
+CREATE TABLE LocalizaEmpleo
+(
+	ID_empleo INT not null,
+	ID_colonia INT not null,
+	CONSTRAINT llaveLocalizaEmpleo PRIMARY KEY (ID_empleo, ID_colonia)
+)
 
---Constraint (COLONIA)
-ALTER TABLE Colonia ADD CONSTRAINT cfColoniaID_delegacion FOREIGN KEY (ID_delegacion) REFERENCES Delegacion (ID_delegacion)
 
---Constraint (VIVE)
-ALTER TABLE Vive ADD CONSTRAINT cfViveCURP FOREIGN KEY (CURP) REFERENCES Persona (CURP)
-ALTER TABLE Vive ADD CONSTRAINT cfViveID_colonia FOREIGN KEY (ID_colonia) REFERENCES Colonia (ID_colonia)
-ALTER TABLE Vive ADD CONSTRAINT cfViveID_censo FOREIGN KEY (ID_censo) REFERENCES Censo (ID_censo)
 
---Constarint (DELEGACION)
-ALTER TABLE Delegacion ADD CONSTRAINT cfDelegacionID_municipio FOREIGN KEY (ID_municipio) REFERENCES Municipio (ID_municipio)
+--Creacion tabla: AreaTrabajo
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'AreaTrabajo')
+	DROP TABLE AreaTrabajo
+CREATE TABLE AreaTrabajo
+(
+ ID_areaTrabajo INT IDENTITY(1,1) not null,
+ nombre varchar(20) not null,
+ CONSTRAINT llaveAreaTrabajo PRIMARY KEY(ID_areaTrabajo)
+)
 
---Constraint (TIENENIVELEDUCATIVO)
-ALTER TABLE TieneNivelEducativo ADD CONSTRAINT cfTieneNivelEducativoCURP FOREIGN KEY (CURP) REFERENCES Persona (CURP)
-ALTER TABLE TieneNivelEducativo ADD	CONSTRAINT cfTieneNivelEducativoID_nivelEducativo FOREIGN KEY (ID_nivelEducativo) 
-								REFERENCES NivelEducativo (ID_nivelEducativo)
-ALTER TABLE TieneNivelEducativo ADD	CONSTRAINT cfTieneNivelEducativoID_censo FOREIGN KEY (ID_censo) REFERENCES Censo (ID_censo)
 
---Constraint(ESTUDIADO)
-ALTER TABLE Estudiado ADD CONSTRAINT cfEstudiadoID_institucionEducativa FOREIGN KEY (ID_institucionEducativa) 
-					  REFERENCES InstitucionEducativa (ID_institucionEducativa)
-ALTER TABLE Estudiado ADD CONSTRAINT cfEstudiadoID_nivelEducativo FOREIGN KEY (ID_nivelEducativo) REFERENCES NivelEducativo (ID_nivelEducativo)
+--Creacion tabla: LenguaDominante
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'LenguaDominante')
+	DROP TABLE LenguaDominante
+CREATE TABLE LenguaDominante
+(
+	ID_lenguaDominante INT IDENTITY(1,1) not null,
+	nombre varchar(20),
+	CONSTRAINT llaveLenguaDominante PRIMARY KEY (ID_lenguaDominante)
+)
 
---Constraint(LOCALIZAINSTITUCIONEDUCATIVA)
-ALTER TABLE LocalizaInstitucionEducativa ADD CONSTRAINT cfLocalizaInstitucionEducativaID_institucionEducativa FOREIGN KEY (ID_institucionEducativa)
-										 REFERENCES InstitucionEducativa (ID_institucionEducativa)
-ALTER TABLE LocalizaInstitucionEducativa ADD CONSTRAINT cfLocalizaInstitucionEducativaID_colonia FOREIGN KEY (ID_colonia)
-										 REFERENCES Colonia (ID_colonia)							
+--Creacion tabla: TieneLenguaDominante
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TieneLenguaDominante')
+	DROP TABLE TieneLenguaDominante
+CREATE TABLE TieneLenguaDominante
+(
+	CURP char(18) not null,
+	ID_lenguaDominante INT not null,
+	ID_censo INT not null,
+	CONSTRAINT llaveTieneLenguaDominante PRIMARY KEY (CURP, ID_lenguaDominante, ID_censo)
+)
 
---Constraint(EMPLEO)
---ALTER TABLE Empleo ADD CONSTRAINT cfEmpleoID_areaTrabajo FOREIGN KEY (ID_areaTrabajo) REFERENCES AreaTrabajo (ID_areaTrabajo)	
 
---Constrant (GANA)
-ALTER TABLE Gana ADD CONSTRAINT cfGanaID_empleo FOREIGN KEY (ID_empleo) REFERENCES Empleo (ID_empleo)
-ALTER TABLE Gana ADD CONSTRAINT cfGanaID_sueldo FOREIGN KEY (ID_sueldo) REFERENCES Sueldo (ID_sueldo)
-ALTER TABLE Gana ADD CONSTRAINT cfGanaID_censo FOREIGN KEY (ID_censo) REFERENCES Censo (ID_censo)	
+--Creacion tabla: NivelEspanol
+IF EXISTS ( SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'NivelEspanol')
+	DROP TABLE NivelEspanol
+CREATE TABLE NivelEspanol
+(
+	ID_nivelEspanol INT IDENTITY(1,1) not null,
+	nivel varchar(10) not null,
+	CONSTRAINT llaveNivelEspanol PRIMARY KEY (ID_nivelEspanol)
+)
 
---Constraint (TIENEEMPLEO)
-ALTER TABLE TieneEmpleo ADD CONSTRAINT cfTieneEmpleoCURP FOREIGN KEY (CURP) REFERENCES Persona (CURP)
-ALTER TABLE TieneEmpleo ADD CONSTRAINT cfTieneEmpleoID_empleo FOREIGN KEY (ID_empleo) REFERENCES Empleo (ID_empleo)							 
-ALTER TABLE TieneEmpleo ADD CONSTRAINT cfTieneEmpleoID_censo FOREIGN KEY (ID_censo) REFERENCES Censo (ID_censo)
+--Creacion tabla: TieneNivelEspanol
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TieneNivelEspanol')
+	DROP TABLE TieneNivelEspanol
+CREATE TABLE TieneNivelEspanol
+(
+	CURP char(18) not null,
+	ID_nivelEspanol INT not null,
+	ID_censo INT not null,
+	CONSTRAINT llaveTieneNivelEspanol PRIMARY KEY (CURP, ID_nivelEspanol, ID_censo)
+)
+
+--Creacion tabla: NivelIngles
+IF EXISTS( SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'NivelIngles')
+	DROP TABLE NivelIngles
+CREATE TABLE NivelIngles
+(
+	ID_nivelIngles INT IDENTITY(1,1) not null,
+	nivel varchar(10) not null,
+	CONSTRAINT llaveNivelIngles PRIMARY KEY (ID_nivelIngles)
+)
+
+--Creacion tabla: TieneNivelIngles
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TieneNivelIngles')
+	DROP TABLE TieneNivelIngles
+CREATE TABLE TieneNivelIngles
+(
+	CURP char(18) not null,
+	ID_nivelIngles INT not null,
+	ID_censo INT not null,
+	CONSTRAINT llaveTieneNivelIngles PRIMARY KEY (CURP, ID_nivelIngles, ID_censo)
+)
+
+--Creacion tabla: NivelLSM
+IF EXISTS( SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'NivelLSM')
+	DROP TABLE NivelLSM
+CREATE TABLE NivelLSM
+(
+	ID_nivelLSM INT IDENTITY(1,1) not null,
+	nivel varchar(10) not null,
+	CONSTRAINT llaveNivelLSM PRIMARY KEY (ID_nivelLSM)
+)
+
+
+--Creacion tabla: TieneNivelLSM
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'TieneNivelLSM')
+	DROP TABLE TieneNivelLSM
+CREATE TABLE TieneNivelLSM
+(
+	CURP char (18) not null,
+	ID_nivelLSM INT not null,
+	ID_censo INT not null,
+	CONSTRAINT llaveTieneNivelLSM PRIMARY KEY (CURP, ID_nivelLSM,ID_censo)
+)
+
+
+
+--Creacion tabla: EstadoCivil
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'EstadoCivil')
+	DROP TABLE EstadoCivil
+CREATE TABLE EstadoCivil
+(
+	ID_estadoCivil INT IDENTITY(1,1) not null,
+	nombre varchar(10) not null,
+	CONSTRAINT llaveEstadoCivil PRIMARY KEY (ID_estadoCivil)
+)
+
+
+--Creacion tabla: TieneEstadoCivil
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'TieneEstadoCivil')
+	DROP TABLE TieneEstadoCivil
+CREATE TABLE TieneEstadoCivil
+(
+	CURP char (18) not null,
+	ID_estadoCivil INT not null,
+	ID_Censo INT not null,
+	CONSTRAINT llaveTieneEstadoCivil PRIMARY KEY (CURP, ID_estadoCivil, ID_Censo)
+)
+
+
+--Creacion tabla: AparatoAuditivo
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'AparatoAuditivo')
+	DROP TABLE AparatoAuditivo
+CREATE TABLE AparatoAuditivo
+(
+	ID_aparatoAuditivo INT IDENTITY (1,1) not null,
+	tipo varchar (20) not null,
+	ID_marca INT not null,
+	CONSTRAINT llaveAparatoAuditivo PRIMARY KEY (ID_aparatoAuditivo)
+)
+
+
+--Creacion tabla: PoseeAparatoAuditivo
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'PoseeAparatoAuditivo')
+	DROP TABLE PoseeAparatoAuditivo
+CREATE TABLE PoseeAparatoAuditivo
+(
+	CURP char(18) not null,
+	ID_aparatoAuditivo INT not null,
+	ID_censo INT not null,
+	modelo varchar(20),
+	CONSTRAINT llavePoseeAparatoAuditivo PRIMARY KEY (CURP, ID_aparatoAuditivo, ID_censo, modelo)
+)
+
+--Creacion tabla: Marca
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Marca')
+	DROP TABLE Marca
+CREATE TABLE Marca
+(
+	ID_marca INT IDENTITY(1,1) not null,
+	nombre varchar(20) not null,
+	CONSTRAINT llaveMarca PRIMARY KEY (ID_marca)
+)
+
+--Creacion tabla: Hijo
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'Hijo')
+	DROP TABLE Hijo
+CREATE TABLE Hijo
+(
+	ID_hijo INT IDENTITY (1,1) not null,
+	nombre varchar(50) not null,	
+	sexo_masculino bit not null,
+	fecha_nacimiento DATETIME not null,
+	sordo bit not null,
+	CURP char (18) not null,
+	CONSTRAINT llaveHijo PRIMARY KEY (ID_hijo)
+)
+
+--Creacion tabla: PerdidaAuditiva
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'PerdidaAuditiva')
+	DROP TABLE PerdidaAuditiva
+CREATE TABLE PerdidaAuditiva
+(
+	ID_perdidaAuditiva INT IDENTITY(1,1) not null,
+	tipo varchar(30) not null,
+	CONSTRAINT llavePerdidaAuditiva PRIMARY KEY (ID_perdidaAuditiva)
+)
+
+--Creacion tabla: TienePerdidaAuditiva
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TienePerdidaAuditiva')
+	DROP TABLE TienePerdidaAuditiva
+CREATE TABLE TienePerdidaAuditiva
+(
+	CURP char(18) not null,
+	ID_perdidaAuditiva INT not null,
+	prelinguistica bit not null,
+	CONSTRAINT llaveTienePerdidaAuditiva PRIMARY KEY (CURP, ID_perdidaAuditiva)
+)
+
+--Creacion tabla: Causa
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'Causa')
+	DROP TABLE Causa
+CREATE TABLE Causa
+(
+	ID_causa INT IDENTITY (1,1) not null,
+	causa varchar (20) not null,
+	CONSTRAINT llaveCausa PRIMARY KEY (ID_causa)
+)
+
+--Creacion tabla: Causado
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Causado')
+	DROP TABLE Causado
+CREATE TABLE Causado
+(
+	ID_perdidaAuditiva INT not null,
+	ID_causa INT not null,
+	CONSTRAINT llaveCausado PRIMARY KEY (ID_perdidaAuditiva, ID_causa)
+)
+
+--Creacion tabla: Grado
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'Grado')
+	DROP TABLE Grado
+CREATE TABLE Grado
+(
+	ID_grado INT IDENTITY (1,1) not null,
+	grado varchar (40) not null,
+	CONSTRAINT llaveGrado PRIMARY KEY (ID_grado)
+)
+
+--Creacion tabla: EsGrado
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'EsGrado')
+	DROP TABLE EsGrado
+CREATE TABLE EsGrado
+(
+	ID_perdidaAuditiva INT not null,
+	ID_grado INT not null,
+	CONSTRAINT llaveEsGrado PRIMARY KEY (ID_perdidaAuditiva, ID_grado)
+)
+
