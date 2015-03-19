@@ -199,8 +199,8 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Sueldo')
 CREATE TABLE Sueldo
 (
     ID_sueldo INT IDENTITY(1,1) not null,
-    minimo numeric(10, 2) not null,
-    maximo numeric(10, 2) not null,
+    minimo varchar(20) not null,
+    maximo varchar(20) not null,
     CONSTRAINT llaveSueldo PRIMARY KEY (ID_sueldo)
 )
 
