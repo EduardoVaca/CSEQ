@@ -1,19 +1,19 @@
 curp,nombre,fecha_nacmineto,sexo_Masculino,telefono móvil,correo,calle,examen_audiometria,implante_coclear,comunidad_indigena,alergia,enfermedad,mexicano,INE/IFE,ID_periodo
-VAGC950414HDFCRR04,Eduardo Vaca Guerra,14/04/1995,0,4271171443,vacalalo@gmail.com,San Salvador #15,1,1,1,1,1,0,0,0
-AIHA901204HQTRNL06,Alejandro Arriaga Hinojosa,04/12/1990,0,4423971753,alexs.hinojosa@gmail.com,Circuito Palma Cocotera 2120 Interior 40,0,1,1,1,1,0,0,0
-TOVJ900623HQTSGN06,Juan Toscano Vega,23/06/1990,0,4421778688,toscano.vega@gmail.com,Fray Francisco Frejes 135,0,1,1,1,1,0,0,0
-GASL961129MDFLNR07,Larissa Gallardo Santana,29/11/1996,1,4422596960,,Boulevard de los gobernadores 1004 Int. 42,0,1,1,1,1,0,0,0
-LAGA840806HQTNTL07,Alejandro Landaverde Gutierrez,06/08/1984,0,4423055073,,Calle la Peñita 106,0,1,1,1,1,0,0,0
-HEMK940716MQTRJR00,Karen Daniela Hernandez Mejia,16/07/1994,1,4424370001,danielahmj@gmail.com,Privada Azalea #4 Condominio las Flores II,0,1,1,1,1,0,0,0
-HEMK940331HDFRRV09,Kevin Herrera Martiñon,31/03/1994,0,4422053498,kevinherrera15155@hotmail.com,San Gregorio #106,0,1,1,1,0,0,1,0
-NULA820316HQTXRB08,Jose Abraham Nuñez Larracilla,16/03/1982,0,4422716391,,Avenida 21 de marzo #117,0,1,1,0,1,0,0,0
-AAVL670302HDFLZS04,Jose Luis Aldape Vazquez,02/03/1967,0,4423616177,pixel.26@hotmail.com,Boulevard Diamante #310,0,0,1,1,1,0,0,0
-MAZA891110MQTRVL00,Alma Olivia Martinez Zavala,10/11/1989,1,4423368351,alma.olivia1089@gmail.com,Cerezo #221 fracc. Puerta de Belen,0,1,1,1,1,0,0,0
-ROVF950515MQTSLR05,Frida Marlyn Rosas Villa,15/05/1995,1,4423368351,marlyn_love@hotmail.es,Rio Bravo #21 Col. El pocito,0,0,1,1,1,0,0,0
-AORJ861224HQTCCS02,JESUS BERNARDO ACOSTA RICO ,24/12/1986,0,4424073576,bern_benny1987@hotmail.com,lacandones 410 col. Cerrito coloardo,0,1,1,1,1,0,0,0
-AURE970220HQTGDL06,ELIEL NATANAEL AGUILAR RODRIGUEZ,20/02/1997,0,4425420985,natanael.aquilar97@hotmail.com,Perla # 402 Paseos del pedregal,0,1,1,1,1,0,1,0
-OITB950630MDFRRR17,BRENDA ORTIZ TORRES,30/06/1995,1,4422028989,veronicatorres67@hotmail.com,Av. del jacal #955 int 36 residencial casa magna,0,1,1,1,1,0,1,0
-VEBJ960504HQTLRS01,JESUS ADRIAN VELAZQUEZ BARRON ,04/05/1996,0,4421278014,adrian_ironman@hotmail.com,Juan Bermudez #103 Col. Lazaro Cardenas,0,0,1,1,1,0,0,0
-EAMJ970710HQTSRS08,JESUS OSWALDO ESTRADA MARTINEZ ,10/07/1997,0,4423736371,JESUUS-MESSI10@HOTMAIL.COM ,Segunda privada de Rio San Pedro 5# menchaca 3,0,1,1,1,1,0,1,0
-CILA970518HOCRPD02,ADAN DE JESUS CRISPIN LOPEZ,18/05/1997,0,4423642019,adan1954@live.com.mx,PORTAL QUEMADO 3-3 LOMAS SAN PEDRITO PEÑUELAS ,0,0,1,1,1,0,0,0
-FEFJ950828MQTRCS06,JESSICA FERNANDEZ FACIO ,28/08/1995,1,4421040774,JESSYFACIO_17@HOTMAIL.COM.,CALLE AHUZOTL ACCESO 22 # 1 CASACOL. DESARROLLO SAN PABLO,0,1,1,1,1,0,0,0
+VAGC950414HDFCRR04,Eduardo Vaca Guerra,14/04/1995,1,4271171443,vacalalo@gmail.com,San Salvador #15,0,0,0,0,0,1,1,1
+AIHA901204HQTRNL06,Alejandro Arriaga Hinojosa,04/12/1990,1,4423971753,alexs.hinojosa@gmail.com,Circuito Palma Cocotera 2120 Interior 40,1,0,0,0,0,1,1,2
+TOVJ900623HQTSGN06,Juan Toscano Vega,23/06/1990,1,4421778688,toscano.vega@gmail.com,Fray Francisco Frejes 135,1,0,0,0,0,1,1,3
+GASL961129MDFLNR07,Larissa Gallardo Santana,29/11/1996,0,4422596960,,Boulevard de los gobernadores 1004 Int. 42,1,0,0,0,0,1,1,4
+LAGA840806HQTNTL07,Alejandro Landaverde Gutierrez,06/08/1984,1,4423055073,,Calle la Peñita 106,1,0,0,0,0,1,1,5
+HEMK940716MQTRJR00,Karen Daniela Hernandez Mejia,16/07/1994,0,4424370001,danielahmj@gmail.com,Privada Azalea #4 Condominio las Flores II,1,0,0,0,0,1,1,6
+HEMK940331HDFRRV09,Kevin Herrera Martiñon,31/03/1994,1,4422053498,kevinherrera15155@hotmail.com,San Gregorio #106,1,0,0,0,1,1,0,7
+NULA820316HQTXRB08,Jose Abraham Nuñez Larracilla,16/03/1982,1,4422716391,,Avenida 21 de marzo #117,1,0,0,1,0,1,1,8
+AAVL670302HDFLZS04,Jose Luis Aldape Vazquez,02/03/1967,1,4423616177,pixel.26@hotmail.com,Boulevard Diamante #310,1,1,0,0,0,1,1,1
+MAZA891110MQTRVL00,Alma Olivia Martinez Zavala,10/11/1989,0,4423368351,alma.olivia1089@gmail.com,Cerezo #221 fracc. Puerta de Belen,1,0,0,0,0,1,1,2
+ROVF950515MQTSLR05,Frida Marlyn Rosas Villa,15/05/1995,0,4423368351,marlyn_love@hotmail.es,Rio Bravo #21 Col. El pocito,1,1,0,0,0,1,1,3
+AORJ861224HQTCCS02,JESUS BERNARDO ACOSTA RICO ,24/12/1986,1,4424073576,bern_benny1987@hotmail.com,lacandones 410 col. Cerrito coloardo,1,0,0,0,0,1,1,5
+AURE970220HQTGDL06,ELIEL NATANAEL AGUILAR RODRIGUEZ,20/02/1997,1,4425420985,natanael.aquilar97@hotmail.com,Perla # 402 Paseos del pedregal,1,0,0,0,0,1,0,6
+OITB950630MDFRRR17,BRENDA ORTIZ TORRES,30/06/1995,0,4422028989,veronicatorres67@hotmail.com,Av. del jacal #955 int 36 residencial casa magna,1,0,0,0,0,1,0,7
+VEBJ960504HQTLRS01,JESUS ADRIAN VELAZQUEZ BARRON ,04/05/1996,1,4421278014,adrian_ironman@hotmail.com,Juan Bermudez #103 Col. Lazaro Cardenas,1,1,0,0,0,1,1,8
+EAMJ970710HQTSRS08,JESUS OSWALDO ESTRADA MARTINEZ ,10/07/1997,1,4423736371,JESUUS-MESSI10@HOTMAIL.COM ,Segunda privada de Rio San Pedro 5# menchaca 3,1,0,0,0,0,1,0,1
+CILA970518HOCRPD02,ADAN DE JESUS CRISPIN LOPEZ,18/05/1997,1,4423642019,adan1954@live.com.mx,PORTAL QUEMADO 3-3 LOMAS SAN PEDRITO PEÑUELAS ,1,1,0,0,0,1,1,2
+FEFJ950828MQTRCS06,JESSICA FERNANDEZ FACIO ,28/08/1995,0,4421040774,JESSYFACIO_17@HOTMAIL.COM.,CALLE AHUZOTL ACCESO 22 # 1 CASACOL. DESARROLLO SAN PABLO,1,0,0,0,0,1,1,3
