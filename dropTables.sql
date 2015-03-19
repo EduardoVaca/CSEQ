@@ -1,3 +1,4 @@
+--DESTRUCCION DE TABLAS
 DROP TABLE AparatoAuditivo
 DROP TABLE AreaTrabajo
 DROP TABLE Causa

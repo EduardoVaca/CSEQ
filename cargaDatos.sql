@@ -1,3 +1,4 @@
+--CARGA DE DATOS
 --Carga de PERIODO
 BULK INSERT BDequipo4.BDequipo4.[Periodo]
 	FROM 'e:\wwwroot\BDequipo4\periodo.csv'
