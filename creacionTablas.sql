@@ -147,6 +147,7 @@ CREATE TABLE Estudiado
 (
 	ID_institucionEducativa INT not null,
 	ID_nivelEducativo INT not null,
+	CURP char (18) not null,
 	ano numeric(4),
 	CONSTRAINT llaveEstudiado PRIMARY KEY (ID_institucionEducativa, ID_nivelEducativo, ano)
 )
@@ -470,3 +471,56 @@ CREATE TABLE EsGrado
 	CONSTRAINT llaveEsGrado PRIMARY KEY (ID_perdidaAuditiva, ID_grado)
 )
 
+
+--SECCION DE ROLES
+
+--Creacion tabla: Usuario
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Usuario')
+	DROP TABLE Usuario
+CREATE TABLE Usuario
+(
+	login varchar(30) not null,
+	password varchar(30) not null,
+	CONSTRAINT llaveUsuario PRIMARY KEY (login)
+)
+
+-- Creacion tabla: Rol
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Rol')
+	DROP TABLE Rol
+CREATE TABLE Rol
+(
+	ID_rol INT IDENTITY (1,1) not null,
+	nombre varchar (40) not null,
+	CONSTRAINT llaveRol PRIMARY KEY (ID_rol)
+)
+
+-- Creacion tabla: TieneRol
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TieneRol')
+	DROP TABLE TieneRol
+CREATE TABLE TieneRol
+(
+	login varchar(30) not null,
+	ID_rol INT not null,
+	CONSTRAINT llaveTieneRol PRIMARY KEY (login, ID_rol)
+)
+
+--Creacion tabla: Privilegio
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Privilegio')
+	DROP TABLE Privilegio
+CREATE TABLE Privilegio
+(
+	ID_privilegio INT IDENTITY (1,1) not null,
+	nombre varchar(50) not null,
+	descripcion varchar(100),
+	CONSTRAINT llavePrivilegio PRIMARY KEY (ID_privilegio)
+)
+
+--Creacion tabla: IncluyePrivilegio
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'IncluyePrivilegio')
+	DROP TABLE IncluyePrivilegio
+CREATE TABLE IncluyePrivilegio
+(
+	ID_rol INT not null,
+	ID_privilegio INT not null,
+	CONSTRAINT llaveIncluyePrivilegio PRIMARY KEY (ID_rol, ID_privilegio)
+)

@@ -28,6 +28,7 @@ ALTER TABLE TieneNivelEducativo ADD	CONSTRAINT cfTieneNivelEducativoID_censo FOR
 ALTER TABLE Estudiado ADD CONSTRAINT cfEstudiadoID_institucionEducativa FOREIGN KEY (ID_institucionEducativa) 
 					  REFERENCES InstitucionEducativa (ID_institucionEducativa)
 ALTER TABLE Estudiado ADD CONSTRAINT cfEstudiadoID_nivelEducativo FOREIGN KEY (ID_nivelEducativo) REFERENCES NivelEducativo (ID_nivelEducativo)
+ALTER TABLE Estudiado ADD CONSTRAINT cfEstudiadoCURP FOREIGN KEY (CURP) REFERENCES Persona (CURP)
 
 --Constraint(LOCALIZAINSTITUCIONEDUCATIVA)
 ALTER TABLE LocalizaInstitucionEducativa ADD CONSTRAINT cfLocalizaInstitucionEducativaID_institucionEducativa FOREIGN KEY (ID_institucionEducativa)
@@ -130,3 +131,15 @@ ALTER TABLE EsGrado ADD CONSTRAINT cfEsGradoID_perdidaAuditiva FOREIGN KEY (ID_p
 					REFERENCES PerdidaAuditiva (ID_perdidaAuditiva)
 ALTER TABLE EsGrado ADD CONSTRAINT cfEsGradoID_grado FOREIGN KEY (ID_grado)
 					REFERENCES Grado (ID_grado)
+
+--Constarint (TieneRol)
+ALTER TABLE TieneRol ADD CONSTRAINT cfTieneRolLogin FOREIGN KEY (login)
+					 REFERENCES Usuario (login)
+ALTER TABLE TieneRol ADD CONSTRAINT cfTieneRolID_rol FOREIGN KEY (ID_rol)
+					 REFERENCES Rol (ID_rol)
+
+--Constraint (IncluyePrivilegio)
+ALTER TABLE IncluyePrivilegio ADD CONSTRAINT cfIncluyePrivilegioID_rol FOREIGN KEY (ID_rol)
+							  REFERENCES Rol (ID_rol)
+ALTER TABLE IncluyePrivilegio ADD CONSTRAINT cfIncluyePrivilegioID_privilegio FOREIGN KEY (ID_privilegio)
+							  REFERENCES Privilegio (ID_privilegio)							  					 

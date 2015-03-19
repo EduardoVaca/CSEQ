@@ -13,6 +13,7 @@ DROP TABLE Estudiado
 DROP TABLE Gana
 DROP TABLE Grado
 DROP TABLE Hijo
+DROP TABLE IncluyePrivilegio
 DROP TABLE InstitucionEducativa
 DROP TABLE LenguaDominante
 DROP TABLE LocalizaEmpleo
@@ -27,7 +28,9 @@ DROP TABLE PerdidaAuditiva
 DROP TABLE Periodo
 DROP TABLE Persona
 DROP TABLE PerteneceCenso
+DROP TABLE Privilegio
 DROP TABLE PoseeAparatoAuditivo
+DROP TABLE Rol
 DROP TABLE Sueldo
 DROP TABLE TieneEmpleo
 DROP TABLE TieneEstadoCivil
@@ -37,4 +40,5 @@ DROP TABLE TieneNivelEspanol
 DROP TABLE TieneNivelIngles
 DROP TABLE TieneNivelLSM
 DROP TABLE TienePerdidaAuditiva
+DROP TABLE TieneRol
 DROP TABLE Vive
