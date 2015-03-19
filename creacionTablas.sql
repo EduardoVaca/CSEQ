@@ -50,7 +50,8 @@ CREATE TABLE Colonia
 (
 	ID_colonia INT IDENTITY(1,1) not null,
 	nombre varchar(30) not null,
-	ID_Delegacion INT,
+	ID_delegacion INT,
+	ID_municipio INT not null,
 	CONSTRAINT llaveColonia PRIMARY KEY (ID_colonia)
 )
 
@@ -74,7 +75,18 @@ CREATE TABLE Municipio
 (
 	ID_municipio INT IDENTITY(1,1) not null,
 	nombre varchar(20) not null,
+	ID_estado INT not null,
 	CONSTRAINT llaveMunicipio PRIMARY KEY (ID_municipio)
+)
+
+-- Creacion tabla: Estado
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Estado')
+	DROP TABLE Estado
+CREATE TABLE Estado
+(
+	ID_estado INT IDENTITY(1,1) not null,
+	nombre varchar(20) not null,
+	CONSTRAINT llaveEstado PRIMARY KEY (ID_estado)
 )
 
 
