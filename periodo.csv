@@ -1,8 +1,9 @@
-Nacimiento,Perdida congénita de audición / desarrollo intrauterino
-Infancia,Nacimiento - 7 años de edad
-Niñez,7 - 11 años de edad
-Adolescencia,11 - 16 años de edad
-Juventud,16 - 25 años de edad
-Adultez,25 - 65 años de edad
-Tercera Edad,65 años en adelante
-No lo se,No lo se
+id_periodo,periodo,descripcion
+0,Nacimiento,Perdida congénita de audición/desarrollo intreuterino
+0,Infancia,Nacimiento - 7 años de edad
+0,Niñez,7 - 11 años de edad
+0,Adolescencia,11 - 16 años de edad
+0,Juventud,16 - 25 años de edad
+0,Adultez,25 - 65 años de edad
+0,Tercera Edad,65 años en adelante
+0,No lo se,No lo se
