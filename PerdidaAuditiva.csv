@@ -1,5 +1,6 @@
-Pérdida Auditiva Conductiva,Oído externo - medio
-Pérdida Auditiva Neurosensorial,Oído interno
-Pérdida Auditiva Mixta,Oído medio - interno
-Pérdida Auditiva Retrococlear,Oído interno / nervio auditivo
-No lo se,
+id_perdida,tipo,descripcion
+0,Pérdida Auditiva Conductiva,Oído externo - medio
+0,Pérdida Auditiva Neurosensorial,Oído interno
+0,Pérdida Auditiva Mixta,Oído medio - interno
+0,Pérdida Auditiva Retrococlear,Oído interno / nervio auditivo
+0,No lo se,

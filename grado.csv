@@ -1,5 +1,6 @@
-Pérdida Auditiva Leve,Umbral entre 20 y 40  dB
-Pérdida Auditiva Media,Umbral entre 40 y 70 dB
-Pérdida Auditiva Severa,Umbral entre 70 y 90 dB
-Pérdida Auditiva Profunda,Umbral superior a 90 dB 
-Pérdida Auditiva Total,Cofosis
+idgrado,grado,descripcion
+0,Pérdida Auditiva Leve,Umbral entre 20 y 40  dB
+0,Pérdida Auditiva Media,Umbral entre 40 y 70 dB
+0,Pérdida Auditiva Severa,Umbral entre 70 y 90 dB
+0,Pérdida Auditiva Profunda,Umbral superior a 90 dB 
+0,Pérdida Auditiva Total,Cofosis
