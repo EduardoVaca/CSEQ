@@ -5,17 +5,17 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Persona')
 CREATE TABLE Persona
 (
 	CURP char(18) not null,
-	nombre varchar(50) not null,
+	nombre varchar(80) not null,
 	fecha_nacimiento DATETIME not null,
 	sexo_masculino bit not null,
 	telefono numeric(10),
-	correo varchar(40),
-	calle varchar(40),
+	correo varchar(60),
+	calle varchar(80),
 	examen_audiometria bit not null,
 	implante_coclear bit not null,
 	comunidad_indigena bit not null,
 	alergia bit not null,
-	enfermedad bit not null,
+	enfermedad bit,
 	mexicano bit not null,
 	credencialIFE bit not null,
 	ID_periodo INT not null,
@@ -49,8 +49,8 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Colonia')
 CREATE TABLE Colonia
 (
 	ID_colonia INT IDENTITY(1,1) not null,
-	nombre varchar(30) not null,
-	ID_delegacion INT,
+	nombre varchar(40) not null,
+	ID_Delegacion INT,
 	ID_municipio INT not null,
 	CONSTRAINT llaveColonia PRIMARY KEY (ID_colonia)
 )
@@ -74,7 +74,7 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Municipio
 CREATE TABLE Municipio
 (
 	ID_municipio INT IDENTITY(1,1) not null,
-	nombre varchar(20) not null,
+	nombre varchar(30) not null,
 	ID_estado INT not null,
 	CONSTRAINT llaveMunicipio PRIMARY KEY (ID_municipio)
 )
@@ -85,7 +85,7 @@ IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Estado')
 CREATE TABLE Estado
 (
 	ID_estado INT IDENTITY(1,1) not null,
-	nombre varchar(20) not null,
+	nombre varchar(30) not null,
 	CONSTRAINT llaveEstado PRIMARY KEY (ID_estado)
 )
 
@@ -96,7 +96,7 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Delegacio
 CREATE TABLE Delegacion
 (
 	ID_delegacion INT IDENTITY(1,1) not null,
-	nombre varchar(30) not null,
+	nombre varchar(40) not null,
 	ID_municipio INT not null,
 	CONSTRAINT llaveDelegacion PRIMARY KEY (ID_delegacion)
 )
@@ -119,10 +119,10 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Instituci
 CREATE TABLE InstitucionEducativa
 (
 	ID_institucionEducativa INT IDENTITY(1,1) not null,
-	nombre varchar(50) not null,
-	calle varchar(50),
+	nombre varchar(90) not null,
+	calle varchar(80),
 	telefono numeric(10),
-	correo varchar(30),
+	correo varchar(70),
 	privada bit not null,
 	especializada bit not null,
 	CONSTRAINT llaveInstitucionEducativa PRIMARY KEY (ID_institucionEducativa)
@@ -159,7 +159,7 @@ CREATE TABLE Periodo
 (
 	ID_periodo INT IDENTITY (1,1) not null,
 	periodo varchar(30) not null,
-	descripcion varchar(40) not null,
+	descripcion varchar(80),
 	CONSTRAINT llavePeriodo PRIMARY KEY (ID_periodo)
 )
 
@@ -181,12 +181,12 @@ IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Empleo')
 CREATE TABLE Empleo
 (
 	ID_empleo INT IDENTITY(1,1) not null,
-	descripcion varchar(40) not null,
+	descripcion varchar(80) not null,
 	nombre_compania varchar(50) not null, 
-	correo varchar(40),
+	correo varchar(80),
 	telefono numeric(10),
-	calle varchar(50),
-	interpretacion_LSM bit not null,
+	calle varchar(80),
+	interpretacion_LSM bit,
 	ID_areaTrabajo INT not null,
 	CONSTRAINT llaveEmpleo PRIMARY KEY (ID_empleo)
 )
@@ -237,14 +237,13 @@ CREATE TABLE LocalizaEmpleo
 )
 
 
-
 --Creacion tabla: AreaTrabajo
 IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'AreaTrabajo')
 	DROP TABLE AreaTrabajo
 CREATE TABLE AreaTrabajo
 (
  ID_areaTrabajo INT IDENTITY(1,1) not null,
- nombre varchar(20) not null,
+ nombre varchar(60) not null,
  CONSTRAINT llaveAreaTrabajo PRIMARY KEY(ID_areaTrabajo)
 )
 
@@ -255,7 +254,7 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'LenguaDom
 CREATE TABLE LenguaDominante
 (
 	ID_lenguaDominante INT IDENTITY(1,1) not null,
-	nombre varchar(20),
+	nombre varchar(40),
 	CONSTRAINT llaveLenguaDominante PRIMARY KEY (ID_lenguaDominante)
 )
 
@@ -366,7 +365,7 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'AparatoAu
 CREATE TABLE AparatoAuditivo
 (
 	ID_aparatoAuditivo INT IDENTITY (1,1) not null,
-	tipo varchar (20) not null,
+	tipo varchar (60) not null,
 	ID_marca INT not null,
 	CONSTRAINT llaveAparatoAuditivo PRIMARY KEY (ID_aparatoAuditivo)
 )
@@ -380,7 +379,7 @@ CREATE TABLE PoseeAparatoAuditivo
 	CURP char(18) not null,
 	ID_aparatoAuditivo INT not null,
 	ID_censo INT not null,
-	modelo varchar(20),
+	modelo varchar(30),
 	CONSTRAINT llavePoseeAparatoAuditivo PRIMARY KEY (CURP, ID_aparatoAuditivo, ID_censo, modelo)
 )
 
@@ -400,7 +399,7 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'Hijo')
 CREATE TABLE Hijo
 (
 	ID_hijo INT IDENTITY (1,1) not null,
-	nombre varchar(50) not null,	
+	nombre varchar(80) not null,	
 	sexo_masculino bit not null,
 	fecha_nacimiento DATETIME not null,
 	sordo bit not null,
@@ -414,7 +413,8 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'PerdidaAu
 CREATE TABLE PerdidaAuditiva
 (
 	ID_perdidaAuditiva INT IDENTITY(1,1) not null,
-	tipo varchar(30) not null,
+	tipo varchar(50) not null,
+	descripcion varchar(50),
 	CONSTRAINT llavePerdidaAuditiva PRIMARY KEY (ID_perdidaAuditiva)
 )
 
@@ -435,7 +435,7 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.Tables WHERE TABLE_NAME = 'Causa')
 CREATE TABLE Causa
 (
 	ID_causa INT IDENTITY (1,1) not null,
-	causa varchar (20) not null,
+	causa varchar (50) not null,
 	CONSTRAINT llaveCausa PRIMARY KEY (ID_causa)
 )
 
@@ -456,6 +456,7 @@ CREATE TABLE Grado
 (
 	ID_grado INT IDENTITY (1,1) not null,
 	grado varchar (40) not null,
+	descripcion varchar(60),
 	CONSTRAINT llaveGrado PRIMARY KEY (ID_grado)
 )
 
