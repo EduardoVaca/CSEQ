@@ -1,0 +1,10 @@
+ID_empleo,descripcion,nombre_compañia,correo,telefono ,calle,Interpretacion_LSM,ID_areaTrabajo
+0,Programador de applicaciones Android,Google Inc.,support@google.com,4423567,Mountain View #54,TRUE,0
+0,Archivo general,Dirección Estatal de Archivo,,442 216 6728,Madero #70 Pte.,FALSE,0
+0,Pintor,Crown Industrias Montacargas,crown@queretaroindustrial.com,442 296 0210,Avenida la Noria #107,FALSE,0
+0,Técnico operador cnc,MABE,http://www.mabe.com.mx,01 442 211 4646,"Avenida 5 de Febrero, no. 406",FALSE,0
+0,Artesano,Jati,angeles@jati.com.mx,442 270 2981,5 de mayo #70,FALSE,0
+0,Marcador y biselador de lentes/Operador de máquina,DISTRIBUIDORA ÓPTICA LOFRANCE ,francisco.lofrance@hotmail.com,442 193 5020,Calle Hidalgo #198,FALSE,0
+0,Ensamblado,Crown Industrias Montacargas,crown@queretaroindustrial.com,442 296 0210,Avenida la Noria #107,FALSE,0
+0,Operador de Máquina,Crown Industrias Montacargas,crown@queretaroindustrial.com,442 296 0210,Avenida la Noria #107,FALSE,0
+0,Auxiliar de Almácen,CAMCA,acpibq@bernardoquintana.com,442 213 5542,Avenida Cañada #31,FALSE,0

@@ -1,0 +1,11 @@
+ID_InstitucionEducativa,nombre,calle,telefono,correo,privada,especializada
+0,Tecnologico de Monterrey,Epigmenio Gonzalez #500,4422383100,www.qro.itesm.mx,TRUE,FALSE
+0,Anáhuac Querétaro,Circuito Universidades  No. 1 km 7 Fracción 2,442 245 6742,gosasuna@anahuacqro.com,TRUE,FALSE
+0,Colegio de Bachilleres del Estado de Querétaro #3,Avenida Constituyentes #35 Oriente,442 291 9400,hectorgm@e.cobaq.edu.mx,FALSE,TRUE
+0,Cetis #105,Carretera a Tlacote S/N el Bajo km 3.5,442 216 7633,,FALSE,TRUE
+0,Universidad Politécnica de Santa Rosa de Jáuregi,Km 31 + 150 Carretera Federal #57 Qro-SLP,442 196 1300,se@upsrj.edu.mx,FALSE,TRUE
+0,Universidad Autónoma de Querétaro,Cerro de las Campanas S/N,442 192 1200,,FALSE,FALSE
+0,Instituto Foredma,Luis M. Vega y Monroy No. 511,442 248 4395,foredma@prodigy.net.mx,TRUE,FALSE
+0,CAM Hellen Keller,Silente S/N,442 216 7633 / 442 248 5973,,FALSE,TRUE
+0,Centenaria y Benemérita Escuela Normal del Estado de Querétaro Andrés Balvanera )(CBENEQ),San Mateo S/N,442 214 4741 / 442 214 4941,www.cbeneq.edu.mx,FALSE,FALSE
+0,New Port High School,Boulevard Universitario #502-D,442 962 0697,info@newporthighschool.mx,TRUE,FALSE
