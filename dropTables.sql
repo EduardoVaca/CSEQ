@@ -42,4 +42,5 @@ DROP TABLE TieneNivelIngles
 DROP TABLE TieneNivelLSM
 DROP TABLE TienePerdidaAuditiva
 DROP TABLE TieneRol
+DROP TABLE Usuario
 DROP TABLE Vive

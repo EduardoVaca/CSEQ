@@ -51,7 +51,7 @@ CREATE TABLE Colonia
 	ID_colonia INT IDENTITY(1,1) not null,
 	nombre varchar(40) not null,
 	ID_Delegacion INT,
-	ID_municipio INT not null,
+	ID_municipio INT,
 	CONSTRAINT llaveColonia PRIMARY KEY (ID_colonia)
 )
 
@@ -97,7 +97,7 @@ CREATE TABLE Delegacion
 (
 	ID_delegacion INT IDENTITY(1,1) not null,
 	nombre varchar(40) not null,
-	ID_municipio INT not null,
+	ID_municipio INT,
 	CONSTRAINT llaveDelegacion PRIMARY KEY (ID_delegacion)
 )
 
