@@ -29,7 +29,7 @@ GO
 
 --Carga de ESTADO
 BULK INSERT BDequipo4.BDequipo4.[Estado]
-	FROM FROM 'e:\wwwroot\BDequipo4\Estado.csv'
+	FROM 'e:\wwwroot\BDequipo4\Estado.csv'
 	WITH
 	(			
 		CHECK_CONSTRAINTS,
@@ -538,7 +538,7 @@ GO
 
 --Carga ROL
 BULK INSERT BDequipo4.BDequipo4.[Rol]
-	FROM 'e:\wwwroot\BDequipo4\Rol.csv'
+	FROM 'e:\wwwroot\BDequipo4\Roles.csv'
 	WITH
 	(
 		CHECK_CONSTRAINTS,

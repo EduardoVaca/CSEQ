@@ -127,10 +127,14 @@ ALTER TABLE Causado ADD CONSTRAINT cfCausadoID_perdidaAuditiva FOREIGN KEY (ID_p
 ALTER TABLE Causado ADD CONSTRAINT cfCausadoID_causa FOREIGN KEY (ID_causa) REFERENCES Causa (ID_causa)	
 
 --Constraint (ESGRADO)
+ALTER TABLE EsGrado ADD CONSTRAINT cfEsGradoCURP FOREIGN KEY (CURP)
+					REFERENCES Persona (CURP)				
 ALTER TABLE EsGrado ADD CONSTRAINT cfEsGradoID_perdidaAuditiva FOREIGN KEY (ID_perdidaAuditiva)
 					REFERENCES PerdidaAuditiva (ID_perdidaAuditiva)
 ALTER TABLE EsGrado ADD CONSTRAINT cfEsGradoID_grado FOREIGN KEY (ID_grado)
 					REFERENCES Grado (ID_grado)
+ALTER TABLE EsGrado ADD CONSTRAINT cfEsGradoID_censo FOREIGN KEY (ID_censo)
+					REFERENCES Censo (ID_censo)					
 
 --Constarint (TieneRol)
 ALTER TABLE TieneRol ADD CONSTRAINT cfTieneRolLogin FOREIGN KEY (login)
