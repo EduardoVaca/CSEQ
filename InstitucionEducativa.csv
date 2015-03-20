@@ -1,11 +1,11 @@
 id_InstitucionEducativa,nombre,calle,telefono,correo,privada,especializada
-0,Tecnologico de Monterrey,Epigmenio Gonzalez #500,4422383100,www.qro.itesm.mx,0,1
-0,Anahuac Queretaro,Circuito Universidades  No. 1 km 7 Fraccion 2,4422456742,gosasuna@anahuacqro.com,0,1
-0,Colegio de Bachilleres del Estado de Queretaro #3,Avenida Constituyentes #35 Oriente,4422919400,hectorgm@e.cobaq.edu.mx,1,0
-0,Cetis #105,Carretera a Tlacote S/N el Bajo km 3.5,4422167633,,1,0
-0,Universidad Politecnica de Santa Rosa de Jauregi,Km 31 + 150 Carretera Federal #57 Qro-SLP,4421961300,se@upsrj.edu.mx,1,0
-0,Universidad Autonoma de Queretaro,Cerro de las Campanas S/N,4421921200,,1,1
-0,Instituto Foredma,Luis M. Vega y Monroy No. 511,4422484395,foredma@prodigy.net.mx,0,1
-0,CAM Hellen Keller,Silente S/N,4422167633,,1,0
-0,Centenaria y Benemerita Escuela Normal del Estado de Queretaro Andrés Balvanera )(CBENEQ),San Mateo S/N,4422144741,www.cbeneq.edu.mx,1,1
-0,New Port High School,Boulevard Universitario #502-D,4429620697,info@newporthighschool.mx,0,1
+0,Tecnologico de Monterrey,Epigmenio Gonzalez #500,4422383100,www.qro.itesm.mx,1,0
+0,Anahuac Queretaro,Circuito Universidades  No. 1 km 7 Fraccion 2,4422456742,gosasuna@anahuacqro.com,1,0
+0,Colegio de Bachilleres del Estado de Queretaro #3,Avenida Constituyentes #35 Oriente,4422919400,hectorgm@e.cobaq.edu.mx,0,1
+0,Cetis #105,Carretera a Tlacote S/N el Bajo km 3.5,4422167633,,0,1
+0,Universidad Politecnica de Santa Rosa de Jauregi,Km 31 + 150 Carretera Federal #57 Qro-SLP,4421961300,se@upsrj.edu.mx,0,1
+0,Universidad Autonoma de Queretaro,Cerro de las Campanas S/N,4421921200,,0,0
+0,Instituto Foredma,Luis M. Vega y Monroy No. 511,4422484395,foredma@prodigy.net.mx,1,0
+0,CAM Hellen Keller,Silente S/N,4422167633,,0,1
+0,Centenaria y Benemerita Escuela Normal del Estado de Queretaro Andrés Balvanera )(CBENEQ),San Mateo S/N,4422144741,www.cbeneq.edu.mx,0,0
+0,New Port High School,Boulevard Universitario #502-D,4429620697,info@newporthighschool.mx,1,0
