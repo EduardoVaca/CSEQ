@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace CSEQ
 {
-    public partial class Menu_principal : Form
+    public partial class Editar_registro : Form
     {
-        public Menu_principal()
+        public Editar_registro(String Nombre)
         {
             InitializeComponent();
+            Receptor_Nombre.Text = Nombre;
         }
     }
 }

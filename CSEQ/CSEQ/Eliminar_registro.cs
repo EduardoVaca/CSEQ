@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace CSEQ
 {
-    public partial class Menu_principal : Form
+    public partial class Eliminar_registro : Form
     {
-        public Menu_principal()
+        public Eliminar_registro(string Nombre)
         {
             InitializeComponent();
+            Receptor_Nombre.Text = (Nombre);
         }
+
     }
 }
