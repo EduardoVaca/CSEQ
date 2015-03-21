@@ -17,5 +17,10 @@ namespace CSEQ
             InitializeComponent();
             Receptor_Nombre.Text = Nombre;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

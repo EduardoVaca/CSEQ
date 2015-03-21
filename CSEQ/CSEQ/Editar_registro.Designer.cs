@@ -45,10 +45,10 @@
             this.Editar.AutoSize = true;
             this.Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Editar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Editar.Location = new System.Drawing.Point(213, 116);
-            this.Editar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Editar.Location = new System.Drawing.Point(426, 223);
+            this.Editar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Editar.Name = "Editar";
-            this.Editar.Size = new System.Drawing.Size(101, 37);
+            this.Editar.Size = new System.Drawing.Size(200, 73);
             this.Editar.TabIndex = 3;
             this.Editar.Text = "Editar";
             // 
@@ -57,20 +57,21 @@
             this.Receptor_Nombre.AutoSize = true;
             this.Receptor_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Receptor_Nombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.Receptor_Nombre.Location = new System.Drawing.Point(314, 116);
-            this.Receptor_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Receptor_Nombre.Location = new System.Drawing.Point(628, 223);
+            this.Receptor_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Receptor_Nombre.Name = "Receptor_Nombre";
-            this.Receptor_Nombre.Size = new System.Drawing.Size(0, 37);
+            this.Receptor_Nombre.Size = new System.Drawing.Size(0, 73);
             this.Receptor_Nombre.TabIndex = 4;
             // 
             // Busqueda
             // 
             this.Busqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Busqueda.Location = new System.Drawing.Point(173, 200);
-            this.Busqueda.MaximumSize = new System.Drawing.Size(400, 40);
-            this.Busqueda.MinimumSize = new System.Drawing.Size(400, 0);
+            this.Busqueda.Location = new System.Drawing.Point(346, 385);
+            this.Busqueda.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Busqueda.MaximumSize = new System.Drawing.Size(796, 40);
+            this.Busqueda.MinimumSize = new System.Drawing.Size(796, 4);
             this.Busqueda.Name = "Busqueda";
-            this.Busqueda.Size = new System.Drawing.Size(400, 30);
+            this.Busqueda.Size = new System.Drawing.Size(796, 53);
             this.Busqueda.TabIndex = 5;
             // 
             // eventLog1
@@ -80,9 +81,10 @@
             // Atras
             // 
             this.Atras.Image = ((System.Drawing.Image)(resources.GetObject("Atras.Image")));
-            this.Atras.Location = new System.Drawing.Point(12, 541);
+            this.Atras.Location = new System.Drawing.Point(24, 1040);
+            this.Atras.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Atras.Name = "Atras";
-            this.Atras.Size = new System.Drawing.Size(47, 47);
+            this.Atras.Size = new System.Drawing.Size(94, 90);
             this.Atras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Atras.TabIndex = 6;
             this.Atras.TabStop = false;
@@ -90,27 +92,30 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(759, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(1518, 21);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 56);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Editar_registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(1600, 1154);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Atras);
             this.Controls.Add(this.Busqueda);
             this.Controls.Add(this.Receptor_Nombre);
             this.Controls.Add(this.Editar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Editar_registro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar_registro";
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).EndInit();

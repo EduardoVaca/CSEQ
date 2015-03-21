@@ -56,6 +56,12 @@
     <Compile Include="Eliminar_registro.Designer.cs">
       <DependentUpon>Eliminar_registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lista_registros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_registros.Designer.cs">
+      <DependentUpon>Lista_registros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar_registro.resx">
       <DependentUpon>Eliminar_registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_registros.resx">
+      <DependentUpon>Lista_registros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

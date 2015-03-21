@@ -36,7 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ingresar_btn = new System.Windows.Forms.Button();
             this.x_picture = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             this.SuspendLayout();
@@ -111,16 +111,16 @@
             this.x_picture.TabStop = false;
             this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(882, 761);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 30);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "ROMPIENDO PARADIGMAS";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(885, 761);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(306, 30);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "ROMPIENDO PARADIGMAS";
             // 
             // Login
             // 
@@ -128,7 +128,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.ingresar_btn);
             this.Controls.Add(this.pictureBox1);
@@ -156,7 +156,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ingresar_btn;
         private System.Windows.Forms.PictureBox x_picture;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

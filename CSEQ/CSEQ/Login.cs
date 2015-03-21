@@ -25,6 +25,7 @@ namespace CSEQ
         private void ingresar_btn_Click(object sender, EventArgs e)
         {
             Menu_principal Menu_principal = new Menu_principal();
+            this.Hide();
             Menu_principal.Show();            
         }
 
