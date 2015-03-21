@@ -35,9 +35,10 @@
             this.password_txt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ingresar_btn = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.x_picture = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,16 +98,29 @@
             this.ingresar_btn.TabIndex = 5;
             this.ingresar_btn.Text = "Ingresar";
             this.ingresar_btn.UseVisualStyleBackColor = true;
+            this.ingresar_btn.Click += new System.EventHandler(this.ingresar_btn_Click);
             // 
-            // pictureBox2
+            // x_picture
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1130, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 55);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
+            this.x_picture.Location = new System.Drawing.Point(1130, 8);
+            this.x_picture.Name = "x_picture";
+            this.x_picture.Size = new System.Drawing.Size(61, 55);
+            this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.x_picture.TabIndex = 6;
+            this.x_picture.TabStop = false;
+            this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(882, 761);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(306, 30);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "ROMPIENDO PARADIGMAS";
             // 
             // Login
             // 
@@ -114,7 +128,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.x_picture);
             this.Controls.Add(this.ingresar_btn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.password_txt);
@@ -126,7 +141,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +155,8 @@
         private System.Windows.Forms.TextBox password_txt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ingresar_btn;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox x_picture;
+        private System.Windows.Forms.Label label3;
     }
 }
 

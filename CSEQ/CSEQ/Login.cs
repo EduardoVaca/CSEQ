@@ -17,6 +17,18 @@ namespace CSEQ
             InitializeComponent();
         }
 
+        private void x_picture_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ingresar_btn_Click(object sender, EventArgs e)
+        {
+            Menu_principal Menu_principal = new Menu_principal();
+            Menu_principal.Show();            
+        }
+
+
 
 
        
