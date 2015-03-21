@@ -7,3 +7,4 @@ C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSE
 C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.csproj.GenerateResource.Cache
 C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.exe
 C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.pdb
+C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.Menu_principal.resources
