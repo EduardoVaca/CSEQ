@@ -41,9 +41,10 @@
             // x_picture
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(1112, -2);
+            this.x_picture.Location = new System.Drawing.Point(759, 11);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.x_picture.Name = "x_picture";
-            this.x_picture.Size = new System.Drawing.Size(61, 55);
+            this.x_picture.Size = new System.Drawing.Size(30, 29);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.x_picture.TabIndex = 7;
             this.x_picture.TabStop = false;
@@ -52,41 +53,45 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Ming Std L", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(232, 293);
+            this.label1.Location = new System.Drawing.Point(222, 225);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 66);
+            this.label1.Size = new System.Drawing.Size(151, 37);
             this.label1.TabIndex = 8;
             this.label1.Text = "Registros";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Adobe Ming Std L", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(232, 424);
+            this.label2.Location = new System.Drawing.Point(222, 293);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(304, 66);
+            this.label2.Size = new System.Drawing.Size(160, 37);
             this.label2.TabIndex = 9;
             this.label2.Text = "Consultas";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(856, 690);
+            this.label3.Location = new System.Drawing.Point(606, 544);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 30);
+            this.label3.Size = new System.Drawing.Size(183, 15);
             this.label3.TabIndex = 10;
             this.label3.Text = "ROMPIENDO PARADIGMAS";
             // 
             // registros_btn
             // 
-            this.registros_btn.Location = new System.Drawing.Point(549, 317);
+            this.registros_btn.Location = new System.Drawing.Point(380, 238);
+            this.registros_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.registros_btn.Name = "registros_btn";
-            this.registros_btn.Size = new System.Drawing.Size(83, 42);
+            this.registros_btn.Size = new System.Drawing.Size(42, 22);
             this.registros_btn.TabIndex = 11;
             this.registros_btn.Text = "Ir";
             this.registros_btn.UseVisualStyleBackColor = true;
@@ -94,9 +99,10 @@
             // 
             // consultas_btn
             // 
-            this.consultas_btn.Location = new System.Drawing.Point(549, 448);
+            this.consultas_btn.Location = new System.Drawing.Point(380, 306);
+            this.consultas_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.consultas_btn.Name = "consultas_btn";
-            this.consultas_btn.Size = new System.Drawing.Size(83, 42);
+            this.consultas_btn.Size = new System.Drawing.Size(42, 22);
             this.consultas_btn.TabIndex = 12;
             this.consultas_btn.Text = "Ir";
             this.consultas_btn.UseVisualStyleBackColor = true;
@@ -104,10 +110,11 @@
             // 
             // Menu_principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(1174, 729);
+            this.ClientSize = new System.Drawing.Size(800, 568);
             this.Controls.Add(this.consultas_btn);
             this.Controls.Add(this.registros_btn);
             this.Controls.Add(this.label3);
@@ -115,6 +122,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.x_picture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_principal";

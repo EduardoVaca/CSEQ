@@ -32,10 +32,9 @@
             this.Editar = new System.Windows.Forms.Label();
             this.Receptor_Nombre = new System.Windows.Forms.Label();
             this.Busqueda = new System.Windows.Forms.TextBox();
-            this.eventLog1 = new System.Diagnostics.EventLog();
             this.Atras = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -73,10 +72,6 @@
             this.Busqueda.Size = new System.Drawing.Size(400, 30);
             this.Busqueda.TabIndex = 5;
             // 
-            // eventLog1
-            // 
-            this.eventLog1.SynchronizingObject = this;
-            // 
             // Atras
             // 
             this.Atras.Image = ((System.Drawing.Image)(resources.GetObject("Atras.Image")));
@@ -99,6 +94,18 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(596, 523);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 15);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "ROMPIENDO PARADIGMAS";
+            // 
             // Editar_registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,6 +113,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Atras);
             this.Controls.Add(this.Busqueda);
@@ -115,7 +123,6 @@
             this.Name = "Editar_registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar_registro";
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -128,8 +135,8 @@
         private System.Windows.Forms.Label Editar;
         private System.Windows.Forms.Label Receptor_Nombre;
         private System.Windows.Forms.TextBox Busqueda;
-        private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.PictureBox Atras;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
     }
 }
