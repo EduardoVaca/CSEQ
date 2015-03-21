@@ -8,3 +8,16 @@ C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSE
 C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.exe
 C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.pdb
 C:\Users\Eduardo Vaca\Documents\CUARTO SEMESTRE\Bases de Datos\PROYECTO\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.Menu_principal.resources
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\bin\Debug\CSEQ.exe.config
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.exe
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.pdb
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\bin\Debug\CSEQ.exe
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\bin\Debug\CSEQ.pdb
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.csprojResolveAssemblyReference.cache
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.Login.resources
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.Menu_principal.resources
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.Menu_registros.resources
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.Properties.Resources.resources
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.csproj.GenerateResource.Cache
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.Editar_registro.resources
+C:\Users\Christopher\Documents\Data\Universidad\4to Semestre\Bases\CSEQ\CSEQ\CSEQ\obj\Debug\CSEQ.Eliminar_registro.resources
