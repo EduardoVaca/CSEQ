@@ -86,12 +86,13 @@
             this.Atras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Atras.TabIndex = 6;
             this.Atras.TabStop = false;
+            this.Atras.Click += new System.EventHandler(this.Atras_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(759, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

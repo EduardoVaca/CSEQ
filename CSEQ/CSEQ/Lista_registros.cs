@@ -27,8 +27,10 @@ namespace CSEQ
 
         private void back_picture_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Menu_registros Menu_registros = new Menu_registros();
-            Menu_registros.Show();
+            Menu_registros.ShowDialog();
+            this.Close();
         }
 
         private void Lista_registros_Load(object sender, EventArgs e)
@@ -51,13 +53,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Persona");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if(valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Persona");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -71,13 +73,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Colonia");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Colonia");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -111,13 +113,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Municipio");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Municipio");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -131,13 +133,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Estado");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Estado");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -151,13 +153,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("InstitucionEducativa");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("InstitucionEducativa");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -171,13 +173,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Censo");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Censo");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -191,13 +193,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("AparatoAuditivo");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("AparatoAuditivo");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -211,13 +213,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Marca");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Marca");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -231,13 +233,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Causa");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Causa");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -251,13 +253,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Sueldo");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Sueldo");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -271,13 +273,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("AreaTrabajo");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("AreaTrabajo");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 
@@ -291,13 +293,13 @@ namespace CSEQ
             {
                 Editar_registro editar = new Editar_registro("Usuario");
                 this.Hide();
-                editar.Show();
+                editar.ShowDialog();
             }
             else if (valor_decision == 3)
             {
                 Eliminar_registro eliminar = new Eliminar_registro("Usuario");
                 this.Hide();
-                eliminar.Show();
+                eliminar.ShowDialog();
             }
         }
 

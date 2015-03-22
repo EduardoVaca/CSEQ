@@ -19,29 +19,34 @@ namespace CSEQ
 
         private void Atras_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Menu_principal Menu_principal = new Menu_principal();
-            Menu_principal.Show();
+            Menu_principal.ShowDialog();
+            this.Close();
         }
 
         private void Cregistro_Click(object sender, EventArgs e)
         {
+            this.Hide();
            Lista_registros Lista_registros= new Lista_registros(1);
-           this.Close();
-            Lista_registros.Show();
+            Lista_registros.ShowDialog();
+            this.Close();
         }
 
         private void EditarRegistro_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Lista_registros Lista_registros = new Lista_registros(2);
+            Lista_registros.ShowDialog();
             this.Close();
-            Lista_registros.Show();
         }
 
         private void EliminarRegistro_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Lista_registros Lista_registros = new Lista_registros(3);
+            Lista_registros.ShowDialog();
             this.Close();
-            Lista_registros.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

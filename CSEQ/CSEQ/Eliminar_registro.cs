@@ -23,5 +23,12 @@ namespace CSEQ
             Application.Exit();
         }
 
+        private void Atras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
+            this.Close();
+        }
+
     }
 }

@@ -12,8 +12,6 @@ namespace CSEQ
 {
     public partial class Menu_consultas : Form
     {
-        private string prueba = "";
-
         public Menu_consultas()
         {
             InitializeComponent();
@@ -27,8 +25,10 @@ namespace CSEQ
 
         private void back_picture_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Menu_principal Menu_principal = new Menu_principal();
-            Menu_principal.Show();
+            Menu_principal.ShowDialog();
+            this.Close();
         }
     }
 }

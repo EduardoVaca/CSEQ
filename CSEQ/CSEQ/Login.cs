@@ -26,7 +26,8 @@ namespace CSEQ
         {
             Menu_principal Menu_principal = new Menu_principal();
             this.Hide();
-            Menu_principal.Show();            
+            Menu_principal.ShowDialog();
+            this.Close();
         }
 
 
