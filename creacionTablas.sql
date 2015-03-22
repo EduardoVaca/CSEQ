@@ -4,21 +4,21 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Persona')
 	DROP TABLE Persona
 CREATE TABLE Persona
 (
-	CURP char(18) not null,
-	nombre varchar(80) not null,
-	fecha_nacimiento DATETIME not null,
-	sexo_masculino bit not null,
-	telefono numeric(10),
-	correo varchar(60),
-	calle varchar(80),
+	CURP char(18) not null, --
+	nombre varchar(80) not null, --
+	fecha_nacimiento DATETIME not null, --
+	sexo_masculino bit not null, --
+	telefono numeric(10), --
+	correo varchar(60), --
+	calle varchar(80), --
 	examen_audiometria bit not null,
 	implante_coclear bit not null,
 	comunidad_indigena bit not null,
 	alergia bit not null,
 	enfermedad bit,
-	mexicano bit not null,
-	credencialIFE bit not null,
-	ID_periodo INT not null,
+	mexicano bit not null,--
+	credencialIFE bit not null,--
+	ID_periodo INT not null,--
 	CONSTRAINT llavePersona PRIMARY KEY(CURP)
 )
 
@@ -183,13 +183,13 @@ CREATE TABLE Empleo
 (
 	ID_empleo INT IDENTITY(1,1) not null,
 	descripcion varchar(80) not null,
-	nombre_compania varchar(50) not null, 
+	nombre_compania varchar(50), 
 	correo varchar(80),
 	telefono numeric(10),
 	calle varchar(80),
 	interpretacion_LSM bit,
 	ID_areaTrabajo INT not null,
-	CONSTRAINT llaveEmpleo PRIMARY KEY (ID_empleo)
+	CONSTRAINT llaveEmpleo PRIMARY KEY (ID_empleo, ID_areaTrabajo)
 )
 
 
