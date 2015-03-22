@@ -24,11 +24,26 @@ namespace CSEQ
         }
 
         private void back_picture_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+        {            
             Menu_principal Menu_principal = new Menu_principal();
             Menu_principal.ShowDialog();
             this.Close();
+        }
+
+        private void ConsultaGrafica_btn_Click(object sender, EventArgs e)
+        {
+            ConsultaGrafica consulta = new ConsultaGrafica();
+            this.Close();
+            consulta.Show();
+            
+        }
+
+        private void ConsultaRedactada_btn_Click(object sender, EventArgs e)
+        {
+            ConsultaRedactada consulta = new ConsultaRedactada();
+            this.Close();
+            consulta.Show();
+            
         }
     }
 }

@@ -53,10 +53,10 @@
             this.ConsultaGrafica_label.AutoSize = true;
             this.ConsultaGrafica_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConsultaGrafica_label.ForeColor = System.Drawing.Color.White;
-            this.ConsultaGrafica_label.Location = new System.Drawing.Point(264, 9);
-            this.ConsultaGrafica_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConsultaGrafica_label.Location = new System.Drawing.Point(528, 17);
+            this.ConsultaGrafica_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ConsultaGrafica_label.Name = "ConsultaGrafica_label";
-            this.ConsultaGrafica_label.Size = new System.Drawing.Size(257, 37);
+            this.ConsultaGrafica_label.Size = new System.Drawing.Size(510, 73);
             this.ConsultaGrafica_label.TabIndex = 31;
             this.ConsultaGrafica_label.Text = "Consulta Gráfica";
             // 
@@ -65,10 +65,10 @@
             this.Ver_label.AutoSize = true;
             this.Ver_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.Ver_label.ForeColor = System.Drawing.Color.White;
-            this.Ver_label.Location = new System.Drawing.Point(115, 52);
-            this.Ver_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Ver_label.Location = new System.Drawing.Point(230, 100);
+            this.Ver_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Ver_label.Name = "Ver_label";
-            this.Ver_label.Size = new System.Drawing.Size(45, 24);
+            this.Ver_label.Size = new System.Drawing.Size(90, 44);
             this.Ver_label.TabIndex = 32;
             this.Ver_label.Text = "Ver:";
             // 
@@ -77,35 +77,38 @@
             this.De_label.AutoSize = true;
             this.De_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.De_label.ForeColor = System.Drawing.Color.White;
-            this.De_label.Location = new System.Drawing.Point(408, 52);
-            this.De_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.De_label.Location = new System.Drawing.Point(816, 100);
+            this.De_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.De_label.Name = "De_label";
-            this.De_label.Size = new System.Drawing.Size(39, 24);
+            this.De_label.Size = new System.Drawing.Size(79, 44);
             this.De_label.TabIndex = 33;
             this.De_label.Text = "De:";
             // 
             // Empleabilidad_combo
             // 
             this.Empleabilidad_combo.FormattingEnabled = true;
-            this.Empleabilidad_combo.Location = new System.Drawing.Point(187, 55);
+            this.Empleabilidad_combo.Location = new System.Drawing.Point(374, 106);
+            this.Empleabilidad_combo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Empleabilidad_combo.Name = "Empleabilidad_combo";
-            this.Empleabilidad_combo.Size = new System.Drawing.Size(121, 21);
+            this.Empleabilidad_combo.Size = new System.Drawing.Size(238, 33);
             this.Empleabilidad_combo.TabIndex = 34;
             this.Empleabilidad_combo.Text = "Empleabilidad";
             // 
             // PersonasDisAud_combo
             // 
             this.PersonasDisAud_combo.FormattingEnabled = true;
-            this.PersonasDisAud_combo.Location = new System.Drawing.Point(469, 55);
+            this.PersonasDisAud_combo.Location = new System.Drawing.Point(938, 106);
+            this.PersonasDisAud_combo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.PersonasDisAud_combo.Name = "PersonasDisAud_combo";
-            this.PersonasDisAud_combo.Size = new System.Drawing.Size(200, 21);
+            this.PersonasDisAud_combo.Size = new System.Drawing.Size(396, 33);
             this.PersonasDisAud_combo.TabIndex = 35;
             this.PersonasDisAud_combo.Text = "Personas con discapacidad auditiva";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(410, 181);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(375, 364);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -118,10 +121,10 @@
             this.PorcentajeSinEm_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.PorcentajeSinEm_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.PorcentajeSinEm_label.ForeColor = System.Drawing.Color.White;
-            this.PorcentajeSinEm_label.Location = new System.Drawing.Point(312, 228);
-            this.PorcentajeSinEm_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PorcentajeSinEm_label.Location = new System.Drawing.Point(624, 438);
+            this.PorcentajeSinEm_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PorcentajeSinEm_label.Name = "PorcentajeSinEm_label";
-            this.PorcentajeSinEm_label.Size = new System.Drawing.Size(45, 24);
+            this.PorcentajeSinEm_label.Size = new System.Drawing.Size(96, 44);
             this.PorcentajeSinEm_label.TabIndex = 37;
             this.PorcentajeSinEm_label.Text = "45%";
             // 
@@ -131,10 +134,10 @@
             this.SinEm_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.SinEm_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.SinEm_label.ForeColor = System.Drawing.Color.White;
-            this.SinEm_label.Location = new System.Drawing.Point(285, 252);
-            this.SinEm_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SinEm_label.Location = new System.Drawing.Point(570, 485);
+            this.SinEm_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SinEm_label.Name = "SinEm_label";
-            this.SinEm_label.Size = new System.Drawing.Size(103, 24);
+            this.SinEm_label.Size = new System.Drawing.Size(205, 44);
             this.SinEm_label.TabIndex = 38;
             this.SinEm_label.Text = "sin empleo";
             // 
@@ -144,10 +147,10 @@
             this.PorcentajeConEm_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.PorcentajeConEm_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.PorcentajeConEm_label.ForeColor = System.Drawing.Color.White;
-            this.PorcentajeConEm_label.Location = new System.Drawing.Point(440, 228);
-            this.PorcentajeConEm_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PorcentajeConEm_label.Location = new System.Drawing.Point(880, 438);
+            this.PorcentajeConEm_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PorcentajeConEm_label.Name = "PorcentajeConEm_label";
-            this.PorcentajeConEm_label.Size = new System.Drawing.Size(45, 24);
+            this.PorcentajeConEm_label.Size = new System.Drawing.Size(96, 44);
             this.PorcentajeConEm_label.TabIndex = 39;
             this.PorcentajeConEm_label.Text = "55%";
             // 
@@ -157,20 +160,20 @@
             this.ConEm_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ConEm_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.ConEm_label.ForeColor = System.Drawing.Color.White;
-            this.ConEm_label.Location = new System.Drawing.Point(423, 252);
-            this.ConEm_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ConEm_label.Location = new System.Drawing.Point(846, 485);
+            this.ConEm_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ConEm_label.Name = "ConEm_label";
-            this.ConEm_label.Size = new System.Drawing.Size(111, 24);
+            this.ConEm_label.Size = new System.Drawing.Size(217, 44);
             this.ConEm_label.TabIndex = 40;
             this.ConEm_label.Text = "con empleo";
             // 
             // x_picture
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(753, 2);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.x_picture.Location = new System.Drawing.Point(1506, 4);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.x_picture.Name = "x_picture";
-            this.x_picture.Size = new System.Drawing.Size(30, 29);
+            this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.x_picture.TabIndex = 41;
             this.x_picture.TabStop = false;
@@ -179,19 +182,22 @@
             // Atras_picture
             // 
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
-            this.Atras_picture.Location = new System.Drawing.Point(0, 482);
+            this.Atras_picture.Location = new System.Drawing.Point(0, 927);
+            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Atras_picture.Name = "Atras_picture";
-            this.Atras_picture.Size = new System.Drawing.Size(47, 47);
+            this.Atras_picture.Size = new System.Drawing.Size(94, 90);
             this.Atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Atras_picture.TabIndex = 42;
             this.Atras_picture.TabStop = false;
+            this.Atras_picture.Click += new System.EventHandler(this.Atras_picture_Click);
             // 
             // GuardarConsulta_txt
             // 
             this.GuardarConsulta_txt.ForeColor = System.Drawing.Color.Black;
-            this.GuardarConsulta_txt.Location = new System.Drawing.Point(205, 453);
+            this.GuardarConsulta_txt.Location = new System.Drawing.Point(410, 871);
+            this.GuardarConsulta_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.GuardarConsulta_txt.Name = "GuardarConsulta_txt";
-            this.GuardarConsulta_txt.Size = new System.Drawing.Size(96, 40);
+            this.GuardarConsulta_txt.Size = new System.Drawing.Size(192, 77);
             this.GuardarConsulta_txt.TabIndex = 43;
             this.GuardarConsulta_txt.Text = "Guardar consulta";
             this.GuardarConsulta_txt.UseVisualStyleBackColor = true;
@@ -199,20 +205,21 @@
             // ImprimirConsulta_btn
             // 
             this.ImprimirConsulta_btn.ForeColor = System.Drawing.Color.Black;
-            this.ImprimirConsulta_btn.Location = new System.Drawing.Point(484, 453);
+            this.ImprimirConsulta_btn.Location = new System.Drawing.Point(968, 871);
+            this.ImprimirConsulta_btn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ImprimirConsulta_btn.Name = "ImprimirConsulta_btn";
-            this.ImprimirConsulta_btn.Size = new System.Drawing.Size(96, 40);
+            this.ImprimirConsulta_btn.Size = new System.Drawing.Size(192, 77);
             this.ImprimirConsulta_btn.TabIndex = 44;
             this.ImprimirConsulta_btn.Text = "Imprimir consulta";
             this.ImprimirConsulta_btn.UseVisualStyleBackColor = true;
             // 
             // ConsultaGrafica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(784, 529);
+            this.ClientSize = new System.Drawing.Size(1568, 1017);
             this.Controls.Add(this.ImprimirConsulta_btn);
             this.Controls.Add(this.GuardarConsulta_txt);
             this.Controls.Add(this.Atras_picture);
@@ -229,6 +236,7 @@
             this.Controls.Add(this.ConsultaGrafica_label);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ConsultaGrafica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaGrafica";
