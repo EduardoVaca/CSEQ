@@ -35,6 +35,7 @@
             this.Receptor_Nombre = new System.Windows.Forms.Label();
             this.Eliminar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Guardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(759, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,6 +107,15 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "ROMPIENDO PARADIGMAS";
             // 
+            // Guardar
+            // 
+            this.Guardar.Location = new System.Drawing.Point(306, 484);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(96, 40);
+            this.Guardar.TabIndex = 19;
+            this.Guardar.Text = "Eliminar";
+            this.Guardar.UseVisualStyleBackColor = true;
+            // 
             // Eliminar_registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +123,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.Guardar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Atras);
@@ -138,5 +149,6 @@
         private System.Windows.Forms.Label Receptor_Nombre;
         private System.Windows.Forms.Label Eliminar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Guardar;
     }
 }

@@ -35,8 +35,11 @@
             this.Atras = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.Buscar = new System.Windows.Forms.PictureBox();
+            this.Guardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             this.SuspendLayout();
             // 
             // Editar
@@ -86,7 +89,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(759, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,6 +109,25 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "ROMPIENDO PARADIGMAS";
             // 
+            // Buscar
+            // 
+            this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
+            this.Buscar.Location = new System.Drawing.Point(589, 200);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(47, 30);
+            this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Buscar.TabIndex = 14;
+            this.Buscar.TabStop = false;
+            // 
+            // Guardar
+            // 
+            this.Guardar.Location = new System.Drawing.Point(306, 484);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(96, 40);
+            this.Guardar.TabIndex = 18;
+            this.Guardar.Text = "Editar";
+            this.Guardar.UseVisualStyleBackColor = true;
+            // 
             // Editar_registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +135,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.Guardar);
+            this.Controls.Add(this.Buscar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Atras);
@@ -125,6 +149,7 @@
             this.Text = "Editar_registro";
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +163,7 @@
         private System.Windows.Forms.PictureBox Atras;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox Buscar;
+        private System.Windows.Forms.Button Guardar;
     }
 }

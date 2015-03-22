@@ -65,7 +65,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                CrearColonia crear = new CrearColonia();
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {
