@@ -36,8 +36,10 @@
             this.Eliminar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Guardar = new System.Windows.Forms.Button();
+            this.Buscar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -116,6 +118,16 @@
             this.Guardar.Text = "Eliminar";
             this.Guardar.UseVisualStyleBackColor = true;
             // 
+            // Buscar
+            // 
+            this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
+            this.Buscar.Location = new System.Drawing.Point(579, 201);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(47, 30);
+            this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Buscar.TabIndex = 20;
+            this.Buscar.TabStop = false;
+            // 
             // Eliminar_registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +135,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.Buscar);
             this.Controls.Add(this.Guardar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
@@ -136,6 +149,7 @@
             this.Text = "Eliminar_registro";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,5 +164,6 @@
         private System.Windows.Forms.Label Eliminar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Guardar;
+        private System.Windows.Forms.PictureBox Buscar;
     }
 }
