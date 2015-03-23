@@ -26,7 +26,7 @@ namespace CSEQ
         private void back_picture_Click(object sender, EventArgs e)
         {            
             Menu_principal Menu_principal = new Menu_principal();
-            Menu_principal.ShowDialog();
+            Menu_principal.Show();
             this.Close();
         }
 
