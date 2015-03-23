@@ -15,8 +15,7 @@ namespace CSEQ
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            String salida = "salida";
+            Application.SetCompatibleTextRenderingDefault(false);            
             Application.Run(new Login());
         }
     }

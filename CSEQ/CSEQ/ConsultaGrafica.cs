@@ -21,5 +21,12 @@ namespace CSEQ
         {
             Application.Exit();
         }
+
+        private void Atras_picture_Click(object sender, EventArgs e)
+        {
+            Menu_consultas menu = new Menu_consultas();
+            menu.Show();
+            this.Close();
+        }
     }
 }

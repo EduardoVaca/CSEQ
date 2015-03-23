@@ -28,6 +28,7 @@ namespace CSEQ
         private void back_picture_Click(object sender, EventArgs e)
         {
             Menu_registros Menu_registros = new Menu_registros();
+            this.Close();
             Menu_registros.Show();
         }
 
@@ -89,6 +90,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
+                Crear_delegacion crear = new Crear_delegacion("Delegacion");
+                this.Hide();
+                crear.Show();
 
             }
             else if (valor_decision == 2)
@@ -109,6 +113,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
+                CrearMunicipio crear = new CrearMunicipio();
+                this.Hide();
+                crear.Show();
 
             }
             else if (valor_decision == 2)
@@ -129,7 +136,7 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                //FALTA TABLE DE ESTADO
             }
             else if (valor_decision == 2)
             {
@@ -149,7 +156,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                Crear_InstitucionEducativa crear = new Crear_InstitucionEducativa();
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {
@@ -169,7 +178,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                Crear_censo crear = new Crear_censo("Censo");
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {
@@ -189,6 +200,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
+                CrearAparatoAuditivo crear = new CrearAparatoAuditivo();
+                this.Hide();
+                crear.Show();
 
             }
             else if (valor_decision == 2)
@@ -209,7 +223,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                Crear_marca crear = new Crear_marca("Marca");
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {
@@ -229,7 +245,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                Crear_causa crear = new Crear_causa("Causa");
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {
@@ -249,7 +267,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                Crear_sueldo crear = new Crear_sueldo("Sueldo");
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {
@@ -269,7 +289,7 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                //Falta form de Area de Trabajo
             }
             else if (valor_decision == 2)
             {
@@ -289,7 +309,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-
+                CrearUsuario crear = new CrearUsuario();
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {
