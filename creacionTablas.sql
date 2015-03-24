@@ -4,21 +4,21 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Persona')
 	DROP TABLE Persona
 CREATE TABLE Persona
 (
-	CURP char(18) not null, --
-	nombre varchar(80) not null, --
-	fecha_nacimiento DATETIME not null, --
-	sexo_masculino bit not null, --
-	telefono numeric(10), --
-	correo varchar(60), --
-	calle varchar(80), --
+	CURP char(18) not null, 
+	nombre varchar(80) not null, 
+	fecha_nacimiento DATETIME not null,
+	sexo_masculino bit not null,
+	telefono numeric(10), 
+	correo varchar(60), 
+	calle varchar(80), 
 	examen_audiometria bit not null,
 	implante_coclear bit not null,
 	comunidad_indigena bit not null,
 	alergia bit not null,
 	enfermedad bit,
-	mexicano bit not null,--
-	credencialIFE bit not null,--
-	ID_periodo INT not null,--
+	mexicano bit not null,
+	credencialIFE bit not null,
+	ID_periodo INT not null,
 	CONSTRAINT llavePersona PRIMARY KEY(CURP)
 )
 
@@ -148,8 +148,8 @@ CREATE TABLE Estudiado
 	ID_institucionEducativa INT not null,
 	ID_nivelEducativo INT not null,
 	CURP char (18) not null,
-	ano numeric(4),
-	CONSTRAINT llaveEstudiado PRIMARY KEY (ID_institucionEducativa, ID_nivelEducativo, ano)
+	ano numeric(4) not null,
+	CONSTRAINT llaveEstudiado PRIMARY KEY (ID_institucionEducativa, ID_nivelEducativo, CURP, ano)
 )
 
 
@@ -447,7 +447,9 @@ CREATE TABLE Causado
 (
 	ID_perdidaAuditiva INT not null,
 	ID_causa INT not null,
-	CONSTRAINT llaveCausado PRIMARY KEY (ID_perdidaAuditiva, ID_causa)
+	CURP char(18) not null,
+	ID_censo INT not null,
+	CONSTRAINT llaveCausado PRIMARY KEY (ID_perdidaAuditiva, ID_causa, CURP, ID_censo)
 )
 
 --Creacion tabla: Grado
