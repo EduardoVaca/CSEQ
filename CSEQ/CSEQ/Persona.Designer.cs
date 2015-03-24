@@ -134,6 +134,8 @@
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label48 = new System.Windows.Forms.Label();
+            this.anoEstudio_txt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -148,7 +150,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1512, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 56);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,7 +166,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.Familia);
             this.tabControl1.Location = new System.Drawing.Point(12, 13);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1492, 1006);
@@ -207,9 +209,9 @@
             this.tabPage1.Controls.Add(this.CURP_txt);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1484, 968);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Personales";
@@ -218,7 +220,7 @@
             // 
             this.estadoCivil_combo.FormattingEnabled = true;
             this.estadoCivil_combo.Location = new System.Drawing.Point(264, 873);
-            this.estadoCivil_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estadoCivil_combo.Margin = new System.Windows.Forms.Padding(4);
             this.estadoCivil_combo.Name = "estadoCivil_combo";
             this.estadoCivil_combo.Size = new System.Drawing.Size(216, 33);
             this.estadoCivil_combo.TabIndex = 47;
@@ -239,7 +241,7 @@
             // 
             this.censo_Combo.FormattingEnabled = true;
             this.censo_Combo.Location = new System.Drawing.Point(646, 794);
-            this.censo_Combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.censo_Combo.Margin = new System.Windows.Forms.Padding(4);
             this.censo_Combo.Name = "censo_Combo";
             this.censo_Combo.Size = new System.Drawing.Size(134, 33);
             this.censo_Combo.TabIndex = 45;
@@ -260,7 +262,7 @@
             // 
             this.comunidadIndigena_check.AutoSize = true;
             this.comunidadIndigena_check.Location = new System.Drawing.Point(1000, 729);
-            this.comunidadIndigena_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comunidadIndigena_check.Margin = new System.Windows.Forms.Padding(4);
             this.comunidadIndigena_check.Name = "comunidadIndigena_check";
             this.comunidadIndigena_check.Size = new System.Drawing.Size(60, 29);
             this.comunidadIndigena_check.TabIndex = 43;
@@ -283,7 +285,7 @@
             // 
             this.ife_check.AutoSize = true;
             this.ife_check.Location = new System.Drawing.Point(386, 804);
-            this.ife_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ife_check.Margin = new System.Windows.Forms.Padding(4);
             this.ife_check.Name = "ife_check";
             this.ife_check.Size = new System.Drawing.Size(60, 29);
             this.ife_check.TabIndex = 41;
@@ -306,7 +308,7 @@
             // 
             this.mexicano_check.AutoSize = true;
             this.mexicano_check.Location = new System.Drawing.Point(234, 729);
-            this.mexicano_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mexicano_check.Margin = new System.Windows.Forms.Padding(4);
             this.mexicano_check.Name = "mexicano_check";
             this.mexicano_check.Size = new System.Drawing.Size(60, 29);
             this.mexicano_check.TabIndex = 39;
@@ -317,7 +319,7 @@
             // 
             this.delegacion_combo.FormattingEnabled = true;
             this.delegacion_combo.Location = new System.Drawing.Point(234, 635);
-            this.delegacion_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delegacion_combo.Margin = new System.Windows.Forms.Padding(4);
             this.delegacion_combo.Name = "delegacion_combo";
             this.delegacion_combo.Size = new System.Drawing.Size(264, 33);
             this.delegacion_combo.TabIndex = 38;
@@ -350,7 +352,7 @@
             // 
             this.municipio_combo.FormattingEnabled = true;
             this.municipio_combo.Location = new System.Drawing.Point(708, 633);
-            this.municipio_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.municipio_combo.Margin = new System.Windows.Forms.Padding(4);
             this.municipio_combo.Name = "municipio_combo";
             this.municipio_combo.Size = new System.Drawing.Size(264, 33);
             this.municipio_combo.TabIndex = 35;
@@ -371,7 +373,7 @@
             // 
             this.estado_combo.FormattingEnabled = true;
             this.estado_combo.Location = new System.Drawing.Point(1012, 556);
-            this.estado_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estado_combo.Margin = new System.Windows.Forms.Padding(4);
             this.estado_combo.Name = "estado_combo";
             this.estado_combo.Size = new System.Drawing.Size(264, 33);
             this.estado_combo.TabIndex = 33;
@@ -392,7 +394,7 @@
             // 
             this.colonia_combo.FormattingEnabled = true;
             this.colonia_combo.Location = new System.Drawing.Point(1128, 633);
-            this.colonia_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colonia_combo.Margin = new System.Windows.Forms.Padding(4);
             this.colonia_combo.Name = "colonia_combo";
             this.colonia_combo.Size = new System.Drawing.Size(294, 33);
             this.colonia_combo.TabIndex = 31;
@@ -413,7 +415,7 @@
             // 
             this.calle_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calle_txt.Location = new System.Drawing.Point(188, 554);
-            this.calle_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.calle_txt.Margin = new System.Windows.Forms.Padding(4);
             this.calle_txt.Name = "calle_txt";
             this.calle_txt.Size = new System.Drawing.Size(602, 44);
             this.calle_txt.TabIndex = 29;
@@ -434,7 +436,7 @@
             // 
             this.correo_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correo_txt.Location = new System.Drawing.Point(188, 487);
-            this.correo_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.correo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.correo_txt.Name = "correo_txt";
             this.correo_txt.Size = new System.Drawing.Size(412, 44);
             this.correo_txt.TabIndex = 27;
@@ -455,7 +457,7 @@
             // 
             this.telefono_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefono_txt.Location = new System.Drawing.Point(224, 394);
-            this.telefono_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.telefono_txt.Margin = new System.Windows.Forms.Padding(4);
             this.telefono_txt.Name = "telefono_txt";
             this.telefono_txt.Size = new System.Drawing.Size(288, 44);
             this.telefono_txt.TabIndex = 25;
@@ -476,7 +478,7 @@
             // 
             this.femenino_check.AutoSize = true;
             this.femenino_check.Location = new System.Drawing.Point(342, 338);
-            this.femenino_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.femenino_check.Margin = new System.Windows.Forms.Padding(4);
             this.femenino_check.Name = "femenino_check";
             this.femenino_check.Size = new System.Drawing.Size(139, 29);
             this.femenino_check.TabIndex = 23;
@@ -487,7 +489,7 @@
             // 
             this.masculino_check.AutoSize = true;
             this.masculino_check.Location = new System.Drawing.Point(172, 338);
-            this.masculino_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.masculino_check.Margin = new System.Windows.Forms.Padding(4);
             this.masculino_check.Name = "masculino_check";
             this.masculino_check.Size = new System.Drawing.Size(142, 29);
             this.masculino_check.TabIndex = 22;
@@ -509,7 +511,7 @@
             // fechaNacimiento
             // 
             this.fechaNacimiento.Location = new System.Drawing.Point(378, 263);
-            this.fechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.fechaNacimiento.Name = "fechaNacimiento";
             this.fechaNacimiento.Size = new System.Drawing.Size(402, 31);
             this.fechaNacimiento.TabIndex = 20;
@@ -530,7 +532,7 @@
             // 
             this.nombre_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre_txt.Location = new System.Drawing.Point(188, 167);
-            this.nombre_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombre_txt.Margin = new System.Windows.Forms.Padding(4);
             this.nombre_txt.Name = "nombre_txt";
             this.nombre_txt.Size = new System.Drawing.Size(592, 44);
             this.nombre_txt.TabIndex = 18;
@@ -551,7 +553,7 @@
             // 
             this.CURP_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CURP_txt.Location = new System.Drawing.Point(188, 79);
-            this.CURP_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CURP_txt.Margin = new System.Windows.Forms.Padding(4);
             this.CURP_txt.Name = "CURP_txt";
             this.CURP_txt.Size = new System.Drawing.Size(430, 44);
             this.CURP_txt.TabIndex = 16;
@@ -572,6 +574,8 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.anoEstudio_txt);
+            this.tabPage2.Controls.Add(this.label48);
             this.tabPage2.Controls.Add(this.delegacionEscuela_combo);
             this.tabPage2.Controls.Add(this.label29);
             this.tabPage2.Controls.Add(this.municipioEscuela_combo);
@@ -593,9 +597,9 @@
             this.tabPage2.Controls.Add(this.nivelEducativo_combo);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1484, 968);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Estudios";
@@ -604,7 +608,7 @@
             // 
             this.delegacionEscuela_combo.FormattingEnabled = true;
             this.delegacionEscuela_combo.Location = new System.Drawing.Point(232, 669);
-            this.delegacionEscuela_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delegacionEscuela_combo.Margin = new System.Windows.Forms.Padding(4);
             this.delegacionEscuela_combo.Name = "delegacionEscuela_combo";
             this.delegacionEscuela_combo.Size = new System.Drawing.Size(264, 33);
             this.delegacionEscuela_combo.TabIndex = 57;
@@ -625,7 +629,7 @@
             // 
             this.municipioEscuela_combo.FormattingEnabled = true;
             this.municipioEscuela_combo.Location = new System.Drawing.Point(706, 669);
-            this.municipioEscuela_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.municipioEscuela_combo.Margin = new System.Windows.Forms.Padding(4);
             this.municipioEscuela_combo.Name = "municipioEscuela_combo";
             this.municipioEscuela_combo.Size = new System.Drawing.Size(264, 33);
             this.municipioEscuela_combo.TabIndex = 55;
@@ -646,7 +650,7 @@
             // 
             this.estadoEscuela_combo.FormattingEnabled = true;
             this.estadoEscuela_combo.Location = new System.Drawing.Point(1012, 590);
-            this.estadoEscuela_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estadoEscuela_combo.Margin = new System.Windows.Forms.Padding(4);
             this.estadoEscuela_combo.Name = "estadoEscuela_combo";
             this.estadoEscuela_combo.Size = new System.Drawing.Size(264, 33);
             this.estadoEscuela_combo.TabIndex = 53;
@@ -667,7 +671,7 @@
             // 
             this.coloniaEscuela_combo.FormattingEnabled = true;
             this.coloniaEscuela_combo.Location = new System.Drawing.Point(1126, 669);
-            this.coloniaEscuela_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coloniaEscuela_combo.Margin = new System.Windows.Forms.Padding(4);
             this.coloniaEscuela_combo.Name = "coloniaEscuela_combo";
             this.coloniaEscuela_combo.Size = new System.Drawing.Size(294, 33);
             this.coloniaEscuela_combo.TabIndex = 51;
@@ -688,7 +692,7 @@
             // 
             this.nivelLSM_combo.FormattingEnabled = true;
             this.nivelLSM_combo.Location = new System.Drawing.Point(282, 579);
-            this.nivelLSM_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nivelLSM_combo.Margin = new System.Windows.Forms.Padding(4);
             this.nivelLSM_combo.Name = "nivelLSM_combo";
             this.nivelLSM_combo.Size = new System.Drawing.Size(214, 33);
             this.nivelLSM_combo.TabIndex = 49;
@@ -709,7 +713,7 @@
             // 
             this.nivelIngles_combo.FormattingEnabled = true;
             this.nivelIngles_combo.Location = new System.Drawing.Point(282, 485);
-            this.nivelIngles_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nivelIngles_combo.Margin = new System.Windows.Forms.Padding(4);
             this.nivelIngles_combo.Name = "nivelIngles_combo";
             this.nivelIngles_combo.Size = new System.Drawing.Size(214, 33);
             this.nivelIngles_combo.TabIndex = 47;
@@ -730,7 +734,7 @@
             // 
             this.nivelEspanol_combo.FormattingEnabled = true;
             this.nivelEspanol_combo.Location = new System.Drawing.Point(282, 404);
-            this.nivelEspanol_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nivelEspanol_combo.Margin = new System.Windows.Forms.Padding(4);
             this.nivelEspanol_combo.Name = "nivelEspanol_combo";
             this.nivelEspanol_combo.Size = new System.Drawing.Size(214, 33);
             this.nivelEspanol_combo.TabIndex = 45;
@@ -751,7 +755,7 @@
             // 
             this.lenguaDominante_combo.FormattingEnabled = true;
             this.lenguaDominante_combo.Location = new System.Drawing.Point(380, 290);
-            this.lenguaDominante_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lenguaDominante_combo.Margin = new System.Windows.Forms.Padding(4);
             this.lenguaDominante_combo.Name = "lenguaDominante_combo";
             this.lenguaDominante_combo.Size = new System.Drawing.Size(416, 33);
             this.lenguaDominante_combo.TabIndex = 43;
@@ -772,7 +776,7 @@
             // 
             this.institucionEducativa_combo.FormattingEnabled = true;
             this.institucionEducativa_combo.Location = new System.Drawing.Point(428, 173);
-            this.institucionEducativa_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.institucionEducativa_combo.Margin = new System.Windows.Forms.Padding(4);
             this.institucionEducativa_combo.Name = "institucionEducativa_combo";
             this.institucionEducativa_combo.Size = new System.Drawing.Size(416, 33);
             this.institucionEducativa_combo.TabIndex = 41;
@@ -793,7 +797,7 @@
             // 
             this.nivelEducativo_combo.FormattingEnabled = true;
             this.nivelEducativo_combo.Location = new System.Drawing.Point(332, 62);
-            this.nivelEducativo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nivelEducativo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.nivelEducativo_combo.Name = "nivelEducativo_combo";
             this.nivelEducativo_combo.Size = new System.Drawing.Size(362, 33);
             this.nivelEducativo_combo.TabIndex = 39;
@@ -830,7 +834,7 @@
             this.tabPage3.Controls.Add(this.descripcionEmpleo_txt);
             this.tabPage3.Controls.Add(this.label24);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1484, 968);
             this.tabPage3.TabIndex = 2;
@@ -840,7 +844,7 @@
             // 
             this.delegacionEmpleo_combo.FormattingEnabled = true;
             this.delegacionEmpleo_combo.Location = new System.Drawing.Point(230, 417);
-            this.delegacionEmpleo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delegacionEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.delegacionEmpleo_combo.Name = "delegacionEmpleo_combo";
             this.delegacionEmpleo_combo.Size = new System.Drawing.Size(264, 33);
             this.delegacionEmpleo_combo.TabIndex = 51;
@@ -861,7 +865,7 @@
             // 
             this.municipioEmpleo_combo.FormattingEnabled = true;
             this.municipioEmpleo_combo.Location = new System.Drawing.Point(704, 415);
-            this.municipioEmpleo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.municipioEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.municipioEmpleo_combo.Name = "municipioEmpleo_combo";
             this.municipioEmpleo_combo.Size = new System.Drawing.Size(264, 33);
             this.municipioEmpleo_combo.TabIndex = 49;
@@ -882,7 +886,7 @@
             // 
             this.estadoEmpleo_combo.FormattingEnabled = true;
             this.estadoEmpleo_combo.Location = new System.Drawing.Point(1008, 338);
-            this.estadoEmpleo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estadoEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.estadoEmpleo_combo.Name = "estadoEmpleo_combo";
             this.estadoEmpleo_combo.Size = new System.Drawing.Size(264, 33);
             this.estadoEmpleo_combo.TabIndex = 47;
@@ -903,7 +907,7 @@
             // 
             this.coloniaEmpleo_combo.FormattingEnabled = true;
             this.coloniaEmpleo_combo.Location = new System.Drawing.Point(1124, 415);
-            this.coloniaEmpleo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coloniaEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.coloniaEmpleo_combo.Name = "coloniaEmpleo_combo";
             this.coloniaEmpleo_combo.Size = new System.Drawing.Size(294, 33);
             this.coloniaEmpleo_combo.TabIndex = 45;
@@ -924,7 +928,7 @@
             // 
             this.areaTrabajo_combo.FormattingEnabled = true;
             this.areaTrabajo_combo.Location = new System.Drawing.Point(932, 237);
-            this.areaTrabajo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.areaTrabajo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.areaTrabajo_combo.Name = "areaTrabajo_combo";
             this.areaTrabajo_combo.Size = new System.Drawing.Size(362, 33);
             this.areaTrabajo_combo.TabIndex = 42;
@@ -945,7 +949,7 @@
             // 
             this.sueldo_combo.FormattingEnabled = true;
             this.sueldo_combo.Location = new System.Drawing.Point(220, 237);
-            this.sueldo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sueldo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.sueldo_combo.Name = "sueldo_combo";
             this.sueldo_combo.Size = new System.Drawing.Size(362, 33);
             this.sueldo_combo.TabIndex = 40;
@@ -966,7 +970,7 @@
             // 
             this.compania_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compania_txt.Location = new System.Drawing.Point(220, 140);
-            this.compania_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.compania_txt.Margin = new System.Windows.Forms.Padding(4);
             this.compania_txt.Name = "compania_txt";
             this.compania_txt.Size = new System.Drawing.Size(628, 44);
             this.compania_txt.TabIndex = 22;
@@ -987,7 +991,7 @@
             // 
             this.descripcionEmpleo_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descripcionEmpleo_txt.Location = new System.Drawing.Point(372, 44);
-            this.descripcionEmpleo_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descripcionEmpleo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.descripcionEmpleo_txt.Name = "descripcionEmpleo_txt";
             this.descripcionEmpleo_txt.Size = new System.Drawing.Size(1074, 44);
             this.descripcionEmpleo_txt.TabIndex = 20;
@@ -1025,7 +1029,7 @@
             this.tabPage4.Controls.Add(this.periodo_combo);
             this.tabPage4.Controls.Add(this.label28);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1484, 968);
             this.tabPage4.TabIndex = 3;
@@ -1035,7 +1039,7 @@
             // 
             this.marca_combo.FormattingEnabled = true;
             this.marca_combo.Location = new System.Drawing.Point(612, 635);
-            this.marca_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.marca_combo.Margin = new System.Windows.Forms.Padding(4);
             this.marca_combo.Name = "marca_combo";
             this.marca_combo.Size = new System.Drawing.Size(316, 33);
             this.marca_combo.TabIndex = 56;
@@ -1056,7 +1060,7 @@
             // 
             this.modelo_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modelo_txt.Location = new System.Drawing.Point(164, 631);
-            this.modelo_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modelo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.modelo_txt.Name = "modelo_txt";
             this.modelo_txt.Size = new System.Drawing.Size(252, 44);
             this.modelo_txt.TabIndex = 54;
@@ -1077,7 +1081,7 @@
             // 
             this.aparatoAuditivo_combo.FormattingEnabled = true;
             this.aparatoAuditivo_combo.Location = new System.Drawing.Point(346, 569);
-            this.aparatoAuditivo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aparatoAuditivo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.aparatoAuditivo_combo.Name = "aparatoAuditivo_combo";
             this.aparatoAuditivo_combo.Size = new System.Drawing.Size(504, 33);
             this.aparatoAuditivo_combo.TabIndex = 52;
@@ -1098,7 +1102,7 @@
             // 
             this.tieneAparato_check.AutoSize = true;
             this.tieneAparato_check.Location = new System.Drawing.Point(414, 488);
-            this.tieneAparato_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tieneAparato_check.Margin = new System.Windows.Forms.Padding(4);
             this.tieneAparato_check.Name = "tieneAparato_check";
             this.tieneAparato_check.Size = new System.Drawing.Size(63, 29);
             this.tieneAparato_check.TabIndex = 50;
@@ -1120,7 +1124,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(620, 313);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 37);
             this.button1.TabIndex = 48;
@@ -1131,7 +1135,7 @@
             // 
             this.causa_combo.FormattingEnabled = true;
             this.causa_combo.Location = new System.Drawing.Point(140, 313);
-            this.causa_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.causa_combo.Margin = new System.Windows.Forms.Padding(4);
             this.causa_combo.Name = "causa_combo";
             this.causa_combo.Size = new System.Drawing.Size(468, 33);
             this.causa_combo.TabIndex = 47;
@@ -1152,7 +1156,7 @@
             // 
             this.grado_combo.FormattingEnabled = true;
             this.grado_combo.Location = new System.Drawing.Point(140, 235);
-            this.grado_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grado_combo.Margin = new System.Windows.Forms.Padding(4);
             this.grado_combo.Name = "grado_combo";
             this.grado_combo.Size = new System.Drawing.Size(788, 33);
             this.grado_combo.TabIndex = 45;
@@ -1173,7 +1177,7 @@
             // 
             this.perdidaAuditiva_combo.FormattingEnabled = true;
             this.perdidaAuditiva_combo.Location = new System.Drawing.Point(470, 146);
-            this.perdidaAuditiva_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.perdidaAuditiva_combo.Margin = new System.Windows.Forms.Padding(4);
             this.perdidaAuditiva_combo.Name = "perdidaAuditiva_combo";
             this.perdidaAuditiva_combo.Size = new System.Drawing.Size(458, 33);
             this.perdidaAuditiva_combo.TabIndex = 43;
@@ -1194,7 +1198,7 @@
             // 
             this.periodo_combo.FormattingEnabled = true;
             this.periodo_combo.Location = new System.Drawing.Point(648, 35);
-            this.periodo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.periodo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.periodo_combo.Name = "periodo_combo";
             this.periodo_combo.Size = new System.Drawing.Size(458, 33);
             this.periodo_combo.TabIndex = 41;
@@ -1223,7 +1227,7 @@
             this.Familia.Controls.Add(this.tieneHijo_check);
             this.Familia.Controls.Add(this.label44);
             this.Familia.Location = new System.Drawing.Point(4, 34);
-            this.Familia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Familia.Margin = new System.Windows.Forms.Padding(4);
             this.Familia.Name = "Familia";
             this.Familia.Size = new System.Drawing.Size(1484, 968);
             this.Familia.TabIndex = 4;
@@ -1233,7 +1237,7 @@
             // 
             this.sordoHijo_check.AutoSize = true;
             this.sordoHijo_check.Location = new System.Drawing.Point(964, 237);
-            this.sordoHijo_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sordoHijo_check.Margin = new System.Windows.Forms.Padding(4);
             this.sordoHijo_check.Name = "sordoHijo_check";
             this.sordoHijo_check.Size = new System.Drawing.Size(63, 29);
             this.sordoHijo_check.TabIndex = 60;
@@ -1255,7 +1259,7 @@
             // fechaNacimientoHijo
             // 
             this.fechaNacimientoHijo.Location = new System.Drawing.Point(376, 237);
-            this.fechaNacimientoHijo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fechaNacimientoHijo.Margin = new System.Windows.Forms.Padding(4);
             this.fechaNacimientoHijo.Name = "fechaNacimientoHijo";
             this.fechaNacimientoHijo.Size = new System.Drawing.Size(402, 31);
             this.fechaNacimientoHijo.TabIndex = 58;
@@ -1276,7 +1280,7 @@
             // 
             this.nombreHijo_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreHijo_txt.Location = new System.Drawing.Point(184, 135);
-            this.nombreHijo_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombreHijo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.nombreHijo_txt.Name = "nombreHijo_txt";
             this.nombreHijo_txt.Size = new System.Drawing.Size(1070, 44);
             this.nombreHijo_txt.TabIndex = 56;
@@ -1297,7 +1301,7 @@
             // 
             this.tieneHijo_check.AutoSize = true;
             this.tieneHijo_check.Location = new System.Drawing.Point(256, 54);
-            this.tieneHijo_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tieneHijo_check.Margin = new System.Windows.Forms.Padding(4);
             this.tieneHijo_check.Name = "tieneHijo_check";
             this.tieneHijo_check.Size = new System.Drawing.Size(60, 29);
             this.tieneHijo_check.TabIndex = 17;
@@ -1320,7 +1324,7 @@
             // 
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
             this.back_picture.Location = new System.Drawing.Point(12, 1019);
-            this.back_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.back_picture.Margin = new System.Windows.Forms.Padding(4);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(60, 56);
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1345,6 +1349,27 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label48.Location = new System.Drawing.Point(730, 53);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(391, 42);
+            this.label48.TabIndex = 58;
+            this.label48.Text = "Año en que se estudio";
+            // 
+            // anoEstudio_txt
+            // 
+            this.anoEstudio_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.anoEstudio_txt.Location = new System.Drawing.Point(1129, 51);
+            this.anoEstudio_txt.Margin = new System.Windows.Forms.Padding(4);
+            this.anoEstudio_txt.Name = "anoEstudio_txt";
+            this.anoEstudio_txt.Size = new System.Drawing.Size(182, 44);
+            this.anoEstudio_txt.TabIndex = 59;
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1358,7 +1383,7 @@
             this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Persona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Persona";
@@ -1486,6 +1511,8 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.CheckBox sordoHijo_check;
         private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox anoEstudio_txt;
+        private System.Windows.Forms.Label label48;
 
     }
 }
