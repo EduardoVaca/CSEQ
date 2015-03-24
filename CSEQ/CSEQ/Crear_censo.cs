@@ -12,10 +12,9 @@ namespace CSEQ
 {
     public partial class Crear_censo : Form
     {
-        public Crear_censo(String Ano)
+        public Crear_censo()
         {
-            InitializeComponent();
-            ano_txt.Text = Ano;
+            InitializeComponent();            
         }
 
         private void close_picture_Click(object sender, EventArgs e)

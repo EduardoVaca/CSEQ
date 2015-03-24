@@ -13,7 +13,7 @@ namespace CSEQ
     public partial class Lista_registros : Form
     {
         private int valor_decision;
-
+        //Recibe como parametro un entero para saber en que modo esta "Crear", "Editar" o "Eliminar"
         public Lista_registros(int valor_decision)
         {
             this.valor_decision = valor_decision;
@@ -42,6 +42,14 @@ namespace CSEQ
                 titulo.Text = "Eliminar Registro";
         }
 
+        /*************************************************************************
+         * Se crean diferentes formas dependiendo de lo que se quiere crear
+         * Si esta en modo de EDITAR, manda como parametro el nombre de la tabla a la que
+         * quiere crear
+         * Si esta en modo ELIMINAR pasa lo mismo
+         * En crear no manda parametros
+         * ***********************************************************************
+         */ 
         private void persona_btn_Click(object sender, EventArgs e)
         {
             if(valor_decision == 1)
@@ -90,7 +98,7 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-                Crear_delegacion crear = new Crear_delegacion("Delegacion");
+                Crear_delegacion crear = new Crear_delegacion();
                 this.Hide();
                 crear.Show();
 
@@ -136,7 +144,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-                //FALTA TABLE DE ESTADO
+                CrearEstado crear = new CrearEstado();
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {
@@ -178,7 +188,7 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-                Crear_censo crear = new Crear_censo("Censo");
+                Crear_censo crear = new Crear_censo();
                 this.Hide();
                 crear.Show();
             }
@@ -223,7 +233,7 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-                Crear_marca crear = new Crear_marca("Marca");
+                Crear_marca crear = new Crear_marca();
                 this.Hide();
                 crear.Show();
             }
@@ -245,7 +255,7 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-                Crear_causa crear = new Crear_causa("Causa");
+                Crear_causa crear = new Crear_causa();
                 this.Hide();
                 crear.Show();
             }
@@ -267,7 +277,7 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-                Crear_sueldo crear = new Crear_sueldo("Sueldo");
+                Crear_sueldo crear = new Crear_sueldo();
                 this.Hide();
                 crear.Show();
             }

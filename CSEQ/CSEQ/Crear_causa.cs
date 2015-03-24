@@ -12,10 +12,9 @@ namespace CSEQ
 {
     public partial class Crear_causa : Form
     {
-        public Crear_causa(String Nombre)
+        public Crear_causa()
         {
-            InitializeComponent();
-            nombreCausa_txt.Text = Nombre;
+            InitializeComponent();            
         }
 
         private void close_picture_Click(object sender, EventArgs e)

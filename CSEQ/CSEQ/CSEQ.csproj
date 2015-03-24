@@ -68,6 +68,12 @@
     <Compile Include="CrearColonia.Designer.cs">
       <DependentUpon>CrearColonia.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearEstado.Designer.cs">
+      <DependentUpon>CrearEstado.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearMunicipio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearColonia.resx">
       <DependentUpon>CrearColonia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearEstado.resx">
+      <DependentUpon>CrearEstado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crearMunicipio.resx">
       <DependentUpon>CrearMunicipio.cs</DependentUpon>

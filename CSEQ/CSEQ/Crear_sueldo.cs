@@ -12,10 +12,9 @@ namespace CSEQ
 {
     public partial class Crear_sueldo : Form
     {
-        public Crear_sueldo(String sueldoMinimo)
+        public Crear_sueldo()
         {
-            InitializeComponent();
-            sueldoMinimo_txt.Text = sueldoMinimo;
+            InitializeComponent();            
 
         }
 

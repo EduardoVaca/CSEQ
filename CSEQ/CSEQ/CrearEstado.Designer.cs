@@ -45,10 +45,10 @@
             this.Mun.AutoSize = true;
             this.Mun.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mun.ForeColor = System.Drawing.Color.White;
-            this.Mun.Location = new System.Drawing.Point(325, 119);
-            this.Mun.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Mun.Location = new System.Drawing.Point(650, 229);
+            this.Mun.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Mun.Name = "Mun";
-            this.Mun.Size = new System.Drawing.Size(117, 37);
+            this.Mun.Size = new System.Drawing.Size(233, 73);
             this.Mun.TabIndex = 25;
             this.Mun.Text = "Estado";
             // 
@@ -57,26 +57,28 @@
             this.Nombre.AutoSize = true;
             this.Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.ForeColor = System.Drawing.Color.White;
-            this.Nombre.Location = new System.Drawing.Point(181, 244);
-            this.Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Nombre.Location = new System.Drawing.Point(362, 469);
+            this.Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(132, 37);
+            this.Nombre.Size = new System.Drawing.Size(260, 73);
             this.Nombre.TabIndex = 28;
             this.Nombre.Text = "Nombre";
             // 
             // estado_txt
             // 
             this.estado_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estado_txt.Location = new System.Drawing.Point(318, 251);
+            this.estado_txt.Location = new System.Drawing.Point(636, 483);
+            this.estado_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.estado_txt.Name = "estado_txt";
-            this.estado_txt.Size = new System.Drawing.Size(247, 30);
+            this.estado_txt.Size = new System.Drawing.Size(490, 53);
             this.estado_txt.TabIndex = 27;
             // 
             // Guardar_txt
             // 
-            this.Guardar_txt.Location = new System.Drawing.Point(334, 432);
+            this.Guardar_txt.Location = new System.Drawing.Point(668, 831);
+            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Guardar_txt.Name = "Guardar_txt";
-            this.Guardar_txt.Size = new System.Drawing.Size(96, 40);
+            this.Guardar_txt.Size = new System.Drawing.Size(192, 77);
             this.Guardar_txt.TabIndex = 30;
             this.Guardar_txt.Text = "Guardar";
             this.Guardar_txt.UseVisualStyleBackColor = true;
@@ -84,9 +86,10 @@
             // Atras_picture
             // 
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
-            this.Atras_picture.Location = new System.Drawing.Point(12, 509);
+            this.Atras_picture.Location = new System.Drawing.Point(24, 979);
+            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Atras_picture.Name = "Atras_picture";
-            this.Atras_picture.Size = new System.Drawing.Size(47, 47);
+            this.Atras_picture.Size = new System.Drawing.Size(94, 90);
             this.Atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Atras_picture.TabIndex = 31;
             this.Atras_picture.TabStop = false;
@@ -97,20 +100,20 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(606, 544);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(1212, 1046);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 15);
+            this.label4.Size = new System.Drawing.Size(342, 29);
             this.label4.TabIndex = 32;
             this.label4.Text = "ROMPIENDO PARADIGMAS";
             // 
             // x_picture
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(759, 11);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.x_picture.Location = new System.Drawing.Point(1518, 21);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.x_picture.Name = "x_picture";
-            this.x_picture.Size = new System.Drawing.Size(30, 29);
+            this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.x_picture.TabIndex = 33;
             this.x_picture.TabStop = false;
@@ -118,10 +121,10 @@
             // 
             // CrearEstado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(800, 568);
+            this.ClientSize = new System.Drawing.Size(1600, 1092);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Atras_picture);
@@ -130,7 +133,9 @@
             this.Controls.Add(this.estado_txt);
             this.Controls.Add(this.Mun);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "CrearEstado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearEstado";
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();

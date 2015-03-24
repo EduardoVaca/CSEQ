@@ -12,10 +12,9 @@ namespace CSEQ
 {
     public partial class Crear_marca : Form
     {
-        public Crear_marca(String Nombre)
+        public Crear_marca()
         {
-            InitializeComponent();
-            nombre_txt.Text = Nombre;
+            InitializeComponent();            
         }
 
         private void close_picture_Click(object sender, EventArgs e)

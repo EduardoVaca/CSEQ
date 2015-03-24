@@ -13,10 +13,9 @@ namespace CSEQ
 
     public partial class Crear_delegacion : Form
     {
-        public Crear_delegacion(String Nombre)
+        public Crear_delegacion()
         {
-            InitializeComponent();
-            nombre_txt.Text = Nombre;
+            InitializeComponent();            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
