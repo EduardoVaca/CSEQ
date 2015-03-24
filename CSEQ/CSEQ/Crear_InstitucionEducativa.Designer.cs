@@ -78,6 +78,7 @@
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.back_picture.TabIndex = 22;
             this.back_picture.TabStop = false;
+            this.back_picture.Click += new System.EventHandler(this.back_picture_Click);
             // 
             // label3
             // 

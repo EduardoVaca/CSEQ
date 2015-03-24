@@ -20,6 +20,7 @@ namespace CSEQ
         private void Atras_Click(object sender, EventArgs e)
         {
             Menu_principal Menu_principal = new Menu_principal();
+            this.Close();
             Menu_principal.Show();
         }
 

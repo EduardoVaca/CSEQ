@@ -43,9 +43,10 @@
             // 
             // Guardar_txt
             // 
-            this.Guardar_txt.Location = new System.Drawing.Point(352, 423);
+            this.Guardar_txt.Location = new System.Drawing.Point(704, 813);
+            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Guardar_txt.Name = "Guardar_txt";
-            this.Guardar_txt.Size = new System.Drawing.Size(96, 40);
+            this.Guardar_txt.Size = new System.Drawing.Size(192, 77);
             this.Guardar_txt.TabIndex = 35;
             this.Guardar_txt.Text = "Guardar";
             this.Guardar_txt.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@
             // 
             this.marca_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marca_combo.FormattingEnabled = true;
-            this.marca_combo.Location = new System.Drawing.Point(381, 307);
+            this.marca_combo.Location = new System.Drawing.Point(690, 551);
+            this.marca_combo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.marca_combo.Name = "marca_combo";
-            this.marca_combo.Size = new System.Drawing.Size(182, 33);
+            this.marca_combo.Size = new System.Drawing.Size(360, 54);
             this.marca_combo.TabIndex = 34;
             // 
             // label1
@@ -64,10 +66,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(237, 301);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(363, 532);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 37);
+            this.label1.Size = new System.Drawing.Size(210, 73);
             this.label1.TabIndex = 33;
             this.label1.Text = "Marca";
             // 
@@ -76,19 +78,20 @@
             this.Tipo_label.AutoSize = true;
             this.Tipo_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tipo_label.ForeColor = System.Drawing.Color.White;
-            this.Tipo_label.Location = new System.Drawing.Point(208, 206);
-            this.Tipo_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Tipo_label.Location = new System.Drawing.Point(416, 396);
+            this.Tipo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Tipo_label.Name = "Tipo_label";
-            this.Tipo_label.Size = new System.Drawing.Size(80, 37);
+            this.Tipo_label.Size = new System.Drawing.Size(157, 73);
             this.Tipo_label.TabIndex = 32;
             this.Tipo_label.Text = "Tipo";
             // 
             // tipo_txt
             // 
             this.tipo_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipo_txt.Location = new System.Drawing.Point(345, 213);
+            this.tipo_txt.Location = new System.Drawing.Point(690, 410);
+            this.tipo_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tipo_txt.Name = "tipo_txt";
-            this.tipo_txt.Size = new System.Drawing.Size(247, 30);
+            this.tipo_txt.Size = new System.Drawing.Size(490, 53);
             this.tipo_txt.TabIndex = 31;
             // 
             // AparatoAuditivo_label
@@ -96,20 +99,20 @@
             this.AparatoAuditivo_label.AutoSize = true;
             this.AparatoAuditivo_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AparatoAuditivo_label.ForeColor = System.Drawing.Color.White;
-            this.AparatoAuditivo_label.Location = new System.Drawing.Point(273, 79);
-            this.AparatoAuditivo_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AparatoAuditivo_label.Location = new System.Drawing.Point(546, 152);
+            this.AparatoAuditivo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AparatoAuditivo_label.Name = "AparatoAuditivo_label";
-            this.AparatoAuditivo_label.Size = new System.Drawing.Size(254, 37);
+            this.AparatoAuditivo_label.Size = new System.Drawing.Size(504, 73);
             this.AparatoAuditivo_label.TabIndex = 30;
             this.AparatoAuditivo_label.Text = "Aparato Auditivo";
             // 
             // x_picture
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(771, 0);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.x_picture.Location = new System.Drawing.Point(1542, 0);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.x_picture.Name = "x_picture";
-            this.x_picture.Size = new System.Drawing.Size(30, 29);
+            this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.x_picture.TabIndex = 36;
             this.x_picture.TabStop = false;
@@ -118,9 +121,10 @@
             // Atras_picture
             // 
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
-            this.Atras_picture.Location = new System.Drawing.Point(1, 521);
+            this.Atras_picture.Location = new System.Drawing.Point(2, 1002);
+            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Atras_picture.Name = "Atras_picture";
-            this.Atras_picture.Size = new System.Drawing.Size(47, 47);
+            this.Atras_picture.Size = new System.Drawing.Size(94, 90);
             this.Atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Atras_picture.TabIndex = 37;
             this.Atras_picture.TabStop = false;
@@ -128,11 +132,11 @@
             // 
             // CrearAparatoAuditivo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(800, 568);
+            this.ClientSize = new System.Drawing.Size(1600, 1092);
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.Guardar_txt);
@@ -142,7 +146,9 @@
             this.Controls.Add(this.tipo_txt);
             this.Controls.Add(this.AparatoAuditivo_label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "CrearAparatoAuditivo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AparatoAuditivo";
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).EndInit();

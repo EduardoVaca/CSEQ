@@ -31,6 +31,8 @@ namespace CSEQ
 
         private void Atras_picture_Click(object sender, EventArgs e)
         {
+            this.Close();
+            Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
     }
 }
