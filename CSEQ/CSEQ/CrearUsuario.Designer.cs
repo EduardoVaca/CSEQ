@@ -139,6 +139,7 @@
             this.Controls.Add(this.x_picture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrearUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).EndInit();
