@@ -27,5 +27,10 @@ namespace CSEQ
             this.Close();
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
+
+        private void CrearAparatoAuditivo_Load(object sender, EventArgs e)
+        {
+            Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
+        }
     }
 }

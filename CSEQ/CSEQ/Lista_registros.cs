@@ -34,6 +34,7 @@ namespace CSEQ
 
         private void Lista_registros_Load(object sender, EventArgs e)
         {
+            Util.creaConexion(@"siqueiros.qro.itesm.mx\siqueiros", "BDequipo4", "BDequipo4", "cuhoyuro");
             if (valor_decision == 1)
                 titulo.Text = "Crear Registro";
             else if (valor_decision == 2)

@@ -29,6 +29,11 @@ namespace CSEQ
             Menu_principal.Show();            
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            Util.creaConexion(@"siqueiros.qro.itesm.mx\siqueiros", "BDequipo4", "BDequipo4", "cuhoyuro");
+        }
+
 
 
 

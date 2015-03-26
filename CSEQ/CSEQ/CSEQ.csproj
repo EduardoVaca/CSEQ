@@ -172,6 +172,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
     <Compile Include="Ventana.cs" />
     <EmbeddedResource Include="ConsultaGrafica.resx">
       <DependentUpon>ConsultaGrafica.cs</DependentUpon>

@@ -34,5 +34,10 @@ namespace CSEQ
             this.Close();
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
+
+        private void CrearMunicipio_Load(object sender, EventArgs e)
+        {
+            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
+        }
     }
 }
