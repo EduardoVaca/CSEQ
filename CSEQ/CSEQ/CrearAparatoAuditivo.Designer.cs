@@ -37,6 +37,8 @@
             this.AparatoAuditivo_label = new System.Windows.Forms.Label();
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.Atras_picture = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +52,7 @@
             this.Guardar_txt.TabIndex = 35;
             this.Guardar_txt.Text = "Guardar";
             this.Guardar_txt.UseVisualStyleBackColor = true;
+            this.Guardar_txt.Click += new System.EventHandler(this.Guardar_txt_Click);
             // 
             // ID_marca
             // 
@@ -130,6 +133,30 @@
             this.Atras_picture.TabStop = false;
             this.Atras_picture.Click += new System.EventHandler(this.Atras_picture_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(1190, 410);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 42);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(1060, 551);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 42);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "*";
+            // 
             // CrearAparatoAuditivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -137,6 +164,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1600, 1092);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.Guardar_txt);
@@ -168,5 +197,7 @@
         private System.Windows.Forms.Label AparatoAuditivo_label;
         private System.Windows.Forms.PictureBox x_picture;
         private System.Windows.Forms.PictureBox Atras_picture;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

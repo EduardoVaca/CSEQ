@@ -27,5 +27,15 @@ namespace CSEQ
             this.Close();
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
+
+        private void CrearUsuario_Load(object sender, EventArgs e)
+        {
+            Util.llenarComboBox(ID_rol, "SELECT ID_rol, nombre FROM Rol");
+        }
+
+        private void Guardar_txt_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

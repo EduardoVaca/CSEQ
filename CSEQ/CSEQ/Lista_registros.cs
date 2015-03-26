@@ -54,7 +54,7 @@ namespace CSEQ
         private void persona_btn_Click(object sender, EventArgs e)
         {
             if(valor_decision == 1)
-            {
+            {                
                 Persona crear = new Persona();
                 this.Hide();
                 crear.Show();

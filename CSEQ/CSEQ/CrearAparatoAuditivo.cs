@@ -32,5 +32,19 @@ namespace CSEQ
         {
             Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
         }
+
+        //Metodo donde se agrega el registro a la base de datos
+        private void Guardar_txt_Click(object sender, EventArgs e)
+        {
+            String dml;
+            String mTipo = tipo_txt.Text;
+            int mID_marca = Int32.Parse(ID_marca.SelectedValue.ToString());
+
+            dml = "INSERT INTO AparatoAuditivo VALUES('" + mTipo + "', " + mID_marca + ")";
+            if (Util.execute(dml))
+            {
+                MessageBox.Show("El Aparato Auditivo se ha registrado con exito!");
+            }
+        }
     }
 }

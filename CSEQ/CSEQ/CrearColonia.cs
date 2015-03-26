@@ -50,6 +50,12 @@ namespace CSEQ
             Util.llenarComboBox(ID_delegacion, "SELECT ID_delegacion, nombre FROM Delegacion WHERE " +
                                                 "ID_municipio = " + valorComboBox);
         }
+
+        private void Guardar_Click(object sender, EventArgs e)
+        {
+            String cNombre;
+            //Falta checar duda de atributos en nulo
+        }
         /*------------------------------------------------------------------------------------*/
 
 

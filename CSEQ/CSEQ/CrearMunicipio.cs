@@ -39,5 +39,21 @@ namespace CSEQ
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
         }
+
+        //Metodo donde se agrega el registro a la base de datos
+        private void guardar_txt_Click(object sender, EventArgs e)
+        {
+            String dml;
+            int mID_estado;
+            String mNombre;
+
+            mNombre = municipio_txt.Text;
+            mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
+            dml = "INSERT INTO Municipio VALUES ('" + mNombre + "', " + mID_estado + ")";            
+            if (Util.execute(dml))
+            {
+                MessageBox.Show("El Municipio se ha registrado con exito!");
+            }
+        }
     }
 }
