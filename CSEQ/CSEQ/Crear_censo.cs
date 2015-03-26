@@ -27,5 +27,24 @@ namespace CSEQ
             this.Close();
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
+
+        //Metodo donde se agrega el registro a la base de datos
+        private void guardar_btn_Click(object sender, EventArgs e)
+        {
+            if (ano_txt.TextLength == 4)
+            {
+                String dml;
+                int cAno = Int16.Parse(ano_txt.Text);
+
+                dml = "INSERT INTO Censo VALUES(" + cAno + ")";
+                if (Util.execute(dml))
+                {
+                    MessageBox.Show("El Censo se ha registrado con exito!");
+                }
+            }
+            else
+                MessageBox.Show("El año debe tener 4 digitos");
+            
+        }
     }
 }

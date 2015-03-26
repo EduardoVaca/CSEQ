@@ -130,6 +130,49 @@ namespace CSEQ
             }
         }
 
+        /*------------------------------------------------------------------------------
+         * Esta funcion permite ejecutar Estatutos DML (Insert, delete, update)
+         @ param DML Sentencia DML que se ejecutara en la cbase de datos
+         @ return TRUE si se ejecuto con exito, FALSE si ocurrio algun error
+         --------------------------------------------------------------------------------*/
+
+        public static bool execute(String DML)
+        {
+            SqlCommand command = new SqlCommand(DML, conexion);
+
+            try
+            {
+                conexion.Open();
+                command.ExecuteNonQuery();
+                conexion.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                String err;
+                err = "Error de base de datos al eljecutar el comando" +
+                        Environment.NewLine + ex.Message;
+                mostrarMensajeError(err);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                String err;
+                err = "Error al ejecutar comando"
+                        + Environment.NewLine + ex.Message;
+                mostrarMensajeError(err);
+                return false;
+            }
+            finally
+            {
+                try
+                {
+                    conexion.Close();
+                }
+                catch { }
+            }
+        }
+
 
     }
 }

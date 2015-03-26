@@ -27,5 +27,18 @@ namespace CSEQ
             this.Close();
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
+
+        //Metodo donde se agrega el registro a la base de datos
+        private void Guardar_txt_Click(object sender, EventArgs e)
+        {
+            String dml;
+            String eNombre = nombre_txt.Text;
+
+            dml = "INSERT INTO Estado VALUES('" + eNombre + "')";
+            if (Util.execute(dml))
+            {
+                MessageBox.Show("El Estado se ha registrado con exito!");
+            }
+        }
     }
 }

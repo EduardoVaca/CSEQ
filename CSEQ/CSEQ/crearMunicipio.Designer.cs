@@ -37,7 +37,9 @@
             this.Atras_picture = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.x_picture = new System.Windows.Forms.PictureBox();
-            this.Guardar_txt = new System.Windows.Forms.Button();
+            this.guardar_txt = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             this.SuspendLayout();
@@ -133,15 +135,40 @@
             this.x_picture.TabStop = false;
             this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
             // 
-            // Guardar_txt
+            // guardar_txt
             // 
-            this.Guardar_txt.Location = new System.Drawing.Point(704, 804);
-            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6);
-            this.Guardar_txt.Name = "Guardar_txt";
-            this.Guardar_txt.Size = new System.Drawing.Size(192, 77);
-            this.Guardar_txt.TabIndex = 29;
-            this.Guardar_txt.Text = "Guardar";
-            this.Guardar_txt.UseVisualStyleBackColor = true;
+            this.guardar_txt.Location = new System.Drawing.Point(704, 804);
+            this.guardar_txt.Margin = new System.Windows.Forms.Padding(6);
+            this.guardar_txt.Name = "guardar_txt";
+            this.guardar_txt.Size = new System.Drawing.Size(192, 77);
+            this.guardar_txt.TabIndex = 29;
+            this.guardar_txt.Text = "Guardar";
+            this.guardar_txt.UseVisualStyleBackColor = true;
+            this.guardar_txt.Click += new System.EventHandler(this.guardar_txt_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label30.Location = new System.Drawing.Point(1190, 550);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(32, 42);
+            this.label30.TabIndex = 50;
+            this.label30.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(1190, 400);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 42);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "*";
             // 
             // CrearMunicipio
             // 
@@ -150,7 +177,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1600, 1092);
-            this.Controls.Add(this.Guardar_txt);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.guardar_txt);
             this.Controls.Add(this.ID_estado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Nombre);
@@ -182,6 +211,8 @@
         private System.Windows.Forms.PictureBox Atras_picture;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox x_picture;
-        private System.Windows.Forms.Button Guardar_txt;
+        private System.Windows.Forms.Button guardar_txt;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label2;
     }
 }
