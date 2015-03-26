@@ -44,6 +44,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
                                                 "ID_estado = " + valorComboBox);
         }
+
         /*-----------------------------------------------------------------------------------*/
 
 

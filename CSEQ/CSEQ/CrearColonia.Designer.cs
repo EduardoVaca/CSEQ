@@ -153,11 +153,12 @@
             // 
             this.ID_delegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_delegacion.FormattingEnabled = true;
-            this.ID_delegacion.Location = new System.Drawing.Point(686, 668);
+            this.ID_delegacion.Location = new System.Drawing.Point(683, 668);
             this.ID_delegacion.Margin = new System.Windows.Forms.Padding(6);
             this.ID_delegacion.Name = "ID_delegacion";
-            this.ID_delegacion.Size = new System.Drawing.Size(360, 54);
+            this.ID_delegacion.Size = new System.Drawing.Size(423, 54);
             this.ID_delegacion.TabIndex = 20;
+            this.ID_delegacion.Text = "Selecciona Municipio";
             // 
             // ID_municipio
             // 
@@ -166,8 +167,9 @@
             this.ID_municipio.Location = new System.Drawing.Point(683, 544);
             this.ID_municipio.Margin = new System.Windows.Forms.Padding(6);
             this.ID_municipio.Name = "ID_municipio";
-            this.ID_municipio.Size = new System.Drawing.Size(360, 54);
+            this.ID_municipio.Size = new System.Drawing.Size(423, 54);
             this.ID_municipio.TabIndex = 21;
+            this.ID_municipio.Text = "Selecciona Estado";
             this.ID_municipio.SelectionChangeCommitted += new System.EventHandler(this.ID_municipio_SelectionChangeCommitted);
             // 
             // label3
@@ -189,7 +191,7 @@
             this.ID_estado.Location = new System.Drawing.Point(686, 428);
             this.ID_estado.Margin = new System.Windows.Forms.Padding(6);
             this.ID_estado.Name = "ID_estado";
-            this.ID_estado.Size = new System.Drawing.Size(360, 54);
+            this.ID_estado.Size = new System.Drawing.Size(420, 54);
             this.ID_estado.TabIndex = 23;
             this.ID_estado.SelectionChangeCommitted += new System.EventHandler(this.ID_estado_SelectionChangeCommitted);
             // 
