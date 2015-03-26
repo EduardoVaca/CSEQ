@@ -41,13 +41,13 @@
             this.correo_txt = new System.Windows.Forms.TextBox();
             this.calle_txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.delegacion_combo = new System.Windows.Forms.ComboBox();
+            this.ID_delegacion = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.municipio_combo = new System.Windows.Forms.ComboBox();
+            this.ID_municipio = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.estado_combo = new System.Windows.Forms.ComboBox();
+            this.ID_estado = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.colonia_combo = new System.Windows.Forms.ComboBox();
+            this.ID_colonia = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.privada_check = new System.Windows.Forms.CheckBox();
@@ -178,84 +178,86 @@
             this.label6.TabIndex = 30;
             this.label6.Text = "Calle";
             // 
-            // delegacion_combo
+            // ID_delegacion
             // 
-            this.delegacion_combo.FormattingEnabled = true;
-            this.delegacion_combo.Location = new System.Drawing.Point(230, 613);
-            this.delegacion_combo.Margin = new System.Windows.Forms.Padding(4);
-            this.delegacion_combo.Name = "delegacion_combo";
-            this.delegacion_combo.Size = new System.Drawing.Size(264, 33);
-            this.delegacion_combo.TabIndex = 46;
+            this.ID_delegacion.FormattingEnabled = true;
+            this.ID_delegacion.Location = new System.Drawing.Point(728, 605);
+            this.ID_delegacion.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_delegacion.Name = "ID_delegacion";
+            this.ID_delegacion.Size = new System.Drawing.Size(264, 33);
+            this.ID_delegacion.TabIndex = 46;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(36, 607);
+            this.label13.Location = new System.Drawing.Point(524, 599);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(206, 42);
             this.label13.TabIndex = 45;
             this.label13.Text = "Delegacion";
             // 
-            // municipio_combo
+            // ID_municipio
             // 
-            this.municipio_combo.FormattingEnabled = true;
-            this.municipio_combo.Location = new System.Drawing.Point(704, 611);
-            this.municipio_combo.Margin = new System.Windows.Forms.Padding(4);
-            this.municipio_combo.Name = "municipio_combo";
-            this.municipio_combo.Size = new System.Drawing.Size(264, 33);
-            this.municipio_combo.TabIndex = 44;
+            this.ID_municipio.FormattingEnabled = true;
+            this.ID_municipio.Location = new System.Drawing.Point(229, 603);
+            this.ID_municipio.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_municipio.Name = "ID_municipio";
+            this.ID_municipio.Size = new System.Drawing.Size(264, 33);
+            this.ID_municipio.TabIndex = 44;
+            this.ID_municipio.SelectionChangeCommitted += new System.EventHandler(this.ID_municipio_SelectionChangeCommitted);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(512, 607);
+            this.label11.Location = new System.Drawing.Point(37, 599);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(176, 42);
             this.label11.TabIndex = 43;
             this.label11.Text = "Municipio";
             // 
-            // estado_combo
+            // ID_estado
             // 
-            this.estado_combo.FormattingEnabled = true;
-            this.estado_combo.Location = new System.Drawing.Point(1008, 534);
-            this.estado_combo.Margin = new System.Windows.Forms.Padding(4);
-            this.estado_combo.Name = "estado_combo";
-            this.estado_combo.Size = new System.Drawing.Size(264, 33);
-            this.estado_combo.TabIndex = 42;
+            this.ID_estado.FormattingEnabled = true;
+            this.ID_estado.Location = new System.Drawing.Point(1060, 501);
+            this.ID_estado.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_estado.Name = "ID_estado";
+            this.ID_estado.Size = new System.Drawing.Size(264, 33);
+            this.ID_estado.TabIndex = 42;
+            this.ID_estado.SelectionChangeCommitted += new System.EventHandler(this.ID_estado_SelectionChangeCommitted);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(860, 530);
+            this.label10.Location = new System.Drawing.Point(912, 497);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(135, 42);
             this.label10.TabIndex = 41;
             this.label10.Text = "Estado";
             // 
-            // colonia_combo
+            // ID_colonia
             // 
-            this.colonia_combo.FormattingEnabled = true;
-            this.colonia_combo.Location = new System.Drawing.Point(1124, 611);
-            this.colonia_combo.Margin = new System.Windows.Forms.Padding(4);
-            this.colonia_combo.Name = "colonia_combo";
-            this.colonia_combo.Size = new System.Drawing.Size(294, 33);
-            this.colonia_combo.TabIndex = 40;
+            this.ID_colonia.FormattingEnabled = true;
+            this.ID_colonia.Location = new System.Drawing.Point(1167, 603);
+            this.ID_colonia.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_colonia.Name = "ID_colonia";
+            this.ID_colonia.Size = new System.Drawing.Size(294, 33);
+            this.ID_colonia.TabIndex = 40;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(976, 607);
+            this.label9.Location = new System.Drawing.Point(1019, 599);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 42);
@@ -319,13 +321,13 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.privada_check);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.delegacion_combo);
+            this.Controls.Add(this.ID_delegacion);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.municipio_combo);
+            this.Controls.Add(this.ID_municipio);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.estado_combo);
+            this.Controls.Add(this.ID_estado);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.colonia_combo);
+            this.Controls.Add(this.ID_colonia);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.calle_txt);
             this.Controls.Add(this.label6);
@@ -343,6 +345,7 @@
             this.Name = "Crear_InstitucionEducativa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear_InstitucionEducativa";
+            this.Load += new System.EventHandler(this.Crear_InstitucionEducativa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
             this.ResumeLayout(false);
@@ -364,13 +367,13 @@
         private System.Windows.Forms.TextBox correo_txt;
         private System.Windows.Forms.TextBox calle_txt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox delegacion_combo;
+        private System.Windows.Forms.ComboBox ID_delegacion;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox municipio_combo;
+        private System.Windows.Forms.ComboBox ID_municipio;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox estado_combo;
+        private System.Windows.Forms.ComboBox ID_estado;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox colonia_combo;
+        private System.Windows.Forms.ComboBox ID_colonia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox privada_check;

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearAparatoAuditivo));
             this.Guardar_txt = new System.Windows.Forms.Button();
-            this.marca_combo = new System.Windows.Forms.ComboBox();
+            this.ID_marca = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Tipo_label = new System.Windows.Forms.Label();
             this.tipo_txt = new System.Windows.Forms.TextBox();
@@ -44,22 +44,22 @@
             // Guardar_txt
             // 
             this.Guardar_txt.Location = new System.Drawing.Point(704, 813);
-            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6);
             this.Guardar_txt.Name = "Guardar_txt";
             this.Guardar_txt.Size = new System.Drawing.Size(192, 77);
             this.Guardar_txt.TabIndex = 35;
             this.Guardar_txt.Text = "Guardar";
             this.Guardar_txt.UseVisualStyleBackColor = true;
             // 
-            // marca_combo
+            // ID_marca
             // 
-            this.marca_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marca_combo.FormattingEnabled = true;
-            this.marca_combo.Location = new System.Drawing.Point(690, 551);
-            this.marca_combo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.marca_combo.Name = "marca_combo";
-            this.marca_combo.Size = new System.Drawing.Size(360, 54);
-            this.marca_combo.TabIndex = 34;
+            this.ID_marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_marca.FormattingEnabled = true;
+            this.ID_marca.Location = new System.Drawing.Point(690, 551);
+            this.ID_marca.Margin = new System.Windows.Forms.Padding(6);
+            this.ID_marca.Name = "ID_marca";
+            this.ID_marca.Size = new System.Drawing.Size(360, 54);
+            this.ID_marca.TabIndex = 34;
             // 
             // label1
             // 
@@ -89,7 +89,7 @@
             // 
             this.tipo_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipo_txt.Location = new System.Drawing.Point(690, 410);
-            this.tipo_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tipo_txt.Margin = new System.Windows.Forms.Padding(6);
             this.tipo_txt.Name = "tipo_txt";
             this.tipo_txt.Size = new System.Drawing.Size(490, 53);
             this.tipo_txt.TabIndex = 31;
@@ -110,7 +110,7 @@
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(1542, 0);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // 
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
             this.Atras_picture.Location = new System.Drawing.Point(2, 1002);
-            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6);
             this.Atras_picture.Name = "Atras_picture";
             this.Atras_picture.Size = new System.Drawing.Size(94, 90);
             this.Atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -140,16 +140,17 @@
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.Guardar_txt);
-            this.Controls.Add(this.marca_combo);
+            this.Controls.Add(this.ID_marca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Tipo_label);
             this.Controls.Add(this.tipo_txt);
             this.Controls.Add(this.AparatoAuditivo_label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CrearAparatoAuditivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AparatoAuditivo";
+            this.Load += new System.EventHandler(this.CrearAparatoAuditivo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).EndInit();
             this.ResumeLayout(false);
@@ -160,7 +161,7 @@
         #endregion
 
         private System.Windows.Forms.Button Guardar_txt;
-        private System.Windows.Forms.ComboBox marca_combo;
+        private System.Windows.Forms.ComboBox ID_marca;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tipo_label;
         private System.Windows.Forms.TextBox tipo_txt;
