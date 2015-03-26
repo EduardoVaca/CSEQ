@@ -52,7 +52,7 @@
             this.nombre_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.nombre_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.nombre_txt.Name = "nombre_txt";
-            this.nombre_txt.Size = new System.Drawing.Size(454, 69);
+            this.nombre_txt.Size = new System.Drawing.Size(533, 40);
             this.nombre_txt.TabIndex = 7;
             // 
             // delegacion_label
@@ -98,8 +98,9 @@
             this.ID_municipio.Location = new System.Drawing.Point(566, 676);
             this.ID_municipio.Margin = new System.Windows.Forms.Padding(6);
             this.ID_municipio.Name = "ID_municipio";
-            this.ID_municipio.Size = new System.Drawing.Size(454, 71);
+            this.ID_municipio.Size = new System.Drawing.Size(533, 71);
             this.ID_municipio.TabIndex = 10;
+            this.ID_municipio.Text = "Selecciona Estado";
             // 
             // nombre_label
             // 
@@ -142,7 +143,7 @@
             this.guardar_btn.AutoSize = true;
             this.guardar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guardar_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.guardar_btn.Location = new System.Drawing.Point(684, 777);
+            this.guardar_btn.Location = new System.Drawing.Point(685, 825);
             this.guardar_btn.Margin = new System.Windows.Forms.Padding(6);
             this.guardar_btn.Name = "guardar_btn";
             this.guardar_btn.Size = new System.Drawing.Size(246, 79);
@@ -169,7 +170,7 @@
             this.ID_estado.Location = new System.Drawing.Point(566, 547);
             this.ID_estado.Margin = new System.Windows.Forms.Padding(6);
             this.ID_estado.Name = "ID_estado";
-            this.ID_estado.Size = new System.Drawing.Size(454, 71);
+            this.ID_estado.Size = new System.Drawing.Size(533, 71);
             this.ID_estado.TabIndex = 15;
             this.ID_estado.SelectionChangeCommitted += new System.EventHandler(this.ID_estado_SelectionChangeCommitted);
             // 
