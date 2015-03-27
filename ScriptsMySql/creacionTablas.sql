@@ -6,17 +6,17 @@ CREATE TABLE Persona
 	CURP char(18) not null unique, 
 	nombre varchar(80) not null, 
 	fecha_nacimiento DATETIME not null,
-	sexo_masculino bit not null,
+	sexo_masculino boolean not null,
 	telefono numeric(10), 
 	correo varchar(60), 
 	calle varchar(80), 
-	examen_audiometria bit not null,
-	implante_coclear bit not null,
-	comunidad_indigena bit not null,
-	alergia bit not null,
-	enfermedad bit,
-	mexicano bit not null,
-	credencialIFE bit not null,
+	examen_audiometria boolean not null,
+	implante_coclear boolean not null,
+	comunidad_indigena boolean not null,
+	alergia boolean not null,
+	enfermedad boolean,
+	mexicano boolean not null,
+	credencialIFE boolean not null,
 	ID_periodo INT not null,
 	CONSTRAINT llavePersona PRIMARY KEY(CURP)
 );
@@ -113,8 +113,8 @@ CREATE TABLE InstitucionEducativa
 	calle varchar(80),
 	telefono numeric(10),
 	correo varchar(70),
-	privada bit not null,
-	especializada bit not null,
+	privada boolean not null,
+	especializada boolean not null,
 	CONSTRAINT llaveInstitucionEducativa PRIMARY KEY (ID_institucionEducativa)
 );
 
@@ -172,7 +172,7 @@ CREATE TABLE Empleo
 	correo varchar(80),
 	telefono numeric(10),
 	calle varchar(80),
-	interpretacion_LSM bit,
+	interpretacion_LSM boolean,
 	ID_areaTrabajo INT not null,
 	CONSTRAINT llaveEmpleo PRIMARY KEY (ID_empleo)
 );
@@ -365,9 +365,9 @@ CREATE TABLE Hijo
 (
 	ID_hijo INT auto_increment not null not null,
 	nombre varchar(80) not null,	
-	sexo_masculino bit not null,
+	sexo_masculino boolean not null,
 	fecha_nacimiento DATETIME not null,
-	sordo bit not null,
+	sordo boolean not null,
 	CURP char (18) not null,
 	CONSTRAINT llaveHijo PRIMARY KEY (ID_hijo)
 );
@@ -388,7 +388,7 @@ CREATE TABLE TienePerdidaAuditiva
 (
 	CURP char(18) not null,
 	ID_perdidaAuditiva INT not null,
-	prelinguistica bit not null,
+	prelinguistica boolean not null,
 	CONSTRAINT llaveTienePerdidaAuditiva PRIMARY KEY (CURP, ID_perdidaAuditiva)
 );
 
