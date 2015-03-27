@@ -42,7 +42,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_areaTrabajo, "SELECT ID_areaTrabajo, nombre FROM AreaTrabajo");
             Util.llenarComboBox(ID_periodo, "SELECT ID_periodo, periodo FROM Periodo");
             Util.llenarComboBox(ID_perdidaAuditiva, "SELECT ID_perdidaAuditiva, tipo FROM PerdidaAuditiva");
-            Util.llenarComboBox(ID_grado, "SELECT ID_grado, grado FROM Grado");
+            Util.llenarComboBox(ID_grado, "SELECT ID_grado, grado + ': ' + descripcion FROM Grado");
             Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa");
             Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, tipo FROM AparatoAuditivo");
             Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
