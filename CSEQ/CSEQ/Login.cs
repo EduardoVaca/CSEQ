@@ -31,7 +31,7 @@ namespace CSEQ
 
         private void Login_Load(object sender, EventArgs e)
         {
-            Util.creaConexion("localhost", "CSEQ", "EduardoVaca", "EduardoVaca");
+            Util.creaConexion("localhost", "CSEQ", "root", "");
         }
 
 
