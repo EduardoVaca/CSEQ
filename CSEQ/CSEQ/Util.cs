@@ -5,15 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 //Librerias para hacer servicio cliente-servidor
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CSEQ
 {
+    
     class Util
     {
+        
         //Conexion que se utilizara para conectarse con la base
-        static SqlConnection conexion;
+        static MySqlConnection conexion;
 
         /*
         ----------------------------------------------------------------
@@ -25,14 +27,13 @@ namespace CSEQ
         @param pass        Password de usuario
         -----------------------------------------------------------------
         */
-        public static void creaConexion(String servidor, String catalogo, String usuario, String password)
+        public static void creaConexion(String servidor, String nombreBaseDatos, String usuario, String password)
         {
-            conexion = new SqlConnection();
+            conexion = new MySqlConnection();
 
             //Obtenemos el string con el datasource de .net
-            String strConexion = @"Data Source=" + servidor + ";Initial Catalog="
-                                + catalogo + ";Persist Security Info=True; User ID="
-                                + usuario + ";Password=" + password;
+            String strConexion = "Server=" + servidor + ";Database=" + nombreBaseDatos +
+                                ";Uid=" + usuario + ";Pwd=" + password + ";";
 
             conexion.ConnectionString = strConexion;
         }
@@ -60,8 +61,8 @@ namespace CSEQ
         */
         public static DataTable getData(String consulta)
         {
-            SqlCommand comando = new SqlCommand();
-            SqlDataAdapter adaptador = new SqlDataAdapter();
+            MySqlCommand comando = new MySqlCommand();
+            MySqlDataAdapter adaptador = new MySqlDataAdapter();
             DataTable tabla = new DataTable();
 
             try
@@ -78,7 +79,7 @@ namespace CSEQ
                 else
                     return null;
             }
-            catch (SqlException ex)
+            catch (MySqlException ex)
             {
                 mostrarMensajeError("No se puede realizar la consulta <getData>" + Environment.NewLine +
                                     "Error: " + ex.Message);
@@ -138,7 +139,7 @@ namespace CSEQ
 
         public static bool execute(String DML)
         {
-            SqlCommand command = new SqlCommand(DML, conexion);
+            MySqlCommand command = new MySqlCommand(DML, conexion);
 
             try
             {
@@ -147,7 +148,7 @@ namespace CSEQ
                 conexion.Close();
                 return true;
             }
-            catch (SqlException ex)
+            catch (MySqlException ex)
             {
                 String err;
                 err = "Error de base de datos al eljecutar el comando" +
