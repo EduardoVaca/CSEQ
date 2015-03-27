@@ -32,7 +32,7 @@ CREATE TABLE Censo
 
 -- Creacion tabla: PerteneceCenso
 DROP TABLE IF EXISTS PerteneceCenso;
-CREATE TABLE IF NOT EXISTS PerteneceCenso
+CREATE TABLE PerteneceCenso
 (
 	CURP char(18) not null,
 	ID_censo INT not null,
