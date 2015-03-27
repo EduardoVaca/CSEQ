@@ -3,27 +3,27 @@
 -- Carga de PERIODO
 
 LOAD DATA INFILE 'periodo.csv'
-INTO TABLE pruebacseq.periodo
+INTO TABLE cseq.periodo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga PERSONA
 LOAD DATA INFILE 'Persona.csv'
-INTO TABLE pruebacseq.persona
+INTO TABLE cseq.persona
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga de ESTADO
 
 LOAD DATA INFILE 'Estado.csv'
-INTO TABLE pruebacseq.estado
+INTO TABLE cseq.estado
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- carga de INSTITUCIONEDUCATIVA
 
 LOAD DATA INFILE 'InstitucionEducativa.csv'
-INTO TABLE pruebacseq.institucioneducativa
+INTO TABLE cseq.institucioneducativa
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
@@ -31,14 +31,14 @@ IGNORE 1 LINES;
 -- Carga LENGUADOMINANTE
 
 LOAD DATA INFILE 'LenguaDominante.csv'
-INTO TABLE pruebacseq.lenguadominante
+INTO TABLE cseq.lenguadominante
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga NIVELINGLES
 
 LOAD DATA INFILE 'NivelIngles.csv'
-INTO TABLE pruebacseq.nivelingles
+INTO TABLE cseq.nivelingles
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
@@ -46,98 +46,98 @@ IGNORE 1 LINES;
 -- Carga NIVELESPANOL
 
 LOAD DATA INFILE 'NivelEspanol.csv'
-INTO TABLE pruebacseq.nivelespanol
+INTO TABLE cseq.nivelespanol
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga NIVELLSM
 
 LOAD DATA INFILE 'NivelLSM.csv'
-INTO TABLE pruebacseq.nivellsm
+INTO TABLE cseq.nivellsm
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga ESTADOCIVIL
 
 LOAD DATA INFILE 'EstadoCivil.csv'
-INTO TABLE pruebacseq.estadocivil
+INTO TABLE cseq.estadocivil
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga CENSO
 
 LOAD DATA INFILE 'Censo.csv'
-INTO TABLE pruebacseq.censo
+INTO TABLE cseq.censo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga MARCA
 
 LOAD DATA INFILE 'Marca.csv'
-INTO TABLE pruebacseq.marca
+INTO TABLE cseq.marca
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga HIJO
 
 LOAD DATA INFILE 'Hijo.csv'
-INTO TABLE pruebacseq.hijo
+INTO TABLE cseq.hijo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga GRADO
 
 LOAD DATA INFILE 'Grado.csv'
-INTO TABLE pruebacseq.grado
+INTO TABLE cseq.grado
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga CAUSA
 
 LOAD DATA INFILE 'Causa.csv'
-INTO TABLE pruebacseq.causa
+INTO TABLE cseq.causa
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga SUELDO
 
 LOAD DATA INFILE 'Sueldo.csv'
-INTO TABLE pruebacseq.sueldo
+INTO TABLE cseq.sueldo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga AREATRABAJO
 
 LOAD DATA INFILE 'AreaTrabajo.csv'
-INTO TABLE pruebacseq.areatrabajo
+INTO TABLE cseq.areatrabajo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga MUNICIPIO
 
 LOAD DATA INFILE 'Municipio.csv'
-INTO TABLE pruebacseq.municipio
+INTO TABLE cseq.municipio
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga DELEGACION
 
 LOAD DATA INFILE 'Delegacion.csv'
-INTO TABLE pruebacseq.delegacion
+INTO TABLE cseq.delegacion
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga COLONIA
 
 LOAD DATA INFILE 'Colonia.csv'
-INTO TABLE pruebacseq.colonia
+INTO TABLE cseq.colonia
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga Vive
 
 LOAD DATA INFILE 'Vive.csv'
-INTO TABLE pruebacseq.vive
+INTO TABLE cseq.vive
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
@@ -145,124 +145,124 @@ IGNORE 1 LINES;
 -- Carga LOCALIZAINSTITUCIONEDUCATIVA
 
 LOAD DATA INFILE 'LocalizaInstitucionEducativa.csv'
-INTO TABLE pruebacseq.localizainstitucioneducativa
+INTO TABLE cseq.localizainstitucioneducativa
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga NIVELEDUCATIVO
 
 LOAD DATA INFILE 'NivelEducativo.csv'
-INTO TABLE pruebascseq.niveleducativo
+INTO TABLE cseq.niveleducativo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga ESTUDIADO
 LOAD DATA INFILE 'Estudiado.csv'
-INTO TABLE pruebacseq.estudiado
+INTO TABLE cseq.estudiado
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga TIENENIVELEDUCATIVO
 LOAD DATA INFILE 'TieneNivelEducativo.csv'
-INTO TABLE pruebacseq.tieneniveleducativo
+INTO TABLE cseq.tieneniveleducativo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 	
 
 -- Carga TIENELENGUADOMINANTE
 LOAD DATA INFILE 'TieneLenguaDominante.csv'
-INTO TABLE pruebacseq.tienelenguadominante
+INTO TABLE cseq.tienelenguadominante
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga TIENENIVELINLGES
 LOAD DATA INFILE 'TieneNivelIngles.csv'
-INTO TABLE pruebacseq.tienenivelingles
+INTO TABLE cseq.tienenivelingles
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga TIENENIVELESPANOL
 LOAD DATA INFILE 'TieneNivelEspanol.csv'
-INTO TABLE pruebacseq.tienenivelespanol
+INTO TABLE cseq.tienenivelespanol
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga TIENENIVELLSM
 LOAD DATA INFILE 'TieneNivelLSM.csv'
-INTO TABLE pruebacseq.tienenivellsm
+INTO TABLE cseq.tienenivellsm
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga TIENEESTADOCIVIL
 LOAD DATA INFILE 'TieneEstadoCivil.csv'
-INTO TABLE pruebacseq.tieneestadocivil
+INTO TABLE cseq.tieneestadocivil
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga PERTENECECENSO
 LOAD DATA INFILE 'PerteneceCenso.csv'
-INTO TABLE pruebacseq.pertenececenso
+INTO TABLE cseq.pertenececenso
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga APARATOAUDITIVO
 LOAD DATA INFILE 'AparatoAuditivo.csv'
-INTO TABLE pruebacseq.aparatoauditivo
+INTO TABLE cseq.aparatoauditivo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga POSEEAPARATOAUDITIVO
 LOAD DATA INFILE 'PoseeAparatoAuditivo.csv'
-INTO TABLE pruebacseq.poseeaparatoauditivo
+INTO TABLE cseq.poseeaparatoauditivo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 	
 
 -- Carga PERIDAAUDITIVA	
 LOAD DATA INFILE 'PerdidaAuditiva.csv'
-INTO TABLE pruebacseq.perdidaauditiva
+INTO TABLE cseq.perdidaauditiva
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga CAUSADO
 LOAD DATA INFILE 'Causado.csv'
-INTO TABLE pruebacseq.causado
+INTO TABLE cseq.causado
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga ESGRADO	
 LOAD DATA INFILE 'EsGrado.csv'
-INTO TABLE pruebacseq.EsGrado
+INTO TABLE cseq.EsGrado
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga TIENEPERDIDAAUDITIVA
 LOAD DATA INFILE 'TienePerdidaAuditiva.csv'
-INTO TABLE pruebacseq.tieneperdidaauditiva
+INTO TABLE cseq.tieneperdidaauditiva
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 
 -- Carga EMPLEO
 LOAD DATA INFILE 'Empleo.csv'
-INTO TABLE pruebacseq.empleo
+INTO TABLE cseq.empleo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
  -- Carga GANA
  
 LOAD DATA INFILE 'Gana.csv'
-INTO TABLE pruebacseq.gana
+INTO TABLE cseq.gana
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 	
@@ -270,7 +270,7 @@ IGNORE 1 LINES;
 -- Carga TIENEEMPLEO
 
 LOAD DATA INFILE 'TieneEmpleo.csv'
-INTO TABLE pruebacseq.tieneempleo
+INTO TABLE cseq.tieneempleo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
@@ -278,7 +278,7 @@ IGNORE 1 LINES;
 -- Carga LOCALIZAEMPLEO
 
 LOAD DATA INFILE 'LocalizaEmpleo.csv'
-INTO TABLE pruebacseq.localizaempleo
+INTO TABLE cseq.localizaempleo
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
@@ -287,7 +287,7 @@ IGNORE 1 LINES;
 -- Carga USUARIO
 
 LOAD DATA INFILE 'Usuario.csv'
-INTO TABLE pruebacseq.usuario
+INTO TABLE cseq.usuario
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
@@ -295,7 +295,7 @@ IGNORE 1 LINES;
 -- Carga ROL
 
 LOAD DATA INFILE 'Roles.csv'
-INTO TABLE pruebacseq.rol
+INTO TABLE cseq.rol
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
@@ -303,7 +303,7 @@ IGNORE 1 LINES;
 -- Carga PRIVILEGIO
 
 LOAD DATA INFILE 'Privilegio.csv'
-INTO TABLE pruebacseq.pr
+INTO TABLE cseq.privilegio
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
@@ -311,14 +311,14 @@ IGNORE 1 LINES;
 -- Carga TIENEROL
 
 LOAD DATA INFILE 'TieneRol.csv'
-INTO TABLE pruebacseq.tienerol
+INTO TABLE cseq.tienerol
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
 -- Carga INCLUYEPRIVILEGIO
 
 LOAD DATA INFILE 'IncluyePrivilegio.csv'
-INTO TABLE pruebacseq.incluyeprivilegio
+INTO TABLE cseq.incluyeprivilegio
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
