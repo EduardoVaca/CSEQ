@@ -34,10 +34,10 @@ namespace CSEQ
             String dml;
             String cNombre = nombre_txt.Text;
 
-            dml = "INSERT INTO Causa VALUES('" + cNombre + "')";            
-            if (Util.execute(dml))
+            //dml = "INSERT INTO Causa VALUES('" + cNombre + "')";            
+            if (Util.executeStoredProcedure("registrarCausa", cNombre))
             {
-                MessageBox.Show("La Marca se ha registrado con exito!");
+                MessageBox.Show("La Causa se ha registrado con exito!");
             }
         }
     }

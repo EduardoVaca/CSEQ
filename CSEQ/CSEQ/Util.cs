@@ -174,6 +174,68 @@ namespace CSEQ
             }
         }
 
+        /*----------------------------------------------------------------------
+        * Cambia el formato del objeto pasado como parámetro a un formato que entiende MySQL Server               
+         @param  param  El objeto que se quiere convertir a formato de MySQL Server                               
+         @return  Un String que representa al objeto con un formato comprensible por SQL Server 
+        -----------------------------------------------------------------------*/
+        public static String MySQLFormat(Object param)
+        {
+            //En caso de ser alfanumerico
+            if (param is String)
+            {
+                String sParam;
+                sParam = param.ToString();
+                return ("'" + sParam.Replace("'", "\'") + "'");
+            }
+            else if (param is DateTime)
+            {
+                return "'" + ((DateTime)param).ToString("d/MM/yyyy HH:mm:ss") + "'";
+            }
+            else if (param == null)
+            {
+                return "null";
+            }
+            else
+            {
+                try
+                {
+                    return param.ToString();
+                }
+                catch (Exception ex)
+                {
+                    String error;
+                    error = "Error al ejecutar " + Environment.NewLine + ex.Message;
+                    mostrarMensajeError(error);
+                    return "null";
+                }
+            }
+
+        }
+    /*------------------------------------------------------------------------------------
+    Ejecuta un stored procedure de nombre name y pasa los parámetros mandados en el arreglo 
+       parameters                                                              
+    @param  name        El nombre del stored procedure que se desea ejecutar                               
+    @param  parameters  Un arreglo de Objects que se van a pasar como parámetros del stored procedure  
+    --------------------------------------------------------------------------------------------'*/
+        public static bool executeStoredProcedure(String nombre, params Object[] parametros)
+        {
+            String comando;
+            comando = "CALL cseq." + nombre + " (";
+            int size = parametros.Length;
+            int contador_parametros = 0;
+            foreach (Object param in parametros)
+            {
+                if(contador_parametros + 1 == size)
+                    comando += MySQLFormat(param);
+                else
+                    comando += MySQLFormat(param) + ", ";
+                contador_parametros++;
+            }            
+            comando += ");";                     
+            return execute(comando);
+        }
+
 
     }
 }
