@@ -32,12 +32,10 @@ namespace CSEQ
         private void guardar_btn_Click(object sender, EventArgs e)
         {
             if (ano_txt.TextLength == 4)
-            {
-                String dml;
+            {                
                 int cAno = Int16.Parse(ano_txt.Text);
-
-                dml = "INSERT INTO Censo VALUES(" + cAno + ")";
-                if (Util.execute(dml))
+                
+                if (Util.executeStoredProcedure("registrarCenso", cAno))
                 {
                     MessageBox.Show("El Censo se ha registrado con exito!");
                 }

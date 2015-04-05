@@ -30,12 +30,10 @@ namespace CSEQ
 
         //Metodo donde se agrega el registro a la base de datos
         private void guardar_btn_Click(object sender, EventArgs e)
-        {
-            String dml;
+        {            
             String mNombre = nombre_txt.Text;
-
-            dml = "INSERT INTO Marca VALUES('" + mNombre + "')";
-            if (Util.execute(dml))
+            
+            if (Util.executeStoredProcedure("registrarMarca", mNombre))
             {
                 MessageBox.Show("La Marca se ha registrado con exito!");
             }

@@ -43,14 +43,9 @@ namespace CSEQ
         //Metodo donde se agrega el registro a la base de datos
         private void guardar_txt_Click(object sender, EventArgs e)
         {
-            String dml;
-            int mID_estado;
-            String mNombre;
-
-            mNombre = municipio_txt.Text;
-            mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
-            dml = "INSERT INTO Municipio VALUES ('" + mNombre + "', " + mID_estado + ")";            
-            if (Util.execute(dml))
+            int mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
+            String mNombre = municipio_txt.Text;          
+            if (Util.executeStoredProcedure("registrarMunicipio", mNombre, mID_estado))
             {
                 MessageBox.Show("El Municipio se ha registrado con exito!");
             }

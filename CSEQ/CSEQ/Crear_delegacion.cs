@@ -48,13 +48,11 @@ namespace CSEQ
 
         //Metodo donde se agrega el registro a la base de datos
         private void guardar_btn_Click(object sender, EventArgs e)
-        {
-            String dml;
+        {            
             String dNombre = nombre_txt.Text;
             int dID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
-
-            dml = "INSERT INTO Delegacion VALUES(" + "'" + dNombre + "', " + dID_municipio + ")";
-            if (Util.execute(dml))
+            
+            if (Util.executeStoredProcedure("registrarDelegacion", dNombre, dID_municipio))
             {
                 MessageBox.Show("La Delegacion se ha registrado con exito!");
             }

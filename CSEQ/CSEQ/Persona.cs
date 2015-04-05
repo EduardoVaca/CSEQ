@@ -46,6 +46,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa");
             Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, tipo FROM AparatoAuditivo");
             Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
+            Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT('$',minimo, ' a ','$',maximo) FROM Sueldo");
         }
 
         /*--------------------------------------------------------------------------------

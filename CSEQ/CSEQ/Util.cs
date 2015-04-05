@@ -151,7 +151,7 @@ namespace CSEQ
             catch (MySqlException ex)
             {
                 String err;
-                err = "Error de base de datos al eljecutar el comando" +
+                err = "Error de base de datos al ejecutar el comando" +
                         Environment.NewLine + ex.Message;
                 mostrarMensajeError(err);
                 return false;

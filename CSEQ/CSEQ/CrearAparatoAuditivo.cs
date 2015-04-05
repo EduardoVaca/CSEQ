@@ -35,13 +35,11 @@ namespace CSEQ
 
         //Metodo donde se agrega el registro a la base de datos
         private void Guardar_txt_Click(object sender, EventArgs e)
-        {
-            String dml;
+        {            
             String mTipo = tipo_txt.Text;
             int mID_marca = Int32.Parse(ID_marca.SelectedValue.ToString());
-
-            dml = "INSERT INTO AparatoAuditivo VALUES('" + mTipo + "', " + mID_marca + ")";
-            if (Util.execute(dml))
+            
+            if (Util.executeStoredProcedure("registrarAparatoAuditivo", mTipo, mID_marca))
             {
                 MessageBox.Show("El Aparato Auditivo se ha registrado con exito!");
             }
