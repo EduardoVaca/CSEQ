@@ -53,7 +53,14 @@ namespace CSEQ
 
         private void Guardar_Click(object sender, EventArgs e)
         {
-            String cNombre;
+            String cNombre = colonia_txt.Text;
+            int cID_delegacion = Int32.Parse(ID_delegacion.SelectedValue.ToString());
+            int cID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
+
+            if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_delegacion, cID_municipio))
+            {
+                MessageBox.Show("La Colonia se ha registrado con exito!");
+            }
             //Falta checar duda de atributos en nulo
         }
         /*------------------------------------------------------------------------------------*/

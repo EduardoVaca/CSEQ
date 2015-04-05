@@ -29,5 +29,16 @@ namespace CSEQ
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
+        private void guardar_btn_Click(object sender, EventArgs e)
+        {
+            String sMinimo = sueldoMinimo_txt.Text;
+            String sMaximo = sueldoMaximo_txt.Text;
+
+            if (Util.executeStoredProcedure("registrarSueldo", sMinimo, sMaximo))
+            {
+                MessageBox.Show("El Sueldo se ha registrado con exito!");
+            }
+        }
+
     }
 }
