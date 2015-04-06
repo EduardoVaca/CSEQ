@@ -59,5 +59,11 @@ BEGIN
 	INSERT INTO Sueldo VALUES (0, minimo, maximo);
 END
 
+--AREATRABAJO
+CREATE DEFINER=`root`@`localhost` PROCEDURE `registrarAreaTrabajo`(IN nombreArea varchar(60))
+BEGIN
+	INSERT INTO AreaTrabajo VALUES (0, nombreArea);
+END
+
 --****************************************************************************************************************8
 ---------------------------------PENDIENTES : Persona - InstitucionEducativa

@@ -299,7 +299,9 @@ namespace CSEQ
         {
             if (valor_decision == 1)
             {
-                //Falta form de Area de Trabajo
+                crearAreaTrabajo crear = new crearAreaTrabajo();
+                this.Hide();
+                crear.Show();
             }
             else if (valor_decision == 2)
             {

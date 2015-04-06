@@ -27,5 +27,15 @@ namespace CSEQ
             this.Close();
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
+
+        private void guardar_btn_Click(object sender, EventArgs e)
+        {
+            String aNombre = nombreArea_txt.Text;
+
+            if (Util.executeStoredProcedure("registrarAreaTrabajo", aNombre))
+            {
+                MessageBox.Show("Area de Trabajo se guardo con exito!");
+            }
+        }
     }
 }
