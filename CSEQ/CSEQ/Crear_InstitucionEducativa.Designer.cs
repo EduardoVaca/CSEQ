@@ -36,7 +36,6 @@
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.telefono_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.correo_txt = new System.Windows.Forms.TextBox();
             this.calle_txt = new System.Windows.Forms.TextBox();
@@ -60,6 +59,7 @@
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.modificar_btn = new System.Windows.Forms.Button();
             this.eliminar_btn = new System.Windows.Forms.Button();
+            this.telefono_txt = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
@@ -141,14 +141,6 @@
             this.label4.Size = new System.Drawing.Size(166, 38);
             this.label4.TabIndex = 26;
             this.label4.Text = "Telefono";
-            // 
-            // telefono_txt
-            // 
-            this.telefono_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefono_txt.Location = new System.Drawing.Point(184, 287);
-            this.telefono_txt.Name = "telefono_txt";
-            this.telefono_txt.Size = new System.Drawing.Size(321, 44);
-            this.telefono_txt.TabIndex = 27;
             // 
             // label5
             // 
@@ -328,6 +320,7 @@
             this.guardar_btn.TabIndex = 52;
             this.guardar_btn.Text = "Guardar";
             this.guardar_btn.UseVisualStyleBackColor = true;
+            this.guardar_btn.Click += new System.EventHandler(this.guardar_btn_Click);
             // 
             // Buscar
             // 
@@ -388,6 +381,15 @@
             this.eliminar_btn.Text = "Eliminar";
             this.eliminar_btn.UseVisualStyleBackColor = true;
             // 
+            // telefono_txt
+            // 
+            this.telefono_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefono_txt.Location = new System.Drawing.Point(180, 291);
+            this.telefono_txt.Mask = "(999) 000-0000";
+            this.telefono_txt.Name = "telefono_txt";
+            this.telefono_txt.Size = new System.Drawing.Size(370, 40);
+            this.telefono_txt.TabIndex = 59;
+            // 
             // Crear_InstitucionEducativa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -395,6 +397,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1544, 1009);
+            this.Controls.Add(this.telefono_txt);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.guardar_btn);
@@ -414,7 +417,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.correo_txt);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.telefono_txt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.label2);
@@ -448,7 +450,6 @@
         private System.Windows.Forms.TextBox nombre_txt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox telefono_txt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox correo_txt;
         private System.Windows.Forms.TextBox calle_txt;
@@ -472,5 +473,6 @@
         private System.Windows.Forms.DataGridView busqueda_grid;
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.Button eliminar_btn;
+        private System.Windows.Forms.MaskedTextBox telefono_txt;
     }
 }

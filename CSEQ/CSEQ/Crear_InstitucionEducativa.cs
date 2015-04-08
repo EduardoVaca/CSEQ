@@ -54,6 +54,32 @@ namespace CSEQ
         }
         /*---------------------------------------------------------------------*/
 
+        private void guardar_btn_Click(object sender, EventArgs e)
+        {
+            String iNombre = nombre_txt.Text;
+            String iTelefono = telefono_txt.Text;
+            String iCorreo = correo_txt.Text;
+            String iCalle = calle_txt.Text;
+            int iID_colonia = Int32.Parse(ID_colonia.SelectedValue.ToString());
+            int iPrivada;
+            int iEspecializada;
+            if (privada_check.Checked)
+                iPrivada = 1;
+            else
+                iPrivada = 0;
+            if (especializada_check.Checked)
+                iEspecializada = 1;
+            else
+                iEspecializada = 0;
+
+            if (Util.executeStoredProcedure("registrarInstitucionEducativa", iNombre, iCalle, iTelefono, iCorreo, iPrivada, iEspecializada, iID_colonia))
+            {
+                MessageBox.Show("La Institucion Educativa se registro con exito!");
+            }
+
+        }
+       
+
 
     }
 }
