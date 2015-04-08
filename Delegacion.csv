@@ -1,11 +1,12 @@
 id_delegacion,nombre,id_municipio
-0,Azcapotzalco,
+0,Azcapotzalco,12
 0,Cayetano Rubio,22
 0,Centro Historico,22
-0,Coyoacan,
+0,Coyoacan,12
 0,Epigmenio Gonzalez,22
 0,Felipe Carillo Puerto,22
 0,Felix Osores Sotomayor,22
-0,Iztapalapa,
+0,Iztapalapa,12
 0,Josefa Vergara y Hernandez,22
 0,Santa Rosa Jauregui,22
+0,SIN DELEGACION,22

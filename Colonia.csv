@@ -1,41 +1,41 @@
 id_colonia,nombre,id_delegacion,id_municipio
-0,Barrio Guadalupe,8,
-0,Barrio La Asuncion,8,
-0,Barrio San Antonio,8,
+0,Barrio Guadalupe,8,30
+0,Barrio La Asuncion,8,30
+0,Barrio San Antonio,8,30
 0,Calesa,2,22
-0,Candiles,,8
-0,Cañada de Caracheo,,9
+0,Candiles,11,8
+0,Cañada de Caracheo,11,9
 0,Colinas del Parque,2,22
 0,El Campanario,2,22
-0,El Huizache,,9
-0,El Pueblito,,8
+0,El Huizache,11,9
+0,El Pueblito,11,8
 0,El Retablo,3,22
 0,Ensueño,6,22
 0,Jardines de la Hacienda,9,22
 0,Jurica,7,22
 0,Juriquilla,10,22
 0,La Capilla,6,22
-0,La Concepcion,4,
+0,La Concepcion,4,30
 0,La Joya,9,22
 0,La Piedad,3,22
 0,Las Plazas,9,22
 0,Lomas de San Pablo,5,22
-0,Los Angeles,,8
-0,Los Olvera,,8
+0,Los Angeles,11,8
+0,Los Olvera,11,8
 0,Los Tabachines,6,22
 0,Menchaca,5,22
-0,Nueva Santa Maria,1,
+0,Nueva Santa Maria,1,30
 0,Obrera,7,22
 0,Ojo de Agua,10,22
 0,Peñuelas,5,22
-0,Pro-Hogar,1,
-0,San Jose de los Olvera,,8
+0,Pro-Hogar,1,30
+0,San Jose de los Olvera,11,8
 0,San Miguelito,10,22
-0,Santa Barbara,,8
-0,Santa Catarina,4,
+0,Santa Barbara,11,8
+0,Santa Catarina,4,30
 0,Satelite,7,22
 0,Tecnologico,3,22
-0,Tejeda,,8
-0,Tierra Fria,,9
-0,Unidad Habitacional El Rosario,1,
-0,Villa Coyoacan,4,
+0,Tejeda,11,8
+0,Tierra Fria,11,9
+0,Unidad Habitacional El Rosario,1,30
+0,Villa Coyoacan,4,30
