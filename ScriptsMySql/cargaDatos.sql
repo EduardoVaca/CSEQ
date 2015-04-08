@@ -1,6 +1,6 @@
 -- CARGA DE DATOS
 
--- Carga de PERIODO
+-- Carga de PERIODO.
 
 LOAD DATA INFILE 'periodo.csv'
 INTO TABLE cseq.periodo
