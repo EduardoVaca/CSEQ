@@ -160,8 +160,16 @@
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button2 = new System.Windows.Forms.Button();
+            this.guardar_btn = new System.Windows.Forms.Button();
             this.label74 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.Buscar = new System.Windows.Forms.PictureBox();
+            this.Busqueda = new System.Windows.Forms.TextBox();
+            this.busqueda_grid = new System.Windows.Forms.DataGridView();
+            this.modificar_btn = new System.Windows.Forms.Button();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.eliminar_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -170,6 +178,9 @@
             this.tabPage4.SuspendLayout();
             this.Familia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -191,6 +202,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.Familia);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(12, 13);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
@@ -1697,7 +1709,7 @@
             // back_picture
             // 
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
-            this.back_picture.Location = new System.Drawing.Point(12, 1019);
+            this.back_picture.Location = new System.Drawing.Point(12, 1029);
             this.back_picture.Margin = new System.Windows.Forms.Padding(4);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(60, 56);
@@ -1723,26 +1735,111 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button2
+            // guardar_btn
             // 
-            this.button2.Location = new System.Drawing.Point(817, 1044);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 29);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.guardar_btn.Location = new System.Drawing.Point(293, 1036);
+            this.guardar_btn.Name = "guardar_btn";
+            this.guardar_btn.Size = new System.Drawing.Size(87, 39);
+            this.guardar_btn.TabIndex = 21;
+            this.guardar_btn.Text = "button2";
+            this.guardar_btn.UseVisualStyleBackColor = true;
             // 
             // label74
             // 
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label74.Location = new System.Drawing.Point(655, 1034);
+            this.label74.Location = new System.Drawing.Point(131, 1032);
             this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(155, 42);
             this.label74.TabIndex = 67;
             this.label74.Text = "Guardar";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.tabPage5.Controls.Add(this.busqueda_grid);
+            this.tabPage5.Controls.Add(this.Buscar);
+            this.tabPage5.Controls.Add(this.Busqueda);
+            this.tabPage5.Location = new System.Drawing.Point(4, 34);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1484, 968);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Buscar Registro";
+            // 
+            // Buscar
+            // 
+            this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
+            this.Buscar.Location = new System.Drawing.Point(831, 102);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(6);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(78, 69);
+            this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Buscar.TabIndex = 16;
+            this.Buscar.TabStop = false;
+            // 
+            // Busqueda
+            // 
+            this.Busqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Busqueda.Location = new System.Drawing.Point(23, 115);
+            this.Busqueda.Margin = new System.Windows.Forms.Padding(6);
+            this.Busqueda.MaximumSize = new System.Drawing.Size(796, 40);
+            this.Busqueda.MinimumSize = new System.Drawing.Size(796, 4);
+            this.Busqueda.Name = "Busqueda";
+            this.Busqueda.Size = new System.Drawing.Size(796, 40);
+            this.Busqueda.TabIndex = 15;
+            // 
+            // busqueda_grid
+            // 
+            this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.busqueda_grid.Location = new System.Drawing.Point(24, 307);
+            this.busqueda_grid.Name = "busqueda_grid";
+            this.busqueda_grid.RowTemplate.Height = 33;
+            this.busqueda_grid.Size = new System.Drawing.Size(1436, 607);
+            this.busqueda_grid.TabIndex = 17;
+            // 
+            // modificar_btn
+            // 
+            this.modificar_btn.Enabled = false;
+            this.modificar_btn.Location = new System.Drawing.Point(663, 1036);
+            this.modificar_btn.Name = "modificar_btn";
+            this.modificar_btn.Size = new System.Drawing.Size(96, 38);
+            this.modificar_btn.TabIndex = 68;
+            this.modificar_btn.UseVisualStyleBackColor = true;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label65.Location = new System.Drawing.Point(487, 1033);
+            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(169, 42);
+            this.label65.TabIndex = 69;
+            this.label65.Text = "Modificar";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label75.Location = new System.Drawing.Point(840, 1032);
+            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(151, 42);
+            this.label75.TabIndex = 71;
+            this.label75.Text = "Eliminar";
+            // 
+            // eliminar_btn
+            // 
+            this.eliminar_btn.Enabled = false;
+            this.eliminar_btn.Location = new System.Drawing.Point(1016, 1035);
+            this.eliminar_btn.Name = "eliminar_btn";
+            this.eliminar_btn.Size = new System.Drawing.Size(96, 38);
+            this.eliminar_btn.TabIndex = 70;
+            this.eliminar_btn.UseVisualStyleBackColor = true;
             // 
             // Persona
             // 
@@ -1751,8 +1848,12 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1600, 1092);
+            this.Controls.Add(this.label75);
+            this.Controls.Add(this.eliminar_btn);
+            this.Controls.Add(this.label65);
+            this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.label74);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.guardar_btn);
             this.Controls.Add(this.back_picture);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl1);
@@ -1777,6 +1878,10 @@
             this.Familia.ResumeLayout(false);
             this.Familia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1914,8 +2019,16 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button guardar_btn;
         private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.DataGridView busqueda_grid;
+        private System.Windows.Forms.PictureBox Buscar;
+        private System.Windows.Forms.TextBox Busqueda;
+        private System.Windows.Forms.Button modificar_btn;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Button eliminar_btn;
 
     }
 }

@@ -63,6 +63,12 @@
     <Compile Include="CrearAparatoAuditivo.Designer.cs">
       <DependentUpon>CrearAparatoAuditivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="crearAreaTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crearAreaTrabajo.Designer.cs">
+      <DependentUpon>crearAreaTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearColonia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearAparatoAuditivo.resx">
       <DependentUpon>CrearAparatoAuditivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crearAreaTrabajo.resx">
+      <DependentUpon>crearAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearColonia.resx">
       <DependentUpon>CrearColonia.cs</DependentUpon>
