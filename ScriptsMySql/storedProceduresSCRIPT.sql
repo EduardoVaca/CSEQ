@@ -104,9 +104,11 @@ DELIMITER //
 CREATE PROCEDURE busquedaEnInstitucionEducativa
 (IN variable VARCHAR(80))
 BEGIN 
-	SELECT nombre, correo FROM institucioneducativa
-	WHERE nombre LIKE variable OR correo LIKE variable
-    OR telefono LIKE variable;
+	SELECT i.nombre, i.correo FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
+	Delegacion d, Localizainstitucioneducativa loc
+	WHERE i.nombre LIKE variable
+	AND loc.ID_institucionEducativa = i.ID_institucionEducativa AND loc.ID_colonia = c.ID_colonia AND
+	c.ID_delegacion = d.ID_delegacion AND c.ID_municipio = m.ID_municipio AND m.ID_estado = e.ID_estado;
 END //
 DELIMITER ;
 
