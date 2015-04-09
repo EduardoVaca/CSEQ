@@ -170,7 +170,7 @@ CREATE TABLE Empleo
 	descripcion varchar(80) not null,
 	nombre_compania varchar(50), 
 	correo varchar(80),
-	telefono numeric(10),
+	telefono varchar(20),
 	calle varchar(80),
 	interpretacion_LSM boolean,
 	ID_areaTrabajo INT not null,

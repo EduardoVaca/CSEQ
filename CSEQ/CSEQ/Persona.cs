@@ -68,6 +68,12 @@ namespace CSEQ
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
                                                "ID_municipio = " + valorComboBox);
         }
+
+        private void guardar_btn_Click(object sender, EventArgs e)
+        {
+            String fecha = ID_fechaNacimiento.Value.ToShortDateString(); 
+            MessageBox.Show(fecha);
+        }
         /*-------------------------------------------------------------------------------------*/
         
 

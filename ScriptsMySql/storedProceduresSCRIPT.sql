@@ -98,6 +98,56 @@ BEGIN
 END //
 DELIMITER ;
 
+-- REGISTRO COMPLETO PERSONA
+-- *********************************************************************************************************************************************
+DELIMITER //
+CREATE PROCEDURE registrarPersonaCOMPLETO
+(IN CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
+implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo INT, ID_colonia INT,
+ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
+ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
+interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_coloniaEmpleo INT)
+BEGIN
+	CALL registrarPersona(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
+						enfermedad, mexicano, ife, ID_periodo);
+	INSERT INTO PerteneceCenso VALUES(CURP, ID_censo);
+	INSERT INTO Vive VALUES(CURP, ID_colonia, ID_censo);
+	INSERT INTO TieneEstadoCivil VALUES(CURP, ID_estadoCivil, ID_censo);
+	INSERT INTO TieneNivelEducativo VALUES(CURP, ID_nivelEducativo, ID_censo);
+	INSERT INTO Estudiado VALUES(ID_institucionEducativa, ID_nivelEducativo, CURP, anoEstudio);
+	INSERT INTO TieneLenguaDominante VALUES(CURP, ID_lenguaDominante, ID_censo);
+	INSERT INTO TieneNivelEspanol VALUES(CURP, ID_nivelEspanol, ID_censo);
+	INSERT INTO TieneNivelIngles VALUES(CURP, ID_nivelIngles, ID_censo);
+	INSERT INTO TieneNivelLSM VALUES(CURP, ID_nivelLSM, ID_censo);
+	CALL registrarEmpleo(descripcion_empleo, nombreCompany, correoEmpleo, telefonoEmpleo, calleEmpleo, interpretacion_LSM, ID_areaTrabajo);
+	DECLARE IDempleo INT;
+	SELECT MAX(ID_empleo) INTO IDempleo FROM Empleo;
+	INSERT INTO LocalizaEmpleo VALUES(IDempleo, ID_coloniaEmpleo);
+END //
+DELIMITER ;						
+
+-- PERSONA
+DELIMITER //
+CREATE PROCEDURE registrarPersona
+(IN CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
+implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT)
+BEGIN
+	INSERT INTO Persona VALUES(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
+								enfermedad, mexicano, ife, ID_periodo);
+END //
+DELIMITER ;	
+
+-- EMPLEO
+DELIMITER //
+CREATE PROCEDURE registrarEmpleo
+(IN descripcion VARCHAR(80), nombreCompany VARCHAR(50), correo VARCHAR(80), telefono VARCHAR(20), calle VARCHAR(80),
+interpretacion_LSM BOOLEAN, ID_areaTrabajo INT)
+BEGIN
+	INSERT INTO Empleo VALUES(0,descripcion, nombreCompany, correo, telefono, calle, interpretacion_LSM, ID_areaTrabajo);
+END	//
+DELIMITER ;
+						
+-- **************************************************************************************************************************************************
 
 -- Busqueda INSTITUCIONEDUCATIVA
 DELIMITER //
