@@ -150,14 +150,6 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Teléfono";
             // 
-            // telefono_txt
-            // 
-            this.telefono_txt.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefono_txt.Location = new System.Drawing.Point(184, 287);            
-            this.telefono_txt.Name = "telefono_txt";
-            this.telefono_txt.Size = new System.Drawing.Size(321, 44);
-            this.telefono_txt.TabIndex = 27;
-            //             
             // label5
             // 
             this.label5.AutoSize = true;
@@ -398,16 +390,16 @@
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.busqueda_grid.Location = new System.Drawing.Point(7, 68);
-            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(2);
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.busqueda_grid.Location = new System.Drawing.Point(7, 68);
+            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(2);
             this.busqueda_grid.Name = "busqueda_grid";
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.Size = new System.Drawing.Size(303, 312);
@@ -416,6 +408,7 @@
             // 
             // modificar_btn
             // 
+            this.modificar_btn.Enabled = false;
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.modificar_btn.Location = new System.Drawing.Point(194, 438);
             this.modificar_btn.Margin = new System.Windows.Forms.Padding(2);
@@ -427,6 +420,7 @@
             // 
             // eliminar_btn
             // 
+            this.eliminar_btn.Enabled = false;
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.eliminar_btn.Location = new System.Drawing.Point(354, 438);
             this.eliminar_btn.Margin = new System.Windows.Forms.Padding(2);
@@ -440,7 +434,7 @@
             // 
             this.telefono_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefono_txt.Location = new System.Drawing.Point(90, 151);
-            this.telefono_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.telefono_txt.Margin = new System.Windows.Forms.Padding(2);
             this.telefono_txt.Mask = "(999) 000-0000";
             this.telefono_txt.Name = "telefono_txt";
             this.telefono_txt.Size = new System.Drawing.Size(187, 24);
@@ -452,7 +446,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(772, 525);
+            this.ClientSize = new System.Drawing.Size(843, 525);
             this.Controls.Add(this.telefono_txt);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);

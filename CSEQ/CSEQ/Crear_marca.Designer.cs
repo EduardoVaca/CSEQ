@@ -55,7 +55,7 @@
             this.guardar_btn.AutoSize = true;
             this.guardar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.guardar_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.guardar_btn.Location = new System.Drawing.Point(36, 433);
+            this.guardar_btn.Location = new System.Drawing.Point(30, 433);
             this.guardar_btn.Name = "guardar_btn";
             this.guardar_btn.Size = new System.Drawing.Size(80, 32);
             this.guardar_btn.TabIndex = 28;
@@ -80,7 +80,7 @@
             this.nombre_label.AutoSize = true;
             this.nombre_label.Font = new System.Drawing.Font("Candara", 14F);
             this.nombre_label.ForeColor = System.Drawing.Color.White;
-            this.nombre_label.Location = new System.Drawing.Point(53, 250);
+            this.nombre_label.Location = new System.Drawing.Point(32, 251);
             this.nombre_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nombre_label.Name = "nombre_label";
             this.nombre_label.Size = new System.Drawing.Size(78, 23);
@@ -90,7 +90,7 @@
             // nombre_txt
             // 
             this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.nombre_txt.Location = new System.Drawing.Point(151, 250);
+            this.nombre_txt.Location = new System.Drawing.Point(130, 251);
             this.nombre_txt.MaximumSize = new System.Drawing.Size(400, 40);
             this.nombre_txt.MinimumSize = new System.Drawing.Size(100, 4);
             this.nombre_txt.Name = "nombre_txt";
@@ -124,7 +124,7 @@
             // 
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
             this.close_picture.Location = new System.Drawing.Point(766, 7);
-            this.close_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.close_picture.Margin = new System.Windows.Forms.Padding(2);
             this.close_picture.Name = "close_picture";
             this.close_picture.Size = new System.Drawing.Size(30, 29);
             this.close_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +137,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(383, 250);
+            this.label2.Location = new System.Drawing.Point(362, 251);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 24);
@@ -151,7 +151,7 @@
             this.groupBox1.Controls.Add(this.busqueda_txt);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(442, 89);
+            this.groupBox1.Location = new System.Drawing.Point(416, 89);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(354, 376);
             this.groupBox1.TabIndex = 58;
@@ -188,8 +188,9 @@
             // 
             // eliminar_btn
             // 
+            this.eliminar_btn.Enabled = false;
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.eliminar_btn.Location = new System.Drawing.Point(338, 433);
+            this.eliminar_btn.Location = new System.Drawing.Point(300, 433);
             this.eliminar_btn.Margin = new System.Windows.Forms.Padding(2);
             this.eliminar_btn.Name = "eliminar_btn";
             this.eliminar_btn.Size = new System.Drawing.Size(80, 32);
@@ -199,8 +200,9 @@
             // 
             // modificar_btn
             // 
+            this.modificar_btn.Enabled = false;
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.modificar_btn.Location = new System.Drawing.Point(187, 433);
+            this.modificar_btn.Location = new System.Drawing.Point(165, 433);
             this.modificar_btn.Margin = new System.Windows.Forms.Padding(2);
             this.modificar_btn.Name = "modificar_btn";
             this.modificar_btn.Size = new System.Drawing.Size(80, 32);

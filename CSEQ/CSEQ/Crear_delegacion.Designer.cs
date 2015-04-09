@@ -44,16 +44,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.busqueda_grid = new System.Windows.Forms.DataGridView();
+            this.Buscar = new System.Windows.Forms.PictureBox();
+            this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
-            this.busqueda_txt = new System.Windows.Forms.TextBox();
-            this.Buscar = new System.Windows.Forms.PictureBox();
-            this.busqueda_grid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             this.SuspendLayout();
             // 
             // nombre_txt
@@ -82,7 +82,7 @@
             // 
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
             this.close_picture.Location = new System.Drawing.Point(766, 7);
-            this.close_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.close_picture.Margin = new System.Windows.Forms.Padding(2);
             this.close_picture.Name = "close_picture";
             this.close_picture.Size = new System.Drawing.Size(30, 29);
             this.close_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,7 +152,7 @@
             this.guardar_btn.AutoSize = true;
             this.guardar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.guardar_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.guardar_btn.Location = new System.Drawing.Point(33, 414);
+            this.guardar_btn.Location = new System.Drawing.Point(30, 417);
             this.guardar_btn.Name = "guardar_btn";
             this.guardar_btn.Size = new System.Drawing.Size(80, 32);
             this.guardar_btn.TabIndex = 14;
@@ -226,44 +226,20 @@
             this.groupBox1.Controls.Add(this.busqueda_txt);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(443, 77);
+            this.groupBox1.Location = new System.Drawing.Point(416, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(353, 372);
             this.groupBox1.TabIndex = 55;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda de registros";
             // 
-            // eliminar_btn
+            // busqueda_grid
             // 
-            this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.eliminar_btn.Location = new System.Drawing.Point(317, 414);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(80, 32);
-            this.eliminar_btn.TabIndex = 60;
-            this.eliminar_btn.Text = "Eliminar";
-            this.eliminar_btn.UseVisualStyleBackColor = true;
-            // 
-            // modificar_btn
-            // 
-            this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.modificar_btn.Location = new System.Drawing.Point(175, 414);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(80, 32);
-            this.modificar_btn.TabIndex = 59;
-            this.modificar_btn.Text = "Modificar";
-            this.modificar_btn.UseVisualStyleBackColor = true;
-            // 
-            // busqueda_txt
-            // 
-            this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.busqueda_txt.Location = new System.Drawing.Point(6, 39);
-            this.busqueda_txt.MaximumSize = new System.Drawing.Size(400, 40);
-            this.busqueda_txt.MinimumSize = new System.Drawing.Size(100, 4);
-            this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(296, 27);
-            this.busqueda_txt.TabIndex = 8;
+            this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.busqueda_grid.Location = new System.Drawing.Point(6, 91);
+            this.busqueda_grid.Name = "busqueda_grid";
+            this.busqueda_grid.Size = new System.Drawing.Size(341, 275);
+            this.busqueda_grid.TabIndex = 56;
             // 
             // Buscar
             // 
@@ -275,13 +251,39 @@
             this.Buscar.TabIndex = 55;
             this.Buscar.TabStop = false;
             // 
-            // busqueda_grid
+            // busqueda_txt
             // 
-            this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.busqueda_grid.Location = new System.Drawing.Point(6, 91);
-            this.busqueda_grid.Name = "busqueda_grid";
-            this.busqueda_grid.Size = new System.Drawing.Size(341, 275);
-            this.busqueda_grid.TabIndex = 56;
+            this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.busqueda_txt.Location = new System.Drawing.Point(6, 39);
+            this.busqueda_txt.MaximumSize = new System.Drawing.Size(400, 40);
+            this.busqueda_txt.MinimumSize = new System.Drawing.Size(100, 4);
+            this.busqueda_txt.Name = "busqueda_txt";
+            this.busqueda_txt.Size = new System.Drawing.Size(296, 27);
+            this.busqueda_txt.TabIndex = 8;
+            // 
+            // eliminar_btn
+            // 
+            this.eliminar_btn.Enabled = false;
+            this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
+            this.eliminar_btn.Location = new System.Drawing.Point(298, 417);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.eliminar_btn.Name = "eliminar_btn";
+            this.eliminar_btn.Size = new System.Drawing.Size(80, 32);
+            this.eliminar_btn.TabIndex = 60;
+            this.eliminar_btn.Text = "Eliminar";
+            this.eliminar_btn.UseVisualStyleBackColor = true;
+            // 
+            // modificar_btn
+            // 
+            this.modificar_btn.Enabled = false;
+            this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
+            this.modificar_btn.Location = new System.Drawing.Point(164, 417);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.modificar_btn.Name = "modificar_btn";
+            this.modificar_btn.Size = new System.Drawing.Size(80, 32);
+            this.modificar_btn.TabIndex = 59;
+            this.modificar_btn.Text = "Modificar";
+            this.modificar_btn.UseVisualStyleBackColor = true;
             // 
             // Crear_delegacion
             // 
@@ -289,7 +291,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(689, 406);
+            this.ClientSize = new System.Drawing.Size(875, 603);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.groupBox1);
@@ -316,8 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
