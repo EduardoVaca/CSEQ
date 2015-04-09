@@ -110,6 +110,62 @@ BEGIN
 END //
 DELIMITER ;
 
+-- Busqueda APARATOAUDITIVO
+DELIMITER //
+CREATE PROCEDURE busquedaEnAparatoAuditivo
+(IN variable VARCHAR(60))
+BEGIN 
+	SELECT a.tipo, m.nombre FROM AparatoAuditivo a, Marca m
+	WHERE a.tipo LIKE variable AND a.ID_marca = m.ID_marca;
+END //
+DELIMITER ;
+
+-- Busqueda SUELDO
+DELIMITER //
+CREATE PROCEDURE busquedaEnSueldo
+(IN variable VARCHAR(20))
+BEGIN
+	SELECT minimo, maximo FROM Sueldo
+	WHERE minimo LIKE variable OR maximo LIKE variable;
+END //
+DELIMITER ;
+
+-- Busqueda MARCA
+DELIMITER // 
+CREATE PROCEDURE busquedaEnMarca
+(IN variable VARCHAR(40))
+BEGIN
+	SELECT nombre FROM Marca WHERE nombre LIKE variable;
+END //
+DELIMITER ;
+
+-- Busqueda DELEGACION
+DELIMITER //
+CREATE PROCEDURE busquedaEnDelegacion
+(IN variable VARCHAR(80))
+BEGIN
+	SELECT d.nombre, m.nombre FROM Delegacion d, Municipio m
+	WHERE d.nombre LIKE variable AND m.ID_municipio = d.ID_municipio;
+END //
+DELIMITER ;	
+
+-- Busqueda CENSO
+DELIMITER //
+CREATE PROCEDURE busquedaEnCenso
+(IN variable NUMERIC(4))
+BEGIN
+	SELECT ano FROM Censo WHERE ano LIKE variable;
+END //
+DELIMITER ;
+
+-- Busqueda CAUSA
+DELIMITER //
+CREATE PROCEDURE busquedaEnCausa
+(IN variable VARCHAR(50))
+BEGIN
+	SELECT causa FROM Causa WHERE causa LIKE variable;
+END //
+DELIMITER ;
 -- ****************************************************************************************************************8
 -- -------------------------------PENDIENTES : Persona - InstitucionEducativa
 
