@@ -221,7 +221,7 @@ namespace CSEQ
         public static bool executeStoredProcedure(String nombre, params Object[] parametros)
         {
             String comando;
-            comando = "CALL cseq." + nombre + " (";
+            comando = "CALL " + nombre + " (";
             int size = parametros.Length;
             int contador_parametros = 0;
             foreach (Object param in parametros)
@@ -232,7 +232,8 @@ namespace CSEQ
                     comando += MySQLFormat(param) + ", ";
                 contador_parametros++;
             }            
-            comando += ");";                     
+            comando += ");";
+            MessageBox.Show(comando);       
             return execute(comando);
         }
 
