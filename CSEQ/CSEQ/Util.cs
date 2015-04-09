@@ -237,5 +237,81 @@ namespace CSEQ
         }
 
 
+        public static String consultaStoredProcedure(String nombre, params Object[] parametros)
+        {
+            String comando;
+            comando = "CALL " + nombre + " (";
+            int size = parametros.Length;
+            int contador_parametros = 0;
+            foreach (Object param in parametros)
+            {
+                if (contador_parametros + 1 == size)
+                    comando += MySQLFormat(param);
+                else
+                    comando += MySQLFormat(param) + ", ";
+                contador_parametros++;
+            }
+            comando += ");";
+            return comando;
+        }
+
+        /**
+         * ---------------------------------------------------------------------------------------------------------'
+             Llena el DataGrid pasado como parámetro con los datos que se recuperan del query pasado como           '
+             parámetro.                                                                                             '
+                                                                                                                    '
+             @param  grid   El DataGrid que se va a llenar con los datos del query                                  '
+             @param  query  El query que se quiere ejecutar en la base de datos.                                    '
+           --------------------------------------------------------------------------------------------------------'
+   
+         * */
+
+        public static void fillGrid(DataGridView grid, String nombre, params Object[] parametros)
+        {
+            DataTable table;
+            String query = consultaStoredProcedure(nombre, parametros);
+            table = getData(query);
+           // MessageBox.Show(query);
+            if (table != null)
+                grid.DataSource = table;
+        }
+
+
+
+        public static void showData(Form form, String query)
+        {
+            DataTable table;
+            table = getData(query);
+
+            if (table != null)
+            {
+                foreach (Control ctrl in form.Controls)
+                {
+                    // Si existe un campo asociado al nombre del control
+
+                    String nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 4);
+                    if (table.Columns.Contains(nombreTemporal))
+                    {
+                        if (ctrl is TextBox || ctrl is MaskedTextBox)
+                            ctrl.Text = table.Rows[0][nombreTemporal].ToString();
+                        else if (ctrl is ComboBox || ctrl is ListBox)
+                            ((ComboBox)ctrl).SelectedValue = table.Rows[0][nombreTemporal].ToString();
+                        else if (ctrl is DateTimePicker)
+                            ((DateTimePicker)ctrl).Value = (DateTime)(table.Rows[0][nombreTemporal]);
+                        else
+                            try
+                            {
+                                ctrl.Text = table.Rows[0][nombreTemporal].ToString();
+                            }
+                            catch (Exception ex)
+                            {
+                                
+                            }
+                    }
+                }
+            }
+        }
+
+
     }
 }
