@@ -78,6 +78,23 @@ namespace CSEQ
             }
 
         }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            String busqueda = "%" + busqueda_txt.Text + "%";
+            Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", busqueda);
+        }
+
+        private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            String nombre;
+            String correo;
+            nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            String sqlActiveRow="SELECT * FROM InstitucionEducativa WHERE ";
+            sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" +correo +"';";
+            Util.showData(this, sqlActiveRow);
+        }
        
 
 
