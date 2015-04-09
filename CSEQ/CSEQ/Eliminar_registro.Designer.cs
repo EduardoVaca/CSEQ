@@ -45,10 +45,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1518, 21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(766, 7);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 56);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -57,10 +57,9 @@
             // Atras
             // 
             this.Atras.Image = ((System.Drawing.Image)(resources.GetObject("Atras.Image")));
-            this.Atras.Location = new System.Drawing.Point(24, 979);
-            this.Atras.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Atras.Location = new System.Drawing.Point(6, 487);
             this.Atras.Name = "Atras";
-            this.Atras.Size = new System.Drawing.Size(94, 90);
+            this.Atras.Size = new System.Drawing.Size(30, 29);
             this.Atras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Atras.TabIndex = 11;
             this.Atras.TabStop = false;
@@ -68,35 +67,34 @@
             // 
             // Busqueda
             // 
-            this.Busqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Busqueda.Location = new System.Drawing.Point(346, 387);
-            this.Busqueda.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.Busqueda.MaximumSize = new System.Drawing.Size(796, 40);
-            this.Busqueda.MinimumSize = new System.Drawing.Size(796, 4);
+            this.Busqueda.Font = new System.Drawing.Font("Candara", 18F);
+            this.Busqueda.Location = new System.Drawing.Point(176, 201);
+            this.Busqueda.MaximumSize = new System.Drawing.Size(400, 40);
+            this.Busqueda.MinimumSize = new System.Drawing.Size(400, 4);
             this.Busqueda.Name = "Busqueda";
-            this.Busqueda.Size = new System.Drawing.Size(796, 53);
+            this.Busqueda.Size = new System.Drawing.Size(400, 37);
             this.Busqueda.TabIndex = 10;
             // 
             // Receptor_Nombre
             // 
             this.Receptor_Nombre.AutoSize = true;
-            this.Receptor_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Receptor_Nombre.Font = new System.Drawing.Font("Candara", 18F);
             this.Receptor_Nombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.Receptor_Nombre.Location = new System.Drawing.Point(696, 213);
-            this.Receptor_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Receptor_Nombre.Location = new System.Drawing.Point(271, 159);
+            this.Receptor_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Receptor_Nombre.Name = "Receptor_Nombre";
-            this.Receptor_Nombre.Size = new System.Drawing.Size(0, 73);
+            this.Receptor_Nombre.Size = new System.Drawing.Size(0, 29);
             this.Receptor_Nombre.TabIndex = 9;
             // 
             // Eliminar
             // 
             this.Eliminar.AutoSize = true;
-            this.Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eliminar.Font = new System.Drawing.Font("Candara", 18F);
             this.Eliminar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Eliminar.Location = new System.Drawing.Point(430, 213);
-            this.Eliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Eliminar.Location = new System.Drawing.Point(171, 159);
+            this.Eliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(263, 73);
+            this.Eliminar.Size = new System.Drawing.Size(96, 29);
             this.Eliminar.TabIndex = 8;
             this.Eliminar.Text = "Eliminar";
             // 
@@ -105,19 +103,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(1212, 1046);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(613, 500);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(342, 29);
+            this.label3.Size = new System.Drawing.Size(183, 15);
             this.label3.TabIndex = 13;
             this.label3.Text = "ROMPIENDO PARADIGMAS";
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(612, 931);
-            this.Guardar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Guardar.Font = new System.Drawing.Font("Candara", 10F);
+            this.Guardar.Location = new System.Drawing.Point(360, 377);
             this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(192, 77);
+            this.Guardar.Size = new System.Drawing.Size(80, 32);
             this.Guardar.TabIndex = 19;
             this.Guardar.Text = "Eliminar";
             this.Guardar.UseVisualStyleBackColor = true;
@@ -125,21 +123,20 @@
             // Buscar
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
-            this.Buscar.Location = new System.Drawing.Point(1158, 387);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Buscar.Location = new System.Drawing.Point(582, 201);
             this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(94, 58);
+            this.Buscar.Size = new System.Drawing.Size(47, 30);
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Buscar.TabIndex = 20;
             this.Buscar.TabStop = false;
             // 
             // Eliminar_registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(1600, 1092);
+            this.ClientSize = new System.Drawing.Size(801, 533);
             this.Controls.Add(this.Buscar);
             this.Controls.Add(this.Guardar);
             this.Controls.Add(this.label3);
@@ -149,7 +146,6 @@
             this.Controls.Add(this.Receptor_Nombre);
             this.Controls.Add(this.Eliminar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Eliminar_registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar_registro";

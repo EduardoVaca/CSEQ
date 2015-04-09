@@ -56,7 +56,7 @@
             // Guardar_txt
             // 
             this.Guardar_txt.Font = new System.Drawing.Font("Candara", 10F);
-            this.Guardar_txt.Location = new System.Drawing.Point(37, 431);
+            this.Guardar_txt.Location = new System.Drawing.Point(39, 431);
             this.Guardar_txt.Name = "Guardar_txt";
             this.Guardar_txt.Size = new System.Drawing.Size(80, 32);
             this.Guardar_txt.TabIndex = 35;
@@ -78,7 +78,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(35, 278);
+            this.label1.Location = new System.Drawing.Point(35, 277);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 23);
@@ -121,7 +121,7 @@
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(766, 7);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(30, 29);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,7 +179,7 @@
             // eliminar_btn
             // 
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.eliminar_btn.Location = new System.Drawing.Point(315, 431);
+            this.eliminar_btn.Location = new System.Drawing.Point(301, 431);
             this.eliminar_btn.Margin = new System.Windows.Forms.Padding(2);
             this.eliminar_btn.Name = "eliminar_btn";
             this.eliminar_btn.Size = new System.Drawing.Size(80, 32);
@@ -190,7 +190,7 @@
             // modificar_btn
             // 
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.modificar_btn.Location = new System.Drawing.Point(176, 431);
+            this.modificar_btn.Location = new System.Drawing.Point(170, 431);
             this.modificar_btn.Margin = new System.Windows.Forms.Padding(2);
             this.modificar_btn.Name = "modificar_btn";
             this.modificar_btn.Size = new System.Drawing.Size(80, 32);
@@ -205,7 +205,7 @@
             this.groupBox1.Controls.Add(this.busqueda_txt);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(442, 87);
+            this.groupBox1.Location = new System.Drawing.Point(416, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(354, 376);
             this.groupBox1.TabIndex = 71;
