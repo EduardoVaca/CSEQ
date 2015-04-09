@@ -1,0 +1,12 @@
+DROP PROCEDURE registrarCausa;
+DROP PROCEDURE registrarColonia;
+DROP PROCEDURE registrarDelegacion;
+DROP PROCEDURE registrarMunicipio;
+DROP PROCEDURE registrarEstado;
+DROP PROCEDURE registrarCenso;
+DROP PROCEDURE registrarAparatoAuditivo;
+DROP PROCEDURE registrarMarca;
+DROP PROCEDURE registrarSueldo;
+DROP PROCEDURE registrarAreaTrabajo;
+DROP PROCEDURE registrarInstitucionEducativa;
+DROP PROCEDURE busquedaEnInstitucionEducativa;
