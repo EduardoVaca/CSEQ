@@ -41,7 +41,7 @@ namespace CSEQ
         private void ID_estado_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = ID_estado.SelectedValue.ToString();
-            Util.llenarComboBox(municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
+            Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
                                                 "ID_estado = " + valorComboBox);
         }
 
@@ -51,7 +51,7 @@ namespace CSEQ
         private void guardar_btn_Click(object sender, EventArgs e)
         {            
             String dNombre = nombre_txt.Text;
-            int dID_municipio = Int32.Parse(municipio.SelectedValue.ToString());
+            int dID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
             
             if (Util.executeStoredProcedure("registrarDelegacion", dNombre, dID_municipio))
             {
@@ -67,15 +67,15 @@ namespace CSEQ
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String nombre;
+            String delegacion;
             String municipio;
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                delegacion = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 municipio = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Delegacion d, Municipio m WHERE ";
-                sqlActiveRow += " d.nombre= '" + nombre +"' AND m.nombre='" + municipio +"' AND d.ID_municipio=m.ID_municipio;";
+                sqlActiveRow += " d.nombre= '" + delegacion +"' AND m.nombre='" + municipio +"' AND d.ID_municipio=m.ID_municipio;";
                 Util.showData(this, sqlActiveRow);
             }
         }

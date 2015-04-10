@@ -44,16 +44,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.busqueda_grid = new System.Windows.Forms.DataGridView();
+            this.Buscar = new System.Windows.Forms.PictureBox();
+            this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
-            this.busqueda_txt = new System.Windows.Forms.TextBox();
-            this.Buscar = new System.Windows.Forms.PictureBox();
-            this.busqueda_grid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             this.SuspendLayout();
             // 
             // nombre_txt
@@ -82,7 +82,7 @@
             // 
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
             this.close_picture.Location = new System.Drawing.Point(766, 7);
-            this.close_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.close_picture.Margin = new System.Windows.Forms.Padding(2);
             this.close_picture.Name = "close_picture";
             this.close_picture.Size = new System.Drawing.Size(30, 29);
             this.close_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,6 +233,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda de registros";
             // 
+            // busqueda_grid
+            // 
+            this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.busqueda_grid.Location = new System.Drawing.Point(6, 91);
+            this.busqueda_grid.Name = "busqueda_grid";
+            this.busqueda_grid.Size = new System.Drawing.Size(341, 275);
+            this.busqueda_grid.TabIndex = 56;
+            this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
+            // 
+            // Buscar
+            // 
+            this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
+            this.Buscar.Location = new System.Drawing.Point(305, 32);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(39, 36);
+            this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Buscar.TabIndex = 55;
+            this.Buscar.TabStop = false;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
+            // 
+            // busqueda_txt
+            // 
+            this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.busqueda_txt.Location = new System.Drawing.Point(6, 39);
+            this.busqueda_txt.MaximumSize = new System.Drawing.Size(400, 40);
+            this.busqueda_txt.MinimumSize = new System.Drawing.Size(100, 4);
+            this.busqueda_txt.Name = "busqueda_txt";
+            this.busqueda_txt.Size = new System.Drawing.Size(296, 27);
+            this.busqueda_txt.TabIndex = 8;
+            // 
             // eliminar_btn
             // 
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
@@ -254,34 +284,6 @@
             this.modificar_btn.TabIndex = 59;
             this.modificar_btn.Text = "Modificar";
             this.modificar_btn.UseVisualStyleBackColor = true;
-            // 
-            // busqueda_txt
-            // 
-            this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.busqueda_txt.Location = new System.Drawing.Point(6, 39);
-            this.busqueda_txt.MaximumSize = new System.Drawing.Size(400, 40);
-            this.busqueda_txt.MinimumSize = new System.Drawing.Size(100, 4);
-            this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(296, 27);
-            this.busqueda_txt.TabIndex = 8;
-            // 
-            // Buscar
-            // 
-            this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
-            this.Buscar.Location = new System.Drawing.Point(305, 32);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(39, 36);
-            this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Buscar.TabIndex = 55;
-            this.Buscar.TabStop = false;
-            // 
-            // busqueda_grid
-            // 
-            this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.busqueda_grid.Location = new System.Drawing.Point(6, 91);
-            this.busqueda_grid.Name = "busqueda_grid";
-            this.busqueda_grid.Size = new System.Drawing.Size(341, 275);
-            this.busqueda_grid.TabIndex = 56;
             // 
             // Crear_delegacion
             // 
@@ -316,8 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -35,9 +35,9 @@
             this.sueldoMinimo_label = new System.Windows.Forms.Label();
             this.atras_picture = new System.Windows.Forms.PictureBox();
             this.close_picture = new System.Windows.Forms.PictureBox();
-            this.sueldoMinimo_txt = new System.Windows.Forms.TextBox();
+            this.minimo_txt = new System.Windows.Forms.TextBox();
             this.sueldo_label = new System.Windows.Forms.Label();
-            this.sueldoMaximo_txt = new System.Windows.Forms.TextBox();
+            this.maximo_txt = new System.Windows.Forms.TextBox();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -115,7 +115,7 @@
             // 
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
             this.close_picture.Location = new System.Drawing.Point(766, 7);
-            this.close_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.close_picture.Margin = new System.Windows.Forms.Padding(2);
             this.close_picture.Name = "close_picture";
             this.close_picture.Size = new System.Drawing.Size(30, 29);
             this.close_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,15 +123,15 @@
             this.close_picture.TabStop = false;
             this.close_picture.Click += new System.EventHandler(this.close_picture_Click);
             // 
-            // sueldoMinimo_txt
+            // minimo_txt
             // 
-            this.sueldoMinimo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.sueldoMinimo_txt.Location = new System.Drawing.Point(142, 190);
-            this.sueldoMinimo_txt.MaximumSize = new System.Drawing.Size(400, 40);
-            this.sueldoMinimo_txt.MinimumSize = new System.Drawing.Size(100, 4);
-            this.sueldoMinimo_txt.Name = "sueldoMinimo_txt";
-            this.sueldoMinimo_txt.Size = new System.Drawing.Size(229, 27);
-            this.sueldoMinimo_txt.TabIndex = 16;
+            this.minimo_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.minimo_txt.Location = new System.Drawing.Point(142, 190);
+            this.minimo_txt.MaximumSize = new System.Drawing.Size(400, 40);
+            this.minimo_txt.MinimumSize = new System.Drawing.Size(100, 4);
+            this.minimo_txt.Name = "minimo_txt";
+            this.minimo_txt.Size = new System.Drawing.Size(229, 27);
+            this.minimo_txt.TabIndex = 16;
             // 
             // sueldo_label
             // 
@@ -145,15 +145,15 @@
             this.sueldo_label.TabIndex = 15;
             this.sueldo_label.Text = "Sueldo";
             // 
-            // sueldoMaximo_txt
+            // maximo_txt
             // 
-            this.sueldoMaximo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.sueldoMaximo_txt.Location = new System.Drawing.Point(142, 276);
-            this.sueldoMaximo_txt.MaximumSize = new System.Drawing.Size(400, 40);
-            this.sueldoMaximo_txt.MinimumSize = new System.Drawing.Size(100, 4);
-            this.sueldoMaximo_txt.Name = "sueldoMaximo_txt";
-            this.sueldoMaximo_txt.Size = new System.Drawing.Size(229, 27);
-            this.sueldoMaximo_txt.TabIndex = 24;
+            this.maximo_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.maximo_txt.Location = new System.Drawing.Point(142, 276);
+            this.maximo_txt.MaximumSize = new System.Drawing.Size(400, 40);
+            this.maximo_txt.MinimumSize = new System.Drawing.Size(100, 4);
+            this.maximo_txt.Name = "maximo_txt";
+            this.maximo_txt.Size = new System.Drawing.Size(229, 27);
+            this.maximo_txt.TabIndex = 24;
             // 
             // eliminar_btn
             // 
@@ -198,6 +198,7 @@
             this.busqueda_grid.Name = "busqueda_grid";
             this.busqueda_grid.Size = new System.Drawing.Size(342, 262);
             this.busqueda_grid.TabIndex = 56;
+            this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
             // Buscar
             // 
@@ -208,6 +209,7 @@
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Buscar.TabIndex = 55;
             this.Buscar.TabStop = false;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // busqueda_txt
             // 
@@ -229,14 +231,14 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
-            this.Controls.Add(this.sueldoMaximo_txt);
+            this.Controls.Add(this.maximo_txt);
             this.Controls.Add(this.guardar_btn);
             this.Controls.Add(this.rompiendoParadigmas_label);
             this.Controls.Add(this.sueldoMaximo_label);
             this.Controls.Add(this.sueldoMinimo_label);
             this.Controls.Add(this.atras_picture);
             this.Controls.Add(this.close_picture);
-            this.Controls.Add(this.sueldoMinimo_txt);
+            this.Controls.Add(this.minimo_txt);
             this.Controls.Add(this.sueldo_label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Crear_sueldo";
@@ -261,9 +263,9 @@
         private System.Windows.Forms.Label sueldoMinimo_label;
         private System.Windows.Forms.PictureBox atras_picture;
         private System.Windows.Forms.PictureBox close_picture;
-        private System.Windows.Forms.TextBox sueldoMinimo_txt;
+        private System.Windows.Forms.TextBox minimo_txt;
         private System.Windows.Forms.Label sueldo_label;
-        private System.Windows.Forms.TextBox sueldoMaximo_txt;
+        private System.Windows.Forms.TextBox maximo_txt;
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.GroupBox groupBox1;
