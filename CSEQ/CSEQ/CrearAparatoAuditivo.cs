@@ -44,5 +44,27 @@ namespace CSEQ
                 MessageBox.Show("El Aparato Auditivo se ha registrado con exito!");
             }
         }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            String busqueda = "%" + busqueda_txt.Text + "%";
+            Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", busqueda);
+        }
+
+        private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            String tipo;
+            String nombre;
+
+            if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                tipo = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                nombre = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                String sqlActiveRow = "SELECT * FROM AparatoAuditivo a, Marca m WHERE ";
+                sqlActiveRow += " a.tipo= '" + tipo + "' AND m.nombre= '" + nombre + "' AND a.ID_marca=m.ID_marca;";
+                Util.showData(this, sqlActiveRow);
+            }
+        }
+
     }
 }

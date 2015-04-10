@@ -44,5 +44,38 @@ namespace CSEQ
                 MessageBox.Show("El año debe tener 4 digitos");
             
         }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+
+            int busquedaNum;
+            if (busqueda_txt.Text != "" && busqueda_txt.Text.Length > 3)
+            {
+                busquedaNum = Convert.ToInt16(busqueda_txt.Text.ToString());
+                Util.fillGrid(busqueda_grid, "busquedaEnCenso", busquedaNum);
+            }
+            else
+                busquedaNum = 2010;
+                Util.fillGrid(busqueda_grid, "busquedaEnCenso", busquedaNum);
+
+        }
+
+        private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int censo;
+
+            if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                censo = Convert.ToInt16(busqueda_grid.Rows[e.RowIndex].Cells[0].Value);
+                String sqlActiveRow = "SELECT * FROM Censo WHERE ";
+                sqlActiveRow += " ano= '" + censo + "';";
+                Util.showData(this, sqlActiveRow);
+            }
+        }
+
+        private void Crear_censo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
