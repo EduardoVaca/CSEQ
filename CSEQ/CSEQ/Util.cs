@@ -288,9 +288,15 @@ namespace CSEQ
             {
                 foreach (Control ctrl in form.Controls)
                 {
+                    String nombreTemporal;
                     // Si existe un campo asociado al nombre del control
+                    if(ctrl is TextBox)
+                        nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 4);
+                    else if (ctrl is CheckBox)
+                        nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 6);
+                    else
+                        nombreTemporal = ctrl.Name;
 
-                    String nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 4);
                     if (table.Columns.Contains(nombreTemporal))
                     {
                         if (ctrl is TextBox || ctrl is MaskedTextBox)
@@ -299,6 +305,8 @@ namespace CSEQ
                             ((ComboBox)ctrl).SelectedValue = table.Rows[0][nombreTemporal].ToString();
                         else if (ctrl is DateTimePicker)
                             ((DateTimePicker)ctrl).Value = (DateTime)(table.Rows[0][nombreTemporal]);
+                        else if (ctrl is CheckBox)
+                            ((CheckBox)ctrl).Checked = (bool)(table.Rows[0][nombreTemporal]);
                         else
                             try
                             {
@@ -306,7 +314,7 @@ namespace CSEQ
                             }
                             catch (Exception ex)
                             {
-                                
+
                             }
                     }
                 }

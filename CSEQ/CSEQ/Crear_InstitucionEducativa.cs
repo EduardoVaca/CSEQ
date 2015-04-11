@@ -89,11 +89,14 @@ namespace CSEQ
         {
             String nombre;
             String correo;
-            nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
-            correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
-            String sqlActiveRow="SELECT * FROM InstitucionEducativa WHERE ";
-            sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" +correo +"';";
-            Util.showData(this, sqlActiveRow);
+            if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                String sqlActiveRow = "SELECT * FROM InstitucionEducativa WHERE ";
+                sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" + correo + "';";
+                Util.showData(this, sqlActiveRow);
+            }
         }
        
 

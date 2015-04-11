@@ -32,7 +32,7 @@
             this.guardar_btn = new System.Windows.Forms.Button();
             this.rompiendoParadigmas_label = new System.Windows.Forms.Label();
             this.nombreCausa_label = new System.Windows.Forms.Label();
-            this.nombre_txt = new System.Windows.Forms.TextBox();
+            this.causa_txt = new System.Windows.Forms.TextBox();
             this.causa_label = new System.Windows.Forms.Label();
             this.atras_picture = new System.Windows.Forms.PictureBox();
             this.close_picture = new System.Windows.Forms.PictureBox();
@@ -87,15 +87,15 @@
             this.nombreCausa_label.TabIndex = 26;
             this.nombreCausa_label.Text = "Nombre de la causa:";
             // 
-            // nombre_txt
+            // causa_txt
             // 
-            this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.nombre_txt.Location = new System.Drawing.Point(30, 255);
-            this.nombre_txt.MaximumSize = new System.Drawing.Size(400, 40);
-            this.nombre_txt.MinimumSize = new System.Drawing.Size(100, 4);
-            this.nombre_txt.Name = "nombre_txt";
-            this.nombre_txt.Size = new System.Drawing.Size(306, 27);
-            this.nombre_txt.TabIndex = 23;
+            this.causa_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.causa_txt.Location = new System.Drawing.Point(30, 255);
+            this.causa_txt.MaximumSize = new System.Drawing.Size(400, 40);
+            this.causa_txt.MinimumSize = new System.Drawing.Size(100, 4);
+            this.causa_txt.Name = "causa_txt";
+            this.causa_txt.Size = new System.Drawing.Size(306, 27);
+            this.causa_txt.TabIndex = 23;
             // 
             // causa_label
             // 
@@ -165,6 +165,7 @@
             this.busqueda_grid.Name = "busqueda_grid";
             this.busqueda_grid.Size = new System.Drawing.Size(342, 262);
             this.busqueda_grid.TabIndex = 56;
+            this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
             // Buscar
             // 
@@ -175,6 +176,7 @@
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Buscar.TabIndex = 55;
             this.Buscar.TabStop = false;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // busqueda_txt
             // 
@@ -224,7 +226,7 @@
             this.Controls.Add(this.nombreCausa_label);
             this.Controls.Add(this.atras_picture);
             this.Controls.Add(this.close_picture);
-            this.Controls.Add(this.nombre_txt);
+            this.Controls.Add(this.causa_txt);
             this.Controls.Add(this.causa_label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Crear_causa";
@@ -248,7 +250,7 @@
         private System.Windows.Forms.Label nombreCausa_label;
         private System.Windows.Forms.PictureBox atras_picture;
         private System.Windows.Forms.PictureBox close_picture;
-        private System.Windows.Forms.TextBox nombre_txt;
+        private System.Windows.Forms.TextBox causa_txt;
         private System.Windows.Forms.Label causa_label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;

@@ -44,6 +44,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
                                                 "ID_estado = " + valorComboBox);
         }
+
         /*-----------------------------------------------------------------------------------*/
 
         //Metodo donde se agrega el registro a la base de datos
@@ -57,6 +58,28 @@ namespace CSEQ
                 MessageBox.Show("La Delegacion se ha registrado con exito!");
             }
         }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            String busqueda = "%" + busqueda_txt.Text + "%";
+            Util.fillGrid(busqueda_grid, "busquedaEnDelegacion", busqueda);
+        }
+
+        private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            String delegacion;
+            String municipio;
+
+            if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                delegacion = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                municipio = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                String sqlActiveRow = "SELECT * FROM Delegacion d, Municipio m WHERE ";
+                sqlActiveRow += " d.nombre= '" + delegacion +"' AND m.nombre='" + municipio +"' AND d.ID_municipio=m.ID_municipio;";
+                Util.showData(this, sqlActiveRow);
+            }
+        }
+
 
 
     }
