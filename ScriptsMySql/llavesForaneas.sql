@@ -120,6 +120,8 @@ ALTER TABLE TienePerdidaAuditiva ADD CONSTRAINT cfTienePerdidaAuditivaCURP FOREI
 								 REFERENCES Persona (CURP);
 ALTER TABLE TienePerdidaAuditiva ADD CONSTRAINT cfTienePerdidaAuditivaID_perdidaAuditiva FOREIGN KEY (ID_perdidaAuditiva)
 								 REFERENCES PerdidaAuditiva (ID_perdidaAuditiva);
+ALTER TABLE TienePerdidaAuditiva ADD CONSTRAINT cfTienePeridaAuditivaID_censo FOREIGN KEY (ID_censo)
+								 REFERENCES Censo (ID_censo);							 
 								 
 -- Constraint (CAUSADO)
 ALTER TABLE Causado ADD CONSTRAINT cfCausadoID_perdidaAuditiva FOREIGN KEY (ID_perdidaAuditiva)
