@@ -298,7 +298,7 @@ DELIMITER //
 CREATE PROCEDURE busquedaEnCenso
 (IN variable NUMERIC(4))
 BEGIN
-	SELECT ano as Año FROM Censo 
+	SELECT ano as Censo FROM Censo 
 	WHERE ano LIKE variable;
 END //
 DELIMITER ;
@@ -340,13 +340,41 @@ DELIMITER ;
 
 -- ELIMINACIONES/ DELETIONS
 
--- APARATOAUDITIVO
+-- eliminar APARATOAUDITIVO
 DELIMITER //
 CREATE PROCEDURE eliminarAparatoAuditivo
 (IN tipoA VARCHAR(70), ID_marcaA INT)
 BEGIN
+	DECLARE IDaparato INT;
+	SELECT ID_aparatoAuditivo INTO IDaparato FROM AparatoAuditivo WHERE tipo = tipoA AND ID_marca = ID_marcaA;
+	DELETE FROM PoseeAparatoAuditivo WHERE ID_aparatoAuditivo = IDaparato;
 	DELETE FROM AparatoAuditivo WHERE tipoA = tipo AND ID_marcaA = ID_marca;
 END //
 DELIMITER ;
+
+-- eliminar CENSO
+DELIMITER //
+CREATE PROCEDURE eliminarCenso
+(IN anoC NUMERIC(4))
+BEGIN
+	DECLARE IDcensoObtenido INT;
+	SELECT ID_censo INTO IDcensoObtenido FROM Censo WHERE ano = anoC;
+	DELETE FROM PerteneceCenso WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM Vive WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelEducativo WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM Gana WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneLenguaDominante WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelEspanol WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelIngles WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelLSM WHERE = ID_censo = IDcensoObtenido;
+	DELETE FROM TieneEstadoCivil WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM PoseeAparatoAuditivo WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TienePerdidaAuditiva WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM Causado WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM EsGrado WHERE ID_censo = IDcensoObtenido;	
+	DELETE FROM TieneEmpleo WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM Censo WHERE ano = anoC;
+END //
+DELIMITER ;	
 
 

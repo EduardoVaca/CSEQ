@@ -58,7 +58,9 @@ namespace CSEQ
         {
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
-            {
+            {                
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
                 tipo_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 nombreMarca_selected = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();               
                 String sqlActiveRow = "SELECT * FROM AparatoAuditivo a, Marca m WHERE ";
@@ -73,7 +75,8 @@ namespace CSEQ
             String tipo_selected = tipo_txt.Text;
             int ID_marca_selected = Int32.Parse(ID_marca.SelectedValue.ToString());                        
             DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Eliminar '" + tipo_selected + "', marca: " + nombreMarca_selected + "?", "Confirmación de eliminación", MessageBoxButtons.YesNo);
+            respuesta = MessageBox.Show("¿Eliminar '" + tipo_selected + "', marca: " + nombreMarca_selected + "?", 
+                                        "Confirmación de eliminación", MessageBoxButtons.YesNo);
 
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {

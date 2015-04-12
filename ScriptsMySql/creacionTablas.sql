@@ -27,7 +27,7 @@ CREATE TABLE Censo
 (
 	ID_censo INT auto_increment not null unique,
 	ano numeric(4),
-	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo)
+	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo, ano)
 );
 
 -- Creacion tabla: PerteneceCenso

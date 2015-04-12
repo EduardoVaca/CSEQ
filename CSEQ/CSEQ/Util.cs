@@ -232,8 +232,7 @@ namespace CSEQ
                     comando += MySQLFormat(param) + ", ";
                 contador_parametros++;
             }            
-            comando += ");";
-            MessageBox.Show(comando);       
+            comando += ");";                
             return execute(comando);
         }
 
