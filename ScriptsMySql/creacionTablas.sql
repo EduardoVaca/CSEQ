@@ -173,7 +173,7 @@ CREATE TABLE Empleo
 	telefono varchar(20),
 	calle varchar(80),
 	interpretacion_LSM boolean,
-	ID_areaTrabajo INT not null,
+	ID_areaTrabajo INT,
 	CONSTRAINT llaveEmpleo PRIMARY KEY (ID_empleo)
 );
 

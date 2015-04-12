@@ -171,7 +171,7 @@ DELIMITER //
 CREATE PROCEDURE registrarHijo
 (IN nombre VARCHAR(80), fechaNac DATETIME, sordo BOOLEAN, CURPpadre CHAR(18))
 BEGIN
-	INSERT INTO Hijo(0, nombre, fechaNac, sordo, CURPpadre);
+	INSERT INTO Hijo VALUES(0, nombre, fechaNac, sordo, CURPpadre);
 END //
 DELIMITER ;	
 						
@@ -400,5 +400,22 @@ BEGIN
 	DELETE FROM Causa WHERE ID_causa = IDcausaObtenido;
 END //
 DELIMITER ;	
+
+-- eliminar SUELDO
+DELIMITER //
+CREATE PROCEDURE eliminarSueldo
+(IN minimoS VARCHAR(20), maximoS VARCHAR(20))
+BEGIN
+	DECLARE IDsueldoObtenido INT;
+	SELECT ID_sueldo INTO IDsueldoObtenido FROM Sueldo WHERE minimo = minimoS AND maximo = maximoS;
+	DELETE FROM Gana WHERE ID_sueldo = IDsueldoObtenido;
+	DELETE FROM Sueldo WHERE ID_sueldo = IDsueldoObtenido;
+END //
+DELIMITER ;	
+
+-- eliminar AREATRABAJO
+DELIMITER //
+CREATE PROCEDURE eliminarAreaTrabajo
+(IN )
 
 
