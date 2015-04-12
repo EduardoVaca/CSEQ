@@ -110,6 +110,8 @@ interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo 
 ID_aparatoAuditivo INT, modelo VARCHAR(30))
 BEGIN
 	DECLARE IDempleo INT;
+	-- DECLARE anoCenso NUMERIC;
+	-- SELECT ano INTO anoCenso FROM Censo c WHERE ID_censo = c.ID_censo;
 	CALL registrarPersona(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
 						enfermedad, mexicano, ife, ID_periodo);
 	INSERT INTO PerteneceCenso VALUES(CURP, ID_censo);
@@ -164,6 +166,27 @@ END //
 DELIMITER ;	
 						
 -- **************************************************************************************************************************************************
+-- BUSQUEDAS
+
+
+
+-- Busqueda PERSONA
+DELIMITER //
+CREATE PROCEDURE busquedaEnPersona
+(IN variable VARCHAR(80))
+BEGIN
+	SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, c.ano as Censo
+	FROM Persona p, PerteneceCenso pC, Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
+	TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
+	TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA 
+	WHERE (p.nombre LIKE variable OR p.CURP LIKE variable OR p.correo LIKE variable)
+	AND p.CURP = pC.CURP AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP AND p.CURP = es.CURP
+	AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP
+	AND em.ID_empleo = tE.ID_empleo AND e.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
+	AND p.CURP = pAA.CURP;
+END //
+DELIMITER ;
+
 
 -- Busqueda INSTITUCIONEDUCATIVA
 DELIMITER //
