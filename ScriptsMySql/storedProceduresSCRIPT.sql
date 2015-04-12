@@ -366,7 +366,7 @@ BEGIN
 	DELETE FROM TieneLenguaDominante WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM TieneNivelEspanol WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM TieneNivelIngles WHERE ID_censo = IDcensoObtenido;
-	DELETE FROM TieneNivelLSM WHERE = ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelLSM WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM TieneEstadoCivil WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM PoseeAparatoAuditivo WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM TienePerdidaAuditiva WHERE ID_censo = IDcensoObtenido;
@@ -374,6 +374,30 @@ BEGIN
 	DELETE FROM EsGrado WHERE ID_censo = IDcensoObtenido;	
 	DELETE FROM TieneEmpleo WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM Censo WHERE ano = anoC;
+END //
+DELIMITER ;	
+
+-- eliminar MARCA
+DELIMITER //
+CREATE PROCEDURE eliminarMarca
+(IN nombreM VARCHAR(40))
+BEGIN
+	DECLARE IDmarcaObtenido INT;    
+	SELECT ID_marca INTO IDmarcaObtenido FROM Marca WHERE nombre = nombreM;    
+    UPDATE AparatoAuditivo SET ID_marca = null WHERE ID_marca = IDmarcaObtenido;	
+	DELETE FROM Marca WHERE ID_marca = IDmarcaObtenido;
+END //
+DELIMITER ;	
+
+-- eliminar CAUSA
+DELIMITER //
+CREATE PROCEDURE eliminarCausa
+(IN causaC VARCHAR(50))
+BEGIN
+	DECLARE IDcausaObtenido INT;
+	SELECT ID_causa INTO IDcausaObtenido FROM Causa WHERE causa = causaC;
+	DELETE FROM Causado WHERE ID_causa = IDcausaObtenido;
+	DELETE FROM Causa WHERE ID_causa = IDcausaObtenido;
 END //
 DELIMITER ;	
 

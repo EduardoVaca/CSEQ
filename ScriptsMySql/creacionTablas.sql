@@ -334,7 +334,7 @@ CREATE TABLE AparatoAuditivo
 (
 	ID_aparatoAuditivo INT auto_increment not null unique,
 	tipo varchar (60) not null,
-	ID_marca INT not null,
+	ID_marca INT,
 	CONSTRAINT llaveAparatoAuditivo PRIMARY KEY (ID_aparatoAuditivo)
 );
 

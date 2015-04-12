@@ -51,11 +51,18 @@ namespace CSEQ
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
+                modificar_btn.Enabled = true; //activacion de botones
+                eliminar_btn.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Marca WHERE ";
                 sqlActiveRow += " nombre= '" + nombre + "';";
                 Util.showData(this, sqlActiveRow);
             }
+        }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
