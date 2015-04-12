@@ -38,5 +38,24 @@ namespace CSEQ
                 MessageBox.Show("El Estado se ha registrado con exito!");
             }
         }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            String busqueda = "%" + busqueda_txt.Text + "%";
+            Util.fillGrid(busqueda_grid, "busquedaEnEstado", busqueda);
+        }
+
+        private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            String nombre;
+
+            if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                String sqlActiveRow = "SELECT * FROM Estado WHERE ";
+                sqlActiveRow += " nombre= '" + nombre + "';";
+                Util.showData(this, sqlActiveRow);  
+            }
+        }
     }
 }

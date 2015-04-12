@@ -290,7 +290,7 @@ namespace CSEQ
                 {
                     String nombreTemporal;
                     // Si existe un campo asociado al nombre del control
-                    if(ctrl is TextBox)
+                    if (ctrl is TextBox || ctrl is MaskedTextBox)
                         nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 4);
                     else if (ctrl is CheckBox)
                         nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 6);
