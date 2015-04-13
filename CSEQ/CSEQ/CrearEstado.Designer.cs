@@ -209,6 +209,7 @@
             this.modificar_btn.TabIndex = 73;
             this.modificar_btn.Text = "Modificar";
             this.modificar_btn.UseVisualStyleBackColor = true;
+            this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
             // CrearEstado
             // 

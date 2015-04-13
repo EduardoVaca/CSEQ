@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class crearAreaTrabajo : Form
     {
+        String nombre;
+
         public crearAreaTrabajo()
         {
             InitializeComponent();
@@ -47,7 +49,6 @@ namespace CSEQ
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String nombre;
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
@@ -61,6 +62,21 @@ namespace CSEQ
         private void eliminar_btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombreArea_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Area de trabajo: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarAreaTrabajo", nombre, nombreNuevo))
+                {
+                    MessageBox.Show("El area de trabajo se modifico con exito");
+                }
+            }
         }
     }
 }

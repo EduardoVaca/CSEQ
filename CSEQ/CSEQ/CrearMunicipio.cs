@@ -12,6 +12,9 @@ namespace CSEQ
 {
     public partial class CrearMunicipio : Form
     {
+        String nombre;
+        int ID_selected;
+
         public CrearMunicipio()
         {
             InitializeComponent();
@@ -44,7 +47,7 @@ namespace CSEQ
         private void guardar_txt_Click(object sender, EventArgs e)
         {
             int mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
-            String mNombre = municipio_txt.Text;          
+            String mNombre = nombre_txt.Text;          
             if (Util.executeStoredProcedure("registrarMunicipio", mNombre, mID_estado))
             {
                 MessageBox.Show("El Municipio se ha registrado con exito!");
@@ -55,11 +58,12 @@ namespace CSEQ
         {
             String busqueda = "%" + busqueda_txt.Text + "%";
             Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", busqueda);
+            
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String nombre;
+            
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
@@ -67,6 +71,23 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT * FROM Municipio WHERE ";
                 sqlActiveRow += " nombre= '" + nombre + "';";
                 Util.showData(this, sqlActiveRow);
+                ID_selected = Int32.Parse(ID_estado.SelectedValue.ToString());
+            }
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            int ID_nuevo = Int32.Parse(ID_estado.SelectedValue.ToString());
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar el municipio: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarMunicipio", nombre,ID_selected, nombreNuevo,ID_nuevo))
+                {
+                    MessageBox.Show("El municipio se modifico con exito");
+                }
             }
         }
     }

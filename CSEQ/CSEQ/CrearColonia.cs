@@ -12,6 +12,9 @@ namespace CSEQ
 {
     public partial class CrearColonia : Form
     {
+        String nombre;
+        int ID_selected;
+
         public CrearColonia()
         {
             InitializeComponent();
@@ -83,7 +86,7 @@ namespace CSEQ
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String nombre;
+            
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
@@ -91,6 +94,23 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT DISTINCT * FROM Colonia c, Estado e, Delegacion d , Municipio m WHERE ";
                 sqlActiveRow += " c.nombre= '" + nombre + "' AND c.ID_municipio=m.ID_municipio  AND c.ID_delegacion=d.ID_delegacion AND m.ID_estado=e.ID_estado;";
                 Util.showData(this, sqlActiveRow);
+                ID_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
+            }
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            int ID_nuevo = Int32.Parse(ID_municipio.SelectedValue.ToString());
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar la colonia: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarColonia", nombre, ID_selected, nombreNuevo, ID_nuevo))
+                {
+                    MessageBox.Show("La colonia se modifico con exito");
+                }
             }
         }
         /*------------------------------------------------------------------------------------*/

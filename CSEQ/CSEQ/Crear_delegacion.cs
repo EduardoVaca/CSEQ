@@ -13,6 +13,9 @@ namespace CSEQ
 
     public partial class Crear_delegacion : Form
     {
+        String delegacion;
+        String municipio;
+        int ID_selected;
         public Crear_delegacion()
         {
             InitializeComponent();            
@@ -71,8 +74,7 @@ namespace CSEQ
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String delegacion;
-            String municipio;
+            
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
@@ -81,6 +83,23 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT * FROM Delegacion d, Municipio m WHERE ";
                 sqlActiveRow += " d.nombre= '" + delegacion +"' AND m.nombre='" + municipio +"' AND d.ID_municipio=m.ID_municipio;";
                 Util.showData(this, sqlActiveRow);
+                ID_selected = Int32.Parse(ID_estado.SelectedValue.ToString());
+            }
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            String municipioNuevo = ID_municipio.SelectedValue.ToString();
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar la delegacion: " + delegacion + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarDelegacion", delegacion, municipio, nombreNuevo, municipioNuevo))
+                {
+                    MessageBox.Show("La delegacion se modifico con exito");
+                }
             }
         }
 

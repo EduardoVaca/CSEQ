@@ -76,6 +76,21 @@ namespace CSEQ
 
         }
 
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo=causa_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar causa: " + causa_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarCausa", causa_selected, nombreNuevo))
+                {
+                    MessageBox.Show("La causa se modifico con exito");
+                }
+            }
+        }
+
 
     }
 }

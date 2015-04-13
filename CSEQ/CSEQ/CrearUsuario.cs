@@ -12,6 +12,9 @@ namespace CSEQ
 {
     public partial class CrearUsuario : Form
     {
+        String nombre;
+        String contrasena;
+
         public CrearUsuario()
         {
             InitializeComponent();
@@ -46,14 +49,31 @@ namespace CSEQ
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String nombre;
+           
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                String sqlActiveRow = "SELECT * FROM Municipio WHERE ";
+                contrasena = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                String sqlActiveRow = "SELECT * FROM Usuario WHERE ";
                 sqlActiveRow += " nombre= '" + nombre + "';";
                 Util.showData(this, sqlActiveRow);
+            }
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            String nuevoPass = password_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Usuario: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarAreaTrabajo", nombre,contrasena , nombreNuevo,nuevoPass))
+                {
+                    MessageBox.Show("El area de trabajo se modifico con exito");
+                }
             }
         }
     }

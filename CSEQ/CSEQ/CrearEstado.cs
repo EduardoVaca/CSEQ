@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class CrearEstado : Form
     {
+        String nombre;
+
         public CrearEstado()
         {
             InitializeComponent();
@@ -47,7 +49,7 @@ namespace CSEQ
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String nombre;
+            
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
@@ -55,6 +57,21 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT * FROM Estado WHERE ";
                 sqlActiveRow += " nombre= '" + nombre + "';";
                 Util.showData(this, sqlActiveRow);  
+            }
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Estado: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarEstado", nombre, nombreNuevo))
+                {
+                    MessageBox.Show("El estado se modifico con exito");
+                }
             }
         }
     }
