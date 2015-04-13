@@ -12,11 +12,11 @@ namespace CSEQ
 {
     public partial class Lista_registros : Form
     {
-        private int valor_decision;
+        private int rol;
         //Recibe como parametro un entero para saber en que modo esta "Crear", "Editar" o "Eliminar"
-        public Lista_registros(int valor_decision)
+        public Lista_registros(int rol)
         {
-            this.valor_decision = valor_decision;
+            this.rol = rol;
             InitializeComponent();
         }
 
@@ -33,13 +33,8 @@ namespace CSEQ
         }
 
         private void Lista_registros_Load(object sender, EventArgs e)
-        {            
-            if (valor_decision == 1)
-                titulo.Text = "Crear Registro";
-            else if (valor_decision == 2)
-                titulo.Text = "Editar Registro";
-            else if (valor_decision == 3)
-                titulo.Text = "Eliminar Registro";
+        {                      
+                titulo.Text = "Registros";
         }
 
         /*************************************************************************
@@ -51,298 +46,96 @@ namespace CSEQ
          * ***********************************************************************
          */ 
         private void persona_btn_Click(object sender, EventArgs e)
-        {
-            if(valor_decision == 1)
-            {                
-                Persona crear = new Persona();
-                this.Hide();
-                crear.Show();
-            }
-            else if(valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Persona");
-                this.Hide();
-                editar.Show();
-            }
-            else if(valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Persona");
-                this.Hide();
-                eliminar.Show();
-            }
+        {             
+            Persona crear = new Persona();
+            this.Hide();
+            crear.Show();
         }
 
         private void colonia_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                CrearColonia crear = new CrearColonia();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Colonia");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Colonia");
-                this.Hide();
-                eliminar.Show();
-            }
+            CrearColonia crear = new CrearColonia();
+            this.Hide();
+            crear.Show();            
         }
 
         private void delegacion_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                Crear_delegacion crear = new Crear_delegacion();
-                this.Hide();
-                crear.Show();
-
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Delegacion");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Delegacion");
-                this.Hide();
-                eliminar.Show();
-            }
+            Crear_delegacion crear = new Crear_delegacion();
+            this.Hide();
+            crear.Show();
         }
 
         private void municipio_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                CrearMunicipio crear = new CrearMunicipio();
-                this.Hide();
-                crear.Show();
-
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Municipio");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Municipio");
-                this.Hide();
-                eliminar.Show();
-            }
+            CrearMunicipio crear = new CrearMunicipio();
+            this.Hide();
+            crear.Show();
         }
 
         private void estado_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                CrearEstado crear = new CrearEstado();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Estado");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Estado");
-                this.Hide();
-                eliminar.Show();
-            }
+            CrearEstado crear = new CrearEstado();
+            this.Hide();
+            crear.Show();
         }
 
         private void institucionEducativa_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                Crear_InstitucionEducativa crear = new Crear_InstitucionEducativa();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("InstitucionEducativa");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("InstitucionEducativa");
-                this.Hide();
-                eliminar.Show();
-            }
+            Crear_InstitucionEducativa crear = new Crear_InstitucionEducativa();
+            this.Hide();
+            crear.Show();
         }
 
         private void censo_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                Crear_censo crear = new Crear_censo();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Censo");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Censo");
-                this.Hide();
-                eliminar.Show();
-            }
+            Crear_censo crear = new Crear_censo();
+            this.Hide();
+            crear.Show();
         }
 
         private void aparatoAuditivo_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                CrearAparatoAuditivo crear = new CrearAparatoAuditivo();
-                this.Hide();
-                crear.Show();
-
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("AparatoAuditivo");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("AparatoAuditivo");
-                this.Hide();
-                eliminar.Show();
-            }
+            CrearAparatoAuditivo crear = new CrearAparatoAuditivo();
+            this.Hide();
+            crear.Show();
         }
 
         private void marca_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                Crear_marca crear = new Crear_marca();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Marca");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Marca");
-                this.Hide();
-                eliminar.Show();
-            }
+            Crear_marca crear = new Crear_marca();
+            this.Hide();
+            crear.Show();
         }
 
         private void causa_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                Crear_causa crear = new Crear_causa();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Causa");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Causa");
-                this.Hide();
-                eliminar.Show();
-            }
+            Crear_causa crear = new Crear_causa();
+            this.Hide();
+            crear.Show();
         }
 
         private void sueldo_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                Crear_sueldo crear = new Crear_sueldo();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Sueldo");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Sueldo");
-                this.Hide();
-                eliminar.Show();
-            }
+            Crear_sueldo crear = new Crear_sueldo();
+            this.Hide();
+            crear.Show();
         }
 
         private void areaTrabajo_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                crearAreaTrabajo crear = new crearAreaTrabajo();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("AreaTrabajo");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("AreaTrabajo");
-                this.Hide();
-                eliminar.Show();
-            }
+            crearAreaTrabajo crear = new crearAreaTrabajo();
+            this.Hide();
+            crear.Show();
         }
 
         private void usuario_btn_Click(object sender, EventArgs e)
         {
-            if (valor_decision == 1)
-            {
-                CrearUsuario crear = new CrearUsuario();
-                this.Hide();
-                crear.Show();
-            }
-            else if (valor_decision == 2)
-            {
-                Editar_registro editar = new Editar_registro("Usuario");
-                this.Hide();
-                editar.Show();
-            }
-            else if (valor_decision == 3)
-            {
-                Eliminar_registro eliminar = new Eliminar_registro("Usuario");
-                this.Hide();
-                eliminar.Show();
-            }
+            CrearUsuario crear = new CrearUsuario();
+            this.Hide();
+            crear.Show();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
 

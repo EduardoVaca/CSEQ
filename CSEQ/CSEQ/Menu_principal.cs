@@ -24,10 +24,9 @@ namespace CSEQ
 
         private void registros_btn_Click(object sender, EventArgs e)
         {
-            Menu_registros Menu_registros = new Menu_registros();
+            Lista_registros Lista_registros = new Lista_registros(1);
             this.Close();
-            Menu_registros.Show();
-            
+            Lista_registros.Show();
         }
 
         private void consultas_btn_Click(object sender, EventArgs e)

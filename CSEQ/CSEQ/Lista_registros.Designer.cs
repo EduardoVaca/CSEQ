@@ -119,13 +119,14 @@
             // 
             this.titulo.AutoSize = true;
             this.titulo.BackColor = System.Drawing.Color.Transparent;
-            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titulo.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.titulo.Location = new System.Drawing.Point(620, 96);
+            this.titulo.Location = new System.Drawing.Point(678, 100);
             this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(0, 55);
+            this.titulo.Size = new System.Drawing.Size(220, 59);
             this.titulo.TabIndex = 15;
+            this.titulo.Text = "Registros";
             // 
             // label2
             // 
@@ -217,7 +218,6 @@
             this.label9.Size = new System.Drawing.Size(286, 45);
             this.label9.TabIndex = 22;
             this.label9.Text = "Aparato Auditivo";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
