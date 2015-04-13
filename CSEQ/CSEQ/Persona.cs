@@ -31,7 +31,7 @@ namespace CSEQ
         private void Persona_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
-            Util.llenarComboBox(ID_censo, "Select ID_censo, ano FROM Censo");
+            Util.llenarComboBox(ID_censo, "Select ID_censo FROM Censo");
             Util.llenarComboBox(ID_estadoCivil, "Select ID_estadoCivil, nombre FROM EstadoCivil");
             Util.llenarComboBox(ID_nivelEducativo, "SELECT ID_nivelEducativo, nivel FROM NivelEducativo");
             Util.llenarComboBox(ID_institucionEducativa, "SELECT ID_institucionEducativa, nombre FROM InstitucionEducativa");
