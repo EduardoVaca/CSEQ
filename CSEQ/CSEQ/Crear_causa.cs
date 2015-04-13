@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class Crear_causa : Form
     {
+        String causa_selected;
+
         public Crear_causa()
         {
             InitializeComponent();            
@@ -46,16 +48,32 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            String causa;
-
+        {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                causa = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
+                causa_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Causa WHERE ";
-                sqlActiveRow += " causa= '" + causa + "';";
+                sqlActiveRow += " causa= '" + causa_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
+        }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar causa: " + causa_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarCausa", causa_selected))
+                {
+                    MessageBox.Show("Se eliminó la causa:" + causa_selected + " con exito!");
+                }
+            }
+
         }
 
 

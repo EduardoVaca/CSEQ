@@ -37,5 +37,10 @@ namespace CSEQ
                 MessageBox.Show("Area de Trabajo se guardo con exito!");
             }
         }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

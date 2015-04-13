@@ -12,9 +12,11 @@ CREATE PROCEDURE registrarCausa
 BEGIN
 	INSERT INTO Causa VALUES (0, nombreCausa);
 END //
+DELIMITER ;
 
 
 -- COLONIA
+DELIMITER //
 CREATE PROCEDURE registrarColonia
 (IN nombreColonia CHAR(50), ID_delegacion INT, ID_municipio INT)
 BEGIN
@@ -23,65 +25,73 @@ END //
 DELIMITER ;
 
 -- DELEGACION
+DELIMITER //
 CREATE PROCEDURE registrarDelegacion
 (IN nombreDelegacion CHAR (80), ID_municipio INT)
 BEGIN
-	INSERT INTO Delegacion VALUES (0, nombreDelegacion, ID_municipio)
+	INSERT INTO Delegacion VALUES (0, nombreDelegacion, ID_municipio);
 END //
 DELIMITER ;
 
 -- MUNICIPIO 
+DELIMITER //
 CREATE PROCEDURE registrarMunicipio
 (IN nombreMunicipio CHAR(70), ID_estado INT)
 BEGIN
-	INSERT INTO Municipio VALUES (0, nombreMunicipio, ID_estado)
+	INSERT INTO Municipio VALUES (0, nombreMunicipio, ID_estado);
 END //
 DELIMITER ;
 
 -- ESTADO 
+DELIMITER //
 CREATE PROCEDURE registrarEstado
 (IN nombreEstado CHAR(70))
 BEGIN
-	INSERT INTO Estado VALUES(0, nombreEstado)
+	INSERT INTO Estado VALUES(0, nombreEstado);
 END //
 DELIMITER ;
 
 -- CENSO
+DELIMITER //
 CREATE PROCEDURE registrarCenso(IN anoCenso INT)
 BEGIN
-	INSERT INTO Censo VALUES (0, anoCenso)
+	INSERT INTO Censo VALUES (0, anoCenso);
 END //
 DELIMITER ;
 
 -- APARATOAUDITIVO
+DELIMITER //
 CREATE PROCEDURE registrarAparatoAuditivo
 (IN tipo CHAR(70), ID_marca INT)
 BEGIN
-	INSERT INTO AparatoAuditivo VALUES(0, tipo, ID_marca)
+	INSERT INTO AparatoAuditivo VALUES(0, tipo, ID_marca);
 END //
 DELIMITER ;
 
 -- MARCA
+DELIMITER //
 CREATE PROCEDURE registrarMarca
 (IN nombreMarca CHAR(40))
 BEGIN
-	INSERT INTO Marca VALUES (0, nombreMarca)
+	INSERT INTO Marca VALUES (0, nombreMarca);
 END //
 DELIMITER ;
 
 -- SUELDO
+DELIMITER //
 CREATE PROCEDURE registrarSueldo
 (IN minimo CHAR(20), maximo CHAR(20))
 BEGIN
-	INSERT INTO Sueldo VALUES (0, minimo, maximo)
+	INSERT INTO Sueldo VALUES (0, minimo, maximo);
 END //
 DELIMITER ;
 
 -- AREATRABAJO
+DELIMITER //
 CREATE PROCEDURE registrarAreaTrabajo
 (IN nombreArea varchar(60))
 BEGIN
-	INSERT INTO AreaTrabajo VALUES (0, nombreArea)
+	INSERT INTO AreaTrabajo VALUES (0, nombreArea);
 END //
 DELIMITER ;
 
@@ -106,8 +116,12 @@ CREATE PROCEDURE registrarPersonaCOMPLETO
 implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo INT, ID_colonia INT,
 ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
 ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
-interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_coloniaEmpleo INT)
+interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, ID_causa INT,
+ID_aparatoAuditivo INT, modelo VARCHAR(30))
 BEGIN
+	DECLARE IDempleo INT;
+	-- DECLARE anoCenso NUMERIC;
+	-- SELECT ano INTO anoCenso FROM Censo c WHERE ID_censo = c.ID_censo;
 	CALL registrarPersona(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
 						enfermedad, mexicano, ife, ID_periodo);
 	INSERT INTO PerteneceCenso VALUES(CURP, ID_censo);
@@ -120,11 +134,16 @@ BEGIN
 	INSERT INTO TieneNivelIngles VALUES(CURP, ID_nivelIngles, ID_censo);
 	INSERT INTO TieneNivelLSM VALUES(CURP, ID_nivelLSM, ID_censo);
 	CALL registrarEmpleo(descripcion_empleo, nombreCompany, correoEmpleo, telefonoEmpleo, calleEmpleo, interpretacion_LSM, ID_areaTrabajo);
-	DECLARE IDempleo INT;
 	SELECT MAX(ID_empleo) INTO IDempleo FROM Empleo;
 	INSERT INTO LocalizaEmpleo VALUES(IDempleo, ID_coloniaEmpleo);
+	INSERT INTO Gana VALUES(IDempleo, ID_sueldo, ID_censo);
+	INSERT INTO TieneEmpleo VALUES(CURP, IDempleo, ID_censo);
+	INSERT INTO TienePerdidaAuditiva VALUES(CURP, ID_perdidaAuditiva, prelinguistica, ID_censo);
+	INSERT INTO EsGrado VALUES(CURP, ID_perdidaAuditiva, ID_grado, ID_censo);
+	INSERT INTO Causado VALUES (CURP, ID_perdidaAuditiva, ID_causa, ID_censo);
+	INSERT INTO PoseeAparatoAuditivo VALUES (CURP, ID_aparatoAuditivo, ID_censo, modelo);
 END //
-DELIMITER ;						
+DELIMITER ;							
 
 -- PERSONA
 DELIMITER //
@@ -146,15 +165,44 @@ BEGIN
 	INSERT INTO Empleo VALUES(0,descripcion, nombreCompany, correo, telefono, calle, interpretacion_LSM, ID_areaTrabajo);
 END	//
 DELIMITER ;
+
+-- HIJO
+DELIMITER //
+CREATE PROCEDURE registrarHijo
+(IN nombre VARCHAR(80), fechaNac DATETIME, sordo BOOLEAN, CURPpadre CHAR(18))
+BEGIN
+	INSERT INTO Hijo VALUES(0, nombre, fechaNac, sordo, CURPpadre);
+END //
+DELIMITER ;	
 						
 -- **************************************************************************************************************************************************
+-- BUSQUEDAS
+
+-- Busqueda PERSONA
+DELIMITER //
+CREATE PROCEDURE busquedaEnPersona
+(IN variable VARCHAR(80))
+BEGIN
+	SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, ce.ano as Censo
+	FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
+	TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
+	TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA 
+	WHERE (p.nombre LIKE variable)
+	AND p.CURP = pC.CURP AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP AND p.CURP = es.CURP
+	AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP
+	AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
+	AND p.CURP = pAA.CURP
+    GROUP BY p.CURP;
+END //
+DELIMITER ;
+
 
 -- Busqueda INSTITUCIONEDUCATIVA
 DELIMITER //
 CREATE PROCEDURE busquedaEnInstitucionEducativa
 (IN variable VARCHAR(80))
 BEGIN 
-	SELECT i.nombre, i.correo FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
+	SELECT i.nombre as Nombre, i.correo as Correo FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
 	Delegacion d, Localizainstitucioneducativa loc
 	WHERE i.nombre LIKE variable
 	AND loc.ID_institucionEducativa = i.ID_institucionEducativa AND loc.ID_colonia = c.ID_colonia AND
@@ -162,63 +210,333 @@ BEGIN
 END //
 DELIMITER ;
 
--- Busqueda APARATOAUDITIVO
+
+-- Busqueda COLONIA
 DELIMITER //
-CREATE PROCEDURE busquedaEnAparatoAuditivo
-(IN variable VARCHAR(60))
-BEGIN 
-	SELECT a.tipo, m.nombre FROM AparatoAuditivo a, Marca m
-	WHERE a.tipo LIKE variable AND a.ID_marca = m.ID_marca;
+CREATE PROCEDURE busquedaEnColonia
+(IN variable VARCHAR(80))
+BEGIN
+	SELECT c.nombre as Colonia, m.nombre as Municipio, e.nombre as Estado 
+    FROM Colonia c, Municipio m, Estado e
+	WHERE c.nombre LIKE variable
+	AND c.ID_municipio = m.ID_municipio AND m.ID_estado = e.ID_estado;
 END //
 DELIMITER ;
 
--- Busqueda SUELDO
-DELIMITER //
-CREATE PROCEDURE busquedaEnSueldo
-(IN variable VARCHAR(20))
-BEGIN
-	SELECT minimo, maximo FROM Sueldo
-	WHERE minimo LIKE variable OR maximo LIKE variable;
-END //
-DELIMITER ;
-
--- Busqueda MARCA
-DELIMITER // 
-CREATE PROCEDURE busquedaEnMarca
-(IN variable VARCHAR(40))
-BEGIN
-	SELECT nombre FROM Marca WHERE nombre LIKE variable;
-END //
-DELIMITER ;
 
 -- Busqueda DELEGACION
 DELIMITER //
 CREATE PROCEDURE busquedaEnDelegacion
 (IN variable VARCHAR(80))
 BEGIN
-	SELECT d.nombre, m.nombre FROM Delegacion d, Municipio m
-	WHERE d.nombre LIKE variable AND m.ID_municipio = d.ID_municipio;
+	SELECT d.nombre as Delegacion, m.nombre as Municipio, e.nombre as Estado 
+	FROM Delegacion d, Municipio m, Estado e
+	WHERE d.nombre LIKE variable 
+	AND m.ID_municipio = d.ID_municipio AND e.ID_estado = m.ID_estado;
 END //
 DELIMITER ;	
+
+-- Busqueda MUNICIPIO
+DELIMITER //
+CREATE PROCEDURE busquedaEnMunicipio
+(IN variable VARCHAR(80))
+BEGIN
+	SELECT m.nombre as Municipio, e.nombre as Estado
+	FROM Municipio m, Estado e
+	WHERE m.nombre LIKE variable
+	AND m.ID_estado = e.ID_estado;
+END //
+DELIMITER ;	
+
+
+-- Busqueda ESTADO
+DELIMITER //
+CREATE PROCEDURE busquedaEnEstado
+(IN variable VARCHAR (80))
+BEGIN 
+	SELECT nombre as Estado FROM Estado 
+	WHERE nombre LIKE variable;
+END //
+DELIMITER ;	
+
+
+-- Busqueda APARATOAUDITIVO
+DELIMITER //
+CREATE PROCEDURE busquedaEnAparatoAuditivo
+(IN variable VARCHAR(60))
+BEGIN 
+	SELECT a.tipo as Tipo, m.nombre as Marca FROM AparatoAuditivo a, Marca m
+	WHERE a.tipo LIKE variable AND a.ID_marca = m.ID_marca;
+END //
+DELIMITER ;
+
+
+-- Busqueda SUELDO
+DELIMITER //
+CREATE PROCEDURE busquedaEnSueldo
+(IN variable VARCHAR(20))
+BEGIN
+	SELECT minimo as Minimo, maximo as Maximo FROM Sueldo
+	WHERE minimo LIKE variable OR maximo LIKE variable;
+END //
+DELIMITER ;
+
+
+-- Busqueda MARCA
+DELIMITER // 
+CREATE PROCEDURE busquedaEnMarca
+(IN variable VARCHAR(40))
+BEGIN
+	SELECT nombre as Marca FROM Marca
+	WHERE nombre LIKE variable;
+END //
+DELIMITER ;
+
 
 -- Busqueda CENSO
 DELIMITER //
 CREATE PROCEDURE busquedaEnCenso
 (IN variable NUMERIC(4))
 BEGIN
-	SELECT ano FROM Censo WHERE ano LIKE variable;
+	SELECT ano as Censo FROM Censo 
+	WHERE ano LIKE variable;
 END //
 DELIMITER ;
+
 
 -- Busqueda CAUSA
 DELIMITER //
 CREATE PROCEDURE busquedaEnCausa
 (IN variable VARCHAR(50))
 BEGIN
-	SELECT causa FROM Causa WHERE causa LIKE variable;
+	SELECT causa as Causa
+	FROM Causa 
+	WHERE causa LIKE variable;
 END //
 DELIMITER ;
+
+-- Busqueda AREA TRABAJO
+DELIMITER //
+CREATE PROCEDURE busquedaEnAreaTrabajo
+(IN variable VARCHAR(60))
+BEGIN
+	SELECT nombre as AreaTrabajo 
+	FROM AreaTrabajo
+	WHERE nombre LIKE variable;
+END //
+DELIMITER ;	
+
+-- Busqueda USUARIO
+DELIMITER //
+CREATE PROCEDURE busquedaEnUsuario
+(IN variable VARCHAR(30))
+BEGIN
+	SELECT login as Login 
+	FROM Usuario 
+	WHERE login LIKE variable;
+END //
+DELIMITER ;	
 -- ****************************************************************************************************************8
--- -------------------------------PENDIENTES : Persona - InstitucionEducativa
+
+-- ELIMINACIONES/ DELETIONS
+
+-- eliminar APARATOAUDITIVO
+DELIMITER //
+CREATE PROCEDURE eliminarAparatoAuditivo
+(IN tipoA VARCHAR(70), ID_marcaA INT)
+BEGIN
+	DECLARE IDaparato INT;
+	SELECT ID_aparatoAuditivo INTO IDaparato FROM AparatoAuditivo WHERE tipo = tipoA AND ID_marca = ID_marcaA;
+	DELETE FROM PoseeAparatoAuditivo WHERE ID_aparatoAuditivo = IDaparato;
+	DELETE FROM AparatoAuditivo WHERE tipoA = tipo AND ID_marcaA = ID_marca;
+END //
+DELIMITER ;
+
+-- eliminar CENSO
+DELIMITER //
+CREATE PROCEDURE eliminarCenso
+(IN anoC NUMERIC(4))
+BEGIN
+	DECLARE IDcensoObtenido INT;
+	SELECT ID_censo INTO IDcensoObtenido FROM Censo WHERE ano = anoC;
+	DELETE FROM PerteneceCenso WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM Vive WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelEducativo WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM Gana WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneLenguaDominante WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelEspanol WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelIngles WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneNivelLSM WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TieneEstadoCivil WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM PoseeAparatoAuditivo WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM TienePerdidaAuditiva WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM Causado WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM EsGrado WHERE ID_censo = IDcensoObtenido;	
+	DELETE FROM TieneEmpleo WHERE ID_censo = IDcensoObtenido;
+	DELETE FROM Censo WHERE ano = anoC;
+END //
+DELIMITER ;	
+
+-- eliminar MARCA
+DELIMITER //
+CREATE PROCEDURE eliminarMarca
+(IN nombreM VARCHAR(40))
+BEGIN
+	DECLARE IDmarcaObtenido INT;    
+	SELECT ID_marca INTO IDmarcaObtenido FROM Marca WHERE nombre = nombreM;    
+    UPDATE AparatoAuditivo SET ID_marca = null WHERE ID_marca = IDmarcaObtenido;	
+	DELETE FROM Marca WHERE ID_marca = IDmarcaObtenido;
+END //
+DELIMITER ;	
+
+-- eliminar CAUSA
+DELIMITER //
+CREATE PROCEDURE eliminarCausa
+(IN causaC VARCHAR(50))
+BEGIN
+	DECLARE IDcausaObtenido INT;
+	SELECT ID_causa INTO IDcausaObtenido FROM Causa WHERE causa = causaC;
+	DELETE FROM Causado WHERE ID_causa = IDcausaObtenido;
+	DELETE FROM Causa WHERE ID_causa = IDcausaObtenido;
+END //
+DELIMITER ;	
+
+-- eliminar SUELDO
+DELIMITER //
+CREATE PROCEDURE eliminarSueldo
+(IN minimoS VARCHAR(20), maximoS VARCHAR(20))
+BEGIN
+	DECLARE IDsueldoObtenido INT;
+	SELECT ID_sueldo INTO IDsueldoObtenido FROM Sueldo WHERE minimo = minimoS AND maximo = maximoS;
+	DELETE FROM Gana WHERE ID_sueldo = IDsueldoObtenido;
+	DELETE FROM Sueldo WHERE ID_sueldo = IDsueldoObtenido;
+END //
+DELIMITER ;	
+
+-- eliminar AREATRABAJO
+DELIMITER //
+CREATE PROCEDURE eliminarAreaTrabajo
+(IN nombreA VARCHAR(60))
+BEGIN
+	DECLARE IDareaTrabajoObtenido INT;
+	SELECT ID_areaTrabajo INTO IDareaTrabajoObtenido FROM AreaTrabajo WHERE nombre = nombreA;
+	UPDATE Empleo SET ID_areaTrabajo = null WHERE ID_areaTrabajo = IDareaTrabajoObtenido;
+	DELETE FROM AreaTrabajo WHERE nombre = nombreA;
+END //
+DELIMITER ;
+
+
+-- eliminar USUARIO
+DELIMITER //
+CREATE PROCEDURE eliminarUsuario
+(IN loginU VARCHAR(30))
+BEGIN
+	DELETE FROM TieneRol WHERE login = loginU;
+	DELETE FROM Usuario WHERE login = loginU;
+END //
+DELIMITER ;	
+
+
+-- eliminar PERSONA (POSIBLE CAMBIO)
+DELIMITER //
+CREATE PROCEDURE eliminarPersona
+(IN CURPinput CHAR(18))
+BEGIN
+	DELETE FROM PerteneceCenso WHERE CURP = CURPinput;
+	DELETE FROM Vive WHERE CURP = CURPinput;
+	DELETE FROM TieneNivelEducativo WHERE CURP = CURPinput;
+	DELETE FROM Estudiado WHERE CURP = CURPinput;
+	DELETE FROM TieneEmpleo WHERE CURP = CURPinput;
+	DELETE FROM TieneLenguaDominante WHERE CURP = CURPinput;
+	DELETE FROM TieneNivelEspanol WHERE CURP = CURPinput;
+	DELETE FROM TieneNivelIngles WHERE CURP = CURPinput;
+	DELETE FROM TieneNivelLSM WHERE CURP = CURPinput;
+	DELETE FROM TieneEstadoCivil WHERE CURP = CURPinput;
+	DELETE FROM PoseeAparatoAuditivo WHERE CURP = CURPinput;
+	DELETE FROM Hijo WHERE CURP = CURPinput;
+	DELETE FROM TienePerdidaAuditiva WHERE CURP = CURPinput;
+	DELETE FROM Causado WHERE CURP = CURPinput;
+	DELETE FROM EsGrado WHERE CURP = CURPinput;
+	DELETE FROM Persona WHERE CURP = CURPinput;
+END //
+DELIMITER ;	
+
+
+-- eliminar COLONIA
+DELIMITER //
+CREATE PROCEDURE eliminarColonia
+(IN nombreC VARCHAR(80), IDmunicipio INT)
+BEGIN
+	DECLARE IDcoloniaObtenido INT;
+	SELECT ID_colonia INTO IDcoloniaObtenido FROM Colonia WHERE nombre = nombreC AND ID_municipio = IDmunicipio;
+	DELETE FROM Vive WHERE ID_colonia = IDcoloniaObtenido;
+	DELETE FROM LocalizaInstitucionEducativa WHERE ID_colonia = IDcoloniaObtenido;
+	DELETE FROM LocalizaEmpleo WHERE ID_colonia = IDcoloniaObtenido;
+	DELETE FROM Colonia WHERE ID_colonia = IDcoloniaObtenido;
+END //
+DELIMITER ;
+
+
+-- eliminar DELEGACION
+DELIMITER //
+CREATE PROCEDURE eliminarDelegacion
+(IN nombreD VARCHAR(80), IDmunicipio INT)
+BEGIN 
+	DECLARE IDdelegacionObtenido INT;
+	SELECT ID_delegacion INTO IDdelegacionObtenido FROM Delegacion WHERE nombre = nombreD AND ID_municipio = IDmunicipio;
+	UPDATE Colonia SET ID_delegacion = null WHERE ID_delegacion = IDdelegacionObtenido;
+	DELETE FROM Delegacion WHERE ID_delegacion = IDdelegacionObtenido;
+END //
+DELIMITER ;
+
+
+-- eliminar MUNICIPIO
+DELIMITER //
+CREATE PROCEDURE eliminarMunicipio
+(IN nombreM VARCHAR(80), IDestado INT)
+BEGIN
+	DECLARE IDmunicpioObtenido INT;
+	SELECT ID_municipio INTO IDmunicpioObtenido FROM Municipio WHERE nombre = nombreM AND ID_estado = IDestado;
+	DELETE FROM Colonia WHERE ID_municipio = IDmunicpioObtenido;
+	DELETE FROM Delegacion WHERE ID_municipio = IDmunicpioObtenido;
+	DELETE FROM Municipio WHERE ID_municipio = IDmunicpioObtenido;
+END //
+DELIMITER ;
+
+
+-- eliminar ESTADO
+DELIMITER //
+CREATE PROCEDURE eliminarEstado
+(IN nombreE VARCHAR(80))
+BEGIN
+	DECLARE IDestadoObtenido INT;
+	SELECT ID_estado INTO IDestadoObtenido FROM Estado WHERE nombre = nombreE;
+	DELETE FROM Municipio WHERE ID_estado = IDestadoObtenido;
+	DELETE FROM Estado WHERE ID_estado = IDestadoObtenido;
+END //
+DELIMITER ;
+
+-- elimanar INSTITUCIONEDUCATIVA
+DELIMITER //
+CREATE PROCEDURE eliminarInstitucionEducativa
+(IN nombreI VARCHAR(90))
+BEGIN
+	DECLARE IDinstitucionObtenida INT;
+	SELECT ID_institucionEducativa INTO IDinstitucionObtenida FROM InstitucionEducativa WHERE nombre = nombreI;
+	DELETE FROM Estudiado WHERE ID_institucionEducativa = IDinstitucionObtenida;
+	DELETE FROM LocalizaInstitucionEducativa WHERE ID_institucionEducativa = IDinstitucionObtenida;
+END //
+DELIMITER ;	
+
+
+
+
+
+
+
+
+
+
+
 
 

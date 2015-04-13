@@ -12,6 +12,9 @@ namespace CSEQ
 {
     public partial class CrearAparatoAuditivo : Form
     {
+        String nombreMarca_selected;
+        String tipo_selected;
+
         public CrearAparatoAuditivo()
         {
             InitializeComponent();
@@ -53,17 +56,35 @@ namespace CSEQ
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String tipo;
-            String nombre;
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
-            {
-                tipo = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                nombre = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            {                
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
+                tipo_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                nombreMarca_selected = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();               
                 String sqlActiveRow = "SELECT * FROM AparatoAuditivo a, Marca m WHERE ";
-                sqlActiveRow += " a.tipo= '" + tipo + "' AND m.nombre= '" + nombre + "' AND a.ID_marca=m.ID_marca;";
+                sqlActiveRow += " a.tipo= '" + tipo_selected + "' AND m.nombre= '" + nombreMarca_selected +
+                                "' AND a.ID_marca=m.ID_marca;";
                 Util.showData(this, sqlActiveRow);
             }
+        }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            String tipo_selected = tipo_txt.Text;
+            int ID_marca_selected = Int32.Parse(ID_marca.SelectedValue.ToString());                        
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Eliminar '" + tipo_selected + "', marca: " + nombreMarca_selected + "?", 
+                                        "Confirmación de eliminación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarAparatoAuditivo", tipo_selected, ID_marca_selected))
+                {
+                    MessageBox.Show("El aparato: '" + tipo_selected + "' se elimino con exito!");
+                }
+            }           
         }
 
     }

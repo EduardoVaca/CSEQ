@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class Crear_censo : Form
     {
+        int censo_selected;
+
         public Crear_censo()
         {
             InitializeComponent();            
@@ -61,21 +63,36 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            int censo;
-
+        {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                censo = Convert.ToInt16(busqueda_grid.Rows[e.RowIndex].Cells[0].Value);
+                modificar_btn.Enabled = true; //activacion de botones
+                eliminar_btn.Enabled = true;
+                censo_selected = Convert.ToInt16(busqueda_grid.Rows[e.RowIndex].Cells[0].Value);
                 String sqlActiveRow = "SELECT * FROM Censo WHERE ";
-                sqlActiveRow += " ano= '" + censo + "';";
+                sqlActiveRow += " ano= '" + censo_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
         }
 
-        private void Crear_censo_Load(object sender, EventArgs e)
-        {
 
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Eliminar Censo:'" + censo_selected + "'?", "Confirmación de eliminación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                respuesta = MessageBox.Show("Se eliminará TODA la informacion respecto al censo " + censo_selected +
+                                            ". ¿Desea eliminarlo PERMANENTEMENTE?", "Mensaje de Seguridad", MessageBoxButtons.YesNo);
+                if (respuesta == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (Util.executeStoredProcedure("eliminarCenso", censo_selected))
+                    {
+                        MessageBox.Show("Se eliminó el Censo " + censo_selected + "con éxito!");
+                    }
+                }
+            }
         }
     }
 }
