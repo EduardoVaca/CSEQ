@@ -212,5 +212,45 @@ namespace CSEQ
             masculino_check.Checked = false;
         }
 
+        private void Persona_tabControl_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (e.TabPage != DatosPersonales_tab || e.TabPage != BuscarRegistro_tab)
+            {
+                if (!datosPersonalesLlenos())
+                {
+                    e.Cancel = true;
+                }
+                else if (e.TabPage == PerdidaAuditiva_tab || e.TabPage == Familia_tab)
+                {
+                    if (!datosLaboralesLlenos())
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
+        }
+
+        // Funciones para ver si las tab tienen la información obligatoria requerida...
+        private bool datosPersonalesLlenos()
+        {
+            if (!String.IsNullOrEmpty(CURP_txt.Text) && !String.IsNullOrEmpty(nombre_txt.Text) &&
+                (masculino_check.Checked || femenino_check.Checked))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool datosLaboralesLlenos()
+        {
+            if (!String.IsNullOrEmpty(descripcionEmpleo_txt.Text))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
     }
 }
