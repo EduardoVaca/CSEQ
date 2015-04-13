@@ -45,5 +45,37 @@ namespace CSEQ
             consulta.Show();
             
         }
+
+        private void salud_radiobtn_CheckedChanged(object sender, EventArgs e)
+        {
+            salud_combo.Enabled = true;
+            empleo_combo.Enabled = false;
+            demografia_combo.Enabled = false;
+            educacion_combo.Enabled = false;           
+        }
+
+        private void demografia_radiobtn_CheckedChanged(object sender, EventArgs e)
+        {
+            salud_combo.Enabled = false;
+            empleo_combo.Enabled = false;
+            demografia_combo.Enabled = true;
+            educacion_combo.Enabled = false;  
+        }
+
+        private void educacion_radiobtn_CheckedChanged(object sender, EventArgs e)
+        {
+            salud_combo.Enabled = false;
+            empleo_combo.Enabled = false;
+            demografia_combo.Enabled = false;
+            educacion_combo.Enabled = true;  
+        }
+
+        private void empleo_radiobtn_CheckedChanged(object sender, EventArgs e)
+        {
+            salud_combo.Enabled = false;
+            empleo_combo.Enabled = true;
+            demografia_combo.Enabled = false;
+            educacion_combo.Enabled = false;  
+        }
     }
 }

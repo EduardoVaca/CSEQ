@@ -113,7 +113,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE registrarPersonaCOMPLETO
 (IN CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
-implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo INT, ID_colonia INT,
+implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo NUMERIC(4), ID_colonia INT,
 ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
 ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
 interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, ID_causa INT,
@@ -599,8 +599,9 @@ DELIMITER ;
 -- modificar USUARIO
 DELIMITER //
 CREATE PROCEDURE modificarUsuario
-(IN loginU VARCHAR(30), loginNuevo VARCHAR(30), passwordNuevo VARCHAR(30))
-BEGIN	
+(IN loginU VARCHAR(30), loginNuevo VARCHAR(30), passwordNuevo VARCHAR(30), IDrolViejo INT, IDrolNevo INT)
+BEGIN
+	UPDATE TieneRol SET ID_rol = IDrolNevo WHERE login = loginU AND ID_rol = IDrolViejo;	
 	UPDATE Usuario SET login = loginNuevo, password = passwordNuevo WHERE login = loginU;
 END //
 DELIMITER ;
@@ -609,7 +610,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE modificarPersona
 (IN CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
-implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo INT, ID_colonia INT,
+implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo NUMERIC(4), ID_colonia INT,
 ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
 ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
 interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, ID_causa INT,
