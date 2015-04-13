@@ -677,7 +677,7 @@ BEGIN
 	UPDATE InstitucionEducativa SET nombre = nombreNuevo, calle = calleNuevo, telefono = telefonoNuevo, correo = correoNuevo, privada = privadaNuevo,
 	especializada = especializadaNuevo WHERE nombre = nombreViejo;
 END //
-DELIMITER;
+DELIMITER ;
 
 
 

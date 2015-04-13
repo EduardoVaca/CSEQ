@@ -88,5 +88,10 @@ namespace CSEQ
                 }
             }
         }
+
+        private void crearAreaTrabajo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
