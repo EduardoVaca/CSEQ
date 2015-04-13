@@ -12,6 +12,7 @@ namespace CSEQ
 {
     public partial class Persona : Form
     {
+        String nombre_selected;
         public Persona()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace CSEQ
         private void Persona_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
-            Util.llenarComboBox(ID_censo, "Select ID_censo FROM Censo");
+            Util.llenarComboBox(Censo, "Select * FROM Censo");
             Util.llenarComboBox(ID_estadoCivil, "Select ID_estadoCivil, nombre FROM EstadoCivil");
             Util.llenarComboBox(ID_nivelEducativo, "SELECT ID_nivelEducativo, nivel FROM NivelEducativo");
             Util.llenarComboBox(ID_institucionEducativa, "SELECT ID_institucionEducativa, nombre FROM InstitucionEducativa");
@@ -115,6 +116,7 @@ namespace CSEQ
                 sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" + correo + "';";
                 */
                 Util.showData(this, sqlActiveRow);
+                nombre_selected = Nombre_txt.Text;
             }
         }
         /*-------------------------------------------------------------------------------------*/
@@ -137,11 +139,11 @@ namespace CSEQ
         {
             //Obtenion de datos **********************************************************************
             String CURPP = CURP_txt.Text;
-            String nombreP = nombre_txt.Text;
+            String nombreP = Nombre_txt.Text;
             String fechaNacP = ID_fechaNacimiento.Value.ToShortDateString();
             Boolean sexoH = masculino_check.Checked;
             String telefonoP = telefono_txt.Text;
-            String correoP = correo_txt.Text;
+            String correoP = Correo_txt.Text;
             String calleP = calle_txt.Text;
             Boolean examenP = examen_audiometria_check.Checked;
             Boolean implanteP = implante_coclear_check.Checked;
@@ -151,7 +153,7 @@ namespace CSEQ
             Boolean mexicanoP = mexicano_check.Checked;
             Boolean ifeP = credencialIFE_check.Checked;
             int ID_periodoP = Int32.Parse(ID_periodo.SelectedValue.ToString());
-            int ID_censoP = Int32.Parse(ID_censo.SelectedValue.ToString());
+            int ID_censoP = Int32.Parse(Censo.SelectedValue.ToString());
             int ID_coloniaP = Int32.Parse(ID_colonia.SelectedValue.ToString());
             int ID_estadoCivilP = Int32.Parse(ID_estadoCivil.SelectedValue.ToString());
             int ID_nivelEducativoP = Int32.Parse(ID_nivelEducativo.SelectedValue.ToString());
@@ -222,14 +224,10 @@ namespace CSEQ
             }
         }
 
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Persona_tabControl_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            if (e.TabPage != DatosPersonales_tab || e.TabPage != BuscarRegistro_tab)
+            if (e.TabPage != DatosPersonales_tab && e.TabPage != BuscarRegistro_tab)
             {
                 if (!datosPersonalesLlenos())
                 {
@@ -248,7 +246,7 @@ namespace CSEQ
         // Funciones para ver si las tab tienen la información obligatoria requerida...
         private bool datosPersonalesLlenos()
         {
-            if (!String.IsNullOrEmpty(CURP_txt.Text) && !String.IsNullOrEmpty(nombre_txt.Text) &&
+            if (!String.IsNullOrEmpty(CURP_txt.Text) && !String.IsNullOrEmpty(Nombre_txt.Text) &&
                 (masculino_check.Checked || femenino_check.Checked))
             {
                 return true;
@@ -265,6 +263,76 @@ namespace CSEQ
             }
 
             return false;
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String CURPP = CURP_txt.Text;
+            String nombreP = Nombre_txt.Text;
+            String fechaNacP = ID_fechaNacimiento.Value.ToShortDateString();
+            Boolean sexoH = masculino_check.Checked;
+            String telefonoP = telefono_txt.Text;
+            String correoP = Correo_txt.Text;
+            String calleP = calle_txt.Text;
+            Boolean examenP = examen_audiometria_check.Checked;
+            Boolean implanteP = implante_coclear_check.Checked;
+            Boolean comunidadIndP = comunidad_indigena_check.Checked;
+            Boolean alergiaP = alergia_check.Checked;
+            Boolean enfermedadP = enfermedad_check.Checked;
+            Boolean mexicanoP = mexicano_check.Checked;
+            Boolean ifeP = credencialIFE_check.Checked;
+            int ID_periodoP = Int32.Parse(ID_periodo.SelectedValue.ToString());
+            int ID_censoP = Int16.Parse(Censo.SelectedValue.ToString());
+            int ID_coloniaP = Int32.Parse(ID_colonia.SelectedValue.ToString());
+            int ID_estadoCivilP = Int32.Parse(ID_estadoCivil.SelectedValue.ToString());
+            int ID_nivelEducativoP = Int32.Parse(ID_nivelEducativo.SelectedValue.ToString());
+            int ID_institucionEducativaP = Int32.Parse(ID_institucionEducativa.SelectedValue.ToString());
+            int anoEstudioP = Int32.Parse(ano_txt.Text);
+            int ID_lenguaDominanteP = Int32.Parse(ID_lenguaDominante.SelectedValue.ToString());
+            int ID_nivelEspanolP = Int32.Parse(ID_nivelEspanol.SelectedValue.ToString());
+            int ID_nivelInglesP = Int32.Parse(ID_nivelIngles.SelectedValue.ToString());
+            int ID_nivelLSMP = Int32.Parse(ID_nivelLSM.SelectedValue.ToString());
+            String descripcionEmpleoP = descripcion_txt.Text;
+            String nombreCompanyP = nombre_compania_txt.Text;
+            String correoEmpleoP = correoEmpleo_txt.Text;
+            String telefonoEmpleoP = telefonoEmpleo_txt.Text;
+            String calleEmpleoP = calleEmpleo_txt.Text;
+            Boolean interpretacionLSMP = interpretacion_LSM_check.Checked;
+            int ID_areaTrabajoP = Int32.Parse(ID_areaTrabajo.SelectedValue.ToString());
+            int ID_sueldoP = Int32.Parse(ID_sueldo.SelectedValue.ToString());
+            int ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());
+            int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
+            Boolean prelinguisticaP = prelinguistica_check.Checked;
+            int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
+            int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
+            int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
+            String modeloP = modelo_txt.Text;
+
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Persona: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarPersona", CURPP, nombreP, fechaNacP, sexoH, telefonoP,
+                                            correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
+                                            mexicanoP, ifeP, ID_periodoP, ID_censoP, ID_coloniaP, ID_estadoCivilP,
+                                            ID_nivelEducativoP, ID_institucionEducativaP, anoEstudioP, ID_lenguaDominanteP,
+                                            ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
+                                            nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
+                                            ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
+                                            prelinguisticaP, ID_gradoP, ID_causaP, ID_aparatoAuditivoP, modeloP))
+                {
+                    MessageBox.Show("La persona se ha modificado con exito!");
+                }
+            }
+
+            
+           /* CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
+implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo INT, ID_colonia INT,
+ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
+ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
+interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, ID_causa INT,
+ID_aparatoAuditivo INT, modelo VARCHAR(30)*/
         }
 
     }

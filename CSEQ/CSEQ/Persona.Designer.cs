@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persona));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Persona_tabControl = new System.Windows.Forms.TabControl();
             this.DatosPersonales_tab = new System.Windows.Forms.TabPage();
@@ -48,7 +48,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.ID_estadoCivil = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.ID_censo = new System.Windows.Forms.ComboBox();
+            this.Censo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comunidad_indigena_check = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.calle_txt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.correo_txt = new System.Windows.Forms.TextBox();
+            this.Correo_txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.telefono_txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.ID_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.nombre_txt = new System.Windows.Forms.TextBox();
+            this.Nombre_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CURP_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -241,7 +241,7 @@
             this.DatosPersonales_tab.Controls.Add(this.label29);
             this.DatosPersonales_tab.Controls.Add(this.ID_estadoCivil);
             this.DatosPersonales_tab.Controls.Add(this.label17);
-            this.DatosPersonales_tab.Controls.Add(this.ID_censo);
+            this.DatosPersonales_tab.Controls.Add(this.Censo);
             this.DatosPersonales_tab.Controls.Add(this.label16);
             this.DatosPersonales_tab.Controls.Add(this.comunidad_indigena_check);
             this.DatosPersonales_tab.Controls.Add(this.label15);
@@ -259,7 +259,7 @@
             this.DatosPersonales_tab.Controls.Add(this.label9);
             this.DatosPersonales_tab.Controls.Add(this.calle_txt);
             this.DatosPersonales_tab.Controls.Add(this.label8);
-            this.DatosPersonales_tab.Controls.Add(this.correo_txt);
+            this.DatosPersonales_tab.Controls.Add(this.Correo_txt);
             this.DatosPersonales_tab.Controls.Add(this.label7);
             this.DatosPersonales_tab.Controls.Add(this.telefono_txt);
             this.DatosPersonales_tab.Controls.Add(this.label6);
@@ -268,7 +268,7 @@
             this.DatosPersonales_tab.Controls.Add(this.label5);
             this.DatosPersonales_tab.Controls.Add(this.ID_fechaNacimiento);
             this.DatosPersonales_tab.Controls.Add(this.label4);
-            this.DatosPersonales_tab.Controls.Add(this.nombre_txt);
+            this.DatosPersonales_tab.Controls.Add(this.Nombre_txt);
             this.DatosPersonales_tab.Controls.Add(this.label2);
             this.DatosPersonales_tab.Controls.Add(this.CURP_txt);
             this.DatosPersonales_tab.Controls.Add(this.label1);
@@ -423,15 +423,15 @@
             this.label17.TabIndex = 46;
             this.label17.Text = "Estado Civil";
             // 
-            // ID_censo
+            // Censo
             // 
-            this.ID_censo.Font = new System.Drawing.Font("Candara", 10F);
-            this.ID_censo.FormattingEnabled = true;
-            this.ID_censo.Location = new System.Drawing.Point(323, 413);
-            this.ID_censo.Margin = new System.Windows.Forms.Padding(2);
-            this.ID_censo.Name = "ID_censo";
-            this.ID_censo.Size = new System.Drawing.Size(69, 23);
-            this.ID_censo.TabIndex = 45;
+            this.Censo.Font = new System.Drawing.Font("Candara", 10F);
+            this.Censo.FormattingEnabled = true;
+            this.Censo.Location = new System.Drawing.Point(323, 413);
+            this.Censo.Margin = new System.Windows.Forms.Padding(2);
+            this.Censo.Name = "Censo";
+            this.Censo.Size = new System.Drawing.Size(69, 23);
+            this.Censo.TabIndex = 45;
             // 
             // label16
             // 
@@ -450,7 +450,7 @@
             this.comunidad_indigena_check.AutoSize = true;
             this.comunidad_indigena_check.Font = new System.Drawing.Font("Candara", 9F);
             this.comunidad_indigena_check.Location = new System.Drawing.Point(506, 379);
-            this.comunidad_indigena_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comunidad_indigena_check.Margin = new System.Windows.Forms.Padding(2);
             this.comunidad_indigena_check.Name = "comunidad_indigena_check";
             this.comunidad_indigena_check.Size = new System.Drawing.Size(35, 18);
             this.comunidad_indigena_check.TabIndex = 43;
@@ -474,7 +474,7 @@
             this.credencialIFE_check.AutoSize = true;
             this.credencialIFE_check.Font = new System.Drawing.Font("Candara", 9F);
             this.credencialIFE_check.Location = new System.Drawing.Point(193, 418);
-            this.credencialIFE_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.credencialIFE_check.Margin = new System.Windows.Forms.Padding(2);
             this.credencialIFE_check.Name = "credencialIFE_check";
             this.credencialIFE_check.Size = new System.Drawing.Size(35, 18);
             this.credencialIFE_check.TabIndex = 41;
@@ -634,14 +634,14 @@
             this.label8.TabIndex = 28;
             this.label8.Text = "Calle";
             // 
-            // correo_txt
+            // Correo_txt
             // 
-            this.correo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.correo_txt.Location = new System.Drawing.Point(94, 253);
-            this.correo_txt.Margin = new System.Windows.Forms.Padding(2);
-            this.correo_txt.Name = "correo_txt";
-            this.correo_txt.Size = new System.Drawing.Size(228, 27);
-            this.correo_txt.TabIndex = 27;
+            this.Correo_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.Correo_txt.Location = new System.Drawing.Point(94, 253);
+            this.Correo_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.Correo_txt.Name = "Correo_txt";
+            this.Correo_txt.Size = new System.Drawing.Size(228, 27);
+            this.Correo_txt.TabIndex = 27;
             // 
             // label7
             // 
@@ -735,14 +735,14 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Fecha Nacimiento";
             // 
-            // nombre_txt
+            // Nombre_txt
             // 
-            this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.nombre_txt.Location = new System.Drawing.Point(94, 87);
-            this.nombre_txt.Margin = new System.Windows.Forms.Padding(2);
-            this.nombre_txt.Name = "nombre_txt";
-            this.nombre_txt.Size = new System.Drawing.Size(298, 27);
-            this.nombre_txt.TabIndex = 18;
+            this.Nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.Nombre_txt.Location = new System.Drawing.Point(94, 87);
+            this.Nombre_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.Nombre_txt.Name = "Nombre_txt";
+            this.Nombre_txt.Size = new System.Drawing.Size(298, 27);
+            this.Nombre_txt.TabIndex = 18;
             // 
             // label2
             // 
@@ -812,7 +812,7 @@
             // 
             this.ano_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.ano_txt.Location = new System.Drawing.Point(554, 27);
-            this.ano_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ano_txt.Margin = new System.Windows.Forms.Padding(4);
             this.ano_txt.Mask = "0000";
             this.ano_txt.Name = "ano_txt";
             this.ano_txt.Size = new System.Drawing.Size(100, 27);
@@ -1091,7 +1091,7 @@
             this.interpretacion_LSM_check.AutoSize = true;
             this.interpretacion_LSM_check.Font = new System.Drawing.Font("Candara", 9F);
             this.interpretacion_LSM_check.Location = new System.Drawing.Point(260, 420);
-            this.interpretacion_LSM_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.interpretacion_LSM_check.Margin = new System.Windows.Forms.Padding(4);
             this.interpretacion_LSM_check.Name = "interpretacion_LSM_check";
             this.interpretacion_LSM_check.Size = new System.Drawing.Size(35, 18);
             this.interpretacion_LSM_check.TabIndex = 55;
@@ -1268,7 +1268,7 @@
             // 
             this.nombre_compania_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.nombre_compania_txt.Location = new System.Drawing.Point(110, 73);
-            this.nombre_compania_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombre_compania_txt.Margin = new System.Windows.Forms.Padding(2);
             this.nombre_compania_txt.Name = "nombre_compania_txt";
             this.nombre_compania_txt.Size = new System.Drawing.Size(316, 27);
             this.nombre_compania_txt.TabIndex = 22;
@@ -1289,7 +1289,7 @@
             // 
             this.descripcion_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.descripcion_txt.Location = new System.Drawing.Point(186, 23);
-            this.descripcion_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descripcion_txt.Margin = new System.Windows.Forms.Padding(2);
             this.descripcion_txt.Name = "descripcion_txt";
             this.descripcion_txt.Size = new System.Drawing.Size(539, 27);
             this.descripcion_txt.TabIndex = 20;
@@ -1570,7 +1570,7 @@
             this.examen_audiometria_check.AutoSize = true;
             this.examen_audiometria_check.Font = new System.Drawing.Font("Candara", 9F);
             this.examen_audiometria_check.Location = new System.Drawing.Point(321, 210);
-            this.examen_audiometria_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.examen_audiometria_check.Margin = new System.Windows.Forms.Padding(4);
             this.examen_audiometria_check.Name = "examen_audiometria_check";
             this.examen_audiometria_check.Size = new System.Drawing.Size(35, 18);
             this.examen_audiometria_check.TabIndex = 58;
@@ -1910,35 +1910,35 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle8;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(12, 160);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(2);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.Size = new System.Drawing.Size(718, 316);
             this.busqueda_grid.TabIndex = 17;
@@ -2019,13 +2019,13 @@
             // 
             // modificar_btn
             // 
-            this.modificar_btn.Enabled = false;
             this.modificar_btn.Location = new System.Drawing.Point(332, 534);
             this.modificar_btn.Margin = new System.Windows.Forms.Padding(2);
             this.modificar_btn.Name = "modificar_btn";
             this.modificar_btn.Size = new System.Drawing.Size(48, 20);
             this.modificar_btn.TabIndex = 68;
             this.modificar_btn.UseVisualStyleBackColor = true;
+            this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
             // label65
             // 
@@ -2080,7 +2080,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(689, 406);
+            this.ClientSize = new System.Drawing.Size(808, 560);
             this.Controls.Add(this.label75);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.label65);
@@ -2129,7 +2129,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox CURP_txt;
-        private System.Windows.Forms.TextBox nombre_txt;
+        private System.Windows.Forms.TextBox Nombre_txt;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox ID_estado;
         private System.Windows.Forms.Label label10;
@@ -2137,7 +2137,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox calle_txt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox correo_txt;
+        private System.Windows.Forms.TextBox Correo_txt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox telefono_txt;
         private System.Windows.Forms.Label label6;
@@ -2154,7 +2154,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox mexicano_check;
-        private System.Windows.Forms.ComboBox ID_censo;
+        private System.Windows.Forms.ComboBox Censo;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox comunidad_indigena_check;
         private System.Windows.Forms.Label label15;

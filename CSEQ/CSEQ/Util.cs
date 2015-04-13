@@ -359,14 +359,17 @@ namespace CSEQ
                     if (ctrl is TextBox || ctrl is MaskedTextBox)
                         ctrl.Text = table.Rows[0][nombreTemporal].ToString();
                     else if (ctrl is ComboBox || ctrl is ListBox)
+                    {
+                        //MessageBox.Show(ctrl.Name);
                         ((ComboBox)ctrl).SelectedValue = table.Rows[0][nombreTemporal].ToString();
+                    }
                     else if (ctrl is DateTimePicker)
                         ((DateTimePicker)ctrl).Value = (DateTime)(table.Rows[0][nombreTemporal]);
                     else if (ctrl is CheckBox)
                     {
                         if (nombreTemporal == "sexo_masculino")
                         {
-                            if (ctrl.Name=="masculino_check")
+                            if (ctrl.Name == "masculino_check")
                                 ((CheckBox)ctrl).Checked = (bool)(table.Rows[0][nombreTemporal]);
                             else
                                 ((CheckBox)ctrl).Checked = !(bool)(table.Rows[0][nombreTemporal]);

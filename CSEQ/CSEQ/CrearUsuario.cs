@@ -55,9 +55,8 @@ namespace CSEQ
                 modificar_btn.Enabled = true; //Activacion de botones
                 eliminar_btn.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                contrasena = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Usuario WHERE ";
-                sqlActiveRow += " nombre= '" + nombre + "';";
+                sqlActiveRow += " login= '" + nombre + "';";
                 Util.showData(this, sqlActiveRow);
             }
         }
@@ -78,14 +77,14 @@ namespace CSEQ
 
         private void modificar_btn_Click(object sender, EventArgs e)
         {
-            String nombreNuevo = nombre_txt.Text;
+            String nombreNuevo = login_txt.Text;
             String nuevoPass = password_txt.Text;
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar Usuario: " + nombre + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("modificarAreaTrabajo", nombre,contrasena , nombreNuevo,nuevoPass))
+                if (Util.executeStoredProcedure("modificarUsuario", nombre, nombreNuevo,nuevoPass))
                 {
                     MessageBox.Show("El area de trabajo se modifico con exito");
                 }
