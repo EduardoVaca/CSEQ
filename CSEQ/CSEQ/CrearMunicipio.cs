@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class CrearMunicipio : Form
     {
+        String nombre_selected;
+
         public CrearMunicipio()
         {
             InitializeComponent();
@@ -58,16 +60,33 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            String nombre;
-
+        {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
+                nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Municipio WHERE ";
-                sqlActiveRow += " nombre= '" + nombre + "';";
+                sqlActiveRow += " nombre= '" + nombre_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
+        }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar municipio: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                            MessageBoxButtons.YesNo);
+            int mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarDelegacion", nombre_selected, mID_estado))
+                {
+                    MessageBox.Show("El municipio se elimino con exito");
+                }
+            }
+
+
         }
     }
 }

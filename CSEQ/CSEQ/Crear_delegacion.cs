@@ -13,6 +13,8 @@ namespace CSEQ
 
     public partial class Crear_delegacion : Form
     {
+        String delegacion_selected;
+
         public Crear_delegacion()
         {
             InitializeComponent();            
@@ -71,17 +73,34 @@ namespace CSEQ
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String delegacion;
             String municipio;
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                delegacion = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
+                delegacion_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 municipio = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Delegacion d, Municipio m WHERE ";
-                sqlActiveRow += " d.nombre= '" + delegacion +"' AND m.nombre='" + municipio +"' AND d.ID_municipio=m.ID_municipio;";
+                sqlActiveRow += " d.nombre= '" + delegacion_selected +"' AND m.nombre='" + municipio +"' AND d.ID_municipio=m.ID_municipio;";
                 Util.showData(this, sqlActiveRow);
             }
+        }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Desea eliminar delegacion:" + delegacion_selected + "'?",
+                                                "Confirmacion de eliminar", MessageBoxButtons.YesNo);
+            int dID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarDelegacion", delegacion_selected, dID_municipio))
+                {
+                    MessageBox.Show("La delegacion se elimino con exito!");
+                }
+            }
+
         }
 
 

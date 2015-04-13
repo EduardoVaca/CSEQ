@@ -78,7 +78,7 @@
             this.label4.Location = new System.Drawing.Point(613, 500);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 15);
+            this.label4.Size = new System.Drawing.Size(342, 29);
             this.label4.TabIndex = 12;
             this.label4.Text = "ROMPIENDO PARADIGMAS";
             // 
@@ -101,7 +101,7 @@
             this.Col.Location = new System.Drawing.Point(359, 25);
             this.Col.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Col.Name = "Col";
-            this.Col.Size = new System.Drawing.Size(88, 29);
+            this.Col.Size = new System.Drawing.Size(176, 59);
             this.Col.TabIndex = 14;
             this.Col.Text = "Colonia";
             // 
@@ -110,7 +110,7 @@
             this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.nombre_txt.Location = new System.Drawing.Point(115, 134);
             this.nombre_txt.Name = "nombre_txt";
-            this.nombre_txt.Size = new System.Drawing.Size(266, 27);
+            this.nombre_txt.Size = new System.Drawing.Size(266, 47);
             this.nombre_txt.TabIndex = 15;
             // 
             // Nombre_label
@@ -121,7 +121,7 @@
             this.Nombre_label.Location = new System.Drawing.Point(11, 134);
             this.Nombre_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Nombre_label.Name = "Nombre_label";
-            this.Nombre_label.Size = new System.Drawing.Size(78, 23);
+            this.Nombre_label.Size = new System.Drawing.Size(152, 46);
             this.Nombre_label.TabIndex = 16;
             this.Nombre_label.Text = "Nombre";
             // 
@@ -144,7 +144,7 @@
             this.label1.Location = new System.Drawing.Point(11, 312);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 23);
+            this.label1.Size = new System.Drawing.Size(200, 46);
             this.label1.TabIndex = 18;
             this.label1.Text = "Delegación";
             // 
@@ -156,7 +156,7 @@
             this.label2.Location = new System.Drawing.Point(11, 254);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 23);
+            this.label2.Size = new System.Drawing.Size(176, 46);
             this.label2.TabIndex = 19;
             this.label2.Text = "Municipio";
             // 
@@ -166,7 +166,7 @@
             this.ID_delegacion.FormattingEnabled = true;
             this.ID_delegacion.Location = new System.Drawing.Point(115, 312);
             this.ID_delegacion.Name = "ID_delegacion";
-            this.ID_delegacion.Size = new System.Drawing.Size(266, 23);
+            this.ID_delegacion.Size = new System.Drawing.Size(266, 41);
             this.ID_delegacion.TabIndex = 20;
             this.ID_delegacion.Text = "Selecciona Delegación";
             // 
@@ -176,7 +176,7 @@
             this.ID_municipio.FormattingEnabled = true;
             this.ID_municipio.Location = new System.Drawing.Point(115, 254);
             this.ID_municipio.Name = "ID_municipio";
-            this.ID_municipio.Size = new System.Drawing.Size(266, 23);
+            this.ID_municipio.Size = new System.Drawing.Size(266, 41);
             this.ID_municipio.TabIndex = 21;
             this.ID_municipio.Text = "Selecciona Municipio";
             this.ID_municipio.SelectionChangeCommitted += new System.EventHandler(this.ID_municipio_SelectionChangeCommitted);
@@ -189,7 +189,7 @@
             this.label3.Location = new System.Drawing.Point(12, 197);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 23);
+            this.label3.Size = new System.Drawing.Size(131, 46);
             this.label3.TabIndex = 22;
             this.label3.Text = "Estado";
             // 
@@ -199,7 +199,7 @@
             this.ID_estado.FormattingEnabled = true;
             this.ID_estado.Location = new System.Drawing.Point(115, 196);
             this.ID_estado.Name = "ID_estado";
-            this.ID_estado.Size = new System.Drawing.Size(266, 23);
+            this.ID_estado.Size = new System.Drawing.Size(266, 41);
             this.ID_estado.TabIndex = 23;
             this.ID_estado.Text = "Selecciona Estado";
             this.ID_estado.SelectionChangeCommitted += new System.EventHandler(this.ID_estado_SelectionChangeCommitted);
@@ -212,7 +212,7 @@
             this.label30.Location = new System.Drawing.Point(386, 134);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(17, 24);
+            this.label30.Size = new System.Drawing.Size(32, 42);
             this.label30.TabIndex = 50;
             this.label30.Text = "*";
             // 
@@ -224,7 +224,7 @@
             this.label5.Location = new System.Drawing.Point(386, 198);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 24);
+            this.label5.Size = new System.Drawing.Size(32, 42);
             this.label5.TabIndex = 51;
             this.label5.Text = "*";
             // 
@@ -236,7 +236,7 @@
             this.label6.Location = new System.Drawing.Point(386, 254);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 24);
+            this.label6.Size = new System.Drawing.Size(32, 42);
             this.label6.TabIndex = 52;
             this.label6.Text = "*";
             // 
@@ -251,6 +251,7 @@
             this.eliminar_btn.TabIndex = 70;
             this.eliminar_btn.Text = "Eliminar";
             this.eliminar_btn.UseVisualStyleBackColor = true;
+            this.eliminar_btn.Click += new System.EventHandler(this.eliminar_btn_Click);
             // 
             // modificar_btn
             // 
@@ -307,12 +308,12 @@
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(400, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(100, 4);
             this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(296, 27);
+            this.busqueda_txt.Size = new System.Drawing.Size(296, 47);
             this.busqueda_txt.TabIndex = 8;
             // 
             // CrearColonia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

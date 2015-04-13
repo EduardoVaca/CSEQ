@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class CrearColonia : Form
     {
+        String nombre_selected;
+
         public CrearColonia()
         {
             InitializeComponent();
@@ -61,7 +63,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_delegacion, "SELECT ID_delegacion, nombre FROM Delegacion WHERE " +
                                                 "ID_municipio = " + valorComboBox + ";");
         }
-
+        /*------------------------------------------------------------------------------------*/
         private void Guardar_Click(object sender, EventArgs e)
         {
             String cNombre = nombre_txt.Text;
@@ -82,18 +84,33 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            String nombre;
-
+        {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
+                nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT DISTINCT * FROM Colonia c, Estado e, Delegacion d , Municipio m WHERE ";
-                sqlActiveRow += " c.nombre= '" + nombre + "' AND c.ID_municipio=m.ID_municipio  AND c.ID_delegacion=d.ID_delegacion AND m.ID_estado=e.ID_estado;";
+                sqlActiveRow += " c.nombre= '" + nombre_selected + "' AND c.ID_municipio=m.ID_municipio  AND c.ID_delegacion=d.ID_delegacion AND m.ID_estado=e.ID_estado;";
                 Util.showData(this, sqlActiveRow);
             }
         }
-        /*------------------------------------------------------------------------------------*/
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar colonia:'" + nombre_selected + "'?", "Confirmacion de Eliminar",
+                                        MessageBoxButtons.YesNo);
+            int idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString());            
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarColonia", nombre_selected, idMunicpio))
+                {
+                    MessageBox.Show("La colonia se elimino con exito!");
+                }
+            }
+        }
+        
 
 
 

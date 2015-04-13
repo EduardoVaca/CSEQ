@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class crearAreaTrabajo : Form
     {
+        String nombre_selected;
+
         public crearAreaTrabajo()
         {
             InitializeComponent();
@@ -46,21 +48,30 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            String nombre;
-
+        {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
+                nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM AreaTrabajo WHERE ";
-                sqlActiveRow += " nombre= '" + nombre + "';";
+                sqlActiveRow += " nombre= '" + nombre_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
         }
 
         private void eliminar_btn_Click(object sender, EventArgs e)
         {
-
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar area: '" + nombre_selected + "'?", "Confirmacion de Eliminar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarAreaTrabajo", nombre_selected))
+                {
+                    MessageBox.Show("El Area de Trabajo se ha elimnado con exito!");
+                }
+            }
         }
     }
 }

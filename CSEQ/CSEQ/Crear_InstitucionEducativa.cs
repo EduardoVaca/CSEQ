@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class Crear_InstitucionEducativa : Form
     {
+        String nombre_selected;
+
         public Crear_InstitucionEducativa()
         {
             InitializeComponent();
@@ -101,16 +103,17 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            String nombre;
+        {            
             String correo;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
+                nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 
                 String sqlActiveRow = "SELECT * FROM InstitucionEducativa i, Estado e, Municipio m, Delegacion d, Colonia c , LocalizaInstitucionEducativa l WHERE ";
-                sqlActiveRow += (" i.nombre= '" + nombre + "' AND i.correo= '" + correo + "' AND l.ID_institucioneducativa=i.ID_institucioneducativa "+
+                sqlActiveRow += (" i.nombre= '" + nombre_selected + "' AND i.correo= '" + correo + "' AND l.ID_institucioneducativa=i.ID_institucioneducativa "+
                                                                                         "AND l.ID_colonia=c.ID_colonia AND c.ID_delegacion=d.ID_delegacion AND c.ID_municipio=m.ID_municipio "+
                                                                                         "AND m.ID_estado=e.ID_estado;");
                 /*
@@ -122,6 +125,21 @@ namespace CSEQ
 
             
 
+        }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar Institucion: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarInstitucionEducativa", nombre_selected))
+                {
+                    MessageBox.Show("La institucion se ha eliminado con exito!");
+                }
+            }
         }
        
 
