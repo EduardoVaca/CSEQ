@@ -74,6 +74,12 @@ namespace CSEQ
             String fecha = ID_fechaNacimiento.Value.ToShortDateString(); 
             MessageBox.Show(fecha);
         }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            String busqueda = "%" + busqueda_txt.Text + "%";
+            Util.fillGrid(busqueda_grid, "busquedaEnPersona", busqueda);
+        }
         /*-------------------------------------------------------------------------------------*/
         
 

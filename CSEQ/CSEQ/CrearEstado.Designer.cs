@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearEstado));
             this.Mun = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.Label();
+            this.Nombre_label = new System.Windows.Forms.Label();
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.Guardar_txt = new System.Windows.Forms.Button();
             this.Atras_picture = new System.Windows.Forms.PictureBox();
@@ -62,17 +62,17 @@
             this.Mun.TabIndex = 25;
             this.Mun.Text = "Estado";
             // 
-            // Nombre
+            // Nombre_label
             // 
-            this.Nombre.AutoSize = true;
-            this.Nombre.Font = new System.Drawing.Font("Candara", 14F);
-            this.Nombre.ForeColor = System.Drawing.Color.White;
-            this.Nombre.Location = new System.Drawing.Point(26, 247);
-            this.Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(78, 23);
-            this.Nombre.TabIndex = 28;
-            this.Nombre.Text = "Nombre";
+            this.Nombre_label.AutoSize = true;
+            this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.Nombre_label.ForeColor = System.Drawing.Color.White;
+            this.Nombre_label.Location = new System.Drawing.Point(26, 247);
+            this.Nombre_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Nombre_label.Name = "Nombre_label";
+            this.Nombre_label.Size = new System.Drawing.Size(78, 23);
+            this.Nombre_label.TabIndex = 28;
+            this.Nombre_label.Text = "Nombre";
             // 
             // nombre_txt
             // 
@@ -226,7 +226,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.Guardar_txt);
-            this.Controls.Add(this.Nombre);
+            this.Controls.Add(this.Nombre_label);
             this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.Mun);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -247,7 +247,7 @@
         #endregion
 
         private System.Windows.Forms.Label Mun;
-        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.Label Nombre_label;
         private System.Windows.Forms.TextBox nombre_txt;
         private System.Windows.Forms.Button Guardar_txt;
         private System.Windows.Forms.PictureBox Atras_picture;

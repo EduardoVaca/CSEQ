@@ -106,8 +106,10 @@ CREATE PROCEDURE registrarPersonaCOMPLETO
 implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo INT, ID_colonia INT,
 ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
 ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
-interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_coloniaEmpleo INT)
+interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, ID_causa INT,
+ID_aparatoAuditivo INT, modelo VARCHAR(30))
 BEGIN
+	DECLARE IDempleo INT;
 	CALL registrarPersona(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
 						enfermedad, mexicano, ife, ID_periodo);
 	INSERT INTO PerteneceCenso VALUES(CURP, ID_censo);
@@ -120,11 +122,16 @@ BEGIN
 	INSERT INTO TieneNivelIngles VALUES(CURP, ID_nivelIngles, ID_censo);
 	INSERT INTO TieneNivelLSM VALUES(CURP, ID_nivelLSM, ID_censo);
 	CALL registrarEmpleo(descripcion_empleo, nombreCompany, correoEmpleo, telefonoEmpleo, calleEmpleo, interpretacion_LSM, ID_areaTrabajo);
-	DECLARE IDempleo INT;
 	SELECT MAX(ID_empleo) INTO IDempleo FROM Empleo;
 	INSERT INTO LocalizaEmpleo VALUES(IDempleo, ID_coloniaEmpleo);
+	INSERT INTO Gana VALUES(IDempleo, ID_sueldo, ID_censo);
+	INSERT INTO TieneEmpleo VALUES(CURP, IDempleo, ID_censo);
+	INSERT INTO TienePerdidaAuditiva VALUES(CURP, ID_perdidaAuditiva, prelinguistica, ID_censo);
+	INSERT INTO EsGrado VALUES(CURP, ID_perdidaAuditiva, ID_grado, ID_censo);
+	INSERT INTO Causado VALUES (CURP, ID_perdidaAuditiva, ID_causa, ID_censo);
+	INSERT INTO PoseeAparatoAuditivo VALUES (CURP, ID_aparatoAuditivo, ID_censo, modelo);
 END //
-DELIMITER ;						
+DELIMITER ;							
 
 -- PERSONA
 DELIMITER //
@@ -146,6 +153,15 @@ BEGIN
 	INSERT INTO Empleo VALUES(0,descripcion, nombreCompany, correo, telefono, calle, interpretacion_LSM, ID_areaTrabajo);
 END	//
 DELIMITER ;
+
+-- HIJO
+DELIMITER //
+CREATE PROCEDURE registrarHijo
+(IN nombre VARCHAR(80), fechaNac DATETIME, sordo BOOLEAN, CURPpadre CHAR(18))
+BEGIN
+	INSERT INTO Hijo(0, nombre, fechaNac, sordo, CURPpadre);
+END //
+DELIMITER ;	
 						
 -- **************************************************************************************************************************************************
 
@@ -154,7 +170,7 @@ DELIMITER //
 CREATE PROCEDURE busquedaEnInstitucionEducativa
 (IN variable VARCHAR(80))
 BEGIN 
-	SELECT i.nombre, i.correo FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
+	SELECT i.nombre as Nombre, i.correo as Correo FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
 	Delegacion d, Localizainstitucioneducativa loc
 	WHERE i.nombre LIKE variable
 	AND loc.ID_institucionEducativa = i.ID_institucionEducativa AND loc.ID_colonia = c.ID_colonia AND
@@ -162,62 +178,132 @@ BEGIN
 END //
 DELIMITER ;
 
--- Busqueda APARATOAUDITIVO
+
+-- Busqueda COLONIA
 DELIMITER //
-CREATE PROCEDURE busquedaEnAparatoAuditivo
-(IN variable VARCHAR(60))
-BEGIN 
-	SELECT a.tipo, m.nombre FROM AparatoAuditivo a, Marca m
-	WHERE a.tipo LIKE variable AND a.ID_marca = m.ID_marca;
+CREATE PROCEDURE busquedaEnColonia
+(IN variable VARCHAR(80))
+BEGIN
+	SELECT c.nombre as Colonia, m.nombre as Municipio, e.nombre as Estado 
+    FROM Colonia c, Municipio m, Estado e
+	WHERE c.nombre LIKE variable
+	AND c.ID_municipio = m.ID_municipio AND m.ID_estado = e.ID_estado;
 END //
 DELIMITER ;
 
--- Busqueda SUELDO
-DELIMITER //
-CREATE PROCEDURE busquedaEnSueldo
-(IN variable VARCHAR(20))
-BEGIN
-	SELECT minimo, maximo FROM Sueldo
-	WHERE minimo LIKE variable OR maximo LIKE variable;
-END //
-DELIMITER ;
-
--- Busqueda MARCA
-DELIMITER // 
-CREATE PROCEDURE busquedaEnMarca
-(IN variable VARCHAR(40))
-BEGIN
-	SELECT nombre FROM Marca WHERE nombre LIKE variable;
-END //
-DELIMITER ;
 
 -- Busqueda DELEGACION
 DELIMITER //
 CREATE PROCEDURE busquedaEnDelegacion
 (IN variable VARCHAR(80))
 BEGIN
-	SELECT d.nombre, m.nombre FROM Delegacion d, Municipio m
-	WHERE d.nombre LIKE variable AND m.ID_municipio = d.ID_municipio;
+	SELECT d.nombre as Delegacion, m.nombre as Municipio, e.nombre as Estado 
+	FROM Delegacion d, Municipio m, Estado e
+	WHERE d.nombre LIKE variable 
+	AND m.ID_municipio = d.ID_municipio AND e.ID_estado = m.ID_estado;
 END //
 DELIMITER ;	
+
+-- Busqueda MUNICIPIO
+DELIMITER //
+CREATE PROCEDURE busquedaEnMunicipio
+(IN variable VARCHAR(80))
+BEGIN
+	SELECT m.nombre as Municipio, e.nombre as Estado
+	FROM Municipio m, Estado e
+	WHERE m.nombre LIKE variable
+	AND m.ID_estado = e.ID_estado;
+END //
+DELIMITER ;	
+
+
+-- Busqueda ESTADO
+DELIMITER //
+CREATE PROCEDURE busquedaEnEstado
+(IN variable VARCHAR (80))
+BEGIN 
+	SELECT nombre as Estado FROM Estado 
+	WHERE nombre LIKE variable;
+END //
+DELIMITER ;	
+
+
+-- Busqueda APARATOAUDITIVO
+DELIMITER //
+CREATE PROCEDURE busquedaEnAparatoAuditivo
+(IN variable VARCHAR(60))
+BEGIN 
+	SELECT a.tipo as Tipo, m.nombre as Marca FROM AparatoAuditivo a, Marca m
+	WHERE a.tipo LIKE variable AND a.ID_marca = m.ID_marca;
+END //
+DELIMITER ;
+
+
+-- Busqueda SUELDO
+DELIMITER //
+CREATE PROCEDURE busquedaEnSueldo
+(IN variable VARCHAR(20))
+BEGIN
+	SELECT minimo as Minimo, maximo as Maximo FROM Sueldo
+	WHERE minimo LIKE variable OR maximo LIKE variable;
+END //
+DELIMITER ;
+
+
+-- Busqueda MARCA
+DELIMITER // 
+CREATE PROCEDURE busquedaEnMarca
+(IN variable VARCHAR(40))
+BEGIN
+	SELECT nombre as Marca FROM Marca
+	WHERE nombre LIKE variable;
+END //
+DELIMITER ;
+
 
 -- Busqueda CENSO
 DELIMITER //
 CREATE PROCEDURE busquedaEnCenso
 (IN variable NUMERIC(4))
 BEGIN
-	SELECT ano FROM Censo WHERE ano LIKE variable;
+	SELECT ano as Año FROM Censo 
+	WHERE ano LIKE variable;
 END //
 DELIMITER ;
+
 
 -- Busqueda CAUSA
 DELIMITER //
 CREATE PROCEDURE busquedaEnCausa
 (IN variable VARCHAR(50))
 BEGIN
-	SELECT causa FROM Causa WHERE causa LIKE variable;
+	SELECT causa as Causa
+	FROM Causa 
+	WHERE causa LIKE variable;
 END //
 DELIMITER ;
+
+-- Busqueda AREA TRABAJO
+DELIMITER //
+CREATE PROCEDURE busquedaEnAreaTrabajo
+(IN variable VARCHAR(60))
+BEGIN
+	SELECT nombre as AreaTrabajo 
+	FROM AreaTrabajo
+	WHERE nombre LIKE variable;
+END //
+DELIMITER ;	
+
+-- Busqueda USUARIO
+DELIMITER //
+CREATE PROCEDURE busquedaEnUsuario
+(IN variable VARCHAR(30))
+BEGIN
+	SELECT login as Login 
+	FROM Usuario 
+	WHERE login LIKE variable;
+END //
+DELIMITER ;	
 -- ****************************************************************************************************************8
 -- -------------------------------PENDIENTES : Persona - InstitucionEducativa
 

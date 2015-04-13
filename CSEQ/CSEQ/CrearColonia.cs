@@ -31,6 +31,17 @@ namespace CSEQ
         private void CrearColonia_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado;");
+            int id_estado = 22;
+            ID_estado.SelectedIndex = id_estado - 1;
+            Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
+
+
+            if (ID_municipio.SelectedItem != null)
+            {
+                int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
+                String inicio = "SELECT distinct d.ID_delegacion,d.nombre FROM Municipio m, Delegacion d, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio AND d.ID_delegacion = c.ID_Delegacion;";
+                Util.llenarComboBox(ID_delegacion, inicio);
+            }
 
         }
         /*--------------------------------------------------------------------------------
@@ -53,7 +64,7 @@ namespace CSEQ
 
         private void Guardar_Click(object sender, EventArgs e)
         {
-            String cNombre = colonia_txt.Text;
+            String cNombre = nombre_txt.Text;
             int cID_delegacion = Int32.Parse(ID_delegacion.SelectedValue.ToString());
             int cID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
 
@@ -77,8 +88,8 @@ namespace CSEQ
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                String sqlActiveRow = "SELECT * FROM Colonia WHERE ";
-                sqlActiveRow += " nombre= '" + nombre + "';";
+                String sqlActiveRow = "SELECT DISTINCT * FROM Colonia c, Estado e, Delegacion d , Municipio m WHERE ";
+                sqlActiveRow += " c.nombre= '" + nombre + "' AND c.ID_municipio=m.ID_municipio  AND c.ID_delegacion=d.ID_delegacion AND m.ID_estado=e.ID_estado;";
                 Util.showData(this, sqlActiveRow);
             }
         }

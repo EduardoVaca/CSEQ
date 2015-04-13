@@ -364,8 +364,7 @@ DROP TABLE IF EXISTS Hijo;
 CREATE TABLE Hijo
 (
 	ID_hijo INT auto_increment not null not null,
-	nombre varchar(80) not null,	
-	sexo_masculino boolean not null,
+	nombre varchar(80) not null,		
 	fecha_nacimiento DATETIME not null,
 	sordo boolean not null,
 	CURP char (18) not null,
@@ -389,7 +388,8 @@ CREATE TABLE TienePerdidaAuditiva
 	CURP char(18) not null,
 	ID_perdidaAuditiva INT not null,
 	prelinguistica boolean not null,
-	CONSTRAINT llaveTienePerdidaAuditiva PRIMARY KEY (CURP, ID_perdidaAuditiva)
+	ID_censo INT not null,
+	CONSTRAINT llaveTienePerdidaAuditiva PRIMARY KEY (CURP, ID_perdidaAuditiva, ID_censo)
 );
 
 -- Creacion tabla: Causa
@@ -405,9 +405,9 @@ CREATE TABLE Causa
 DROP TABLE IF EXISTS Causado;
 CREATE TABLE Causado
 (
-	ID_perdidaAuditiva INT not null,
-	ID_causa INT not null,
 	CURP char(18) not null,
+	ID_perdidaAuditiva INT not null,
+	ID_causa INT not null,	
 	ID_censo INT not null,
 	CONSTRAINT llaveCausado PRIMARY KEY (ID_perdidaAuditiva, ID_causa, CURP, ID_censo)
 );

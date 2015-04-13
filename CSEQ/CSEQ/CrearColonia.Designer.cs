@@ -33,8 +33,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Atras = new System.Windows.Forms.PictureBox();
             this.Col = new System.Windows.Forms.Label();
-            this.colonia_txt = new System.Windows.Forms.TextBox();
-            this.Nombre = new System.Windows.Forms.Label();
+            this.nombre_txt = new System.Windows.Forms.TextBox();
+            this.Nombre_label = new System.Windows.Forms.Label();
             this.Guardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -105,25 +105,25 @@
             this.Col.TabIndex = 14;
             this.Col.Text = "Colonia";
             // 
-            // colonia_txt
+            // nombre_txt
             // 
-            this.colonia_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.colonia_txt.Location = new System.Drawing.Point(115, 134);
-            this.colonia_txt.Name = "colonia_txt";
-            this.colonia_txt.Size = new System.Drawing.Size(266, 27);
-            this.colonia_txt.TabIndex = 15;
+            this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.nombre_txt.Location = new System.Drawing.Point(115, 134);
+            this.nombre_txt.Name = "nombre_txt";
+            this.nombre_txt.Size = new System.Drawing.Size(266, 27);
+            this.nombre_txt.TabIndex = 15;
             // 
-            // Nombre
+            // Nombre_label
             // 
-            this.Nombre.AutoSize = true;
-            this.Nombre.Font = new System.Drawing.Font("Candara", 14F);
-            this.Nombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.Nombre.Location = new System.Drawing.Point(11, 134);
-            this.Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(78, 23);
-            this.Nombre.TabIndex = 16;
-            this.Nombre.Text = "Nombre";
+            this.Nombre_label.AutoSize = true;
+            this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.Nombre_label.ForeColor = System.Drawing.SystemColors.Control;
+            this.Nombre_label.Location = new System.Drawing.Point(11, 134);
+            this.Nombre_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Nombre_label.Name = "Nombre_label";
+            this.Nombre_label.Size = new System.Drawing.Size(78, 23);
+            this.Nombre_label.TabIndex = 16;
+            this.Nombre_label.Text = "Nombre";
             // 
             // Guardar
             // 
@@ -331,8 +331,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Guardar);
-            this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.colonia_txt);
+            this.Controls.Add(this.Nombre_label);
+            this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.Col);
             this.Controls.Add(this.Atras);
             this.Controls.Add(this.label4);
@@ -360,8 +360,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox Atras;
         private System.Windows.Forms.Label Col;
-        private System.Windows.Forms.TextBox colonia_txt;
-        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.TextBox nombre_txt;
+        private System.Windows.Forms.Label Nombre_label;
         private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
