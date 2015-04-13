@@ -80,6 +80,31 @@ namespace CSEQ
             String busqueda = "%" + busqueda_txt.Text + "%";
             Util.fillGrid(busqueda_grid, "busquedaEnPersona", busqueda);
         }
+
+        private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            String nombre;
+            String CURP;
+            if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                CURP = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+                String sqlActiveRow = "SELECT *, date_format(p.fecha_nacimiento,'%d/%m/%Y') as fecha_nacimiento FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es, " +
+	                    "TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em, "+
+	                    "TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA  "+
+	                    "WHERE (p.nombre='"+ nombre +"')"+ "AND p.CURP='"+ CURP +"'"+
+	                    "AND p.CURP = pC.CURP AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP AND p.CURP = es.CURP  "+
+	                    "AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP  "+
+	                    "AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP  "+
+	                    "AND p.CURP = pAA.CURP";
+                /*
+                String sqlActiveRow = "SELECT * FROM InstitucionEducativa WHERE ";
+                sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" + correo + "';";
+                */
+                Util.showData(this, sqlActiveRow);
+            }
+        }
         /*-------------------------------------------------------------------------------------*/
         
 

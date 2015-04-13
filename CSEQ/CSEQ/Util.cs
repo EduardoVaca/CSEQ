@@ -35,7 +35,7 @@ namespace CSEQ
             String strConexion = "Server=" + servidor + ";Database=" + nombreBaseDatos +
                                 ";Uid=" + usuario + ";Pwd=" + password + ";";
 
-            conexion.ConnectionString = strConexion;
+            conexion.ConnectionString = strConexion + "Allow Zero Datetime=True";
         }
 
         /*
@@ -297,6 +297,12 @@ namespace CSEQ
                     else
                         nombreTemporal = ctrl.Name;
 
+                    if (ctrl is TabControl || ctrl is TabPage)
+                    {
+                        showDataTabs(table, ctrl);
+                    }
+
+
                     if (table.Columns.Contains(nombreTemporal))
                     {
                         if (ctrl is TextBox || ctrl is MaskedTextBox)
@@ -317,6 +323,49 @@ namespace CSEQ
 
                             }
                     }
+                }
+            }
+        }
+
+        public static void showDataTabs(DataTable table,Control form)
+        {
+            foreach (Control ctrl in form.Controls)
+            {
+                String nombreTemporal;
+                // Si existe un campo asociado al nombre del control
+                if (ctrl is TextBox || ctrl is MaskedTextBox)
+                    nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 4);
+                else if (ctrl is CheckBox)
+                    nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 6);
+                else
+                    nombreTemporal = ctrl.Name;
+
+                if (ctrl is TabPage)
+                {
+                    showDataTabs(table, ctrl);
+
+                }
+
+                if (table.Columns.Contains(nombreTemporal))
+                {
+                    if (ctrl is TextBox || ctrl is MaskedTextBox)
+                        ctrl.Text = table.Rows[0][nombreTemporal].ToString();
+                    else if (ctrl is ComboBox || ctrl is ListBox)
+                        ((ComboBox)ctrl).SelectedValue = table.Rows[0][nombreTemporal].ToString();
+                    else if (ctrl is DateTimePicker)
+                        ((DateTimePicker)ctrl).Value = (DateTime)(table.Rows[0][nombreTemporal]);
+                    else if (ctrl is CheckBox)
+                        ((CheckBox)ctrl).Checked = (bool)(table.Rows[0][nombreTemporal]);
+
+                    else
+                        try
+                        {
+                            ctrl.Text = table.Rows[0][nombreTemporal].ToString();
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
                 }
             }
         }
