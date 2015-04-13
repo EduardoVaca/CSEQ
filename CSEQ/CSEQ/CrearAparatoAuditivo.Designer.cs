@@ -261,13 +261,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1644, 1017);
-||||||| merged common ancestors
-            this.ClientSize = new System.Drawing.Size(822, 529);
-=======
             this.ClientSize = new System.Drawing.Size(800, 530);
->>>>>>> origin/Chess-grids
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
