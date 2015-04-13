@@ -80,7 +80,7 @@
             this.CURP_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Estudios_tab = new System.Windows.Forms.TabPage();
-            this.anoEstudio_txt = new System.Windows.Forms.MaskedTextBox();
+            this.ano_txt = new System.Windows.Forms.MaskedTextBox();
             this.label68 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
@@ -243,9 +243,9 @@
             this.DatosPersonales_tab.Controls.Add(this.label17);
             this.DatosPersonales_tab.Controls.Add(this.ID_censo);
             this.DatosPersonales_tab.Controls.Add(this.label16);
-            this.DatosPersonales_tab.Controls.Add(this.comunidadIndigena_check);
+            this.DatosPersonales_tab.Controls.Add(this.comunidad_indigena_check);
             this.DatosPersonales_tab.Controls.Add(this.label15);
-            this.DatosPersonales_tab.Controls.Add(this.ife_check);
+            this.DatosPersonales_tab.Controls.Add(this.credencialIFE_check);
             this.DatosPersonales_tab.Controls.Add(this.label14);
             this.DatosPersonales_tab.Controls.Add(this.mexicano_check);
             this.DatosPersonales_tab.Controls.Add(this.ID_delegacion);
@@ -781,7 +781,7 @@
             // 
             this.Estudios_tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.Estudios_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Estudios_tab.Controls.Add(this.anoEstudio_txt);
+            this.Estudios_tab.Controls.Add(this.ano_txt);
             this.Estudios_tab.Controls.Add(this.label68);
             this.Estudios_tab.Controls.Add(this.label67);
             this.Estudios_tab.Controls.Add(this.label66);
@@ -1017,7 +1017,7 @@
             this.DatosLaborales_tab.Controls.Add(this.label80);
             this.DatosLaborales_tab.Controls.Add(this.calleEmpleo_txt);
             this.DatosLaborales_tab.Controls.Add(this.label78);
-            this.DatosLaborales_tab.Controls.Add(this.interpretacionLSM_check);
+            this.DatosLaborales_tab.Controls.Add(this.interpretacion_LSM_check);
             this.DatosLaborales_tab.Controls.Add(this.label77);
             this.DatosLaborales_tab.Controls.Add(this.telefonoEmpleo_txt);
             this.DatosLaborales_tab.Controls.Add(this.label76);
@@ -1033,9 +1033,9 @@
             this.DatosLaborales_tab.Controls.Add(this.label27);
             this.DatosLaborales_tab.Controls.Add(this.ID_sueldo);
             this.DatosLaborales_tab.Controls.Add(this.label26);
-            this.DatosLaborales_tab.Controls.Add(this.compania_txt);
+            this.DatosLaborales_tab.Controls.Add(this.nombre_compania_txt);
             this.DatosLaborales_tab.Controls.Add(this.label25);
-            this.DatosLaborales_tab.Controls.Add(this.descripcionEmpleo_txt);
+            this.DatosLaborales_tab.Controls.Add(this.descripcion_txt);
             this.DatosLaborales_tab.Controls.Add(this.label24);
             this.DatosLaborales_tab.Location = new System.Drawing.Point(4, 22);
             this.DatosLaborales_tab.Margin = new System.Windows.Forms.Padding(2);
@@ -1327,7 +1327,7 @@
             this.PerdidaAuditiva_tab.Controls.Add(this.implante_coclear_check);
             this.PerdidaAuditiva_tab.Controls.Add(this.label52);
             this.PerdidaAuditiva_tab.Controls.Add(this.label51);
-            this.PerdidaAuditiva_tab.Controls.Add(this.examen_audiometria);
+            this.PerdidaAuditiva_tab.Controls.Add(this.examen_audiometria_check);
             this.PerdidaAuditiva_tab.Controls.Add(this.label50);
             this.PerdidaAuditiva_tab.Controls.Add(this.label43);
             this.PerdidaAuditiva_tab.Controls.Add(this.modelo_txt);

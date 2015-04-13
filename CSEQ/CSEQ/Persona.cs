@@ -259,7 +259,7 @@ namespace CSEQ
 
         private bool datosLaboralesLlenos()
         {
-            if (!String.IsNullOrEmpty(descripcionEmpleo_txt.Text))
+            if (!String.IsNullOrEmpty(descripcion_txt.Text))
             {
                 return true;
             }
