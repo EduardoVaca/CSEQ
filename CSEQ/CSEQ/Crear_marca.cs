@@ -74,5 +74,20 @@ namespace CSEQ
                 }
             }
         }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Marca: " + nombre_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarMarca", nombre_selected, nombreNuevo))
+                {
+                    MessageBox.Show("La marca se modifico con exito");
+                }
+            }
+        }
     }
 }

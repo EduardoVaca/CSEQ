@@ -57,22 +57,39 @@
             this.labelAreaTrabajo.AutoSize = true;
             this.labelAreaTrabajo.Font = new System.Drawing.Font("Candara", 18F);
             this.labelAreaTrabajo.ForeColor = System.Drawing.Color.White;
-            this.labelAreaTrabajo.Location = new System.Drawing.Point(604, 63);
-            this.labelAreaTrabajo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAreaTrabajo.Location = new System.Drawing.Point(302, 33);
+            this.labelAreaTrabajo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAreaTrabajo.Name = "labelAreaTrabajo";
-            this.labelAreaTrabajo.Size = new System.Drawing.Size(338, 59);
+            this.labelAreaTrabajo.Size = new System.Drawing.Size(169, 29);
             this.labelAreaTrabajo.TabIndex = 23;
             this.labelAreaTrabajo.Text = "Área de trabajo";
             // 
             // nombreArea_txt
             // 
             this.nombreArea_txt.Font = new System.Drawing.Font("Candara", 14F);
+<<<<<<< HEAD
             this.nombreArea_txt.Location = new System.Drawing.Point(237, 390);
             this.nombreArea_txt.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.nombreArea_txt.MaximumSize = new System.Drawing.Size(1588, 40);
             this.nombreArea_txt.MinimumSize = new System.Drawing.Size(388, 4);
+||||||| merged common ancestors
+            this.nombreArea_txt.Location = new System.Drawing.Point(88, 471);
+            this.nombreArea_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nombreArea_txt.MaximumSize = new System.Drawing.Size(796, 40);
+            this.nombreArea_txt.MinimumSize = new System.Drawing.Size(196, 4);
+=======
+            this.nombreArea_txt.Location = new System.Drawing.Point(44, 245);
+            this.nombreArea_txt.MaximumSize = new System.Drawing.Size(400, 40);
+            this.nombreArea_txt.MinimumSize = new System.Drawing.Size(100, 4);
+>>>>>>> origin/Chess-modifcar
             this.nombreArea_txt.Name = "nombreArea_txt";
+<<<<<<< HEAD
             this.nombreArea_txt.Size = new System.Drawing.Size(608, 40);
+||||||| merged common ancestors
+            this.nombreArea_txt.Size = new System.Drawing.Size(608, 53);
+=======
+            this.nombreArea_txt.Size = new System.Drawing.Size(306, 30);
+>>>>>>> origin/Chess-modifcar
             this.nombreArea_txt.TabIndex = 24;
             // 
             // labelNombre
@@ -80,10 +97,10 @@
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Candara", 14F);
             this.labelNombre.ForeColor = System.Drawing.Color.White;
-            this.labelNombre.Location = new System.Drawing.Point(80, 388);
-            this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNombre.Location = new System.Drawing.Point(40, 202);
+            this.labelNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(162, 46);
+            this.labelNombre.Size = new System.Drawing.Size(83, 23);
             this.labelNombre.TabIndex = 25;
             this.labelNombre.Text = "Nombre:";
             // 
@@ -92,10 +109,17 @@
             this.guardar_btn.AutoSize = true;
             this.guardar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.guardar_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+<<<<<<< HEAD
             this.guardar_btn.Location = new System.Drawing.Point(130, 643);
             this.guardar_btn.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+||||||| merged common ancestors
+            this.guardar_btn.Location = new System.Drawing.Point(44, 762);
+            this.guardar_btn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+=======
+            this.guardar_btn.Location = new System.Drawing.Point(22, 396);
+>>>>>>> origin/Chess-modifcar
             this.guardar_btn.Name = "guardar_btn";
-            this.guardar_btn.Size = new System.Drawing.Size(160, 62);
+            this.guardar_btn.Size = new System.Drawing.Size(80, 32);
             this.guardar_btn.TabIndex = 29;
             this.guardar_btn.Text = "Guardar";
             this.guardar_btn.UseVisualStyleBackColor = true;
@@ -104,10 +128,18 @@
             // close_picture
             // 
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
+<<<<<<< HEAD
             this.close_picture.Location = new System.Drawing.Point(1544, 13);
             this.close_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+||||||| merged common ancestors
+            this.close_picture.Location = new System.Drawing.Point(766, 7);
+            this.close_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+=======
+            this.close_picture.Location = new System.Drawing.Point(383, 4);
+            this.close_picture.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+>>>>>>> origin/Chess-modifcar
             this.close_picture.Name = "close_picture";
-            this.close_picture.Size = new System.Drawing.Size(60, 56);
+            this.close_picture.Size = new System.Drawing.Size(30, 29);
             this.close_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.close_picture.TabIndex = 30;
             this.close_picture.TabStop = false;
@@ -116,10 +148,17 @@
             // atras_picture
             // 
             this.atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("atras_picture.Image")));
+<<<<<<< HEAD
             this.atras_picture.Location = new System.Drawing.Point(8, 1025);
             this.atras_picture.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+||||||| merged common ancestors
+            this.atras_picture.Location = new System.Drawing.Point(12, 937);
+            this.atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+=======
+            this.atras_picture.Location = new System.Drawing.Point(6, 487);
+>>>>>>> origin/Chess-modifcar
             this.atras_picture.Name = "atras_picture";
-            this.atras_picture.Size = new System.Drawing.Size(60, 56);
+            this.atras_picture.Size = new System.Drawing.Size(30, 29);
             this.atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.atras_picture.TabIndex = 31;
             this.atras_picture.TabStop = false;
@@ -130,10 +169,18 @@
             this.rompiendoParadigmas_label.AutoSize = true;
             this.rompiendoParadigmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.rompiendoParadigmas_label.ForeColor = System.Drawing.SystemColors.Control;
+<<<<<<< HEAD
             this.rompiendoParadigmas_label.Location = new System.Drawing.Point(1245, 1025);
             this.rompiendoParadigmas_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+||||||| merged common ancestors
+            this.rompiendoParadigmas_label.Location = new System.Drawing.Point(1226, 962);
+            this.rompiendoParadigmas_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.rompiendoParadigmas_label.Location = new System.Drawing.Point(613, 500);
+            this.rompiendoParadigmas_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+>>>>>>> origin/Chess-modifcar
             this.rompiendoParadigmas_label.Name = "rompiendoParadigmas_label";
-            this.rompiendoParadigmas_label.Size = new System.Drawing.Size(342, 29);
+            this.rompiendoParadigmas_label.Size = new System.Drawing.Size(183, 15);
             this.rompiendoParadigmas_label.TabIndex = 32;
             this.rompiendoParadigmas_label.Text = "ROMPIENDO PARADIGMAS";
             // 
@@ -141,10 +188,18 @@
             // 
             this.eliminar_btn.Enabled = false;
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
+<<<<<<< HEAD
             this.eliminar_btn.Location = new System.Drawing.Point(644, 643);
             this.eliminar_btn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+||||||| merged common ancestors
+            this.eliminar_btn.Location = new System.Drawing.Point(612, 762);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.eliminar_btn.Location = new System.Drawing.Point(306, 396);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> origin/Chess-modifcar
             this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(160, 62);
+            this.eliminar_btn.Size = new System.Drawing.Size(80, 32);
             this.eliminar_btn.TabIndex = 70;
             this.eliminar_btn.Text = "Eliminar";
             this.eliminar_btn.UseVisualStyleBackColor = true;
@@ -154,13 +209,22 @@
             // 
             this.modificar_btn.Enabled = false;
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
+<<<<<<< HEAD
             this.modificar_btn.Location = new System.Drawing.Point(394, 643);
             this.modificar_btn.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+||||||| merged common ancestors
+            this.modificar_btn.Location = new System.Drawing.Point(328, 762);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.modificar_btn.Location = new System.Drawing.Point(164, 396);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> origin/Chess-modifcar
             this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(160, 62);
+            this.modificar_btn.Size = new System.Drawing.Size(80, 32);
             this.modificar_btn.TabIndex = 69;
             this.modificar_btn.Text = "Modificar";
             this.modificar_btn.UseVisualStyleBackColor = true;
+            this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
             // groupBox1
             // 
@@ -169,11 +233,25 @@
             this.groupBox1.Controls.Add(this.busqueda_txt);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.groupBox1.Location = new System.Drawing.Point(867, 145);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+||||||| merged common ancestors
+            this.groupBox1.Location = new System.Drawing.Point(832, 181);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+=======
+            this.groupBox1.Location = new System.Drawing.Point(416, 94);
+>>>>>>> origin/Chess-modifcar
             this.groupBox1.Name = "groupBox1";
+<<<<<<< HEAD
             this.groupBox1.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.groupBox1.Size = new System.Drawing.Size(726, 705);
+||||||| merged common ancestors
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(708, 723);
+=======
+            this.groupBox1.Size = new System.Drawing.Size(354, 376);
+>>>>>>> origin/Chess-modifcar
             this.groupBox1.TabIndex = 71;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda de registros";
@@ -192,6 +270,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F);
@@ -203,7 +282,14 @@
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(12, 208);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+||||||| merged common ancestors
+            this.busqueda_grid.Location = new System.Drawing.Point(12, 208);
+            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+=======
+            this.busqueda_grid.Location = new System.Drawing.Point(6, 108);
+>>>>>>> origin/Chess-modifcar
             this.busqueda_grid.Name = "busqueda_grid";
+<<<<<<< HEAD
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 9.75F);
@@ -213,16 +299,28 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.busqueda_grid.Size = new System.Drawing.Size(684, 504);
+||||||| merged common ancestors
+            this.busqueda_grid.Size = new System.Drawing.Size(684, 504);
+=======
+            this.busqueda_grid.Size = new System.Drawing.Size(342, 262);
+>>>>>>> origin/Chess-modifcar
             this.busqueda_grid.TabIndex = 56;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
             // Buscar
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
+<<<<<<< HEAD
             this.Buscar.Location = new System.Drawing.Point(636, 131);
             this.Buscar.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+||||||| merged common ancestors
+            this.Buscar.Location = new System.Drawing.Point(610, 62);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+=======
+            this.Buscar.Location = new System.Drawing.Point(305, 32);
+>>>>>>> origin/Chess-modifcar
             this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(78, 69);
+            this.Buscar.Size = new System.Drawing.Size(39, 36);
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Buscar.TabIndex = 55;
             this.Buscar.TabStop = false;
@@ -231,22 +329,39 @@
             // busqueda_txt
             // 
             this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
+<<<<<<< HEAD
             this.busqueda_txt.Location = new System.Drawing.Point(24, 144);
             this.busqueda_txt.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(1588, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(388, 4);
+||||||| merged common ancestors
+            this.busqueda_txt.Location = new System.Drawing.Point(12, 75);
+            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
+            this.busqueda_txt.MinimumSize = new System.Drawing.Size(196, 4);
+=======
+            this.busqueda_txt.Location = new System.Drawing.Point(6, 39);
+            this.busqueda_txt.MaximumSize = new System.Drawing.Size(400, 40);
+            this.busqueda_txt.MinimumSize = new System.Drawing.Size(100, 4);
+>>>>>>> origin/Chess-modifcar
             this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(588, 47);
+            this.busqueda_txt.Size = new System.Drawing.Size(296, 27);
             this.busqueda_txt.TabIndex = 8;
             // 
             // crearAreaTrabajo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1600, 1092);
+||||||| merged common ancestors
+            this.ClientSize = new System.Drawing.Size(800, 530);
+=======
+            this.ClientSize = new System.Drawing.Size(818, 538);
+>>>>>>> origin/Chess-modifcar
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
@@ -258,7 +373,12 @@
             this.Controls.Add(this.nombreArea_txt);
             this.Controls.Add(this.labelAreaTrabajo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+||||||| merged common ancestors
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+=======
+>>>>>>> origin/Chess-modifcar
             this.Name = "crearAreaTrabajo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "crearAreaTrabajo";

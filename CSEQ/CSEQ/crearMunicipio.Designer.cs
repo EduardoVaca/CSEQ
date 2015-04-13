@@ -33,9 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ID_estado = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.Label();
-            this.municipio_txt = new System.Windows.Forms.TextBox();
+            this.estado_label = new System.Windows.Forms.Label();
+            this.Nombre_label = new System.Windows.Forms.Label();
+            this.nombre_txt = new System.Windows.Forms.TextBox();
             this.Mun = new System.Windows.Forms.Label();
             this.Atras_picture = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,38 +66,37 @@
             this.ID_estado.Size = new System.Drawing.Size(490, 41);
             this.ID_estado.TabIndex = 28;
             // 
-            // label1
+            // estado_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 14F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 508);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 46);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Estado";
+            this.estado_label.AutoSize = true;
+            this.estado_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.estado_label.ForeColor = System.Drawing.Color.White;
+            this.estado_label.Location = new System.Drawing.Point(30, 264);
+            this.estado_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.estado_label.Name = "estado_label";
+            this.estado_label.Size = new System.Drawing.Size(65, 23);
+            this.estado_label.TabIndex = 27;
+            this.estado_label.Text = "Estado";
             // 
-            // Nombre
+            // Nombre_label
             // 
-            this.Nombre.AutoSize = true;
-            this.Nombre.Font = new System.Drawing.Font("Candara", 14F);
-            this.Nombre.ForeColor = System.Drawing.Color.White;
-            this.Nombre.Location = new System.Drawing.Point(60, 363);
-            this.Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(152, 46);
-            this.Nombre.TabIndex = 26;
-            this.Nombre.Text = "Nombre";
+            this.Nombre_label.AutoSize = true;
+            this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.Nombre_label.ForeColor = System.Drawing.Color.White;
+            this.Nombre_label.Location = new System.Drawing.Point(30, 189);
+            this.Nombre_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Nombre_label.Name = "Nombre_label";
+            this.Nombre_label.Size = new System.Drawing.Size(78, 23);
+            this.Nombre_label.TabIndex = 26;
+            this.Nombre_label.Text = "Nombre";
             // 
-            // municipio_txt
+            // nombre_txt
             // 
-            this.municipio_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.municipio_txt.Location = new System.Drawing.Point(268, 363);
-            this.municipio_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.municipio_txt.Name = "municipio_txt";
-            this.municipio_txt.Size = new System.Drawing.Size(490, 47);
-            this.municipio_txt.TabIndex = 25;
+            this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.nombre_txt.Location = new System.Drawing.Point(134, 189);
+            this.nombre_txt.Name = "nombre_txt";
+            this.nombre_txt.Size = new System.Drawing.Size(247, 27);
+            this.nombre_txt.TabIndex = 25;
             // 
             // Mun
             // 
@@ -284,6 +283,7 @@
             this.modificar_btn.TabIndex = 75;
             this.modificar_btn.Text = "Modificar";
             this.modificar_btn.UseVisualStyleBackColor = true;
+            this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
             // CrearMunicipio
             // 
@@ -299,9 +299,9 @@
             this.Controls.Add(this.label30);
             this.Controls.Add(this.guardar_txt);
             this.Controls.Add(this.ID_estado);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.municipio_txt);
+            this.Controls.Add(this.estado_label);
+            this.Controls.Add(this.Nombre_label);
+            this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.Mun);
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.label4);
@@ -326,9 +326,9 @@
         #endregion
 
         private System.Windows.Forms.ComboBox ID_estado;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.TextBox municipio_txt;
+        private System.Windows.Forms.Label estado_label;
+        private System.Windows.Forms.Label Nombre_label;
+        private System.Windows.Forms.TextBox nombre_txt;
         private System.Windows.Forms.Label Mun;
         private System.Windows.Forms.PictureBox Atras_picture;
         private System.Windows.Forms.Label label4;

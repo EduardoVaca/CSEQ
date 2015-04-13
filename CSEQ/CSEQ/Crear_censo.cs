@@ -94,5 +94,20 @@ namespace CSEQ
                 }
             }
         }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = ano_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Censo: " + censo_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarCenso", censo_selected, nombreNuevo))
+                {
+                    MessageBox.Show("El Censo se modifico con exito");
+                }
+            }
+        }
     }
 }

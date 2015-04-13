@@ -15,6 +15,7 @@ namespace CSEQ
         String nombreMarca_selected;
         String tipo_selected;
         int ID_marca_selected;
+        int mID_marca;
 
         public CrearAparatoAuditivo()
         {
@@ -68,7 +69,9 @@ namespace CSEQ
                 sqlActiveRow += " a.tipo= '" + tipo_selected + "' AND m.nombre= '" + nombreMarca_selected +
                                 "' AND a.ID_marca=m.ID_marca;";
                 Util.showData(this, sqlActiveRow);
+
                 ID_marca_selected = Int32.Parse(ID_marca.SelectedValue.ToString());
+                mID_marca = Int32.Parse(ID_marca.SelectedValue.ToString());
             }
         }
 
@@ -86,6 +89,22 @@ namespace CSEQ
                     MessageBox.Show("El aparato: '" + tipo_selected + "' se elimino con exito!");
                 }
             }           
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = tipo_txt.Text;
+            int IDnuevo=Int32.Parse(ID_marca.SelectedValue.ToString());
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Aparato Auditivo: " + nombreMarca_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarAparatoAuditivo", nombreMarca_selected,mID_marca, nombreNuevo,IDnuevo))
+                {
+                    MessageBox.Show("El Aparato Auditivo se modifico con exito");
+                }
+            }
         }
 
     }

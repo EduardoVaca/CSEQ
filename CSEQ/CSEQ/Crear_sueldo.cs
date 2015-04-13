@@ -78,6 +78,22 @@ namespace CSEQ
             }
         }
 
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String minimoNuevo = minimo_txt.Text;
+            String maximoNuevo = maximo_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar salario minimo: " + minimo_selected + " y salario maximo: "+maximo_selected+"'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarSueldo", minimo_selected, maximo_selected,minimoNuevo,maximoNuevo))
+                {
+                    MessageBox.Show("El salario se modifico con exito");
+                }
+            }
+        }
+
 
     }
 }

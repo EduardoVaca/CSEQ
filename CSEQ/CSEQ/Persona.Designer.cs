@@ -50,9 +50,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.ID_censo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comunidadIndigena_check = new System.Windows.Forms.CheckBox();
+            this.comunidad_indigena_check = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.ife_check = new System.Windows.Forms.CheckBox();
+            this.credencialIFE_check = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.mexicano_check = new System.Windows.Forms.CheckBox();
             this.ID_delegacion = new System.Windows.Forms.ComboBox();
@@ -103,7 +103,7 @@
             this.label80 = new System.Windows.Forms.Label();
             this.calleEmpleo_txt = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
-            this.interpretacionLSM_check = new System.Windows.Forms.CheckBox();
+            this.interpretacion_LSM_check = new System.Windows.Forms.CheckBox();
             this.label77 = new System.Windows.Forms.Label();
             this.telefonoEmpleo_txt = new System.Windows.Forms.MaskedTextBox();
             this.label76 = new System.Windows.Forms.Label();
@@ -119,9 +119,9 @@
             this.label27 = new System.Windows.Forms.Label();
             this.ID_sueldo = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.compania_txt = new System.Windows.Forms.TextBox();
+            this.nombre_compania_txt = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.descripcionEmpleo_txt = new System.Windows.Forms.TextBox();
+            this.descripcion_txt = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.PerdidaAuditiva_tab = new System.Windows.Forms.TabPage();
             this.marca = new System.Windows.Forms.Label();
@@ -142,7 +142,7 @@
             this.implante_coclear_check = new System.Windows.Forms.CheckBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.examen_audiometria = new System.Windows.Forms.CheckBox();
+            this.examen_audiometria_check = new System.Windows.Forms.CheckBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.modelo_txt = new System.Windows.Forms.TextBox();
@@ -445,17 +445,17 @@
             this.label16.TabIndex = 44;
             this.label16.Text = "Censo";
             // 
-            // comunidadIndigena_check
+            // comunidad_indigena_check
             // 
-            this.comunidadIndigena_check.AutoSize = true;
-            this.comunidadIndigena_check.Font = new System.Drawing.Font("Candara", 9F);
-            this.comunidadIndigena_check.Location = new System.Drawing.Point(506, 379);
-            this.comunidadIndigena_check.Margin = new System.Windows.Forms.Padding(2);
-            this.comunidadIndigena_check.Name = "comunidadIndigena_check";
-            this.comunidadIndigena_check.Size = new System.Drawing.Size(35, 18);
-            this.comunidadIndigena_check.TabIndex = 43;
-            this.comunidadIndigena_check.Text = "Sí";
-            this.comunidadIndigena_check.UseVisualStyleBackColor = true;
+            this.comunidad_indigena_check.AutoSize = true;
+            this.comunidad_indigena_check.Font = new System.Drawing.Font("Candara", 9F);
+            this.comunidad_indigena_check.Location = new System.Drawing.Point(506, 379);
+            this.comunidad_indigena_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comunidad_indigena_check.Name = "comunidad_indigena_check";
+            this.comunidad_indigena_check.Size = new System.Drawing.Size(35, 18);
+            this.comunidad_indigena_check.TabIndex = 43;
+            this.comunidad_indigena_check.Text = "Sí";
+            this.comunidad_indigena_check.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -469,17 +469,17 @@
             this.label15.TabIndex = 42;
             this.label15.Text = "¿Pertenece a comunidad indígena?";
             // 
-            // ife_check
+            // credencialIFE_check
             // 
-            this.ife_check.AutoSize = true;
-            this.ife_check.Font = new System.Drawing.Font("Candara", 9F);
-            this.ife_check.Location = new System.Drawing.Point(193, 418);
-            this.ife_check.Margin = new System.Windows.Forms.Padding(2);
-            this.ife_check.Name = "ife_check";
-            this.ife_check.Size = new System.Drawing.Size(35, 18);
-            this.ife_check.TabIndex = 41;
-            this.ife_check.Text = "Sí";
-            this.ife_check.UseVisualStyleBackColor = true;
+            this.credencialIFE_check.AutoSize = true;
+            this.credencialIFE_check.Font = new System.Drawing.Font("Candara", 9F);
+            this.credencialIFE_check.Location = new System.Drawing.Point(193, 418);
+            this.credencialIFE_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.credencialIFE_check.Name = "credencialIFE_check";
+            this.credencialIFE_check.Size = new System.Drawing.Size(35, 18);
+            this.credencialIFE_check.TabIndex = 41;
+            this.credencialIFE_check.Text = "Sí";
+            this.credencialIFE_check.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -808,15 +808,15 @@
             this.Estudios_tab.TabIndex = 1;
             this.Estudios_tab.Text = "Estudios";
             // 
-            // anoEstudio_txt
+            // ano_txt
             // 
-            this.anoEstudio_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.anoEstudio_txt.Location = new System.Drawing.Point(554, 27);
-            this.anoEstudio_txt.Margin = new System.Windows.Forms.Padding(4);
-            this.anoEstudio_txt.Mask = "0000";
-            this.anoEstudio_txt.Name = "anoEstudio_txt";
-            this.anoEstudio_txt.Size = new System.Drawing.Size(100, 27);
-            this.anoEstudio_txt.TabIndex = 68;
+            this.ano_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.ano_txt.Location = new System.Drawing.Point(554, 27);
+            this.ano_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ano_txt.Mask = "0000";
+            this.ano_txt.Name = "ano_txt";
+            this.ano_txt.Size = new System.Drawing.Size(100, 27);
+            this.ano_txt.TabIndex = 68;
             // 
             // label68
             // 
@@ -1086,17 +1086,17 @@
             this.label78.TabIndex = 56;
             this.label78.Text = "Calle";
             // 
-            // interpretacionLSM_check
+            // interpretacion_LSM_check
             // 
-            this.interpretacionLSM_check.AutoSize = true;
-            this.interpretacionLSM_check.Font = new System.Drawing.Font("Candara", 9F);
-            this.interpretacionLSM_check.Location = new System.Drawing.Point(260, 420);
-            this.interpretacionLSM_check.Margin = new System.Windows.Forms.Padding(4);
-            this.interpretacionLSM_check.Name = "interpretacionLSM_check";
-            this.interpretacionLSM_check.Size = new System.Drawing.Size(35, 18);
-            this.interpretacionLSM_check.TabIndex = 55;
-            this.interpretacionLSM_check.Text = "Sí";
-            this.interpretacionLSM_check.UseVisualStyleBackColor = true;
+            this.interpretacion_LSM_check.AutoSize = true;
+            this.interpretacion_LSM_check.Font = new System.Drawing.Font("Candara", 9F);
+            this.interpretacion_LSM_check.Location = new System.Drawing.Point(260, 420);
+            this.interpretacion_LSM_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.interpretacion_LSM_check.Name = "interpretacion_LSM_check";
+            this.interpretacion_LSM_check.Size = new System.Drawing.Size(35, 18);
+            this.interpretacion_LSM_check.TabIndex = 55;
+            this.interpretacion_LSM_check.Text = "Sí";
+            this.interpretacion_LSM_check.UseVisualStyleBackColor = true;
             // 
             // label77
             // 
@@ -1264,14 +1264,14 @@
             this.label26.TabIndex = 23;
             this.label26.Text = "Sueldo";
             // 
-            // compania_txt
+            // nombre_compania_txt
             // 
-            this.compania_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.compania_txt.Location = new System.Drawing.Point(110, 73);
-            this.compania_txt.Margin = new System.Windows.Forms.Padding(2);
-            this.compania_txt.Name = "compania_txt";
-            this.compania_txt.Size = new System.Drawing.Size(316, 27);
-            this.compania_txt.TabIndex = 22;
+            this.nombre_compania_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.nombre_compania_txt.Location = new System.Drawing.Point(110, 73);
+            this.nombre_compania_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombre_compania_txt.Name = "nombre_compania_txt";
+            this.nombre_compania_txt.Size = new System.Drawing.Size(316, 27);
+            this.nombre_compania_txt.TabIndex = 22;
             // 
             // label25
             // 
@@ -1285,14 +1285,14 @@
             this.label25.TabIndex = 21;
             this.label25.Text = "Compañía";
             // 
-            // descripcionEmpleo_txt
+            // descripcion_txt
             // 
-            this.descripcionEmpleo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.descripcionEmpleo_txt.Location = new System.Drawing.Point(186, 23);
-            this.descripcionEmpleo_txt.Margin = new System.Windows.Forms.Padding(2);
-            this.descripcionEmpleo_txt.Name = "descripcionEmpleo_txt";
-            this.descripcionEmpleo_txt.Size = new System.Drawing.Size(539, 27);
-            this.descripcionEmpleo_txt.TabIndex = 20;
+            this.descripcion_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.descripcion_txt.Location = new System.Drawing.Point(186, 23);
+            this.descripcion_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descripcion_txt.Name = "descripcion_txt";
+            this.descripcion_txt.Size = new System.Drawing.Size(539, 27);
+            this.descripcion_txt.TabIndex = 20;
             // 
             // label24
             // 
@@ -1565,17 +1565,17 @@
             this.label51.TabIndex = 59;
             this.label51.Text = "*";
             // 
-            // examen_audiometria
+            // examen_audiometria_check
             // 
-            this.examen_audiometria.AutoSize = true;
-            this.examen_audiometria.Font = new System.Drawing.Font("Candara", 9F);
-            this.examen_audiometria.Location = new System.Drawing.Point(321, 210);
-            this.examen_audiometria.Margin = new System.Windows.Forms.Padding(4);
-            this.examen_audiometria.Name = "examen_audiometria";
-            this.examen_audiometria.Size = new System.Drawing.Size(35, 18);
-            this.examen_audiometria.TabIndex = 58;
-            this.examen_audiometria.Text = "Sí";
-            this.examen_audiometria.UseVisualStyleBackColor = true;
+            this.examen_audiometria_check.AutoSize = true;
+            this.examen_audiometria_check.Font = new System.Drawing.Font("Candara", 9F);
+            this.examen_audiometria_check.Location = new System.Drawing.Point(321, 210);
+            this.examen_audiometria_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.examen_audiometria_check.Name = "examen_audiometria_check";
+            this.examen_audiometria_check.Size = new System.Drawing.Size(35, 18);
+            this.examen_audiometria_check.TabIndex = 58;
+            this.examen_audiometria_check.Text = "Sí";
+            this.examen_audiometria_check.UseVisualStyleBackColor = true;
             // 
             // label50
             // 
@@ -2156,9 +2156,9 @@
         private System.Windows.Forms.CheckBox mexicano_check;
         private System.Windows.Forms.ComboBox ID_censo;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox comunidadIndigena_check;
+        private System.Windows.Forms.CheckBox comunidad_indigena_check;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.CheckBox ife_check;
+        private System.Windows.Forms.CheckBox credencialIFE_check;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox ID_estadoCivil;
         private System.Windows.Forms.Label label17;
@@ -2181,9 +2181,9 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox ID_sueldo;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox compania_txt;
+        private System.Windows.Forms.TextBox nombre_compania_txt;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox descripcionEmpleo_txt;
+        private System.Windows.Forms.TextBox descripcion_txt;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox delegacionEmpleo_combo;
         private System.Windows.Forms.Label label33;
@@ -2244,7 +2244,7 @@
         private System.Windows.Forms.CheckBox implante_coclear_check;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.CheckBox examen_audiometria;
+        private System.Windows.Forms.CheckBox examen_audiometria_check;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Button guardar_btn;
@@ -2259,7 +2259,7 @@
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.TextBox calleEmpleo_txt;
         private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.CheckBox interpretacionLSM_check;
+        private System.Windows.Forms.CheckBox interpretacion_LSM_check;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.MaskedTextBox telefonoEmpleo_txt;
         private System.Windows.Forms.Label label76;
@@ -2269,7 +2269,7 @@
         private System.Windows.Forms.Label marca;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Button registraHijo_button;
-        private System.Windows.Forms.MaskedTextBox anoEstudio_txt;
+        private System.Windows.Forms.MaskedTextBox ano_txt;
         private System.Windows.Forms.TextBox correoEmpleo_txt;
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.Label label81;

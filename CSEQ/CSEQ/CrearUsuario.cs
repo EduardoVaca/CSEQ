@@ -13,6 +13,8 @@ namespace CSEQ
     public partial class CrearUsuario : Form
     {
         String nombre_selected;
+        String nombre;
+        String contrasena;
 
         public CrearUsuario()
         {
@@ -52,9 +54,10 @@ namespace CSEQ
             {
                 modificar_btn.Enabled = true; //Activacion de botones
                 eliminar_btn.Enabled = true;
-                nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                String sqlActiveRow = "SELECT * FROM Municipio WHERE ";
-                sqlActiveRow += " nombre= '" + nombre_selected + "';";
+                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                contrasena = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                String sqlActiveRow = "SELECT * FROM Usuario WHERE ";
+                sqlActiveRow += " nombre= '" + nombre + "';";
                 Util.showData(this, sqlActiveRow);
             }
         }
@@ -69,6 +72,22 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarUsuario", nombre_selected))
                 {
                     MessageBox.Show("Se elimino usuario con exito!");
+                }
+            }
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            String nuevoPass = password_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Usuario: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarAreaTrabajo", nombre,contrasena , nombreNuevo,nuevoPass))
+                {
+                    MessageBox.Show("El area de trabajo se modifico con exito");
                 }
             }
         }

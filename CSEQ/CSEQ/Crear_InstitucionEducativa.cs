@@ -141,8 +141,10 @@ namespace CSEQ
                 }
             }
         }
-       
 
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

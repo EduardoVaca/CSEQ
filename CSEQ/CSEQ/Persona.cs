@@ -48,6 +48,7 @@ namespace CSEQ
             //Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
             Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT('$',minimo, ' a ','$',maximo) FROM Sueldo");
             Util.llenarComboBox(estadoEmpleo_combo, "SELECT ID_estado, nombre FROM Estado");
+            masculino_check.Checked = true;
         }
 
         /*--------------------------------------------------------------------------------
@@ -142,30 +143,30 @@ namespace CSEQ
             String telefonoP = telefono_txt.Text;
             String correoP = correo_txt.Text;
             String calleP = calle_txt.Text;
-            Boolean examenP = examen_audiometria.Checked;
+            Boolean examenP = examen_audiometria_check.Checked;
             Boolean implanteP = implante_coclear_check.Checked;
-            Boolean comunidadIndP = comunidadIndigena_check.Checked;
+            Boolean comunidadIndP = comunidad_indigena_check.Checked;
             Boolean alergiaP = alergia_check.Checked;
             Boolean enfermedadP = enfermedad_check.Checked;
             Boolean mexicanoP = mexicano_check.Checked;
-            Boolean ifeP = ife_check.Checked;
+            Boolean ifeP = credencialIFE_check.Checked;
             int ID_periodoP = Int32.Parse(ID_periodo.SelectedValue.ToString());
             int ID_censoP = Int32.Parse(ID_censo.SelectedValue.ToString());
             int ID_coloniaP = Int32.Parse(ID_colonia.SelectedValue.ToString());
             int ID_estadoCivilP = Int32.Parse(ID_estadoCivil.SelectedValue.ToString());
             int ID_nivelEducativoP = Int32.Parse(ID_nivelEducativo.SelectedValue.ToString());
             int ID_institucionEducativaP = Int32.Parse(ID_institucionEducativa.SelectedValue.ToString());
-            int anoEstudioP =  Int32.Parse(anoEstudio_txt.Text);
+            int anoEstudioP =  Int32.Parse(ano_txt.Text);
             int ID_lenguaDominanteP = Int32.Parse(ID_lenguaDominante.SelectedValue.ToString());
             int ID_nivelEspanolP = Int32.Parse(ID_nivelEspanol.SelectedValue.ToString());
             int ID_nivelInglesP = Int32.Parse(ID_nivelIngles.SelectedValue.ToString());
             int ID_nivelLSMP = Int32.Parse(ID_nivelLSM.SelectedValue.ToString());
-            String descripcionEmpleoP = descripcionEmpleo_txt.Text;
-            String nombreCompanyP = compania_txt.Text;
+            String descripcionEmpleoP = descripcion_txt.Text;
+            String nombreCompanyP = nombre_compania_txt.Text;
             String correoEmpleoP = correoEmpleo_txt.Text;
             String telefonoEmpleoP = telefonoEmpleo_txt.Text;
             String calleEmpleoP = calleEmpleo_txt.Text;
-            Boolean interpretacionLSMP = interpretacionLSM_check.Checked;
+            Boolean interpretacionLSMP = interpretacion_LSM_check.Checked;
             int ID_areaTrabajoP = Int32.Parse(ID_areaTrabajo.SelectedValue.ToString());
             int ID_sueldoP = Int32.Parse(ID_sueldo.SelectedValue.ToString());
             int ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());
@@ -204,12 +205,26 @@ namespace CSEQ
 
         private void masculino_check_CheckedChanged(object sender, EventArgs e)
         {
-            femenino_check.Checked = false;
+            if (masculino_check.Checked)
+            {
+                femenino_check.Checked = false;
+                masculino_check.Checked = true;
+            }
+            
         }
 
         private void femenino_check_CheckedChanged(object sender, EventArgs e)
         {
-            masculino_check.Checked = false;
+            if (femenino_check.Checked)
+            {
+                femenino_check.Checked = true;
+                masculino_check.Checked = false;
+            }
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Persona_tabControl_Selecting(object sender, TabControlCancelEventArgs e)

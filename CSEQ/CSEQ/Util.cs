@@ -336,7 +336,15 @@ namespace CSEQ
                 if (ctrl is TextBox || ctrl is MaskedTextBox)
                     nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 4);
                 else if (ctrl is CheckBox)
+                {
                     nombreTemporal = ctrl.Name.Remove(ctrl.Name.Length - 6);
+                       
+                    if (ctrl.Name=="masculino_check" || ctrl.Name=="femenino_check")
+                    {
+                        nombreTemporal = "sexo_masculino";
+                    }
+
+                }
                 else
                     nombreTemporal = ctrl.Name;
 
@@ -355,8 +363,17 @@ namespace CSEQ
                     else if (ctrl is DateTimePicker)
                         ((DateTimePicker)ctrl).Value = (DateTime)(table.Rows[0][nombreTemporal]);
                     else if (ctrl is CheckBox)
-                        ((CheckBox)ctrl).Checked = (bool)(table.Rows[0][nombreTemporal]);
-
+                    {
+                        if (nombreTemporal == "sexo_masculino")
+                        {
+                            if (ctrl.Name=="masculino_check")
+                                ((CheckBox)ctrl).Checked = (bool)(table.Rows[0][nombreTemporal]);
+                            else
+                                ((CheckBox)ctrl).Checked = !(bool)(table.Rows[0][nombreTemporal]);
+                        }
+                        else
+                            ((CheckBox)ctrl).Checked = (bool)(table.Rows[0][nombreTemporal]);
+                    }
                     else
                         try
                         {

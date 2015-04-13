@@ -73,5 +73,20 @@ namespace CSEQ
                 }
             }
         }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombreArea_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Area de trabajo: " + nombre_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarAreaTrabajo", nombre_selected, nombreNuevo))
+                {
+                    MessageBox.Show("El area de trabajo se modifico con exito");
+                }
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace CSEQ
     public partial class CrearEstado : Form
     {
         String nombre_selected;
+        String nombre;
 
         public CrearEstado()
         {
@@ -72,6 +73,21 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarEstado", nombre_selected))
                 {
                     MessageBox.Show("El estado se elimino con exito");
+                }
+            }
+        }
+
+        private void modificar_btn_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Estado: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarEstado", nombre, nombreNuevo))
+                {
+                    MessageBox.Show("El estado se modifico con exito");
                 }
             }
         }
