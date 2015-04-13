@@ -14,6 +14,7 @@ namespace CSEQ
     public partial class Crear_delegacion : Form
     {
         String delegacion_selected;
+        int dID_municipio;
 
         public Crear_delegacion()
         {
@@ -84,6 +85,7 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT * FROM Delegacion d, Municipio m WHERE ";
                 sqlActiveRow += " d.nombre= '" + delegacion_selected +"' AND m.nombre='" + municipio +"' AND d.ID_municipio=m.ID_municipio;";
                 Util.showData(this, sqlActiveRow);
+                dID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
             }
         }
 
@@ -91,7 +93,7 @@ namespace CSEQ
         {
             DialogResult respuesta = MessageBox.Show("¿Desea eliminar delegacion:" + delegacion_selected + "'?",
                                                 "Confirmacion de eliminar", MessageBoxButtons.YesNo);
-            int dID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
+            
 
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {

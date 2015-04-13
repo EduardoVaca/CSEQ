@@ -13,6 +13,7 @@ namespace CSEQ
     public partial class CrearMunicipio : Form
     {
         String nombre_selected;
+        int mID_estado;
 
         public CrearMunicipio()
         {
@@ -69,6 +70,7 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT * FROM Municipio WHERE ";
                 sqlActiveRow += " nombre= '" + nombre_selected + "';";
                 Util.showData(this, sqlActiveRow);
+                mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
             }
         }
 
@@ -76,8 +78,7 @@ namespace CSEQ
         {
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea eliminar municipio: '" + nombre_selected + "'?", "Confirmacion de eliminar",
-                                            MessageBoxButtons.YesNo);
-            int mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
+                                            MessageBoxButtons.YesNo);       
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
                 if (Util.executeStoredProcedure("eliminarDelegacion", nombre_selected, mID_estado))

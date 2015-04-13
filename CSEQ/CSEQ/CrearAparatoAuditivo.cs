@@ -14,6 +14,7 @@ namespace CSEQ
     {
         String nombreMarca_selected;
         String tipo_selected;
+        int ID_marca_selected;
 
         public CrearAparatoAuditivo()
         {
@@ -67,13 +68,13 @@ namespace CSEQ
                 sqlActiveRow += " a.tipo= '" + tipo_selected + "' AND m.nombre= '" + nombreMarca_selected +
                                 "' AND a.ID_marca=m.ID_marca;";
                 Util.showData(this, sqlActiveRow);
+                ID_marca_selected = Int32.Parse(ID_marca.SelectedValue.ToString());
             }
         }
 
         private void eliminar_btn_Click(object sender, EventArgs e)
         {
-            String tipo_selected = tipo_txt.Text;
-            int ID_marca_selected = Int32.Parse(ID_marca.SelectedValue.ToString());                        
+            String tipo_selected = tipo_txt.Text;                                 
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Eliminar '" + tipo_selected + "', marca: " + nombreMarca_selected + "?", 
                                         "Confirmación de eliminación", MessageBoxButtons.YesNo);
