@@ -25,9 +25,8 @@ CREATE TABLE Persona
 DROP TABLE IF EXISTS Censo;
 CREATE TABLE Censo
 (
-	ID_censo INT auto_increment not null unique,
-	ano numeric(4),
-	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo, ano)
+	ID_censo numeric(4) not null unique,
+	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo)
 );
 
 -- Creacion tabla: PerteneceCenso
