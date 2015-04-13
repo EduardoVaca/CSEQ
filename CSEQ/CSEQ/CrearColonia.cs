@@ -13,6 +13,7 @@ namespace CSEQ
     public partial class CrearColonia : Form
     {
         String nombre_selected;
+        int idMunicpio;
 
         public CrearColonia()
         {
@@ -93,6 +94,7 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT DISTINCT * FROM Colonia c, Estado e, Delegacion d , Municipio m WHERE ";
                 sqlActiveRow += " c.nombre= '" + nombre_selected + "' AND c.ID_municipio=m.ID_municipio  AND c.ID_delegacion=d.ID_delegacion AND m.ID_estado=e.ID_estado;";
                 Util.showData(this, sqlActiveRow);
+                idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString()); 
             }
         }
 
@@ -101,7 +103,7 @@ namespace CSEQ
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea eliminar colonia:'" + nombre_selected + "'?", "Confirmacion de Eliminar",
                                         MessageBoxButtons.YesNo);
-            int idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString());            
+                       
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
                 if (Util.executeStoredProcedure("eliminarColonia", nombre_selected, idMunicpio))

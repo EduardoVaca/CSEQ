@@ -530,6 +530,159 @@ END //
 DELIMITER ;	
 
 
+-- **********************************************************************************************************************************
+-- MODIFICA
+
+-- modifica APARATO AUDITIVO
+DELIMITER //
+CREATE PROCEDURE modificarAparatoAuditivo
+(IN tipoA VARCHAR(70), ID_marcaA INT, tipoNuevo VARCHAR(70), ID_marcaNuevo INT)
+BEGIN
+	DECLARE IDaparatoObtenido INT;
+	SELECT ID_aparatoAuditivo INTO IDaparatoObtenido FROM AparatoAuditivo WHERE tipo = tipoA AND ID_marca = ID_marcaA;
+	UPDATE AparatoAuditivo SET tipo = tipoNuevo, ID_marca = ID_marcaNuevo
+	WHERE ID_aparatoAuditivo = IDaparatoObtenido;
+END //
+DELIMITER ;
+
+-- modifica CENSO
+DELIMITER //
+CREATE PROCEDURE modificarCenso
+(IN anoC NUMERIC(4), anoNuevo NUMERIC(4))
+BEGIN
+	DECLARE IDcensoObtenido INT;
+	SELECT ID_censo INTO IDcensoObtenido FROM censo WHERE ano = anoC;
+	UPDATE Censo SET ano = anoNuevo WHERE ID_censo = IDcensoObtenido;
+END //
+DELIMITER ;	
+
+-- modificar MARCA
+DELIMITER //
+CREATE PROCEDURE modificarMarca
+(IN nombreM VARCHAR(40), nombreNuevo VARCHAR(40))
+BEGIN
+	DECLARE IDmarcaObtenido INT;
+    SELECT ID_marca INTO IDmarcaObtenido FROM Marca WHERE nombre = nombreM;
+	UPDATE Marca SET nombre = nombreNuevo WHERE nombre = nombreM;
+END //
+DELIMITER ;
+
+-- modificar CAUSA 
+DELIMITER //
+CREATE PROCEDURE modificarCausa
+(IN causaC VARCHAR(50), causaNueva VARCHAR(50))
+BEGIN
+	DECLARE IDcausaObtenido INT;
+	SELECT ID_causa INTO IDcausaObtenido FROM Causa WHERE causa = causaC;
+	UPDATE Causa SET causa = causaNueva WHERE ID_causa = IDcausaObtenido;
+END //
+DELIMITER ;	
+
+-- modificar SUELDO
+DELIMITER //
+CREATE PROCEDURE modificarSueldo
+(IN minimoS VARCHAR(20), maximoS VARCHAR(20), minimoNuevo VARCHAR(20), maximoNuevo VARCHAR(20))
+BEGIN
+	UPDATE Sueldo SET minimo = minimoNuevo, maximo = maximoNuevo WHERE minimo = minimoS AND maximo = maximoS;
+END //
+DELIMITER ;	
+
+-- modificar AREATRABAJO
+DELIMITER //
+CREATE PROCEDURE modificarAreaTrabajo
+(IN nombreA VARCHAR(60), nombreNuevo VARCHAR(60))
+BEGIN 
+	UPDATE AreaTrabajo SET nombre = nombreNuevo WHERE nombre = nombreA;
+END //
+DELIMITER ;
+
+-- modificar USUARIO
+DELIMITER //
+CREATE PROCEDURE modificarUsuario
+(IN loginU VARCHAR(30), loginNuevo VARCHAR(30), passwordNuevo VARCHAR(30))
+BEGIN	
+	UPDATE Usuario SET login = loginNuevo, password = passwordNuevo WHERE login = loginU;
+END //
+DELIMITER ;
+
+-- modificar PERSONA
+DELIMITER //
+CREATE PROCEDURE modificarPersona
+(IN CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
+implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo INT, ID_colonia INT,
+ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
+ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
+interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, ID_causa INT,
+ID_aparatoAuditivo INT, modelo VARCHAR(30))
+BEGIN
+	CALL eliminarPersona(CURP);
+	CALL registrarPersonaCOMPLETO(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, enfermedad, mexicano, ife,
+								ID_periodo, ID_censo, ID_colonia, ID_estadoCivil, ID_nivelEducativo, ID_institucionEducativa, anoEstudio, ID_lenguaDominante,
+								ID_nivelEspanol, ID_nivelIngles, ID_nivelLSM, descripcion_empleo, nombreCompany, correoEmpleo, telefonoEmpleo, calleEmpleo,
+								interpretacion_LSM, ID_areaTrabajo, ID_sueldo, ID_coloniaEmpleo, ID_perdidaAuditiva, prelinguistica, ID_grado, ID_causa,
+								ID_aparatoAuditivo, modelo);
+END //
+DELIMITER ;
+
+
+-- modificar COLONIA
+DELIMITER //
+CREATE PROCEDURE modificarColonia
+(IN nombreC VARCHAR(80), IDmunicipio INT, nombreNuevo VARCHAR(80), IDmunicipioNuevo INT)
+BEGIN
+	DECLARE IDcoloniaObtenido INT;
+	SELECT ID_colonia INTO IDcoloniaObtenido FROM Colonia WHERE nombre = nombreC AND ID_municipio = IDmunicipio;
+	UPDATE Colonia SET nombre = nombreNuevo, ID_municipio = IDmunicipioNuevo WHERE ID_colonia = IDcoloniaObtenido;
+END //
+DELIMITER ;
+
+-- modificar DELEGACION
+DELIMITER //
+CREATE PROCEDURE modificarDelegacion
+(IN nombreD VARCHAR(80), IDmunicipio INT, nombreNuevo VARCHAR(80), IDmunicipioNuevo INT)
+BEGIN 
+	DECLARE IDdelegacionObtenido INT;
+	SELECT ID_delegacion INTO IDdelegacionObtenido FROM Delegacion WHERE nombre = nombreD AND ID_municipio = IDmunicipio;
+	UPDATE Delegacion SET nombre = nombreNuevo, ID_municipio = IDmunicipioNuevo;
+END //
+DELIMITER ;
+
+-- modificar MUNICIPIO
+DELIMITER //
+CREATE PROCEDURE modificarMunicipio
+(IN nombreM VARCHAR(80), IDestado INT, nombreNuevo VARCHAR(80), IDestadoNuevo INT)
+BEGIN
+	DECLARE IDmunicpioObtenido INT;
+	SELECT ID_municipio INTO IDmunicpioObtenido FROM Municipio WHERE nombre = nombreM AND ID_estado = IDestado;
+	UPDATE Municipio SET nombre = nombreNuevo, ID_estado = IDestadoNuevo;
+END //
+DELIMITER ;
+
+
+-- modificar ESTADO
+DELIMITER //
+CREATE PROCEDURE modificarEstado
+(IN nombreE VARCHAR(80), nombreNuevo VARCHAR(80))
+BEGIN
+	UPDATE Estado SET nombre = nombreNuevo WHERE nombre  = nombreE;
+END //
+DELIMITER ;
+
+-- modificar INSTITUCIONEDUCATIVA
+DELIMITER //
+CREATE PROCEDURE modificarInstitucionEducativa
+(IN nombreViejo VARCHAR(90), nombreNuevo VARCHAR(90), calleNuevo VARCHAR(80), telefonoNuevo VARCHAR(20), correoNuevo VARCHAR(80),
+ privadaNuevo BOOLEAN, especializadaNuevo BOOLEAN)
+BEGIN
+	UPDATE InstitucionEducativa SET nombre = nombreNuevo, calle = calleNuevo, telefono = telefonoNuevo, correo = correoNuevo, privada = privadaNuevo,
+	especializada = especializadaNuevo WHERE nombre = nombreViejo;
+END //
+DELIMITER;
+
+
+
+
+
 
 
 
