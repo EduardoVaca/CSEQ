@@ -27,7 +27,7 @@ CREATE TABLE Censo
 (
 	ID_censo INT auto_increment not null unique,
 	ano numeric(4),
-	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo)
+	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo, ano)
 );
 
 -- Creacion tabla: PerteneceCenso
@@ -334,7 +334,7 @@ CREATE TABLE AparatoAuditivo
 (
 	ID_aparatoAuditivo INT auto_increment not null unique,
 	tipo varchar (60) not null,
-	ID_marca INT not null,
+	ID_marca INT,
 	CONSTRAINT llaveAparatoAuditivo PRIMARY KEY (ID_aparatoAuditivo)
 );
 
