@@ -202,6 +202,8 @@
             // 
             // busqueda_grid
             // 
+            this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.busqueda_grid.Location = new System.Drawing.Point(12, 208);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -238,8 +240,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(1378, 971);
+            this.ClientSize = new System.Drawing.Size(800, 530);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);

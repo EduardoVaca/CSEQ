@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearEstado));
             this.Mun = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.Label();
+            this.Nombre_label = new System.Windows.Forms.Label();
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.Guardar_txt = new System.Windows.Forms.Button();
             this.Atras_picture = new System.Windows.Forms.PictureBox();
@@ -62,17 +62,17 @@
             this.Mun.TabIndex = 25;
             this.Mun.Text = "Estado";
             // 
-            // Nombre
+            // Nombre_label
             // 
-            this.Nombre.AutoSize = true;
-            this.Nombre.Font = new System.Drawing.Font("Candara", 14F);
-            this.Nombre.ForeColor = System.Drawing.Color.White;
-            this.Nombre.Location = new System.Drawing.Point(26, 247);
-            this.Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(78, 23);
-            this.Nombre.TabIndex = 28;
-            this.Nombre.Text = "Nombre";
+            this.Nombre_label.AutoSize = true;
+            this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.Nombre_label.ForeColor = System.Drawing.Color.White;
+            this.Nombre_label.Location = new System.Drawing.Point(26, 247);
+            this.Nombre_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Nombre_label.Name = "Nombre_label";
+            this.Nombre_label.Size = new System.Drawing.Size(78, 23);
+            this.Nombre_label.TabIndex = 28;
+            this.Nombre_label.Text = "Nombre";
             // 
             // nombre_txt
             // 
@@ -120,7 +120,7 @@
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(759, 11);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(30, 29);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -156,11 +156,14 @@
             // 
             // busqueda_grid
             // 
+            this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.busqueda_grid.Location = new System.Drawing.Point(6, 108);
             this.busqueda_grid.Name = "busqueda_grid";
             this.busqueda_grid.Size = new System.Drawing.Size(342, 262);
             this.busqueda_grid.TabIndex = 56;
+            this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
             // Buscar
             // 
@@ -171,6 +174,7 @@
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Buscar.TabIndex = 55;
             this.Buscar.TabStop = false;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // busqueda_txt
             // 
@@ -211,8 +215,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(689, 406);
+            this.ClientSize = new System.Drawing.Size(800, 530);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.groupBox1);
@@ -221,7 +226,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.Guardar_txt);
-            this.Controls.Add(this.Nombre);
+            this.Controls.Add(this.Nombre_label);
             this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.Mun);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -242,7 +247,7 @@
         #endregion
 
         private System.Windows.Forms.Label Mun;
-        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.Label Nombre_label;
         private System.Windows.Forms.TextBox nombre_txt;
         private System.Windows.Forms.Button Guardar_txt;
         private System.Windows.Forms.PictureBox Atras_picture;

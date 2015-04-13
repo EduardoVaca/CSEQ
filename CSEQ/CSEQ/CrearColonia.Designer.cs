@@ -33,8 +33,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Atras = new System.Windows.Forms.PictureBox();
             this.Col = new System.Windows.Forms.Label();
-            this.colonia_txt = new System.Windows.Forms.TextBox();
-            this.Nombre = new System.Windows.Forms.Label();
+            this.nombre_txt = new System.Windows.Forms.TextBox();
+            this.Nombre_label = new System.Windows.Forms.Label();
             this.Guardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(766, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,25 +105,25 @@
             this.Col.TabIndex = 14;
             this.Col.Text = "Colonia";
             // 
-            // colonia_txt
+            // nombre_txt
             // 
-            this.colonia_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.colonia_txt.Location = new System.Drawing.Point(115, 134);
-            this.colonia_txt.Name = "colonia_txt";
-            this.colonia_txt.Size = new System.Drawing.Size(266, 27);
-            this.colonia_txt.TabIndex = 15;
+            this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.nombre_txt.Location = new System.Drawing.Point(115, 134);
+            this.nombre_txt.Name = "nombre_txt";
+            this.nombre_txt.Size = new System.Drawing.Size(266, 27);
+            this.nombre_txt.TabIndex = 15;
             // 
-            // Nombre
+            // Nombre_label
             // 
-            this.Nombre.AutoSize = true;
-            this.Nombre.Font = new System.Drawing.Font("Candara", 14F);
-            this.Nombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.Nombre.Location = new System.Drawing.Point(11, 134);
-            this.Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(78, 23);
-            this.Nombre.TabIndex = 16;
-            this.Nombre.Text = "Nombre";
+            this.Nombre_label.AutoSize = true;
+            this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.Nombre_label.ForeColor = System.Drawing.SystemColors.Control;
+            this.Nombre_label.Location = new System.Drawing.Point(11, 134);
+            this.Nombre_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Nombre_label.Name = "Nombre_label";
+            this.Nombre_label.Size = new System.Drawing.Size(78, 23);
+            this.Nombre_label.TabIndex = 16;
+            this.Nombre_label.Text = "Nombre";
             // 
             // Guardar
             // 
@@ -280,11 +280,14 @@
             // 
             // busqueda_grid
             // 
+            this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.busqueda_grid.Location = new System.Drawing.Point(6, 108);
             this.busqueda_grid.Name = "busqueda_grid";
             this.busqueda_grid.Size = new System.Drawing.Size(342, 262);
             this.busqueda_grid.TabIndex = 56;
+            this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
             // Buscar
             // 
@@ -295,6 +298,7 @@
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Buscar.TabIndex = 55;
             this.Buscar.TabStop = false;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // busqueda_txt
             // 
@@ -311,8 +315,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(689, 406);
+            this.ClientSize = new System.Drawing.Size(800, 530);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
@@ -326,8 +331,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Guardar);
-            this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.colonia_txt);
+            this.Controls.Add(this.Nombre_label);
+            this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.Col);
             this.Controls.Add(this.Atras);
             this.Controls.Add(this.label4);
@@ -355,8 +360,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox Atras;
         private System.Windows.Forms.Label Col;
-        private System.Windows.Forms.TextBox colonia_txt;
-        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.TextBox nombre_txt;
+        private System.Windows.Forms.Label Nombre_label;
         private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

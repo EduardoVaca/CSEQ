@@ -37,6 +37,26 @@ namespace CSEQ
                 MessageBox.Show("Area de Trabajo se guardo con exito!");
             }
         }
+        
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            String busqueda = "%" + busqueda_txt.Text + "%";
+            Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", busqueda);
+        }
+
+        private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            String nombre;
+
+            if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                String sqlActiveRow = "SELECT * FROM AreaTrabajo WHERE ";
+                sqlActiveRow += " nombre= '" + nombre + "';";
+                Util.showData(this, sqlActiveRow);
+            }
+        }
 
         private void eliminar_btn_Click(object sender, EventArgs e)
         {

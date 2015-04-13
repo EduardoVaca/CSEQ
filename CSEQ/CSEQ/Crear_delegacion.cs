@@ -31,7 +31,11 @@ namespace CSEQ
 
         private void Crear_delegacion_Load(object sender, EventArgs e)
         {
+
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
+            int id_estado = 22;
+            ID_estado.SelectedIndex = id_estado - 1;
+            Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
         }
 
         /*--------------------------------------------------------------------------------

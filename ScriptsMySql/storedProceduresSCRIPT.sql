@@ -166,6 +166,7 @@ BEGIN
 END	//
 DELIMITER ;
 
+
 -- HIJO
 DELIMITER //
 CREATE PROCEDURE registrarHijo
@@ -527,8 +528,6 @@ BEGIN
 	DELETE FROM LocalizaInstitucionEducativa WHERE ID_institucionEducativa = IDinstitucionObtenida;
 END //
 DELIMITER ;	
-
-
 
 
 

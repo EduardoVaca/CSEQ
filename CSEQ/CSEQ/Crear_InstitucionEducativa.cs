@@ -31,6 +31,21 @@ namespace CSEQ
         private void Crear_InstitucionEducativa_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
+            int id_estado = 22;
+            ID_estado.SelectedIndex = id_estado-1;
+            Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
+           
+            
+            if (ID_municipio.SelectedItem != null)
+            {
+                int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
+                //MessageBox.Show(ID_municipio.SelectedValue.ToString());
+                String inicio = "SELECT distinct d.ID_delegacion,d.nombre FROM Municipio m, Delegacion d, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio AND d.ID_delegacion = c.ID_Delegacion;";
+                Util.llenarComboBox(ID_delegacion, inicio);
+                inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Delegacion d, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio AND d.ID_delegacion = c.ID_Delegacion;";
+                Util.llenarComboBox(ID_colonia, inicio);
+            }
+
         }
 
         /*--------------------------------------------------------------------------------
@@ -93,10 +108,20 @@ namespace CSEQ
             {
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                
+                String sqlActiveRow = "SELECT * FROM InstitucionEducativa i, Estado e, Municipio m, Delegacion d, Colonia c , LocalizaInstitucionEducativa l WHERE ";
+                sqlActiveRow += (" i.nombre= '" + nombre + "' AND i.correo= '" + correo + "' AND l.ID_institucioneducativa=i.ID_institucioneducativa "+
+                                                                                        "AND l.ID_colonia=c.ID_colonia AND c.ID_delegacion=d.ID_delegacion AND c.ID_municipio=m.ID_municipio "+
+                                                                                        "AND m.ID_estado=e.ID_estado;");
+                /*
                 String sqlActiveRow = "SELECT * FROM InstitucionEducativa WHERE ";
                 sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" + correo + "';";
+                */
                 Util.showData(this, sqlActiveRow);
             }
+
+            
+
         }
        
 
