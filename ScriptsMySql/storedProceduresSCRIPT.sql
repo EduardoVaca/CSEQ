@@ -516,6 +516,20 @@ BEGIN
 END //
 DELIMITER ;
 
+-- elimanar INSTITUCIONEDUCATIVA
+DELIMITER //
+CREATE PROCEDURE eliminarInstitucionEducativa
+(IN nombreI VARCHAR(90))
+BEGIN
+	DECLARE IDinstitucionObtenida INT;
+	SELECT ID_institucionEducativa INTO IDinstitucionObtenida FROM InstitucionEducativa WHERE nombre = nombreI;
+	DELETE FROM Estudiado WHERE ID_institucionEducativa = IDinstitucionObtenida;
+	DELETE FROM LocalizaInstitucionEducativa WHERE ID_institucionEducativa = IDinstitucionObtenida;
+END //
+DELIMITER ;	
+
+
+
 
 
 
