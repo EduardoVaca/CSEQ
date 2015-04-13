@@ -320,6 +320,22 @@ namespace CSEQ
             }
         }
 
+        public static void clear(Control f)
+        {
+            foreach (Control ctrl in f.Controls)
+            {
+                if (ctrl is TextBox)
+                    ctrl.Text = "";
+                if (ctrl is ComboBox || ctrl is ListBox)
+                    ((ComboBox)ctrl).SelectedValue = -1;
+                if (ctrl is CheckBox)
+                    ((CheckBox)ctrl).Checked = false;
+                if (ctrl.HasChildren)
+                    clear(ctrl);
+
+            }
+        }
+
 
     }
 }

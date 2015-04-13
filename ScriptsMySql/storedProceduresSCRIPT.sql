@@ -416,6 +416,113 @@ DELIMITER ;
 -- eliminar AREATRABAJO
 DELIMITER //
 CREATE PROCEDURE eliminarAreaTrabajo
-(IN )
+(IN nombreA VARCHAR(60))
+BEGIN
+	DECLARE IDareaTrabajoObtenido INT;
+	SELECT ID_areaTrabajo INTO IDareaTrabajoObtenido FROM AreaTrabajo WHERE nombre = nombreA;
+	UPDATE Empleo SET ID_areaTrabajo = null WHERE ID_areaTrabajo = IDareaTrabajoObtenido;
+	DELETE FROM AreaTrabajo WHERE nombre = nombreA;
+END //
+DELIMITER ;
+
+
+-- eliminar USUARIO
+DELIMITER //
+CREATE PROCEDURE eliminarUsuario
+(IN loginU VARCHAR(30))
+BEGIN
+	DELETE FROM TieneRol WHERE login = loginU;
+	DELETE FROM Usuario WHERE login = loginU;
+END //
+DELIMITER ;	
+
+
+-- eliminar PERSONA (POSIBLE CAMBIO)
+DELIMITER //
+CREATE PROCEDURE eliminarPersona
+(IN CURPinput CHAR(18))
+BEGIN
+	DELETE FROM PerteneceCenso WHERE CURP = CURPinput;
+	DELETE FROM Vive WHERE CURP = CURPinput;
+	DELETE FROM TieneNivelEducativo WHERE CURP = CURPinput;
+	DELETE FROM Estudiado WHERE CURP = CURPinput;
+	DELETE FROM TieneEmpleo WHERE CURP = CURPinput;
+	DELETE FROM TieneLenguaDominante WHERE CURP = CURPinput;
+	DELETE FROM TieneNivelEspanol WHERE CURP = CURPinput;
+	DELETE FROM TieneNivelIngles WHERE CURP = CURPinput;
+	DELETE FROM TieneNivelLSM WHERE CURP = CURPinput;
+	DELETE FROM TieneEstadoCivil WHERE CURP = CURPinput;
+	DELETE FROM PoseeAparatoAuditivo WHERE CURP = CURPinput;
+	DELETE FROM Hijo WHERE CURP = CURPinput;
+	DELETE FROM TienePerdidaAuditiva WHERE CURP = CURPinput;
+	DELETE FROM Causado WHERE CURP = CURPinput;
+	DELETE FROM EsGrado WHERE CURP = CURPinput;
+	DELETE FROM Persona WHERE CURP = CURPinput;
+END //
+DELIMITER ;	
+
+
+-- eliminar COLONIA
+DELIMITER //
+CREATE PROCEDURE eliminarColonia
+(IN nombreC VARCHAR(80), IDmunicipio INT)
+BEGIN
+	DECLARE IDcoloniaObtenido INT;
+	SELECT ID_colonia INTO IDcoloniaObtenido FROM Colonia WHERE nombre = nombreC AND ID_municipio = IDmunicipio;
+	DELETE FROM Vive WHERE ID_colonia = IDcoloniaObtenido;
+	DELETE FROM LocalizaInstitucionEducativa WHERE ID_colonia = IDcoloniaObtenido;
+	DELETE FROM LocalizaEmpleo WHERE ID_colonia = IDcoloniaObtenido;
+	DELETE FROM Colonia WHERE ID_colonia = IDcoloniaObtenido;
+END //
+DELIMITER ;
+
+
+-- eliminar DELEGACION
+DELIMITER //
+CREATE PROCEDURE eliminarDelegacion
+(IN nombreD VARCHAR(80), IDmunicipio INT)
+BEGIN 
+	DECLARE IDdelegacionObtenido INT;
+	SELECT ID_delegacion INTO IDdelegacionObtenido FROM Delegacion WHERE nombre = nombreD AND ID_municipio = IDmunicipio;
+	UPDATE Colonia SET ID_delegacion = null WHERE ID_delegacion = IDdelegacionObtenido;
+	DELETE FROM Delegacion WHERE ID_delegacion = IDdelegacionObtenido;
+END //
+DELIMITER ;
+
+
+-- eliminar MUNICIPIO
+DELIMITER //
+CREATE PROCEDURE eliminarMunicipio
+(IN nombreM VARCHAR(80), IDestado INT)
+BEGIN
+	DECLARE IDmunicpioObtenido INT;
+	SELECT ID_municipio INTO IDmunicpioObtenido FROM Municipio WHERE nombre = nombreM AND ID_estado = IDestado;
+	DELETE FROM Colonia WHERE ID_municipio = IDmunicpioObtenido;
+	DELETE FROM Delegacion WHERE ID_municipio = IDmunicpioObtenido;
+	DELETE FROM Municipio WHERE ID_municipio = IDmunicpioObtenido;
+END //
+DELIMITER ;
+
+
+-- eliminar ESTADO
+DELIMITER //
+CREATE PROCEDURE eliminarEstado
+(IN nombreE VARCHAR(80))
+BEGIN
+	DECLARE IDestadoObtenido INT;
+	SELECT ID_estado INTO IDestadoObtenido FROM Estado WHERE nombre = nombreE;
+	DELETE FROM Municipio WHERE ID_estado = IDestadoObtenido;
+	DELETE FROM Estado WHERE ID_estado = IDestadoObtenido;
+END //
+DELIMITER ;
+
+
+
+
+
+
+
+
+
 
 
