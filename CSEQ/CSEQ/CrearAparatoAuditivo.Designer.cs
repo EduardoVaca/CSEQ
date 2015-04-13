@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearAparatoAuditivo));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Guardar_txt = new System.Windows.Forms.Button();
             this.ID_marca = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,10 +59,9 @@
             // Guardar_txt
             // 
             this.Guardar_txt.Font = new System.Drawing.Font("Candara", 10F);
-            this.Guardar_txt.Location = new System.Drawing.Point(78, 829);
-            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Guardar_txt.Location = new System.Drawing.Point(39, 431);
             this.Guardar_txt.Name = "Guardar_txt";
-            this.Guardar_txt.Size = new System.Drawing.Size(160, 62);
+            this.Guardar_txt.Size = new System.Drawing.Size(80, 32);
             this.Guardar_txt.TabIndex = 35;
             this.Guardar_txt.Text = "Guardar";
             this.Guardar_txt.UseVisualStyleBackColor = true;
@@ -69,10 +71,9 @@
             // 
             this.ID_marca.Font = new System.Drawing.Font("Candara", 12F);
             this.ID_marca.FormattingEnabled = true;
-            this.ID_marca.Location = new System.Drawing.Point(224, 533);
-            this.ID_marca.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ID_marca.Location = new System.Drawing.Point(112, 277);
             this.ID_marca.Name = "ID_marca";
-            this.ID_marca.Size = new System.Drawing.Size(360, 47);
+            this.ID_marca.Size = new System.Drawing.Size(182, 27);
             this.ID_marca.TabIndex = 34;
             // 
             // label1
@@ -80,10 +81,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(70, 533);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(35, 277);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 46);
+            this.label1.Size = new System.Drawing.Size(60, 23);
             this.label1.TabIndex = 33;
             this.label1.Text = "Marca";
             // 
@@ -92,20 +93,19 @@
             this.Tipo_label.AutoSize = true;
             this.Tipo_label.Font = new System.Drawing.Font("Candara", 14F);
             this.Tipo_label.ForeColor = System.Drawing.Color.White;
-            this.Tipo_label.Location = new System.Drawing.Point(98, 396);
-            this.Tipo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Tipo_label.Location = new System.Drawing.Point(49, 206);
+            this.Tipo_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Tipo_label.Name = "Tipo_label";
-            this.Tipo_label.Size = new System.Drawing.Size(89, 46);
+            this.Tipo_label.Size = new System.Drawing.Size(46, 23);
             this.Tipo_label.TabIndex = 32;
             this.Tipo_label.Text = "Tipo";
             // 
             // tipo_txt
             // 
             this.tipo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.tipo_txt.Location = new System.Drawing.Point(224, 396);
-            this.tipo_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tipo_txt.Location = new System.Drawing.Point(112, 206);
             this.tipo_txt.Name = "tipo_txt";
-            this.tipo_txt.Size = new System.Drawing.Size(490, 47);
+            this.tipo_txt.Size = new System.Drawing.Size(247, 27);
             this.tipo_txt.TabIndex = 31;
             // 
             // AparatoAuditivo_label
@@ -113,20 +113,20 @@
             this.AparatoAuditivo_label.AutoSize = true;
             this.AparatoAuditivo_label.Font = new System.Drawing.Font("Candara", 18F);
             this.AparatoAuditivo_label.ForeColor = System.Drawing.Color.White;
-            this.AparatoAuditivo_label.Location = new System.Drawing.Point(616, 83);
-            this.AparatoAuditivo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AparatoAuditivo_label.Location = new System.Drawing.Point(308, 43);
+            this.AparatoAuditivo_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AparatoAuditivo_label.Name = "AparatoAuditivo_label";
-            this.AparatoAuditivo_label.Size = new System.Drawing.Size(370, 59);
+            this.AparatoAuditivo_label.Size = new System.Drawing.Size(186, 29);
             this.AparatoAuditivo_label.TabIndex = 30;
             this.AparatoAuditivo_label.Text = "Aparato Auditivo";
             // 
             // x_picture
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(1532, 13);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.x_picture.Location = new System.Drawing.Point(766, 7);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
             this.x_picture.Name = "x_picture";
-            this.x_picture.Size = new System.Drawing.Size(60, 56);
+            this.x_picture.Size = new System.Drawing.Size(30, 29);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.x_picture.TabIndex = 36;
             this.x_picture.TabStop = false;
@@ -135,10 +135,9 @@
             // Atras_picture
             // 
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
-            this.Atras_picture.Location = new System.Drawing.Point(12, 937);
-            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Atras_picture.Location = new System.Drawing.Point(6, 487);
             this.Atras_picture.Name = "Atras_picture";
-            this.Atras_picture.Size = new System.Drawing.Size(60, 56);
+            this.Atras_picture.Size = new System.Drawing.Size(30, 29);
             this.Atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Atras_picture.TabIndex = 37;
             this.Atras_picture.TabStop = false;
@@ -149,10 +148,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(724, 396);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(362, 206);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 42);
+            this.label2.Size = new System.Drawing.Size(17, 24);
             this.label2.TabIndex = 53;
             this.label2.Text = "*";
             // 
@@ -161,10 +160,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(594, 533);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(297, 277);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 42);
+            this.label3.Size = new System.Drawing.Size(17, 24);
             this.label3.TabIndex = 54;
             this.label3.Text = "*";
             // 
@@ -173,20 +172,20 @@
             this.rompiendoParadigmas_label.AutoSize = true;
             this.rompiendoParadigmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.rompiendoParadigmas_label.ForeColor = System.Drawing.SystemColors.Control;
-            this.rompiendoParadigmas_label.Location = new System.Drawing.Point(1226, 962);
-            this.rompiendoParadigmas_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.rompiendoParadigmas_label.Location = new System.Drawing.Point(613, 500);
+            this.rompiendoParadigmas_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rompiendoParadigmas_label.Name = "rompiendoParadigmas_label";
-            this.rompiendoParadigmas_label.Size = new System.Drawing.Size(342, 29);
+            this.rompiendoParadigmas_label.Size = new System.Drawing.Size(183, 15);
             this.rompiendoParadigmas_label.TabIndex = 55;
             this.rompiendoParadigmas_label.Text = "ROMPIENDO PARADIGMAS";
             // 
             // eliminar_btn
             // 
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.eliminar_btn.Location = new System.Drawing.Point(602, 829);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eliminar_btn.Location = new System.Drawing.Point(301, 431);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(2);
             this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(160, 62);
+            this.eliminar_btn.Size = new System.Drawing.Size(80, 32);
             this.eliminar_btn.TabIndex = 70;
             this.eliminar_btn.Text = "Eliminar";
             this.eliminar_btn.UseVisualStyleBackColor = true;
@@ -195,10 +194,10 @@
             // modificar_btn
             // 
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.modificar_btn.Location = new System.Drawing.Point(340, 829);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modificar_btn.Location = new System.Drawing.Point(170, 431);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(2);
             this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(160, 62);
+            this.modificar_btn.Size = new System.Drawing.Size(80, 32);
             this.modificar_btn.TabIndex = 69;
             this.modificar_btn.Text = "Modificar";
             this.modificar_btn.UseVisualStyleBackColor = true;
@@ -210,34 +209,56 @@
             this.groupBox1.Controls.Add(this.busqueda_txt);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(832, 167);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(416, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox1.Size = new System.Drawing.Size(708, 723);
+            this.groupBox1.Size = new System.Drawing.Size(354, 376);
             this.groupBox1.TabIndex = 71;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda de registros";
             // 
             // busqueda_grid
             // 
+            this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.busqueda_grid.Location = new System.Drawing.Point(12, 208);
-            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.busqueda_grid.Location = new System.Drawing.Point(6, 108);
             this.busqueda_grid.Name = "busqueda_grid";
-            this.busqueda_grid.Size = new System.Drawing.Size(684, 504);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.busqueda_grid.Size = new System.Drawing.Size(342, 262);
             this.busqueda_grid.TabIndex = 56;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
             // Buscar
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
-            this.Buscar.Location = new System.Drawing.Point(610, 62);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Buscar.Location = new System.Drawing.Point(305, 32);
             this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(78, 69);
+            this.Buscar.Size = new System.Drawing.Size(39, 36);
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Buscar.TabIndex = 55;
             this.Buscar.TabStop = false;
@@ -246,22 +267,21 @@
             // busqueda_txt
             // 
             this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.busqueda_txt.Location = new System.Drawing.Point(12, 75);
-            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
-            this.busqueda_txt.MinimumSize = new System.Drawing.Size(196, 4);
+            this.busqueda_txt.Location = new System.Drawing.Point(6, 39);
+            this.busqueda_txt.MaximumSize = new System.Drawing.Size(400, 40);
+            this.busqueda_txt.MinimumSize = new System.Drawing.Size(100, 4);
             this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(588, 47);
+            this.busqueda_txt.Size = new System.Drawing.Size(296, 27);
             this.busqueda_txt.TabIndex = 8;
             // 
             // CrearAparatoAuditivo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(800, 530);
+            this.ClientSize = new System.Drawing.Size(400, 276);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
@@ -277,7 +297,6 @@
             this.Controls.Add(this.tipo_txt);
             this.Controls.Add(this.AparatoAuditivo_label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "CrearAparatoAuditivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AparatoAuditivo";
