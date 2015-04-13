@@ -12,6 +12,10 @@ namespace CSEQ
 {
     public partial class Crear_sueldo : Form
     {
+
+        String minimo_selected;
+        String maximo_selected;
+
         public Crear_sueldo()
         {
             InitializeComponent();            
@@ -47,17 +51,30 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            String minimo;
-            String maximo;
-
+        {           
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                minimo = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                maximo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                modificar_btn.Enabled = true; //Activacion de botones
+                eliminar_btn.Enabled = true;
+                minimo_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                maximo_selected = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM sueldo WHERE ";
-                sqlActiveRow += " maximo= '" + maximo + "' AND minimo= '" + minimo + "';";
+                sqlActiveRow += " maximo= '" + maximo_selected + "' AND minimo= '" + minimo_selected + "';";
                 Util.showData(this, sqlActiveRow);
+            }
+        }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar el sueldo?", "Confirmacion de eliminacion", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarSueldo", minimo_selected, maximo_selected))
+                {
+                    MessageBox.Show("El sueldo se elimino con exito!");
+                }
             }
         }
 

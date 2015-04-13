@@ -12,6 +12,8 @@ namespace CSEQ
 {
     public partial class Crear_marca : Form
     {
+        String nombre_selected;
+
         public Crear_marca()
         {
             InitializeComponent();            
@@ -46,23 +48,31 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            String nombre;
-
+        {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 modificar_btn.Enabled = true; //activacion de botones
                 eliminar_btn.Enabled = true;
-                nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Marca WHERE ";
-                sqlActiveRow += " nombre= '" + nombre + "';";
+                sqlActiveRow += " nombre= '" + nombre_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
         }
 
         private void eliminar_btn_Click(object sender, EventArgs e)
         {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Seguro quiere eliminar marca:'" + nombre_selected + "'?",
+                                    "Confirmación de Eliminar", MessageBoxButtons.YesNo);
 
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarMarca", nombre_selected))
+                {
+                    MessageBox.Show("La marca:" + nombre_selected + " se elimino con exito!");
+                }
+            }
         }
     }
 }
