@@ -179,21 +179,60 @@ DELIMITER ;
 -- **************************************************************************************************************************************************
 -- BUSQUEDAS
 
+-- busqueda PERSONA COMPLETO
+DELIMITER //
+CREATE PROCEDURE busquedaPersonaCOMPLETO
+(IN variable VARCHAR(80), IDcensoInput numeric(4))
+BEGIN 
+	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, Pc.ID_censo as Censo, v.ID_colonia as ID_coloniaPersona,
+					Colonia.ID_municipio as ID_municipioPersona, Municipio.ID_estado as ID_estadoPersona
+					FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
+					TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
+					TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA, Estado, Colonia, Municipio 
+					WHERE (p.nombre LIKE variable)
+					AND p.CURP = pC.CURP AND (pC.ID_censo = IDcensoInput) AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP
+					AND p.CURP = es.CURP AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP
+					AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
+					AND p.CURP = pAA.CURP AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
+					AND lE.ID_empleo = tE.ID_empleo 
+				    GROUP BY p.CURP) as Tabla_Persona, (SELECT p.CURP as CURP, lE.ID_colonia as ID_coloniaEmleo, col.ID_municipio as ID_municipioEmpleo, 
+				    									mun.ID_estado as ID_estadoEMPLEO 
+				    									FROM Persona p, Empleo e, TieneEmpleo tE, LocalizaEmpleo lE, Colonia col, Municipio mun
+				    									WHERE p.nombre LIKE variable
+				    									AND p.CURP = tE.CURP AND (tE.ID_censo = IDcensoInput) AND tE.ID_empleo = lE.ID_empleo AND
+				    									lE.ID_colonia = col.ID_colonia AND mun.ID_municipio = col.ID_municipio) as Tabla_empleo
+    WHERE Tabla_persona.CURP = Tabla_empleo.CURP
+    GROUP BY Tabla_persona.CURP;
+END //
+DELIMITER ;
+
 -- Busqueda PERSONA
 DELIMITER //
 CREATE PROCEDURE busquedaEnPersona
 (IN variable VARCHAR(80))
 BEGIN
-	SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, ce.ano as Censo
+	(SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, Pc.ID_censo as Censo, v.ID_colonia as  Colonia_datos, lE.ID_colonia as Colonia_empleo
 	FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
 	TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
-	TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA 
+	TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA, Estado, Colonia, Municipio 
 	WHERE (p.nombre LIKE variable)
 	AND p.CURP = pC.CURP AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP AND p.CURP = es.CURP
 	AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP
 	AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
-	AND p.CURP = pAA.CURP
-    GROUP BY p.CURP;
+	AND p.CURP = pAA.CURP AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
+	AND lE.ID_empleo = tE.ID_empleo 
+    GROUP BY p.CURP;) JOIN CALL encuentraColonia(varaible);
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE encuentraColonia
+(IN variable VARCHAR(80))
+BEGIN	
+	SELECT c.ID_colonia as Colonia,m.ID_municipio as Muni, e.ID_estado as Est 
+	FROM Colonia c, Municipio m, Estado e, Persona p, Vive v
+	WHERE p.nombre LIKE variable AND P.CURP = v.CURP AND v.ID_colonia = c.ID_colonia AND
+	c.ID_municipio = m.ID_municipio AND m.ID_estado = e.ID_estado;
 END //
 DELIMITER ;
 

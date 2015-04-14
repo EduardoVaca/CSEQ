@@ -235,6 +235,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1596, 998);
             this.Controls.Add(this.empleo_combo);
             this.Controls.Add(this.educacion_combo);
@@ -251,6 +253,7 @@
             this.Controls.Add(this.back_picture);
             this.Controls.Add(this.ConsultaRedactada_label);
             this.Controls.Add(this.x_picture);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Menu_consultas";

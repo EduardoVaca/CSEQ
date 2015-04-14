@@ -41,10 +41,10 @@
             // x_picture
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(766, 7);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.x_picture.Location = new System.Drawing.Point(1532, 13);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.x_picture.Name = "x_picture";
-            this.x_picture.Size = new System.Drawing.Size(30, 29);
+            this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.x_picture.TabIndex = 7;
             this.x_picture.TabStop = false;
@@ -55,10 +55,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(301, 225);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(602, 433);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 39);
+            this.label1.Size = new System.Drawing.Size(290, 78);
             this.label1.TabIndex = 8;
             this.label1.Text = "Registros";
             // 
@@ -67,10 +67,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(301, 293);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(602, 563);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 39);
+            this.label2.Size = new System.Drawing.Size(296, 78);
             this.label2.TabIndex = 9;
             this.label2.Text = "Consultas";
             // 
@@ -79,19 +79,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(613, 500);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(1226, 962);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 15);
+            this.label3.Size = new System.Drawing.Size(342, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "ROMPIENDO PARADIGMAS";
             // 
             // registros_btn
             // 
-            this.registros_btn.Location = new System.Drawing.Point(459, 238);
-            this.registros_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.registros_btn.Location = new System.Drawing.Point(918, 458);
+            this.registros_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.registros_btn.Name = "registros_btn";
-            this.registros_btn.Size = new System.Drawing.Size(42, 22);
+            this.registros_btn.Size = new System.Drawing.Size(84, 42);
             this.registros_btn.TabIndex = 11;
             this.registros_btn.Text = "Ir";
             this.registros_btn.UseVisualStyleBackColor = true;
@@ -99,10 +99,10 @@
             // 
             // consultas_btn
             // 
-            this.consultas_btn.Location = new System.Drawing.Point(459, 306);
-            this.consultas_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.consultas_btn.Location = new System.Drawing.Point(918, 588);
+            this.consultas_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.consultas_btn.Name = "consultas_btn";
-            this.consultas_btn.Size = new System.Drawing.Size(42, 22);
+            this.consultas_btn.Size = new System.Drawing.Size(84, 42);
             this.consultas_btn.TabIndex = 12;
             this.consultas_btn.Text = "Ir";
             this.consultas_btn.UseVisualStyleBackColor = true;
@@ -110,19 +110,22 @@
             // 
             // Menu_principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(689, 406);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1378, 781);
             this.Controls.Add(this.consultas_btn);
             this.Controls.Add(this.registros_btn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.x_picture);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Menu_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_principal";
