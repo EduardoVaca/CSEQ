@@ -70,7 +70,7 @@ namespace CSEQ
                 eliminar_btn.Enabled = true;
                 censo_selected = Convert.ToInt16(busqueda_grid.Rows[e.RowIndex].Cells[0].Value);
                 String sqlActiveRow = "SELECT * FROM Censo WHERE ";
-                sqlActiveRow += " ano= '" + censo_selected + "';";
+                sqlActiveRow += " ID_censo = '" + censo_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
         }

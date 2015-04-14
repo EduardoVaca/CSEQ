@@ -25,9 +25,8 @@ CREATE TABLE Persona
 DROP TABLE IF EXISTS Censo;
 CREATE TABLE Censo
 (
-	ID_censo INT auto_increment not null unique,
-	ano numeric(4),
-	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo, ano)
+	ID_censo numeric(4) not null unique,
+	CONSTRAINT llaveCenso PRIMARY KEY (ID_Censo)
 );
 
 -- Creacion tabla: PerteneceCenso
@@ -35,7 +34,7 @@ DROP TABLE IF EXISTS PerteneceCenso;
 CREATE TABLE PerteneceCenso
 (
 	CURP char(18) not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llavePerteneceCenso PRIMARY KEY (CURP, ID_censo)
 );
 
@@ -58,7 +57,7 @@ CREATE TABLE Vive
 (
 	CURP char(18) not null,
 	ID_colonia INT not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llaveVive PRIMARY KEY (CURP, ID_colonia, ID_censo)
 );
 
@@ -124,7 +123,7 @@ DROP TABLE IF EXISTS TieneNivelEducativo;
 CREATE TABLE TieneNivelEducativo (
 	CURP char(18) not null,
 	ID_nivelEducativo INT not null,
-	ID_Censo INT not null,
+	ID_Censo numeric(4) not null,
 	CONSTRAINT llaveTieneNivelEducativo PRIMARY KEY (CURP, ID_nivelEducativo, ID_censo)
 );
 
@@ -195,7 +194,7 @@ CREATE TABLE Gana
 (
     ID_empleo INT not null,
     ID_sueldo INT not null,
-    ID_censo INT not null,
+    ID_censo numeric(4) not null,
     CONSTRAINT llaveGana PRIMARY KEY (ID_empleo, ID_sueldo, ID_censo)
 );
 
@@ -205,7 +204,7 @@ CREATE TABLE TieneEmpleo
 (
     CURP char(18) not null,
     ID_empleo INT not null,
-    ID_censo INT not null,
+    ID_censo numeric(4) not null,
     CONSTRAINT llaveTieneEmpleo PRIMARY KEY (CURP, ID_empleo, ID_censo)
 );
 
@@ -244,7 +243,7 @@ CREATE TABLE TieneLenguaDominante
 (
 	CURP char(18) not null,
 	ID_lenguaDominante INT not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llaveTieneLenguaDominante PRIMARY KEY (CURP, ID_lenguaDominante, ID_censo)
 );
 
@@ -264,7 +263,7 @@ CREATE TABLE TieneNivelEspanol
 (
 	CURP char(18) not null,
 	ID_nivelEspanol INT not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llaveTieneNivelEspanol PRIMARY KEY (CURP, ID_nivelEspanol, ID_censo)
 );
 
@@ -283,7 +282,7 @@ CREATE TABLE TieneNivelIngles
 (
 	CURP char(18) not null,
 	ID_nivelIngles INT not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llaveTieneNivelIngles PRIMARY KEY (CURP, ID_nivelIngles, ID_censo)
 );
 
@@ -303,7 +302,7 @@ CREATE TABLE TieneNivelLSM
 (
 	CURP char (18) not null,
 	ID_nivelLSM INT not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llaveTieneNivelLSM PRIMARY KEY (CURP, ID_nivelLSM,ID_censo)
 );
 
@@ -323,7 +322,7 @@ CREATE TABLE TieneEstadoCivil
 (
 	CURP char (18) not null,
 	ID_estadoCivil INT not null,
-	ID_Censo INT not null,
+	ID_Censo numeric(4) not null,
 	CONSTRAINT llaveTieneEstadoCivil PRIMARY KEY (CURP, ID_estadoCivil, ID_Censo)
 );
 
@@ -345,7 +344,7 @@ CREATE TABLE PoseeAparatoAuditivo
 (
 	CURP char(18) not null,
 	ID_aparatoAuditivo INT not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	modelo varchar(30),
 	CONSTRAINT llavePoseeAparatoAuditivo PRIMARY KEY (CURP, ID_aparatoAuditivo, ID_censo, modelo)
 );
@@ -388,7 +387,7 @@ CREATE TABLE TienePerdidaAuditiva
 	CURP char(18) not null,
 	ID_perdidaAuditiva INT not null,
 	prelinguistica boolean not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llaveTienePerdidaAuditiva PRIMARY KEY (CURP, ID_perdidaAuditiva, ID_censo)
 );
 
@@ -408,7 +407,7 @@ CREATE TABLE Causado
 	CURP char(18) not null,
 	ID_perdidaAuditiva INT not null,
 	ID_causa INT not null,	
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llaveCausado PRIMARY KEY (ID_perdidaAuditiva, ID_causa, CURP, ID_censo)
 );
 
@@ -429,7 +428,7 @@ CREATE TABLE EsGrado
 	CURP char(18) not null,
 	ID_perdidaAuditiva INT not null,
 	ID_grado INT not null,
-	ID_censo INT not null,
+	ID_censo numeric(4) not null,
 	CONSTRAINT llaveEsGrado PRIMARY KEY (CURP, ID_perdidaAuditiva, ID_grado, ID_censo)
 );
 

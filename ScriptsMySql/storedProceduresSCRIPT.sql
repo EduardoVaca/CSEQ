@@ -53,9 +53,9 @@ DELIMITER ;
 
 -- CENSO
 DELIMITER //
-CREATE PROCEDURE registrarCenso(IN anoCenso INT)
+CREATE PROCEDURE registrarCenso(IN ID_censo NUMERIC(4))
 BEGIN
-	INSERT INTO Censo VALUES (0, anoCenso);
+	INSERT INTO Censo VALUES (ID_censo);
 END //
 DELIMITER ;
 
@@ -338,8 +338,8 @@ DELIMITER //
 CREATE PROCEDURE busquedaEnCenso
 (IN variable NUMERIC(4))
 BEGIN
-	SELECT ano as Censo FROM Censo 
-	WHERE ano LIKE variable;
+	SELECT ID_censo as Censo FROM Censo 
+	WHERE ID_censo LIKE variable;
 END //
 DELIMITER ;
 
@@ -395,10 +395,8 @@ DELIMITER ;
 -- eliminar CENSO
 DELIMITER //
 CREATE PROCEDURE eliminarCenso
-(IN anoC NUMERIC(4))
+(IN IDcensoObtenido NUMERIC(4))
 BEGIN
-	DECLARE IDcensoObtenido INT;
-	SELECT ID_censo INTO IDcensoObtenido FROM Censo WHERE ano = anoC;
 	DELETE FROM PerteneceCenso WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM Vive WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM TieneNivelEducativo WHERE ID_censo = IDcensoObtenido;
@@ -413,7 +411,7 @@ BEGIN
 	DELETE FROM Causado WHERE ID_censo = IDcensoObtenido;
 	DELETE FROM EsGrado WHERE ID_censo = IDcensoObtenido;	
 	DELETE FROM TieneEmpleo WHERE ID_censo = IDcensoObtenido;
-	DELETE FROM Censo WHERE ano = anoC;
+	DELETE FROM Censo WHERE ID_censo = IDcensoObtenido;
 END //
 DELIMITER ;	
 
@@ -587,11 +585,24 @@ DELIMITER ;
 -- modifica CENSO
 DELIMITER //
 CREATE PROCEDURE modificarCenso
-(IN anoC NUMERIC(4), anoNuevo NUMERIC(4))
+(IN IDcenso NUMERIC(4), IDcensoNuevo NUMERIC(4))
 BEGIN
-	DECLARE IDcensoObtenido INT;
-	SELECT ID_censo INTO IDcensoObtenido FROM censo WHERE ano = anoC;
-	UPDATE Censo SET ano = anoNuevo WHERE ID_censo = IDcensoObtenido;
+	CALL registrarCenso(IDcensoNuevo);
+	UPDATE PerteneceCenso SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE VIVE SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE TieneNivelEducativo SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE Gana SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE TieneLenguaDominante SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE TieneNivelEspanol SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE TieneNivelIngles SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE TieneNivelLSM SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE TieneEstadoCivil SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE PoseeAparatoAuditivo SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE TienePerdidaAuditiva SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE Causado SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE EsGrado SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	UPDATE TieneEmpleo SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+	CALL eliminarCenso(IDcenso);
 END //
 DELIMITER ;	
 
