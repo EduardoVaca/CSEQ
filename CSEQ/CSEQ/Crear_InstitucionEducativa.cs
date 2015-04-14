@@ -144,6 +144,26 @@ namespace CSEQ
 
         private void modificar_btn_Click(object sender, EventArgs e)
         {
+            //nombreViejo VARCHAR(90), nombreNuevo VARCHAR(90), calleNuevo VARCHAR(80), telefonoNuevo VARCHAR(20), correoNuevo VARCHAR(80),
+            //privadaNuevo BOOLEAN, especializadaNuevo BOOLEAN
+            String nombreNuevo=nombre_txt.Text;
+            String calleNuevo=calle_txt.Text;
+            String telefonoNuevo=telefono_txt.Text;
+            String correoNuevo=correo_txt.Text;
+            bool privadaNuevo=privada_check.Checked;
+            bool especializadaNuevo=especializada_check.Checked;
+
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Institucion: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarInstitucionEducativa", nombre_selected,nombreNuevo,calleNuevo,telefonoNuevo,correoNuevo,privadaNuevo,especializadaNuevo))
+                {
+                    MessageBox.Show("La institucion se ha modificado con exito!");
+                }
+            }
 
         }
     }

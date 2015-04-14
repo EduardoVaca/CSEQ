@@ -32,6 +32,7 @@ namespace CSEQ
         private void Login_Load(object sender, EventArgs e)
         {
             Util.creaConexion("localhost", "CSEQ", "root", "");
+            //Util.creaConexion("hcdesarrollo.com", "hcdesarr_chess", "hcdesarr_chess", "pruebachess2015");
         }
 
 
