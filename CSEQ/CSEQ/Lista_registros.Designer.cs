@@ -59,8 +59,10 @@
             this.sueldo_btn = new System.Windows.Forms.Button();
             this.areaTrabajo_btn = new System.Windows.Forms.Button();
             this.usuario_btn = new System.Windows.Forms.Button();
+            this.colonia_pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colonia_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -121,7 +123,7 @@
             this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.titulo.Location = new System.Drawing.Point(678, 100);
+            this.titulo.Location = new System.Drawing.Point(688, 30);
             this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(220, 59);
@@ -427,6 +429,16 @@
             this.usuario_btn.UseVisualStyleBackColor = true;
             this.usuario_btn.Click += new System.EventHandler(this.usuario_btn_Click);
             // 
+            // colonia_pb
+            // 
+            this.colonia_pb.Image = ((System.Drawing.Image)(resources.GetObject("colonia_pb.Image")));
+            this.colonia_pb.Location = new System.Drawing.Point(424, 126);
+            this.colonia_pb.Name = "colonia_pb";
+            this.colonia_pb.Size = new System.Drawing.Size(200, 200);
+            this.colonia_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.colonia_pb.TabIndex = 41;
+            this.colonia_pb.TabStop = false;
+            // 
             // Lista_registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -435,6 +447,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1092);
+            this.Controls.Add(this.colonia_pb);
             this.Controls.Add(this.usuario_btn);
             this.Controls.Add(this.areaTrabajo_btn);
             this.Controls.Add(this.sueldo_btn);
@@ -474,6 +487,7 @@
             this.Load += new System.EventHandler(this.Lista_registros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colonia_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,5 +525,6 @@
         private System.Windows.Forms.Button sueldo_btn;
         private System.Windows.Forms.Button areaTrabajo_btn;
         private System.Windows.Forms.Button usuario_btn;
+        private System.Windows.Forms.PictureBox colonia_pb;
     }
 }

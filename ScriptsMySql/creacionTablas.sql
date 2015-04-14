@@ -440,7 +440,7 @@ DROP TABLE IF EXISTS Usuario;
 CREATE TABLE Usuario
 (
 	login varchar(30) not null,
-	password varchar(30) not null,
+	password_usuario varchar(30) not null,
 	CONSTRAINT llaveUsuario PRIMARY KEY (login)
 );
 
