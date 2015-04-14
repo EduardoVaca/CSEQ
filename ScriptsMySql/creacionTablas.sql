@@ -429,6 +429,7 @@ CREATE TABLE EsGrado
 	ID_perdidaAuditiva INT not null,
 	ID_grado INT not null,
 	ID_censo numeric(4) not null,
+	bilateral boolean not null,
 	CONSTRAINT llaveEsGrado PRIMARY KEY (CURP, ID_perdidaAuditiva, ID_grado, ID_censo)
 );
 

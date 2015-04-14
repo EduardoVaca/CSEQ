@@ -45,7 +45,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_perdidaAuditiva, "SELECT ID_perdidaAuditiva, tipo FROM PerdidaAuditiva");
             Util.llenarComboBox(ID_grado, "SELECT ID_grado, CONCAT(grado, ': ', descripcion) FROM Grado");
             Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa");
-            Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, tipo FROM AparatoAuditivo");
+            Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, contenido FROM AparatoConMarca");
             //Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
             Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT('$',minimo, ' a ','$',maximo) FROM Sueldo");
             Util.llenarComboBox(estadoEmpleo_combo, "SELECT ID_estado, nombre FROM Estado");
@@ -175,6 +175,7 @@ namespace CSEQ
             int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
             Boolean prelinguisticaP = prelinguistica_check.Checked;
             int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
+            Boolean bilateralP = bilateral_check.Checked;
             int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
             int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
             String modeloP = modelo_txt.Text;
@@ -187,7 +188,7 @@ namespace CSEQ
                                             ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
                                             nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
                                             ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
-                                            prelinguisticaP, ID_gradoP, ID_causaP, ID_aparatoAuditivoP, modeloP))
+                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
             }
@@ -304,6 +305,7 @@ namespace CSEQ
             int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
             Boolean prelinguisticaP = prelinguistica_check.Checked;
             int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
+            Boolean bilateralP = bilateral_check.Checked;
             int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
             int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
             String modeloP = modelo_txt.Text;
@@ -320,7 +322,8 @@ namespace CSEQ
                                             ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
                                             nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
                                             ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
-                                            prelinguisticaP, ID_gradoP, ID_causaP, ID_aparatoAuditivoP, modeloP))
+                                            prelinguisticaP, ID_gradoP,bilateralP, ID_causaP, ID_aparatoAuditivoP, 
+                                            modeloP))
                 {
                     MessageBox.Show("La persona se ha modificado con exito!");
                 }
