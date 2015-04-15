@@ -28,24 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaGrafica));
             this.ConsultaGrafica_label = new System.Windows.Forms.Label();
             this.Ver_label = new System.Windows.Forms.Label();
             this.De_label = new System.Windows.Forms.Label();
             this.Empleabilidad_combo = new System.Windows.Forms.ComboBox();
             this.PersonasDisAud_combo = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PorcentajeSinEm_label = new System.Windows.Forms.Label();
-            this.SinEm_label = new System.Windows.Forms.Label();
-            this.PorcentajeConEm_label = new System.Windows.Forms.Label();
-            this.ConEm_label = new System.Windows.Forms.Label();
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.Atras_picture = new System.Windows.Forms.PictureBox();
             this.GuardarConsulta_txt = new System.Windows.Forms.Button();
             this.ImprimirConsulta_btn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControlGraficas = new System.Windows.Forms.TabControl();
+            this.tabGraficaBarras = new System.Windows.Forms.TabPage();
+            this.zedGraph = new ZedGraph.ZedGraphControl();
+            this.btnLlenarBarras = new System.Windows.Forms.Button();
+            this.tabGraficaPay = new System.Windows.Forms.TabPage();
+            this.btnLlenarPay = new System.Windows.Forms.Button();
+            this.zedPie = new ZedGraph.ZedGraphControl();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
+            this.tabControlGraficas.SuspendLayout();
+            this.tabGraficaBarras.SuspendLayout();
+            this.tabGraficaPay.SuspendLayout();
             this.SuspendLayout();
             // 
             // ConsultaGrafica_label
@@ -102,73 +107,11 @@
             this.PersonasDisAud_combo.TabIndex = 35;
             this.PersonasDisAud_combo.Text = "Personas con discapacidad auditiva";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 94);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(375, 364);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
-            // PorcentajeSinEm_label
-            // 
-            this.PorcentajeSinEm_label.AutoSize = true;
-            this.PorcentajeSinEm_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.PorcentajeSinEm_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PorcentajeSinEm_label.ForeColor = System.Drawing.Color.White;
-            this.PorcentajeSinEm_label.Location = new System.Drawing.Point(312, 228);
-            this.PorcentajeSinEm_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PorcentajeSinEm_label.Name = "PorcentajeSinEm_label";
-            this.PorcentajeSinEm_label.Size = new System.Drawing.Size(45, 24);
-            this.PorcentajeSinEm_label.TabIndex = 37;
-            this.PorcentajeSinEm_label.Text = "45%";
-            // 
-            // SinEm_label
-            // 
-            this.SinEm_label.AutoSize = true;
-            this.SinEm_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.SinEm_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.SinEm_label.ForeColor = System.Drawing.Color.White;
-            this.SinEm_label.Location = new System.Drawing.Point(285, 252);
-            this.SinEm_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SinEm_label.Name = "SinEm_label";
-            this.SinEm_label.Size = new System.Drawing.Size(103, 24);
-            this.SinEm_label.TabIndex = 38;
-            this.SinEm_label.Text = "sin empleo";
-            // 
-            // PorcentajeConEm_label
-            // 
-            this.PorcentajeConEm_label.AutoSize = true;
-            this.PorcentajeConEm_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.PorcentajeConEm_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PorcentajeConEm_label.ForeColor = System.Drawing.Color.White;
-            this.PorcentajeConEm_label.Location = new System.Drawing.Point(440, 228);
-            this.PorcentajeConEm_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PorcentajeConEm_label.Name = "PorcentajeConEm_label";
-            this.PorcentajeConEm_label.Size = new System.Drawing.Size(45, 24);
-            this.PorcentajeConEm_label.TabIndex = 39;
-            this.PorcentajeConEm_label.Text = "55%";
-            // 
-            // ConEm_label
-            // 
-            this.ConEm_label.AutoSize = true;
-            this.ConEm_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ConEm_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.ConEm_label.ForeColor = System.Drawing.Color.White;
-            this.ConEm_label.Location = new System.Drawing.Point(423, 252);
-            this.ConEm_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ConEm_label.Name = "ConEm_label";
-            this.ConEm_label.Size = new System.Drawing.Size(111, 24);
-            this.ConEm_label.TabIndex = 40;
-            this.ConEm_label.Text = "con empleo";
-            // 
             // x_picture
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(753, 2);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(30, 29);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -206,6 +149,91 @@
             this.ImprimirConsulta_btn.TabIndex = 44;
             this.ImprimirConsulta_btn.Text = "Imprimir consulta";
             this.ImprimirConsulta_btn.UseVisualStyleBackColor = true;
+            this.ImprimirConsulta_btn.Click += new System.EventHandler(this.ImprimirConsulta_btn_Click);
+            // 
+            // tabControlGraficas
+            // 
+            this.tabControlGraficas.Controls.Add(this.tabGraficaBarras);
+            this.tabControlGraficas.Controls.Add(this.tabGraficaPay);
+            this.tabControlGraficas.Location = new System.Drawing.Point(105, 80);
+            this.tabControlGraficas.Name = "tabControlGraficas";
+            this.tabControlGraficas.SelectedIndex = 0;
+            this.tabControlGraficas.Size = new System.Drawing.Size(584, 367);
+            this.tabControlGraficas.TabIndex = 45;
+            // 
+            // tabGraficaBarras
+            // 
+            this.tabGraficaBarras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.tabGraficaBarras.Controls.Add(this.zedGraph);
+            this.tabGraficaBarras.Controls.Add(this.btnLlenarBarras);
+            this.tabGraficaBarras.Location = new System.Drawing.Point(4, 22);
+            this.tabGraficaBarras.Name = "tabGraficaBarras";
+            this.tabGraficaBarras.Padding = new System.Windows.Forms.Padding(3);
+            this.tabGraficaBarras.Size = new System.Drawing.Size(576, 341);
+            this.tabGraficaBarras.TabIndex = 0;
+            this.tabGraficaBarras.Text = "Gráfica de barras";
+            // 
+            // zedGraph
+            // 
+            this.zedGraph.Location = new System.Drawing.Point(11, 6);
+            this.zedGraph.Name = "zedGraph";
+            this.zedGraph.ScrollGrace = 0D;
+            this.zedGraph.ScrollMaxX = 0D;
+            this.zedGraph.ScrollMaxY = 0D;
+            this.zedGraph.ScrollMaxY2 = 0D;
+            this.zedGraph.ScrollMinX = 0D;
+            this.zedGraph.ScrollMinY = 0D;
+            this.zedGraph.ScrollMinY2 = 0D;
+            this.zedGraph.Size = new System.Drawing.Size(559, 299);
+            this.zedGraph.TabIndex = 1;
+            // 
+            // btnLlenarBarras
+            // 
+            this.btnLlenarBarras.ForeColor = System.Drawing.Color.Black;
+            this.btnLlenarBarras.Location = new System.Drawing.Point(251, 311);
+            this.btnLlenarBarras.Name = "btnLlenarBarras";
+            this.btnLlenarBarras.Size = new System.Drawing.Size(75, 23);
+            this.btnLlenarBarras.TabIndex = 0;
+            this.btnLlenarBarras.Text = "Llenar";
+            this.btnLlenarBarras.UseVisualStyleBackColor = true;
+            this.btnLlenarBarras.Click += new System.EventHandler(this.btnLlenarBarras_Click);
+            // 
+            // tabGraficaPay
+            // 
+            this.tabGraficaPay.Controls.Add(this.zedPie);
+            this.tabGraficaPay.Controls.Add(this.btnLlenarPay);
+            this.tabGraficaPay.Location = new System.Drawing.Point(4, 22);
+            this.tabGraficaPay.Name = "tabGraficaPay";
+            this.tabGraficaPay.Padding = new System.Windows.Forms.Padding(3);
+            this.tabGraficaPay.Size = new System.Drawing.Size(576, 341);
+            this.tabGraficaPay.TabIndex = 1;
+            this.tabGraficaPay.Text = "Gráfica de pay";
+            this.tabGraficaPay.UseVisualStyleBackColor = true;
+            // 
+            // btnLlenarPay
+            // 
+            this.btnLlenarPay.ForeColor = System.Drawing.Color.Black;
+            this.btnLlenarPay.Location = new System.Drawing.Point(251, 309);
+            this.btnLlenarPay.Name = "btnLlenarPay";
+            this.btnLlenarPay.Size = new System.Drawing.Size(75, 23);
+            this.btnLlenarPay.TabIndex = 1;
+            this.btnLlenarPay.Text = "Llenar";
+            this.btnLlenarPay.UseVisualStyleBackColor = true;
+            this.btnLlenarPay.Click += new System.EventHandler(this.btnLlenarPay_Click);
+            // 
+            // zedPie
+            // 
+            this.zedPie.Location = new System.Drawing.Point(3, 28);
+            this.zedPie.Name = "zedPie";
+            this.zedPie.ScrollGrace = 0D;
+            this.zedPie.ScrollMaxX = 0D;
+            this.zedPie.ScrollMaxY = 0D;
+            this.zedPie.ScrollMaxY2 = 0D;
+            this.zedPie.ScrollMinX = 0D;
+            this.zedPie.ScrollMinY = 0D;
+            this.zedPie.ScrollMinY2 = 0D;
+            this.zedPie.Size = new System.Drawing.Size(570, 275);
+            this.zedPie.TabIndex = 2;
             // 
             // ConsultaGrafica
             // 
@@ -213,16 +241,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(689, 406);
+            this.ClientSize = new System.Drawing.Size(795, 526);
+            this.Controls.Add(this.tabControlGraficas);
             this.Controls.Add(this.ImprimirConsulta_btn);
             this.Controls.Add(this.GuardarConsulta_txt);
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.x_picture);
-            this.Controls.Add(this.ConEm_label);
-            this.Controls.Add(this.PorcentajeConEm_label);
-            this.Controls.Add(this.SinEm_label);
-            this.Controls.Add(this.PorcentajeSinEm_label);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PersonasDisAud_combo);
             this.Controls.Add(this.Empleabilidad_combo);
             this.Controls.Add(this.De_label);
@@ -234,9 +258,12 @@
             this.Name = "ConsultaGrafica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaGrafica";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.ConsultaGrafica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).EndInit();
+            this.tabControlGraficas.ResumeLayout(false);
+            this.tabGraficaBarras.ResumeLayout(false);
+            this.tabGraficaPay.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,14 +276,16 @@
         private System.Windows.Forms.Label De_label;
         private System.Windows.Forms.ComboBox Empleabilidad_combo;
         private System.Windows.Forms.ComboBox PersonasDisAud_combo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label PorcentajeSinEm_label;
-        private System.Windows.Forms.Label SinEm_label;
-        private System.Windows.Forms.Label PorcentajeConEm_label;
-        private System.Windows.Forms.Label ConEm_label;
         private System.Windows.Forms.PictureBox x_picture;
         private System.Windows.Forms.PictureBox Atras_picture;
         private System.Windows.Forms.Button GuardarConsulta_txt;
         private System.Windows.Forms.Button ImprimirConsulta_btn;
+        private System.Windows.Forms.TabControl tabControlGraficas;
+        private System.Windows.Forms.TabPage tabGraficaBarras;
+        private ZedGraph.ZedGraphControl zedGraph;
+        private System.Windows.Forms.Button btnLlenarBarras;
+        private System.Windows.Forms.TabPage tabGraficaPay;
+        private System.Windows.Forms.Button btnLlenarPay;
+        private ZedGraph.ZedGraphControl zedPie;
     }
 }

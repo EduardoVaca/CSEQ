@@ -13,60 +13,35 @@ namespace CSEQ
 {
     public partial class Graficas : Form
     {
-        double[] yValues = { 49.3, 38.5, 5.9, 1.0 };
-        string[] xValuesPay = { "49.3%", "38.5%", "5.9%", "1.0%" };
-        string[] xValuesBarras = { "holi", "lol", "xD", ":P" };
-        
 
         public Graficas()
         {
             InitializeComponent();
+
         }
 
         private void btnLlenarBarras_Click(object sender, EventArgs e)
         {
-            chartBarras.Palette = ChartColorPalette.Fire;
-            chartBarras.Series.Add("Serie1");
-            chartBarras.Series[0].Name = "Series";
-            chartBarras.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-
-            chartBarras.Series[0].ChartArea = "ChartArea1";
-
-            chartBarras.Legends.Add("");
-            chartBarras.Legends[0].Name = "";
-            chartBarras.Series[0].Points.DataBindXY(xValuesBarras, yValues);
-
-            for (int i = 0; i < yValues.Length; i++)
-            {
-                chartBarras.Series[0].Points[i].Label = yValues[i].ToString();
-            }
-
-            btnLlenarBarras.Enabled = false;
+            String query = "CALL consultaHombresMujeres";
+            String type = "Barra";
+            Util.graphData(zedGraph,query,type);
         }
 
         private void btnLlenarPay_Click(object sender, EventArgs e)
         {
-            chartPay.Series.Add("");
-            chartPay.Series[0].Name = "";
-            chartPay.Series[0].Color = Color.Transparent;
-            chartPay.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-
-            chartPay.Legends.Add("");
-            chartPay.Legends[0].Name = "";
-            chartPay.Series[0].Points.DataBindXY(xValuesPay, yValues);
-            chartPay.Series[0].Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-
-            for (int i = 0; i < xValuesPay.Length; i++)
-            {
-                chartBarras.Series[0].Points[i].LegendText = xValuesBarras[i];
-            }
-
-            btnLlenarPay.Enabled = false;
+            String query = "CALL consultaHombresMujeres";
+            String type = "Pay";
+            Util.graphData(zedGraph, query, type);
         }
 
         private void Graficas_Load(object sender, EventArgs e)
         {
+            Util.creaConexion("localhost", "CSEQ", "root", "");
+        }
 
+        private void x_picture_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

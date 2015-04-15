@@ -96,7 +96,7 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT DISTINCT * FROM Colonia c, Estado e, Delegacion d , Municipio m WHERE ";
                 sqlActiveRow += " c.nombre= '" + nombre_selected + "' AND c.ID_municipio=m.ID_municipio  AND c.ID_delegacion=d.ID_delegacion AND m.ID_estado=e.ID_estado;";
                 Util.showData(this, sqlActiveRow);
-                idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString()); 
+                idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString());
                 ID_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
             }
         }
