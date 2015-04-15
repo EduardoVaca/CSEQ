@@ -101,6 +101,7 @@ namespace CSEQ
                 Busqueda_grp.Visible = true;
                 modificar_btn.Visible = true;
                 eliminar_btn.Visible = true;
+                imagen.Visible = false;
             }
         }
 
