@@ -51,7 +51,7 @@ namespace CSEQ
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-
+            busqueda_grid.Visible = true;
             int busquedaNum;
             if (busqueda_txt.Text != "" && busqueda_txt.Text.Length > 3)
             {
