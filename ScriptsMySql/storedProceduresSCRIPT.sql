@@ -224,7 +224,7 @@ BEGIN
 	AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
 	AND p.CURP = pAA.CURP AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
 	AND lE.ID_empleo = tE.ID_empleo 
-    GROUP BY p.CURP;) JOIN CALL encuentraColonia(varaible);
+    GROUP BY p.CURP;
 END //
 DELIMITER ;
 

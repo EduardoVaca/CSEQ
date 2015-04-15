@@ -52,7 +52,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="ZedGraph">
-      <HintPath>..\..\..\..\..\..\..\Visual Studio 2013\Projects\Lab13\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Downloads\zedG\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -173,12 +173,6 @@
     <Compile Include="Eliminar_registro.Designer.cs">
       <DependentUpon>Eliminar_registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Graficas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Graficas.designer.cs">
-      <DependentUpon>Graficas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lista_registros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,9 +273,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar_registro.resx">
       <DependentUpon>Eliminar_registro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Graficas.resx">
-      <DependentUpon>Graficas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lista_registros.resx">
       <DependentUpon>Lista_registros.cs</DependentUpon>

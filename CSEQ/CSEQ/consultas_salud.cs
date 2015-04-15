@@ -12,8 +12,11 @@ namespace CSEQ
 {
     public partial class consultas_salud : Form
     {
-        public consultas_salud()
+        int index;
+
+        public consultas_salud(int index)
         {
+            this.index = index;
             InitializeComponent();
         }
 
@@ -24,9 +27,18 @@ namespace CSEQ
 
         private void back_picture_Click(object sender, EventArgs e)
         {
-            Menu_principal Menu_principal = new Menu_principal(1);
-            Menu_principal.Show();
+            Menu_consultas Menu_principalConsultas = new Menu_consultas();
+            Menu_principalConsultas.Show();
             this.Close();
+        }
+
+        private void consultas_salud_Load(object sender, EventArgs e)
+        {
+            if (index == 0)
+            {
+                titulo.Text = "Auxiliares Auditivos";
+                AuxiliaresAuditivos_grp.Visible = true;
+            }
         }
     }
 }

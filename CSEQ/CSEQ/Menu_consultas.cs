@@ -77,5 +77,13 @@ namespace CSEQ
             demografia_combo.Enabled = false;
             educacion_combo.Enabled = false;  
         }
+
+        private void salud_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int index = salud_combo.SelectedIndex;
+            consultas_salud salud = new consultas_salud(index);
+            salud.Show();
+            this.Close();
+        }
     }
 }

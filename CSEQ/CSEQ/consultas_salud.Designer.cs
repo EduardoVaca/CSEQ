@@ -31,11 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultas_salud));
             this.AuxiliaresAuditivos_grp = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.auxiliarAuditivo_combo = new System.Windows.Forms.ComboBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.x_picture = new System.Windows.Forms.PictureBox();
-            this.auxiliarAuditivo_combo = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.dataTable1TableAdapter1 = new CSEQ.DataSet1TableAdapters.DataTable1TableAdapter();
+            this.titulo = new System.Windows.Forms.Label();
             this.AuxiliaresAuditivos_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
@@ -52,6 +54,31 @@
             this.AuxiliaresAuditivos_grp.Size = new System.Drawing.Size(1550, 313);
             this.AuxiliaresAuditivos_grp.TabIndex = 0;
             this.AuxiliaresAuditivos_grp.TabStop = false;
+            this.AuxiliaresAuditivos_grp.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(7, 134);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(327, 45);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Selecciona consulta";
+            // 
+            // auxiliarAuditivo_combo
+            // 
+            this.auxiliarAuditivo_combo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.auxiliarAuditivo_combo.FormattingEnabled = true;
+            this.auxiliarAuditivo_combo.Items.AddRange(new object[] {
+            "Auxiliares auditivos por marca"});
+            this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(341, 139);
+            this.auxiliarAuditivo_combo.Name = "auxiliarAuditivo_combo";
+            this.auxiliarAuditivo_combo.Size = new System.Drawing.Size(424, 44);
+            this.auxiliarAuditivo_combo.TabIndex = 0;
             // 
             // back_picture
             // 
@@ -79,26 +106,21 @@
             this.x_picture.TabStop = false;
             this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
             // 
-            // auxiliarAuditivo_combo
+            // dataTable1TableAdapter1
             // 
-            this.auxiliarAuditivo_combo.FormattingEnabled = true;
-            this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(329, 158);
-            this.auxiliarAuditivo_combo.Name = "auxiliarAuditivo_combo";
-            this.auxiliarAuditivo_combo.Size = new System.Drawing.Size(424, 33);
-            this.auxiliarAuditivo_combo.TabIndex = 0;
+            this.dataTable1TableAdapter1.ClearBeforeFill = true;
             // 
-            // label1
+            // titulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(7, 146);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 45);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Selecciona consulta";
+            this.titulo.AutoSize = true;
+            this.titulo.BackColor = System.Drawing.Color.Transparent;
+            this.titulo.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.titulo.Location = new System.Drawing.Point(603, 20);
+            this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(0, 53);
+            this.titulo.TabIndex = 16;
             // 
             // consultas_salud
             // 
@@ -108,7 +130,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1574, 1021);
+            this.ClientSize = new System.Drawing.Size(1574, 966);
+            this.Controls.Add(this.titulo);
             this.Controls.Add(this.back_picture);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.AuxiliaresAuditivos_grp);
@@ -117,12 +140,14 @@
             this.Name = "consultas_salud";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultas_salud";
+            this.Load += new System.EventHandler(this.consultas_salud_Load);
             this.AuxiliaresAuditivos_grp.ResumeLayout(false);
             this.AuxiliaresAuditivos_grp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -134,5 +159,7 @@
         private System.Windows.Forms.ComboBox auxiliarAuditivo_combo;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label label1;
+        private DataSet1TableAdapters.DataTable1TableAdapter dataTable1TableAdapter1;
+        private System.Windows.Forms.Label titulo;
     }
 }

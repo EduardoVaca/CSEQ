@@ -196,6 +196,7 @@
             this.salud_combo.Name = "salud_combo";
             this.salud_combo.Size = new System.Drawing.Size(551, 44);
             this.salud_combo.TabIndex = 21;
+            this.salud_combo.SelectionChangeCommitted += new System.EventHandler(this.salud_combo_SelectionChangeCommitted);
             // 
             // demografia_combo
             // 
