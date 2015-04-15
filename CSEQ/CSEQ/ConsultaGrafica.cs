@@ -28,5 +28,30 @@ namespace CSEQ
             menu.Show();
             this.Close();
         }
+
+        private void btnLlenarBarras_Click(object sender, EventArgs e)
+        {
+            String query = "CALL consultaHombresMujeres";
+            String type = "Barra";
+            Util.graphData(zedGraph, query, type);
+        }
+
+        private void ConsultaGrafica_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLlenarPay_Click(object sender, EventArgs e)
+        {
+            String query = "CALL consultaHombresMujeres";
+            String type = "Pay";
+            Util.graphData(zedPie, query, type);
+        }
+
+        private void ImprimirConsulta_btn_Click(object sender, EventArgs e)
+        {
+            Reporte Nuevo = new Reporte();
+            Nuevo.Show();
+        }
     }
 }

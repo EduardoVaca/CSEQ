@@ -211,7 +211,7 @@
             // 
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(766, 7);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(30, 29);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -259,7 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(689, 406);
+            this.ClientSize = new System.Drawing.Size(804, 521);
             this.Controls.Add(this.ImprimirConsulta_btn);
             this.Controls.Add(this.GuardarConsulta_txt);
             this.Controls.Add(this.Atras_picture);

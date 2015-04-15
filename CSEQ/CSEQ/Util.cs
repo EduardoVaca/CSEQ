@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+//Librerias zedgraph
+using ZedGraph;
+using System.Drawing;
 
 namespace CSEQ
 {
@@ -404,6 +407,114 @@ namespace CSEQ
                     clear(ctrl);
 
             }
+        }
+
+        /**
+    '---------------------------------------------------------------------------------------------------------'
+    '  Grafica los puntos que se obtienen de ejecutar el query pasado como parámetro. El query debe tener la  '
+	'  forma "SELECT ejeX, ejeY FROM..." donde ejeX puede ser cualquier tipo que sea convertible a String y   '
+	'  ejeY tiene que ser numérico.                                                                           '
+    '                                                                                                         '
+    '  @param  zgc    El ZedGraphControl que se va a utilizar para graficar                                   '
+    '  @param  query  El query que se quiere ejecutar en la base de datos. El query debe tener la forma       '
+    '                 SELECT $, INTEGER FROM Tabla [...]                                                      ' 
+    '                 en donde $ es un dato de cualquier tipo que se pueda convertir a String.                '
+    '---------------------------------------------------------------------------------------------------------'
+    */
+
+        public static void graphData(ZedGraphControl zgc, String query,String tipo)
+        {
+            ZedGraph.PointPairList list = new PointPairList();
+
+            Color[] colores = {Color.AliceBlue, Color.AntiqueWhite, Color.Aqua,
+                            Color.Aquamarine, Color.Azure, Color.Beige,
+                            Color.Bisque, Color.BlanchedAlmond, Color.Blue,
+                            Color.BlueViolet, Color.BurlyWood, Color.Chartreuse,
+                            Color.Coral, Color.Cornsilk, Color.Crimson,
+                            Color.Cyan, Color.Firebrick, Color.FloralWhite,
+                            Color.ForestGreen, Color.Gainsboro, Color.Gold,
+                            Color.Green, Color.Honeydew, Color.IndianRed,
+                            Color.Lavender, Color.LemonChiffon, Color.LightBlue,
+                            Color.LightGreen, Color.LightCoral};
+
+            DataTable dt;
+            ZedGraph.GraphPane graph;
+            zgc.GraphPane.CurveList.Clear();
+            graph = zgc.GraphPane;
+            graph.Chart.Fill = new Fill(Color.White, Color.FromArgb(220, 255, 220), 45.0F);
+            graph.Fill = new Fill(Color.White, Color.FromArgb(220, 220, 255), 45.0F);
+            dt = getData(query);
+
+            if (dt != null && tipo=="Barra")
+            {
+                graph.Title.Text = dt.TableName;
+                graph.XAxis.Title.Text = dt.Columns[0].ColumnName;
+                graph.YAxis.Title.Text = dt.Columns[1].ColumnName;
+                String[] nombres = new String[dt.Rows.Count];
+                // Obtenemos los encabezados de las columnas
+                for (int i = 0; i < dt.Rows.Count; i++)
+                    nombres[i] = dt.Rows[i].ItemArray[0].ToString();
+                // Configuramos la gráfica
+                graph.XAxis.MajorTic.IsBetweenLabels = true;
+                graph.XAxis.Type = AxisType.Text;
+                graph.XAxis.Scale.TextLabels = nombres;
+                graph.XAxis.Scale.FontSpec.Size = 10.0F;
+                graph.XAxis.Scale.FontSpec.Angle = 90;
+                // Llenamos la grafica
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    double x = i + 1;
+                    double y = Double.Parse(dt.Rows[i].ItemArray[1].ToString());
+                    double z = i / 4.0;
+                    //Labels de numero
+                    TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(),x,y+.5);
+                    barLabel.FontSpec.Border.IsVisible = false;
+                    barLabel.FontSpec.Fill.IsVisible = false;
+                    list.Add(x, y, z);
+                    graph.GraphObjList.Add(barLabel);
+                }
+                BarItem bar = graph.AddBar("Cantidad", list, Color.Blue);
+                bar.Bar.Fill = new Fill(colores);
+                bar.Bar.Fill.Type = FillType.Solid;
+                bar.Bar.Fill.RangeMin = 0;
+                bar.Bar.Fill.RangeMax = 4;
+
+                zgc.AxisChange();
+            }
+
+            if (dt != null && tipo=="Pay")
+            {
+                graph.Title.Text = dt.TableName;
+                graph.XAxis.Title.Text = dt.Columns[0].ColumnName;
+                graph.YAxis.Title.Text = dt.Columns[1].ColumnName;
+                String[] nombres = new String[dt.Rows.Count];
+                double[] valores = new double[dt.Rows.Count];
+                // Obtenemos los encabezados de las columnas
+                for (int i = 0; i < dt.Rows.Count; i++)
+                    nombres[i] = dt.Rows[i].ItemArray[0].ToString();
+                // Configuramos la gráfica
+                graph.XAxis.MajorTic.IsBetweenLabels = true;
+                graph.XAxis.Type = AxisType.Text;
+                graph.XAxis.Scale.TextLabels = nombres;
+                graph.XAxis.Scale.FontSpec.Size = 10.0F;
+                graph.XAxis.Scale.FontSpec.Angle = 90;
+                // Llenamos la grafica
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    double x = i + 1;
+                    double y = Double.Parse(dt.Rows[i].ItemArray[1].ToString());
+                    //Labels de numero
+                    TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(), x, y + .5);
+                    barLabel.FontSpec.Border.IsVisible = false;
+                    barLabel.FontSpec.Fill.IsVisible = false;
+                    PieItem pay = graph.AddPieSlice(y,colores[i],0F,dt.Rows[i].ItemArray[1].ToString());
+                    graph.GraphObjList.Add(barLabel);
+                }
+
+                zgc.AxisChange();
+            }
+
+            zgc.Refresh();
         }
 
 
