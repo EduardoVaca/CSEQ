@@ -23,6 +23,19 @@ BEGIN
 	GROUP BY m.nombre;
 END //
 DELIMITER ;
+-- Variando censo
+DELIMITER //
+CREATE PROCEDURE consultaMarcaPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
+	SELECT m.nombre as Marca, COUNT(*) as 'No. de Personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM Marca m, PoseeAparatoAuditivo p, AparatoAuditivo a
+	WHERE a.ID_aparatoAuditivo = p.ID_aparatoAuditivo AND a.ID_marca = m.ID_marca AND p.ID_censo = censo
+	GROUP BY m.nombre;
+END //
+DELIMITER ;
 
 -- Numero de personas que usan determinado tipo de aparato
 DELIMITER //
