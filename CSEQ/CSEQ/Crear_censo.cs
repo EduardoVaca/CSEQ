@@ -13,9 +13,11 @@ namespace CSEQ
     public partial class Crear_censo : Form
     {
         int censo_selected;
+        int rol;
 
-        public Crear_censo()
+        public Crear_censo(int rol)
         {
+            this.rol = rol;
             InitializeComponent();            
         }
 
@@ -107,6 +109,16 @@ namespace CSEQ
                 {
                     MessageBox.Show("El Censo se modifico con exito");
                 }
+            }
+        }
+
+        private void Crear_censo_Load(object sender, EventArgs e)
+        {
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
             }
         }
     }

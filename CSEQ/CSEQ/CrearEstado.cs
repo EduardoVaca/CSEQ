@@ -14,9 +14,11 @@ namespace CSEQ
     {
         String nombre_selected;
         String nombre;
+        int rol;
 
-        public CrearEstado()
+        public CrearEstado(int rol)
         {
+            this.rol = rol;
             InitializeComponent();
         }
 
@@ -89,6 +91,16 @@ namespace CSEQ
                 {
                     MessageBox.Show("El estado se modifico con exito");
                 }
+            }
+        }
+
+        private void CrearEstado_Load(object sender, EventArgs e)
+        {
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
             }
         }
     }

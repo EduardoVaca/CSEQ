@@ -12,9 +12,11 @@ namespace CSEQ
 {
     public partial class Menu_principal : Form
     {
-        public Menu_principal()
+        int rol; 
+        public Menu_principal(int rol)
         {
             InitializeComponent();
+            this.rol = rol;
         }
 
         private void x_picture_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace CSEQ
 
         private void registros_btn_Click(object sender, EventArgs e)
         {
-            Lista_registros Lista_registros = new Lista_registros(1);
+            Lista_registros Lista_registros = new Lista_registros(rol);
             this.Close();
             Lista_registros.Show();
         }

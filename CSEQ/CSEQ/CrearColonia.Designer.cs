@@ -50,13 +50,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Busqueda_grp = new System.Windows.Forms.GroupBox();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.Busqueda_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             this.SuspendLayout();
@@ -254,6 +254,7 @@
             this.eliminar_btn.TabIndex = 70;
             this.eliminar_btn.Text = "Eliminar";
             this.eliminar_btn.UseVisualStyleBackColor = true;
+            this.eliminar_btn.Visible = false;
             this.eliminar_btn.Click += new System.EventHandler(this.eliminar_btn_Click);
             // 
             // modificar_btn
@@ -267,21 +268,23 @@
             this.modificar_btn.TabIndex = 69;
             this.modificar_btn.Text = "Modificar";
             this.modificar_btn.UseVisualStyleBackColor = true;
+            this.modificar_btn.Visible = false;
             this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
-            // groupBox1
+            // Busqueda_grp
             // 
-            this.groupBox1.Controls.Add(this.busqueda_grid);
-            this.groupBox1.Controls.Add(this.Buscar);
-            this.groupBox1.Controls.Add(this.busqueda_txt);
-            this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(416, 73);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(354, 376);
-            this.groupBox1.TabIndex = 71;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Búsqueda de registros";
+            this.Busqueda_grp.Controls.Add(this.busqueda_grid);
+            this.Busqueda_grp.Controls.Add(this.Buscar);
+            this.Busqueda_grp.Controls.Add(this.busqueda_txt);
+            this.Busqueda_grp.Font = new System.Drawing.Font("Candara", 9.75F);
+            this.Busqueda_grp.ForeColor = System.Drawing.Color.White;
+            this.Busqueda_grp.Location = new System.Drawing.Point(416, 73);
+            this.Busqueda_grp.Name = "Busqueda_grp";
+            this.Busqueda_grp.Size = new System.Drawing.Size(354, 376);
+            this.Busqueda_grp.TabIndex = 71;
+            this.Busqueda_grp.TabStop = false;
+            this.Busqueda_grp.Text = "Búsqueda de registros";
+            this.Busqueda_grp.Visible = false;
             // 
             // busqueda_grid
             // 
@@ -349,7 +352,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(800, 530);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.label6);
@@ -376,8 +379,8 @@
             this.Load += new System.EventHandler(this.CrearColonia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Busqueda_grp.ResumeLayout(false);
+            this.Busqueda_grp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             this.ResumeLayout(false);
@@ -405,7 +408,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.Button modificar_btn;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Busqueda_grp;
         private System.Windows.Forms.DataGridView busqueda_grid;
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;

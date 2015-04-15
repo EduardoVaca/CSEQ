@@ -45,7 +45,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.usuario_lb = new System.Windows.Forms.Label();
             this.persona_btn = new System.Windows.Forms.Button();
             this.colonia_btn = new System.Windows.Forms.Button();
             this.delegacion_btn = new System.Windows.Forms.Button();
@@ -273,18 +273,19 @@
             this.label13.TabIndex = 26;
             this.label13.Text = "Área Trabajo";
             // 
-            // label14
+            // usuario_lb
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(1220, 892);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(141, 45);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Usuario";
+            this.usuario_lb.AutoSize = true;
+            this.usuario_lb.BackColor = System.Drawing.Color.Transparent;
+            this.usuario_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.usuario_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.usuario_lb.Location = new System.Drawing.Point(1220, 892);
+            this.usuario_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usuario_lb.Name = "usuario_lb";
+            this.usuario_lb.Size = new System.Drawing.Size(141, 45);
+            this.usuario_lb.TabIndex = 27;
+            this.usuario_lb.Text = "Usuario";
+            this.usuario_lb.Visible = false;
             // 
             // persona_btn
             // 
@@ -299,7 +300,7 @@
             // 
             // colonia_btn
             // 
-            this.colonia_btn.Location = new System.Drawing.Point(480, 277);
+            this.colonia_btn.Location = new System.Drawing.Point(480, 378);
             this.colonia_btn.Margin = new System.Windows.Forms.Padding(4);
             this.colonia_btn.Name = "colonia_btn";
             this.colonia_btn.Size = new System.Drawing.Size(76, 40);
@@ -427,12 +428,13 @@
             this.usuario_btn.TabIndex = 40;
             this.usuario_btn.Text = "Ir";
             this.usuario_btn.UseVisualStyleBackColor = true;
+            this.usuario_btn.Visible = false;
             this.usuario_btn.Click += new System.EventHandler(this.usuario_btn_Click);
             // 
             // colonia_pb
             // 
             this.colonia_pb.Image = ((System.Drawing.Image)(resources.GetObject("colonia_pb.Image")));
-            this.colonia_pb.Location = new System.Drawing.Point(424, 126);
+            this.colonia_pb.Location = new System.Drawing.Point(417, 126);
             this.colonia_pb.Name = "colonia_pb";
             this.colonia_pb.Size = new System.Drawing.Size(200, 200);
             this.colonia_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -461,7 +463,7 @@
             this.Controls.Add(this.delegacion_btn);
             this.Controls.Add(this.colonia_btn);
             this.Controls.Add(this.persona_btn);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.usuario_lb);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -511,7 +513,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label usuario_lb;
         private System.Windows.Forms.Button persona_btn;
         private System.Windows.Forms.Button colonia_btn;
         private System.Windows.Forms.Button delegacion_btn;

@@ -18,8 +18,11 @@ namespace CSEQ
         String delegacion;
         String municipio;
         int ID_selected;
-        public Crear_delegacion()
+        int rol;
+
+        public Crear_delegacion(int rol)
         {
+            this.rol = rol;
             InitializeComponent();            
         }
 
@@ -41,6 +44,13 @@ namespace CSEQ
             int id_estado = 22;
             ID_estado.SelectedIndex = id_estado - 1;
             Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
+
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
+            }
         }
 
         /*--------------------------------------------------------------------------------

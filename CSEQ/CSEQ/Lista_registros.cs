@@ -33,8 +33,12 @@ namespace CSEQ
         }
 
         private void Lista_registros_Load(object sender, EventArgs e)
-        {                      
-                titulo.Text = "Registros";
+        {
+            if (rol == 1)
+            {
+                usuario_btn.Visible = true;
+                usuario_lb.Visible = true;
+            }
         }
 
         /*************************************************************************
@@ -47,84 +51,84 @@ namespace CSEQ
          */ 
         private void persona_btn_Click(object sender, EventArgs e)
         {             
-            Persona crear = new Persona();
+            Persona crear = new Persona(rol);
             this.Hide();
             crear.Show();
         }
 
         private void colonia_btn_Click(object sender, EventArgs e)
         {
-            CrearColonia crear = new CrearColonia();
+            CrearColonia crear = new CrearColonia(rol);
             this.Hide();
             crear.Show();            
         }
 
         private void delegacion_btn_Click(object sender, EventArgs e)
         {
-            Crear_delegacion crear = new Crear_delegacion();
+            Crear_delegacion crear = new Crear_delegacion(rol);
             this.Hide();
             crear.Show();
         }
 
         private void municipio_btn_Click(object sender, EventArgs e)
         {
-            CrearMunicipio crear = new CrearMunicipio();
+            CrearMunicipio crear = new CrearMunicipio(rol);
             this.Hide();
             crear.Show();
         }
 
         private void estado_btn_Click(object sender, EventArgs e)
         {
-            CrearEstado crear = new CrearEstado();
+            CrearEstado crear = new CrearEstado(rol);
             this.Hide();
             crear.Show();
         }
 
         private void institucionEducativa_btn_Click(object sender, EventArgs e)
         {
-            Crear_InstitucionEducativa crear = new Crear_InstitucionEducativa();
+            Crear_InstitucionEducativa crear = new Crear_InstitucionEducativa(rol);
             this.Hide();
             crear.Show();
         }
 
         private void censo_btn_Click(object sender, EventArgs e)
         {
-            Crear_censo crear = new Crear_censo();
+            Crear_censo crear = new Crear_censo(rol);
             this.Hide();
             crear.Show();
         }
 
         private void aparatoAuditivo_btn_Click(object sender, EventArgs e)
         {
-            CrearAparatoAuditivo crear = new CrearAparatoAuditivo();
+            CrearAparatoAuditivo crear = new CrearAparatoAuditivo(rol);
             this.Hide();
             crear.Show();
         }
 
         private void marca_btn_Click(object sender, EventArgs e)
         {
-            Crear_marca crear = new Crear_marca();
+            Crear_marca crear = new Crear_marca(rol);
             this.Hide();
             crear.Show();
         }
 
         private void causa_btn_Click(object sender, EventArgs e)
         {
-            Crear_causa crear = new Crear_causa();
+            Crear_causa crear = new Crear_causa(rol);
             this.Hide();
             crear.Show();
         }
 
         private void sueldo_btn_Click(object sender, EventArgs e)
         {
-            Crear_sueldo crear = new Crear_sueldo();
+            Crear_sueldo crear = new Crear_sueldo(rol);
             this.Hide();
             crear.Show();
         }
 
         private void areaTrabajo_btn_Click(object sender, EventArgs e)
         {
-            crearAreaTrabajo crear = new crearAreaTrabajo();
+            crearAreaTrabajo crear = new crearAreaTrabajo(rol);
             this.Hide();
             crear.Show();
         }

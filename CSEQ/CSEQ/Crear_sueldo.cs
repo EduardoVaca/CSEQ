@@ -15,9 +15,11 @@ namespace CSEQ
 
         String minimo_selected;
         String maximo_selected;
+        int rol;
 
-        public Crear_sueldo()
+        public Crear_sueldo(int rol)
         {
+            this.rol = rol;
             InitializeComponent();            
 
         }
@@ -94,6 +96,15 @@ namespace CSEQ
             }
         }
 
+        private void Crear_sueldo_Load(object sender, EventArgs e)
+        {
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                eliminar_btn.Visible = true;
+                modificar_btn.Visible = true;
+            }           
+        }
 
     }
 }

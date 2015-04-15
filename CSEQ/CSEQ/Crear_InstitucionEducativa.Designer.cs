@@ -57,7 +57,7 @@
             this.guardar_btn = new System.Windows.Forms.Button();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Busqueda_grp = new System.Windows.Forms.GroupBox();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.modificar_btn = new System.Windows.Forms.Button();
             this.eliminar_btn = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.Busqueda_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1532, 13);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 56);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,7 +85,7 @@
             // 
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
             this.back_picture.Location = new System.Drawing.Point(12, 937);
-            this.back_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.back_picture.Margin = new System.Windows.Forms.Padding(4);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(60, 56);
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,7 +121,7 @@
             // 
             this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.nombre_txt.Location = new System.Drawing.Point(160, 188);
-            this.nombre_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombre_txt.Margin = new System.Windows.Forms.Padding(4);
             this.nombre_txt.Name = "nombre_txt";
             this.nombre_txt.Size = new System.Drawing.Size(760, 47);
             this.nombre_txt.TabIndex = 25;
@@ -166,7 +166,7 @@
             // 
             this.correo_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.correo_txt.Location = new System.Drawing.Point(146, 369);
-            this.correo_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.correo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.correo_txt.Name = "correo_txt";
             this.correo_txt.Size = new System.Drawing.Size(404, 47);
             this.correo_txt.TabIndex = 29;
@@ -175,7 +175,7 @@
             // 
             this.calle_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.calle_txt.Location = new System.Drawing.Point(146, 456);
-            this.calle_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.calle_txt.Margin = new System.Windows.Forms.Padding(4);
             this.calle_txt.Name = "calle_txt";
             this.calle_txt.Size = new System.Drawing.Size(682, 47);
             this.calle_txt.TabIndex = 31;
@@ -197,7 +197,7 @@
             this.ID_delegacion.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_delegacion.FormattingEnabled = true;
             this.ID_delegacion.Location = new System.Drawing.Point(216, 667);
-            this.ID_delegacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_delegacion.Margin = new System.Windows.Forms.Padding(4);
             this.ID_delegacion.Name = "ID_delegacion";
             this.ID_delegacion.Size = new System.Drawing.Size(264, 41);
             this.ID_delegacion.TabIndex = 46;
@@ -219,7 +219,7 @@
             this.ID_municipio.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_municipio.FormattingEnabled = true;
             this.ID_municipio.Location = new System.Drawing.Point(632, 587);
-            this.ID_municipio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_municipio.Margin = new System.Windows.Forms.Padding(4);
             this.ID_municipio.Name = "ID_municipio";
             this.ID_municipio.Size = new System.Drawing.Size(296, 41);
             this.ID_municipio.TabIndex = 44;
@@ -242,7 +242,7 @@
             this.ID_estado.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_estado.FormattingEnabled = true;
             this.ID_estado.Location = new System.Drawing.Point(160, 583);
-            this.ID_estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_estado.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estado.Name = "ID_estado";
             this.ID_estado.Size = new System.Drawing.Size(264, 41);
             this.ID_estado.TabIndex = 42;
@@ -265,7 +265,7 @@
             this.ID_colonia.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_colonia.FormattingEnabled = true;
             this.ID_colonia.Location = new System.Drawing.Point(634, 665);
-            this.ID_colonia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_colonia.Margin = new System.Windows.Forms.Padding(4);
             this.ID_colonia.Name = "ID_colonia";
             this.ID_colonia.Size = new System.Drawing.Size(294, 41);
             this.ID_colonia.TabIndex = 40;
@@ -300,7 +300,7 @@
             this.privada_check.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.privada_check.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.privada_check.Location = new System.Drawing.Point(164, 763);
-            this.privada_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.privada_check.Margin = new System.Windows.Forms.Padding(4);
             this.privada_check.Name = "privada_check";
             this.privada_check.Size = new System.Drawing.Size(66, 36);
             this.privada_check.TabIndex = 48;
@@ -325,7 +325,7 @@
             this.especializada_check.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.especializada_check.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.especializada_check.Location = new System.Drawing.Point(494, 763);
-            this.especializada_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.especializada_check.Margin = new System.Windows.Forms.Padding(4);
             this.especializada_check.Name = "especializada_check";
             this.especializada_check.Size = new System.Drawing.Size(66, 36);
             this.especializada_check.TabIndex = 50;
@@ -336,7 +336,7 @@
             // 
             this.guardar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.guardar_btn.Location = new System.Drawing.Point(68, 842);
-            this.guardar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guardar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.guardar_btn.Name = "guardar_btn";
             this.guardar_btn.Size = new System.Drawing.Size(174, 65);
             this.guardar_btn.TabIndex = 52;
@@ -348,7 +348,7 @@
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
             this.Buscar.Location = new System.Drawing.Point(536, 40);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(6);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(78, 69);
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -360,26 +360,27 @@
             // 
             this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.busqueda_txt.Location = new System.Drawing.Point(18, 54);
-            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_txt.Name = "busqueda_txt";
             this.busqueda_txt.Size = new System.Drawing.Size(508, 47);
             this.busqueda_txt.TabIndex = 55;
             // 
-            // groupBox1
+            // Busqueda_grp
             // 
-            this.groupBox1.Controls.Add(this.busqueda_grid);
-            this.groupBox1.Controls.Add(this.busqueda_txt);
-            this.groupBox1.Controls.Add(this.Buscar);
-            this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(958, 169);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(628, 738);
-            this.groupBox1.TabIndex = 56;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Búsqueda de registros";
+            this.Busqueda_grp.Controls.Add(this.busqueda_grid);
+            this.Busqueda_grp.Controls.Add(this.busqueda_txt);
+            this.Busqueda_grp.Controls.Add(this.Buscar);
+            this.Busqueda_grp.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Busqueda_grp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Busqueda_grp.Location = new System.Drawing.Point(958, 169);
+            this.Busqueda_grp.Margin = new System.Windows.Forms.Padding(4);
+            this.Busqueda_grp.Name = "Busqueda_grp";
+            this.Busqueda_grp.Padding = new System.Windows.Forms.Padding(4);
+            this.Busqueda_grp.Size = new System.Drawing.Size(628, 738);
+            this.Busqueda_grp.TabIndex = 56;
+            this.Busqueda_grp.TabStop = false;
+            this.Busqueda_grp.Text = "Búsqueda de registros";
+            this.Busqueda_grp.Visible = false;
             // 
             // busqueda_grid
             // 
@@ -400,7 +401,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.Location = new System.Drawing.Point(14, 131);
-            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.Size = new System.Drawing.Size(606, 600);
@@ -412,12 +413,13 @@
             this.modificar_btn.Enabled = false;
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.modificar_btn.Location = new System.Drawing.Point(388, 842);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.modificar_btn.Name = "modificar_btn";
             this.modificar_btn.Size = new System.Drawing.Size(174, 65);
             this.modificar_btn.TabIndex = 57;
             this.modificar_btn.Text = "Modificar";
             this.modificar_btn.UseVisualStyleBackColor = true;
+            this.modificar_btn.Visible = false;
             this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
             // eliminar_btn
@@ -425,19 +427,20 @@
             this.eliminar_btn.Enabled = false;
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.eliminar_btn.Location = new System.Drawing.Point(708, 842);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.eliminar_btn.Name = "eliminar_btn";
             this.eliminar_btn.Size = new System.Drawing.Size(174, 65);
             this.eliminar_btn.TabIndex = 58;
             this.eliminar_btn.Text = "Eliminar";
             this.eliminar_btn.UseVisualStyleBackColor = true;
+            this.eliminar_btn.Visible = false;
             this.eliminar_btn.Click += new System.EventHandler(this.eliminar_btn_Click);
             // 
             // telefono_txt
             // 
             this.telefono_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefono_txt.Location = new System.Drawing.Point(180, 290);
-            this.telefono_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.telefono_txt.Margin = new System.Windows.Forms.Padding(4);
             this.telefono_txt.Mask = "(999) 000-0000";
             this.telefono_txt.Name = "telefono_txt";
             this.telefono_txt.Size = new System.Drawing.Size(370, 40);
@@ -478,9 +481,9 @@
             this.Controls.Add(this.back_picture);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Busqueda_grp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Crear_InstitucionEducativa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear_InstitucionEducativa";
@@ -488,8 +491,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Busqueda_grp.ResumeLayout(false);
+            this.Busqueda_grp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -524,7 +527,7 @@
         private System.Windows.Forms.Button guardar_btn;
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Busqueda_grp;
         private System.Windows.Forms.DataGridView busqueda_grid;
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.Button eliminar_btn;

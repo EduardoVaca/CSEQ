@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persona));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Persona_tabControl = new System.Windows.Forms.TabControl();
             this.DatosPersonales_tab = new System.Windows.Forms.TabPage();
@@ -124,6 +124,9 @@
             this.descripcion_txt = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.PerdidaAuditiva_tab = new System.Windows.Forms.TabPage();
+            this.bilateral_check = new System.Windows.Forms.CheckBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
             this.marca = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.prelinguistica_check = new System.Windows.Forms.CheckBox();
@@ -179,13 +182,10 @@
             this.guardar_btn = new System.Windows.Forms.Button();
             this.label74 = new System.Windows.Forms.Label();
             this.modificar_btn = new System.Windows.Forms.Button();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
+            this.modificar_lb = new System.Windows.Forms.Label();
+            this.eliminar_lb = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.bilateral_check = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -203,7 +203,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1512, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 56);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,7 +221,7 @@
             this.Persona_tabControl.Controls.Add(this.BuscarRegistro_tab);
             this.Persona_tabControl.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Persona_tabControl.Location = new System.Drawing.Point(10, 10);
-            this.Persona_tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Persona_tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.Persona_tabControl.Name = "Persona_tabControl";
             this.Persona_tabControl.SelectedIndex = 0;
             this.Persona_tabControl.Size = new System.Drawing.Size(1488, 1006);
@@ -276,9 +276,9 @@
             this.DatosPersonales_tab.Controls.Add(this.label1);
             this.DatosPersonales_tab.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DatosPersonales_tab.Location = new System.Drawing.Point(4, 36);
-            this.DatosPersonales_tab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DatosPersonales_tab.Margin = new System.Windows.Forms.Padding(4);
             this.DatosPersonales_tab.Name = "DatosPersonales_tab";
-            this.DatosPersonales_tab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DatosPersonales_tab.Padding = new System.Windows.Forms.Padding(4);
             this.DatosPersonales_tab.Size = new System.Drawing.Size(1480, 966);
             this.DatosPersonales_tab.TabIndex = 0;
             this.DatosPersonales_tab.Text = "Datos personales";
@@ -408,7 +408,7 @@
             this.ID_estadoCivil.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_estadoCivil.FormattingEnabled = true;
             this.ID_estadoCivil.Location = new System.Drawing.Point(264, 873);
-            this.ID_estadoCivil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_estadoCivil.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estadoCivil.Name = "ID_estadoCivil";
             this.ID_estadoCivil.Size = new System.Drawing.Size(216, 41);
             this.ID_estadoCivil.TabIndex = 47;
@@ -430,7 +430,7 @@
             this.Censo.Font = new System.Drawing.Font("Candara", 10F);
             this.Censo.FormattingEnabled = true;
             this.Censo.Location = new System.Drawing.Point(646, 794);
-            this.Censo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Censo.Margin = new System.Windows.Forms.Padding(4);
             this.Censo.Name = "Censo";
             this.Censo.Size = new System.Drawing.Size(134, 41);
             this.Censo.TabIndex = 45;
@@ -452,7 +452,7 @@
             this.comunidad_indigena_check.AutoSize = true;
             this.comunidad_indigena_check.Font = new System.Drawing.Font("Candara", 9F);
             this.comunidad_indigena_check.Location = new System.Drawing.Point(1012, 729);
-            this.comunidad_indigena_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comunidad_indigena_check.Margin = new System.Windows.Forms.Padding(4);
             this.comunidad_indigena_check.Name = "comunidad_indigena_check";
             this.comunidad_indigena_check.Size = new System.Drawing.Size(62, 33);
             this.comunidad_indigena_check.TabIndex = 43;
@@ -476,7 +476,7 @@
             this.credencialIFE_check.AutoSize = true;
             this.credencialIFE_check.Font = new System.Drawing.Font("Candara", 9F);
             this.credencialIFE_check.Location = new System.Drawing.Point(386, 804);
-            this.credencialIFE_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.credencialIFE_check.Margin = new System.Windows.Forms.Padding(4);
             this.credencialIFE_check.Name = "credencialIFE_check";
             this.credencialIFE_check.Size = new System.Drawing.Size(62, 33);
             this.credencialIFE_check.TabIndex = 41;
@@ -500,7 +500,7 @@
             this.mexicano_check.AutoSize = true;
             this.mexicano_check.Font = new System.Drawing.Font("Candara", 9F);
             this.mexicano_check.Location = new System.Drawing.Point(234, 729);
-            this.mexicano_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mexicano_check.Margin = new System.Windows.Forms.Padding(4);
             this.mexicano_check.Name = "mexicano_check";
             this.mexicano_check.Size = new System.Drawing.Size(62, 33);
             this.mexicano_check.TabIndex = 39;
@@ -512,7 +512,7 @@
             this.ID_delegacion.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_delegacion.FormattingEnabled = true;
             this.ID_delegacion.Location = new System.Drawing.Point(706, 637);
-            this.ID_delegacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_delegacion.Margin = new System.Windows.Forms.Padding(4);
             this.ID_delegacion.Name = "ID_delegacion";
             this.ID_delegacion.Size = new System.Drawing.Size(290, 41);
             this.ID_delegacion.TabIndex = 38;
@@ -547,7 +547,7 @@
             this.ID_municipio.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_municipio.FormattingEnabled = true;
             this.ID_municipio.Location = new System.Drawing.Point(216, 637);
-            this.ID_municipio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_municipio.Margin = new System.Windows.Forms.Padding(4);
             this.ID_municipio.Name = "ID_municipio";
             this.ID_municipio.Size = new System.Drawing.Size(274, 41);
             this.ID_municipio.TabIndex = 35;
@@ -572,7 +572,7 @@
             this.ID_estado.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_estado.FormattingEnabled = true;
             this.ID_estado.Location = new System.Drawing.Point(1012, 556);
-            this.ID_estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_estado.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estado.Name = "ID_estado";
             this.ID_estado.Size = new System.Drawing.Size(264, 41);
             this.ID_estado.TabIndex = 33;
@@ -597,7 +597,7 @@
             this.ID_colonia.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_colonia.FormattingEnabled = true;
             this.ID_colonia.Location = new System.Drawing.Point(1146, 637);
-            this.ID_colonia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_colonia.Margin = new System.Windows.Forms.Padding(4);
             this.ID_colonia.Name = "ID_colonia";
             this.ID_colonia.Size = new System.Drawing.Size(294, 41);
             this.ID_colonia.TabIndex = 31;
@@ -619,7 +619,7 @@
             // 
             this.calle_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.calle_txt.Location = new System.Drawing.Point(188, 554);
-            this.calle_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.calle_txt.Margin = new System.Windows.Forms.Padding(4);
             this.calle_txt.Name = "calle_txt";
             this.calle_txt.Size = new System.Drawing.Size(602, 47);
             this.calle_txt.TabIndex = 29;
@@ -640,7 +640,7 @@
             // 
             this.Correo_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.Correo_txt.Location = new System.Drawing.Point(188, 487);
-            this.Correo_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Correo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.Correo_txt.Name = "Correo_txt";
             this.Correo_txt.Size = new System.Drawing.Size(452, 47);
             this.Correo_txt.TabIndex = 27;
@@ -661,7 +661,7 @@
             // 
             this.telefono_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.telefono_txt.Location = new System.Drawing.Point(202, 402);
-            this.telefono_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.telefono_txt.Margin = new System.Windows.Forms.Padding(4);
             this.telefono_txt.Name = "telefono_txt";
             this.telefono_txt.Size = new System.Drawing.Size(440, 47);
             this.telefono_txt.TabIndex = 25;
@@ -683,7 +683,7 @@
             this.femenino_check.AutoSize = true;
             this.femenino_check.Font = new System.Drawing.Font("Candara", 9F);
             this.femenino_check.Location = new System.Drawing.Point(342, 338);
-            this.femenino_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.femenino_check.Margin = new System.Windows.Forms.Padding(4);
             this.femenino_check.Name = "femenino_check";
             this.femenino_check.Size = new System.Drawing.Size(145, 33);
             this.femenino_check.TabIndex = 23;
@@ -696,7 +696,7 @@
             this.masculino_check.AutoSize = true;
             this.masculino_check.Font = new System.Drawing.Font("Candara", 9F);
             this.masculino_check.Location = new System.Drawing.Point(172, 338);
-            this.masculino_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.masculino_check.Margin = new System.Windows.Forms.Padding(4);
             this.masculino_check.Name = "masculino_check";
             this.masculino_check.Size = new System.Drawing.Size(148, 33);
             this.masculino_check.TabIndex = 22;
@@ -720,7 +720,7 @@
             // 
             this.ID_fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ID_fechaNacimiento.Location = new System.Drawing.Point(352, 263);
-            this.ID_fechaNacimiento.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ID_fechaNacimiento.Margin = new System.Windows.Forms.Padding(8);
             this.ID_fechaNacimiento.Name = "ID_fechaNacimiento";
             this.ID_fechaNacimiento.Size = new System.Drawing.Size(402, 34);
             this.ID_fechaNacimiento.TabIndex = 20;
@@ -741,7 +741,7 @@
             // 
             this.Nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.Nombre_txt.Location = new System.Drawing.Point(188, 167);
-            this.Nombre_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Nombre_txt.Margin = new System.Windows.Forms.Padding(4);
             this.Nombre_txt.Name = "Nombre_txt";
             this.Nombre_txt.Size = new System.Drawing.Size(592, 47);
             this.Nombre_txt.TabIndex = 18;
@@ -762,7 +762,7 @@
             // 
             this.CURP_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.CURP_txt.Location = new System.Drawing.Point(188, 79);
-            this.CURP_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CURP_txt.Margin = new System.Windows.Forms.Padding(4);
             this.CURP_txt.Name = "CURP_txt";
             this.CURP_txt.Size = new System.Drawing.Size(430, 47);
             this.CURP_txt.TabIndex = 16;
@@ -803,9 +803,9 @@
             this.Estudios_tab.Controls.Add(this.label18);
             this.Estudios_tab.Font = new System.Drawing.Font("Candara", 8.25F);
             this.Estudios_tab.Location = new System.Drawing.Point(4, 36);
-            this.Estudios_tab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Estudios_tab.Margin = new System.Windows.Forms.Padding(4);
             this.Estudios_tab.Name = "Estudios_tab";
-            this.Estudios_tab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Estudios_tab.Padding = new System.Windows.Forms.Padding(4);
             this.Estudios_tab.Size = new System.Drawing.Size(1480, 966);
             this.Estudios_tab.TabIndex = 1;
             this.Estudios_tab.Text = "Estudios";
@@ -814,7 +814,7 @@
             // 
             this.ano_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.ano_txt.Location = new System.Drawing.Point(1108, 52);
-            this.ano_txt.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ano_txt.Margin = new System.Windows.Forms.Padding(8);
             this.ano_txt.Mask = "0000";
             this.ano_txt.Name = "ano_txt";
             this.ano_txt.Size = new System.Drawing.Size(196, 47);
@@ -885,7 +885,7 @@
             this.ID_nivelLSM.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_nivelLSM.FormattingEnabled = true;
             this.ID_nivelLSM.Location = new System.Drawing.Point(282, 579);
-            this.ID_nivelLSM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_nivelLSM.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelLSM.Name = "ID_nivelLSM";
             this.ID_nivelLSM.Size = new System.Drawing.Size(214, 37);
             this.ID_nivelLSM.TabIndex = 49;
@@ -907,7 +907,7 @@
             this.ID_nivelIngles.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_nivelIngles.FormattingEnabled = true;
             this.ID_nivelIngles.Location = new System.Drawing.Point(282, 485);
-            this.ID_nivelIngles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_nivelIngles.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelIngles.Name = "ID_nivelIngles";
             this.ID_nivelIngles.Size = new System.Drawing.Size(214, 37);
             this.ID_nivelIngles.TabIndex = 47;
@@ -929,7 +929,7 @@
             this.ID_nivelEspanol.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_nivelEspanol.FormattingEnabled = true;
             this.ID_nivelEspanol.Location = new System.Drawing.Point(282, 404);
-            this.ID_nivelEspanol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_nivelEspanol.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelEspanol.Name = "ID_nivelEspanol";
             this.ID_nivelEspanol.Size = new System.Drawing.Size(214, 37);
             this.ID_nivelEspanol.TabIndex = 45;
@@ -951,7 +951,7 @@
             this.ID_lenguaDominante.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_lenguaDominante.FormattingEnabled = true;
             this.ID_lenguaDominante.Location = new System.Drawing.Point(380, 290);
-            this.ID_lenguaDominante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_lenguaDominante.Margin = new System.Windows.Forms.Padding(4);
             this.ID_lenguaDominante.Name = "ID_lenguaDominante";
             this.ID_lenguaDominante.Size = new System.Drawing.Size(416, 37);
             this.ID_lenguaDominante.TabIndex = 43;
@@ -973,7 +973,7 @@
             this.ID_institucionEducativa.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_institucionEducativa.FormattingEnabled = true;
             this.ID_institucionEducativa.Location = new System.Drawing.Point(428, 173);
-            this.ID_institucionEducativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_institucionEducativa.Margin = new System.Windows.Forms.Padding(4);
             this.ID_institucionEducativa.Name = "ID_institucionEducativa";
             this.ID_institucionEducativa.Size = new System.Drawing.Size(674, 37);
             this.ID_institucionEducativa.TabIndex = 41;
@@ -995,7 +995,7 @@
             this.ID_nivelEducativo.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_nivelEducativo.FormattingEnabled = true;
             this.ID_nivelEducativo.Location = new System.Drawing.Point(332, 62);
-            this.ID_nivelEducativo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_nivelEducativo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelEducativo.Name = "ID_nivelEducativo";
             this.ID_nivelEducativo.Size = new System.Drawing.Size(362, 37);
             this.ID_nivelEducativo.TabIndex = 39;
@@ -1040,7 +1040,7 @@
             this.DatosLaborales_tab.Controls.Add(this.descripcion_txt);
             this.DatosLaborales_tab.Controls.Add(this.label24);
             this.DatosLaborales_tab.Location = new System.Drawing.Point(4, 36);
-            this.DatosLaborales_tab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DatosLaborales_tab.Margin = new System.Windows.Forms.Padding(4);
             this.DatosLaborales_tab.Name = "DatosLaborales_tab";
             this.DatosLaborales_tab.Size = new System.Drawing.Size(1480, 966);
             this.DatosLaborales_tab.TabIndex = 2;
@@ -1050,7 +1050,7 @@
             // 
             this.correoEmpleo_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.correoEmpleo_txt.Location = new System.Drawing.Point(170, 442);
-            this.correoEmpleo_txt.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.correoEmpleo_txt.Margin = new System.Windows.Forms.Padding(8);
             this.correoEmpleo_txt.Name = "correoEmpleo_txt";
             this.correoEmpleo_txt.Size = new System.Drawing.Size(934, 47);
             this.correoEmpleo_txt.TabIndex = 59;
@@ -1071,7 +1071,7 @@
             // 
             this.calleEmpleo_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.calleEmpleo_txt.Location = new System.Drawing.Point(170, 365);
-            this.calleEmpleo_txt.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.calleEmpleo_txt.Margin = new System.Windows.Forms.Padding(8);
             this.calleEmpleo_txt.Name = "calleEmpleo_txt";
             this.calleEmpleo_txt.Size = new System.Drawing.Size(968, 47);
             this.calleEmpleo_txt.TabIndex = 57;
@@ -1093,7 +1093,7 @@
             this.interpretacion_LSM_check.AutoSize = true;
             this.interpretacion_LSM_check.Font = new System.Drawing.Font("Candara", 9F);
             this.interpretacion_LSM_check.Location = new System.Drawing.Point(520, 808);
-            this.interpretacion_LSM_check.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.interpretacion_LSM_check.Margin = new System.Windows.Forms.Padding(8);
             this.interpretacion_LSM_check.Name = "interpretacion_LSM_check";
             this.interpretacion_LSM_check.Size = new System.Drawing.Size(62, 33);
             this.interpretacion_LSM_check.TabIndex = 55;
@@ -1116,7 +1116,7 @@
             // 
             this.telefonoEmpleo_txt.Font = new System.Drawing.Font("Candara", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefonoEmpleo_txt.Location = new System.Drawing.Point(220, 300);
-            this.telefonoEmpleo_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.telefonoEmpleo_txt.Margin = new System.Windows.Forms.Padding(6);
             this.telefonoEmpleo_txt.Name = "telefonoEmpleo_txt";
             this.telefonoEmpleo_txt.Size = new System.Drawing.Size(720, 40);
             this.telefonoEmpleo_txt.TabIndex = 53;
@@ -1138,7 +1138,7 @@
             this.delegacionEmpleo_combo.Font = new System.Drawing.Font("Candara", 10F);
             this.delegacionEmpleo_combo.FormattingEnabled = true;
             this.delegacionEmpleo_combo.Location = new System.Drawing.Point(204, 613);
-            this.delegacionEmpleo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delegacionEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.delegacionEmpleo_combo.Name = "delegacionEmpleo_combo";
             this.delegacionEmpleo_combo.Size = new System.Drawing.Size(264, 41);
             this.delegacionEmpleo_combo.TabIndex = 51;
@@ -1160,7 +1160,7 @@
             this.municipioEmpleo_combo.Font = new System.Drawing.Font("Candara", 10F);
             this.municipioEmpleo_combo.FormattingEnabled = true;
             this.municipioEmpleo_combo.Location = new System.Drawing.Point(688, 542);
-            this.municipioEmpleo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.municipioEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.municipioEmpleo_combo.Name = "municipioEmpleo_combo";
             this.municipioEmpleo_combo.Size = new System.Drawing.Size(264, 41);
             this.municipioEmpleo_combo.TabIndex = 49;
@@ -1183,7 +1183,7 @@
             this.estadoEmpleo_combo.Font = new System.Drawing.Font("Candara", 10F);
             this.estadoEmpleo_combo.FormattingEnabled = true;
             this.estadoEmpleo_combo.Location = new System.Drawing.Point(204, 538);
-            this.estadoEmpleo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estadoEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.estadoEmpleo_combo.Name = "estadoEmpleo_combo";
             this.estadoEmpleo_combo.Size = new System.Drawing.Size(264, 41);
             this.estadoEmpleo_combo.TabIndex = 47;
@@ -1206,7 +1206,7 @@
             this.ID_coloniaEmpleo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_coloniaEmpleo.FormattingEnabled = true;
             this.ID_coloniaEmpleo.Location = new System.Drawing.Point(644, 615);
-            this.ID_coloniaEmpleo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_coloniaEmpleo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_coloniaEmpleo.Name = "ID_coloniaEmpleo";
             this.ID_coloniaEmpleo.Size = new System.Drawing.Size(294, 41);
             this.ID_coloniaEmpleo.TabIndex = 45;
@@ -1228,7 +1228,7 @@
             this.ID_areaTrabajo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_areaTrabajo.FormattingEnabled = true;
             this.ID_areaTrabajo.Location = new System.Drawing.Point(908, 233);
-            this.ID_areaTrabajo.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ID_areaTrabajo.Margin = new System.Windows.Forms.Padding(8);
             this.ID_areaTrabajo.Name = "ID_areaTrabajo";
             this.ID_areaTrabajo.Size = new System.Drawing.Size(362, 41);
             this.ID_areaTrabajo.TabIndex = 42;
@@ -1250,7 +1250,7 @@
             this.ID_sueldo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_sueldo.FormattingEnabled = true;
             this.ID_sueldo.Location = new System.Drawing.Point(220, 237);
-            this.ID_sueldo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_sueldo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_sueldo.Name = "ID_sueldo";
             this.ID_sueldo.Size = new System.Drawing.Size(362, 41);
             this.ID_sueldo.TabIndex = 40;
@@ -1271,7 +1271,7 @@
             // 
             this.nombre_compania_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.nombre_compania_txt.Location = new System.Drawing.Point(220, 140);
-            this.nombre_compania_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombre_compania_txt.Margin = new System.Windows.Forms.Padding(4);
             this.nombre_compania_txt.Name = "nombre_compania_txt";
             this.nombre_compania_txt.Size = new System.Drawing.Size(628, 47);
             this.nombre_compania_txt.TabIndex = 22;
@@ -1292,7 +1292,7 @@
             // 
             this.descripcion_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.descripcion_txt.Location = new System.Drawing.Point(372, 44);
-            this.descripcion_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descripcion_txt.Margin = new System.Windows.Forms.Padding(4);
             this.descripcion_txt.Name = "descripcion_txt";
             this.descripcion_txt.Size = new System.Drawing.Size(1074, 47);
             this.descripcion_txt.TabIndex = 20;
@@ -1349,11 +1349,47 @@
             this.PerdidaAuditiva_tab.Controls.Add(this.ID_periodo);
             this.PerdidaAuditiva_tab.Controls.Add(this.label28);
             this.PerdidaAuditiva_tab.Location = new System.Drawing.Point(4, 36);
-            this.PerdidaAuditiva_tab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PerdidaAuditiva_tab.Margin = new System.Windows.Forms.Padding(4);
             this.PerdidaAuditiva_tab.Name = "PerdidaAuditiva_tab";
             this.PerdidaAuditiva_tab.Size = new System.Drawing.Size(1480, 966);
             this.PerdidaAuditiva_tab.TabIndex = 3;
             this.PerdidaAuditiva_tab.Text = "Perdida Auditiva";
+            // 
+            // bilateral_check
+            // 
+            this.bilateral_check.AutoSize = true;
+            this.bilateral_check.Font = new System.Drawing.Font("Candara", 9F);
+            this.bilateral_check.Location = new System.Drawing.Point(1144, 243);
+            this.bilateral_check.Margin = new System.Windows.Forms.Padding(8);
+            this.bilateral_check.Name = "bilateral_check";
+            this.bilateral_check.Size = new System.Drawing.Size(62, 33);
+            this.bilateral_check.TabIndex = 81;
+            this.bilateral_check.Text = "Sí";
+            this.bilateral_check.UseVisualStyleBackColor = true;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.label43.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label43.Location = new System.Drawing.Point(994, 235);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(147, 45);
+            this.label43.TabIndex = 80;
+            this.label43.Text = "Bilateral";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label82.Location = new System.Drawing.Point(1196, 238);
+            this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(32, 42);
+            this.label82.TabIndex = 79;
+            this.label82.Text = "*";
             // 
             // marca
             // 
@@ -1383,7 +1419,7 @@
             this.prelinguistica_check.AutoSize = true;
             this.prelinguistica_check.Font = new System.Drawing.Font("Candara", 9F);
             this.prelinguistica_check.Location = new System.Drawing.Point(276, 690);
-            this.prelinguistica_check.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.prelinguistica_check.Margin = new System.Windows.Forms.Padding(8);
             this.prelinguistica_check.Name = "prelinguistica_check";
             this.prelinguistica_check.Size = new System.Drawing.Size(62, 33);
             this.prelinguistica_check.TabIndex = 74;
@@ -1479,7 +1515,7 @@
             this.alergia_check.AutoSize = true;
             this.alergia_check.Font = new System.Drawing.Font("Candara", 9F);
             this.alergia_check.Location = new System.Drawing.Point(270, 623);
-            this.alergia_check.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.alergia_check.Margin = new System.Windows.Forms.Padding(8);
             this.alergia_check.Name = "alergia_check";
             this.alergia_check.Size = new System.Drawing.Size(62, 33);
             this.alergia_check.TabIndex = 66;
@@ -1503,7 +1539,7 @@
             this.enfermedad_check.AutoSize = true;
             this.enfermedad_check.Font = new System.Drawing.Font("Candara", 9F);
             this.enfermedad_check.Location = new System.Drawing.Point(346, 562);
-            this.enfermedad_check.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.enfermedad_check.Margin = new System.Windows.Forms.Padding(8);
             this.enfermedad_check.Name = "enfermedad_check";
             this.enfermedad_check.Size = new System.Drawing.Size(62, 33);
             this.enfermedad_check.TabIndex = 64;
@@ -1539,7 +1575,7 @@
             this.implante_coclear_check.AutoSize = true;
             this.implante_coclear_check.Font = new System.Drawing.Font("Candara", 9F);
             this.implante_coclear_check.Location = new System.Drawing.Point(420, 481);
-            this.implante_coclear_check.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.implante_coclear_check.Margin = new System.Windows.Forms.Padding(8);
             this.implante_coclear_check.Name = "implante_coclear_check";
             this.implante_coclear_check.Size = new System.Drawing.Size(62, 33);
             this.implante_coclear_check.TabIndex = 61;
@@ -1575,7 +1611,7 @@
             this.examen_audiometria_check.AutoSize = true;
             this.examen_audiometria_check.Font = new System.Drawing.Font("Candara", 9F);
             this.examen_audiometria_check.Location = new System.Drawing.Point(642, 404);
-            this.examen_audiometria_check.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.examen_audiometria_check.Margin = new System.Windows.Forms.Padding(8);
             this.examen_audiometria_check.Name = "examen_audiometria_check";
             this.examen_audiometria_check.Size = new System.Drawing.Size(62, 33);
             this.examen_audiometria_check.TabIndex = 58;
@@ -1598,7 +1634,7 @@
             // 
             this.modelo_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.modelo_txt.Location = new System.Drawing.Point(164, 831);
-            this.modelo_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modelo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.modelo_txt.Name = "modelo_txt";
             this.modelo_txt.Size = new System.Drawing.Size(252, 47);
             this.modelo_txt.TabIndex = 54;
@@ -1620,7 +1656,7 @@
             this.ID_aparatoAuditivo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_aparatoAuditivo.FormattingEnabled = true;
             this.ID_aparatoAuditivo.Location = new System.Drawing.Point(296, 754);
-            this.ID_aparatoAuditivo.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ID_aparatoAuditivo.Margin = new System.Windows.Forms.Padding(8);
             this.ID_aparatoAuditivo.Name = "ID_aparatoAuditivo";
             this.ID_aparatoAuditivo.Size = new System.Drawing.Size(504, 41);
             this.ID_aparatoAuditivo.TabIndex = 52;
@@ -1640,7 +1676,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(620, 313);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 37);
             this.button1.TabIndex = 48;
@@ -1652,7 +1688,7 @@
             this.ID_causa.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_causa.FormattingEnabled = true;
             this.ID_causa.Location = new System.Drawing.Point(140, 313);
-            this.ID_causa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_causa.Margin = new System.Windows.Forms.Padding(4);
             this.ID_causa.Name = "ID_causa";
             this.ID_causa.Size = new System.Drawing.Size(468, 41);
             this.ID_causa.TabIndex = 47;
@@ -1674,7 +1710,7 @@
             this.ID_grado.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_grado.FormattingEnabled = true;
             this.ID_grado.Location = new System.Drawing.Point(140, 235);
-            this.ID_grado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_grado.Margin = new System.Windows.Forms.Padding(4);
             this.ID_grado.Name = "ID_grado";
             this.ID_grado.Size = new System.Drawing.Size(788, 41);
             this.ID_grado.TabIndex = 45;
@@ -1696,7 +1732,7 @@
             this.ID_perdidaAuditiva.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_perdidaAuditiva.FormattingEnabled = true;
             this.ID_perdidaAuditiva.Location = new System.Drawing.Point(470, 146);
-            this.ID_perdidaAuditiva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_perdidaAuditiva.Margin = new System.Windows.Forms.Padding(4);
             this.ID_perdidaAuditiva.Name = "ID_perdidaAuditiva";
             this.ID_perdidaAuditiva.Size = new System.Drawing.Size(458, 41);
             this.ID_perdidaAuditiva.TabIndex = 43;
@@ -1718,7 +1754,7 @@
             this.ID_periodo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_periodo.FormattingEnabled = true;
             this.ID_periodo.Location = new System.Drawing.Point(648, 35);
-            this.ID_periodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_periodo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_periodo.Name = "ID_periodo";
             this.ID_periodo.Size = new System.Drawing.Size(458, 41);
             this.ID_periodo.TabIndex = 41;
@@ -1750,7 +1786,7 @@
             this.Familia_tab.Controls.Add(this.tieneHijo_check);
             this.Familia_tab.Controls.Add(this.label44);
             this.Familia_tab.Location = new System.Drawing.Point(4, 36);
-            this.Familia_tab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Familia_tab.Margin = new System.Windows.Forms.Padding(4);
             this.Familia_tab.Name = "Familia_tab";
             this.Familia_tab.Size = new System.Drawing.Size(1480, 966);
             this.Familia_tab.TabIndex = 4;
@@ -1772,7 +1808,7 @@
             // 
             this.registraHijo_button.Enabled = false;
             this.registraHijo_button.Location = new System.Drawing.Point(552, 433);
-            this.registraHijo_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.registraHijo_button.Margin = new System.Windows.Forms.Padding(6);
             this.registraHijo_button.Name = "registraHijo_button";
             this.registraHijo_button.Size = new System.Drawing.Size(128, 50);
             this.registraHijo_button.TabIndex = 64;
@@ -1798,7 +1834,7 @@
             this.sordoHijo_check.Enabled = false;
             this.sordoHijo_check.Font = new System.Drawing.Font("Candara", 9F);
             this.sordoHijo_check.Location = new System.Drawing.Point(1034, 323);
-            this.sordoHijo_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sordoHijo_check.Margin = new System.Windows.Forms.Padding(4);
             this.sordoHijo_check.Name = "sordoHijo_check";
             this.sordoHijo_check.Size = new System.Drawing.Size(62, 33);
             this.sordoHijo_check.TabIndex = 60;
@@ -1821,7 +1857,7 @@
             // 
             this.fechaNacimientoHijo.Enabled = false;
             this.fechaNacimientoHijo.Location = new System.Drawing.Point(372, 237);
-            this.fechaNacimientoHijo.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.fechaNacimientoHijo.Margin = new System.Windows.Forms.Padding(8);
             this.fechaNacimientoHijo.Name = "fechaNacimientoHijo";
             this.fechaNacimientoHijo.ShowUpDown = true;
             this.fechaNacimientoHijo.Size = new System.Drawing.Size(528, 34);
@@ -1844,7 +1880,7 @@
             this.nombreHijo_txt.Enabled = false;
             this.nombreHijo_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.nombreHijo_txt.Location = new System.Drawing.Point(196, 135);
-            this.nombreHijo_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombreHijo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.nombreHijo_txt.Name = "nombreHijo_txt";
             this.nombreHijo_txt.Size = new System.Drawing.Size(1070, 47);
             this.nombreHijo_txt.TabIndex = 56;
@@ -1866,7 +1902,7 @@
             this.tieneHijo_check.AutoSize = true;
             this.tieneHijo_check.Font = new System.Drawing.Font("Candara", 9F);
             this.tieneHijo_check.Location = new System.Drawing.Point(282, 54);
-            this.tieneHijo_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tieneHijo_check.Margin = new System.Windows.Forms.Padding(4);
             this.tieneHijo_check.Name = "tieneHijo_check";
             this.tieneHijo_check.Size = new System.Drawing.Size(62, 33);
             this.tieneHijo_check.TabIndex = 17;
@@ -1893,7 +1929,7 @@
             this.BuscarRegistro_tab.Controls.Add(this.Buscar);
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_txt);
             this.BuscarRegistro_tab.Location = new System.Drawing.Point(4, 36);
-            this.BuscarRegistro_tab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuscarRegistro_tab.Margin = new System.Windows.Forms.Padding(4);
             this.BuscarRegistro_tab.Name = "BuscarRegistro_tab";
             this.BuscarRegistro_tab.Size = new System.Drawing.Size(1480, 966);
             this.BuscarRegistro_tab.TabIndex = 5;
@@ -1904,35 +1940,35 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle5;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(24, 308);
-            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.Size = new System.Drawing.Size(1436, 608);
             this.busqueda_grid.TabIndex = 17;
@@ -1942,7 +1978,7 @@
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
             this.Buscar.Location = new System.Drawing.Point(832, 102);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(6);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(78, 69);
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1954,7 +1990,7 @@
             // 
             this.busqueda_txt.Font = new System.Drawing.Font("Candara", 15F);
             this.busqueda_txt.Location = new System.Drawing.Point(24, 115);
-            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(796, 4);
             this.busqueda_txt.Name = "busqueda_txt";
@@ -1965,7 +2001,7 @@
             // 
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
             this.back_picture.Location = new System.Drawing.Point(12, 1017);
-            this.back_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.back_picture.Margin = new System.Windows.Forms.Padding(4);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(60, 56);
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1993,7 +2029,7 @@
             // guardar_btn
             // 
             this.guardar_btn.Location = new System.Drawing.Point(292, 1027);
-            this.guardar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guardar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.guardar_btn.Name = "guardar_btn";
             this.guardar_btn.Size = new System.Drawing.Size(88, 38);
             this.guardar_btn.TabIndex = 21;
@@ -2015,47 +2051,52 @@
             // 
             // modificar_btn
             // 
+            this.modificar_btn.Enabled = false;
             this.modificar_btn.Location = new System.Drawing.Point(664, 1027);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.modificar_btn.Name = "modificar_btn";
             this.modificar_btn.Size = new System.Drawing.Size(96, 38);
             this.modificar_btn.TabIndex = 68;
             this.modificar_btn.UseVisualStyleBackColor = true;
+            this.modificar_btn.Visible = false;
             this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
-            // label65
+            // modificar_lb
             // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label65.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label65.Location = new System.Drawing.Point(488, 1021);
-            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(169, 45);
-            this.label65.TabIndex = 69;
-            this.label65.Text = "Modificar";
+            this.modificar_lb.AutoSize = true;
+            this.modificar_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.modificar_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.modificar_lb.Location = new System.Drawing.Point(488, 1021);
+            this.modificar_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.modificar_lb.Name = "modificar_lb";
+            this.modificar_lb.Size = new System.Drawing.Size(169, 45);
+            this.modificar_lb.TabIndex = 69;
+            this.modificar_lb.Text = "Modificar";
+            this.modificar_lb.Visible = false;
             // 
-            // label75
+            // eliminar_lb
             // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label75.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label75.Location = new System.Drawing.Point(840, 1021);
-            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(144, 45);
-            this.label75.TabIndex = 71;
-            this.label75.Text = "Eliminar";
+            this.eliminar_lb.AutoSize = true;
+            this.eliminar_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.eliminar_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.eliminar_lb.Location = new System.Drawing.Point(840, 1021);
+            this.eliminar_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.eliminar_lb.Name = "eliminar_lb";
+            this.eliminar_lb.Size = new System.Drawing.Size(144, 45);
+            this.eliminar_lb.TabIndex = 71;
+            this.eliminar_lb.Text = "Eliminar";
+            this.eliminar_lb.Visible = false;
             // 
             // eliminar_btn
             // 
             this.eliminar_btn.Enabled = false;
             this.eliminar_btn.Location = new System.Drawing.Point(1016, 1023);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.eliminar_btn.Name = "eliminar_btn";
             this.eliminar_btn.Size = new System.Drawing.Size(96, 38);
             this.eliminar_btn.TabIndex = 70;
             this.eliminar_btn.UseVisualStyleBackColor = true;
+            this.eliminar_btn.Visible = false;
             // 
             // label81
             // 
@@ -2069,42 +2110,6 @@
             this.label81.TabIndex = 77;
             this.label81.Text = "*";
             // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label82.Location = new System.Drawing.Point(1196, 238);
-            this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(32, 42);
-            this.label82.TabIndex = 79;
-            this.label82.Text = "*";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label43.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label43.Location = new System.Drawing.Point(994, 235);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(147, 45);
-            this.label43.TabIndex = 80;
-            this.label43.Text = "Bilateral";
-            // 
-            // bilateral_check
-            // 
-            this.bilateral_check.AutoSize = true;
-            this.bilateral_check.Font = new System.Drawing.Font("Candara", 9F);
-            this.bilateral_check.Location = new System.Drawing.Point(1144, 243);
-            this.bilateral_check.Margin = new System.Windows.Forms.Padding(8);
-            this.bilateral_check.Name = "bilateral_check";
-            this.bilateral_check.Size = new System.Drawing.Size(62, 33);
-            this.bilateral_check.TabIndex = 81;
-            this.bilateral_check.Text = "Sí";
-            this.bilateral_check.UseVisualStyleBackColor = true;
-            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -2113,9 +2118,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1616, 1077);
-            this.Controls.Add(this.label75);
+            this.Controls.Add(this.eliminar_lb);
             this.Controls.Add(this.eliminar_btn);
-            this.Controls.Add(this.label65);
+            this.Controls.Add(this.modificar_lb);
             this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.label74);
             this.Controls.Add(this.guardar_btn);
@@ -2125,7 +2130,7 @@
             this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Persona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Persona";
@@ -2285,8 +2290,8 @@
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;
         private System.Windows.Forms.Button modificar_btn;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label modificar_lb;
+        private System.Windows.Forms.Label eliminar_lb;
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.TextBox calleEmpleo_txt;
         private System.Windows.Forms.Label label78;

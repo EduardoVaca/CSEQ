@@ -13,9 +13,11 @@ namespace CSEQ
     public partial class Crear_marca : Form
     {
         String nombre_selected;
+        int rol;
 
-        public Crear_marca()
+        public Crear_marca(int rol)
         {
+            this.rol = rol;
             InitializeComponent();            
         }
 
@@ -87,6 +89,16 @@ namespace CSEQ
                 {
                     MessageBox.Show("La marca se modifico con exito");
                 }
+            }
+        }
+
+        private void Crear_marca_Load(object sender, EventArgs e)
+        {
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
             }
         }
     }

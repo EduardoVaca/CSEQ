@@ -16,9 +16,11 @@ namespace CSEQ
         String tipo_selected;
         int ID_marca_selected;
         int mID_marca;
+        int rol;
 
-        public CrearAparatoAuditivo()
+        public CrearAparatoAuditivo(int rol)
         {
+            this.rol = rol;
             InitializeComponent();
         }
 
@@ -36,6 +38,13 @@ namespace CSEQ
         private void CrearAparatoAuditivo_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
+
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
+            }
         }
 
         //Metodo donde se agrega el registro a la base de datos

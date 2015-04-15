@@ -13,9 +13,12 @@ namespace CSEQ
     public partial class Persona : Form
     {
         String nombre_selected;
-        public Persona()
+        int rol;
+
+        public Persona(int rol)
         {
             InitializeComponent();
+            this.rol = rol;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -50,6 +53,13 @@ namespace CSEQ
             Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT('$',minimo, ' a ','$',maximo) FROM Sueldo");
             Util.llenarComboBox(estadoEmpleo_combo, "SELECT ID_estado, nombre FROM Estado");
             masculino_check.Checked = true;
+            if (rol == 1)
+            {
+                modificar_btn.Visible = true;
+                modificar_lb.Visible = true;
+                eliminar_btn.Visible = true;
+                eliminar_lb.Visible = true;
+            }
         }
 
         /*--------------------------------------------------------------------------------
@@ -100,6 +110,8 @@ namespace CSEQ
             String CURP;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
+                eliminar_btn.Enabled = true;
+                modificar_btn.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 CURP = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
 
