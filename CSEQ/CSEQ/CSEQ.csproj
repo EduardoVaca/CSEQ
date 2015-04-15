@@ -58,6 +58,12 @@
     <Compile Include="ConsultaRedactada.Designer.cs">
       <DependentUpon>ConsultaRedactada.cs</DependentUpon>
     </Compile>
+    <Compile Include="consultas_salud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultas_salud.Designer.cs">
+      <DependentUpon>consultas_salud.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearAparatoAuditivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaRedactada.resx">
       <DependentUpon>ConsultaRedactada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultas_salud.resx">
+      <DependentUpon>consultas_salud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearAparatoAuditivo.resx">
       <DependentUpon>CrearAparatoAuditivo.cs</DependentUpon>

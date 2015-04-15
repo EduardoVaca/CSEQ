@@ -64,7 +64,7 @@
             this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(1532, 13);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@
             this.Atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
             this.Atras_picture.Location = new System.Drawing.Point(12, 937);
-            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6);
             this.Atras_picture.Name = "Atras_picture";
             this.Atras_picture.Size = new System.Drawing.Size(60, 56);
             this.Atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +115,7 @@
             // 
             this.login_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.login_txt.Location = new System.Drawing.Point(266, 292);
-            this.login_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.login_txt.Margin = new System.Windows.Forms.Padding(6);
             this.login_txt.Name = "login_txt";
             this.login_txt.Size = new System.Drawing.Size(490, 47);
             this.login_txt.TabIndex = 27;
@@ -137,7 +137,7 @@
             // 
             this.password_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.password_txt.Location = new System.Drawing.Point(266, 429);
-            this.password_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(6);
             this.password_txt.Name = "password_txt";
             this.password_txt.Size = new System.Drawing.Size(490, 47);
             this.password_txt.TabIndex = 29;
@@ -146,7 +146,7 @@
             // 
             this.Guardar_txt.Font = new System.Drawing.Font("Candara", 10F);
             this.Guardar_txt.Location = new System.Drawing.Point(70, 787);
-            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6);
             this.Guardar_txt.Name = "Guardar_txt";
             this.Guardar_txt.Size = new System.Drawing.Size(160, 62);
             this.Guardar_txt.TabIndex = 30;
@@ -172,7 +172,7 @@
             this.ID_rol.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_rol.FormattingEnabled = true;
             this.ID_rol.Location = new System.Drawing.Point(266, 565);
-            this.ID_rol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_rol.Margin = new System.Windows.Forms.Padding(4);
             this.ID_rol.Name = "ID_rol";
             this.ID_rol.Size = new System.Drawing.Size(314, 41);
             this.ID_rol.Sorted = true;
@@ -219,7 +219,7 @@
             this.eliminar_btn.Enabled = false;
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.eliminar_btn.Location = new System.Drawing.Point(598, 787);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.eliminar_btn.Name = "eliminar_btn";
             this.eliminar_btn.Size = new System.Drawing.Size(160, 62);
             this.eliminar_btn.TabIndex = 76;
@@ -232,7 +232,7 @@
             this.modificar_btn.Enabled = false;
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.modificar_btn.Location = new System.Drawing.Point(334, 787);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.modificar_btn.Name = "modificar_btn";
             this.modificar_btn.Size = new System.Drawing.Size(160, 62);
             this.modificar_btn.TabIndex = 75;
@@ -249,9 +249,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(832, 146);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(708, 723);
             this.groupBox1.TabIndex = 77;
             this.groupBox1.TabStop = false;
@@ -281,7 +281,7 @@
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(50, 146);
-            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_grid.Name = "busqueda_grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
@@ -293,13 +293,14 @@
             this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.busqueda_grid.Size = new System.Drawing.Size(570, 472);
             this.busqueda_grid.TabIndex = 56;
+            this.busqueda_grid.Visible = false;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
             // Buscar
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
             this.Buscar.Location = new System.Drawing.Point(610, 62);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(6);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(78, 69);
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -311,7 +312,7 @@
             // 
             this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.busqueda_txt.Location = new System.Drawing.Point(12, 75);
-            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.busqueda_txt.Name = "busqueda_txt";
@@ -359,7 +360,7 @@
             this.Controls.Add(this.x_picture);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CrearUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearUsuario";

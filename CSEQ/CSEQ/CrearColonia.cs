@@ -91,6 +91,7 @@ namespace CSEQ
 
         private void Buscar_Click(object sender, EventArgs e)
         {
+            busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
             Util.fillGrid(busqueda_grid, "busquedaEnColonia", busqueda);
         }
