@@ -27,9 +27,9 @@ namespace CSEQ
 
         private void back_picture_Click(object sender, EventArgs e)
         {
-            Menu_registros Menu_registros = new Menu_registros();
+            Menu_principal Menu = new Menu_principal(rol);
             this.Close();
-            Menu_registros.Show();
+            Menu.Show();
         }
 
         private void Lista_registros_Load(object sender, EventArgs e)

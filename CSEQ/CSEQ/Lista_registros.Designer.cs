@@ -433,6 +433,7 @@
             // 
             // colonia_pb
             // 
+            this.colonia_pb.BackColor = System.Drawing.Color.Transparent;
             this.colonia_pb.Image = ((System.Drawing.Image)(resources.GetObject("colonia_pb.Image")));
             this.colonia_pb.Location = new System.Drawing.Point(417, 126);
             this.colonia_pb.Name = "colonia_pb";
@@ -447,6 +448,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1092);
             this.Controls.Add(this.colonia_pb);

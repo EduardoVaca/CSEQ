@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persona));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Persona_tabControl = new System.Windows.Forms.TabControl();
             this.DatosPersonales_tab = new System.Windows.Forms.TabPage();
@@ -144,7 +144,6 @@
             this.label53 = new System.Windows.Forms.Label();
             this.implante_coclear_check = new System.Windows.Forms.CheckBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
             this.examen_audiometria_check = new System.Windows.Forms.CheckBox();
             this.label50 = new System.Windows.Forms.Label();
             this.modelo_txt = new System.Windows.Forms.TextBox();
@@ -201,8 +200,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1512, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(1533, 4);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 56);
@@ -224,13 +224,16 @@
             this.Persona_tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.Persona_tabControl.Name = "Persona_tabControl";
             this.Persona_tabControl.SelectedIndex = 0;
-            this.Persona_tabControl.Size = new System.Drawing.Size(1488, 1006);
+            this.Persona_tabControl.Size = new System.Drawing.Size(1605, 1006);
             this.Persona_tabControl.TabIndex = 14;
             this.Persona_tabControl.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.Persona_tabControl_Selecting);
             // 
             // DatosPersonales_tab
             // 
-            this.DatosPersonales_tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.DatosPersonales_tab.BackColor = System.Drawing.Color.Transparent;
+            this.DatosPersonales_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.DatosPersonales_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DatosPersonales_tab.Controls.Add(this.pictureBox2);
             this.DatosPersonales_tab.Controls.Add(this.label63);
             this.DatosPersonales_tab.Controls.Add(this.label62);
             this.DatosPersonales_tab.Controls.Add(this.label60);
@@ -279,7 +282,7 @@
             this.DatosPersonales_tab.Margin = new System.Windows.Forms.Padding(4);
             this.DatosPersonales_tab.Name = "DatosPersonales_tab";
             this.DatosPersonales_tab.Padding = new System.Windows.Forms.Padding(4);
-            this.DatosPersonales_tab.Size = new System.Drawing.Size(1480, 966);
+            this.DatosPersonales_tab.Size = new System.Drawing.Size(1597, 966);
             this.DatosPersonales_tab.TabIndex = 0;
             this.DatosPersonales_tab.Text = "Datos personales";
             // 
@@ -781,7 +784,8 @@
             // 
             // Estudios_tab
             // 
-            this.Estudios_tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.Estudios_tab.BackColor = System.Drawing.Color.Transparent;
+            this.Estudios_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.Estudios_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Estudios_tab.Controls.Add(this.ano_txt);
             this.Estudios_tab.Controls.Add(this.label68);
@@ -806,7 +810,7 @@
             this.Estudios_tab.Margin = new System.Windows.Forms.Padding(4);
             this.Estudios_tab.Name = "Estudios_tab";
             this.Estudios_tab.Padding = new System.Windows.Forms.Padding(4);
-            this.Estudios_tab.Size = new System.Drawing.Size(1480, 966);
+            this.Estudios_tab.Size = new System.Drawing.Size(1597, 966);
             this.Estudios_tab.TabIndex = 1;
             this.Estudios_tab.Text = "Estudios";
             // 
@@ -1014,7 +1018,9 @@
             // 
             // DatosLaborales_tab
             // 
-            this.DatosLaborales_tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.DatosLaborales_tab.BackColor = System.Drawing.Color.Transparent;
+            this.DatosLaborales_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.DatosLaborales_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DatosLaborales_tab.Controls.Add(this.correoEmpleo_txt);
             this.DatosLaborales_tab.Controls.Add(this.label80);
             this.DatosLaborales_tab.Controls.Add(this.calleEmpleo_txt);
@@ -1042,7 +1048,7 @@
             this.DatosLaborales_tab.Location = new System.Drawing.Point(4, 36);
             this.DatosLaborales_tab.Margin = new System.Windows.Forms.Padding(4);
             this.DatosLaborales_tab.Name = "DatosLaborales_tab";
-            this.DatosLaborales_tab.Size = new System.Drawing.Size(1480, 966);
+            this.DatosLaborales_tab.Size = new System.Drawing.Size(1597, 966);
             this.DatosLaborales_tab.TabIndex = 2;
             this.DatosLaborales_tab.Text = "Datos Laborales";
             // 
@@ -1311,7 +1317,9 @@
             // 
             // PerdidaAuditiva_tab
             // 
-            this.PerdidaAuditiva_tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.PerdidaAuditiva_tab.BackColor = System.Drawing.Color.Transparent;
+            this.PerdidaAuditiva_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.PerdidaAuditiva_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PerdidaAuditiva_tab.Controls.Add(this.bilateral_check);
             this.PerdidaAuditiva_tab.Controls.Add(this.label43);
             this.PerdidaAuditiva_tab.Controls.Add(this.label82);
@@ -1332,7 +1340,6 @@
             this.PerdidaAuditiva_tab.Controls.Add(this.label53);
             this.PerdidaAuditiva_tab.Controls.Add(this.implante_coclear_check);
             this.PerdidaAuditiva_tab.Controls.Add(this.label52);
-            this.PerdidaAuditiva_tab.Controls.Add(this.label51);
             this.PerdidaAuditiva_tab.Controls.Add(this.examen_audiometria_check);
             this.PerdidaAuditiva_tab.Controls.Add(this.label50);
             this.PerdidaAuditiva_tab.Controls.Add(this.modelo_txt);
@@ -1351,7 +1358,7 @@
             this.PerdidaAuditiva_tab.Location = new System.Drawing.Point(4, 36);
             this.PerdidaAuditiva_tab.Margin = new System.Windows.Forms.Padding(4);
             this.PerdidaAuditiva_tab.Name = "PerdidaAuditiva_tab";
-            this.PerdidaAuditiva_tab.Size = new System.Drawing.Size(1480, 966);
+            this.PerdidaAuditiva_tab.Size = new System.Drawing.Size(1597, 966);
             this.PerdidaAuditiva_tab.TabIndex = 3;
             this.PerdidaAuditiva_tab.Text = "Perdida Auditiva";
             // 
@@ -1594,18 +1601,6 @@
             this.label52.TabIndex = 60;
             this.label52.Text = "¿Tiene implante coclear?";
             // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label51.Location = new System.Drawing.Point(1428, 775);
-            this.label51.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(32, 42);
-            this.label51.TabIndex = 59;
-            this.label51.Text = "*";
-            // 
             // examen_audiometria_check
             // 
             this.examen_audiometria_check.AutoSize = true;
@@ -1773,7 +1768,9 @@
             // 
             // Familia_tab
             // 
-            this.Familia_tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.Familia_tab.BackColor = System.Drawing.Color.Transparent;
+            this.Familia_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.Familia_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Familia_tab.Controls.Add(this.label79);
             this.Familia_tab.Controls.Add(this.registraHijo_button);
             this.Familia_tab.Controls.Add(this.label73);
@@ -1788,7 +1785,7 @@
             this.Familia_tab.Location = new System.Drawing.Point(4, 36);
             this.Familia_tab.Margin = new System.Windows.Forms.Padding(4);
             this.Familia_tab.Name = "Familia_tab";
-            this.Familia_tab.Size = new System.Drawing.Size(1480, 966);
+            this.Familia_tab.Size = new System.Drawing.Size(1597, 966);
             this.Familia_tab.TabIndex = 4;
             this.Familia_tab.Text = "Familia";
             // 
@@ -1924,14 +1921,16 @@
             // 
             // BuscarRegistro_tab
             // 
-            this.BuscarRegistro_tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BuscarRegistro_tab.BackColor = System.Drawing.Color.Transparent;
+            this.BuscarRegistro_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.BuscarRegistro_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_grid);
             this.BuscarRegistro_tab.Controls.Add(this.Buscar);
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_txt);
             this.BuscarRegistro_tab.Location = new System.Drawing.Point(4, 36);
             this.BuscarRegistro_tab.Margin = new System.Windows.Forms.Padding(4);
             this.BuscarRegistro_tab.Name = "BuscarRegistro_tab";
-            this.BuscarRegistro_tab.Size = new System.Drawing.Size(1480, 966);
+            this.BuscarRegistro_tab.Size = new System.Drawing.Size(1597, 966);
             this.BuscarRegistro_tab.TabIndex = 5;
             this.BuscarRegistro_tab.Text = "Buscar Registro";
             // 
@@ -1940,37 +1939,37 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(24, 308);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.busqueda_grid.RowTemplate.Height = 33;
-            this.busqueda_grid.Size = new System.Drawing.Size(1436, 608);
+            this.busqueda_grid.Size = new System.Drawing.Size(1544, 608);
             this.busqueda_grid.TabIndex = 17;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
@@ -1999,6 +1998,7 @@
             // 
             // back_picture
             // 
+            this.back_picture.BackColor = System.Drawing.Color.Transparent;
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
             this.back_picture.Location = new System.Drawing.Point(12, 1017);
             this.back_picture.Margin = new System.Windows.Forms.Padding(4);
@@ -2012,6 +2012,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(1212, 1021);
@@ -2040,6 +2041,7 @@
             // label74
             // 
             this.label74.AutoSize = true;
+            this.label74.BackColor = System.Drawing.Color.Transparent;
             this.label74.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label74.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label74.Location = new System.Drawing.Point(132, 1021);
@@ -2064,6 +2066,7 @@
             // modificar_lb
             // 
             this.modificar_lb.AutoSize = true;
+            this.modificar_lb.BackColor = System.Drawing.Color.Transparent;
             this.modificar_lb.Font = new System.Drawing.Font("Candara", 13.875F);
             this.modificar_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.modificar_lb.Location = new System.Drawing.Point(488, 1021);
@@ -2077,6 +2080,7 @@
             // eliminar_lb
             // 
             this.eliminar_lb.AutoSize = true;
+            this.eliminar_lb.BackColor = System.Drawing.Color.Transparent;
             this.eliminar_lb.Font = new System.Drawing.Font("Candara", 13.875F);
             this.eliminar_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.eliminar_lb.Location = new System.Drawing.Point(840, 1021);
@@ -2117,6 +2121,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1616, 1077);
             this.Controls.Add(this.eliminar_lb);
             this.Controls.Add(this.eliminar_btn);
@@ -2127,7 +2133,7 @@
             this.Controls.Add(this.back_picture);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Persona_tabControl);
-            this.Controls.Add(this.pictureBox2);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -2279,7 +2285,6 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.CheckBox implante_coclear_check;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label51;
         private System.Windows.Forms.CheckBox examen_audiometria_check;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label73;

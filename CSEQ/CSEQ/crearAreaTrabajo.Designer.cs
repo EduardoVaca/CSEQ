@@ -55,6 +55,7 @@
             // labelAreaTrabajo
             // 
             this.labelAreaTrabajo.AutoSize = true;
+            this.labelAreaTrabajo.BackColor = System.Drawing.Color.Transparent;
             this.labelAreaTrabajo.Font = new System.Drawing.Font("Candara", 18F);
             this.labelAreaTrabajo.ForeColor = System.Drawing.Color.White;
             this.labelAreaTrabajo.Location = new System.Drawing.Point(604, 63);
@@ -77,6 +78,7 @@
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
+            this.labelNombre.BackColor = System.Drawing.Color.Transparent;
             this.labelNombre.Font = new System.Drawing.Font("Candara", 14F);
             this.labelNombre.ForeColor = System.Drawing.Color.White;
             this.labelNombre.Location = new System.Drawing.Point(82, 418);
@@ -102,6 +104,7 @@
             // 
             // close_picture
             // 
+            this.close_picture.BackColor = System.Drawing.Color.Transparent;
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
             this.close_picture.Location = new System.Drawing.Point(1503, 2);
             this.close_picture.Margin = new System.Windows.Forms.Padding(8);
@@ -114,6 +117,7 @@
             // 
             // atras_picture
             // 
+            this.atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("atras_picture.Image")));
             this.atras_picture.Location = new System.Drawing.Point(18, 1018);
             this.atras_picture.Margin = new System.Windows.Forms.Padding(24, 23, 24, 23);
@@ -127,6 +131,7 @@
             // rompiendoParadigmas_label
             // 
             this.rompiendoParadigmas_label.AutoSize = true;
+            this.rompiendoParadigmas_label.BackColor = System.Drawing.Color.Transparent;
             this.rompiendoParadigmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.rompiendoParadigmas_label.ForeColor = System.Drawing.SystemColors.Control;
             this.rompiendoParadigmas_label.Location = new System.Drawing.Point(100, 100);
@@ -166,6 +171,7 @@
             // 
             // Busqueda_grp
             // 
+            this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
@@ -238,7 +244,7 @@
             this.busqueda_txt.Margin = new System.Windows.Forms.Padding(24, 23, 24, 23);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(3172, 40);
             this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(629, 40);
+            this.busqueda_txt.Size = new System.Drawing.Size(629, 47);
             this.busqueda_txt.TabIndex = 8;
             // 
             // crearAreaTrabajo
@@ -248,6 +254,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1829, 1076);
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.eliminar_btn);
@@ -259,6 +267,7 @@
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.nombreArea_txt);
             this.Controls.Add(this.labelAreaTrabajo);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(24, 23, 24, 23);
             this.Name = "crearAreaTrabajo";

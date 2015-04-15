@@ -63,6 +63,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(766, 7);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -76,6 +77,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(613, 500);
@@ -87,6 +89,7 @@
             // 
             // Atras
             // 
+            this.Atras.BackColor = System.Drawing.Color.Transparent;
             this.Atras.Image = ((System.Drawing.Image)(resources.GetObject("Atras.Image")));
             this.Atras.Location = new System.Drawing.Point(6, 487);
             this.Atras.Name = "Atras";
@@ -99,6 +102,7 @@
             // Col
             // 
             this.Col.AutoSize = true;
+            this.Col.BackColor = System.Drawing.Color.Transparent;
             this.Col.Font = new System.Drawing.Font("Candara", 18F);
             this.Col.ForeColor = System.Drawing.SystemColors.Control;
             this.Col.Location = new System.Drawing.Point(359, 25);
@@ -119,6 +123,7 @@
             // Nombre_label
             // 
             this.Nombre_label.AutoSize = true;
+            this.Nombre_label.BackColor = System.Drawing.Color.Transparent;
             this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
             this.Nombre_label.ForeColor = System.Drawing.SystemColors.Control;
             this.Nombre_label.Location = new System.Drawing.Point(11, 134);
@@ -142,6 +147,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(11, 312);
@@ -154,6 +160,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Candara", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(11, 254);
@@ -187,6 +194,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Candara", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(12, 197);
@@ -273,6 +281,7 @@
             // 
             // Busqueda_grp
             // 
+            this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
@@ -351,6 +360,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 530);
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.eliminar_btn);
@@ -371,6 +382,7 @@
             this.Controls.Add(this.Atras);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Candara", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrearColonia";

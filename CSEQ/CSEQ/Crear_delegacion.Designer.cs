@@ -73,6 +73,7 @@
             // delegacion_label
             // 
             this.delegacion_label.AutoSize = true;
+            this.delegacion_label.BackColor = System.Drawing.Color.Transparent;
             this.delegacion_label.Font = new System.Drawing.Font("Candara", 18F);
             this.delegacion_label.ForeColor = System.Drawing.Color.White;
             this.delegacion_label.Location = new System.Drawing.Point(698, 54);
@@ -84,6 +85,7 @@
             // 
             // close_picture
             // 
+            this.close_picture.BackColor = System.Drawing.Color.Transparent;
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
             this.close_picture.Location = new System.Drawing.Point(1532, 13);
             this.close_picture.Margin = new System.Windows.Forms.Padding(4);
@@ -96,6 +98,7 @@
             // 
             // atras_picture
             // 
+            this.atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("atras_picture.Image")));
             this.atras_picture.Location = new System.Drawing.Point(12, 937);
             this.atras_picture.Margin = new System.Windows.Forms.Padding(6);
@@ -120,6 +123,7 @@
             // nombre_label
             // 
             this.nombre_label.AutoSize = true;
+            this.nombre_label.BackColor = System.Drawing.Color.Transparent;
             this.nombre_label.Font = new System.Drawing.Font("Candara", 14F);
             this.nombre_label.ForeColor = System.Drawing.Color.White;
             this.nombre_label.Location = new System.Drawing.Point(56, 223);
@@ -132,6 +136,7 @@
             // municipio_label
             // 
             this.municipio_label.AutoSize = true;
+            this.municipio_label.BackColor = System.Drawing.Color.Transparent;
             this.municipio_label.Font = new System.Drawing.Font("Candara", 14F);
             this.municipio_label.ForeColor = System.Drawing.Color.White;
             this.municipio_label.Location = new System.Drawing.Point(56, 558);
@@ -144,6 +149,7 @@
             // rompiendoParadigmas_label
             // 
             this.rompiendoParadigmas_label.AutoSize = true;
+            this.rompiendoParadigmas_label.BackColor = System.Drawing.Color.Transparent;
             this.rompiendoParadigmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.rompiendoParadigmas_label.ForeColor = System.Drawing.SystemColors.Control;
             this.rompiendoParadigmas_label.Location = new System.Drawing.Point(1226, 962);
@@ -170,6 +176,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(56, 392);
@@ -229,6 +236,7 @@
             // 
             // Busqueda_grp
             // 
+            this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
@@ -340,6 +348,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1644, 1073);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
@@ -358,6 +368,7 @@
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.delegacion_label);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Crear_delegacion";

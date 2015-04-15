@@ -40,9 +40,10 @@
             // 
             // x_picture
             // 
+            this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(1532, 13);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -53,6 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(602, 433);
@@ -65,6 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(602, 563);
@@ -77,6 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(1226, 962);
@@ -89,7 +93,7 @@
             // registros_btn
             // 
             this.registros_btn.Location = new System.Drawing.Point(918, 458);
-            this.registros_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registros_btn.Margin = new System.Windows.Forms.Padding(4);
             this.registros_btn.Name = "registros_btn";
             this.registros_btn.Size = new System.Drawing.Size(84, 42);
             this.registros_btn.TabIndex = 11;
@@ -100,7 +104,7 @@
             // consultas_btn
             // 
             this.consultas_btn.Location = new System.Drawing.Point(918, 588);
-            this.consultas_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.consultas_btn.Margin = new System.Windows.Forms.Padding(4);
             this.consultas_btn.Name = "consultas_btn";
             this.consultas_btn.Size = new System.Drawing.Size(84, 42);
             this.consultas_btn.TabIndex = 12;
@@ -116,7 +120,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1378, 781);
+            this.ClientSize = new System.Drawing.Size(1598, 1010);
             this.Controls.Add(this.consultas_btn);
             this.Controls.Add(this.registros_btn);
             this.Controls.Add(this.label3);
@@ -125,7 +129,7 @@
             this.Controls.Add(this.x_picture);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_principal";

@@ -69,6 +69,7 @@
             // estado_label
             // 
             this.estado_label.AutoSize = true;
+            this.estado_label.BackColor = System.Drawing.Color.Transparent;
             this.estado_label.Font = new System.Drawing.Font("Candara", 14F);
             this.estado_label.ForeColor = System.Drawing.Color.White;
             this.estado_label.Location = new System.Drawing.Point(111, 507);
@@ -81,6 +82,7 @@
             // Nombre_label
             // 
             this.Nombre_label.AutoSize = true;
+            this.Nombre_label.BackColor = System.Drawing.Color.Transparent;
             this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
             this.Nombre_label.ForeColor = System.Drawing.Color.White;
             this.Nombre_label.Location = new System.Drawing.Point(90, 366);
@@ -101,6 +103,7 @@
             // Mun
             // 
             this.Mun.AutoSize = true;
+            this.Mun.BackColor = System.Drawing.Color.Transparent;
             this.Mun.Font = new System.Drawing.Font("Candara", 18F);
             this.Mun.ForeColor = System.Drawing.Color.White;
             this.Mun.Location = new System.Drawing.Point(676, 46);
@@ -112,6 +115,7 @@
             // 
             // Atras_picture
             // 
+            this.Atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
             this.Atras_picture.Location = new System.Drawing.Point(12, 937);
             this.Atras_picture.Margin = new System.Windows.Forms.Padding(6);
@@ -125,6 +129,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(1226, 962);
@@ -136,6 +141,7 @@
             // 
             // x_picture
             // 
+            this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(1536, 2);
             this.x_picture.Margin = new System.Windows.Forms.Padding(4);
@@ -184,6 +190,7 @@
             // 
             // Busqueda_grp
             // 
+            this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
@@ -294,6 +301,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1019);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
@@ -309,6 +318,7 @@
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.x_picture);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CrearMunicipio";

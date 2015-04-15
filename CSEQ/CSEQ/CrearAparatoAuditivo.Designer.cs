@@ -60,7 +60,7 @@
             // 
             this.Guardar_txt.Font = new System.Drawing.Font("Candara", 10F);
             this.Guardar_txt.Location = new System.Drawing.Point(78, 829);
-            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6);
             this.Guardar_txt.Name = "Guardar_txt";
             this.Guardar_txt.Size = new System.Drawing.Size(160, 62);
             this.Guardar_txt.TabIndex = 35;
@@ -73,7 +73,7 @@
             this.ID_marca.Font = new System.Drawing.Font("Candara", 12F);
             this.ID_marca.FormattingEnabled = true;
             this.ID_marca.Location = new System.Drawing.Point(224, 533);
-            this.ID_marca.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ID_marca.Margin = new System.Windows.Forms.Padding(6);
             this.ID_marca.Name = "ID_marca";
             this.ID_marca.Size = new System.Drawing.Size(360, 47);
             this.ID_marca.TabIndex = 34;
@@ -81,6 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(70, 533);
@@ -93,6 +94,7 @@
             // Tipo_label
             // 
             this.Tipo_label.AutoSize = true;
+            this.Tipo_label.BackColor = System.Drawing.Color.Transparent;
             this.Tipo_label.Font = new System.Drawing.Font("Candara", 14F);
             this.Tipo_label.ForeColor = System.Drawing.Color.White;
             this.Tipo_label.Location = new System.Drawing.Point(98, 396);
@@ -106,7 +108,7 @@
             // 
             this.tipo_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.tipo_txt.Location = new System.Drawing.Point(224, 396);
-            this.tipo_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tipo_txt.Margin = new System.Windows.Forms.Padding(6);
             this.tipo_txt.Name = "tipo_txt";
             this.tipo_txt.Size = new System.Drawing.Size(490, 47);
             this.tipo_txt.TabIndex = 31;
@@ -114,6 +116,7 @@
             // AparatoAuditivo_label
             // 
             this.AparatoAuditivo_label.AutoSize = true;
+            this.AparatoAuditivo_label.BackColor = System.Drawing.Color.Transparent;
             this.AparatoAuditivo_label.Font = new System.Drawing.Font("Candara", 18F);
             this.AparatoAuditivo_label.ForeColor = System.Drawing.Color.White;
             this.AparatoAuditivo_label.Location = new System.Drawing.Point(616, 83);
@@ -125,9 +128,10 @@
             // 
             // x_picture
             // 
+            this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(1532, 13);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,9 +141,10 @@
             // 
             // Atras_picture
             // 
+            this.Atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
             this.Atras_picture.Location = new System.Drawing.Point(12, 937);
-            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6);
             this.Atras_picture.Name = "Atras_picture";
             this.Atras_picture.Size = new System.Drawing.Size(60, 56);
             this.Atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -174,6 +179,7 @@
             // rompiendoParadigmas_label
             // 
             this.rompiendoParadigmas_label.AutoSize = true;
+            this.rompiendoParadigmas_label.BackColor = System.Drawing.Color.Transparent;
             this.rompiendoParadigmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.rompiendoParadigmas_label.ForeColor = System.Drawing.SystemColors.Control;
             this.rompiendoParadigmas_label.Location = new System.Drawing.Point(1226, 962);
@@ -187,7 +193,7 @@
             // 
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.eliminar_btn.Location = new System.Drawing.Point(602, 829);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.eliminar_btn.Name = "eliminar_btn";
             this.eliminar_btn.Size = new System.Drawing.Size(160, 62);
             this.eliminar_btn.TabIndex = 70;
@@ -200,7 +206,7 @@
             // 
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.modificar_btn.Location = new System.Drawing.Point(340, 829);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.modificar_btn.Name = "modificar_btn";
             this.modificar_btn.Size = new System.Drawing.Size(160, 62);
             this.modificar_btn.TabIndex = 69;
@@ -211,15 +217,16 @@
             // 
             // Busqueda_grp
             // 
+            this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
             this.Busqueda_grp.Font = new System.Drawing.Font("Candara", 9.75F);
             this.Busqueda_grp.ForeColor = System.Drawing.Color.White;
             this.Busqueda_grp.Location = new System.Drawing.Point(832, 167);
-            this.Busqueda_grp.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Busqueda_grp.Margin = new System.Windows.Forms.Padding(6);
             this.Busqueda_grp.Name = "Busqueda_grp";
-            this.Busqueda_grp.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Busqueda_grp.Padding = new System.Windows.Forms.Padding(6);
             this.Busqueda_grp.Size = new System.Drawing.Size(708, 723);
             this.Busqueda_grp.TabIndex = 71;
             this.Busqueda_grp.TabStop = false;
@@ -250,7 +257,7 @@
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(12, 208);
-            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_grid.Name = "busqueda_grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
@@ -268,7 +275,7 @@
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
             this.Buscar.Location = new System.Drawing.Point(610, 62);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(6);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(78, 69);
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -280,7 +287,7 @@
             // 
             this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.busqueda_txt.Location = new System.Drawing.Point(12, 75);
-            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.busqueda_txt.Name = "busqueda_txt";
@@ -294,6 +301,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1603, 1014);
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.eliminar_btn);
@@ -309,8 +318,9 @@
             this.Controls.Add(this.Tipo_label);
             this.Controls.Add(this.tipo_txt);
             this.Controls.Add(this.AparatoAuditivo_label);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CrearAparatoAuditivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AparatoAuditivo";
