@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crear_causa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guardar_btn = new System.Windows.Forms.Button();
             this.rompiendoParadigmas_label = new System.Windows.Forms.Label();
             this.nombreCausa_label = new System.Windows.Forms.Label();
@@ -46,11 +46,13 @@
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
+            this.imagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // guardar_btn
@@ -178,35 +180,35 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle20;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(12, 176);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.busqueda_grid.Size = new System.Drawing.Size(684, 504);
             this.busqueda_grid.TabIndex = 56;
             this.busqueda_grid.Visible = false;
@@ -263,6 +265,17 @@
             this.modificar_btn.Visible = false;
             this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
+            this.imagen.Image = global::CSEQ.Properties.Resources.CausaB;
+            this.imagen.Location = new System.Drawing.Point(811, 250);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(500, 500);
+            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagen.TabIndex = 63;
+            this.imagen.TabStop = false;
+            // 
             // Crear_causa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -273,6 +286,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1590, 1039);
+            this.Controls.Add(this.imagen);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.Busqueda_grp);
@@ -297,6 +311,7 @@
             this.Busqueda_grp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,5 +333,6 @@
         private System.Windows.Forms.TextBox busqueda_txt;
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.Button modificar_btn;
+        private System.Windows.Forms.PictureBox imagen;
     }
 }
