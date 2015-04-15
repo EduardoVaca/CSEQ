@@ -60,6 +60,7 @@ namespace CSEQ
         {
             Util.creaConexion("localhost", "CSEQ", "root", "");
             //Util.creaConexion("hcdesarrollo.com", "hcdesarr_chess", "hcdesarr_chess", "pruebachess2015");
+            Util.clear(this);
         }
 
         private void password_txt_KeyPress(object sender, KeyPressEventArgs e)

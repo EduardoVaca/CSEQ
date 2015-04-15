@@ -42,10 +42,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.todoscensos_radio = new System.Windows.Forms.RadioButton();
             this.ID_censo = new System.Windows.Forms.ComboBox();
+            this.logout = new System.Windows.Forms.PictureBox();
             this.AuxiliaresAuditivos_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // AuxiliaresAuditivos_grp
@@ -201,6 +203,19 @@
             this.ID_censo.TabIndex = 21;
             this.ID_censo.SelectionChangeCommitted += new System.EventHandler(this.ID_censo_SelectionChangeCommitted);
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1517, 87);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 22;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // consultas_salud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -210,6 +225,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1574, 965);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.ID_censo);
             this.Controls.Add(this.todoscensos_radio);
             this.Controls.Add(this.zedGraph);
@@ -231,6 +247,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +267,6 @@
         private System.Windows.Forms.RadioButton todoscensos_radio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ID_censo;
+        private System.Windows.Forms.PictureBox logout;
     }
 }

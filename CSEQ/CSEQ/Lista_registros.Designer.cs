@@ -72,6 +72,7 @@
             this.sueldo_press = new System.Windows.Forms.PictureBox();
             this.areaTrabajo_press = new System.Windows.Forms.PictureBox();
             this.usuario_press = new System.Windows.Forms.PictureBox();
+            this.logout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colonia_pb)).BeginInit();
@@ -100,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sueldo_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.areaTrabajo_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuario_press)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -650,6 +652,19 @@
             this.usuario_press.TabStop = false;
             this.usuario_press.Visible = false;
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1518, 85);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 67;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // Lista_registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -659,6 +674,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1092);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.usuario_pb);
             this.Controls.Add(this.areaTrabajo_pb);
             this.Controls.Add(this.sueldo_pb);
@@ -737,6 +753,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sueldo_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.areaTrabajo_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuario_press)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -787,5 +804,6 @@
         private System.Windows.Forms.PictureBox sueldo_press;
         private System.Windows.Forms.PictureBox areaTrabajo_press;
         private System.Windows.Forms.PictureBox usuario_press;
+        private System.Windows.Forms.PictureBox logout;
     }
 }

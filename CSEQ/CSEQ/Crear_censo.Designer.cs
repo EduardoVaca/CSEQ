@@ -47,12 +47,14 @@
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
             this.imagen = new System.Windows.Forms.PictureBox();
+            this.logout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // guardar_btn
@@ -276,6 +278,19 @@
             this.imagen.TabIndex = 65;
             this.imagen.TabStop = false;
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1532, 77);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 66;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // Crear_censo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -286,6 +301,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1598, 1010);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.imagen);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
@@ -312,6 +328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +351,6 @@
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.PictureBox imagen;
+        private System.Windows.Forms.PictureBox logout;
     }
 }

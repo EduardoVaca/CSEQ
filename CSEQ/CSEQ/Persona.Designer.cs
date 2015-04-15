@@ -185,6 +185,7 @@
             this.eliminar_lb = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
+            this.logout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -196,6 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -233,6 +235,7 @@
             this.DatosPersonales_tab.BackColor = System.Drawing.Color.Transparent;
             this.DatosPersonales_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.DatosPersonales_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DatosPersonales_tab.Controls.Add(this.logout);
             this.DatosPersonales_tab.Controls.Add(this.pictureBox2);
             this.DatosPersonales_tab.Controls.Add(this.label63);
             this.DatosPersonales_tab.Controls.Add(this.label62);
@@ -2114,6 +2117,19 @@
             this.label81.TabIndex = 77;
             this.label81.Text = "*";
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1533, 65);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 67;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -2158,6 +2174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2317,6 +2334,7 @@
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.CheckBox bilateral_check;
         private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.PictureBox logout;
 
     }
 }

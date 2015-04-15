@@ -35,7 +35,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.registros_btn = new System.Windows.Forms.Button();
             this.consultas_btn = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // x_picture
@@ -112,6 +114,19 @@
             this.consultas_btn.UseVisualStyleBackColor = true;
             this.consultas_btn.Click += new System.EventHandler(this.consultas_btn_Click);
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1532, 77);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 13;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // Menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -121,6 +136,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1598, 1010);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.consultas_btn);
             this.Controls.Add(this.registros_btn);
             this.Controls.Add(this.label3);
@@ -134,6 +150,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_principal";
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +164,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button registros_btn;
         private System.Windows.Forms.Button consultas_btn;
+        private System.Windows.Forms.PictureBox logout;
     }
 }
