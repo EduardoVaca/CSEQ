@@ -101,6 +101,7 @@ namespace CSEQ
         {
             if (rol == 1)
             {
+                imagen.Visible = false;
                 Busqueda_grp.Visible = true;
                 eliminar_btn.Visible = true;
                 modificar_btn.Visible = true;

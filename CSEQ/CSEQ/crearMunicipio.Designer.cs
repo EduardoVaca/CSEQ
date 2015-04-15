@@ -49,11 +49,13 @@
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
+            this.imagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // ID_estado
@@ -296,6 +298,17 @@
             this.modificar_btn.Visible = false;
             this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
+            this.imagen.Image = global::CSEQ.Properties.Resources.EstadoB;
+            this.imagen.Location = new System.Drawing.Point(850, 244);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(500, 500);
+            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagen.TabIndex = 77;
+            this.imagen.TabStop = false;
+            // 
             // CrearMunicipio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -305,6 +318,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1019);
+            this.Controls.Add(this.imagen);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.Busqueda_grp);
@@ -332,6 +346,7 @@
             this.Busqueda_grp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +371,6 @@
         private System.Windows.Forms.TextBox busqueda_txt;
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.Button modificar_btn;
+        private System.Windows.Forms.PictureBox imagen;
     }
 }

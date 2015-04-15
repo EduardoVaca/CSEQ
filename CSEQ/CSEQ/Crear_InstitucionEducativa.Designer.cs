@@ -62,11 +62,13 @@
             this.modificar_btn = new System.Windows.Forms.Button();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.telefono_txt = new System.Windows.Forms.MaskedTextBox();
+            this.imagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -464,6 +466,17 @@
             this.telefono_txt.Size = new System.Drawing.Size(370, 40);
             this.telefono_txt.TabIndex = 59;
             // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
+            this.imagen.Image = global::CSEQ.Properties.Resources.InstituciónEducativaB;
+            this.imagen.Location = new System.Drawing.Point(981, 259);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(500, 500);
+            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagen.TabIndex = 64;
+            this.imagen.TabStop = false;
+            // 
             // Crear_InstitucionEducativa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -474,6 +487,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1019);
+            this.Controls.Add(this.imagen);
             this.Controls.Add(this.telefono_txt);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
@@ -515,6 +529,7 @@
             this.Busqueda_grp.ResumeLayout(false);
             this.Busqueda_grp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,5 +568,6 @@
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.MaskedTextBox telefono_txt;
+        private System.Windows.Forms.PictureBox imagen;
     }
 }

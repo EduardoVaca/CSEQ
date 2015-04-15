@@ -269,7 +269,7 @@
             // 
             this.imagen.BackColor = System.Drawing.Color.Transparent;
             this.imagen.Image = global::CSEQ.Properties.Resources.CensoB;
-            this.imagen.Location = new System.Drawing.Point(819, 254);
+            this.imagen.Location = new System.Drawing.Point(856, 254);
             this.imagen.Name = "imagen";
             this.imagen.Size = new System.Drawing.Size(500, 500);
             this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

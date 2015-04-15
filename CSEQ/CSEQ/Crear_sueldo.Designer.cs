@@ -47,11 +47,13 @@
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
+            this.imagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // guardar_btn
@@ -276,6 +278,17 @@
             this.busqueda_txt.Size = new System.Drawing.Size(588, 47);
             this.busqueda_txt.TabIndex = 8;
             // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
+            this.imagen.Image = global::CSEQ.Properties.Resources.SueldoB;
+            this.imagen.Location = new System.Drawing.Point(910, 253);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(500, 500);
+            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagen.TabIndex = 70;
+            this.imagen.TabStop = false;
+            // 
             // Crear_sueldo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -286,6 +299,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1601, 1007);
+            this.Controls.Add(this.imagen);
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
@@ -311,6 +325,7 @@
             this.Busqueda_grp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,6 +348,7 @@
         private System.Windows.Forms.DataGridView busqueda_grid;
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;
+        private System.Windows.Forms.PictureBox imagen;
 
     }
 }
