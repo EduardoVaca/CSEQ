@@ -150,6 +150,12 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReporteMarca.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteMarca.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReportesCSEQ.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -263,6 +269,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crear_sueldo.resx">
       <DependentUpon>Crear_sueldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMarca.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMarca.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportesCSEQ.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
