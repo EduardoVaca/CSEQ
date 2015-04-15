@@ -68,6 +68,21 @@ namespace CSEQ
             {
                 RBAC();
             }
+        }
+        private void password_txt_Enter(object sender, EventArgs e)
+        {
+            String loginInput = login_txt.Text;
+            DataTable tabla = new DataTable();
+
+            tabla = Util.getData("CALL validacionNombreLogin('" + loginInput + "');");
+            if (tabla == null)
+            {
+                mensaje.Text = "El usuario '" + loginInput + "' no existe...";
+            }
+            else
+            {
+                mensaje.Text = "";
+            }
         }       
     }
 }

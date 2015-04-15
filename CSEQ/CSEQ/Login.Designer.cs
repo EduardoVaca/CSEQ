@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ingresar_btn = new System.Windows.Forms.Button();
             this.x_picture = new System.Windows.Forms.PictureBox();
+            this.mensaje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +84,8 @@
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '*';
             this.password_txt.Size = new System.Drawing.Size(256, 38);
-            this.password_txt.TabIndex = 3;
+            this.password_txt.TabIndex = 3;            
+            this.password_txt.Enter += new System.EventHandler(this.password_txt_Enter);
             this.password_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_txt_KeyPress);
             // 
             // pictureBox1
@@ -122,6 +124,18 @@
             this.x_picture.TabStop = false;
             this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
             // 
+            // mensaje
+            // 
+            this.mensaje.AutoSize = true;
+            this.mensaje.BackColor = System.Drawing.Color.Transparent;
+            this.mensaje.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mensaje.ForeColor = System.Drawing.Color.White;
+            this.mensaje.Location = new System.Drawing.Point(490, 699);
+            this.mensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mensaje.Name = "mensaje";
+            this.mensaje.Size = new System.Drawing.Size(0, 46);
+            this.mensaje.TabIndex = 7;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -131,6 +145,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1288, 815);
+            this.Controls.Add(this.mensaje);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.ingresar_btn);
             this.Controls.Add(this.pictureBox1);
@@ -161,6 +176,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ingresar_btn;
         private System.Windows.Forms.PictureBox x_picture;
+        private System.Windows.Forms.Label mensaje;
     }
 }
 
