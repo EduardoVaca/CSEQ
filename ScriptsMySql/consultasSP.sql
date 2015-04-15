@@ -52,6 +52,24 @@ BEGIN
 END //
 DELIMITER ;
 
+-- Personas con y sin APARATO
+DELIMITER //
+CREATE PROCEDURE consultaAuxiliares
+()
+BEGIN
+	
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
+    SELECT * FROM (
+	SELECT COUNT(*) as 'PersonasSinAparato', (COUNT(*) / totalPersonas * 100) as 'PorcentajeSin'
+	FROM Persona p
+	WHERE CURP NOT IN (SELECT CURP FROM PoseeAparatoAuditivo p)) as tablaUno, (SELECT COUNT(*) as 'PersonasConAparato', (COUNT(*) / totalPersonas * 100) as 'PorcentajeCon'
+	FROM Persona p
+	WHERE CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p)) AS TABLADOS;
+    
+END //
+DELIMITER ;
+
 -- Numero de personas que Si tienen Auxiliar auditivo
 DELIMITER //
 CREATE PROCEDURE consultaSiTienenAuxiliar
