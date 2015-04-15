@@ -117,7 +117,7 @@ namespace CSEQ
                 box.Items.Clear();
                 box.DataSource = tabla;
 
-                if (tabla.Columns.Count == 2)
+                if (tabla.Columns.Count >= 2)
                 {
                     box.ValueMember = tabla.Columns[0].ToString();
                     box.DisplayMember = tabla.Columns[1].ToString();
@@ -125,6 +125,7 @@ namespace CSEQ
                 else
                 {
                     box.DisplayMember = tabla.Columns[0].ToString();
+                    box.ValueMember = tabla.Columns[0].ToString();
                 }
             }
             catch (Exception ex)

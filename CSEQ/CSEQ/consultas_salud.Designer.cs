@@ -31,15 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultas_salud));
             this.AuxiliaresAuditivos_grp = new System.Windows.Forms.GroupBox();
-            this.Reporte = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.auxiliarAuditivo_combo = new System.Windows.Forms.ComboBox();
+            this.Reporte = new System.Windows.Forms.Button();
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.titulo = new System.Windows.Forms.Label();
             this.zedGraph = new ZedGraph.ZedGraphControl();
             this.dataTable1TableAdapter1 = new CSEQ.DataSet1TableAdapters.DataTable1TableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.todoscensos_radio = new System.Windows.Forms.RadioButton();
+            this.ID_censo = new System.Windows.Forms.ComboBox();
             this.AuxiliaresAuditivos_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
@@ -49,39 +52,27 @@
             // AuxiliaresAuditivos_grp
             // 
             this.AuxiliaresAuditivos_grp.BackColor = System.Drawing.Color.Transparent;
-            this.AuxiliaresAuditivos_grp.Controls.Add(this.Reporte);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.label1);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.auxiliarAuditivo_combo);
             this.AuxiliaresAuditivos_grp.Location = new System.Drawing.Point(12, 73);
-            this.AuxiliaresAuditivos_grp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AuxiliaresAuditivos_grp.Margin = new System.Windows.Forms.Padding(4);
             this.AuxiliaresAuditivos_grp.Name = "AuxiliaresAuditivos_grp";
-            this.AuxiliaresAuditivos_grp.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AuxiliaresAuditivos_grp.Padding = new System.Windows.Forms.Padding(4);
             this.AuxiliaresAuditivos_grp.Size = new System.Drawing.Size(1550, 313);
             this.AuxiliaresAuditivos_grp.TabIndex = 0;
             this.AuxiliaresAuditivos_grp.TabStop = false;
             this.AuxiliaresAuditivos_grp.Visible = false;
             // 
-            // Reporte
-            // 
-            this.Reporte.Location = new System.Drawing.Point(1368, 108);
-            this.Reporte.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.Reporte.Name = "Reporte";
-            this.Reporte.Size = new System.Drawing.Size(150, 100);
-            this.Reporte.TabIndex = 18;
-            this.Reporte.Text = "Crear Reporte";
-            this.Reporte.UseVisualStyleBackColor = true;
-            this.Reporte.Click += new System.EventHandler(this.Reporte_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(8, 135);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 45);
+            this.label1.Size = new System.Drawing.Size(134, 39);
             this.label1.TabIndex = 15;
             this.label1.Text = "Consulta";
             // 
@@ -93,19 +84,31 @@
             "Auxiliares auditivos por marca",
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
-            this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(172, 139);
-            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(151, 134);
+            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.auxiliarAuditivo_combo.Name = "auxiliarAuditivo_combo";
             this.auxiliarAuditivo_combo.Size = new System.Drawing.Size(592, 44);
             this.auxiliarAuditivo_combo.TabIndex = 0;
             this.auxiliarAuditivo_combo.SelectionChangeCommitted += new System.EventHandler(this.auxiliarAuditivo_combo_SelectionChangeCommitted);
+            // 
+            // Reporte
+            // 
+            this.Reporte.Enabled = false;
+            this.Reporte.Location = new System.Drawing.Point(108, 686);
+            this.Reporte.Margin = new System.Windows.Forms.Padding(6);
+            this.Reporte.Name = "Reporte";
+            this.Reporte.Size = new System.Drawing.Size(131, 72);
+            this.Reporte.TabIndex = 18;
+            this.Reporte.Text = "Crear Reporte";
+            this.Reporte.UseVisualStyleBackColor = true;
+            this.Reporte.Click += new System.EventHandler(this.Reporte_Click);
             // 
             // back_picture
             // 
             this.back_picture.BackColor = System.Drawing.Color.Transparent;
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
             this.back_picture.Location = new System.Drawing.Point(-4, 944);
-            this.back_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.back_picture.Margin = new System.Windows.Forms.Padding(6);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(60, 56);
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +121,7 @@
             this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(1516, 19);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,8 +144,8 @@
             // zedGraph
             // 
             this.zedGraph.BackColor = System.Drawing.Color.Transparent;
-            this.zedGraph.Location = new System.Drawing.Point(226, 310);
-            this.zedGraph.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.zedGraph.Location = new System.Drawing.Point(374, 402);
+            this.zedGraph.Margin = new System.Windows.Forms.Padding(12);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
             this.zedGraph.ScrollMaxX = 0D;
@@ -158,6 +161,50 @@
             // 
             this.dataTable1TableAdapter1.ClearBeforeFill = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(20, 420);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 36);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Censo";
+            // 
+            // todoscensos_radio
+            // 
+            this.todoscensos_radio.AutoSize = true;
+            this.todoscensos_radio.BackColor = System.Drawing.Color.Transparent;
+            this.todoscensos_radio.Enabled = false;
+            this.todoscensos_radio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todoscensos_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.todoscensos_radio.Location = new System.Drawing.Point(14, 471);
+            this.todoscensos_radio.Name = "todoscensos_radio";
+            this.todoscensos_radio.Size = new System.Drawing.Size(213, 33);
+            this.todoscensos_radio.TabIndex = 20;
+            this.todoscensos_radio.TabStop = true;
+            this.todoscensos_radio.Text = "Todos los censos";
+            this.todoscensos_radio.UseVisualStyleBackColor = false;
+            this.todoscensos_radio.CheckedChanged += new System.EventHandler(this.todoscensos_radio_CheckedChanged);
+            // 
+            // ID_censo
+            // 
+            this.ID_censo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_censo.FormattingEnabled = true;
+            this.ID_censo.Items.AddRange(new object[] {
+            "Auxiliares auditivos por marca",
+            "Personas que no tienen aparato auditivo",
+            "Personas con implante coclear"});
+            this.ID_censo.Location = new System.Drawing.Point(163, 420);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_censo.Name = "ID_censo";
+            this.ID_censo.Size = new System.Drawing.Size(159, 44);
+            this.ID_censo.TabIndex = 21;
+            this.ID_censo.SelectionChangeCommitted += new System.EventHandler(this.ID_censo_SelectionChangeCommitted);
+            // 
             // consultas_salud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -167,14 +214,18 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1574, 965);
+            this.Controls.Add(this.ID_censo);
+            this.Controls.Add(this.todoscensos_radio);
             this.Controls.Add(this.zedGraph);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.titulo);
             this.Controls.Add(this.back_picture);
+            this.Controls.Add(this.Reporte);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.AuxiliaresAuditivos_grp);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "consultas_salud";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultas_salud";
@@ -201,5 +252,8 @@
         private System.Windows.Forms.Label titulo;
         private ZedGraph.ZedGraphControl zedGraph;
         private System.Windows.Forms.Button Reporte;
+        private System.Windows.Forms.RadioButton todoscensos_radio;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox ID_censo;
     }
 }

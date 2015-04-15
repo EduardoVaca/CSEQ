@@ -34,30 +34,20 @@ namespace CSEQ
         }
 
         private void consultas_salud_Load(object sender, EventArgs e)
-        {
+        {            
             if (index == 0)
             {
                 titulo.Text = "Auxiliares Auditivos";
                 AuxiliaresAuditivos_grp.Visible = true;
             }
+
+            Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");
         }
 
         private void auxiliarAuditivo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            
-
-            switch (auxiliarAuditivo_combo.SelectedIndex)
-            {
-                case 0:
-                    query = "CALL consultaMarca";
-                    String type = "Barra";
-                    index = 0;
-                    Util.graphData(zedGraph, query, type);
-                    break;
-
-                default:
-                    break;
-            }
+            ID_censo.Enabled = true;
+            todoscensos_radio.Enabled = true;
         }
 
         private void Reporte_Click(object sender, EventArgs e)
@@ -69,5 +59,34 @@ namespace CSEQ
             }
             
         }
+
+        private void todoscensos_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            Reporte.Enabled = true;
+
+            query = "CALL consultaMarca();";
+            String type = "Barra";
+            index = 0;
+            Util.graphData(zedGraph, query, type);
+        }
+
+        private void ID_censo_SelectionChangeCommitted(object sender, EventArgs e)
+        {            
+            int id_censo = Int32.Parse(ID_censo.SelectedValue.ToString());
+           
+            switch (auxiliarAuditivo_combo.SelectedIndex)
+            {
+                case 0:
+                    query = "CALL consultaMarcaPorCenso(" + id_censo + ");";
+                    String type = "Barra";
+                    index = 0;
+                    Util.graphData(zedGraph, query, type);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
     }
 }
