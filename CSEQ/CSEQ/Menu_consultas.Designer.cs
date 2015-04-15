@@ -44,8 +44,10 @@
             this.demografia_combo = new System.Windows.Forms.ComboBox();
             this.educacion_combo = new System.Windows.Forms.ComboBox();
             this.empleo_combo = new System.Windows.Forms.ComboBox();
+            this.logout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // x_picture
@@ -237,6 +239,19 @@
             this.empleo_combo.Size = new System.Drawing.Size(551, 44);
             this.empleo_combo.TabIndex = 24;
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1532, 77);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 25;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // Menu_consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -246,6 +261,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1596, 998);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.empleo_combo);
             this.Controls.Add(this.educacion_combo);
             this.Controls.Add(this.demografia_combo);
@@ -269,6 +285,7 @@
             this.Text = "Menu_consultas";
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +308,6 @@
         private System.Windows.Forms.ComboBox demografia_combo;
         private System.Windows.Forms.ComboBox educacion_combo;
         private System.Windows.Forms.ComboBox empleo_combo;
+        private System.Windows.Forms.PictureBox logout;
     }
 }

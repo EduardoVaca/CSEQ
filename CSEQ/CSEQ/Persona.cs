@@ -350,5 +350,17 @@ interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo 
 ID_aparatoAuditivo INT, modelo VARCHAR(30)*/
         }
 
+        private void logout_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                Ventana.mostrarOculta(Ventana.Ventanas.Login);
+            }
+        }
+
     }
 }
