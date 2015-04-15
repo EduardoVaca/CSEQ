@@ -49,7 +49,7 @@ namespace CSEQ
             switch (auxiliarAuditivo_combo.SelectedIndex)
             {
                 case 0:
-                    query = "CALL consultaMarca";
+                    query = "CALL consultaMarca();";
                     String type = "Barra";
                     index = 0;
                     Util.graphData(zedGraph, query, type);
@@ -62,11 +62,14 @@ namespace CSEQ
 
         private void Reporte_Click(object sender, EventArgs e)
         {
-            if (auxiliarAuditivo_combo.SelectedValue != "")
-            {
+            
+            MessageBox.Show(auxiliarAuditivo_combo.SelectedIndex.ToString());
+            
+           // if (auxiliarAuditivo_combo.SelectedValue != "")
+           // {
                 Reporte Nuevo = new Reporte(query,index);
                 Nuevo.Show();
-            }
+            //}
             
         }
     }

@@ -117,7 +117,7 @@ namespace CSEQ
                 box.Items.Clear();
                 box.DataSource = tabla;
 
-                if (tabla.Columns.Count == 2)
+                if (tabla.Columns.Count >= 2)
                 {
                     box.ValueMember = tabla.Columns[0].ToString();
                     box.DisplayMember = tabla.Columns[1].ToString();
@@ -441,8 +441,8 @@ namespace CSEQ
             ZedGraph.GraphPane graph;
             zgc.GraphPane.CurveList.Clear();
             graph = zgc.GraphPane;
-            graph.Chart.Fill = new Fill(Color.White, Color.FromArgb(220, 255, 220), 45.0F);
-            graph.Fill = new Fill(Color.White, Color.FromArgb(220, 220, 255), 45.0F);
+            graph.Chart.Fill = new Fill(Color.Transparent, Color.FromArgb(220, 255, 220), 45.0F);
+            graph.Fill = new Fill(Color.Transparent, Color.FromArgb(220, 220, 255), 45.0F);
             dt = getData(query);
 
             if (dt != null && tipo=="Barra")
@@ -467,7 +467,7 @@ namespace CSEQ
                     double y = Double.Parse(dt.Rows[i].ItemArray[1].ToString());
                     double z = i / 4.0;
                     //Labels de numero
-                    TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(),x,y+.5);
+                    TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(),x,y+.1);
                     barLabel.FontSpec.Border.IsVisible = false;
                     barLabel.FontSpec.Fill.IsVisible = false;
                     list.Add(x, y, z);
@@ -475,7 +475,7 @@ namespace CSEQ
                 }
                 BarItem bar = graph.AddBar("Cantidad", list, Color.Blue);
                 bar.Bar.Fill = new Fill(colores);
-                bar.Bar.Fill.Type = FillType.Solid;
+                bar.Bar.Fill.Type = FillType.GradientByColorValue;
                 bar.Bar.Fill.RangeMin = 0;
                 bar.Bar.Fill.RangeMax = 4;
 

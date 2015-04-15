@@ -39,7 +39,6 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.titulo = new System.Windows.Forms.Label();
             this.zedGraph = new ZedGraph.ZedGraphControl();
-            this.dataTable1TableAdapter1 = new CSEQ.DataSet1TableAdapters.DataTable1TableAdapter();
             this.AuxiliaresAuditivos_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
@@ -154,10 +153,6 @@
             this.zedGraph.Size = new System.Drawing.Size(1118, 575);
             this.zedGraph.TabIndex = 17;
             // 
-            // dataTable1TableAdapter1
-            // 
-            this.dataTable1TableAdapter1.ClearBeforeFill = true;
-            // 
             // consultas_salud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -197,7 +192,6 @@
         private System.Windows.Forms.ComboBox auxiliarAuditivo_combo;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label label1;
-        private DataSet1TableAdapters.DataTable1TableAdapter dataTable1TableAdapter1;
         private System.Windows.Forms.Label titulo;
         private ZedGraph.ZedGraphControl zedGraph;
         private System.Windows.Forms.Button Reporte;
