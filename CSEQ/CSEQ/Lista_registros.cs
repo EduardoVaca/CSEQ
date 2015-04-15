@@ -254,7 +254,7 @@ namespace CSEQ
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                Ventana.mostrarOculta(Ventana.Ventanas.Login);
+                Application.Restart();
             }
         }
 

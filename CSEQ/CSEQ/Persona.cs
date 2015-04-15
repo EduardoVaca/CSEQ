@@ -358,7 +358,7 @@ ID_aparatoAuditivo INT, modelo VARCHAR(30)*/
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                Ventana.mostrarOculta(Ventana.Ventanas.Login);
+                Application.Restart();
             }
         }
 

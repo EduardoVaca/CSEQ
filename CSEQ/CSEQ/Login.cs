@@ -31,13 +31,13 @@ namespace CSEQ
             tabla = Util.getData("CALL validacionLogin('" + login + "','" + password + "');");
 
             if (tabla != null)
-            {
+            {                
                 int rol = Int16.Parse(tabla.Rows[0][0].ToString());
                 if (rol == 1 || rol == 2)
-                {
-                    Menu_principal Menu_principal = new Menu_principal(rol);
-                    this.Hide();
+                {                    
+                    Menu_principal Menu_principal = new Menu_principal(rol);                    
                     Menu_principal.Show();
+                    this.Hide();                    
                 }
                 else
                 {
