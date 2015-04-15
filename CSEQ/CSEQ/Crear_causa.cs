@@ -13,9 +13,11 @@ namespace CSEQ
     public partial class Crear_causa : Form
     {
         String causa_selected;
+        int rol;
 
-        public Crear_causa()
+        public Crear_causa(int rol)
         {
+            this.rol = rol;
             InitializeComponent();            
         }
 
@@ -88,6 +90,16 @@ namespace CSEQ
                 {
                     MessageBox.Show("La causa se modifico con exito");
                 }
+            }
+        }
+
+        private void Crear_causa_Load(object sender, EventArgs e)
+        {
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
             }
         }
 

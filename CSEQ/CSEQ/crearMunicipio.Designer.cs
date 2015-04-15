@@ -43,7 +43,7 @@
             this.guardar_txt = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Busqueda_grp = new System.Windows.Forms.GroupBox();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
@@ -51,7 +51,7 @@
             this.modificar_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.Busqueda_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             this.ID_estado.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_estado.FormattingEnabled = true;
             this.ID_estado.Location = new System.Drawing.Point(268, 513);
-            this.ID_estado.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ID_estado.Margin = new System.Windows.Forms.Padding(6);
             this.ID_estado.Name = "ID_estado";
             this.ID_estado.Size = new System.Drawing.Size(490, 41);
             this.ID_estado.TabIndex = 28;
@@ -69,38 +69,41 @@
             // estado_label
             // 
             this.estado_label.AutoSize = true;
+            this.estado_label.BackColor = System.Drawing.Color.Transparent;
             this.estado_label.Font = new System.Drawing.Font("Candara", 14F);
             this.estado_label.ForeColor = System.Drawing.Color.White;
-            this.estado_label.Location = new System.Drawing.Point(30, 264);
+            this.estado_label.Location = new System.Drawing.Point(111, 507);
             this.estado_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.estado_label.Name = "estado_label";
-            this.estado_label.Size = new System.Drawing.Size(65, 23);
+            this.estado_label.Size = new System.Drawing.Size(131, 46);
             this.estado_label.TabIndex = 27;
             this.estado_label.Text = "Estado";
             // 
             // Nombre_label
             // 
             this.Nombre_label.AutoSize = true;
+            this.Nombre_label.BackColor = System.Drawing.Color.Transparent;
             this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
             this.Nombre_label.ForeColor = System.Drawing.Color.White;
-            this.Nombre_label.Location = new System.Drawing.Point(30, 189);
+            this.Nombre_label.Location = new System.Drawing.Point(90, 366);
             this.Nombre_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Nombre_label.Name = "Nombre_label";
-            this.Nombre_label.Size = new System.Drawing.Size(78, 23);
+            this.Nombre_label.Size = new System.Drawing.Size(152, 46);
             this.Nombre_label.TabIndex = 26;
             this.Nombre_label.Text = "Nombre";
             // 
             // nombre_txt
             // 
             this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.nombre_txt.Location = new System.Drawing.Point(134, 189);
+            this.nombre_txt.Location = new System.Drawing.Point(268, 365);
             this.nombre_txt.Name = "nombre_txt";
-            this.nombre_txt.Size = new System.Drawing.Size(247, 27);
+            this.nombre_txt.Size = new System.Drawing.Size(494, 47);
             this.nombre_txt.TabIndex = 25;
             // 
             // Mun
             // 
             this.Mun.AutoSize = true;
+            this.Mun.BackColor = System.Drawing.Color.Transparent;
             this.Mun.Font = new System.Drawing.Font("Candara", 18F);
             this.Mun.ForeColor = System.Drawing.Color.White;
             this.Mun.Location = new System.Drawing.Point(676, 46);
@@ -112,9 +115,10 @@
             // 
             // Atras_picture
             // 
+            this.Atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
             this.Atras_picture.Location = new System.Drawing.Point(12, 937);
-            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Atras_picture.Margin = new System.Windows.Forms.Padding(6);
             this.Atras_picture.Name = "Atras_picture";
             this.Atras_picture.Size = new System.Drawing.Size(94, 90);
             this.Atras_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,6 +129,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(1226, 962);
@@ -136,9 +141,10 @@
             // 
             // x_picture
             // 
+            this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(1536, 2);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +156,7 @@
             // 
             this.guardar_txt.Font = new System.Drawing.Font("Candara", 10F);
             this.guardar_txt.Location = new System.Drawing.Point(82, 821);
-            this.guardar_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.guardar_txt.Margin = new System.Windows.Forms.Padding(6);
             this.guardar_txt.Name = "guardar_txt";
             this.guardar_txt.Size = new System.Drawing.Size(160, 62);
             this.guardar_txt.TabIndex = 29;
@@ -182,21 +188,23 @@
             this.label2.TabIndex = 51;
             this.label2.Text = "*";
             // 
-            // groupBox1
+            // Busqueda_grp
             // 
-            this.groupBox1.Controls.Add(this.busqueda_grid);
-            this.groupBox1.Controls.Add(this.Buscar);
-            this.groupBox1.Controls.Add(this.busqueda_txt);
-            this.groupBox1.Font = new System.Drawing.Font("Candara", 9.75F);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(832, 160);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox1.Size = new System.Drawing.Size(708, 723);
-            this.groupBox1.TabIndex = 73;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Búsqueda de registros";
+            this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
+            this.Busqueda_grp.Controls.Add(this.busqueda_grid);
+            this.Busqueda_grp.Controls.Add(this.Buscar);
+            this.Busqueda_grp.Controls.Add(this.busqueda_txt);
+            this.Busqueda_grp.Font = new System.Drawing.Font("Candara", 9.75F);
+            this.Busqueda_grp.ForeColor = System.Drawing.Color.White;
+            this.Busqueda_grp.Location = new System.Drawing.Point(832, 160);
+            this.Busqueda_grp.Margin = new System.Windows.Forms.Padding(6);
+            this.Busqueda_grp.Name = "Busqueda_grp";
+            this.Busqueda_grp.Padding = new System.Windows.Forms.Padding(6);
+            this.Busqueda_grp.Size = new System.Drawing.Size(708, 723);
+            this.Busqueda_grp.TabIndex = 73;
+            this.Busqueda_grp.TabStop = false;
+            this.Busqueda_grp.Text = "Búsqueda de registros";
+            this.Busqueda_grp.Visible = false;
             // 
             // busqueda_grid
             // 
@@ -212,7 +220,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F);
@@ -222,7 +229,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.busqueda_grid.Location = new System.Drawing.Point(6, 108);
+            this.busqueda_grid.Location = new System.Drawing.Point(21, 134);
+            this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_grid.Name = "busqueda_grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
@@ -232,7 +240,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.busqueda_grid.Size = new System.Drawing.Size(342, 262);
+            this.busqueda_grid.Size = new System.Drawing.Size(608, 537);
             this.busqueda_grid.TabIndex = 56;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
@@ -240,7 +248,7 @@
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
             this.Buscar.Location = new System.Drawing.Point(610, 62);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(6);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(78, 69);
             this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -252,7 +260,7 @@
             // 
             this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
             this.busqueda_txt.Location = new System.Drawing.Point(12, 75);
-            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.busqueda_txt.Name = "busqueda_txt";
@@ -264,12 +272,13 @@
             this.eliminar_btn.Enabled = false;
             this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.eliminar_btn.Location = new System.Drawing.Point(602, 821);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.eliminar_btn.Name = "eliminar_btn";
             this.eliminar_btn.Size = new System.Drawing.Size(160, 62);
             this.eliminar_btn.TabIndex = 76;
             this.eliminar_btn.Text = "Eliminar";
             this.eliminar_btn.UseVisualStyleBackColor = true;
+            this.eliminar_btn.Visible = false;
             this.eliminar_btn.Click += new System.EventHandler(this.eliminar_btn_Click);
             // 
             // modificar_btn
@@ -277,12 +286,13 @@
             this.modificar_btn.Enabled = false;
             this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
             this.modificar_btn.Location = new System.Drawing.Point(342, 821);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.modificar_btn.Name = "modificar_btn";
             this.modificar_btn.Size = new System.Drawing.Size(160, 62);
             this.modificar_btn.TabIndex = 75;
             this.modificar_btn.Text = "Modificar";
             this.modificar_btn.UseVisualStyleBackColor = true;
+            this.modificar_btn.Visible = false;
             this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
             // CrearMunicipio
@@ -291,10 +301,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1019);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.guardar_txt);
@@ -306,16 +318,17 @@
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.x_picture);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CrearMunicipio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "crearMunicipio";
             this.Load += new System.EventHandler(this.CrearMunicipio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Busqueda_grp.ResumeLayout(false);
+            this.Busqueda_grp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             this.ResumeLayout(false);
@@ -336,7 +349,7 @@
         private System.Windows.Forms.Button guardar_txt;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Busqueda_grp;
         private System.Windows.Forms.DataGridView busqueda_grid;
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;

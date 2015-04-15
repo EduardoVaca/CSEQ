@@ -13,9 +13,11 @@ namespace CSEQ
     public partial class Crear_InstitucionEducativa : Form
     {
         String nombre_selected;
+        int rol;
 
-        public Crear_InstitucionEducativa()
+        public Crear_InstitucionEducativa(int rol)
         {
+            this.rol = rol;
             InitializeComponent();
         }
 
@@ -46,6 +48,13 @@ namespace CSEQ
                 Util.llenarComboBox(ID_delegacion, inicio);
                 inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Delegacion d, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio AND d.ID_delegacion = c.ID_Delegacion;";
                 Util.llenarComboBox(ID_colonia, inicio);
+            }
+
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
             }
 
         }

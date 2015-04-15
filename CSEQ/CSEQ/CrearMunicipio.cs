@@ -16,9 +16,11 @@ namespace CSEQ
         int mID_estado;
         String nombre;
         int ID_selected;
+        int rol;
 
-        public CrearMunicipio()
+        public CrearMunicipio(int rol)
         {
+            this.rol = rol;
             InitializeComponent();
         }
 
@@ -43,6 +45,13 @@ namespace CSEQ
         private void CrearMunicipio_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
+
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
+            }
         }
 
         //Metodo donde se agrega el registro a la base de datos

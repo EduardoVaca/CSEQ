@@ -13,9 +13,11 @@ namespace CSEQ
     public partial class crearAreaTrabajo : Form
     {
         String nombre_selected;
+        int rol;
 
-        public crearAreaTrabajo()
+        public crearAreaTrabajo(int rol)
         {
+            this.rol = rol;
             InitializeComponent();
         }
 
@@ -91,7 +93,12 @@ namespace CSEQ
 
         private void crearAreaTrabajo_Load(object sender, EventArgs e)
         {
-
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                eliminar_btn.Visible = true;
+                modificar_btn.Visible = true;
+            }
         }
     }
 }

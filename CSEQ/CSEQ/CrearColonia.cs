@@ -16,9 +16,11 @@ namespace CSEQ
         int idMunicpio;
         String nombre;
         int ID_selected;
+        int rol;
 
-        public CrearColonia()
+        public CrearColonia(int rol)
         {
+            this.rol = rol;
             InitializeComponent();
         }
 
@@ -46,6 +48,13 @@ namespace CSEQ
                 int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
                 String inicio = "SELECT distinct d.ID_delegacion,d.nombre FROM Municipio m, Delegacion d, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio AND d.ID_delegacion = c.ID_Delegacion;";
                 Util.llenarComboBox(ID_delegacion, inicio);
+            }
+
+            if (rol == 1)
+            {
+                Busqueda_grp.Visible = true;
+                modificar_btn.Visible = true;
+                eliminar_btn.Visible = true;
             }
 
         }
