@@ -335,6 +335,84 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonaB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AparatoAuditivoB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AparatoAuditivoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ÁreaDeTrabajoB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ÁreaDeTrabajoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CausaB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CausaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CensoB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CensoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CiudadB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CiudadG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColoniaB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColoniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EntidadB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EntidadG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstadoB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstadoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstituciónEducativaB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstituciónEducativaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarcaB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarcaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SueldoB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SueldoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsuarioB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsuarioG.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
