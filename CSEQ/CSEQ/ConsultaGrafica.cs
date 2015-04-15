@@ -50,8 +50,8 @@ namespace CSEQ
 
         private void ImprimirConsulta_btn_Click(object sender, EventArgs e)
         {
-            Reporte Nuevo = new Reporte();
-            Nuevo.Show();
+            /*Reporte Nuevo = new Reporte();
+            Nuevo.Show();*/
         }
     }
 }

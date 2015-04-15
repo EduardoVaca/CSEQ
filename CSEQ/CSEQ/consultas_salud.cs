@@ -13,6 +13,7 @@ namespace CSEQ
     public partial class consultas_salud : Form
     {
         int index;
+        String query;
 
         public consultas_salud(int index)
         {
@@ -39,6 +40,34 @@ namespace CSEQ
                 titulo.Text = "Auxiliares Auditivos";
                 AuxiliaresAuditivos_grp.Visible = true;
             }
+        }
+
+        private void auxiliarAuditivo_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            
+
+            switch (auxiliarAuditivo_combo.SelectedIndex)
+            {
+                case 0:
+                    query = "CALL consultaMarca";
+                    String type = "Barra";
+                    index = 0;
+                    Util.graphData(zedGraph, query, type);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        private void Reporte_Click(object sender, EventArgs e)
+        {
+            if (auxiliarAuditivo_combo.SelectedValue != "")
+            {
+                Reporte Nuevo = new Reporte(query,index);
+                Nuevo.Show();
+            }
+            
         }
     }
 }
