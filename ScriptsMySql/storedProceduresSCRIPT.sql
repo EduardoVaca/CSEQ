@@ -178,6 +178,16 @@ BEGIN
 	INSERT INTO Hijo VALUES(0, nombre, fechaNac, sordo, CURPpadre);
 END //
 DELIMITER ;	
+
+-- USUARIO
+DELIMITER //
+CREATE PROCEDURE registrarUsuario
+(IN loginNuevo VARCHAR(30), passwordNuevo VARCHAR(30), ID_rolNuevo INT)
+BEGIN
+	INSERT INTO Usuario VALUES(loginNuevo, passwordNuevo)
+	INSERT INTO TieneRol VALUES(loginNuevo, ID_rolNuevo);
+END //
+DELIMITER ;
 						
 -- **************************************************************************************************************************************************
 -- BUSQUEDAS
@@ -375,8 +385,8 @@ CREATE PROCEDURE busquedaEnUsuario
 (IN variable VARCHAR(30))
 BEGIN
 	SELECT login as Login 
-	FROM Usuario 
-	WHERE login LIKE variable;
+	FROM Usuario u, TieneRol t
+	WHERE u.login LIKE variable AND u.login = t.login;
 END //
 DELIMITER ;	
 -- ****************************************************************************************************************8
@@ -655,7 +665,7 @@ CREATE PROCEDURE modificarUsuario
 (IN loginU VARCHAR(30), loginNuevo VARCHAR(30), passwordNuevo VARCHAR(30), IDrolViejo INT, IDrolNevo INT)
 BEGIN
 	UPDATE TieneRol SET ID_rol = IDrolNevo WHERE login = loginU AND ID_rol = IDrolViejo;	
-	UPDATE Usuario SET login = loginNuevo, password = passwordNuevo WHERE login = loginU;
+	UPDATE Usuario SET login = loginNuevo, password_usuario = passwordNuevo WHERE login = loginU;
 END //
 DELIMITER ;
 

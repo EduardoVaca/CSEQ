@@ -154,7 +154,7 @@
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
             this.zedGraph.Size = new System.Drawing.Size(1118, 575);
-            this.zedGraph.TabIndex = 17;                     
+            this.zedGraph.TabIndex = 17;
             // 
             // label2
             // 
@@ -187,6 +187,7 @@
             // 
             // ID_censo
             // 
+            this.ID_censo.Enabled = false;
             this.ID_censo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_censo.FormattingEnabled = true;
             this.ID_censo.Items.AddRange(new object[] {

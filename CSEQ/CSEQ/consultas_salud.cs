@@ -50,15 +50,6 @@ namespace CSEQ
             todoscensos_radio.Enabled = true;
         }
 
-        private void Reporte_Click(object sender, EventArgs e)
-        {
-            if (auxiliarAuditivo_combo.SelectedValue != "")
-            {
-                Reporte Nuevo = new Reporte(query,index);
-                Nuevo.Show();
-            }
-            
-        }
 
         private void todoscensos_radio_CheckedChanged(object sender, EventArgs e)
         {
@@ -73,6 +64,7 @@ namespace CSEQ
         private void ID_censo_SelectionChangeCommitted(object sender, EventArgs e)
         {            
             int id_censo = Int32.Parse(ID_censo.SelectedValue.ToString());
+            Reporte.Enabled = true;
            
             switch (auxiliarAuditivo_combo.SelectedIndex)
             {
