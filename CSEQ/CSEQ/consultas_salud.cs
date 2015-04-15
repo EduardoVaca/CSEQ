@@ -88,5 +88,12 @@ namespace CSEQ
             }
         }
 
+        private void Reporte_Click(object sender, EventArgs e)
+        {
+
+            Reporte Nuevo = new Reporte(query,index);
+            Nuevo.Show();            
+            
+        }
     }
 }

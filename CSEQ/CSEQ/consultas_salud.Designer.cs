@@ -39,7 +39,6 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.titulo = new System.Windows.Forms.Label();
             this.zedGraph = new ZedGraph.ZedGraphControl();
-            this.dataTable1TableAdapter1 = new CSEQ.DataSet1TableAdapters.DataTable1TableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.todoscensos_radio = new System.Windows.Forms.RadioButton();
             this.ID_censo = new System.Windows.Forms.ComboBox();
@@ -155,11 +154,7 @@
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
             this.zedGraph.Size = new System.Drawing.Size(1118, 575);
-            this.zedGraph.TabIndex = 17;
-            // 
-            // dataTable1TableAdapter1
-            // 
-            this.dataTable1TableAdapter1.ClearBeforeFill = true;
+            this.zedGraph.TabIndex = 17;                     
             // 
             // label2
             // 
@@ -248,7 +243,6 @@
         private System.Windows.Forms.ComboBox auxiliarAuditivo_combo;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label label1;
-        private DataSet1TableAdapters.DataTable1TableAdapter dataTable1TableAdapter1;
         private System.Windows.Forms.Label titulo;
         private ZedGraph.ZedGraphControl zedGraph;
         private System.Windows.Forms.Button Reporte;

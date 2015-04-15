@@ -28,16 +28,12 @@ namespace CSEQ
             switch(index){
                 case 0:
                     ReporteMarca report = new ReporteMarca();
-                    report.SetDataSource(Util.getData(query));
                     reportViewer.ReportSource = report;
                     break;
                 default:
                     MessageBox.Show("Reporte no valido");
                     break;
             }
-            //ReportesCSEQ report = new ReportesCSEQ();
-            //report.SetDataSource(Util.getData(query));
-           // reportViewer.ReportSource = report;
         }
     }
 }
