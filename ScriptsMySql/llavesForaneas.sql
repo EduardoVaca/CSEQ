@@ -4,16 +4,12 @@
 ALTER TABLE Persona ADD CONSTRAINT cfPersonaID_periodo FOREIGN KEY (ID_periodo) REFERENCES Periodo (ID_periodo);
 
 -- Constraint (COLONIA).
-ALTER TABLE Colonia ADD CONSTRAINT cfColoniaID_delegacion FOREIGN KEY (ID_delegacion) REFERENCES Delegacion (ID_delegacion);
 ALTER TABLE Colonia ADD CONSTRAINT cfColoniaID_municipio FOREIGN KEY (ID_municipio) REFERENCES Municipio (ID_municipio);
 
 -- Constraint (VIVE)
 ALTER TABLE Vive ADD CONSTRAINT cfViveCURP FOREIGN KEY (CURP) REFERENCES Persona (CURP);
 ALTER TABLE Vive ADD CONSTRAINT cfViveID_colonia FOREIGN KEY (ID_colonia) REFERENCES Colonia (ID_colonia);
 ALTER TABLE Vive ADD CONSTRAINT cfViveID_censo FOREIGN KEY (ID_censo) REFERENCES Censo (ID_censo);
-
--- Constarint (DELEGACION)
-ALTER TABLE Delegacion ADD CONSTRAINT cfDelegacionID_municipio FOREIGN KEY (ID_municipio) REFERENCES Municipio (ID_municipio);
 
 -- Contsraint (MUNICIPIO)
 ALTER TABLE Municipio ADD CONSTRAINT cfMunicipioID_estado FOREIGN KEY (ID_estado) REFERENCES Estado (ID_estado);
