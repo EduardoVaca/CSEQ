@@ -688,10 +688,13 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE modificarInstitucionEducativa
 (IN nombreViejo VARCHAR(90), nombreNuevo VARCHAR(90), calleNuevo VARCHAR(80), telefonoNuevo VARCHAR(20), correoNuevo VARCHAR(80),
- privadaNuevo BOOLEAN, especializadaNuevo BOOLEAN)
+ privadaNuevo BOOLEAN, especializadaNuevo BOOLEAN, IDcoloniaNuevo INT)
 BEGIN
+	DECLARE IDinstitucion INT;
+	SELECT ID_institucionEducativa INTO IDinstitucion FROM Institucioneducativa WHERE nombre = nombreViejo;
 	UPDATE InstitucionEducativa SET nombre = nombreNuevo, calle = calleNuevo, telefono = telefonoNuevo, correo = correoNuevo, privada = privadaNuevo,
 	especializada = especializadaNuevo WHERE nombre = nombreViejo;
+	UPDATE Localizainstitucioneducativa SET ID_colonia = IDcoloniaNuevo WHERE ID_institucionEducativa = IDinstitucion;
 END //
 DELIMITER ;
 

@@ -6,7 +6,6 @@ DROP TABLE Causa;
 DROP TABLE Causado;
 DROP TABLE Censo;
 DROP TABLE Colonia;
-DROP TABLE Delegacion;
 DROP TABLE Empleo;
 DROP TABLE EsGrado;
 DROP TABLE Estado;

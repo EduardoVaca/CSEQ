@@ -44,7 +44,7 @@ namespace CSEQ
             {
                 int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
                 //MessageBox.Show(ID_municipio.SelectedValue.ToString());
-                String inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio;";
+                String inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Colonia c WHERE m.ID_municipio=c.ID_municipio;";
                 Util.llenarComboBox(ID_colonia, inicio);
             }
 
@@ -66,14 +66,15 @@ namespace CSEQ
         {
             String valorComboBox = ID_estado.SelectedValue.ToString();
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
-                                                "ID_estado = " + valorComboBox);
+                                                "ID_estado = " + valorComboBox);            
         }
 
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            String valorComboBox = ID_municipio.SelectedValue.ToString();
+            int ID_municipio_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
+            MessageBox.Show(ID_municipio_selected.ToString());
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
-                                               "ID_municipio = " + valorComboBox);
+                                               "ID_municipio = " + ID_municipio_selected);            
         }
         /*---------------------------------------------------------------------*/
 
@@ -94,11 +95,11 @@ namespace CSEQ
                 iEspecializada = 1;
             else
                 iEspecializada = 0;
-
-            if (Util.executeStoredProcedure("registrarInstitucionEducativa", iNombre, iCalle, iTelefono, iCorreo, iPrivada, iEspecializada, iID_colonia))
-            {
-                MessageBox.Show("La Institucion Educativa se registro con exito!");
-            }
+            if(iNombre.Length > 0)
+                if (Util.executeStoredProcedure("registrarInstitucionEducativa", iNombre, iCalle, iTelefono, iCorreo, iPrivada, iEspecializada, iID_colonia))
+                {
+                    MessageBox.Show("La Institucion Educativa se registro con exito!");
+                }
 
         }
 
@@ -119,14 +120,16 @@ namespace CSEQ
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
 
-                String sqlActiveRow = "SELECT * FROM InstitucionEducativa i, Estado e, Municipio m, Colonia c , LocalizaInstitucionEducativa l WHERE ";
+          /*  SELECT * FROM InstitucionEducativa i, LocalizaInstitucionEducativa l, Colonia c, Municipio m
+WHERE i.nombre = 'Universidad Autonoma de Queretaro' AND l.ID_institucionEducativa = i.ID_institucionEducativa AND
+l.ID_colonia = c.ID_colonia AND c.Id_municipio = m.ID_municipio*/
+                String sqlActiveRow = "SELECT * FROM InstitucionEducativa i, LocalizaInstitucionEducativa l, Colonia c, Municipio m WHERE ";
                 sqlActiveRow += (" i.nombre= '" + nombre_selected + "' AND i.correo= '" + correo + "' AND l.ID_institucioneducativa=i.ID_institucioneducativa " +
-                                                                                        "AND l.ID_colonia=c.ID_colonia AND c.ID_municipio=m.ID_municipio " +
-                                                                                        "AND m.ID_estado=e.ID_estado;");
+                                                                                        "AND l.ID_colonia = c.ID_colonia AND c.ID_municipio=m.ID_municipio;");                                                                                        
                 /*
                 String sqlActiveRow = "SELECT * FROM InstitucionEducativa WHERE ";
                 sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" + correo + "';";
-                */
+                */                
                 Util.showData(this, sqlActiveRow);
             }
 
@@ -159,6 +162,7 @@ namespace CSEQ
             String correoNuevo = correo_txt.Text;
             bool privadaNuevo = privada_check.Checked;
             bool especializadaNuevo = especializada_check.Checked;
+            int IDcoloniaNuevo = Int32.Parse(ID_colonia.SelectedValue.ToString());
 
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar Institucion: '" + nombre_selected + "'?", "Confirmacion de eliminar",
@@ -166,7 +170,9 @@ namespace CSEQ
 
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("modificarInstitucionEducativa", nombre_selected, nombreNuevo, calleNuevo, telefonoNuevo, correoNuevo, privadaNuevo, especializadaNuevo))
+                if (Util.executeStoredProcedure("modificarInstitucionEducativa", nombre_selected, nombreNuevo,
+                                               calleNuevo, telefonoNuevo, correoNuevo, privadaNuevo, especializadaNuevo,
+                                               IDcoloniaNuevo))
                 {
                     MessageBox.Show("La institucion se ha modificado con exito!");
                 }
@@ -184,6 +190,11 @@ namespace CSEQ
                 this.Close();
                 Application.Restart();
             }
+        }
+
+        private void nombre_txt_TextChanged(object sender, EventArgs e)
+        {
+            guardar_btn.Enabled = true;
         }
     }
 }
