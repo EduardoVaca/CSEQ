@@ -72,6 +72,19 @@ namespace CSEQ
                         //report.SetParameterValue(censo, report.Parameter_censo);
                     }
                     break;
+                case 2:
+                    if (entrada == 1)
+                    {
+                        ReporteCoclear report = new ReporteCoclear();
+                        reportViewer.ReportSource = report;
+                    }
+                    if (entrada == 2)
+                    {
+                        ReporteCoclearCenso report = new ReporteCoclearCenso();
+                        report.SetParameterValue("censo", censo);
+                        reportViewer.ReportSource = report;
+                    }
+                    break;
                 default:
                     MessageBox.Show("Reporte no valido");
                     break;

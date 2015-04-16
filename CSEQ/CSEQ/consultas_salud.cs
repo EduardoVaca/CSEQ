@@ -54,11 +54,15 @@ namespace CSEQ
             index = auxiliarAuditivo_combo.SelectedIndex;
             tienen_radio.Visible = false;
             noTienen_radio.Visible = false;
+            tienen_radio.Checked = tienen_radio.Visible;
+            noTienen_radio.Checked = tienen_radio.Visible;
             switch(auxiliarAuditivo_combo.SelectedIndex){
                 case 1:
                     tienen_radio.Visible = true;
                     tienen_radio.Checked = true;
                        noTienen_radio.Visible = true;
+                    break;
+                case 2:
                     break;
             }
         }
@@ -83,6 +87,13 @@ namespace CSEQ
                     type = "Barra";
                     Util.graphData(zedGraph, query, type);
                     break;
+                case 2:
+                    Reporte.Enabled = true;
+                    salida = 1;
+                    query=" Call consultaTienenImplanteCoclear();";
+                    type = "Pay";
+                    Util.graphData(zedGraph, query, type);
+                    break;
             }
             
         }
@@ -93,17 +104,27 @@ namespace CSEQ
 
             Reporte.Enabled = true;
             todoscensos_radio.Checked = false;
+            String type;
             switch (auxiliarAuditivo_combo.SelectedIndex)
             {
                 case 0:
                     query = "CALL consultaMarcaPorCenso(" + id_censo + ");";
-                    String type = "Barra";
+                     type = "Barra";
                     index = 0;
                     salida = 2;
                     Util.graphData(zedGraph, query, type);
                     break;
                 case 1:
-                    
+                    break;
+                case 2:
+                    query = " CALL consultaTienenImplanteCoclearPorCenso(" + id_censo+ ");";
+                    type = "Pay";
+                    index = 2;
+                    salida = 2;
+                    Util.graphData(zedGraph, query, type);
+                    break;
+                case 3:
+
                     break;
                 default:
 
