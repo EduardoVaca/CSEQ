@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultas_salud));
             this.AuxiliaresAuditivos_grp = new System.Windows.Forms.GroupBox();
+            this.noTienen_radio = new System.Windows.Forms.RadioButton();
+            this.tienen_radio = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.auxiliarAuditivo_combo = new System.Windows.Forms.ComboBox();
             this.Reporte = new System.Windows.Forms.Button();
@@ -42,10 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.todoscensos_radio = new System.Windows.Forms.RadioButton();
             this.ID_censo = new System.Windows.Forms.ComboBox();
-            this.tienen_radio = new System.Windows.Forms.RadioButton();
-            this.noTienen_radio = new System.Windows.Forms.RadioButton();
             this.logout = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.AuxiliaresAuditivos_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
@@ -58,17 +57,50 @@
             this.AuxiliaresAuditivos_grp.BackColor = System.Drawing.Color.Transparent;
             this.AuxiliaresAuditivos_grp.Controls.Add(this.noTienen_radio);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.tienen_radio);
-            this.AuxiliaresAuditivos_grp.Controls.Add(this.radioButton1);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.label1);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.auxiliarAuditivo_combo);
             this.AuxiliaresAuditivos_grp.Location = new System.Drawing.Point(6, 38);
-            this.AuxiliaresAuditivos_grp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AuxiliaresAuditivos_grp.Margin = new System.Windows.Forms.Padding(2);
             this.AuxiliaresAuditivos_grp.Name = "AuxiliaresAuditivos_grp";
-            this.AuxiliaresAuditivos_grp.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AuxiliaresAuditivos_grp.Padding = new System.Windows.Forms.Padding(2);
             this.AuxiliaresAuditivos_grp.Size = new System.Drawing.Size(775, 163);
             this.AuxiliaresAuditivos_grp.TabIndex = 0;
             this.AuxiliaresAuditivos_grp.TabStop = false;
             this.AuxiliaresAuditivos_grp.Visible = false;
+            // 
+            // noTienen_radio
+            // 
+            this.noTienen_radio.AutoSize = true;
+            this.noTienen_radio.BackColor = System.Drawing.Color.Transparent;
+            this.noTienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noTienen_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.noTienen_radio.Location = new System.Drawing.Point(385, 89);
+            this.noTienen_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.noTienen_radio.Name = "noTienen_radio";
+            this.noTienen_radio.Size = new System.Drawing.Size(80, 19);
+            this.noTienen_radio.TabIndex = 23;
+            this.noTienen_radio.TabStop = true;
+            this.noTienen_radio.Text = "No tienen";
+            this.noTienen_radio.UseVisualStyleBackColor = false;
+            this.noTienen_radio.Visible = false;
+            this.noTienen_radio.CheckedChanged += new System.EventHandler(this.noTienen_radio_CheckedChanged);
+            // 
+            // tienen_radio
+            // 
+            this.tienen_radio.AutoSize = true;
+            this.tienen_radio.BackColor = System.Drawing.Color.Transparent;
+            this.tienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tienen_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.tienen_radio.Location = new System.Drawing.Point(385, 58);
+            this.tienen_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.tienen_radio.Name = "tienen_radio";
+            this.tienen_radio.Size = new System.Drawing.Size(74, 19);
+            this.tienen_radio.TabIndex = 22;
+            this.tienen_radio.TabStop = true;
+            this.tienen_radio.Text = "Si tienen";
+            this.tienen_radio.UseVisualStyleBackColor = false;
+            this.tienen_radio.Visible = false;
+            this.tienen_radio.CheckedChanged += new System.EventHandler(this.tienen_radio_CheckedChanged);
             // 
             // label1
             // 
@@ -92,7 +124,7 @@
             "Personas con y sin aparato auditivo",
             "Personas con implante coclear"});
             this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(76, 70);
-            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(2);
             this.auxiliarAuditivo_combo.Name = "auxiliarAuditivo_combo";
             this.auxiliarAuditivo_combo.Size = new System.Drawing.Size(298, 25);
             this.auxiliarAuditivo_combo.TabIndex = 0;
@@ -126,7 +158,7 @@
             this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(758, 10);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(30, 29);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,9 +180,10 @@
             // 
             // zedGraph
             // 
+            this.zedGraph.AutoSize = true;
             this.zedGraph.BackColor = System.Drawing.Color.Transparent;
-            this.zedGraph.Location = new System.Drawing.Point(187, 209);
-            this.zedGraph.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.zedGraph.Location = new System.Drawing.Point(172, 201);
+            this.zedGraph.Margin = new System.Windows.Forms.Padding(6);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
             this.zedGraph.ScrollMaxX = 0D;
@@ -159,7 +192,7 @@
             this.zedGraph.ScrollMinX = 0D;
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
-            this.zedGraph.Size = new System.Drawing.Size(1118, 575);
+            this.zedGraph.Size = new System.Drawing.Size(609, 319);
             this.zedGraph.TabIndex = 17;
             // 
             // label2
@@ -183,7 +216,7 @@
             this.todoscensos_radio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todoscensos_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.todoscensos_radio.Location = new System.Drawing.Point(7, 245);
-            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(2);
             this.todoscensos_radio.Name = "todoscensos_radio";
             this.todoscensos_radio.Size = new System.Drawing.Size(112, 18);
             this.todoscensos_radio.TabIndex = 20;
@@ -202,66 +235,20 @@
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
             this.ID_censo.Location = new System.Drawing.Point(82, 218);
-            this.ID_censo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(2);
             this.ID_censo.Name = "ID_censo";
             this.ID_censo.Size = new System.Drawing.Size(82, 25);
             this.ID_censo.TabIndex = 21;
             this.ID_censo.SelectionChangeCommitted += new System.EventHandler(this.ID_censo_SelectionChangeCommitted);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(54, 300);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 24;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Visible = false;
-            // 
-            // tienen_radio
-            // 
-            this.tienen_radio.AutoSize = true;
-            this.tienen_radio.BackColor = System.Drawing.Color.Transparent;
-            this.tienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tienen_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.tienen_radio.Location = new System.Drawing.Point(385, 58);
-            this.tienen_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.tienen_radio.Name = "tienen_radio";
-            this.tienen_radio.Size = new System.Drawing.Size(74, 19);
-            this.tienen_radio.TabIndex = 22;
-            this.tienen_radio.TabStop = true;
-            this.tienen_radio.Text = "Si tienen";
-            this.tienen_radio.UseVisualStyleBackColor = false;
-            this.tienen_radio.Visible = false;
-            this.tienen_radio.CheckedChanged += new System.EventHandler(this.tienen_radio_CheckedChanged);
-            // 
-            // noTienen_radio
-            // 
-            this.noTienen_radio.AutoSize = true;
-            this.noTienen_radio.BackColor = System.Drawing.Color.Transparent;
-            this.noTienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noTienen_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.noTienen_radio.Location = new System.Drawing.Point(385, 89);
-            this.noTienen_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.noTienen_radio.Name = "noTienen_radio";
-            this.noTienen_radio.Size = new System.Drawing.Size(80, 19);
-            this.noTienen_radio.TabIndex = 23;
-            this.noTienen_radio.TabStop = true;
-            this.noTienen_radio.Text = "No tienen";
-            this.noTienen_radio.UseVisualStyleBackColor = false;
-            this.noTienen_radio.Visible = false;
-            this.noTienen_radio.CheckedChanged += new System.EventHandler(this.noTienen_radio_CheckedChanged);
-            // 
             // logout
             // 
             this.logout.BackColor = System.Drawing.Color.Transparent;
             this.logout.Image = global::CSEQ.Properties.Resources.logout;
-            this.logout.Location = new System.Drawing.Point(1517, 87);
+            this.logout.Location = new System.Drawing.Point(757, 40);
             this.logout.Margin = new System.Windows.Forms.Padding(4);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.Size = new System.Drawing.Size(33, 31);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logout.TabIndex = 22;
             this.logout.TabStop = false;
@@ -275,8 +262,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.radioButton1);
-            this.ClientSize = new System.Drawing.Size(1574, 965);
+            this.ClientSize = new System.Drawing.Size(800, 530);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.ID_censo);
             this.Controls.Add(this.todoscensos_radio);
@@ -289,7 +275,7 @@
             this.Controls.Add(this.AuxiliaresAuditivos_grp);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "consultas_salud";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultas_salud";
@@ -322,6 +308,5 @@
         private System.Windows.Forms.RadioButton noTienen_radio;
         private System.Windows.Forms.RadioButton tienen_radio;
         private System.Windows.Forms.PictureBox logout;
-        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

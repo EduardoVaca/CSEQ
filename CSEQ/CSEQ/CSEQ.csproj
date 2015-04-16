@@ -155,6 +155,12 @@
       <DependentUpon>ReporteAuxiliares.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReporteAuxiliaresCenso.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteAuxiliaresCenso.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReporteMarca.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -223,6 +229,12 @@
       <DependentUpon>ReporteMarcaCenso.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReporteNoAuxiliaresCenso.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteNoAuxiliaresCenso.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Util.cs" />
     <Compile Include="Ventana.cs" />
     <EmbeddedResource Include="ConsultaGrafica.resx">
@@ -274,6 +286,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteAuxiliares.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteAuxiliaresCenso.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteAuxiliaresCenso.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteMarca.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteMarca.cs</LastGenOutput>
@@ -318,6 +334,10 @@
     <EmbeddedResource Include="ReporteMarcaCenso.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteMarcaCenso.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteNoAuxiliaresCenso.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteNoAuxiliaresCenso.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -45,7 +45,6 @@ namespace CSEQ
                         //report.SetParameterValue(censo, report.Parameter_censo);
                         report.SetParameterValue("censo", censo);
                         reportViewer.ReportSource = report;
-                        
                     }
                     break;
                 case 1:
@@ -54,21 +53,24 @@ namespace CSEQ
                         ReporteAuxiliares report = new ReporteAuxiliares();
                         reportViewer.ReportSource = report;
                     }
-                    if (entrada == 2) { 
-                        ReporteMarcaCenso report = new ReporteMarcaCenso();
+                    if (entrada == 2) {
+                        
+                        if (query.Contains("SiTiene"))
+                        {
+                            ReporteAuxiliaresCenso report = new ReporteAuxiliaresCenso();
+                            report.SetParameterValue("censo", censo);
+                            reportViewer.ReportSource = report;
+                        }
+                        else if (query.Contains("NoTiene"))
+                        {
+                            ReporteNoAuxiliaresCenso report = new ReporteNoAuxiliaresCenso();
+                            report.SetParameterValue("censo", censo);
+                            reportViewer.ReportSource = report;
+                        }
                         //report.SetDataSource(Util.getData(query));
                        // report.Parameter_Año.CurrentValues.Insert(censo,censo);
                         //report.SetParameterValue(censo, report.Parameter_censo);
-                        report.SetParameterValue("censo", censo);
-                        reportViewer.ReportSource = report;
-                        
                     }
-                    break;
-                    
-                    /*
-                    Pruebareport reporte2 = new Pruebareport();
-                    reporte2.SetDataSource(Util.getData(query));
-                    reportViewer.ReportSource = reporte2;*/
                     break;
                 default:
                     MessageBox.Show("Reporte no valido");
