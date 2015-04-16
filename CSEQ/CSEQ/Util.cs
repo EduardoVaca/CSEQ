@@ -185,9 +185,15 @@ namespace CSEQ
         -----------------------------------------------------------------------*/
         public static String MySQLFormat(Object param)
         {
+            if (param.Equals(0))
+                return "null";
             //En caso de ser alfanumerico
             if (param is String)
             {
+                if (param.Equals("null"))
+                {
+                    return "null";
+                }
                 String sParam;
                 sParam = param.ToString();
                 return ("'" + sParam.Replace("'", "\'") + "'");
@@ -236,7 +242,8 @@ namespace CSEQ
                     comando += MySQLFormat(param) + ", ";
                 contador_parametros++;
             }            
-            comando += ");";                
+            comando += ");";
+            MessageBox.Show(comando);  
             return execute(comando);
         }
 
