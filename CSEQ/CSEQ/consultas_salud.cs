@@ -63,17 +63,6 @@ namespace CSEQ
             }
         }
 
-        private void Reporte_Click(object sender, EventArgs e)
-        {
-            if (auxiliarAuditivo_combo.SelectedValue != "")
-            {
-                Reporte Nuevo = new Reporte(query,index);
-                Nuevo.Show();
-            }
-            
-        }
-
-
         private void todoscensos_radio_CheckedChanged(object sender, EventArgs e)
         {
             String type;
