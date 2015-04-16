@@ -107,8 +107,11 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT DISTINCT * FROM Colonia c, Estado e, Delegacion d , Municipio m WHERE ";
                 sqlActiveRow += " c.nombre= '" + nombre_selected + "' AND c.ID_municipio=m.ID_municipio  AND c.ID_delegacion=d.ID_delegacion AND m.ID_estado=e.ID_estado;";
                 Util.showData(this, sqlActiveRow);
-                idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString());
-                ID_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
+                if (ID_municipio.SelectedItem != null)
+                {
+                    idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString());
+                    ID_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
+                }
             }
         }
 
@@ -116,6 +119,8 @@ namespace CSEQ
         {
             String nombreNuevo = nombre_txt.Text;
             int ID_nuevo = Int32.Parse(ID_municipio.SelectedValue.ToString());
+            MessageBox.Show(ID_selected.ToString());
+            MessageBox.Show(ID_nuevo.ToString());
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar la colonia: " + nombre + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);

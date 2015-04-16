@@ -146,6 +146,12 @@
     <Compile Include="Crear_sueldo.Designer.cs">
       <DependentUpon>Crear_sueldo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteAuxiliares.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteAuxiliares.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReporteMarca.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -208,6 +214,12 @@
     <Compile Include="Reporte.Designer.cs">
       <DependentUpon>Reporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteMarcaCenso.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteMarcaCenso.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Util.cs" />
     <Compile Include="Ventana.cs" />
     <EmbeddedResource Include="ConsultaGrafica.resx">
@@ -255,6 +267,10 @@
     <EmbeddedResource Include="Crear_sueldo.resx">
       <DependentUpon>Crear_sueldo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteAuxiliares.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteAuxiliares.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteMarca.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteMarca.cs</LastGenOutput>
@@ -295,6 +311,10 @@
     </Compile>
     <EmbeddedResource Include="Reporte.resx">
       <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMarcaCenso.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMarcaCenso.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -395,6 +415,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZedGraph.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
