@@ -14,7 +14,7 @@ namespace CSEQ
     {
         int index;
         String query;
-        int salida;
+        int salida=1;
         //salida =1 Genera reporte de todos los censos
         //salida =2 Genera reporte de censo por año
 
@@ -76,8 +76,9 @@ namespace CSEQ
                     break;
                 case 1:
                     Reporte.Enabled = true;
+                    tienen_radio.Checked = false;
+                    noTienen_radio.Checked = false;
                     salida = 1;
-                    
                     query = "CALL consultaNoTienenAuxiliar();";
                     type = "Barra";
                     Util.graphData(zedGraph, query, type);
@@ -113,6 +114,18 @@ namespace CSEQ
         private void Reporte_Click(object sender, EventArgs e)
         {
             
+            if (tienen_radio.Checked)
+            {
+                query = "CALL consultaSiTienenAuxiliar();";
+                index = 1;
+                salida = 2;
+            }
+            if (noTienen_radio.Checked)
+            {
+                query = "CALL consultaNoTienenAuxiliar();";
+                index = 1;
+                salida = 2;
+            }
             Reporte Nuevo = new Reporte(query,index,salida,getId_censo());
             Nuevo.Show();            
             
@@ -128,6 +141,7 @@ namespace CSEQ
             String type;
             query = "CALL consultaSiTienenAuxiliar();";
             type = "Barra";
+            index = 1;
             Util.graphData(zedGraph, query, type);
         }
 
@@ -136,6 +150,7 @@ namespace CSEQ
             String type;
             query = "CALL consultaNoTienenAuxiliar();";
             type = "Barra";
+            index = 1;
             Util.graphData(zedGraph, query, type);
         }
 
