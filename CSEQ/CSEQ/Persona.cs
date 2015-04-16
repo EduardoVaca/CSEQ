@@ -14,6 +14,7 @@ namespace CSEQ
     {
         String nombre_selected;
         int rol;
+        String CURP_selected;
 
         public Persona(int rol)
         {
@@ -130,7 +131,7 @@ namespace CSEQ
                 textBox1.Text = sqlActiveRow;
                 Util.showData(this, sqlActiveRow);
                 nombre_selected = Nombre_txt.Text;
-               // MessageBox.Show(ID_municipio.SelectedValue.ToString());
+                CURP_selected = CURP_txt.Text;
             }
         }
         /*-------------------------------------------------------------------------------------*/
@@ -361,6 +362,20 @@ ID_aparatoAuditivo INT, modelo VARCHAR(30)*/
             {
                 this.Close();
                 Application.Restart();
+            }
+        }
+
+        private void eliminar_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar a '" + nombre_selected + "'? TODA la " +
+                "informacion referente a esta persona se borrara...", "Confirmacion de eliminacion", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarPersona", CURP_selected))
+                {
+                    MessageBox.Show("Se elimino a la persona con exito!");
+                }
             }
         }
 
