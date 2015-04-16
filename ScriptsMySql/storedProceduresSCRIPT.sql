@@ -692,11 +692,11 @@ DELIMITER ;
 -- modificar COLONIA
 DELIMITER //
 CREATE PROCEDURE modificarColonia
-(IN nombreC VARCHAR(80), IDmunicipio INT, nombreNuevo VARCHAR(80), IDmunicipioNuevo INT)
+(IN nombreC VARCHAR(80), IDmunicipio INT, nombreNuevo VARCHAR(80), IDmunicipioNuevo INT, IDdelegacionNuevo INT)
 BEGIN
 	DECLARE IDcoloniaObtenido INT;
 	SELECT ID_colonia INTO IDcoloniaObtenido FROM Colonia WHERE nombre = nombreC AND ID_municipio = IDmunicipio;
-	UPDATE Colonia SET nombre = nombreNuevo, ID_municipio = IDmunicipioNuevo WHERE ID_colonia = IDcoloniaObtenido;
+	UPDATE Colonia SET nombre = nombreNuevo, ID_municipio = IDmunicipioNuevo, ID_delegacion = IDdelegacionNuevo WHERE ID_colonia = IDcoloniaObtenido;
 END //
 DELIMITER ;
 

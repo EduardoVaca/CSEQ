@@ -111,22 +111,34 @@ namespace CSEQ
                 {
                     idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString());
                     ID_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
-                }
+                }                
             }
         }
 
         private void modificar_btn_Click(object sender, EventArgs e)
         {
+
+            int ID_delegacionNuevo;
+            
+            if (ID_delegacion.SelectedValue != null)
+            {
+                ID_delegacionNuevo = Int32.Parse(ID_delegacion.SelectedValue.ToString());
+            }
+            else
+            {
+                ID_delegacionNuevo = 0;
+            }
+            
             String nombreNuevo = nombre_txt.Text;
             int ID_nuevo = Int32.Parse(ID_municipio.SelectedValue.ToString());
-            MessageBox.Show(ID_selected.ToString());
-            MessageBox.Show(ID_nuevo.ToString());
+            //MessageBox.Show(ID_selected.ToString());
+            //MessageBox.Show(ID_nuevo.ToString());
             DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar la colonia: " + nombre + "'?", "Confirmacion de modificar",
+            respuesta = MessageBox.Show("¿Desea modificar la colonia: " + nombre_selected + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("modificarColonia", nombre, ID_selected, nombreNuevo, ID_nuevo))
+                if (Util.executeStoredProcedure("modificarColonia", nombre_selected, ID_selected, nombreNuevo, ID_nuevo, ID_delegacionNuevo))
                 {
                     MessageBox.Show("La colonia se modifico con exito");
                 }
