@@ -14,12 +14,18 @@ namespace CSEQ
     {
         String query;
         int index;
+        int entrada;
+        int censo;
+        //salida =1 Genera reporte de todos los censos
+        //salida =2 Genera reporte de censo por año
 
-        public Reporte(String query,int index)
+        public Reporte(String query,int index,int entrada,int censo)
         {
             InitializeComponent();
             this.query = query;
             this.index = index;
+            this.entrada = entrada;
+            this.censo = censo;
             
         }
 
@@ -27,8 +33,42 @@ namespace CSEQ
         {
             switch(index){
                 case 0:
-                    ReporteMarca report = new ReporteMarca();
-                    reportViewer.ReportSource = report;
+                    if (entrada == 1)
+                    {
+                        ReporteMarca report = new ReporteMarca();
+                        reportViewer.ReportSource = report;
+                    }
+                    if (entrada == 2) { 
+                        ReporteMarcaCenso report = new ReporteMarcaCenso();
+                        //report.SetDataSource(Util.getData(query));
+                       // report.Parameter_Año.CurrentValues.Insert(censo,censo);
+                        //report.SetParameterValue(censo, report.Parameter_censo);
+                        report.SetParameterValue("censo", censo);
+                        reportViewer.ReportSource = report;
+                        
+                    }
+                    break;
+                case 1:
+                    if (entrada == 1)
+                    {
+                        ReporteAuxiliares report = new ReporteAuxiliares();
+                        reportViewer.ReportSource = report;
+                    }
+                    if (entrada == 2) { 
+                        ReporteMarcaCenso report = new ReporteMarcaCenso();
+                        //report.SetDataSource(Util.getData(query));
+                       // report.Parameter_Año.CurrentValues.Insert(censo,censo);
+                        //report.SetParameterValue(censo, report.Parameter_censo);
+                        report.SetParameterValue("censo", censo);
+                        reportViewer.ReportSource = report;
+                        
+                    }
+                    break;
+                    
+                    /*
+                    Pruebareport reporte2 = new Pruebareport();
+                    reporte2.SetDataSource(Util.getData(query));
+                    reportViewer.ReportSource = reporte2;*/
                     break;
                 default:
                     MessageBox.Show("Reporte no valido");
