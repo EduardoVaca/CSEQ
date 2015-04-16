@@ -120,13 +120,6 @@ INTO TABLE cseq.municipio
 FIELDS TERMINATED BY ','
 IGNORE 1 LINES;
 
--- Carga DELEGACION
-
-LOAD DATA INFILE 'Delegacion.csv'
-INTO TABLE cseq.delegacion
-FIELDS TERMINATED BY ','
-IGNORE 1 LINES;
-
 -- Carga COLONIA
 
 LOAD DATA INFILE 'Colonia.csv'

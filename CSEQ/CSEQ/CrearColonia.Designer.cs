@@ -39,9 +39,7 @@
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.Nombre_label = new System.Windows.Forms.Label();
             this.Guardar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ID_delegacion = new System.Windows.Forms.ComboBox();
             this.ID_municipio = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ID_estado = new System.Windows.Forms.ComboBox();
@@ -148,19 +146,6 @@
             this.Guardar.UseVisualStyleBackColor = true;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 14F);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(11, 312);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 46);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Delegación";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -174,16 +159,6 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Municipio";
             // 
-            // ID_delegacion
-            // 
-            this.ID_delegacion.Font = new System.Drawing.Font("Candara", 10F);
-            this.ID_delegacion.FormattingEnabled = true;
-            this.ID_delegacion.Location = new System.Drawing.Point(115, 312);
-            this.ID_delegacion.Name = "ID_delegacion";
-            this.ID_delegacion.Size = new System.Drawing.Size(266, 41);
-            this.ID_delegacion.TabIndex = 20;
-            this.ID_delegacion.Text = "Selecciona Delegación";
-            // 
             // ID_municipio
             // 
             this.ID_municipio.Font = new System.Drawing.Font("Candara", 10F);
@@ -193,7 +168,6 @@
             this.ID_municipio.Size = new System.Drawing.Size(266, 41);
             this.ID_municipio.TabIndex = 21;
             this.ID_municipio.Text = "Selecciona Municipio";
-            this.ID_municipio.SelectionChangeCommitted += new System.EventHandler(this.ID_municipio_SelectionChangeCommitted);
             // 
             // label3
             // 
@@ -403,9 +377,7 @@
             this.Controls.Add(this.ID_estado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ID_municipio);
-            this.Controls.Add(this.ID_delegacion);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Guardar);
             this.Controls.Add(this.Nombre_label);
             this.Controls.Add(this.nombre_txt);
@@ -442,9 +414,7 @@
         private System.Windows.Forms.TextBox nombre_txt;
         private System.Windows.Forms.Label Nombre_label;
         private System.Windows.Forms.Button Guardar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox ID_delegacion;
         private System.Windows.Forms.ComboBox ID_municipio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox ID_estado;

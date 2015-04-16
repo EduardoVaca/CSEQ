@@ -42,8 +42,6 @@
             this.correo_txt = new System.Windows.Forms.TextBox();
             this.calle_txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.ID_delegacion = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.ID_municipio = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.ID_estado = new System.Windows.Forms.ComboBox();
@@ -204,29 +202,6 @@
             this.label6.TabIndex = 30;
             this.label6.Text = "Calle";
             // 
-            // ID_delegacion
-            // 
-            this.ID_delegacion.Font = new System.Drawing.Font("Candara", 10F);
-            this.ID_delegacion.FormattingEnabled = true;
-            this.ID_delegacion.Location = new System.Drawing.Point(216, 667);
-            this.ID_delegacion.Margin = new System.Windows.Forms.Padding(4);
-            this.ID_delegacion.Name = "ID_delegacion";
-            this.ID_delegacion.Size = new System.Drawing.Size(264, 41);
-            this.ID_delegacion.TabIndex = 46;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(12, 662);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(200, 46);
-            this.label13.TabIndex = 45;
-            this.label13.Text = "Delegación";
-            // 
             // ID_municipio
             // 
             this.ID_municipio.Font = new System.Drawing.Font("Candara", 10F);
@@ -279,7 +254,7 @@
             // 
             this.ID_colonia.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_colonia.FormattingEnabled = true;
-            this.ID_colonia.Location = new System.Drawing.Point(634, 665);
+            this.ID_colonia.Location = new System.Drawing.Point(161, 672);
             this.ID_colonia.Margin = new System.Windows.Forms.Padding(4);
             this.ID_colonia.Name = "ID_colonia";
             this.ID_colonia.Size = new System.Drawing.Size(294, 41);
@@ -291,7 +266,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(486, 662);
+            this.label9.Location = new System.Drawing.Point(13, 669);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 46);
@@ -512,8 +487,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.privada_check);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.ID_delegacion);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.ID_municipio);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ID_estado);
@@ -565,8 +538,6 @@
         private System.Windows.Forms.TextBox correo_txt;
         private System.Windows.Forms.TextBox calle_txt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox ID_delegacion;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox ID_municipio;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox ID_estado;

@@ -36,17 +36,15 @@ namespace CSEQ
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
             int id_estado = 22;
-            ID_estado.SelectedIndex = id_estado-1;
+            ID_estado.SelectedIndex = id_estado - 1;
             Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
-           
-            
+
+
             if (ID_municipio.SelectedItem != null)
             {
                 int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
                 //MessageBox.Show(ID_municipio.SelectedValue.ToString());
-                String inicio = "SELECT distinct d.ID_delegacion,d.nombre FROM Municipio m, Delegacion d, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio AND d.ID_delegacion = c.ID_Delegacion;";
-                Util.llenarComboBox(ID_delegacion, inicio);
-                inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Delegacion d, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio AND d.ID_delegacion = c.ID_Delegacion;";
+                String inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Colonia c WHERE d.ID_municipio=m.ID_municipio AND m.ID_municipio=c.ID_municipio;";
                 Util.llenarComboBox(ID_colonia, inicio);
             }
 
@@ -66,16 +64,14 @@ namespace CSEQ
          */
         private void ID_estado_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            String valorComboBox = ID_estado.SelectedValue.ToString();           
+            String valorComboBox = ID_estado.SelectedValue.ToString();
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
                                                 "ID_estado = " + valorComboBox);
         }
 
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            String valorComboBox = ID_municipio.SelectedValue.ToString();                                                
-            Util.llenarComboBox(ID_delegacion, "SELECT ID_delegacion, nombre FROM Delegacion WHERE " +
-                                                "ID_municipio = " + valorComboBox);
+            String valorComboBox = ID_municipio.SelectedValue.ToString();
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
                                                "ID_municipio = " + valorComboBox);
         }
@@ -114,7 +110,7 @@ namespace CSEQ
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {            
+        {
             String correo;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
@@ -122,10 +118,10 @@ namespace CSEQ
                 eliminar_btn.Enabled = true;
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
-                
-                String sqlActiveRow = "SELECT * FROM InstitucionEducativa i, Estado e, Municipio m, Delegacion d, Colonia c , LocalizaInstitucionEducativa l WHERE ";
-                sqlActiveRow += (" i.nombre= '" + nombre_selected + "' AND i.correo= '" + correo + "' AND l.ID_institucioneducativa=i.ID_institucioneducativa "+
-                                                                                        "AND l.ID_colonia=c.ID_colonia AND c.ID_delegacion=d.ID_delegacion AND c.ID_municipio=m.ID_municipio "+
+
+                String sqlActiveRow = "SELECT * FROM InstitucionEducativa i, Estado e, Municipio m, Colonia c , LocalizaInstitucionEducativa l WHERE ";
+                sqlActiveRow += (" i.nombre= '" + nombre_selected + "' AND i.correo= '" + correo + "' AND l.ID_institucioneducativa=i.ID_institucioneducativa " +
+                                                                                        "AND l.ID_colonia=c.ID_colonia AND c.ID_municipio=m.ID_municipio " +
                                                                                         "AND m.ID_estado=e.ID_estado;");
                 /*
                 String sqlActiveRow = "SELECT * FROM InstitucionEducativa WHERE ";
@@ -134,7 +130,7 @@ namespace CSEQ
                 Util.showData(this, sqlActiveRow);
             }
 
-            
+
 
         }
 
@@ -157,12 +153,12 @@ namespace CSEQ
         {
             //nombreViejo VARCHAR(90), nombreNuevo VARCHAR(90), calleNuevo VARCHAR(80), telefonoNuevo VARCHAR(20), correoNuevo VARCHAR(80),
             //privadaNuevo BOOLEAN, especializadaNuevo BOOLEAN
-            String nombreNuevo=nombre_txt.Text;
-            String calleNuevo=calle_txt.Text;
-            String telefonoNuevo=telefono_txt.Text;
-            String correoNuevo=correo_txt.Text;
-            bool privadaNuevo=privada_check.Checked;
-            bool especializadaNuevo=especializada_check.Checked;
+            String nombreNuevo = nombre_txt.Text;
+            String calleNuevo = calle_txt.Text;
+            String telefonoNuevo = telefono_txt.Text;
+            String correoNuevo = correo_txt.Text;
+            bool privadaNuevo = privada_check.Checked;
+            bool especializadaNuevo = especializada_check.Checked;
 
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar Institucion: '" + nombre_selected + "'?", "Confirmacion de eliminar",
@@ -170,7 +166,7 @@ namespace CSEQ
 
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("modificarInstitucionEducativa", nombre_selected,nombreNuevo,calleNuevo,telefonoNuevo,correoNuevo,privadaNuevo,especializadaNuevo))
+                if (Util.executeStoredProcedure("modificarInstitucionEducativa", nombre_selected, nombreNuevo, calleNuevo, telefonoNuevo, correoNuevo, privadaNuevo, especializadaNuevo))
                 {
                     MessageBox.Show("La institucion se ha modificado con exito!");
                 }

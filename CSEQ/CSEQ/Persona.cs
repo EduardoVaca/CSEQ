@@ -86,8 +86,6 @@ namespace CSEQ
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = ID_municipio.SelectedValue.ToString();
-            Util.llenarComboBox(ID_delegacion, "SELECT ID_delegacion, nombre FROM Delegacion WHERE " +
-                                                "ID_municipio = " + valorComboBox);
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
                                                "ID_municipio = " + valorComboBox);
         }
@@ -102,8 +100,6 @@ namespace CSEQ
         private void municipioEmpleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = municipioEmpleo_combo.SelectedValue.ToString();
-            Util.llenarComboBox(delegacionEmpleo_combo, "SELECT ID_delegacion, nombre FROM Delegacion WHERE " +
-                                                "ID_municipio = " + valorComboBox);
             Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
                                                "ID_municipio = " + valorComboBox);
         }

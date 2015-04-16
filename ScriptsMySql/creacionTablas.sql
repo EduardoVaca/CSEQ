@@ -45,8 +45,8 @@ CREATE TABLE Colonia
 (
 	ID_colonia INT auto_increment not null unique,
 	nombre varchar(80) not null,
-	ID_Delegacion INT,
 	ID_municipio INT,
+	delegacion VARCHAR (80),
 	CONSTRAINT llaveColonia PRIMARY KEY (ID_colonia)
 );
 
@@ -79,17 +79,6 @@ CREATE TABLE Estado
 	ID_estado INT auto_increment not null unique,
 	nombre varchar(60) not null,
 	CONSTRAINT llaveEstado PRIMARY KEY (ID_estado)
-);
-
-
--- Creacion tabla: Delegacion
-DROP TABLE IF EXISTS Delegacion;
-CREATE TABLE Delegacion
-(
-	ID_delegacion INT auto_increment not null unique,
-	nombre varchar(80) not null,
-	ID_municipio INT,
-	CONSTRAINT llaveDelegacion PRIMARY KEY (ID_delegacion)
 );
 
 

@@ -62,12 +62,6 @@ namespace CSEQ
             colonia_press.Visible = true;
         }
 
-        private void delegacion_pb_MouseDown(object sender, MouseEventArgs e)
-        {
-            delegacion_pb.Visible = false;
-            delegacion_press.Visible = true;
-        }
-
         private void municipio_pb_MouseDown(object sender, MouseEventArgs e)
         {
             municipio_pb.Visible = false;
@@ -151,14 +145,6 @@ namespace CSEQ
             crear.Show();
         }
 
-        private void delegacion_pb_MouseUp(object sender, MouseEventArgs e)
-        {
-            Crear_delegacion crear = new Crear_delegacion(rol);
-            this.Hide();
-            delegacion_pb.Visible = true;
-            delegacion_press.Visible = false;
-            crear.Show();
-        }
 
         private void municipio_pb_MouseUp(object sender, MouseEventArgs e)
         {

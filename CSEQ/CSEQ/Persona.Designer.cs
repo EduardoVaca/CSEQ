@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persona));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Persona_tabControl = new System.Windows.Forms.TabControl();
             this.DatosPersonales_tab = new System.Windows.Forms.TabPage();
+            this.logout = new System.Windows.Forms.PictureBox();
             this.label63 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
@@ -55,8 +56,6 @@
             this.credencialIFE_check = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.mexicano_check = new System.Windows.Forms.CheckBox();
-            this.ID_delegacion = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.ID_municipio = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -107,8 +106,6 @@
             this.label77 = new System.Windows.Forms.Label();
             this.telefonoEmpleo_txt = new System.Windows.Forms.MaskedTextBox();
             this.label76 = new System.Windows.Forms.Label();
-            this.delegacionEmpleo_combo = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.municipioEmpleo_combo = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.estadoEmpleo_combo = new System.Windows.Forms.ComboBox();
@@ -185,10 +182,10 @@
             this.eliminar_lb = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
-            this.logout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.Estudios_tab.SuspendLayout();
             this.DatosLaborales_tab.SuspendLayout();
             this.PerdidaAuditiva_tab.SuspendLayout();
@@ -197,7 +194,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -256,8 +252,6 @@
             this.DatosPersonales_tab.Controls.Add(this.credencialIFE_check);
             this.DatosPersonales_tab.Controls.Add(this.label14);
             this.DatosPersonales_tab.Controls.Add(this.mexicano_check);
-            this.DatosPersonales_tab.Controls.Add(this.ID_delegacion);
-            this.DatosPersonales_tab.Controls.Add(this.label13);
             this.DatosPersonales_tab.Controls.Add(this.label12);
             this.DatosPersonales_tab.Controls.Add(this.ID_municipio);
             this.DatosPersonales_tab.Controls.Add(this.label11);
@@ -288,6 +282,19 @@
             this.DatosPersonales_tab.Size = new System.Drawing.Size(1597, 966);
             this.DatosPersonales_tab.TabIndex = 0;
             this.DatosPersonales_tab.Text = "Datos personales";
+            // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1533, 65);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 67;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // label63
             // 
@@ -513,29 +520,6 @@
             this.mexicano_check.Text = "Sí";
             this.mexicano_check.UseVisualStyleBackColor = true;
             // 
-            // ID_delegacion
-            // 
-            this.ID_delegacion.Font = new System.Drawing.Font("Candara", 10F);
-            this.ID_delegacion.FormattingEnabled = true;
-            this.ID_delegacion.Location = new System.Drawing.Point(706, 637);
-            this.ID_delegacion.Margin = new System.Windows.Forms.Padding(4);
-            this.ID_delegacion.Name = "ID_delegacion";
-            this.ID_delegacion.Size = new System.Drawing.Size(290, 41);
-            this.ID_delegacion.TabIndex = 38;
-            this.ID_delegacion.Text = "Selecciona Delegación";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(502, 633);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(194, 45);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Delegación";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -552,7 +536,7 @@
             // 
             this.ID_municipio.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_municipio.FormattingEnabled = true;
-            this.ID_municipio.Location = new System.Drawing.Point(216, 637);
+            this.ID_municipio.Location = new System.Drawing.Point(700, 635);
             this.ID_municipio.Margin = new System.Windows.Forms.Padding(4);
             this.ID_municipio.Name = "ID_municipio";
             this.ID_municipio.Size = new System.Drawing.Size(274, 41);
@@ -565,7 +549,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(40, 633);
+            this.label11.Location = new System.Drawing.Point(524, 631);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(175, 45);
@@ -577,7 +561,7 @@
             this.ID_estado.DisplayMember = "1";
             this.ID_estado.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_estado.FormattingEnabled = true;
-            this.ID_estado.Location = new System.Drawing.Point(1012, 556);
+            this.ID_estado.Location = new System.Drawing.Point(188, 637);
             this.ID_estado.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estado.Name = "ID_estado";
             this.ID_estado.Size = new System.Drawing.Size(264, 41);
@@ -591,7 +575,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(864, 552);
+            this.label10.Location = new System.Drawing.Point(40, 633);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(127, 45);
@@ -1032,8 +1016,6 @@
             this.DatosLaborales_tab.Controls.Add(this.label77);
             this.DatosLaborales_tab.Controls.Add(this.telefonoEmpleo_txt);
             this.DatosLaborales_tab.Controls.Add(this.label76);
-            this.DatosLaborales_tab.Controls.Add(this.delegacionEmpleo_combo);
-            this.DatosLaborales_tab.Controls.Add(this.label33);
             this.DatosLaborales_tab.Controls.Add(this.municipioEmpleo_combo);
             this.DatosLaborales_tab.Controls.Add(this.label34);
             this.DatosLaborales_tab.Controls.Add(this.estadoEmpleo_combo);
@@ -1142,28 +1124,6 @@
             this.label76.TabIndex = 52;
             this.label76.Text = "Telefono";
             // 
-            // delegacionEmpleo_combo
-            // 
-            this.delegacionEmpleo_combo.Font = new System.Drawing.Font("Candara", 10F);
-            this.delegacionEmpleo_combo.FormattingEnabled = true;
-            this.delegacionEmpleo_combo.Location = new System.Drawing.Point(204, 613);
-            this.delegacionEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
-            this.delegacionEmpleo_combo.Name = "delegacionEmpleo_combo";
-            this.delegacionEmpleo_combo.Size = new System.Drawing.Size(264, 41);
-            this.delegacionEmpleo_combo.TabIndex = 51;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label33.Location = new System.Drawing.Point(12, 610);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(194, 45);
-            this.label33.TabIndex = 50;
-            this.label33.Text = "Delegación";
-            // 
             // municipioEmpleo_combo
             // 
             this.municipioEmpleo_combo.Font = new System.Drawing.Font("Candara", 10F);
@@ -1214,7 +1174,7 @@
             // 
             this.ID_coloniaEmpleo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_coloniaEmpleo.FormattingEnabled = true;
-            this.ID_coloniaEmpleo.Location = new System.Drawing.Point(644, 615);
+            this.ID_coloniaEmpleo.Location = new System.Drawing.Point(1150, 540);
             this.ID_coloniaEmpleo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_coloniaEmpleo.Name = "ID_coloniaEmpleo";
             this.ID_coloniaEmpleo.Size = new System.Drawing.Size(294, 41);
@@ -1225,7 +1185,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label36.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label36.Location = new System.Drawing.Point(496, 613);
+            this.label36.Location = new System.Drawing.Point(1002, 538);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(136, 45);
@@ -1942,35 +1902,35 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle5;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(24, 308);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.Size = new System.Drawing.Size(1544, 608);
             this.busqueda_grid.TabIndex = 17;
@@ -2117,19 +2077,6 @@
             this.label81.TabIndex = 77;
             this.label81.Text = "*";
             // 
-            // logout
-            // 
-            this.logout.BackColor = System.Drawing.Color.Transparent;
-            this.logout.Image = global::CSEQ.Properties.Resources.logout;
-            this.logout.Location = new System.Drawing.Point(1533, 65);
-            this.logout.Margin = new System.Windows.Forms.Padding(4);
-            this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(60, 56);
-            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logout.TabIndex = 67;
-            this.logout.TabStop = false;
-            this.logout.Click += new System.EventHandler(this.logout_Click);
-            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -2161,6 +2108,7 @@
             this.Persona_tabControl.ResumeLayout(false);
             this.DatosPersonales_tab.ResumeLayout(false);
             this.DatosPersonales_tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.Estudios_tab.ResumeLayout(false);
             this.Estudios_tab.PerformLayout();
             this.DatosLaborales_tab.ResumeLayout(false);
@@ -2174,7 +2122,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2210,8 +2157,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox ID_municipio;
-        private System.Windows.Forms.ComboBox ID_delegacion;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox mexicano_check;
         private System.Windows.Forms.ComboBox Censo;
@@ -2245,8 +2190,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox descripcion_txt;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox delegacionEmpleo_combo;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.ComboBox municipioEmpleo_combo;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox estadoEmpleo_combo;

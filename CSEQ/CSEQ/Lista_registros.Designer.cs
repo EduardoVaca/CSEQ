@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.titulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             this.usuario_lb = new System.Windows.Forms.Label();
             this.colonia_pb = new System.Windows.Forms.PictureBox();
             this.persona_pb = new System.Windows.Forms.PictureBox();
-            this.delegacion_pb = new System.Windows.Forms.PictureBox();
             this.municipio_pb = new System.Windows.Forms.PictureBox();
             this.estado_pb = new System.Windows.Forms.PictureBox();
             this.institucion_pb = new System.Windows.Forms.PictureBox();
@@ -61,7 +59,6 @@
             this.usuario_pb = new System.Windows.Forms.PictureBox();
             this.persona_press = new System.Windows.Forms.PictureBox();
             this.colonia_press = new System.Windows.Forms.PictureBox();
-            this.delegacion_press = new System.Windows.Forms.PictureBox();
             this.municipio_press = new System.Windows.Forms.PictureBox();
             this.estado_press = new System.Windows.Forms.PictureBox();
             this.institucion_press = new System.Windows.Forms.PictureBox();
@@ -77,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colonia_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.persona_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delegacion_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.municipio_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estado_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.institucion_pb)).BeginInit();
@@ -90,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuario_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.persona_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colonia_press)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delegacion_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.municipio_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estado_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.institucion_press)).BeginInit();
@@ -149,7 +144,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(174, 346);
+            this.label1.Location = new System.Drawing.Point(261, 346);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 45);
@@ -175,25 +170,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(470, 346);
+            this.label2.Location = new System.Drawing.Point(587, 346);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 45);
             this.label2.TabIndex = 16;
             this.label2.Text = "Colonia";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(727, 346);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 45);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Delegación";
             // 
             // label5
             // 
@@ -201,7 +183,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(1030, 346);
+            this.label5.Location = new System.Drawing.Point(893, 346);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(175, 45);
@@ -214,7 +196,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(1348, 346);
+            this.label6.Location = new System.Drawing.Point(1230, 346);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 45);
@@ -330,7 +312,7 @@
             // 
             this.colonia_pb.BackColor = System.Drawing.Color.Transparent;
             this.colonia_pb.Image = ((System.Drawing.Image)(resources.GetObject("colonia_pb.Image")));
-            this.colonia_pb.Location = new System.Drawing.Point(429, 143);
+            this.colonia_pb.Location = new System.Drawing.Point(546, 143);
             this.colonia_pb.Name = "colonia_pb";
             this.colonia_pb.Size = new System.Drawing.Size(200, 200);
             this.colonia_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,7 +325,7 @@
             // 
             this.persona_pb.BackColor = System.Drawing.Color.Transparent;
             this.persona_pb.Image = global::CSEQ.Properties.Resources.PersonaB;
-            this.persona_pb.Location = new System.Drawing.Point(145, 143);
+            this.persona_pb.Location = new System.Drawing.Point(232, 143);
             this.persona_pb.Name = "persona_pb";
             this.persona_pb.Size = new System.Drawing.Size(200, 200);
             this.persona_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,24 +334,11 @@
             this.persona_pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.persona_pb_MouseDown);
             this.persona_pb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.persona_pb_MouseUp);
             // 
-            // delegacion_pb
-            // 
-            this.delegacion_pb.BackColor = System.Drawing.Color.Transparent;
-            this.delegacion_pb.Image = global::CSEQ.Properties.Resources.CiudadB;
-            this.delegacion_pb.Location = new System.Drawing.Point(721, 143);
-            this.delegacion_pb.Name = "delegacion_pb";
-            this.delegacion_pb.Size = new System.Drawing.Size(200, 200);
-            this.delegacion_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.delegacion_pb.TabIndex = 43;
-            this.delegacion_pb.TabStop = false;
-            this.delegacion_pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.delegacion_pb_MouseDown);
-            this.delegacion_pb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.delegacion_pb_MouseUp);
-            // 
             // municipio_pb
             // 
             this.municipio_pb.BackColor = System.Drawing.Color.Transparent;
             this.municipio_pb.Image = global::CSEQ.Properties.Resources.EstadoB;
-            this.municipio_pb.Location = new System.Drawing.Point(1005, 143);
+            this.municipio_pb.Location = new System.Drawing.Point(868, 143);
             this.municipio_pb.Name = "municipio_pb";
             this.municipio_pb.Size = new System.Drawing.Size(200, 200);
             this.municipio_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -382,7 +351,7 @@
             // 
             this.estado_pb.BackColor = System.Drawing.Color.Transparent;
             this.estado_pb.Image = global::CSEQ.Properties.Resources.EntidadB;
-            this.estado_pb.Location = new System.Drawing.Point(1305, 143);
+            this.estado_pb.Location = new System.Drawing.Point(1187, 143);
             this.estado_pb.Name = "estado_pb";
             this.estado_pb.Size = new System.Drawing.Size(200, 200);
             this.estado_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -500,7 +469,7 @@
             // 
             this.persona_press.BackColor = System.Drawing.Color.Transparent;
             this.persona_press.Image = global::CSEQ.Properties.Resources.PersonaG;
-            this.persona_press.Location = new System.Drawing.Point(145, 143);
+            this.persona_press.Location = new System.Drawing.Point(232, 143);
             this.persona_press.Name = "persona_press";
             this.persona_press.Size = new System.Drawing.Size(200, 200);
             this.persona_press.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -512,7 +481,7 @@
             // 
             this.colonia_press.BackColor = System.Drawing.Color.Transparent;
             this.colonia_press.Image = global::CSEQ.Properties.Resources.ColoniaG;
-            this.colonia_press.Location = new System.Drawing.Point(429, 143);
+            this.colonia_press.Location = new System.Drawing.Point(546, 143);
             this.colonia_press.Name = "colonia_press";
             this.colonia_press.Size = new System.Drawing.Size(200, 200);
             this.colonia_press.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -520,23 +489,11 @@
             this.colonia_press.TabStop = false;
             this.colonia_press.Visible = false;
             // 
-            // delegacion_press
-            // 
-            this.delegacion_press.BackColor = System.Drawing.Color.Transparent;
-            this.delegacion_press.Image = global::CSEQ.Properties.Resources.CiudadG;
-            this.delegacion_press.Location = new System.Drawing.Point(721, 143);
-            this.delegacion_press.Name = "delegacion_press";
-            this.delegacion_press.Size = new System.Drawing.Size(200, 200);
-            this.delegacion_press.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.delegacion_press.TabIndex = 56;
-            this.delegacion_press.TabStop = false;
-            this.delegacion_press.Visible = false;
-            // 
             // municipio_press
             // 
             this.municipio_press.BackColor = System.Drawing.Color.Transparent;
             this.municipio_press.Image = global::CSEQ.Properties.Resources.EstadoG;
-            this.municipio_press.Location = new System.Drawing.Point(1005, 143);
+            this.municipio_press.Location = new System.Drawing.Point(868, 143);
             this.municipio_press.Name = "municipio_press";
             this.municipio_press.Size = new System.Drawing.Size(200, 200);
             this.municipio_press.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -548,7 +505,7 @@
             // 
             this.estado_press.BackColor = System.Drawing.Color.Transparent;
             this.estado_press.Image = global::CSEQ.Properties.Resources.EntidadG;
-            this.estado_press.Location = new System.Drawing.Point(1305, 143);
+            this.estado_press.Location = new System.Drawing.Point(1187, 143);
             this.estado_press.Name = "estado_press";
             this.estado_press.Size = new System.Drawing.Size(200, 200);
             this.estado_press.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -685,7 +642,6 @@
             this.Controls.Add(this.institucion_pb);
             this.Controls.Add(this.estado_pb);
             this.Controls.Add(this.municipio_pb);
-            this.Controls.Add(this.delegacion_pb);
             this.Controls.Add(this.persona_pb);
             this.Controls.Add(this.colonia_pb);
             this.Controls.Add(this.usuario_lb);
@@ -698,7 +654,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.titulo);
             this.Controls.Add(this.label1);
@@ -707,7 +662,6 @@
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.persona_press);
             this.Controls.Add(this.colonia_press);
-            this.Controls.Add(this.delegacion_press);
             this.Controls.Add(this.municipio_press);
             this.Controls.Add(this.estado_press);
             this.Controls.Add(this.institucion_press);
@@ -729,7 +683,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.colonia_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.persona_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delegacion_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.municipio_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estado_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.institucion_pb)).EndInit();
@@ -742,7 +695,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuario_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.persona_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.colonia_press)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delegacion_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.municipio_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estado_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.institucion_press)).EndInit();
@@ -767,7 +719,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -780,7 +731,6 @@
         private System.Windows.Forms.Label usuario_lb;
         private System.Windows.Forms.PictureBox colonia_pb;
         private System.Windows.Forms.PictureBox persona_pb;
-        private System.Windows.Forms.PictureBox delegacion_pb;
         private System.Windows.Forms.PictureBox municipio_pb;
         private System.Windows.Forms.PictureBox estado_pb;
         private System.Windows.Forms.PictureBox institucion_pb;
@@ -793,7 +743,6 @@
         private System.Windows.Forms.PictureBox usuario_pb;
         private System.Windows.Forms.PictureBox persona_press;
         private System.Windows.Forms.PictureBox colonia_press;
-        private System.Windows.Forms.PictureBox delegacion_press;
         private System.Windows.Forms.PictureBox municipio_press;
         private System.Windows.Forms.PictureBox estado_press;
         private System.Windows.Forms.PictureBox institucion_press;

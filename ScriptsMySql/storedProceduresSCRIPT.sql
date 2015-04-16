@@ -21,18 +21,9 @@ DELIMITER ;
 -- COLONIA
 DELIMITER //
 CREATE PROCEDURE registrarColonia
-(IN nombreColonia CHAR(50), ID_delegacion INT, ID_municipio INT)
+(IN nombreColonia CHAR(50), ID_municipio INT, delegacion VARCHAR(80))
 BEGIN
-	INSERT INTO Colonia VALUES (0, nombreColonia, ID_delegacion, ID_municipio);
-END //
-DELIMITER ;
-
--- DELEGACION
-DELIMITER //
-CREATE PROCEDURE registrarDelegacion
-(IN nombreDelegacion CHAR (80), ID_municipio INT)
-BEGIN
-	INSERT INTO Delegacion VALUES (0, nombreDelegacion, ID_municipio);
+	INSERT INTO Colonia VALUES (0, nombreColonia, ID_municipio, delegacion);
 END //
 DELIMITER ;
 
@@ -184,7 +175,7 @@ DELIMITER //
 CREATE PROCEDURE registrarUsuario
 (IN loginNuevo VARCHAR(30), passwordNuevo VARCHAR(30), ID_rolNuevo INT)
 BEGIN
-	INSERT INTO Usuario VALUES(loginNuevo, passwordNuevo)
+	INSERT INTO Usuario VALUES(loginNuevo, passwordNuevo);
 	INSERT INTO TieneRol VALUES(loginNuevo, ID_rolNuevo);
 END //
 DELIMITER ;
@@ -197,7 +188,7 @@ DELIMITER //
 CREATE PROCEDURE busquedaPersonaCOMPLETO
 (IN variable VARCHAR(80), IDcensoInput numeric(4))
 BEGIN 
-	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, Pc.ID_censo as Censo, v.ID_colonia as ID_coloniaPersona, Colonia.Id_delegacion as ID_delegacionPersona,
+	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, Pc.ID_censo as Censo, v.ID_colonia as ID_coloniaPersona,
 					Colonia.ID_municipio as ID_municipioPersona, Municipio.ID_estado as ID_estadoPersona
 					FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
 					TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
@@ -208,7 +199,7 @@ BEGIN
 					AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
 					AND p.CURP = pAA.CURP AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
 					AND lE.ID_empleo = tE.ID_empleo 
-				    GROUP BY p.CURP) as Tabla_Persona, (SELECT p.CURP as CURP, lE.ID_colonia as ID_coloniaEmleo, col.Id_delegacion as Id_delegacionEmpleo, 
+				    GROUP BY p.CURP) as Tabla_Persona, (SELECT p.CURP as CURP, lE.ID_colonia as ID_coloniaEmleo,  
 				    									col.ID_municipio as ID_municipioEmpleo, mun.ID_estado as ID_estadoEMPLEO 
 				    									FROM Persona p, Empleo e, TieneEmpleo tE, LocalizaEmpleo lE, Colonia col, Municipio mun
 				    									WHERE p.nombre LIKE variable
@@ -224,7 +215,7 @@ DELIMITER //
 CREATE PROCEDURE busquedaEnPersona
 (IN variable VARCHAR(80))
 BEGIN
-	(SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, Pc.ID_censo as Censo, v.ID_colonia as  Colonia_datos, lE.ID_colonia as Colonia_empleo
+	SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, Pc.ID_censo as Censo, v.ID_colonia as  Colonia_datos, lE.ID_colonia as Colonia_empleo
 	FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
 	TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
 	TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA, Estado, Colonia, Municipio 
@@ -256,10 +247,10 @@ CREATE PROCEDURE busquedaEnInstitucionEducativa
 (IN variable VARCHAR(80))
 BEGIN 
 	SELECT i.nombre as Nombre, i.correo as Correo FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
-	Delegacion d, Localizainstitucioneducativa loc
+	Localizainstitucioneducativa loc
 	WHERE i.nombre LIKE variable
-	AND loc.ID_institucionEducativa = i.ID_institucionEducativa AND loc.ID_colonia = c.ID_colonia AND
-	c.ID_delegacion = d.ID_delegacion AND c.ID_municipio = m.ID_municipio AND m.ID_estado = e.ID_estado;
+	AND loc.ID_institucionEducativa = i.ID_institucionEducativa AND loc.ID_colonia = c.ID_colonia 
+	AND c.ID_municipio = m.ID_municipio AND m.ID_estado = e.ID_estado;
 END //
 DELIMITER ;
 
@@ -276,18 +267,6 @@ BEGIN
 END //
 DELIMITER ;
 
-
--- Busqueda DELEGACION
-DELIMITER //
-CREATE PROCEDURE busquedaEnDelegacion
-(IN variable VARCHAR(80))
-BEGIN
-	SELECT d.nombre as Delegacion, m.nombre as Municipio, e.nombre as Estado 
-	FROM Delegacion d, Municipio m, Estado e
-	WHERE d.nombre LIKE variable 
-	AND m.ID_municipio = d.ID_municipio AND e.ID_estado = m.ID_estado;
-END //
-DELIMITER ;	
 
 -- Busqueda MUNICIPIO
 DELIMITER //
@@ -528,19 +507,6 @@ END //
 DELIMITER ;
 
 
--- eliminar DELEGACION
-DELIMITER //
-CREATE PROCEDURE eliminarDelegacion
-(IN nombreD VARCHAR(80), IDmunicipio INT)
-BEGIN 
-	DECLARE IDdelegacionObtenido INT;
-	SELECT ID_delegacion INTO IDdelegacionObtenido FROM Delegacion WHERE nombre = nombreD AND ID_municipio = IDmunicipio;
-	UPDATE Colonia SET ID_delegacion = null WHERE ID_delegacion = IDdelegacionObtenido;
-	DELETE FROM Delegacion WHERE ID_delegacion = IDdelegacionObtenido;
-END //
-DELIMITER ;
-
-
 -- eliminar MUNICIPIO
 DELIMITER //
 CREATE PROCEDURE eliminarMunicipio
@@ -548,8 +514,7 @@ CREATE PROCEDURE eliminarMunicipio
 BEGIN
 	DECLARE IDmunicpioObtenido INT;
 	SELECT ID_municipio INTO IDmunicpioObtenido FROM Municipio WHERE nombre = nombreM AND ID_estado = IDestado;
-	DELETE FROM Colonia WHERE ID_municipio = IDmunicpioObtenido;
-	DELETE FROM Delegacion WHERE ID_municipio = IDmunicpioObtenido;
+	DELETE FROM Colonia WHERE ID_municipio = IDmunicpioObtenido;	
 	DELETE FROM Municipio WHERE ID_municipio = IDmunicpioObtenido;
 END //
 DELIMITER ;
@@ -692,22 +657,11 @@ DELIMITER ;
 -- modificar COLONIA
 DELIMITER //
 CREATE PROCEDURE modificarColonia
-(IN nombreC VARCHAR(80), IDmunicipio INT, nombreNuevo VARCHAR(80), IDmunicipioNuevo INT, IDdelegacionNuevo INT)
+(IN nombreC VARCHAR(80), IDmunicipio INT, nombreNuevo VARCHAR(80), IDmunicipioNuevo INT, delegacionNuevo VARCHAR(80))
 BEGIN
 	DECLARE IDcoloniaObtenido INT;
 	SELECT ID_colonia INTO IDcoloniaObtenido FROM Colonia WHERE nombre = nombreC AND ID_municipio = IDmunicipio;
-	UPDATE Colonia SET nombre = nombreNuevo, ID_municipio = IDmunicipioNuevo, ID_delegacion = IDdelegacionNuevo WHERE ID_colonia = IDcoloniaObtenido;
-END //
-DELIMITER ;
-
--- modificar DELEGACION
-DELIMITER //
-CREATE PROCEDURE modificarDelegacion
-(IN nombreD VARCHAR(80), IDmunicipio INT, nombreNuevo VARCHAR(80), IDmunicipioNuevo INT)
-BEGIN 
-	DECLARE IDdelegacionObtenido INT;
-	SELECT ID_delegacion INTO IDdelegacionObtenido FROM Delegacion WHERE nombre = nombreD AND ID_municipio = IDmunicipio;
-	UPDATE Delegacion SET nombre = nombreNuevo, ID_municipio = IDmunicipioNuevo;
+	UPDATE Colonia SET nombre = nombreNuevo, ID_municipio = IDmunicipioNuevo, delegacion = delegacionNuevo WHERE ID_colonia = IDcoloniaObtenido;
 END //
 DELIMITER ;
 
