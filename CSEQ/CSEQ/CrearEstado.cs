@@ -105,5 +105,17 @@ namespace CSEQ
                 eliminar_btn.Visible = true;
             }
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                Application.Restart();
+            }
+        }
     }
 }

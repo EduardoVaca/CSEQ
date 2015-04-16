@@ -31,13 +31,13 @@ namespace CSEQ
             tabla = Util.getData("CALL validacionLogin('" + login + "','" + password + "');");
 
             if (tabla != null)
-            {
+            {                
                 int rol = Int16.Parse(tabla.Rows[0][0].ToString());
                 if (rol == 1 || rol == 2)
-                {
-                    Menu_principal Menu_principal = new Menu_principal(rol);
-                    this.Hide();
+                {                    
+                    Menu_principal Menu_principal = new Menu_principal(rol);                    
                     Menu_principal.Show();
+                    this.Hide();                    
                 }
                 else
                 {
@@ -60,6 +60,7 @@ namespace CSEQ
         {
             Util.creaConexion("localhost", "CSEQ", "root", "");
             //Util.creaConexion("hcdesarrollo.com", "hcdesarr_chess", "hcdesarr_chess", "pruebachess2015");
+            Util.clear(this);
         }
 
         private void password_txt_KeyPress(object sender, KeyPressEventArgs e)

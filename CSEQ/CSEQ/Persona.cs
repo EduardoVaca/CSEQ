@@ -28,7 +28,17 @@ namespace CSEQ
 
         private void back_picture_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea Guardar Borrador?", "Mantener cambios", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                this.Close();
+            }            
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
@@ -348,6 +358,18 @@ ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstud
 ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
 interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, ID_causa INT,
 ID_aparatoAuditivo INT, modelo VARCHAR(30)*/
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                Application.Restart();
+            }
         }
 
     }

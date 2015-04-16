@@ -103,7 +103,6 @@ namespace CSEQ
 
             Reporte.Enabled = true;
             todoscensos_radio.Checked = false;
-
             switch (auxiliarAuditivo_combo.SelectedIndex)
             {
                 case 0:
@@ -149,6 +148,18 @@ namespace CSEQ
             query = "CALL consultaNoTienenAuxiliar();";
             type = "Barra";
             Util.graphData(zedGraph, query, type);
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                Application.Restart();
+            }
         }
     }
 }

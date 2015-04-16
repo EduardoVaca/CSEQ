@@ -125,11 +125,21 @@ namespace CSEQ
 
         private void persona_pb_MouseUp(object sender, MouseEventArgs e)
         {
-            Persona crear = new Persona(rol);
+            Form f = Application.OpenForms.Cast<Form>().FirstOrDefault(c => c is Persona);
+            if (f == null)
+            {
+                Persona crear = new Persona(rol);                
+                crear.Show();
+            }
+            else
+            {                
+                Ventana.mostrarOculta(Ventana.Ventanas.Persona);
+            }
             this.Hide();
             persona_pb.Visible = true;
             persona_press.Visible = false;
-            crear.Show();
+            
+           
         }
 
         private void colonia_pb_MouseUp(object sender, MouseEventArgs e)
@@ -244,6 +254,18 @@ namespace CSEQ
             usuario_press.Visible = false;
             usuario_pb.Visible = true;
             crear.Show();
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                Application.Restart();
+            }
         }
 
 

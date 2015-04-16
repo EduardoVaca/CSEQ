@@ -52,11 +52,13 @@
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.logout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // x_picture
@@ -332,6 +334,19 @@
             this.label5.TabIndex = 78;
             this.label5.Text = "ROMPIENDO PARADIGMAS";
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1532, 77);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 79;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // CrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -341,6 +356,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1019);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.eliminar_btn);
@@ -371,6 +387,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +415,6 @@
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox logout;
     }
 }

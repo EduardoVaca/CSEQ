@@ -42,13 +42,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.todoscensos_radio = new System.Windows.Forms.RadioButton();
             this.ID_censo = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tienen_radio = new System.Windows.Forms.RadioButton();
             this.noTienen_radio = new System.Windows.Forms.RadioButton();
+            this.logout = new System.Windows.Forms.PictureBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.AuxiliaresAuditivos_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // AuxiliaresAuditivos_grp
@@ -56,6 +58,7 @@
             this.AuxiliaresAuditivos_grp.BackColor = System.Drawing.Color.Transparent;
             this.AuxiliaresAuditivos_grp.Controls.Add(this.noTienen_radio);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.tienen_radio);
+            this.AuxiliaresAuditivos_grp.Controls.Add(this.radioButton1);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.label1);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.auxiliarAuditivo_combo);
             this.AuxiliaresAuditivos_grp.Location = new System.Drawing.Point(6, 38);
@@ -251,6 +254,19 @@
             this.noTienen_radio.Visible = false;
             this.noTienen_radio.CheckedChanged += new System.EventHandler(this.noTienen_radio_CheckedChanged);
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.Image = global::CSEQ.Properties.Resources.logout;
+            this.logout.Location = new System.Drawing.Point(1517, 87);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(60, 56);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 22;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // consultas_salud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,8 +275,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(787, 502);
             this.Controls.Add(this.radioButton1);
+            this.ClientSize = new System.Drawing.Size(1574, 965);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.ID_censo);
             this.Controls.Add(this.todoscensos_radio);
             this.Controls.Add(this.zedGraph);
@@ -282,6 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,8 +319,9 @@
         private System.Windows.Forms.RadioButton todoscensos_radio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ID_censo;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton noTienen_radio;
         private System.Windows.Forms.RadioButton tienen_radio;
+        private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

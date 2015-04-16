@@ -33,12 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.login_txt = new System.Windows.Forms.TextBox();
             this.password_txt = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ingresar_btn = new System.Windows.Forms.Button();
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.mensaje = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +47,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(430, 463);
+            this.label1.Location = new System.Drawing.Point(426, 514);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 46);
@@ -60,7 +60,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(378, 529);
+            this.label2.Location = new System.Drawing.Point(374, 580);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(205, 46);
@@ -70,7 +70,7 @@
             // login_txt
             // 
             this.login_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_txt.Location = new System.Drawing.Point(578, 463);
+            this.login_txt.Location = new System.Drawing.Point(574, 514);
             this.login_txt.Margin = new System.Windows.Forms.Padding(4);
             this.login_txt.Name = "login_txt";
             this.login_txt.Size = new System.Drawing.Size(256, 38);
@@ -79,30 +79,19 @@
             // password_txt
             // 
             this.password_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_txt.Location = new System.Drawing.Point(578, 529);
+            this.password_txt.Location = new System.Drawing.Point(574, 580);
             this.password_txt.Margin = new System.Windows.Forms.Padding(4);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '*';
             this.password_txt.Size = new System.Drawing.Size(256, 38);
-            this.password_txt.TabIndex = 3;            
+            this.password_txt.TabIndex = 3;
             this.password_txt.Enter += new System.EventHandler(this.password_txt_Enter);
             this.password_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_txt_KeyPress);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(498, 137);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 258);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // ingresar_btn
             // 
             this.ingresar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.ingresar_btn.Location = new System.Drawing.Point(578, 619);
+            this.ingresar_btn.Location = new System.Drawing.Point(574, 670);
             this.ingresar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.ingresar_btn.Name = "ingresar_btn";
             this.ingresar_btn.Size = new System.Drawing.Size(128, 54);
@@ -130,11 +119,22 @@
             this.mensaje.BackColor = System.Drawing.Color.Transparent;
             this.mensaje.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mensaje.ForeColor = System.Drawing.Color.White;
-            this.mensaje.Location = new System.Drawing.Point(490, 699);
+            this.mensaje.Location = new System.Drawing.Point(486, 750);
             this.mensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mensaje.Name = "mensaje";
             this.mensaje.Size = new System.Drawing.Size(0, 46);
             this.mensaje.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::CSEQ.Properties.Resources.Logo2B;
+            this.pictureBox2.Location = new System.Drawing.Point(476, 105);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(332, 331);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // Login
             // 
@@ -145,10 +145,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1288, 815);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.mensaje);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.ingresar_btn);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.password_txt);
             this.Controls.Add(this.login_txt);
             this.Controls.Add(this.label2);
@@ -160,8 +160,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,10 +173,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox login_txt;
         private System.Windows.Forms.TextBox password_txt;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ingresar_btn;
         private System.Windows.Forms.PictureBox x_picture;
         private System.Windows.Forms.Label mensaje;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
