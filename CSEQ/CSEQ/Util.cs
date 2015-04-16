@@ -448,6 +448,7 @@ namespace CSEQ
             DataTable dt;
             ZedGraph.GraphPane graph;
             zgc.GraphPane.CurveList.Clear();
+            zgc.GraphPane.GraphObjList.Clear();
             graph = zgc.GraphPane;
             graph.Chart.Fill = new Fill(Color.Transparent, Color.FromArgb(220, 255, 220), 45.0F);
             graph.Fill = new Fill(Color.Transparent, Color.FromArgb(220, 220, 255), 45.0F);

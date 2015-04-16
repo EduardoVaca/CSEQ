@@ -60,7 +60,7 @@ namespace CSEQ
                 case 1:
                     tienen_radio.Visible = true;
                     tienen_radio.Checked = true;
-                       noTienen_radio.Visible = true;
+                    noTienen_radio.Visible = true;
                     break;
                 case 2:
                     break;
@@ -80,10 +80,11 @@ namespace CSEQ
                     break;
                 case 1:
                     Reporte.Enabled = true;
-                    tienen_radio.Checked = false;
-                    noTienen_radio.Checked = false;
                     salida = 1;
-                    query = "CALL consultaNoTienenAuxiliar();";
+                     if(tienen_radio.Checked)
+                        query = " CALL consultaSiTienenAuxiliar();";
+                    if(noTienen_radio.Checked)
+                        query = " CALL consultaNoTienenAuxiliar();";
                     type = "Barra";
                     Util.graphData(zedGraph, query, type);
                     break;
@@ -114,7 +115,15 @@ namespace CSEQ
                     salida = 2;
                     Util.graphData(zedGraph, query, type);
                     break;
-                case 1:
+                case 1: 
+                    if(tienen_radio.Checked)
+                    query = " CALL consultaSiTienenAuxiliarPorCenso(" + id_censo+ ");";
+                    if(noTienen_radio.Checked)
+                    query = " CALL consultaNoTienenAuxiliarPorCenso(" + id_censo + ");";
+                    type = "Barra";
+                    index = 1;
+                    salida = 2;
+                    Util.graphData(zedGraph, query, type);
                     break;
                 case 2:
                     query = " CALL consultaTienenImplanteCoclearPorCenso(" + id_censo+ ");";
@@ -135,18 +144,7 @@ namespace CSEQ
         private void Reporte_Click(object sender, EventArgs e)
         {
             
-            if (tienen_radio.Checked)
-            {
-                query = "CALL consultaSiTienenAuxiliar();";
-                index = 1;
-                salida = 2;
-            }
-            if (noTienen_radio.Checked)
-            {
-                query = "CALL consultaNoTienenAuxiliar();";
-                index = 1;
-                salida = 2;
-            }
+            
             Reporte Nuevo = new Reporte(query,index,salida,getId_censo());
             Nuevo.Show();            
             
@@ -159,20 +157,43 @@ namespace CSEQ
 
         private void tienen_radio_CheckedChanged(object sender, EventArgs e)
         {
-            String type;
-            query = "CALL consultaSiTienenAuxiliar();";
-            type = "Barra";
-            index = 1;
-            Util.graphData(zedGraph, query, type);
+            if(todoscensos_radio.Checked && tienen_radio.Checked){
+                String type;
+                query = "CALL consultaSiTienenAuxiliar();";
+                type = "Barra";
+                index = 1;
+                Util.graphData(zedGraph, query, type);
+            }
+            else if(tienen_radio.Checked)
+            {
+                String type;
+                query = " CALL consultaSiTienenAuxiliarPorCenso(" + getId_censo() + ");";
+                type = "Barra";
+                index = 1;
+                Util.graphData(zedGraph, query, type);
+            }
+            
         }
 
         private void noTienen_radio_CheckedChanged(object sender, EventArgs e)
         {
-            String type;
-            query = "CALL consultaNoTienenAuxiliar();";
-            type = "Barra";
-            index = 1;
-            Util.graphData(zedGraph, query, type);
+            if (todoscensos_radio.Checked && noTienen_radio.Checked)
+            {
+                 String type;
+                query = "CALL consultaNoTienenAuxiliar();";
+                type = "Barra";
+                index = 1;
+                Util.graphData(zedGraph, query, type);
+            }
+            else if(noTienen_radio.Checked)
+            {
+                String type;
+                query = " CALL consultaNoTienenAuxiliarPorCenso(" + getId_censo() + ");";
+                type = "Barra";
+                index = 1;
+                Util.graphData(zedGraph, query, type);
+            }
+           
         }
 
         private void logout_Click(object sender, EventArgs e)
