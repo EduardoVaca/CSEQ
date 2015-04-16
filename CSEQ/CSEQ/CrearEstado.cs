@@ -37,11 +37,12 @@ namespace CSEQ
         private void Guardar_txt_Click(object sender, EventArgs e)
         {            
             String eNombre = nombre_txt.Text;
-            
-            if (Util.executeStoredProcedure("registrarEstado", eNombre))
-            {
-                MessageBox.Show("El Estado se ha registrado con exito!");
-            }
+
+            if(eNombre.Length > 0)
+                if (Util.executeStoredProcedure("registrarEstado", eNombre))
+                {
+                    MessageBox.Show("El Estado se ha registrado con exito!");
+                }
         }
 
         private void Buscar_Click(object sender, EventArgs e)

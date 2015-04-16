@@ -40,7 +40,7 @@
             this.Atras_picture = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.x_picture = new System.Windows.Forms.PictureBox();
-            this.guardar_txt = new System.Windows.Forms.Button();
+            this.guardar = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Busqueda_grp = new System.Windows.Forms.GroupBox();
@@ -103,6 +103,7 @@
             this.nombre_txt.Name = "nombre_txt";
             this.nombre_txt.Size = new System.Drawing.Size(494, 47);
             this.nombre_txt.TabIndex = 25;
+            this.nombre_txt.TextChanged += new System.EventHandler(this.nombre_txt_TextChanged);
             // 
             // Mun
             // 
@@ -156,17 +157,18 @@
             this.x_picture.TabStop = false;
             this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
             // 
-            // guardar_txt
+            // guardar
             // 
-            this.guardar_txt.Font = new System.Drawing.Font("Candara", 10F);
-            this.guardar_txt.Location = new System.Drawing.Point(82, 821);
-            this.guardar_txt.Margin = new System.Windows.Forms.Padding(6);
-            this.guardar_txt.Name = "guardar_txt";
-            this.guardar_txt.Size = new System.Drawing.Size(160, 62);
-            this.guardar_txt.TabIndex = 29;
-            this.guardar_txt.Text = "Guardar";
-            this.guardar_txt.UseVisualStyleBackColor = true;
-            this.guardar_txt.Click += new System.EventHandler(this.guardar_txt_Click);
+            this.guardar.Enabled = false;
+            this.guardar.Font = new System.Drawing.Font("Candara", 10F);
+            this.guardar.Location = new System.Drawing.Point(82, 821);
+            this.guardar.Margin = new System.Windows.Forms.Padding(6);
+            this.guardar.Name = "guardar";
+            this.guardar.Size = new System.Drawing.Size(160, 62);
+            this.guardar.TabIndex = 29;
+            this.guardar.Text = "Guardar";
+            this.guardar.UseVisualStyleBackColor = true;
+            this.guardar.Click += new System.EventHandler(this.guardar_txt_Click);
             // 
             // label30
             // 
@@ -340,7 +342,7 @@
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.guardar_txt);
+            this.Controls.Add(this.guardar);
             this.Controls.Add(this.ID_estado);
             this.Controls.Add(this.estado_label);
             this.Controls.Add(this.Nombre_label);
@@ -379,7 +381,7 @@
         private System.Windows.Forms.PictureBox Atras_picture;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox x_picture;
-        private System.Windows.Forms.Button guardar_txt;
+        private System.Windows.Forms.Button guardar;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox Busqueda_grp;

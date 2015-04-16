@@ -13,8 +13,7 @@ namespace CSEQ
     public partial class CrearColonia : Form
     {
         String nombre_selected;
-        int idMunicpio;
-        String nombre;
+        int idMunicpio;        
         int ID_selected;
         int rol;
 
@@ -72,11 +71,11 @@ namespace CSEQ
             if (cDelegacion == "")
                 cDelegacion = "null";
 
-
-            if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_municipio, cDelegacion))
-            {
-                MessageBox.Show("La Colonia se ha registrado con exito!");
-            }
+            if(cNombre.Length > 0)
+                if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_municipio, cDelegacion))
+                {
+                    MessageBox.Show("La Colonia se ha registrado con exito!");
+                }
             //Falta checar duda de atributos en nulo
         }
 
@@ -117,13 +116,14 @@ namespace CSEQ
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar la colonia: " + nombre_selected + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("modificarColonia", nombre_selected, ID_selected, nombreNuevo, ID_nuevo, delegacionNuevo))
+            if(nombreNuevo.Length > 0)
+                if (respuesta == System.Windows.Forms.DialogResult.Yes)
                 {
-                    MessageBox.Show("La colonia se modifico con exito");
+                    if (Util.executeStoredProcedure("modificarColonia", nombre_selected, ID_selected, nombreNuevo, ID_nuevo, delegacionNuevo))
+                    {
+                        MessageBox.Show("La colonia se modifico con exito");
+                    }
                 }
-            }
         }
 
         private void eliminar_btn_Click(object sender, EventArgs e)
@@ -153,10 +153,10 @@ namespace CSEQ
             }
         }
 
-
-
-
-
+        private void nombre_txt_TextChanged(object sender, EventArgs e)
+        {
+            Guardar.Enabled = true;
+        }
 
     }
 }

@@ -14,8 +14,6 @@ namespace CSEQ
     {
         String nombre_selected;
         int mID_estado;
-        String nombre;
-        int ID_selected;
         int rol;
 
         public CrearMunicipio(int rol)
@@ -59,11 +57,12 @@ namespace CSEQ
         private void guardar_txt_Click(object sender, EventArgs e)
         {
             int mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
-            String mNombre = nombre_txt.Text;          
-            if (Util.executeStoredProcedure("registrarMunicipio", mNombre, mID_estado))
-            {
-                MessageBox.Show("El Municipio se ha registrado con exito!");
-            }
+            String mNombre = nombre_txt.Text; 
+            if(mNombre.Length > 0)
+                if (Util.executeStoredProcedure("registrarMunicipio", mNombre, mID_estado))
+                {
+                    MessageBox.Show("El Municipio se ha registrado con exito!");
+                }
         }
 
         private void Buscar_Click(object sender, EventArgs e)
@@ -109,13 +108,14 @@ namespace CSEQ
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar el municipio: " + nombre_selected + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("modificarMunicipio", nombre_selected, mID_estado, nombreNuevo,ID_nuevo))
+            if(nombreNuevo.Length > 0)
+                if (respuesta == System.Windows.Forms.DialogResult.Yes)
                 {
-                    MessageBox.Show("El municipio se modifico con exito");
+                    if (Util.executeStoredProcedure("modificarMunicipio", nombre_selected, mID_estado, nombreNuevo,ID_nuevo))
+                    {
+                        MessageBox.Show("El municipio se modifico con exito");
+                    }
                 }
-            }
 
 
         }
@@ -130,6 +130,11 @@ namespace CSEQ
                 this.Close();
                 Application.Restart();
             }
+        }
+
+        private void nombre_txt_TextChanged(object sender, EventArgs e)
+        {
+            guardar.Enabled = true;
         }
     }
 }

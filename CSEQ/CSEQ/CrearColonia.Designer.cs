@@ -123,6 +123,7 @@
             this.nombre_txt.Name = "nombre_txt";
             this.nombre_txt.Size = new System.Drawing.Size(266, 47);
             this.nombre_txt.TabIndex = 15;
+            this.nombre_txt.TextChanged += new System.EventHandler(this.nombre_txt_TextChanged);
             // 
             // Nombre_label
             // 
@@ -139,6 +140,7 @@
             // 
             // Guardar
             // 
+            this.Guardar.Enabled = false;
             this.Guardar.Font = new System.Drawing.Font("Candara", 10F);
             this.Guardar.Location = new System.Drawing.Point(34, 417);
             this.Guardar.Name = "Guardar";
