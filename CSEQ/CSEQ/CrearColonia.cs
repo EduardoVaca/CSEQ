@@ -118,15 +118,11 @@ namespace CSEQ
         private void modificar_btn_Click(object sender, EventArgs e)
         {
 
-            int ID_delegacionNuevo;
+            int ID_delegacionNuevo = 0;
             
             if (ID_delegacion.SelectedValue != null)
             {
                 ID_delegacionNuevo = Int32.Parse(ID_delegacion.SelectedValue.ToString());
-            }
-            else
-            {
-                ID_delegacionNuevo = 0;
             }
             
             String nombreNuevo = nombre_txt.Text;
