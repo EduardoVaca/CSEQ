@@ -172,7 +172,7 @@ DELIMITER //
 CREATE PROCEDURE consultaTienenImplanteCoclearPorCenso
 (IN censo INT)
 BEGIN
-	DECLARE totalPersonas;
+	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
 	SELECT implante_coclear as TienenImplanteCoclear, COUNT(*) as Total, (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Persona p, PerteneceCenso pert 
@@ -180,6 +180,7 @@ BEGIN
 	GROUP BY implante_coclear;
 END //
 DELIMITER ;
+-- ********************************************************************************************************
 
 
 					-- ESTADO DE SALUD

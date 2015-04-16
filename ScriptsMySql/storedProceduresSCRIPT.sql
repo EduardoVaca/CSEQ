@@ -670,9 +670,7 @@ DELIMITER //
 CREATE PROCEDURE modificarMunicipio
 (IN nombreM VARCHAR(80), IDestado INT, nombreNuevo VARCHAR(80), IDestadoNuevo INT)
 BEGIN
-	DECLARE IDmunicpioObtenido INT;
-	SELECT ID_municipio INTO IDmunicpioObtenido FROM Municipio WHERE nombre = nombreM AND ID_estado = IDestado;
-	UPDATE Municipio SET nombre = nombreNuevo, ID_estado = IDestadoNuevo;
+	UPDATE Municipio SET nombre = nombreNuevo, ID_estado = IDestadoNuevo WHERE nombre = nombreM AND ID_estado = IDestado;
 END //
 DELIMITER ;
 

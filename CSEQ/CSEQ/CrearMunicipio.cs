@@ -95,11 +95,10 @@ namespace CSEQ
                                             MessageBoxButtons.YesNo);       
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("eliminarDelegacion", nombre_selected, mID_estado))
+                if (Util.executeStoredProcedure("eliminarMunicipio", nombre_selected, mID_estado))
                 {
                     MessageBox.Show("El municipio se elimino con exito");
-                }
-                ID_selected = Int32.Parse(ID_estado.SelectedValue.ToString());
+                }               
             }
         }
 
@@ -108,11 +107,11 @@ namespace CSEQ
             String nombreNuevo = nombre_txt.Text;
             int ID_nuevo = Int32.Parse(ID_estado.SelectedValue.ToString());
             DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar el municipio: " + nombre + "'?", "Confirmacion de modificar",
+            respuesta = MessageBox.Show("¿Desea modificar el municipio: " + nombre_selected + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("modificarMunicipio", nombre,ID_selected, nombreNuevo,ID_nuevo))
+                if (Util.executeStoredProcedure("modificarMunicipio", nombre_selected, mID_estado, nombreNuevo,ID_nuevo))
                 {
                     MessageBox.Show("El municipio se modifico con exito");
                 }
