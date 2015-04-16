@@ -43,6 +43,7 @@
             this.todoscensos_radio = new System.Windows.Forms.RadioButton();
             this.ID_censo = new System.Windows.Forms.ComboBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.AuxiliaresAuditivos_grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
@@ -53,6 +54,7 @@
             // AuxiliaresAuditivos_grp
             // 
             this.AuxiliaresAuditivos_grp.BackColor = System.Drawing.Color.Transparent;
+            this.AuxiliaresAuditivos_grp.Controls.Add(this.radioButton1);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.label1);
             this.AuxiliaresAuditivos_grp.Controls.Add(this.auxiliarAuditivo_combo);
             this.AuxiliaresAuditivos_grp.Location = new System.Drawing.Point(12, 73);
@@ -216,6 +218,18 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(795, 135);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(165, 29);
+            this.radioButton1.TabIndex = 16;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Visible = false;
+            // 
             // consultas_salud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -268,5 +282,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ID_censo;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

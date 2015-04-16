@@ -29,7 +29,7 @@ CREATE PROCEDURE consultaMarcaPorCenso
 (IN censo INT)
 BEGIN
 	DECLARE totalPersonas INT;
-	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo; -- Hay diferente totalPersonas cada censo
 	SELECT m.nombre as Marca, COUNT(*) as 'No. de Personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Marca m, PoseeAparatoAuditivo p, AparatoAuditivo a
 	WHERE a.ID_aparatoAuditivo = p.ID_aparatoAuditivo AND a.ID_marca = m.ID_marca AND p.ID_censo = censo
@@ -52,7 +52,7 @@ END //
 DELIMITER ;
 
 
--- Numero de personas que no tienen Auxiliar auditivo
+-- Numero de personas que no tienen Auxiliar auditivo ****************************************
 DELIMITER //
 CREATE PROCEDURE consultaNoTienenAuxiliar
 ()
@@ -64,6 +64,47 @@ BEGIN
 	WHERE CURP NOT IN (SELECT CURP FROM PoseeAparatoAuditivo p);	
 END //
 DELIMITER ;
+-- Validacion por censo
+DELIMITER //
+CREATE PROCEDURE consultaNoTienenAuxiliarPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT COUNT(*) as 'PersonasConAparato',  (COUNT(*) / totalPersonas * 100) as 'Porcentaje' 
+	FROM PerteneceCenso p
+	WHERE ID_censo = censo
+	AND CURP NOT IN (SELECT CURP FROM PoseeAparatoAuditivo p WHERE ID_censo = censo);
+END //
+DELIMITER ;
+-- **********************************************************************************************
+
+-- Numero de personas que Si tienen Auxiliar auditivo *************************************
+DELIMITER //
+CREATE PROCEDURE consultaSiTienenAuxiliar
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
+	SELECT COUNT(*) as 'PersonasConAparato',  (COUNT(*) / totalPersonas * 100) as 'Porcentaje' 
+	FROM Persona p
+	WHERE CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p);
+END //
+DELIMITER ;
+-- validacion CENSO
+DELIMITER //
+CREATE PROCEDURE consultaSiTienenAuxiliarPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT COUNT(*) as 'PersonasConAparato',  (COUNT(*) / totalPersonas * 100) as 'Porcentaje' 
+	FROM PerteneceCenso p
+	WHERE ID_censo = censo;
+	AND CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p WHERE ID_censo = censo;);
+END //
+DELIMITER ;
+-- ******************************************************************************************
 
 -- Personas con y sin APARATO
 DELIMITER //
@@ -78,21 +119,25 @@ BEGIN
 	FROM Persona p
 	WHERE CURP NOT IN (SELECT CURP FROM PoseeAparatoAuditivo p)) as tablaUno, (SELECT COUNT(*) as 'PersonasConAparato', (COUNT(*) / totalPersonas * 100) as 'PorcentajeCon'
 	FROM Persona p
-	WHERE CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p)) AS TABLADOS;
-    
+	WHERE CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p)) AS TABLADOS;    
 END //
 DELIMITER ;
-
--- Numero de personas que Si tienen Auxiliar auditivo
+-- Personas con y sin APARATO (Por Censo)
 DELIMITER //
-CREATE PROCEDURE consultaSiTienenAuxiliar
-()
-BEGIN
+CREATE PROCEDURE consultaAuxiliaresPorCenso
+(IN Censo INT)
+BEGIN	
 	DECLARE totalPersonas INT;
-	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT COUNT(*) as 'PersonasConAparato',  (COUNT(*) / totalPersonas * 100) as 'Porcentaje' 
-	FROM Persona p
-	WHERE CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p);
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso p WHERE ID_censo = Censo;
+    SELECT * FROM (
+		SELECT COUNT(*) as 'PersonasSinAparato', (COUNT(*) / totalPersonas * 100) as 'PorcentajeSin'
+		FROM PerteneceCenso p
+        WHERE ID_censo = Censo
+		AND CURP NOT IN (SELECT CURP FROM PoseeAparatoAuditivo p WHERE ID_censo = Censo)) as tablaUno,
+		(SELECT COUNT(*) as 'PersonasConAparato', (COUNT(*) / totalPersonas * 100) as 'PorcentajeCon'
+		FROM PerteneceCenso p
+        WHERE ID_censo = Censo
+		AND CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p WHERE ID_censo = Censo)) AS TABLADOS;    
 END //
 DELIMITER ;
 
