@@ -68,8 +68,12 @@ namespace CSEQ
         {
             String cNombre = nombre_txt.Text;
             int cID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
+            String cDelegacion = delegacion_txt.Text;
+            if (cDelegacion == "")
+                cDelegacion = "null";
 
-            if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_municipio, "null"))
+
+            if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_municipio, cDelegacion))
             {
                 MessageBox.Show("La Colonia se ha registrado con exito!");
             }
@@ -106,14 +110,16 @@ namespace CSEQ
 
             String nombreNuevo = nombre_txt.Text;
             int ID_nuevo = Int32.Parse(ID_municipio.SelectedValue.ToString());
-            //MessageBox.Show(ID_selected.ToString());
-            //MessageBox.Show(ID_nuevo.ToString());
+            String delegacionNuevo = delegacion_txt.Text;
+            if (delegacionNuevo == "")
+                delegacionNuevo = "null";
+
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar la colonia: " + nombre_selected + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("modificarColonia", nombre_selected, ID_selected, nombreNuevo, ID_nuevo, "null"))
+                if (Util.executeStoredProcedure("modificarColonia", nombre_selected, ID_selected, nombreNuevo, ID_nuevo, delegacionNuevo))
                 {
                     MessageBox.Show("La colonia se modifico con exito");
                 }

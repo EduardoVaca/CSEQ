@@ -54,6 +54,8 @@
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.delegacion_txt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -356,6 +358,27 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Candara", 14F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(12, 318);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 46);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "Delegacion";
+            // 
+            // delegacion_txt
+            // 
+            this.delegacion_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.delegacion_txt.Location = new System.Drawing.Point(115, 320);
+            this.delegacion_txt.Name = "delegacion_txt";
+            this.delegacion_txt.Size = new System.Drawing.Size(266, 47);
+            this.delegacion_txt.TabIndex = 75;
+            // 
             // CrearColonia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 33F);
@@ -366,6 +389,8 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 530);
+            this.Controls.Add(this.delegacion_txt);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.imagen);
             this.Controls.Add(this.Busqueda_grp);
@@ -429,5 +454,7 @@
         private System.Windows.Forms.TextBox busqueda_txt;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox delegacion_txt;
     }
 }

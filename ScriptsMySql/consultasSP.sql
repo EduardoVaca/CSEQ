@@ -155,7 +155,7 @@ BEGIN
 END //
 DELIMITER ;
 
--- Numero de personas que tienen implante coclear
+-- Numero de personas que tienen implante coclear*********************************************************
 DELIMITER //
 CREATE PROCEDURE consultaTienenImplanteCoclear
 ()
@@ -167,6 +167,20 @@ BEGIN
 	GROUP BY implante_coclear;
 END //
 DELIMITER ;
+-- Variacion en censo
+DELIMITER //
+CREATE PROCEDURE consultaTienenImplanteCoclearPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT implante_coclear as TienenImplanteCoclear, COUNT(*) as Total, (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM Persona p, PerteneceCenso pert 
+	WHERE p.CURP = pert.CURP AND pert.ID_censo = censo
+	GROUP BY implante_coclear;
+END //
+DELIMITER ;
+
 
 					-- ESTADO DE SALUD
 
