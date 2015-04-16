@@ -107,6 +107,7 @@ namespace CSEQ
 
         private void Buscar_Click(object sender, EventArgs e)
         {
+            busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
             Util.fillGrid(busqueda_grid, "busquedaPersonaCOMPLETO", busqueda);
         }
@@ -132,6 +133,8 @@ namespace CSEQ
                 Util.showData(this, sqlActiveRow);
                 nombre_selected = Nombre_txt.Text;
                 CURP_selected = CURP_txt.Text;
+                if(ID_colonia.SelectedValue != null)
+                MessageBox.Show(ID_colonia.SelectedValue.ToString());
             }
         }
         /*-------------------------------------------------------------------------------------*/
