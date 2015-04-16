@@ -64,8 +64,7 @@ namespace CSEQ
         private void ID_censo_SelectionChangeCommitted(object sender, EventArgs e)
         {            
             int id_censo = Int32.Parse(ID_censo.SelectedValue.ToString());
-            Reporte.Enabled = true;
-           
+            Reporte.Enabled = true;            
             switch (auxiliarAuditivo_combo.SelectedIndex)
             {
                 case 0:
@@ -96,7 +95,7 @@ namespace CSEQ
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                Ventana.mostrarOculta(Ventana.Ventanas.Login);
+                Application.Restart();
             }
         }
     }

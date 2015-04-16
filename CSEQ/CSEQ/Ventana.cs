@@ -9,7 +9,7 @@ namespace CSEQ
 {
     static class Ventana
     {
-        public enum Ventanas { Login, MenuPrincipal, MenuRegistros, MenuConsultas, EditarRegistro, ListaRegistros, EliminarRegistros };
+        public enum Ventanas { Login, MenuPrincipal, MenuRegistros, MenuConsultas, EditarRegistro, ListaRegistros, EliminarRegistros, Persona};
 
         static public void mostrarOculta(Ventanas ventana)
         {
@@ -44,11 +44,16 @@ namespace CSEQ
                 case Ventanas.EditarRegistro:
                     formToShow = Application.OpenForms.Cast<Form>().FirstOrDefault(c => c is Editar_registro);
                     break;
+
+                case Ventanas.Persona: 
+                    formToShow = Application.OpenForms.Cast<Form>().FirstOrDefault(c => c is Persona);
+                    break;
             }
 
             if (formToShow != null)
-            {
-                formToShow.ShowDialog();
+            {                
+                formToShow.Visible = false;
+                formToShow.Show();
             }
 
         }

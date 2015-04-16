@@ -28,7 +28,17 @@ namespace CSEQ
 
         private void back_picture_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea Guardar Borrador?", "Mantener cambios", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                this.Close();
+            }            
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
@@ -358,7 +368,7 @@ ID_aparatoAuditivo INT, modelo VARCHAR(30)*/
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
-                Ventana.mostrarOculta(Ventana.Ventanas.Login);
+                Application.Restart();
             }
         }
 
