@@ -61,7 +61,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, contenido FROM AparatoConMarca");
             //Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
             Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT('$',minimo, ' a ','$',maximo) FROM Sueldo");
-            Util.llenarComboBox(estadoEmpleo_combo, "SELECT ID_estado, nombre FROM Estado");
+            Util.llenarComboBox(ID_estadoEmpleo, "SELECT ID_estado, nombre FROM Estado");
             masculino_check.Checked = true;
             if (rol == 1)
             {
@@ -92,14 +92,14 @@ namespace CSEQ
 
         private void estadoEmpleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            String valorComboBox = estadoEmpleo_combo.SelectedValue.ToString();
-            Util.llenarComboBox(municipioEmpleo_combo, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
+            String valorComboBox = ID_estadoEmpleo.SelectedValue.ToString();
+            Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
                                                 "ID_estado = " + valorComboBox);
         }
 
         private void municipioEmpleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            String valorComboBox = municipioEmpleo_combo.SelectedValue.ToString();
+            String valorComboBox = ID_municipioEmpleo.SelectedValue.ToString();
             Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
                                                "ID_municipio = " + valorComboBox);
         }
@@ -107,7 +107,7 @@ namespace CSEQ
         private void Buscar_Click(object sender, EventArgs e)
         {
             String busqueda = "%" + busqueda_txt.Text + "%";
-            Util.fillGrid(busqueda_grid, "busquedaEnPersona", busqueda);
+            Util.fillGrid(busqueda_grid, "busquedaPersonaCOMPLETO", busqueda);
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -120,21 +120,17 @@ namespace CSEQ
                 modificar_btn.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 CURP = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                int censoInput = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
 
-                String sqlActiveRow = "SELECT *, date_format(p.fecha_nacimiento,'%d/%m/%Y') as fecha_nacimiento FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es, " +
-	                    "TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em, "+
-	                    "TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA  "+
-	                    "WHERE (p.nombre='"+ nombre +"')"+ "AND p.CURP='"+ CURP +"'"+
-	                    "AND p.CURP = pC.CURP AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP AND p.CURP = es.CURP  "+
-	                    "AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP  "+
-	                    "AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP  "+
-	                    "AND p.CURP = pAA.CURP";
+                String sqlActiveRow = "CALL mostrarPersona('" + nombre + "','" + CURP + "'," + censoInput + ");";
                 /*
                 String sqlActiveRow = "SELECT * FROM InstitucionEducativa WHERE ";
                 sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" + correo + "';";
                 */
+                textBox1.Text = sqlActiveRow;
                 Util.showData(this, sqlActiveRow);
                 nombre_selected = Nombre_txt.Text;
+               // MessageBox.Show(ID_municipio.SelectedValue.ToString());
             }
         }
         /*-------------------------------------------------------------------------------------*/
@@ -158,7 +154,7 @@ namespace CSEQ
             //Obtenion de datos **********************************************************************
             String CURPP = CURP_txt.Text;
             String nombreP = Nombre_txt.Text;
-            String fechaNacP = ID_fechaNacimiento.Value.ToShortDateString();
+            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
             Boolean sexoH = masculino_check.Checked;
             String telefonoP = telefono_txt.Text;
             String correoP = Correo_txt.Text;
@@ -288,7 +284,7 @@ namespace CSEQ
         {
             String CURPP = CURP_txt.Text;
             String nombreP = Nombre_txt.Text;
-            String fechaNacP = ID_fechaNacimiento.Value.ToShortDateString();
+            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
             Boolean sexoH = masculino_check.Checked;
             String telefonoP = telefono_txt.Text;
             String correoP = Correo_txt.Text;

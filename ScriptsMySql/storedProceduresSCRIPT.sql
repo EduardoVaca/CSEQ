@@ -186,6 +186,32 @@ DELIMITER ;
 -- busqueda PERSONA COMPLETO
 DELIMITER //
 CREATE PROCEDURE busquedaPersonaCOMPLETO
+(IN variable VARCHAR(80))
+BEGIN 
+	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, Pc.ID_censo as Censo, v.ID_colonia as ID_coloniaPersona,
+					Colonia.ID_municipio as ID_municipioPersona, Municipio.ID_estado as ID_estadoPersona
+					FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
+					TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
+					TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA, Estado, Colonia, Municipio 
+					WHERE (p.nombre LIKE variable)
+					AND p.CURP = pC.CURP AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP
+					AND p.CURP = es.CURP AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP
+					AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
+					AND p.CURP = pAA.CURP AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
+					AND lE.ID_empleo = tE.ID_empleo 
+				    GROUP BY p.CURP) as Tabla_Persona, (SELECT p.CURP as CURP, lE.ID_colonia as ID_coloniaEmleo,  
+				    									col.ID_municipio as ID_municipioEmpleo, mun.ID_estado as ID_estadoEMPLEO 
+				    									FROM Persona p, Empleo e, TieneEmpleo tE, LocalizaEmpleo lE, Colonia col, Municipio mun
+				    									WHERE p.nombre LIKE variable
+				    									AND p.CURP = tE.CURP AND tE.ID_empleo = lE.ID_empleo AND
+				    									lE.ID_colonia = col.ID_colonia AND mun.ID_municipio = col.ID_municipio) as Tabla_empleo
+    WHERE Tabla_persona.CURP = Tabla_empleo.CURP
+    GROUP BY Tabla_persona.CURP;
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE busquedaPersonaCOMPLETOporCenso
 (IN variable VARCHAR(80), IDcensoInput numeric(4))
 BEGIN 
 	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, Pc.ID_censo as Censo, v.ID_colonia as ID_coloniaPersona,
@@ -209,6 +235,39 @@ BEGIN
     GROUP BY Tabla_persona.CURP;
 END //
 DELIMITER ;
+
+
+
+DELIMITER //
+CREATE PROCEDURE mostrarPersona
+(IN nombreIn VARCHAR(80), CURPIn CHAR(18), IDcensoInput numeric(4))
+BEGIN 
+	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, p.sexo_masculino, p.telefono, p.calle,  Pc.ID_censo as Censo, v.ID_colonia, 
+					Colonia.ID_municipio, Municipio.ID_estado, p.mexicano, p.comunidad_indigena, p.credencialIFE, tEC.ID_estadoCivil, tNE.ID_nivelEducativo, es.ano,
+					es.ID_institucionEducativa, tLD.ID_lenguaDominante, tNEsp.ID_nivelEspanol, tNI.ID_nivelIngles, tNL.ID_nivelLSM, em.descripcion, em.nombre_compania,
+					g.ID_sueldo, em.ID_areaTrabajo, em.telefono as telefonoEmpleo, em.calle as calleEmpleo, em.correo as correoEmpleo, em.interpretacion_LSM, p.ID_periodo,
+					tPA.ID_perdidaAuditiva, eG.ID_grado, eG.bilateral, c.ID_causa, p.examen_audiometria, p.enfermedad, p.alergia, p.implante_coclear, tPA.prelinguistica, pAA.ID_aparatoAuditivo,
+					pAA.modelo
+					FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
+					TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
+					TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA, Estado, Colonia, Municipio 
+					WHERE (p.nombre = nombreIn) AND p.CURP = CURPIn
+					AND p.CURP = pC.CURP AND (pC.ID_censo = IDcensoInput) AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP
+					AND p.CURP = es.CURP AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP
+					AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
+					AND p.CURP = pAA.CURP AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
+					AND lE.ID_empleo = tE.ID_empleo 
+				    GROUP BY p.CURP) as Tabla_Persona, (SELECT p.CURP as CURP, lE.ID_colonia as ID_coloniaEmpleo, 
+				    									col.ID_municipio as ID_municipioEmpleo, mun.ID_estado as ID_estadoEmpleo 
+				    									FROM Persona p, Empleo e, TieneEmpleo tE, LocalizaEmpleo lE, Colonia col, Municipio mun
+				    									WHERE p.nombre = nombreIn AND p.CURP = CURPIn
+				    									AND p.CURP = tE.CURP AND (tE.ID_censo = IDcensoInput) AND tE.ID_empleo = lE.ID_empleo AND
+				    									lE.ID_colonia = col.ID_colonia AND mun.ID_municipio = col.ID_municipio) as Tabla_empleo
+    WHERE Tabla_persona.CURP = Tabla_empleo.CURP
+    GROUP BY Tabla_persona.CURP;
+END //
+DELIMITER ;
+-- ******************************************************************************************************************************
 
 -- Busqueda PERSONA
 DELIMITER //

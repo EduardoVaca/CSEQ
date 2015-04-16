@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persona));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Persona_tabControl = new System.Windows.Forms.TabControl();
             this.DatosPersonales_tab = new System.Windows.Forms.TabPage();
@@ -72,7 +72,7 @@
             this.femenino_check = new System.Windows.Forms.CheckBox();
             this.masculino_check = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ID_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.fecha_nacimiento = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.Nombre_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -106,9 +106,9 @@
             this.label77 = new System.Windows.Forms.Label();
             this.telefonoEmpleo_txt = new System.Windows.Forms.MaskedTextBox();
             this.label76 = new System.Windows.Forms.Label();
-            this.municipioEmpleo_combo = new System.Windows.Forms.ComboBox();
+            this.ID_municipioEmpleo = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.estadoEmpleo_combo = new System.Windows.Forms.ComboBox();
+            this.ID_estadoEmpleo = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.ID_coloniaEmpleo = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -182,6 +182,7 @@
             this.eliminar_lb = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -231,6 +232,7 @@
             this.DatosPersonales_tab.BackColor = System.Drawing.Color.Transparent;
             this.DatosPersonales_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.DatosPersonales_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DatosPersonales_tab.Controls.Add(this.textBox1);
             this.DatosPersonales_tab.Controls.Add(this.logout);
             this.DatosPersonales_tab.Controls.Add(this.pictureBox2);
             this.DatosPersonales_tab.Controls.Add(this.label63);
@@ -268,7 +270,7 @@
             this.DatosPersonales_tab.Controls.Add(this.femenino_check);
             this.DatosPersonales_tab.Controls.Add(this.masculino_check);
             this.DatosPersonales_tab.Controls.Add(this.label5);
-            this.DatosPersonales_tab.Controls.Add(this.ID_fechaNacimiento);
+            this.DatosPersonales_tab.Controls.Add(this.fecha_nacimiento);
             this.DatosPersonales_tab.Controls.Add(this.label4);
             this.DatosPersonales_tab.Controls.Add(this.Nombre_txt);
             this.DatosPersonales_tab.Controls.Add(this.label2);
@@ -706,14 +708,14 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Sexo";
             // 
-            // ID_fechaNacimiento
+            // fecha_nacimiento
             // 
-            this.ID_fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ID_fechaNacimiento.Location = new System.Drawing.Point(352, 263);
-            this.ID_fechaNacimiento.Margin = new System.Windows.Forms.Padding(8);
-            this.ID_fechaNacimiento.Name = "ID_fechaNacimiento";
-            this.ID_fechaNacimiento.Size = new System.Drawing.Size(402, 34);
-            this.ID_fechaNacimiento.TabIndex = 20;
+            this.fecha_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fecha_nacimiento.Location = new System.Drawing.Point(352, 263);
+            this.fecha_nacimiento.Margin = new System.Windows.Forms.Padding(8);
+            this.fecha_nacimiento.Name = "fecha_nacimiento";
+            this.fecha_nacimiento.Size = new System.Drawing.Size(402, 34);
+            this.fecha_nacimiento.TabIndex = 20;
             // 
             // label4
             // 
@@ -1016,9 +1018,9 @@
             this.DatosLaborales_tab.Controls.Add(this.label77);
             this.DatosLaborales_tab.Controls.Add(this.telefonoEmpleo_txt);
             this.DatosLaborales_tab.Controls.Add(this.label76);
-            this.DatosLaborales_tab.Controls.Add(this.municipioEmpleo_combo);
+            this.DatosLaborales_tab.Controls.Add(this.ID_municipioEmpleo);
             this.DatosLaborales_tab.Controls.Add(this.label34);
-            this.DatosLaborales_tab.Controls.Add(this.estadoEmpleo_combo);
+            this.DatosLaborales_tab.Controls.Add(this.ID_estadoEmpleo);
             this.DatosLaborales_tab.Controls.Add(this.label35);
             this.DatosLaborales_tab.Controls.Add(this.ID_coloniaEmpleo);
             this.DatosLaborales_tab.Controls.Add(this.label36);
@@ -1124,16 +1126,16 @@
             this.label76.TabIndex = 52;
             this.label76.Text = "Telefono";
             // 
-            // municipioEmpleo_combo
+            // ID_municipioEmpleo
             // 
-            this.municipioEmpleo_combo.Font = new System.Drawing.Font("Candara", 10F);
-            this.municipioEmpleo_combo.FormattingEnabled = true;
-            this.municipioEmpleo_combo.Location = new System.Drawing.Point(688, 542);
-            this.municipioEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
-            this.municipioEmpleo_combo.Name = "municipioEmpleo_combo";
-            this.municipioEmpleo_combo.Size = new System.Drawing.Size(264, 41);
-            this.municipioEmpleo_combo.TabIndex = 49;
-            this.municipioEmpleo_combo.SelectionChangeCommitted += new System.EventHandler(this.municipioEmpleo_combo_SelectionChangeCommitted);
+            this.ID_municipioEmpleo.Font = new System.Drawing.Font("Candara", 10F);
+            this.ID_municipioEmpleo.FormattingEnabled = true;
+            this.ID_municipioEmpleo.Location = new System.Drawing.Point(688, 542);
+            this.ID_municipioEmpleo.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_municipioEmpleo.Name = "ID_municipioEmpleo";
+            this.ID_municipioEmpleo.Size = new System.Drawing.Size(264, 41);
+            this.ID_municipioEmpleo.TabIndex = 49;
+            this.ID_municipioEmpleo.SelectionChangeCommitted += new System.EventHandler(this.municipioEmpleo_combo_SelectionChangeCommitted);
             // 
             // label34
             // 
@@ -1147,16 +1149,16 @@
             this.label34.TabIndex = 48;
             this.label34.Text = "Municipio";
             // 
-            // estadoEmpleo_combo
+            // ID_estadoEmpleo
             // 
-            this.estadoEmpleo_combo.Font = new System.Drawing.Font("Candara", 10F);
-            this.estadoEmpleo_combo.FormattingEnabled = true;
-            this.estadoEmpleo_combo.Location = new System.Drawing.Point(204, 538);
-            this.estadoEmpleo_combo.Margin = new System.Windows.Forms.Padding(4);
-            this.estadoEmpleo_combo.Name = "estadoEmpleo_combo";
-            this.estadoEmpleo_combo.Size = new System.Drawing.Size(264, 41);
-            this.estadoEmpleo_combo.TabIndex = 47;
-            this.estadoEmpleo_combo.SelectionChangeCommitted += new System.EventHandler(this.estadoEmpleo_combo_SelectionChangeCommitted);
+            this.ID_estadoEmpleo.Font = new System.Drawing.Font("Candara", 10F);
+            this.ID_estadoEmpleo.FormattingEnabled = true;
+            this.ID_estadoEmpleo.Location = new System.Drawing.Point(204, 538);
+            this.ID_estadoEmpleo.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_estadoEmpleo.Name = "ID_estadoEmpleo";
+            this.ID_estadoEmpleo.Size = new System.Drawing.Size(264, 41);
+            this.ID_estadoEmpleo.TabIndex = 47;
+            this.ID_estadoEmpleo.SelectionChangeCommitted += new System.EventHandler(this.estadoEmpleo_combo_SelectionChangeCommitted);
             // 
             // label35
             // 
@@ -1196,7 +1198,7 @@
             // 
             this.ID_areaTrabajo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_areaTrabajo.FormattingEnabled = true;
-            this.ID_areaTrabajo.Location = new System.Drawing.Point(908, 233);
+            this.ID_areaTrabajo.Location = new System.Drawing.Point(902, 233);
             this.ID_areaTrabajo.Margin = new System.Windows.Forms.Padding(8);
             this.ID_areaTrabajo.Name = "ID_areaTrabajo";
             this.ID_areaTrabajo.Size = new System.Drawing.Size(362, 41);
@@ -1902,35 +1904,35 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(24, 308);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.Size = new System.Drawing.Size(1544, 608);
             this.busqueda_grid.TabIndex = 17;
@@ -2077,6 +2079,16 @@
             this.label81.TabIndex = 77;
             this.label81.Text = "*";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Candara", 12F);
+            this.textBox1.Location = new System.Drawing.Point(929, 134);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(430, 31);
+            this.textBox1.TabIndex = 68;
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -2151,7 +2163,7 @@
         private System.Windows.Forms.CheckBox femenino_check;
         private System.Windows.Forms.CheckBox masculino_check;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker ID_fechaNacimiento;
+        private System.Windows.Forms.DateTimePicker fecha_nacimiento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox back_picture;
         private System.Windows.Forms.Label label3;
@@ -2190,9 +2202,9 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox descripcion_txt;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox municipioEmpleo_combo;
+        private System.Windows.Forms.ComboBox ID_municipioEmpleo;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.ComboBox estadoEmpleo_combo;
+        private System.Windows.Forms.ComboBox ID_estadoEmpleo;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox ID_coloniaEmpleo;
         private System.Windows.Forms.Label label36;
@@ -2278,6 +2290,7 @@
         private System.Windows.Forms.CheckBox bilateral_check;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.TextBox textBox1;
 
     }
 }
