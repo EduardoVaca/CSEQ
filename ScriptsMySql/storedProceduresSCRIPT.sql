@@ -422,7 +422,7 @@ DELIMITER //
 CREATE PROCEDURE busquedaEnUsuario
 (IN variable VARCHAR(30))
 BEGIN
-	SELECT login as Login 
+	SELECT u.login as Login 
 	FROM Usuario u, TieneRol t
 	WHERE u.login LIKE variable AND u.login = t.login;
 END //
