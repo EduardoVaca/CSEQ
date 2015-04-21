@@ -78,7 +78,8 @@ namespace CSEQ
          * Ejemplo: Estado - > Municipios
          */
         private void ID_estado_SelectionChangeCommitted(object sender, EventArgs e)
-        {            
+        {
+            MessageBox.Show("Cambio estado");
             String valorComboBox = ID_estado.SelectedValue.ToString();           
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
                                                 "ID_estado = " + valorComboBox);
@@ -86,6 +87,7 @@ namespace CSEQ
 
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            MessageBox.Show("Cambio mun");
             String valorComboBox = ID_municipio.SelectedValue.ToString();
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
                                                "ID_municipio = " + valorComboBox);
@@ -104,6 +106,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
                                                "ID_municipio = " + valorComboBox);
         }
+        /*-------------------------------------------------------------------------------------*/
 
         private void Buscar_Click(object sender, EventArgs e)
         {
@@ -125,19 +128,27 @@ namespace CSEQ
                 int censoInput = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
 
                 String sqlActiveRow = "CALL mostrarPersona('" + nombre + "','" + CURP + "'," + censoInput + ");";
-                /*
-                String sqlActiveRow = "SELECT * FROM InstitucionEducativa WHERE ";
-                sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" + correo + "';";
-                */
+
                 textBox1.Text = sqlActiveRow;
                 Util.showData(this, sqlActiveRow);
                 nombre_selected = Nombre_txt.Text;
                 CURP_selected = CURP_txt.Text;
-                if(ID_colonia.SelectedValue != null)
-                MessageBox.Show(ID_colonia.SelectedValue.ToString());
+                //Se vuelven a llenar los comboBox DEPENDIENTES para que no sean valores nulos
+                //Domicilio Persona
+                ID_estado.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[6].Value.ToString());
+                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + ";");
+                ID_municipio.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[5].Value.ToString());
+                Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipio.SelectedValue + ";");
+                ID_colonia.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[4].Value.ToString());
+                //Domicilio Empleo
+                ID_estadoEmpleo.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[10].Value.ToString());
+                Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estadoEmpleo.SelectedValue + ";");
+                ID_municipioEmpleo.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[9].Value.ToString());
+                Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipioEmpleo.SelectedValue + ";");
+                ID_coloniaEmpleo.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[8].Value.ToString());
             }
         }
-        /*-------------------------------------------------------------------------------------*/
+    
 
         //Procedimiento unicamente para registrar hijo
         private void registraHijo_button_Click(object sender, EventArgs e)
@@ -345,15 +356,7 @@ namespace CSEQ
                 {
                     MessageBox.Show("La persona se ha modificado con exito!");
                 }
-            }
-
-            
-           /* CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
-implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo INT, ID_colonia INT,
-ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
-ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
-interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, ID_causa INT,
-ID_aparatoAuditivo INT, modelo VARCHAR(30)*/
+            }           
         }
 
         private void logout_Click(object sender, EventArgs e)

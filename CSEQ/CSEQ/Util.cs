@@ -289,7 +289,7 @@ namespace CSEQ
 
 
 
-        public static void showData(Form form, String query)
+        public static void showData(Control form, String query)
         {
             DataTable table;
             table = getData(query);
