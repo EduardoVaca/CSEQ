@@ -32,9 +32,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.persona_lb = new System.Windows.Forms.Label();
             this.titulo = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.colonia_lb = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -138,18 +138,18 @@
             this.back_picture.TabStop = false;
             this.back_picture.Click += new System.EventHandler(this.back_picture_Click);
             // 
-            // label1
+            // persona_lb
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(261, 346);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 45);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Persona";
+            this.persona_lb.AutoSize = true;
+            this.persona_lb.BackColor = System.Drawing.Color.Transparent;
+            this.persona_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.persona_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.persona_lb.Location = new System.Drawing.Point(261, 346);
+            this.persona_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.persona_lb.Name = "persona_lb";
+            this.persona_lb.Size = new System.Drawing.Size(147, 45);
+            this.persona_lb.TabIndex = 14;
+            this.persona_lb.Text = "Persona";
             // 
             // titulo
             // 
@@ -164,18 +164,18 @@
             this.titulo.TabIndex = 15;
             this.titulo.Text = "Registros";
             // 
-            // label2
+            // colonia_lb
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(587, 346);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 45);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Colonia";
+            this.colonia_lb.AutoSize = true;
+            this.colonia_lb.BackColor = System.Drawing.Color.Transparent;
+            this.colonia_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.colonia_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.colonia_lb.Location = new System.Drawing.Point(582, 346);
+            this.colonia_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.colonia_lb.Name = "colonia_lb";
+            this.colonia_lb.Size = new System.Drawing.Size(136, 45);
+            this.colonia_lb.TabIndex = 16;
+            this.colonia_lb.Text = "Colonia";
             // 
             // label5
             // 
@@ -319,6 +319,8 @@
             this.colonia_pb.TabIndex = 41;
             this.colonia_pb.TabStop = false;
             this.colonia_pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.colonia_pb_MouseDown);
+            this.colonia_pb.MouseLeave += new System.EventHandler(this.colonia_pb_MouseLeave);
+            this.colonia_pb.MouseHover += new System.EventHandler(this.colonia_pb_MouseHover);
             this.colonia_pb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.colonia_pb_MouseUp);
             // 
             // persona_pb
@@ -332,6 +334,8 @@
             this.persona_pb.TabIndex = 42;
             this.persona_pb.TabStop = false;
             this.persona_pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.persona_pb_MouseDown);
+            this.persona_pb.MouseLeave += new System.EventHandler(this.persona_pb_MouseLeave);
+            this.persona_pb.MouseHover += new System.EventHandler(this.persona_pb_MouseHover);
             this.persona_pb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.persona_pb_MouseUp);
             // 
             // municipio_pb
@@ -644,19 +648,7 @@
             this.Controls.Add(this.municipio_pb);
             this.Controls.Add(this.persona_pb);
             this.Controls.Add(this.colonia_pb);
-            this.Controls.Add(this.usuario_lb);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.titulo);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.back_picture);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.x_picture);
@@ -672,6 +664,18 @@
             this.Controls.Add(this.sueldo_press);
             this.Controls.Add(this.areaTrabajo_press);
             this.Controls.Add(this.usuario_press);
+            this.Controls.Add(this.persona_lb);
+            this.Controls.Add(this.colonia_lb);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.usuario_lb);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -716,9 +720,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox x_picture;
         private System.Windows.Forms.PictureBox back_picture;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label persona_lb;
         private System.Windows.Forms.Label titulo;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label colonia_lb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

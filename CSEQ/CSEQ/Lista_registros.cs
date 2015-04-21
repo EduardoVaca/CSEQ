@@ -13,6 +13,15 @@ namespace CSEQ
     public partial class Lista_registros : Form
     {
         private int rol;
+        Size newSize = new Size(120, 120);
+        Size oldSize = new Size(100,100);
+        int oldTop;
+        int oldLeft;
+        double originalFontSize = 13.875;
+        int personaX = 130, personaY = 180;
+        int coloniaX = 290, coloniaY = 180;
+        //int coloniaX 
+        
         //Recibe como parametro un entero para saber en que modo esta "Crear", "Editar" o "Eliminar"
         public Lista_registros(int rol)
         {
@@ -252,6 +261,54 @@ namespace CSEQ
                 this.Close();
                 Application.Restart();
             }
+        }
+
+        /*Metodos que hacen mas visual la interaccion, Las imagenes crecen cuando se pasa el mouse sobre ellas*/
+        private void maximizarIcono(PictureBox picture, Label label, PictureBox picturePressed)
+        {
+            //oldSize = picture.Size;
+            picture.Top -= 10;
+            picture.Left -= 10;
+            picture.Size = newSize;
+            label.Font = new System.Drawing.Font(label.Font.FontFamily, label.Font.Size + 2);
+            label.Location = new Point(label.Location.X - 10, label.Location.Y + 5);
+            picturePressed.Top = picture.Top;
+            picturePressed.Left = picture.Left;
+            picturePressed.Size = newSize;
+        }
+
+        private void minimizarIcono(PictureBox picture, Label label, int posX, int posY, int oldTop, int oldLeft)
+        {
+            picture.Top = oldTop;
+            picture.Left = oldLeft;
+            picture.Size = oldSize;
+            label.Font = new System.Drawing.Font(label.Font.FontFamily, (float)originalFontSize);
+            label.Location = new Point(posX, posY);
+        }
+        /*Fin de metodos de interaccion visual*/
+
+        private void persona_pb_MouseHover(object sender, EventArgs e)
+        {
+           // MessageBox.Show("X: " + persona_lb.Location.X + "Y: " + persona_lb.Location.Y);
+            maximizarIcono(persona_pb, persona_lb, persona_press);
+            //MessageBox.Show(persona_pb.Top + " " + persona_pb.Left);
+        }
+
+        private void persona_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(persona_pb, persona_lb, personaX, personaY, 74, 116);
+        }
+
+        private void colonia_pb_MouseHover(object sender, EventArgs e)
+        {
+         //   MessageBox.Show("X: " + colonia_lb.Location.X + "Y: " + colonia_lb.Location.Y);
+            maximizarIcono(colonia_pb, colonia_lb, colonia_press);
+            //MessageBox.Show(colonia_pb.Top + " " + colonia_pb.Left);
+        }
+
+        private void colonia_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(colonia_pb, colonia_lb, coloniaX, personaY, 74, 273);
         }
 
 
