@@ -15,12 +15,20 @@ namespace CSEQ
         private int rol;
         Size newSize = new Size(120, 120);
         Size oldSize = new Size(100,100);
-        int oldTop;
-        int oldLeft;
         double originalFontSize = 13.875;
-        int personaX = 130, personaY = 180;
-        int coloniaX = 290, coloniaY = 180;
-        //int coloniaX 
+        //Variables para saber la posicion original de los iconos y poder alterar su tamano
+        int personaX = 130, primeraFilaY = 180;
+        int coloniaX = 290;
+        int municipioX = 446;
+        int estadoX = 615;
+        int institucionX = 80, segundaFilaY = 329;
+        int censoX = 294;
+        int aparatoX = 422;
+        int marcaX = 613;
+        int causaX = 140, terceraFilaY = 473;
+        int sueldoX = 291;
+        int areaTrabajoX = 435;
+        int usuarioX = 612;
         
         //Recibe como parametro un entero para saber en que modo esta "Crear", "Editar" o "Eliminar"
         public Lista_registros(int rol)
@@ -49,15 +57,6 @@ namespace CSEQ
                 usuario_pb.Visible = true;
             }
         }
-
-        /*************************************************************************
-         * Se crean diferentes formas dependiendo de lo que se quiere crear
-         * Si esta en modo de EDITAR, manda como parametro el nombre de la tabla a la que
-         * quiere crear
-         * Si esta en modo ELIMINAR pasa lo mismo
-         * En crear no manda parametros
-         * ***********************************************************************
-         */ 
 
         private void persona_pb_MouseDown(object sender, MouseEventArgs e)
         {
@@ -141,8 +140,6 @@ namespace CSEQ
             this.Hide();
             persona_pb.Visible = true;
             persona_press.Visible = false;
-            
-           
         }
 
         private void colonia_pb_MouseUp(object sender, MouseEventArgs e)
@@ -271,12 +268,12 @@ namespace CSEQ
             picture.Left -= 10;
             picture.Size = newSize;
             label.Font = new System.Drawing.Font(label.Font.FontFamily, label.Font.Size + 2);
-            label.Location = new Point(label.Location.X - 10, label.Location.Y + 5);
+            label.Location = new Point(label.Location.X - 5, label.Location.Y + 5);
             picturePressed.Top = picture.Top;
             picturePressed.Left = picture.Left;
             picturePressed.Size = newSize;
         }
-
+        //Metodo que regresa el icono a su posicion original
         private void minimizarIcono(PictureBox picture, Label label, int posX, int posY, int oldTop, int oldLeft)
         {
             picture.Top = oldTop;
@@ -287,29 +284,129 @@ namespace CSEQ
         }
         /*Fin de metodos de interaccion visual*/
 
+        //Metodos que llaman a las funciones de minimizar/maximizar dependiendo si el mouse esta o no sobre ellos
         private void persona_pb_MouseHover(object sender, EventArgs e)
         {
-           // MessageBox.Show("X: " + persona_lb.Location.X + "Y: " + persona_lb.Location.Y);
             maximizarIcono(persona_pb, persona_lb, persona_press);
-            //MessageBox.Show(persona_pb.Top + " " + persona_pb.Left);
         }
 
         private void persona_pb_MouseLeave(object sender, EventArgs e)
         {
-            minimizarIcono(persona_pb, persona_lb, personaX, personaY, 74, 116);
+            minimizarIcono(persona_pb, persona_lb, personaX, primeraFilaY, 74, 116);
         }
 
         private void colonia_pb_MouseHover(object sender, EventArgs e)
         {
-         //   MessageBox.Show("X: " + colonia_lb.Location.X + "Y: " + colonia_lb.Location.Y);
             maximizarIcono(colonia_pb, colonia_lb, colonia_press);
-            //MessageBox.Show(colonia_pb.Top + " " + colonia_pb.Left);
         }
 
         private void colonia_pb_MouseLeave(object sender, EventArgs e)
         {
-            minimizarIcono(colonia_pb, colonia_lb, coloniaX, personaY, 74, 273);
+            minimizarIcono(colonia_pb, colonia_lb, coloniaX, primeraFilaY, 74, 273);
         }
+
+        private void municipio_pb_MouseHover_1(object sender, EventArgs e)
+        {
+            maximizarIcono(municipio_pb, municipio_lb, municipio_press);
+        }
+
+        private void municipio_pb_MouseLeave_1(object sender, EventArgs e)
+        {
+            minimizarIcono(municipio_pb, municipio_lb, municipioX, primeraFilaY, 74, 434);
+        }
+
+        private void estado_pb_MouseHover(object sender, EventArgs e)
+        {           
+            maximizarIcono(estado_pb, estado_lb, estado_press);
+        }
+
+        private void estado_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(estado_pb, estado_lb, estadoX, primeraFilaY, 74, 594);
+        }
+
+        private void institucion_pb_MouseHover(object sender, EventArgs e)
+        {
+            maximizarIcono(institucion_pb, institucion_lb, institucion_press);
+        }
+
+        private void institucion_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(institucion_pb, institucion_lb, institucionX, segundaFilaY, 223, 116);
+        }
+
+        private void censo_pb_MouseHover(object sender, EventArgs e)
+        {
+            maximizarIcono(censo_pb, censo_lb, censo_press);
+        }
+
+        private void censo_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(censo_pb, censo_lb, censoX, segundaFilaY, 223, 273);
+        }
+
+        private void aparato_pb_MouseHover(object sender, EventArgs e)
+        {
+            maximizarIcono(aparato_pb, aparato_lb, aparato_press);
+        }
+
+        private void aparato_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(aparato_pb, aparato_lb, aparatoX, segundaFilaY, 223, 434);
+        }
+
+        private void marca_pb_MouseHover(object sender, EventArgs e)
+        {
+            maximizarIcono(marca_pb, marca_lb, marca_press);
+        }
+
+        private void marca_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(marca_pb, marca_lb, marcaX, segundaFilaY, 223, 594);
+        }
+
+        private void causa_pb_MouseHover(object sender, EventArgs e)
+        {
+            maximizarIcono(causa_pb, causa_lb, causa_press);
+        }
+
+        private void causa_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(causa_pb, causa_lb, causaX, terceraFilaY, 367, 116);
+        }
+
+        private void sueldo_pb_MouseHover(object sender, EventArgs e)
+        {
+            maximizarIcono(sueldo_pb, sueldo_lb, sueldo_press);
+        }
+
+        private void sueldo_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(sueldo_pb, sueldo_lb, sueldoX, terceraFilaY, 367, 273);
+        }
+
+        private void areaTrabajo_pb_MouseHover(object sender, EventArgs e)
+        {
+            maximizarIcono(areaTrabajo_pb, areaTrabajo_lb, areaTrabajo_press);
+        }
+
+        private void areaTrabajo_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(areaTrabajo_pb, areaTrabajo_lb, areaTrabajoX, terceraFilaY, 367, 434);
+        }
+
+        private void usuario_pb_MouseHover(object sender, EventArgs e)
+        {
+            maximizarIcono(usuario_pb, usuario_lb, usuario_press);
+        }
+
+        private void usuario_pb_MouseLeave(object sender, EventArgs e)
+        {
+            minimizarIcono(usuario_pb, usuario_lb, usuarioX, terceraFilaY, 367, 594);
+        }
+
+
+
 
 
 
