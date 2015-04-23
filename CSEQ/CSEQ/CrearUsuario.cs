@@ -11,12 +11,9 @@ using System.Windows.Forms;
 namespace CSEQ
 {
     public partial class CrearUsuario : Form
-    {
-        String nombre_selected;
-        String nombre;
-        String contrasena;
+    {                      
         int ID_rolViejo;
-
+        String nombre;
         public CrearUsuario()
         {
             InitializeComponent();

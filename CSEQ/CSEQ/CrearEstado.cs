@@ -12,9 +12,9 @@ namespace CSEQ
 {
     public partial class CrearEstado : Form
     {
-        String nombre_selected;
-        String nombre;
+        String nombre_selected;        
         int rol;
+        String nombre;
 
         public CrearEstado(int rol)
         {

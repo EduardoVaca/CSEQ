@@ -14,11 +14,11 @@ namespace CSEQ
     public partial class Crear_delegacion : Form
     {
         String delegacion_selected;
-        int dID_municipio;
-        String delegacion;
-        String municipio;
+        int dID_municipio;                
         int ID_selected;
         int rol;
+        String municipio;
+        String delegacion;
 
         public Crear_delegacion(int rol)
         {

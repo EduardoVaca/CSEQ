@@ -119,18 +119,16 @@ namespace CSEQ
                 eliminar_btn.Enabled = true;
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
-
-          /*  SELECT * FROM InstitucionEducativa i, LocalizaInstitucionEducativa l, Colonia c, Municipio m
-WHERE i.nombre = 'Universidad Autonoma de Queretaro' AND l.ID_institucionEducativa = i.ID_institucionEducativa AND
-l.ID_colonia = c.ID_colonia AND c.Id_municipio = m.ID_municipio*/
                 String sqlActiveRow = "SELECT * FROM InstitucionEducativa i, LocalizaInstitucionEducativa l, Colonia c, Municipio m WHERE ";
                 sqlActiveRow += (" i.nombre= '" + nombre_selected + "' AND i.correo= '" + correo + "' AND l.ID_institucioneducativa=i.ID_institucioneducativa " +
-                                                                                        "AND l.ID_colonia = c.ID_colonia AND c.ID_municipio=m.ID_municipio;");                                                                                        
-                /*
-                String sqlActiveRow = "SELECT * FROM InstitucionEducativa WHERE ";
-                sqlActiveRow += " nombre= '" + nombre + "' AND correo= '" + correo + "';";
-                */                
+                                                                                       "AND l.ID_colonia = c.ID_colonia AND c.ID_municipio=m.ID_municipio;");
                 Util.showData(this, sqlActiveRow);
+                //Se vuelven a llenar los comboBox DEPENDIENTES para que no sean valores nulos
+                ID_estado.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[4].Value.ToString());
+                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + ";");
+                ID_municipio.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
+                Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipio.SelectedValue + ";");
+                ID_colonia.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[2].Value.ToString());
             }
 
 

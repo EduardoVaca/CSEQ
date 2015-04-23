@@ -128,8 +128,7 @@ namespace CSEQ
                 int censoInput = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
 
                 String sqlActiveRow = "CALL mostrarPersona('" + nombre + "','" + CURP + "'," + censoInput + ");";
-
-                textBox1.Text = sqlActiveRow;
+                
                 Util.showData(this, sqlActiveRow);
                 nombre_selected = Nombre_txt.Text;
                 CURP_selected = CURP_txt.Text;
