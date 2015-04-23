@@ -151,8 +151,7 @@ namespace CSEQ
             crear.Show();
         }
 
-
-        private void municipio_pb_MouseUp(object sender, MouseEventArgs e)
+        private void municipio_pb_MouseUp_1(object sender, MouseEventArgs e)
         {
             CrearMunicipio crear = new CrearMunicipio(rol);
             this.Hide();
@@ -404,13 +403,6 @@ namespace CSEQ
         {
             minimizarIcono(usuario_pb, usuario_lb, usuarioX, terceraFilaY, 367, 594);
         }
-
-
-
-
-
-
-
 
 
     }

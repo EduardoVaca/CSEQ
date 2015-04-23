@@ -351,6 +351,7 @@
             this.municipio_pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.municipio_pb_MouseDown);
             this.municipio_pb.MouseLeave += new System.EventHandler(this.municipio_pb_MouseLeave_1);
             this.municipio_pb.MouseHover += new System.EventHandler(this.municipio_pb_MouseHover_1);
+            this.municipio_pb.MouseUp += new System.Windows.Forms.MouseEventHandler(this.municipio_pb_MouseUp_1);
             // 
             // estado_pb
             // 
