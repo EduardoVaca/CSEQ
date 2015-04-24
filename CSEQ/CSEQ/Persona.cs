@@ -211,15 +211,7 @@ namespace CSEQ
             String modeloP = modelo_txt.Text;
             Boolean sinEmpleo = sinEmpleo_check.Checked;
 
-            textBox1.Text = Util.executeStoredProcedureS("registrarPersonaCOMPLETO", CURPP, nombreP, fechaNacP, sexoH, telefonoP, 
-                                            correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
-                                            mexicanoP, ifeP, ID_periodoP, ID_censoP, ID_coloniaP, ID_estadoCivilP, 
-                                            ID_nivelEducativoP, ID_institucionEducativaP, anoEstudioP, ID_lenguaDominanteP,
-                                            ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
-                                            nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
-                                            ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
-                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
-                                            sinEmpleo);
+   
             //***********************************************************************************************          
             if(Util.executeStoredProcedure("registrarPersonaCOMPLETO", CURPP, nombreP, fechaNacP, sexoH, telefonoP, 
                                             correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
@@ -228,8 +220,8 @@ namespace CSEQ
                                             ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
                                             nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
                                             ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
-                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
-                                            sinEmpleo))
+                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP
+                                            ))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
             }
