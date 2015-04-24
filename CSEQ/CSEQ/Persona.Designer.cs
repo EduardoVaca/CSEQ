@@ -30,19 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persona));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Persona_tabControl = new System.Windows.Forms.TabControl();
             this.DatosPersonales_tab = new System.Windows.Forms.TabPage();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label63 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -80,10 +76,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Estudios_tab = new System.Windows.Forms.TabPage();
             this.ano_txt = new System.Windows.Forms.MaskedTextBox();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.ID_nivelLSM = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -182,6 +174,9 @@
             this.eliminar_lb = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
+            this.sinEmpleo_check = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -231,14 +226,11 @@
             this.DatosPersonales_tab.BackColor = System.Drawing.Color.Transparent;
             this.DatosPersonales_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.DatosPersonales_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DatosPersonales_tab.Controls.Add(this.textBox1);
             this.DatosPersonales_tab.Controls.Add(this.logout);
             this.DatosPersonales_tab.Controls.Add(this.pictureBox2);
             this.DatosPersonales_tab.Controls.Add(this.label63);
             this.DatosPersonales_tab.Controls.Add(this.label62);
-            this.DatosPersonales_tab.Controls.Add(this.label60);
-            this.DatosPersonales_tab.Controls.Add(this.label59);
-            this.DatosPersonales_tab.Controls.Add(this.label54);
-            this.DatosPersonales_tab.Controls.Add(this.label49);
             this.DatosPersonales_tab.Controls.Add(this.label32);
             this.DatosPersonales_tab.Controls.Add(this.label31);
             this.DatosPersonales_tab.Controls.Add(this.label30);
@@ -319,54 +311,6 @@
             this.label62.Size = new System.Drawing.Size(32, 42);
             this.label62.TabIndex = 65;
             this.label62.Text = "*";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label60.Location = new System.Drawing.Point(304, 729);
-            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(32, 42);
-            this.label60.TabIndex = 64;
-            this.label60.Text = "*";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label59.Location = new System.Drawing.Point(450, 804);
-            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(32, 42);
-            this.label59.TabIndex = 63;
-            this.label59.Text = "*";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label54.Location = new System.Drawing.Point(1078, 729);
-            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(32, 42);
-            this.label54.TabIndex = 60;
-            this.label54.Text = "*";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label49.Location = new System.Drawing.Point(800, 552);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(32, 42);
-            this.label49.TabIndex = 52;
-            this.label49.Text = "*";
             // 
             // label32
             // 
@@ -774,11 +718,8 @@
             this.Estudios_tab.BackColor = System.Drawing.Color.Transparent;
             this.Estudios_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.Estudios_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Estudios_tab.Controls.Add(this.label13);
             this.Estudios_tab.Controls.Add(this.ano_txt);
-            this.Estudios_tab.Controls.Add(this.label68);
-            this.Estudios_tab.Controls.Add(this.label67);
-            this.Estudios_tab.Controls.Add(this.label66);
-            this.Estudios_tab.Controls.Add(this.label64);
             this.Estudios_tab.Controls.Add(this.label48);
             this.Estudios_tab.Controls.Add(this.ID_nivelLSM);
             this.Estudios_tab.Controls.Add(this.label23);
@@ -804,67 +745,19 @@
             // ano_txt
             // 
             this.ano_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.ano_txt.Location = new System.Drawing.Point(1108, 52);
+            this.ano_txt.Location = new System.Drawing.Point(1107, 118);
             this.ano_txt.Margin = new System.Windows.Forms.Padding(8);
             this.ano_txt.Mask = "0000";
             this.ano_txt.Name = "ano_txt";
             this.ano_txt.Size = new System.Drawing.Size(196, 47);
             this.ano_txt.TabIndex = 68;
             // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label68.Location = new System.Drawing.Point(512, 579);
-            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(32, 42);
-            this.label68.TabIndex = 67;
-            this.label68.Text = "*";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label67.Location = new System.Drawing.Point(512, 485);
-            this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(32, 42);
-            this.label67.TabIndex = 66;
-            this.label67.Text = "*";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label66.Location = new System.Drawing.Point(512, 404);
-            this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(32, 42);
-            this.label66.TabIndex = 65;
-            this.label66.Text = "*";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label64.Location = new System.Drawing.Point(702, 62);
-            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(32, 42);
-            this.label64.TabIndex = 63;
-            this.label64.Text = "*";
-            // 
             // label48
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label48.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label48.Location = new System.Drawing.Point(730, 54);
+            this.label48.Location = new System.Drawing.Point(728, 120);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(367, 45);
@@ -875,7 +768,7 @@
             // 
             this.ID_nivelLSM.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_nivelLSM.FormattingEnabled = true;
-            this.ID_nivelLSM.Location = new System.Drawing.Point(282, 579);
+            this.ID_nivelLSM.Location = new System.Drawing.Point(280, 645);
             this.ID_nivelLSM.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelLSM.Name = "ID_nivelLSM";
             this.ID_nivelLSM.Size = new System.Drawing.Size(214, 37);
@@ -886,7 +779,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label23.Location = new System.Drawing.Point(36, 567);
+            this.label23.Location = new System.Drawing.Point(34, 633);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(175, 45);
@@ -897,7 +790,7 @@
             // 
             this.ID_nivelIngles.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_nivelIngles.FormattingEnabled = true;
-            this.ID_nivelIngles.Location = new System.Drawing.Point(282, 485);
+            this.ID_nivelIngles.Location = new System.Drawing.Point(280, 551);
             this.ID_nivelIngles.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelIngles.Name = "ID_nivelIngles";
             this.ID_nivelIngles.Size = new System.Drawing.Size(214, 37);
@@ -908,7 +801,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label22.Location = new System.Drawing.Point(36, 481);
+            this.label22.Location = new System.Drawing.Point(34, 547);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(199, 45);
@@ -919,7 +812,7 @@
             // 
             this.ID_nivelEspanol.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_nivelEspanol.FormattingEnabled = true;
-            this.ID_nivelEspanol.Location = new System.Drawing.Point(282, 404);
+            this.ID_nivelEspanol.Location = new System.Drawing.Point(280, 470);
             this.ID_nivelEspanol.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelEspanol.Name = "ID_nivelEspanol";
             this.ID_nivelEspanol.Size = new System.Drawing.Size(214, 37);
@@ -930,7 +823,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label21.Location = new System.Drawing.Point(36, 398);
+            this.label21.Location = new System.Drawing.Point(34, 464);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(229, 45);
@@ -941,7 +834,7 @@
             // 
             this.ID_lenguaDominante.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_lenguaDominante.FormattingEnabled = true;
-            this.ID_lenguaDominante.Location = new System.Drawing.Point(380, 290);
+            this.ID_lenguaDominante.Location = new System.Drawing.Point(378, 356);
             this.ID_lenguaDominante.Margin = new System.Windows.Forms.Padding(4);
             this.ID_lenguaDominante.Name = "ID_lenguaDominante";
             this.ID_lenguaDominante.Size = new System.Drawing.Size(416, 37);
@@ -952,7 +845,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(36, 285);
+            this.label20.Location = new System.Drawing.Point(34, 351);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(316, 45);
@@ -963,7 +856,7 @@
             // 
             this.ID_institucionEducativa.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_institucionEducativa.FormattingEnabled = true;
-            this.ID_institucionEducativa.Location = new System.Drawing.Point(428, 173);
+            this.ID_institucionEducativa.Location = new System.Drawing.Point(426, 239);
             this.ID_institucionEducativa.Margin = new System.Windows.Forms.Padding(4);
             this.ID_institucionEducativa.Name = "ID_institucionEducativa";
             this.ID_institucionEducativa.Size = new System.Drawing.Size(674, 37);
@@ -974,7 +867,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(36, 163);
+            this.label19.Location = new System.Drawing.Point(34, 229);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(345, 45);
@@ -985,7 +878,7 @@
             // 
             this.ID_nivelEducativo.Font = new System.Drawing.Font("Candara", 9F);
             this.ID_nivelEducativo.FormattingEnabled = true;
-            this.ID_nivelEducativo.Location = new System.Drawing.Point(332, 62);
+            this.ID_nivelEducativo.Location = new System.Drawing.Point(330, 128);
             this.ID_nivelEducativo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelEducativo.Name = "ID_nivelEducativo";
             this.ID_nivelEducativo.Size = new System.Drawing.Size(362, 37);
@@ -996,7 +889,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(36, 58);
+            this.label18.Location = new System.Drawing.Point(34, 124);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(260, 45);
@@ -1008,6 +901,7 @@
             this.DatosLaborales_tab.BackColor = System.Drawing.Color.Transparent;
             this.DatosLaborales_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.DatosLaborales_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DatosLaborales_tab.Controls.Add(this.sinEmpleo_check);
             this.DatosLaborales_tab.Controls.Add(this.correoEmpleo_txt);
             this.DatosLaborales_tab.Controls.Add(this.label80);
             this.DatosLaborales_tab.Controls.Add(this.calleEmpleo_txt);
@@ -1040,7 +934,7 @@
             // correoEmpleo_txt
             // 
             this.correoEmpleo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.correoEmpleo_txt.Location = new System.Drawing.Point(170, 442);
+            this.correoEmpleo_txt.Location = new System.Drawing.Point(170, 518);
             this.correoEmpleo_txt.Margin = new System.Windows.Forms.Padding(8);
             this.correoEmpleo_txt.Name = "correoEmpleo_txt";
             this.correoEmpleo_txt.Size = new System.Drawing.Size(934, 47);
@@ -1051,7 +945,7 @@
             this.label80.AutoSize = true;
             this.label80.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label80.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label80.Location = new System.Drawing.Point(28, 444);
+            this.label80.Location = new System.Drawing.Point(28, 520);
             this.label80.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(127, 45);
@@ -1061,7 +955,7 @@
             // calleEmpleo_txt
             // 
             this.calleEmpleo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.calleEmpleo_txt.Location = new System.Drawing.Point(170, 365);
+            this.calleEmpleo_txt.Location = new System.Drawing.Point(170, 441);
             this.calleEmpleo_txt.Margin = new System.Windows.Forms.Padding(8);
             this.calleEmpleo_txt.Name = "calleEmpleo_txt";
             this.calleEmpleo_txt.Size = new System.Drawing.Size(968, 47);
@@ -1072,7 +966,7 @@
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label78.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label78.Location = new System.Drawing.Point(28, 373);
+            this.label78.Location = new System.Drawing.Point(28, 449);
             this.label78.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(93, 45);
@@ -1106,7 +1000,7 @@
             // telefonoEmpleo_txt
             // 
             this.telefonoEmpleo_txt.Font = new System.Drawing.Font("Candara", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefonoEmpleo_txt.Location = new System.Drawing.Point(220, 300);
+            this.telefonoEmpleo_txt.Location = new System.Drawing.Point(220, 376);
             this.telefonoEmpleo_txt.Margin = new System.Windows.Forms.Padding(6);
             this.telefonoEmpleo_txt.Name = "telefonoEmpleo_txt";
             this.telefonoEmpleo_txt.Size = new System.Drawing.Size(720, 40);
@@ -1117,7 +1011,7 @@
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label76.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label76.Location = new System.Drawing.Point(28, 296);
+            this.label76.Location = new System.Drawing.Point(28, 372);
             this.label76.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(158, 45);
@@ -1128,7 +1022,7 @@
             // 
             this.ID_municipioEmpleo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_municipioEmpleo.FormattingEnabled = true;
-            this.ID_municipioEmpleo.Location = new System.Drawing.Point(688, 542);
+            this.ID_municipioEmpleo.Location = new System.Drawing.Point(688, 618);
             this.ID_municipioEmpleo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_municipioEmpleo.Name = "ID_municipioEmpleo";
             this.ID_municipioEmpleo.Size = new System.Drawing.Size(264, 41);
@@ -1140,7 +1034,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label34.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label34.Location = new System.Drawing.Point(496, 538);
+            this.label34.Location = new System.Drawing.Point(496, 614);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(175, 45);
@@ -1151,7 +1045,7 @@
             // 
             this.ID_estadoEmpleo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_estadoEmpleo.FormattingEnabled = true;
-            this.ID_estadoEmpleo.Location = new System.Drawing.Point(204, 538);
+            this.ID_estadoEmpleo.Location = new System.Drawing.Point(204, 614);
             this.ID_estadoEmpleo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estadoEmpleo.Name = "ID_estadoEmpleo";
             this.ID_estadoEmpleo.Size = new System.Drawing.Size(264, 41);
@@ -1163,7 +1057,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label35.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label35.Location = new System.Drawing.Point(30, 548);
+            this.label35.Location = new System.Drawing.Point(30, 624);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(127, 45);
@@ -1174,7 +1068,7 @@
             // 
             this.ID_coloniaEmpleo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_coloniaEmpleo.FormattingEnabled = true;
-            this.ID_coloniaEmpleo.Location = new System.Drawing.Point(1150, 540);
+            this.ID_coloniaEmpleo.Location = new System.Drawing.Point(1150, 616);
             this.ID_coloniaEmpleo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_coloniaEmpleo.Name = "ID_coloniaEmpleo";
             this.ID_coloniaEmpleo.Size = new System.Drawing.Size(294, 41);
@@ -1185,7 +1079,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label36.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label36.Location = new System.Drawing.Point(1002, 538);
+            this.label36.Location = new System.Drawing.Point(1002, 614);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(136, 45);
@@ -1196,7 +1090,7 @@
             // 
             this.ID_areaTrabajo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_areaTrabajo.FormattingEnabled = true;
-            this.ID_areaTrabajo.Location = new System.Drawing.Point(902, 233);
+            this.ID_areaTrabajo.Location = new System.Drawing.Point(902, 309);
             this.ID_areaTrabajo.Margin = new System.Windows.Forms.Padding(8);
             this.ID_areaTrabajo.Name = "ID_areaTrabajo";
             this.ID_areaTrabajo.Size = new System.Drawing.Size(362, 41);
@@ -1207,7 +1101,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label27.Location = new System.Drawing.Point(672, 233);
+            this.label27.Location = new System.Drawing.Point(672, 309);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(218, 45);
@@ -1218,7 +1112,7 @@
             // 
             this.ID_sueldo.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_sueldo.FormattingEnabled = true;
-            this.ID_sueldo.Location = new System.Drawing.Point(220, 237);
+            this.ID_sueldo.Location = new System.Drawing.Point(220, 313);
             this.ID_sueldo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_sueldo.Name = "ID_sueldo";
             this.ID_sueldo.Size = new System.Drawing.Size(362, 41);
@@ -1229,7 +1123,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label26.Location = new System.Drawing.Point(28, 233);
+            this.label26.Location = new System.Drawing.Point(28, 309);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(127, 45);
@@ -1239,7 +1133,7 @@
             // nombre_compania_txt
             // 
             this.nombre_compania_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.nombre_compania_txt.Location = new System.Drawing.Point(220, 140);
+            this.nombre_compania_txt.Location = new System.Drawing.Point(220, 216);
             this.nombre_compania_txt.Margin = new System.Windows.Forms.Padding(4);
             this.nombre_compania_txt.Name = "nombre_compania_txt";
             this.nombre_compania_txt.Size = new System.Drawing.Size(628, 47);
@@ -1250,7 +1144,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label25.Location = new System.Drawing.Point(28, 146);
+            this.label25.Location = new System.Drawing.Point(28, 222);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(176, 45);
@@ -1260,7 +1154,7 @@
             // descripcion_txt
             // 
             this.descripcion_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.descripcion_txt.Location = new System.Drawing.Point(372, 44);
+            this.descripcion_txt.Location = new System.Drawing.Point(372, 120);
             this.descripcion_txt.Margin = new System.Windows.Forms.Padding(4);
             this.descripcion_txt.Name = "descripcion_txt";
             this.descripcion_txt.Size = new System.Drawing.Size(1074, 47);
@@ -1271,7 +1165,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label24.Location = new System.Drawing.Point(28, 50);
+            this.label24.Location = new System.Drawing.Point(28, 126);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(330, 45);
@@ -1902,36 +1796,36 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle17;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(24, 308);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.Size = new System.Drawing.Size(1544, 608);
             this.busqueda_grid.TabIndex = 17;
@@ -1994,12 +1888,12 @@
             // 
             // guardar_btn
             // 
+            this.guardar_btn.Enabled = false;
             this.guardar_btn.Location = new System.Drawing.Point(292, 1027);
             this.guardar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.guardar_btn.Name = "guardar_btn";
             this.guardar_btn.Size = new System.Drawing.Size(88, 38);
             this.guardar_btn.TabIndex = 21;
-            this.guardar_btn.Text = "button2";
             this.guardar_btn.UseVisualStyleBackColor = true;
             this.guardar_btn.Click += new System.EventHandler(this.guardar_btn_Click);
             // 
@@ -2079,6 +1973,40 @@
             this.label81.Size = new System.Drawing.Size(32, 42);
             this.label81.TabIndex = 77;
             this.label81.Text = "*";
+            // 
+            // sinEmpleo_check
+            // 
+            this.sinEmpleo_check.AutoSize = true;
+            this.sinEmpleo_check.Font = new System.Drawing.Font("Candara", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sinEmpleo_check.Location = new System.Drawing.Point(1264, 42);
+            this.sinEmpleo_check.Name = "sinEmpleo_check";
+            this.sinEmpleo_check.Size = new System.Drawing.Size(174, 37);
+            this.sinEmpleo_check.TabIndex = 62;
+            this.sinEmpleo_check.Text = "Sin empleo";
+            this.sinEmpleo_check.UseVisualStyleBackColor = true;
+            this.sinEmpleo_check.CheckedChanged += new System.EventHandler(this.sinEmpleo_check_CheckedChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(1311, 116);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 42);
+            this.label13.TabIndex = 69;
+            this.label13.Text = "*";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Candara", 12F);
+            this.textBox1.Location = new System.Drawing.Point(961, 209);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(430, 31);
+            this.textBox1.TabIndex = 68;
             // 
             // Persona
             // 
@@ -2223,18 +2151,10 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label69;
@@ -2281,6 +2201,9 @@
         private System.Windows.Forms.CheckBox bilateral_check;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.CheckBox sinEmpleo_check;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox1;
 
     }
 }

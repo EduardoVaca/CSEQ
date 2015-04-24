@@ -78,16 +78,14 @@ namespace CSEQ
          * Ejemplo: Estado - > Municipios
          */
         private void ID_estado_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            MessageBox.Show("Cambio estado");
+        {            
             String valorComboBox = ID_estado.SelectedValue.ToString();           
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
                                                 "ID_estado = " + valorComboBox);
         }
 
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            MessageBox.Show("Cambio mun");
+        {            
             String valorComboBox = ID_municipio.SelectedValue.ToString();
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
                                                "ID_municipio = " + valorComboBox);
@@ -199,7 +197,11 @@ namespace CSEQ
             Boolean interpretacionLSMP = interpretacion_LSM_check.Checked;
             int ID_areaTrabajoP = Int32.Parse(ID_areaTrabajo.SelectedValue.ToString());
             int ID_sueldoP = Int32.Parse(ID_sueldo.SelectedValue.ToString());
-            int ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());
+            int ID_coloniaEmpleoP;
+            if (sinEmpleo_check.Checked)
+                ID_coloniaEmpleoP = 0;
+            else
+                ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());
             int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
             Boolean prelinguisticaP = prelinguistica_check.Checked;
             int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
@@ -207,8 +209,18 @@ namespace CSEQ
             int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
             int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
             String modeloP = modelo_txt.Text;
-            //***********************************************************************************************
+            Boolean sinEmpleo = sinEmpleo_check.Checked;
 
+            textBox1.Text = Util.executeStoredProcedureS("registrarPersonaCOMPLETO", CURPP, nombreP, fechaNacP, sexoH, telefonoP, 
+                                            correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
+                                            mexicanoP, ifeP, ID_periodoP, ID_censoP, ID_coloniaP, ID_estadoCivilP, 
+                                            ID_nivelEducativoP, ID_institucionEducativaP, anoEstudioP, ID_lenguaDominanteP,
+                                            ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
+                                            nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
+                                            ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
+                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
+                                            sinEmpleo);
+            //***********************************************************************************************          
             if(Util.executeStoredProcedure("registrarPersonaCOMPLETO", CURPP, nombreP, fechaNacP, sexoH, telefonoP, 
                                             correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
                                             mexicanoP, ifeP, ID_periodoP, ID_censoP, ID_coloniaP, ID_estadoCivilP, 
@@ -216,7 +228,8 @@ namespace CSEQ
                                             ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
                                             nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
                                             ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
-                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP))
+                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
+                                            sinEmpleo))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
             }
@@ -253,7 +266,8 @@ namespace CSEQ
             }
         }
 
-
+        //Metodo para verificar si en pestanas determinadas los datos esenciales estan llenos, de manera que
+        //permite o no avanzar a la siguiente pestana
         private void Persona_tabControl_Selecting(object sender, TabControlCancelEventArgs e)
         {
             if (e.TabPage != DatosPersonales_tab && e.TabPage != BuscarRegistro_tab)
@@ -261,14 +275,18 @@ namespace CSEQ
                 if (!datosPersonalesLlenos())
                 {
                     e.Cancel = true;
+                    MessageBox.Show("Faltan campos esenciales por llenar, favor de verificar");
                 }
                 else if (e.TabPage == PerdidaAuditiva_tab || e.TabPage == Familia_tab)
                 {
                     if (!datosLaboralesLlenos())
                     {
+                        MessageBox.Show("Faltan campos esenciales por llenar, favor de verificar");
                         e.Cancel = true;
                     }
                 }
+                if (e.TabPage == PerdidaAuditiva_tab)
+                    guardar_btn.Enabled = true;
             }
         }
 
@@ -276,9 +294,12 @@ namespace CSEQ
         private bool datosPersonalesLlenos()
         {
             if (!String.IsNullOrEmpty(CURP_txt.Text) && !String.IsNullOrEmpty(Nombre_txt.Text) &&
-                (masculino_check.Checked || femenino_check.Checked))
+                (masculino_check.Checked || femenino_check.Checked) && ID_colonia.SelectedValue != null)
             {
-                return true;
+                if (CURP_txt.TextLength == 18)
+                    return true;
+                else
+                    MessageBox.Show("CURP inválido, favor de verificar");
             }
 
             return false;
@@ -286,7 +307,7 @@ namespace CSEQ
 
         private bool datosLaboralesLlenos()
         {
-            if (!String.IsNullOrEmpty(descripcion_txt.Text))
+            if (!String.IsNullOrEmpty(descripcion_txt.Text) || sinEmpleo_check.Checked)
             {
                 return true;
             }
@@ -382,6 +403,39 @@ namespace CSEQ
                     MessageBox.Show("Se elimino a la persona con exito!");
                 }
             }
+        }
+
+        //Metodo que permite que una persona sea registrada sin empleo
+        private void sinEmpleo_check_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sinEmpleo_check.Checked)
+            {
+                descripcion_txt.Enabled = false;
+                nombre_compania_txt.Enabled = false;
+                ID_sueldo.Enabled = false;
+                ID_areaTrabajo.Enabled = false;
+                telefonoEmpleo_txt.Enabled = false;
+                calleEmpleo_txt.Enabled = false;
+                correoEmpleo_txt.Enabled = false;
+                ID_estadoEmpleo.Enabled = false;
+                ID_municipioEmpleo.Enabled = false;
+                ID_coloniaEmpleo.Enabled = false;
+                interpretacion_LSM_check.Enabled = false;
+            }
+            else
+            {
+                descripcion_txt.Enabled = true;
+                nombre_compania_txt.Enabled = true;
+                ID_sueldo.Enabled = true;
+                ID_areaTrabajo.Enabled = true;
+                telefonoEmpleo_txt.Enabled = true;
+                calleEmpleo_txt.Enabled = true;
+                correoEmpleo_txt.Enabled = true;
+                ID_estadoEmpleo.Enabled = true;
+                ID_municipioEmpleo.Enabled = true;
+                ID_coloniaEmpleo.Enabled = true;
+                interpretacion_LSM_check.Enabled = true;
+            }            
         }
 
     }

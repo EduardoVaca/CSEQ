@@ -243,8 +243,26 @@ namespace CSEQ
                 contador_parametros++;
             }            
             comando += ");";
-            //MessageBox.Show(comando);  
+            MessageBox.Show(comando); 
             return execute(comando);
+        }
+
+        public static string executeStoredProcedureS(String nombre, params Object[] parametros)
+        {
+            String comando;
+            comando = "CALL " + nombre + " (";
+            int size = parametros.Length;
+            int contador_parametros = 0;
+            foreach (Object param in parametros)
+            {
+                if (contador_parametros + 1 == size)
+                    comando += MySQLFormat(param);
+                else
+                    comando += MySQLFormat(param) + ", ";
+                contador_parametros++;
+            }
+            comando += ");";            
+            return comando;
         }
 
 

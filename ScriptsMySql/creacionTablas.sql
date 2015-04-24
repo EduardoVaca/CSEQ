@@ -19,7 +19,7 @@ CREATE TABLE Persona
 	credencialIFE boolean not null,
 	ID_periodo INT not null,
 	ID_censo numeric(4) not null,
-	CONSTRAINT llavePersona PRIMARY KEY(CURP, ID_cen)
+	CONSTRAINT llavePersona PRIMARY KEY(CURP, ID_censo)
 );
 
 -- Creacion tabla: Censo
