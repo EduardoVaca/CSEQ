@@ -33,7 +33,7 @@ namespace CSEQ
 
         private void consultas_btn_Click(object sender, EventArgs e)
         {
-            Menu_consultas Menu_consultas = new Menu_consultas();
+            Menu_consultas Menu_consultas = new Menu_consultas(rol);
             this.Close();
             Menu_consultas.Show();
           

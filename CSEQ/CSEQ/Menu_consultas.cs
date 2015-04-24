@@ -12,8 +12,11 @@ namespace CSEQ
 {
     public partial class Menu_consultas : Form
     {
-        public Menu_consultas()
+        int rol;
+
+        public Menu_consultas(int rol)
         {
+            this.rol = rol;
             InitializeComponent();
 
         }
@@ -25,14 +28,14 @@ namespace CSEQ
 
         private void back_picture_Click(object sender, EventArgs e)
         {            
-            Menu_principal Menu_principal = new Menu_principal(1);
+            Menu_principal Menu_principal = new Menu_principal(rol);
             Menu_principal.Show();
             this.Close();
         }
 
         private void ConsultaGrafica_btn_Click(object sender, EventArgs e)
         {
-            ConsultaGrafica consulta = new ConsultaGrafica();
+            ConsultaGrafica consulta = new ConsultaGrafica(rol);
             this.Close();
             consulta.Show();
             
@@ -81,7 +84,7 @@ namespace CSEQ
         private void salud_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             int index = salud_combo.SelectedIndex;
-            consultas_salud salud = new consultas_salud(index);
+            consultas_salud salud = new consultas_salud(index, rol);
             salud.Show();
             this.Close();
         }

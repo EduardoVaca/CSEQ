@@ -45,7 +45,7 @@ namespace CSEQ
 
         private void Atras_picture_Click(object sender, EventArgs e)
         {
-            Menu_consultas menu = new Menu_consultas();
+            Menu_consultas menu = new Menu_consultas(1);
             menu.Show();
             this.Close();
         }

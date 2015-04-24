@@ -117,7 +117,7 @@ BEGIN
 	-- DECLARE anoCenso NUMERIC;
 	-- SELECT ano INTO anoCenso FROM Censo c WHERE ID_censo = c.ID_censo;
 	CALL registrarPersona(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
-						enfermedad, mexicano, ife, ID_periodo);
+						enfermedad, mexicano, ife, ID_periodo, ID_censo);
 	INSERT INTO PerteneceCenso VALUES(CURP, ID_censo);
 	INSERT INTO Vive VALUES(CURP, ID_colonia, ID_censo);
 	INSERT INTO TieneEstadoCivil VALUES(CURP, ID_estadoCivil, ID_censo);
@@ -143,10 +143,10 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE registrarPersona
 (IN CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
-implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT)
+implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo numeric(4))
 BEGIN
 	INSERT INTO Persona VALUES(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
-								enfermedad, mexicano, ife, ID_periodo);
+								enfermedad, mexicano, ife, ID_periodo, ID_censo);
 END //
 DELIMITER ;	
 
@@ -219,7 +219,7 @@ BEGIN
 					FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
 					TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
 					TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA, Estado, Colonia, Municipio 
-					WHERE (p.nombre LIKE variable)
+					WHERE (p.nombre LIKE variable) AND p.ID_censo = IDcensoInput
 					AND p.CURP = pC.CURP AND (pC.ID_censo = IDcensoInput) AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP
 					AND p.CURP = es.CURP AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP
 					AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
@@ -305,7 +305,8 @@ DELIMITER //
 CREATE PROCEDURE busquedaEnInstitucionEducativa
 (IN variable VARCHAR(80))
 BEGIN 
-	SELECT i.nombre as Nombre, i.correo as Correo FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
+	SELECT i.nombre as Nombre, i.correo as Correo, c.ID_colonia as Colonia, m.ID_municipio as Municipio, m.ID_estado as Estado
+	FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
 	Localizainstitucioneducativa loc
 	WHERE i.nombre LIKE variable
 	AND loc.ID_institucionEducativa = i.ID_institucionEducativa AND loc.ID_colonia = c.ID_colonia 

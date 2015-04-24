@@ -18,7 +18,8 @@ CREATE TABLE Persona
 	mexicano boolean not null,
 	credencialIFE boolean not null,
 	ID_periodo INT not null,
-	CONSTRAINT llavePersona PRIMARY KEY(CURP)
+	ID_censo numeric(4) not null,
+	CONSTRAINT llavePersona PRIMARY KEY(CURP, ID_cen)
 );
 
 -- Creacion tabla: Censo

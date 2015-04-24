@@ -15,10 +15,11 @@ namespace CSEQ
         int index;
         String query;
         int salida=1;
+        int rol;
         //salida =1 Genera reporte de todos los censos
         //salida =2 Genera reporte de censo por año
 
-        public consultas_salud(int index)
+        public consultas_salud(int index, int rol)
         {
             this.index = index;
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace CSEQ
 
         private void back_picture_Click(object sender, EventArgs e)
         {
-            Menu_consultas Menu_principalConsultas = new Menu_consultas();
+            Menu_consultas Menu_principalConsultas = new Menu_consultas(rol);
             Menu_principalConsultas.Show();
             this.Close();
         }
