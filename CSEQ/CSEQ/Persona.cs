@@ -220,8 +220,8 @@ namespace CSEQ
                                             ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
                                             nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
                                             ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
-                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP
-                                            ))
+                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
+                                            sinEmpleo))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
             }
