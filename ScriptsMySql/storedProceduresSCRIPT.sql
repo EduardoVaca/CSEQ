@@ -111,13 +111,11 @@ implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexica
 ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
 ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
 interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, bilateral BOOLEAN,
-ID_causa INT, ID_aparatoAuditivo INT, modelo VARCHAR(30))
+ID_causa INT, ID_aparatoAuditivo INT, modelo VARCHAR(30), tiene_empleo BOOLEAN, tiene_aparato BOOLEAN)
 BEGIN
 	DECLARE IDempleo INT;
-	-- DECLARE anoCenso NUMERIC;
-	-- SELECT ano INTO anoCenso FROM Censo c WHERE ID_censo = c.ID_censo;
 	CALL registrarPersona(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
-						enfermedad, mexicano, ife, ID_periodo, ID_censo);
+						enfermedad, mexicano, ife, ID_periodo, ID_censo, tiene_empleo, tiene_aparato);
 	INSERT INTO PerteneceCenso VALUES(CURP, ID_censo);
 	INSERT INTO Vive VALUES(CURP, ID_colonia, ID_censo);
 	INSERT INTO TieneEstadoCivil VALUES(CURP, ID_estadoCivil, ID_censo);
@@ -127,26 +125,31 @@ BEGIN
 	INSERT INTO TieneNivelEspanol VALUES(CURP, ID_nivelEspanol, ID_censo);
 	INSERT INTO TieneNivelIngles VALUES(CURP, ID_nivelIngles, ID_censo);
 	INSERT INTO TieneNivelLSM VALUES(CURP, ID_nivelLSM, ID_censo);
-	CALL registrarEmpleo(descripcion_empleo, nombreCompany, correoEmpleo, telefonoEmpleo, calleEmpleo, interpretacion_LSM, ID_areaTrabajo);
-	SELECT MAX(ID_empleo) INTO IDempleo FROM Empleo;
-	INSERT INTO LocalizaEmpleo VALUES(IDempleo, ID_coloniaEmpleo);
-	INSERT INTO Gana VALUES(IDempleo, ID_sueldo, ID_censo);
-	INSERT INTO TieneEmpleo VALUES(CURP, IDempleo, ID_censo);
+	IF tiene_empleo = TRUE THEN
+		CALL registrarEmpleo(descripcion_empleo, nombreCompany, correoEmpleo, telefonoEmpleo, calleEmpleo, interpretacion_LSM, ID_areaTrabajo);
+		SELECT MAX(ID_empleo) INTO IDempleo FROM Empleo;
+		INSERT INTO LocalizaEmpleo VALUES(IDempleo, ID_coloniaEmpleo);
+		INSERT INTO Gana VALUES(IDempleo, ID_sueldo, ID_censo);
+		INSERT INTO TieneEmpleo VALUES(CURP, IDempleo, ID_censo);
+	END IF;
 	INSERT INTO TienePerdidaAuditiva VALUES(CURP, ID_perdidaAuditiva, prelinguistica, ID_censo);
 	INSERT INTO EsGrado VALUES(CURP, ID_perdidaAuditiva, ID_grado, ID_censo, bilateral);
 	INSERT INTO Causado VALUES (CURP, ID_perdidaAuditiva, ID_causa, ID_censo);
-	INSERT INTO PoseeAparatoAuditivo VALUES (CURP, ID_aparatoAuditivo, ID_censo, modelo);
+    IF tiene_aparato = TRUE then
+		INSERT INTO PoseeAparatoAuditivo VALUES (CURP, ID_aparatoAuditivo, ID_censo, modelo);
+	END IF;
 END //
-DELIMITER ;							
+DELIMITER ;								
 
 -- PERSONA
 DELIMITER //
 CREATE PROCEDURE registrarPersona
 (IN CURP CHAR(18), nombre VARCHAR(80), fechaNac DATETIME, sexoH BOOLEAN, telefono VARCHAR(20), correo VARCHAR(60), calle VARCHAR(80), examen BOOLEAN,
-implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo numeric(4))
+implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexicano BOOLEAN, ife BOOLEAN, ID_periodo INT, ID_censo numeric(4),
+tiene_empleo BOOLEAN, tiene_aparato BOOLEAN)
 BEGIN
 	INSERT INTO Persona VALUES(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
-								enfermedad, mexicano, ife, ID_periodo, ID_censo);
+								enfermedad, mexicano, ife, ID_periodo, ID_censo, tiene_empleo, tiene_aparato);
 END //
 DELIMITER ;	
 
@@ -702,14 +705,14 @@ implante BOOLEAN, comunidad BOOLEAN, alergia BOOLEAN, enfermedad BOOLEAN, mexica
 ID_estadoCivil INT, ID_nivelEducativo INT, ID_institucionEducativa INT, anoEstudio INT, ID_lenguaDominante INT, ID_nivelEspanol INT, ID_nivelIngles INT,
 ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), correoEmpleo VARCHAR(80), telefonoEmpleo VARCHAR(20), calleEmpleo VARCHAR(80),
 interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, bilateral BOOLEAN,
-ID_causa INT, ID_aparatoAuditivo INT, modelo VARCHAR(30))
+ID_causa INT, ID_aparatoAuditivo INT, modelo VARCHAR(30), tiene_empleo BOOLEAN, tiene_aparato BOOLEAN)
 BEGIN
 	CALL eliminarPersona(CURP);
 	CALL registrarPersonaCOMPLETO(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, enfermedad, mexicano, ife,
 								ID_periodo, ID_censo, ID_colonia, ID_estadoCivil, ID_nivelEducativo, ID_institucionEducativa, anoEstudio, ID_lenguaDominante,
 								ID_nivelEspanol, ID_nivelIngles, ID_nivelLSM, descripcion_empleo, nombreCompany, correoEmpleo, telefonoEmpleo, calleEmpleo,
 								interpretacion_LSM, ID_areaTrabajo, ID_sueldo, ID_coloniaEmpleo, ID_perdidaAuditiva, prelinguistica, ID_grado, bilateral,
-								ID_causa, ID_aparatoAuditivo, modelo);
+								ID_causa, ID_aparatoAuditivo, modelo, tiene_empleo, tiene_aparato);
 END //
 DELIMITER ;
 

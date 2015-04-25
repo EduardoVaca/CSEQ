@@ -132,6 +132,7 @@ namespace CSEQ
                 CURP_selected = CURP_txt.Text;
                 //Se vuelven a llenar los comboBox DEPENDIENTES para que no sean valores nulos
                 //Domicilio Persona
+                /*
                 ID_estado.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[6].Value.ToString());
                 Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + ";");
                 ID_municipio.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[5].Value.ToString());
@@ -143,6 +144,8 @@ namespace CSEQ
                 ID_municipioEmpleo.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[9].Value.ToString());
                 Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipioEmpleo.SelectedValue + ";");
                 ID_coloniaEmpleo.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[8].Value.ToString());
+
+                */
             }
         }
     
@@ -209,8 +212,17 @@ namespace CSEQ
             int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
             int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
             String modeloP = modelo_txt.Text;
-            Boolean sinEmpleoP = sinEmpleo_check.Checked;
-            Boolean sinAparatoP = noTieneAparato_check.Checked;
+            Boolean tiene_empleoP;
+            Boolean tiene_aparatoP;
+
+            if (sinEmpleo_check.Checked)
+                tiene_empleoP = false;
+            else
+                tiene_empleoP = true;
+            if (noTieneAparato_check.Checked)
+                tiene_aparatoP = false;
+            else
+                tiene_aparatoP = true;
 
    
             //***********************************************************************************************          
@@ -222,7 +234,7 @@ namespace CSEQ
                                             nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
                                             ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
                                             prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
-                                            sinEmpleoP, sinAparatoP))
+                                            tiene_empleoP, tiene_aparatoP))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
             }

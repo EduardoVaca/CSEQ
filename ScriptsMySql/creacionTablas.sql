@@ -19,6 +19,8 @@ CREATE TABLE Persona
 	credencialIFE boolean not null,
 	ID_periodo INT not null,
 	ID_censo numeric(4) not null,
+	tiene_empleo boolean not null,
+	tiene_aparato boolean not null,
 	CONSTRAINT llavePersona PRIMARY KEY(CURP, ID_censo)
 );
 
