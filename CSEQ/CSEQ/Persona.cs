@@ -110,7 +110,7 @@ namespace CSEQ
         {
             busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
-            Util.fillGrid(busqueda_grid, "busquedaPersonaCOMPLETO", busqueda);
+            Util.fillGrid(busqueda_grid, "buscarP", busqueda);
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -209,7 +209,8 @@ namespace CSEQ
             int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
             int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
             String modeloP = modelo_txt.Text;
-            Boolean sinEmpleo = sinEmpleo_check.Checked;
+            Boolean sinEmpleoP = sinEmpleo_check.Checked;
+            Boolean sinAparatoP = noTieneAparato_check.Checked;
 
    
             //***********************************************************************************************          
@@ -221,7 +222,7 @@ namespace CSEQ
                                             nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
                                             ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
                                             prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
-                                            sinEmpleo))
+                                            sinEmpleoP, sinAparatoP))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
             }
@@ -286,7 +287,8 @@ namespace CSEQ
         private bool datosPersonalesLlenos()
         {
             if (!String.IsNullOrEmpty(CURP_txt.Text) && !String.IsNullOrEmpty(Nombre_txt.Text) &&
-                (masculino_check.Checked || femenino_check.Checked) && ID_colonia.SelectedValue != null)
+                (masculino_check.Checked || femenino_check.Checked) && ID_colonia.SelectedValue != null
+                && ID_colonia.SelectedValue != null)
             {
                 if (CURP_txt.TextLength == 18)
                     return true;
@@ -428,6 +430,21 @@ namespace CSEQ
                 ID_coloniaEmpleo.Enabled = true;
                 interpretacion_LSM_check.Enabled = true;
             }            
+        }
+
+        //Metodo para desabilitar los campos de Aparato si la persona no posee alguno
+        private void noTieneAparato_check_CheckedChanged(object sender, EventArgs e)
+        {
+            if (noTieneAparato_check.Checked)
+            {
+                ID_aparatoAuditivo.Enabled = false;
+                modelo_txt.Enabled = false;
+            }
+            else
+            {
+                ID_aparatoAuditivo.Enabled = true;
+                modelo_txt.Enabled = true;
+            }
         }
 
     }
