@@ -762,6 +762,32 @@ END //
 DELIMITER ;
 
 
+-- Procedimeintos para hacer posible crear personas sin empleo y aparato
+
+-- obtener direccion de Persona
+DELIMITER //
+CREATE PROCEDURE obtenerDireccionPersona
+(IN CURPInput CHAR(18), ID_censoInput NUMERIC(4))
+BEGIN
+	SELECT m.ID_estado, m.ID_municipio, c.ID_colonia
+    FROM Vive v, Colonia c, Municipio m 
+    WHERE v.CURP = CURPInput AND v.ID_censo = ID_censoInput 
+    AND v.ID_colonia = c.ID_colonia AND c.ID_municipio = m.ID_municipio;
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE obtenerDireccionEmpleo
+(IN CURPinput CHAR(18), ID_censoInput NUMERIC(4))
+BEGIN
+	SELECT m.ID_estado, m.ID_municipio, c.ID_colonia
+    FROM TieneEmpleo tE, localizaempleo lE, Colonia c, Municipio m 
+    WHERE tE.CURP = CURPinput AND tE.ID_censo = ID_censoInput AND tE.ID_empleo = lE.ID_empleo
+    AND lE.ID_colonia = c.ID_colonia AND c.ID_municipio = m.ID_municipio;
+END //
+DELIMITER ;
+
+
 
 
 

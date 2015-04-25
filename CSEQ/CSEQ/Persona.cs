@@ -123,29 +123,36 @@ namespace CSEQ
                 modificar_btn.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 CURP = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
-                int censoInput = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
+                int censoInput = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[2].Value.ToString());
+                Boolean tiene_empleo = Boolean.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
+                Boolean tiene_aparato = Boolean.Parse(busqueda_grid.Rows[e.RowIndex].Cells[4].Value.ToString());
 
                 String sqlActiveRow = "CALL mostrarPersona('" + nombre + "','" + CURP + "'," + censoInput + ");";
                 
                 Util.showData(this, sqlActiveRow);
                 nombre_selected = Nombre_txt.Text;
-                CURP_selected = CURP_txt.Text;
-                //Se vuelven a llenar los comboBox DEPENDIENTES para que no sean valores nulos
-                //Domicilio Persona
-                /*
-                ID_estado.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[6].Value.ToString());
-                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + ";");
-                ID_municipio.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[5].Value.ToString());
-                Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipio.SelectedValue + ";");
-                ID_colonia.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[4].Value.ToString());
-                //Domicilio Empleo
-                ID_estadoEmpleo.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[10].Value.ToString());
-                Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estadoEmpleo.SelectedValue + ";");
-                ID_municipioEmpleo.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[9].Value.ToString());
-                Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipioEmpleo.SelectedValue + ";");
-                ID_coloniaEmpleo.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[8].Value.ToString());
+                CURP_selected = CURP_txt.Text;                
 
-                */
+                //Se vuelven a llenar los comboBox DEPENDIENTES para que no sean valores nulos
+                DataTable direccionPersona = new DataTable();
+                DataTable direccionEmpleo = new DataTable();
+                direccionPersona = Util.getData("CALL obtenerDireccionPersona('" + CURP + "'," + censoInput + ");");
+                //Domicilio Persona                
+                ID_estado.SelectedValue = Int16.Parse(direccionPersona.Rows[0][0].ToString());
+                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + ";");
+                ID_municipio.SelectedValue = Int16.Parse(direccionPersona.Rows[0][1].ToString());
+                Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipio.SelectedValue + ";");
+                ID_colonia.SelectedValue = Int16.Parse(direccionPersona.Rows[0][2].ToString());
+                //Domicilio Empleo (solo si tiene empleo)
+                if (tiene_empleo)
+                {
+                    direccionPersona = Util.getData("CALL obtenerDireccionEmpleo('" + CURP + "'," + censoInput + ");");
+                    ID_estadoEmpleo.SelectedValue = Int16.Parse(direccionPersona.Rows[0][0].ToString());
+                    Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estadoEmpleo.SelectedValue + ";");
+                    ID_municipioEmpleo.SelectedValue = Int16.Parse(direccionPersona.Rows[0][1].ToString());
+                    Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipioEmpleo.SelectedValue + ";");
+                    ID_coloniaEmpleo.SelectedValue = Int16.Parse(direccionPersona.Rows[0][2].ToString());
+                }                                
             }
         }
     
