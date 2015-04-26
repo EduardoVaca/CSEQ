@@ -113,6 +113,7 @@ namespace CSEQ
             Util.fillGrid(busqueda_grid, "buscarP", busqueda);
         }
 
+        //Metodo que llena toda la forma dependiendo la persona que se le de clic en el gird
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             String nombre;
@@ -127,7 +128,35 @@ namespace CSEQ
                 Boolean tiene_empleo = Boolean.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
                 Boolean tiene_aparato = Boolean.Parse(busqueda_grid.Rows[e.RowIndex].Cells[4].Value.ToString());
 
-                String sqlActiveRow = "CALL mostrarPersona('" + nombre + "','" + CURP + "'," + censoInput + ");";
+                String sqlActiveRow;
+
+                if(tiene_empleo && tiene_aparato)
+                {
+                    sqlActiveRow = "CALL mostrarPersona('" + nombre + "','" + CURP + "'," + censoInput + ");";
+                    noTieneAparato_check.Checked = false;
+                    sinEmpleo_check.Checked = false;
+                }                    
+                else if(tiene_empleo)
+                {
+                    sqlActiveRow = "CALL mostrarPersonaSinAparato('" + nombre + "','" + CURP + "'," + censoInput + ");";
+                    noTieneAparato_check.Checked = true;
+                    limpiarFormaDeAparatoAuditivo();
+                }                    
+                else if(tiene_aparato)
+                {
+                    sqlActiveRow = "CALL mostrarPersonaSinEmpleo('" + nombre + "','" + CURP + "'," + censoInput + ");";
+                    sinEmpleo_check.Checked = true;
+                    limpiarFormDeEmpleo();
+                }
+                else
+                {
+                    sqlActiveRow = "CALL mostrarPersonaSinEmpleoSinAparato('" + nombre + "','" + CURP + "'," + censoInput + ");";
+                    noTieneAparato_check.Checked = true;
+                    sinEmpleo_check.Checked = true;
+                    limpiarFormDeEmpleo();
+                    limpiarFormaDeAparatoAuditivo();
+                }
+                   
                 
                 Util.showData(this, sqlActiveRow);
                 nombre_selected = Nombre_txt.Text;
@@ -371,6 +400,17 @@ namespace CSEQ
             int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
             int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
             String modeloP = modelo_txt.Text;
+            Boolean tiene_empleoP;
+            Boolean tiene_aparatoP;
+
+            if (sinEmpleo_check.Checked)
+                tiene_empleoP = false;
+            else
+                tiene_empleoP = true;
+            if (noTieneAparato_check.Checked)
+                tiene_aparatoP = false;
+            else
+                tiene_aparatoP = true;
 
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar Persona: '" + nombre_selected + "'?", "Confirmacion de eliminar",
@@ -385,7 +425,7 @@ namespace CSEQ
                                             nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
                                             ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
                                             prelinguisticaP, ID_gradoP,bilateralP, ID_causaP, ID_aparatoAuditivoP, 
-                                            modeloP))
+                                            modeloP, tiene_empleoP, tiene_aparatoP))
                 {
                     MessageBox.Show("La persona se ha modificado con exito!");
                 }
@@ -457,13 +497,28 @@ namespace CSEQ
             if (noTieneAparato_check.Checked)
             {
                 ID_aparatoAuditivo.Enabled = false;
-                modelo_txt.Enabled = false;
+                modelo_txt.Enabled = false;                                
             }
             else
             {
                 ID_aparatoAuditivo.Enabled = true;
                 modelo_txt.Enabled = true;
             }
+        }
+
+        // Metodo que limpia la pestaña de aparato auditivo en caso de que la persona no cuente con uno
+        private void limpiarFormaDeAparatoAuditivo()
+        {
+            modelo_txt.Text = "";
+        }
+        //Metodo que limpia pestaña de Empleo en caso de que la persona no cuente con uno
+        private void limpiarFormDeEmpleo()
+        {
+            descripcion_txt.Text = "";
+            nombre_compania_txt.Text = "";
+            telefonoEmpleo_txt.Text = "";
+            calleEmpleo_txt.Text = "";
+            correoEmpleo_txt.Text = "";
         }
 
     }

@@ -533,24 +533,24 @@ DELIMITER ;
 -- eliminar PERSONA (POSIBLE CAMBIO)
 DELIMITER //
 CREATE PROCEDURE eliminarPersona
-(IN CURPinput CHAR(18))
+(IN CURPinput CHAR(18), ID_censoInput NUMERIC(4))
 BEGIN
-	DELETE FROM PerteneceCenso WHERE CURP = CURPinput;
-	DELETE FROM Vive WHERE CURP = CURPinput;
-	DELETE FROM TieneNivelEducativo WHERE CURP = CURPinput;
+	DELETE FROM PerteneceCenso WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM Vive WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM TieneNivelEducativo WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
 	DELETE FROM Estudiado WHERE CURP = CURPinput;
-	DELETE FROM TieneEmpleo WHERE CURP = CURPinput;
-	DELETE FROM TieneLenguaDominante WHERE CURP = CURPinput;
-	DELETE FROM TieneNivelEspanol WHERE CURP = CURPinput;
-	DELETE FROM TieneNivelIngles WHERE CURP = CURPinput;
-	DELETE FROM TieneNivelLSM WHERE CURP = CURPinput;
-	DELETE FROM TieneEstadoCivil WHERE CURP = CURPinput;
-	DELETE FROM PoseeAparatoAuditivo WHERE CURP = CURPinput;
+	DELETE FROM TieneEmpleo WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM TieneLenguaDominante WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM TieneNivelEspanol WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM TieneNivelIngles WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM TieneNivelLSM WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM TieneEstadoCivil WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM PoseeAparatoAuditivo WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
 	DELETE FROM Hijo WHERE CURP = CURPinput;
-	DELETE FROM TienePerdidaAuditiva WHERE CURP = CURPinput;
-	DELETE FROM Causado WHERE CURP = CURPinput;
-	DELETE FROM EsGrado WHERE CURP = CURPinput;
-	DELETE FROM Persona WHERE CURP = CURPinput;
+	DELETE FROM TienePerdidaAuditiva WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM Causado WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM EsGrado WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
+	DELETE FROM Persona WHERE CURP = CURPinput AND ID_censo = ID_censoInput;
 END //
 DELIMITER ;	
 
@@ -707,7 +707,7 @@ ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), corr
 interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, bilateral BOOLEAN,
 ID_causa INT, ID_aparatoAuditivo INT, modelo VARCHAR(30), tiene_empleo BOOLEAN, tiene_aparato BOOLEAN)
 BEGIN
-	CALL eliminarPersona(CURP);
+	CALL eliminarPersona(CURP, ID_censo);
 	CALL registrarPersonaCOMPLETO(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, enfermedad, mexicano, ife,
 								ID_periodo, ID_censo, ID_colonia, ID_estadoCivil, ID_nivelEducativo, ID_institucionEducativa, anoEstudio, ID_lenguaDominante,
 								ID_nivelEspanol, ID_nivelIngles, ID_nivelLSM, descripcion_empleo, nombreCompany, correoEmpleo, telefonoEmpleo, calleEmpleo,
@@ -784,6 +784,85 @@ BEGIN
     FROM TieneEmpleo tE, localizaempleo lE, Colonia c, Municipio m 
     WHERE tE.CURP = CURPinput AND tE.ID_censo = ID_censoInput AND tE.ID_empleo = lE.ID_empleo
     AND lE.ID_colonia = c.ID_colonia AND c.ID_municipio = m.ID_municipio;
+END //
+DELIMITER ;
+
+
+-- mostrar Persona sin empleo
+DELIMITER //
+CREATE PROCEDURE mostrarPersonaSinEmpleo
+(IN nombreIn VARCHAR(80), CURPIn CHAR(18), IDcensoInput numeric(4))
+BEGIN 
+	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, p.sexo_masculino, p.telefono, p.calle,  Pc.ID_censo as Censo, Municipio.ID_estado,
+					v.ID_colonia, Colonia.ID_municipio, p.mexicano, p.comunidad_indigena, p.credencialIFE, tEC.ID_estadoCivil, tNE.ID_nivelEducativo, es.ano,
+					es.ID_institucionEducativa, tLD.ID_lenguaDominante, tNEsp.ID_nivelEspanol, tNI.ID_nivelIngles, tNL.ID_nivelLSM, p.ID_periodo,
+					tPA.ID_perdidaAuditiva, eG.ID_grado, eG.bilateral, c.ID_causa, p.examen_audiometria, p.enfermedad, p.alergia, p.implante_coclear, tPA.prelinguistica, pAA.ID_aparatoAuditivo,
+					pAA.modelo
+					FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
+					TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,
+					TienePerdidaAuditiva tPA, EsGrado eG, Causado c, PoseeAparatoAuditivo pAA, Estado, Colonia, Municipio 
+					WHERE (p.nombre = nombreIn) AND p.CURP = CURPIn
+					AND p.CURP = pC.CURP AND (pC.ID_censo = IDcensoInput) AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP
+					AND p.CURP = es.CURP AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP 
+					AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
+					AND p.CURP = pAA.CURP AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
+					GROUP BY p.CURP) as Tabla_Persona
+    GROUP BY Tabla_persona.CURP;
+END //
+DELIMITER ;
+
+
+-- mostrar Persona sin Aparato Auditivo
+DELIMITER //
+CREATE PROCEDURE mostrarPersonaSinAparato
+(IN nombreIn VARCHAR(80), CURPIn CHAR(18), IDcensoInput numeric(4))
+BEGIN 
+	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, p.sexo_masculino, p.telefono, p.calle,  Pc.ID_censo as Censo, Municipio.ID_estado,
+					v.ID_colonia, Colonia.ID_municipio, p.mexicano, p.comunidad_indigena, p.credencialIFE, tEC.ID_estadoCivil, tNE.ID_nivelEducativo, es.ano,
+					es.ID_institucionEducativa, tLD.ID_lenguaDominante, tNEsp.ID_nivelEspanol, tNI.ID_nivelIngles, tNL.ID_nivelLSM, em.descripcion, em.nombre_compania,
+					g.ID_sueldo, em.ID_areaTrabajo, em.telefono as telefonoEmpleo, em.calle as calleEmpleo, em.correo as correoEmpleo, em.interpretacion_LSM, p.ID_periodo,
+					tPA.ID_perdidaAuditiva, eG.ID_grado, eG.bilateral, c.ID_causa, p.examen_audiometria, p.enfermedad, p.alergia, p.implante_coclear, tPA.prelinguistica
+					
+					FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
+					TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,  Empleo em,
+					TieneEmpleo tE, LocalizaEmpleo lE, Gana g, TienePerdidaAuditiva tPA, EsGrado eG, Causado c, Estado, Colonia, Municipio 
+					WHERE (p.nombre = nombreIn) AND p.CURP = CURPIn
+					AND p.CURP = pC.CURP AND (pC.ID_censo = IDcensoInput) AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP
+					AND p.CURP = es.CURP AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP AND p.CURP = tE.CURP
+					AND em.ID_empleo = tE.ID_empleo AND em.ID_empleo = g.ID_empleo AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
+					AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
+					AND lE.ID_empleo = tE.ID_empleo 
+				    GROUP BY p.CURP) as Tabla_Persona, (SELECT p.CURP as CURP, lE.ID_colonia as ID_coloniaEmpleo, 
+				    									col.ID_municipio as ID_municipioEmpleo, mun.ID_estado as ID_estadoEmpleo 
+				    									FROM Persona p, Empleo e, TieneEmpleo tE, LocalizaEmpleo lE, Colonia col, Municipio mun
+				    									WHERE p.nombre = nombreIn AND p.CURP = CURPIn
+				    									AND p.CURP = tE.CURP AND (tE.ID_censo = IDcensoInput) AND tE.ID_empleo = lE.ID_empleo AND
+				    									lE.ID_colonia = col.ID_colonia AND mun.ID_municipio = col.ID_municipio) as Tabla_empleo
+    WHERE Tabla_persona.CURP = Tabla_empleo.CURP
+    GROUP BY Tabla_persona.CURP;
+END //
+DELIMITER ;
+
+
+-- mostrar persona sin empleo ni aparato
+DELIMITER //
+CREATE PROCEDURE mostrarPersonaSinEmpleoSinAparato
+(IN nombreIn VARCHAR(80), CURPIn CHAR(18), IDcensoInput numeric(4))
+BEGIN 
+	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, p.sexo_masculino, p.telefono, p.calle,  Pc.ID_censo as Censo, Municipio.ID_estado,
+					v.ID_colonia, Colonia.ID_municipio, p.mexicano, p.comunidad_indigena, p.credencialIFE, tEC.ID_estadoCivil, tNE.ID_nivelEducativo, es.ano,
+					es.ID_institucionEducativa, tLD.ID_lenguaDominante, tNEsp.ID_nivelEspanol, tNI.ID_nivelIngles, tNL.ID_nivelLSM, p.ID_periodo,
+					tPA.ID_perdidaAuditiva, eG.ID_grado, eG.bilateral, c.ID_causa, p.examen_audiometria, p.enfermedad, p.alergia, p.implante_coclear, tPA.prelinguistica					
+					FROM Persona p, PerteneceCenso pC, Censo ce,  Vive v, TieneEstadoCivil tEC, TieneNivelEducativo tNE, Estudiado es,
+					TieneLenguaDominante tLD, TieneNivelEspanol tNEsp, TieneNivelIngles tNI, TieneNivelLSM tNL,
+					TienePerdidaAuditiva tPA, EsGrado eG, Causado c, Estado, Colonia, Municipio 
+					WHERE (p.nombre = nombreIn) AND p.CURP = CURPIn
+					AND p.CURP = pC.CURP AND (pC.ID_censo = IDcensoInput) AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP
+					AND p.CURP = es.CURP AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP 
+					AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
+					AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
+					GROUP BY p.CURP) as Tabla_Persona
+    GROUP BY Tabla_persona.CURP;
 END //
 DELIMITER ;
 
