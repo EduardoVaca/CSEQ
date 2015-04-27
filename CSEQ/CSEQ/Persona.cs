@@ -539,7 +539,12 @@ namespace CSEQ
         //Metodo que limpia todo el form para hacer un nuevo registro
         private void nuevo_registro_btn_Click(object sender, EventArgs e)
         {
-
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea continuar? Perderá los cambios sin guardar", "Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Util.clear(this);
+            }            
         }
 
     }
