@@ -33,9 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Persona_tabControl = new System.Windows.Forms.TabControl();
             this.DatosPersonales_tab = new System.Windows.Forms.TabPage();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label63 = new System.Windows.Forms.Label();
@@ -116,6 +122,7 @@
             this.descripcion_txt = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.PerdidaAuditiva_tab = new System.Windows.Forms.TabPage();
+            this.noTieneAparato_check = new System.Windows.Forms.CheckBox();
             this.bilateral_check = new System.Windows.Forms.CheckBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
@@ -168,7 +175,6 @@
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.guardar_btn = new System.Windows.Forms.Button();
             this.label74 = new System.Windows.Forms.Label();
@@ -177,10 +183,9 @@
             this.eliminar_lb = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.noTieneAparato_check = new System.Windows.Forms.CheckBox();
+            this.hijos_grid = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nuevo_registro_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -193,6 +198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hijos_grid)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -281,6 +287,42 @@
             this.DatosPersonales_tab.Size = new System.Drawing.Size(1597, 966);
             this.DatosPersonales_tab.TabIndex = 0;
             this.DatosPersonales_tab.Text = "Datos personales";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label51.Location = new System.Drawing.Point(1448, 636);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(32, 42);
+            this.label51.TabIndex = 71;
+            this.label51.Text = "*";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label49.Location = new System.Drawing.Point(973, 635);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(32, 42);
+            this.label49.TabIndex = 70;
+            this.label49.Text = "*";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label33.Location = new System.Drawing.Point(455, 637);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(32, 42);
+            this.label33.TabIndex = 69;
+            this.label33.Text = "*";
             // 
             // textBox1
             // 
@@ -1261,6 +1303,18 @@
             this.PerdidaAuditiva_tab.TabIndex = 3;
             this.PerdidaAuditiva_tab.Text = "Perdida Auditiva";
             // 
+            // noTieneAparato_check
+            // 
+            this.noTieneAparato_check.AutoSize = true;
+            this.noTieneAparato_check.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noTieneAparato_check.Location = new System.Drawing.Point(873, 755);
+            this.noTieneAparato_check.Name = "noTieneAparato_check";
+            this.noTieneAparato_check.Size = new System.Drawing.Size(355, 40);
+            this.noTieneAparato_check.TabIndex = 82;
+            this.noTieneAparato_check.Text = "No tiene aparato auditivo";
+            this.noTieneAparato_check.UseVisualStyleBackColor = true;
+            this.noTieneAparato_check.CheckedChanged += new System.EventHandler(this.noTieneAparato_check_CheckedChanged);
+            // 
             // bilateral_check
             // 
             this.bilateral_check.AutoSize = true;
@@ -1670,6 +1724,7 @@
             this.Familia_tab.BackColor = System.Drawing.Color.Transparent;
             this.Familia_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.Familia_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Familia_tab.Controls.Add(this.hijos_grid);
             this.Familia_tab.Controls.Add(this.label79);
             this.Familia_tab.Controls.Add(this.registraHijo_button);
             this.Familia_tab.Controls.Add(this.label73);
@@ -1693,7 +1748,7 @@
             this.label79.AutoSize = true;
             this.label79.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label79.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label79.Location = new System.Drawing.Point(308, 438);
+            this.label79.Location = new System.Drawing.Point(537, 335);
             this.label79.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(231, 45);
@@ -1703,12 +1758,11 @@
             // registraHijo_button
             // 
             this.registraHijo_button.Enabled = false;
-            this.registraHijo_button.Location = new System.Drawing.Point(552, 433);
+            this.registraHijo_button.Location = new System.Drawing.Point(781, 330);
             this.registraHijo_button.Margin = new System.Windows.Forms.Padding(6);
             this.registraHijo_button.Name = "registraHijo_button";
             this.registraHijo_button.Size = new System.Drawing.Size(128, 50);
             this.registraHijo_button.TabIndex = 64;
-            this.registraHijo_button.Text = "Otro hijo?";
             this.registraHijo_button.UseVisualStyleBackColor = true;
             this.registraHijo_button.Click += new System.EventHandler(this.registraHijo_button_Click);
             // 
@@ -1729,7 +1783,7 @@
             this.sordoHijo_check.AutoSize = true;
             this.sordoHijo_check.Enabled = false;
             this.sordoHijo_check.Font = new System.Drawing.Font("Candara", 9F);
-            this.sordoHijo_check.Location = new System.Drawing.Point(1034, 323);
+            this.sordoHijo_check.Location = new System.Drawing.Point(1084, 240);
             this.sordoHijo_check.Margin = new System.Windows.Forms.Padding(4);
             this.sordoHijo_check.Name = "sordoHijo_check";
             this.sordoHijo_check.Size = new System.Drawing.Size(62, 33);
@@ -1742,7 +1796,7 @@
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Candara", 13.875F);
             this.label47.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label47.Location = new System.Drawing.Point(914, 312);
+            this.label47.Location = new System.Drawing.Point(964, 229);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(114, 45);
@@ -1910,19 +1964,6 @@
             this.back_picture.TabStop = false;
             this.back_picture.Click += new System.EventHandler(this.back_picture_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(1212, 1021);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(342, 29);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "ROMPIENDO PARADIGMAS";
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -2016,53 +2057,71 @@
             this.label81.TabIndex = 77;
             this.label81.Text = "*";
             // 
-            // label33
+            // hijos_grid
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label33.Location = new System.Drawing.Point(455, 637);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(32, 42);
-            this.label33.TabIndex = 69;
-            this.label33.Text = "*";
+            this.hijos_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.hijos_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.hijos_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hijos_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.hijos_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.hijos_grid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.hijos_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.hijos_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.hijos_grid.Location = new System.Drawing.Point(282, 424);
+            this.hijos_grid.Margin = new System.Windows.Forms.Padding(4);
+            this.hijos_grid.Name = "hijos_grid";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hijos_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.hijos_grid.RowTemplate.Height = 33;
+            this.hijos_grid.Size = new System.Drawing.Size(953, 264);
+            this.hijos_grid.TabIndex = 66;
+            this.hijos_grid.Visible = false;
             // 
-            // label49
+            // label3
             // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label49.Location = new System.Drawing.Point(973, 635);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(32, 42);
-            this.label49.TabIndex = 70;
-            this.label49.Text = "*";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(1190, 1020);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(263, 45);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Nuevo Registro";
+            this.label3.Visible = false;
             // 
-            // label51
+            // nuevo_registro_btn
             // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label51.Location = new System.Drawing.Point(1448, 636);
-            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(32, 42);
-            this.label51.TabIndex = 71;
-            this.label51.Text = "*";
-            // 
-            // noTieneAparato_check
-            // 
-            this.noTieneAparato_check.AutoSize = true;
-            this.noTieneAparato_check.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noTieneAparato_check.Location = new System.Drawing.Point(873, 755);
-            this.noTieneAparato_check.Name = "noTieneAparato_check";
-            this.noTieneAparato_check.Size = new System.Drawing.Size(355, 40);
-            this.noTieneAparato_check.TabIndex = 82;
-            this.noTieneAparato_check.Text = "No tiene aparato auditivo";
-            this.noTieneAparato_check.UseVisualStyleBackColor = true;
-            this.noTieneAparato_check.CheckedChanged += new System.EventHandler(this.noTieneAparato_check_CheckedChanged);
+            this.nuevo_registro_btn.Enabled = false;
+            this.nuevo_registro_btn.Location = new System.Drawing.Point(1451, 1024);
+            this.nuevo_registro_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.nuevo_registro_btn.Name = "nuevo_registro_btn";
+            this.nuevo_registro_btn.Size = new System.Drawing.Size(96, 38);
+            this.nuevo_registro_btn.TabIndex = 74;
+            this.nuevo_registro_btn.UseVisualStyleBackColor = true;
+            this.nuevo_registro_btn.Visible = false;
+            this.nuevo_registro_btn.Click += new System.EventHandler(this.nuevo_registro_btn_Click);
             // 
             // Persona
             // 
@@ -2074,6 +2133,8 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1616, 1077);
+            this.Controls.Add(this.nuevo_registro_btn);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.eliminar_lb);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_lb);
@@ -2081,7 +2142,6 @@
             this.Controls.Add(this.label74);
             this.Controls.Add(this.guardar_btn);
             this.Controls.Add(this.back_picture);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.Persona_tabControl);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -2109,6 +2169,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hijos_grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2141,7 +2202,6 @@
         private System.Windows.Forms.DateTimePicker fecha_nacimiento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox back_picture;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox ID_municipio;
         private System.Windows.Forms.Label label12;
@@ -2264,6 +2324,9 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.CheckBox noTieneAparato_check;
+        private System.Windows.Forms.DataGridView hijos_grid;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button nuevo_registro_btn;
 
     }
 }

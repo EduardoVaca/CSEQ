@@ -15,6 +15,7 @@ namespace CSEQ
         String nombre_selected;
         int rol;
         String CURP_selected;
+        Boolean registro_persona = false;
 
         public Persona(int rol)
         {
@@ -188,7 +189,7 @@ namespace CSEQ
         }
     
 
-        //Procedimiento unicamente para registrar hijo
+        //Procedimiento unicamente para registrar hijo y mostrar en el grid los hijos de esa persona
         private void registraHijo_button_Click(object sender, EventArgs e)
         {
             String nombreH = nombreHijo_txt.Text;
@@ -199,7 +200,10 @@ namespace CSEQ
             if(Util.executeStoredProcedure("registrarHijo", nombreH, fechaNacH, sordoH, curpP)){
                 MessageBox.Show("El Hijo se ha registrado con exito!");
             }
-
+            hijos_grid.Visible = true;
+            nombreHijo_txt.Text = "";
+            sordoHijo_check.Checked = false;
+            Util.fillGrid(hijos_grid, "BusquedaEnHijo", curpP);
         }
 
         private void guardar_btn_Click(object sender, EventArgs e)
@@ -275,6 +279,7 @@ namespace CSEQ
                                             tiene_empleoP, tiene_aparatoP))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
+                registro_persona = true;
             }
 
         }
@@ -320,12 +325,20 @@ namespace CSEQ
                     e.Cancel = true;
                     MessageBox.Show("Faltan campos esenciales por llenar, favor de verificar");
                 }
-                else if (e.TabPage == PerdidaAuditiva_tab || e.TabPage == Familia_tab)
+                else if (e.TabPage == PerdidaAuditiva_tab)
                 {
                     if (!datosLaboralesLlenos())
                     {
                         MessageBox.Show("Faltan campos esenciales por llenar, favor de verificar");
                         e.Cancel = true;
+                    }
+                }
+                else if (e.TabPage == Familia_tab)
+                {
+                    if (registro_persona == false)
+                    {
+                        e.Cancel = true;
+                        MessageBox.Show("Se debe guardar la Persona antes de registrar a su familia");
                     }
                 }
                 if (e.TabPage == PerdidaAuditiva_tab)
@@ -521,6 +534,12 @@ namespace CSEQ
             telefonoEmpleo_txt.Text = "";
             calleEmpleo_txt.Text = "";
             correoEmpleo_txt.Text = "";
+        }
+
+        //Metodo que limpia todo el form para hacer un nuevo registro
+        private void nuevo_registro_btn_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

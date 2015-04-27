@@ -431,6 +431,18 @@ BEGIN
 	WHERE u.login LIKE variable AND u.login = t.login;
 END //
 DELIMITER ;	
+
+
+-- Busqueda en Hijos
+DELIMITER //
+CREATE PROCEDURE busquedaEnHijo
+(IN CURPinput CHAR(18))
+BEGIN
+	SELECT nombre as Nombre, sordo as Sordo, CURP as CURP_Padre
+    FROM Hijo
+    WHERE CURP = CURPinput;
+END //
+DELIMITER ;
 -- ****************************************************************************************************************8
 
 -- ELIMINACIONES/ DELETIONS
@@ -865,6 +877,7 @@ BEGIN
     GROUP BY Tabla_persona.CURP;
 END //
 DELIMITER ;
+
 
 
 
