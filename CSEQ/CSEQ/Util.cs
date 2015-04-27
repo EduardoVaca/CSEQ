@@ -200,7 +200,7 @@ namespace CSEQ
             }
             else if (param is DateTime)
             {
-                return "'" + ((DateTime)param).ToString("d/MM/yyyy HH:mm:ss") + "'";
+                return "'" + ((DateTime)param).ToString("yyyy-MM-dd HH:mm:ss") + "'";
             }
             else if (param == null)
             {

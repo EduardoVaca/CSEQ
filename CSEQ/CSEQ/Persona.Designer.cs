@@ -159,6 +159,7 @@
             this.ID_periodo = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.Familia_tab = new System.Windows.Forms.TabPage();
+            this.hijos_grid = new System.Windows.Forms.DataGridView();
             this.label79 = new System.Windows.Forms.Label();
             this.registraHijo_button = new System.Windows.Forms.Button();
             this.label73 = new System.Windows.Forms.Label();
@@ -183,9 +184,12 @@
             this.eliminar_lb = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
-            this.hijos_grid = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.nuevo_registro_btn = new System.Windows.Forms.Button();
+            this.label54 = new System.Windows.Forms.Label();
+            this.modificarHijo_btn = new System.Windows.Forms.Button();
+            this.label59 = new System.Windows.Forms.Label();
+            this.eliminarHijo_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -194,11 +198,11 @@
             this.DatosLaborales_tab.SuspendLayout();
             this.PerdidaAuditiva_tab.SuspendLayout();
             this.Familia_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hijos_grid)).BeginInit();
             this.BuscarRegistro_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hijos_grid)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -711,6 +715,7 @@
             // 
             // fecha_nacimiento
             // 
+            this.fecha_nacimiento.CustomFormat = "yyyy-MM-dd";
             this.fecha_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fecha_nacimiento.Location = new System.Drawing.Point(352, 263);
             this.fecha_nacimiento.Margin = new System.Windows.Forms.Padding(8);
@@ -1724,6 +1729,10 @@
             this.Familia_tab.BackColor = System.Drawing.Color.Transparent;
             this.Familia_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.Familia_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Familia_tab.Controls.Add(this.label59);
+            this.Familia_tab.Controls.Add(this.eliminarHijo_btn);
+            this.Familia_tab.Controls.Add(this.label54);
+            this.Familia_tab.Controls.Add(this.modificarHijo_btn);
             this.Familia_tab.Controls.Add(this.hijos_grid);
             this.Familia_tab.Controls.Add(this.label79);
             this.Familia_tab.Controls.Add(this.registraHijo_button);
@@ -1742,6 +1751,47 @@
             this.Familia_tab.Size = new System.Drawing.Size(1597, 966);
             this.Familia_tab.TabIndex = 4;
             this.Familia_tab.Text = "Familia";
+            // 
+            // hijos_grid
+            // 
+            this.hijos_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.hijos_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            this.hijos_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hijos_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.hijos_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.hijos_grid.DefaultCellStyle = dataGridViewCellStyle8;
+            this.hijos_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.hijos_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.hijos_grid.Location = new System.Drawing.Point(282, 424);
+            this.hijos_grid.Margin = new System.Windows.Forms.Padding(4);
+            this.hijos_grid.Name = "hijos_grid";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hijos_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.hijos_grid.RowTemplate.Height = 33;
+            this.hijos_grid.Size = new System.Drawing.Size(953, 264);
+            this.hijos_grid.TabIndex = 66;
+            this.hijos_grid.Visible = false;
+            this.hijos_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.hijos_grid_RowEnter);
             // 
             // label79
             // 
@@ -1805,7 +1855,9 @@
             // 
             // fechaNacimientoHijo
             // 
+            this.fechaNacimientoHijo.CustomFormat = "yyyy-MM-dd";
             this.fechaNacimientoHijo.Enabled = false;
+            this.fechaNacimientoHijo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fechaNacimientoHijo.Location = new System.Drawing.Point(372, 237);
             this.fechaNacimientoHijo.Margin = new System.Windows.Forms.Padding(8);
             this.fechaNacimientoHijo.Name = "fechaNacimientoHijo";
@@ -1832,7 +1884,7 @@
             this.nombreHijo_txt.Location = new System.Drawing.Point(196, 135);
             this.nombreHijo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.nombreHijo_txt.Name = "nombreHijo_txt";
-            this.nombreHijo_txt.Size = new System.Drawing.Size(1070, 47);
+            this.nombreHijo_txt.Size = new System.Drawing.Size(704, 47);
             this.nombreHijo_txt.TabIndex = 56;
             // 
             // label45
@@ -1892,36 +1944,36 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle11;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(24, 308);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.Size = new System.Drawing.Size(1544, 608);
             this.busqueda_grid.TabIndex = 17;
@@ -2057,46 +2109,6 @@
             this.label81.TabIndex = 77;
             this.label81.Text = "*";
             // 
-            // hijos_grid
-            // 
-            this.hijos_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.hijos_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            this.hijos_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.hijos_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.hijos_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.hijos_grid.DefaultCellStyle = dataGridViewCellStyle11;
-            this.hijos_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.hijos_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.hijos_grid.Location = new System.Drawing.Point(282, 424);
-            this.hijos_grid.Margin = new System.Windows.Forms.Padding(4);
-            this.hijos_grid.Name = "hijos_grid";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.hijos_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.hijos_grid.RowTemplate.Height = 33;
-            this.hijos_grid.Size = new System.Drawing.Size(953, 264);
-            this.hijos_grid.TabIndex = 66;
-            this.hijos_grid.Visible = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -2119,6 +2131,52 @@
             this.nuevo_registro_btn.TabIndex = 74;
             this.nuevo_registro_btn.UseVisualStyleBackColor = true;
             this.nuevo_registro_btn.Click += new System.EventHandler(this.nuevo_registro_btn_Click);
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.label54.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label54.Location = new System.Drawing.Point(186, 762);
+            this.label54.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(238, 45);
+            this.label54.TabIndex = 68;
+            this.label54.Text = "Modificar Hijo";
+            // 
+            // modificarHijo_btn
+            // 
+            this.modificarHijo_btn.Enabled = false;
+            this.modificarHijo_btn.Location = new System.Drawing.Point(430, 757);
+            this.modificarHijo_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.modificarHijo_btn.Name = "modificarHijo_btn";
+            this.modificarHijo_btn.Size = new System.Drawing.Size(128, 50);
+            this.modificarHijo_btn.TabIndex = 67;
+            this.modificarHijo_btn.UseVisualStyleBackColor = true;
+            this.modificarHijo_btn.Click += new System.EventHandler(this.moficiarHijo_btn_Click);
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.label59.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label59.Location = new System.Drawing.Point(847, 762);
+            this.label59.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(213, 45);
+            this.label59.TabIndex = 70;
+            this.label59.Text = "Eliminar Hijo";
+            // 
+            // eliminarHijo_btn
+            // 
+            this.eliminarHijo_btn.Enabled = false;
+            this.eliminarHijo_btn.Location = new System.Drawing.Point(1091, 757);
+            this.eliminarHijo_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.eliminarHijo_btn.Name = "eliminarHijo_btn";
+            this.eliminarHijo_btn.Size = new System.Drawing.Size(128, 50);
+            this.eliminarHijo_btn.TabIndex = 69;
+            this.eliminarHijo_btn.UseVisualStyleBackColor = true;
+            this.eliminarHijo_btn.Click += new System.EventHandler(this.eliminarHijo_btn_Click);
             // 
             // Persona
             // 
@@ -2161,12 +2219,12 @@
             this.PerdidaAuditiva_tab.PerformLayout();
             this.Familia_tab.ResumeLayout(false);
             this.Familia_tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hijos_grid)).EndInit();
             this.BuscarRegistro_tab.ResumeLayout(false);
             this.BuscarRegistro_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hijos_grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2324,6 +2382,10 @@
         private System.Windows.Forms.DataGridView hijos_grid;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button nuevo_registro_btn;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Button eliminarHijo_btn;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Button modificarHijo_btn;
 
     }
 }

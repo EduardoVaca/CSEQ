@@ -16,6 +16,7 @@ namespace CSEQ
         int rol;
         String CURP_selected;
         Boolean registro_persona = false;
+        int ID_hijoSelected;
 
         public Persona(int rol)
         {
@@ -121,6 +122,8 @@ namespace CSEQ
             String CURP;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
+                registro_persona = true;
+                hijos_grid.Visible = true;
                 eliminar_btn.Enabled = true;
                 modificar_btn.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -163,7 +166,8 @@ namespace CSEQ
                 
                 Util.showData(this, sqlActiveRow);
                 nombre_selected = Nombre_txt.Text;
-                CURP_selected = CURP_txt.Text;                
+                CURP_selected = CURP_txt.Text;
+                Util.fillGrid(hijos_grid, "BusquedaEnHijo", CURP_selected);
 
                 //Se vuelven a llenar los comboBox DEPENDIENTES para que no sean valores nulos
                 DataTable direccionPersona = new DataTable();
@@ -187,7 +191,6 @@ namespace CSEQ
                 }                                
             }
         }
-    
 
         //Procedimiento unicamente para registrar hijo y mostrar en el grid los hijos de esa persona
         private void registraHijo_button_Click(object sender, EventArgs e)
@@ -291,7 +294,7 @@ namespace CSEQ
                 nombreHijo_txt.Enabled = true;
                 fechaNacimientoHijo.Enabled = true;
                 sordoHijo_check.Enabled = true;
-                registraHijo_button.Enabled = true;
+                registraHijo_button.Enabled = true;                
             }
         }
 
@@ -545,6 +548,48 @@ namespace CSEQ
             {
                 Util.clear(this);
             }            
+        }
+
+        //Metodo que rellena los campos asociados al hijo seleccionado en el grid
+        private void hijos_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            ID_hijoSelected = Int16.Parse(hijos_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
+            
+            String MySqlActiveRow = "CALL mostrarHijo(" + ID_hijoSelected + ");";
+            Util.showData(this, MySqlActiveRow);
+            tieneHijo_check.Checked = true;
+            modificarHijo_btn.Enabled = true;
+            eliminarHijo_btn.Enabled = true;
+        }
+
+        //Metodo para modificar el hijo seleccionado del grid, toma los nuevo valores y se basa en el ID del hijo
+        // para modificarlo
+        private void moficiarHijo_btn_Click(object sender, EventArgs e)
+        {
+            String nombreHijoP = nombreHijo_txt.Text;
+            Boolean esSordoP = sordoHijo_check.Checked;
+            String fechaNacP = fechaNacimientoHijo.Value.ToShortDateString();
+
+            if (Util.executeStoredProcedure("modificarHijo", ID_hijoSelected, nombreHijoP, fechaNacP, esSordoP))
+            {
+                MessageBox.Show("El hijo se ha modificado con exito!");
+            }
+        }
+
+        //Metodo que elimina el hijo seleccionado del grid, se pasa su ID como parametro para eliminarlo
+        private void eliminarHijo_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+
+            respuesta = MessageBox.Show("¿Seguro desea eliminar al hijo: " + nombreHijo_txt.Text + "?",
+                                           "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarHijo", ID_hijoSelected))
+                {
+                    MessageBox.Show("El hijo se ha eliminado con exito!");
+                }
+            }
         }
 
     }
