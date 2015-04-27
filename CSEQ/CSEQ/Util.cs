@@ -432,6 +432,7 @@ namespace CSEQ
 
         public static void graphData(ZedGraphControl zgc, String query,String tipo)
         {
+            
             ZedGraph.PointPairList list = new PointPairList();
 
             Color[] colores = {Color.AliceBlue, Color.AntiqueWhite, Color.Aqua,
@@ -469,6 +470,8 @@ namespace CSEQ
                 graph.XAxis.Scale.TextLabels = nombres;
                 graph.XAxis.Scale.FontSpec.Size = 10.0F;
                 graph.XAxis.Scale.FontSpec.Angle = 90;
+                graph.YAxis.IsVisible = true;
+                graph.XAxis.IsVisible = true;
                 // Llenamos la grafica
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
@@ -478,7 +481,7 @@ namespace CSEQ
                     //Labels de numero
                     TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(),x,y+.1);
                     barLabel.FontSpec.Border.IsVisible = false;
-                    barLabel.FontSpec.Fill.IsVisible = false;
+                    barLabel.FontSpec.Fill.IsVisible = true;
                     list.Add(x, y, z);
                     graph.GraphObjList.Add(barLabel);
                 }
@@ -489,30 +492,34 @@ namespace CSEQ
                 bar.Bar.Fill.RangeMax = 4;
 
                 zgc.AxisChange();
+                zgc.Refresh();
             }
 
             if (dt != null && tipo=="Pay")
             {
                 graph.Title.Text = dt.TableName;
                 graph.XAxis.Title.Text = dt.Columns[0].ColumnName;
-                graph.YAxis.Title.Text = dt.Columns[1].ColumnName;
+                graph.YAxis.Title.Text = " " ;
                 String[] nombres = new String[dt.Rows.Count];
                 double[] valores = new double[dt.Rows.Count];
                 // Obtenemos los encabezados de las columnas
                 for (int i = 0; i < dt.Rows.Count; i++)
-                    nombres[i] = dt.Rows[i].ItemArray[0].ToString();
+                    nombres[i] = "-";
                 // Configuramos la gráfica
                 graph.XAxis.MajorTic.IsBetweenLabels = true;
                 graph.XAxis.Type = AxisType.Text;
                 graph.XAxis.Scale.TextLabels = nombres;
                 graph.XAxis.Scale.FontSpec.Size = 10.0F;
                 graph.XAxis.Scale.FontSpec.Angle = 90;
+                graph.YAxis.IsVisible = false;
+                //graph.XAxis.IsVisible = false;
                 // Llenamos la grafica
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     double x = i + 1;
                     double y = Double.Parse(dt.Rows[i].ItemArray[1].ToString());
                     //Labels de numero
+                    
                     TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(), x, y + .5);
                     barLabel.FontSpec.Border.IsVisible = false;
                     barLabel.FontSpec.Fill.IsVisible = false;
@@ -520,7 +527,7 @@ namespace CSEQ
                     graph.GraphObjList.Add(barLabel);
                 }
 
-                zgc.AxisChange();
+                //zgc.AxisChange();
             }
 
             zgc.Refresh();
