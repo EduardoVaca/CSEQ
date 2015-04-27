@@ -140,12 +140,14 @@ namespace CSEQ
                 {
                     sqlActiveRow = "CALL mostrarPersonaSinAparato('" + nombre + "','" + CURP + "'," + censoInput + ");";
                     noTieneAparato_check.Checked = true;
+                    sinEmpleo_check.Checked = false;
                     limpiarFormaDeAparatoAuditivo();
                 }                    
                 else if(tiene_aparato)
                 {
                     sqlActiveRow = "CALL mostrarPersonaSinEmpleo('" + nombre + "','" + CURP + "'," + censoInput + ");";
                     sinEmpleo_check.Checked = true;
+                    noTieneAparato_check.Checked = false;
                     limpiarFormDeEmpleo();
                 }
                 else
