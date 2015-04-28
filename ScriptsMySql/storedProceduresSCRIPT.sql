@@ -438,11 +438,24 @@ DELIMITER //
 CREATE PROCEDURE busquedaEnHijo
 (IN CURPinput CHAR(18))
 BEGIN
-	SELECT nombre as Nombre, sordo as Sordo, CURP as CURP_Padre
+	SELECT nombre as Nombre, sordo as Sordo, CURP as CURP_Padre, ID_Hijo as ID
     FROM Hijo
     WHERE CURP = CURPinput;
 END //
 DELIMITER ;
+
+
+-- Mostrar Hijo
+DELIMITER //
+CREATE PROCEDURE mostrarHijo
+(IN ID_hijoInput INT)
+BEGIN
+	SELECT nombre as nombreHijo, sordo as SordoHijo
+    FROM Hijo
+    WHERE ID_hijo = ID_hijoInput;
+END //
+DELIMITER ;
+
 -- ****************************************************************************************************************8
 
 -- ELIMINACIONES/ DELETIONS
@@ -517,6 +530,17 @@ BEGIN
 	DELETE FROM Sueldo WHERE ID_sueldo = IDsueldoObtenido;
 END //
 DELIMITER ;	
+
+
+-- Eliminar HIJO
+DELIMITER //
+CREATE PROCEDURE eliminarHijo
+(IN ID_hijoInput INT)
+BEGIN 
+	DELETE FROM Hijo WHERE ID_hijo = ID_hijoInput;
+END //
+DELIMITER ;
+
 
 -- eliminar AREATRABAJO
 DELIMITER //
@@ -689,6 +713,17 @@ BEGIN
 	UPDATE Sueldo SET minimo = minimoNuevo, maximo = maximoNuevo WHERE minimo = minimoS AND maximo = maximoS;
 END //
 DELIMITER ;	
+
+-- Modificar HIJO
+DELIMITER // 
+CREATE PROCEDURE modificarHijo
+(IN ID_hijoInput INT, nombreInput VARCHAR(80), fecha DATETIME, esSordo BOOLEAN)	
+BEGIN
+	UPDATE Hijo SET nombre = nombreInput, fecha_nacimiento = fecha, sordo = esSordo
+    WHERE ID_hijo = ID_hijoInput;
+END // 
+DELIMITER ;
+
 
 -- modificar AREATRABAJO
 DELIMITER //
