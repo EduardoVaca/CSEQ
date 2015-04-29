@@ -37,27 +37,16 @@ namespace CSEQ
 
         private void CrearAparatoAuditivo_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
 
             if (rol == 1)
             {
                 imagen.Visible = false;
                 Busqueda_grp.Visible = true;
-                modificar_btn.Visible = true;
-                eliminar_btn.Visible = true;
-            }
-        }
-
-        //Metodo donde se agrega el registro a la base de datos
-        private void Guardar_txt_Click(object sender, EventArgs e)
-        {            
-            String mTipo = tipo_txt.Text;
-            int mID_marca = Int32.Parse(ID_marca.SelectedValue.ToString());
-            
-            if (Util.executeStoredProcedure("registrarAparatoAuditivo", mTipo, mID_marca))
-            {
-                MessageBox.Show("El Aparato Auditivo se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
+                modificar_pb.Visible = true;
+                eliminar_pb.Visible = true;
             }
         }
 
@@ -73,8 +62,8 @@ namespace CSEQ
 
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {                
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 tipo_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 nombreMarca_selected = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();               
                 String sqlActiveRow = "SELECT * FROM AparatoAuditivo a, Marca m WHERE ";
@@ -87,39 +76,6 @@ namespace CSEQ
             }
         }
 
-        private void eliminar_btn_Click(object sender, EventArgs e)
-        {
-            String tipo_selected = tipo_txt.Text;                                 
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Eliminar '" + tipo_selected + "', marca: " + nombreMarca_selected + "?", 
-                                        "Confirmación de eliminación", MessageBoxButtons.YesNo);
-
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("eliminarAparatoAuditivo", tipo_selected, ID_marca_selected))
-                {
-                    MessageBox.Show("El aparato: '" + tipo_selected + "' se elimino con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
-                }
-            }           
-        }
-
-        private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            String nombreNuevo = tipo_txt.Text;
-            int IDnuevo=Int32.Parse(ID_marca.SelectedValue.ToString());
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar Aparato Auditivo: " + nombreMarca_selected + "'?", "Confirmacion de modificar",
-                                        MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("modificarAparatoAuditivo", nombreMarca_selected,mID_marca, nombreNuevo,IDnuevo))
-                {
-                    MessageBox.Show("El Aparato Auditivo se modifico con exito");
-                    Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
-                }
-            }
-        }
 
         private void logout_Click(object sender, EventArgs e)
         {
@@ -131,6 +87,62 @@ namespace CSEQ
                 this.Close();
                 Application.Restart();
             }
+        }
+
+        private void Atras_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(Atras_picture);
+        }
+
+        private void Atras_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(Atras_picture);
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String mTipo = tipo_txt.Text;
+            int mID_marca = Int32.Parse(ID_marca.SelectedValue.ToString());
+
+            if (Util.executeStoredProcedure("registrarAparatoAuditivo", mTipo, mID_marca))
+            {
+                MessageBox.Show("El Aparato Auditivo se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
+            }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = tipo_txt.Text;
+            int IDnuevo = Int32.Parse(ID_marca.SelectedValue.ToString());
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Aparato Auditivo: " + nombreMarca_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarAparatoAuditivo", nombreMarca_selected, mID_marca, nombreNuevo, IDnuevo))
+                {
+                    MessageBox.Show("El Aparato Auditivo se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
+                }
+            }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            String tipo_selected = tipo_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Eliminar '" + tipo_selected + "', marca: " + nombreMarca_selected + "?",
+                                        "Confirmación de eliminación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarAparatoAuditivo", tipo_selected, ID_marca_selected))
+                {
+                    MessageBox.Show("El aparato: '" + tipo_selected + "' se elimino con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
+                }
+            } 
         }
 
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_consultas));
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.ConsultaRedactada_label = new System.Windows.Forms.Label();
@@ -46,6 +47,8 @@
             this.empleo_combo = new System.Windows.Forms.ComboBox();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
@@ -298,6 +301,7 @@
             this.Name = "Menu_consultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_consultas";
+            this.Load += new System.EventHandler(this.Menu_consultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
@@ -325,5 +329,7 @@
         private System.Windows.Forms.ComboBox empleo_combo;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
     }
 }

@@ -52,8 +52,8 @@ namespace CSEQ
             {
                 imagen.Visible = false;
                 Busqueda_grp.Visible = true;
-                modificar_btn.Visible = true;
-                eliminar_btn.Visible = true;
+                modificar_pb.Visible = true;
+                eliminar_pb.Visible = true;
             }
 
         }
@@ -109,8 +109,8 @@ namespace CSEQ
             String correo;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 correo = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM InstitucionEducativa i, LocalizaInstitucionEducativa l, Colonia c, Municipio m WHERE ";
@@ -188,7 +188,87 @@ namespace CSEQ
 
         private void nombre_txt_TextChanged(object sender, EventArgs e)
         {
-            guardar_btn.Enabled = true;
+            guardar_pb.Enabled = true;
+        }
+
+        private void back_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(back_picture);
+        }
+
+        private void back_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(back_picture);
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
+        }
+
+        private void logout_MouseHover(object sender, EventArgs e)
+        {
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar Sesión");
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String iNombre = nombre_txt.Text;
+            String iTelefono = telefono_txt.Text;
+            String iCorreo = correo_txt.Text;
+            String iCalle = calle_txt.Text;
+            int iID_colonia = Int32.Parse(ID_colonia.SelectedValue.ToString());
+            Boolean iPrivada = privada_check.Checked;
+            Boolean iEspecializada = especializada_check.Checked;
+
+            if (iNombre.Length > 0)
+                if (Util.executeStoredProcedure("registrarInstitucionEducativa", iNombre, iCalle, iTelefono, iCorreo, iPrivada, iEspecializada, iID_colonia))
+                {
+                    MessageBox.Show("La Institucion Educativa se registro con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", "%");
+                }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            String calleNuevo = calle_txt.Text;
+            String telefonoNuevo = telefono_txt.Text;
+            String correoNuevo = correo_txt.Text;
+            bool privadaNuevo = privada_check.Checked;
+            bool especializadaNuevo = especializada_check.Checked;
+            int IDcoloniaNuevo = Int32.Parse(ID_colonia.SelectedValue.ToString());
+
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Institucion: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarInstitucionEducativa", nombre_selected, nombreNuevo,
+                                               calleNuevo, telefonoNuevo, correoNuevo, privadaNuevo, especializadaNuevo,
+                                               IDcoloniaNuevo))
+                {
+                    MessageBox.Show("La institucion se ha modificado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", "%");
+                }
+            }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar Institucion: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarInstitucionEducativa", nombre_selected))
+                {
+                    MessageBox.Show("La institucion se ha eliminado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", "%");
+                }
+            }
         }
     }
 }

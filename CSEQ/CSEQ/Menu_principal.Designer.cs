@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_principal));
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.registros_btn = new System.Windows.Forms.Button();
-            this.consultas_btn = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.registros_pb = new System.Windows.Forms.PictureBox();
+            this.consultas_pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registros_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultas_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // x_picture
@@ -52,6 +57,7 @@
             this.x_picture.TabIndex = 7;
             this.x_picture.TabStop = false;
             this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
+            this.x_picture.MouseHover += new System.EventHandler(this.x_picture_MouseHover);
             // 
             // label1
             // 
@@ -59,7 +65,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(602, 433);
+            this.label1.Location = new System.Drawing.Point(334, 561);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 78);
@@ -72,47 +78,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(602, 563);
+            this.label2.Location = new System.Drawing.Point(1051, 561);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(296, 78);
             this.label2.TabIndex = 9;
             this.label2.Text = "Consultas";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(1226, 962);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(342, 29);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "ROMPIENDO PARADIGMAS";
-            // 
-            // registros_btn
-            // 
-            this.registros_btn.Location = new System.Drawing.Point(918, 458);
-            this.registros_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.registros_btn.Name = "registros_btn";
-            this.registros_btn.Size = new System.Drawing.Size(84, 42);
-            this.registros_btn.TabIndex = 11;
-            this.registros_btn.Text = "Ir";
-            this.registros_btn.UseVisualStyleBackColor = true;
-            this.registros_btn.Click += new System.EventHandler(this.registros_btn_Click);
-            // 
-            // consultas_btn
-            // 
-            this.consultas_btn.Location = new System.Drawing.Point(918, 588);
-            this.consultas_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.consultas_btn.Name = "consultas_btn";
-            this.consultas_btn.Size = new System.Drawing.Size(84, 42);
-            this.consultas_btn.TabIndex = 12;
-            this.consultas_btn.Text = "Ir";
-            this.consultas_btn.UseVisualStyleBackColor = true;
-            this.consultas_btn.Click += new System.EventHandler(this.consultas_btn_Click);
             // 
             // logout
             // 
@@ -126,6 +97,44 @@
             this.logout.TabIndex = 13;
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
+            this.logout.MouseHover += new System.EventHandler(this.logout_MouseHover);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(1069, 972);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
+            // 
+            // registros_pb
+            // 
+            this.registros_pb.BackColor = System.Drawing.Color.Transparent;
+            this.registros_pb.Image = global::CSEQ.Properties.Resources.Registros;
+            this.registros_pb.Location = new System.Drawing.Point(374, 311);
+            this.registros_pb.Name = "registros_pb";
+            this.registros_pb.Size = new System.Drawing.Size(207, 235);
+            this.registros_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.registros_pb.TabIndex = 28;
+            this.registros_pb.TabStop = false;
+            this.registros_pb.Click += new System.EventHandler(this.registros_pb_Click);
+            // 
+            // consultas_pb
+            // 
+            this.consultas_pb.BackColor = System.Drawing.Color.Transparent;
+            this.consultas_pb.Image = global::CSEQ.Properties.Resources.Consultas;
+            this.consultas_pb.Location = new System.Drawing.Point(1086, 311);
+            this.consultas_pb.Name = "consultas_pb";
+            this.consultas_pb.Size = new System.Drawing.Size(224, 235);
+            this.consultas_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.consultas_pb.TabIndex = 29;
+            this.consultas_pb.TabStop = false;
+            this.consultas_pb.Click += new System.EventHandler(this.consultas_pb_Click);
             // 
             // Menu_principal
             // 
@@ -136,10 +145,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1598, 1010);
+            this.Controls.Add(this.consultas_pb);
+            this.Controls.Add(this.registros_pb);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.logout);
-            this.Controls.Add(this.consultas_btn);
-            this.Controls.Add(this.registros_btn);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.x_picture);
@@ -151,6 +160,8 @@
             this.Text = "Menu_principal";
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registros_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultas_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,9 +172,11 @@
         private System.Windows.Forms.PictureBox x_picture;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button registros_btn;
-        private System.Windows.Forms.Button consultas_btn;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
+        private System.Windows.Forms.PictureBox registros_pb;
+        private System.Windows.Forms.PictureBox consultas_pb;
     }
 }

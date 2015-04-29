@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lista_registros));
-            this.label3 = new System.Windows.Forms.Label();
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.persona_lb = new System.Windows.Forms.Label();
@@ -70,6 +70,9 @@
             this.areaTrabajo_press = new System.Windows.Forms.PictureBox();
             this.usuario_press = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colonia_pb)).BeginInit();
@@ -98,19 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuario_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(1212, 1025);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(342, 29);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "ROMPIENDO PARADIGMAS";
             // 
             // x_picture
             // 
@@ -648,6 +638,19 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(1035, 1039);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.TabIndex = 68;
+            this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
+            // 
             // Lista_registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -657,6 +660,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1092);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.usuario_pb);
             this.Controls.Add(this.areaTrabajo_pb);
@@ -672,7 +676,6 @@
             this.Controls.Add(this.colonia_pb);
             this.Controls.Add(this.titulo);
             this.Controls.Add(this.back_picture);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.x_picture);
             this.Controls.Add(this.persona_press);
             this.Controls.Add(this.colonia_press);
@@ -739,7 +742,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox x_picture;
         private System.Windows.Forms.PictureBox back_picture;
         private System.Windows.Forms.Label persona_lb;
@@ -780,5 +782,8 @@
         private System.Windows.Forms.PictureBox areaTrabajo_press;
         private System.Windows.Forms.PictureBox usuario_press;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
     }
 }

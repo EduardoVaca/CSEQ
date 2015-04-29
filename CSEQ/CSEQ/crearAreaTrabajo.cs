@@ -31,17 +31,6 @@ namespace CSEQ
             this.Close();
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
-
-        private void guardar_btn_Click(object sender, EventArgs e)
-        {
-            String aNombre = nombreArea_txt.Text;
-
-            if (Util.executeStoredProcedure("registrarAreaTrabajo", aNombre))
-            {
-                MessageBox.Show("Area de Trabajo se guardo con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
-            }
-        }
         
 
         private void Buscar_Click(object sender, EventArgs e)
@@ -55,8 +44,8 @@ namespace CSEQ
         {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM AreaTrabajo WHERE ";
                 sqlActiveRow += " nombre= '" + nombre_selected + "';";
@@ -64,22 +53,53 @@ namespace CSEQ
             }
         }
 
-        private void eliminar_btn_Click(object sender, EventArgs e)
+        private void crearAreaTrabajo_Load(object sender, EventArgs e)
         {
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea eliminar area: '" + nombre_selected + "'?", "Confirmacion de Eliminar",
-                                        MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            salir_tt.SetToolTip(close_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+            if (rol == 1)
             {
-                if (Util.executeStoredProcedure("eliminarAreaTrabajo", nombre_selected))
-                {
-                    MessageBox.Show("El Area de Trabajo se ha elimnado con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
-                }
+                imagen.Visible = false;
+                Busqueda_grp.Visible = true;
+                eliminar_pb.Visible = true;
+                modificar_pb.Visible = true;
             }
         }
 
-        private void modificar_btn_Click(object sender, EventArgs e)
+        private void logout_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                Application.Restart();
+            }
+        }
+
+        private void atras_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(atras_picture);
+        }
+
+        private void atras_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(atras_picture);
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String aNombre = nombreArea_txt.Text;
+
+            if (Util.executeStoredProcedure("registrarAreaTrabajo", aNombre))
+            {
+                MessageBox.Show("Area de Trabajo se guardo con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
+            }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
         {
             String nombreNuevo = nombreArea_txt.Text;
             DialogResult respuesta;
@@ -95,26 +115,18 @@ namespace CSEQ
             }
         }
 
-        private void crearAreaTrabajo_Load(object sender, EventArgs e)
-        {
-            if (rol == 1)
-            {
-                imagen.Visible = false;
-                Busqueda_grp.Visible = true;
-                eliminar_btn.Visible = true;
-                modificar_btn.Visible = true;
-            }
-        }
-
-        private void logout_Click(object sender, EventArgs e)
+        private void eliminar_pb_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
-
+            respuesta = MessageBox.Show("¿Desea eliminar area: '" + nombre_selected + "'?", "Confirmacion de Eliminar",
+                                        MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
-                Application.Restart();
+                if (Util.executeStoredProcedure("eliminarAreaTrabajo", nombre_selected))
+                {
+                    MessageBox.Show("El Area de Trabajo se ha elimnado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
+                }
             }
         }
     }

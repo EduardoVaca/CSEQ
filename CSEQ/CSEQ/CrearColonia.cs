@@ -36,6 +36,8 @@ namespace CSEQ
 
         private void CrearColonia_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado;");
             int id_estado = 22;
             ID_estado.SelectedIndex = id_estado - 1;
@@ -46,8 +48,8 @@ namespace CSEQ
             {
                 imagen.Visible = false;
                 Busqueda_grp.Visible = true;
-                modificar_btn.Visible = true;
-                eliminar_btn.Visible = true;
+                modificar_pb.Visible = true;
+                eliminar_pb.Visible = true;
             }
 
         }
@@ -63,22 +65,6 @@ namespace CSEQ
         }
 
         /*------------------------------------------------------------------------------------*/
-        private void Guardar_Click(object sender, EventArgs e)
-        {
-            String cNombre = nombre_txt.Text;
-            int cID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
-            String cDelegacion = delegacion_txt.Text;
-            if (cDelegacion == "")
-                cDelegacion = "null";
-
-            if(cNombre.Length > 0)
-                if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_municipio, cDelegacion))
-                {
-                    MessageBox.Show("La Colonia se ha registrado con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
-                }
-            //Falta checar duda de atributos en nulo
-        }
 
         private void Buscar_Click(object sender, EventArgs e)
         {
@@ -91,8 +77,8 @@ namespace CSEQ
         {
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT DISTINCT * FROM Colonia c, Estado e, Municipio m WHERE ";
                 sqlActiveRow += " c.nombre= '" + nombre_selected + "' AND c.ID_municipio=m.ID_municipio AND m.ID_estado=e.ID_estado;";
@@ -105,44 +91,6 @@ namespace CSEQ
             }
         }
 
-        private void modificar_btn_Click(object sender, EventArgs e)
-        {
-
-            String nombreNuevo = nombre_txt.Text;
-            int ID_nuevo = Int32.Parse(ID_municipio.SelectedValue.ToString());
-            String delegacionNuevo = delegacion_txt.Text;
-            if (delegacionNuevo == "")
-                delegacionNuevo = "null";
-
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar la colonia: " + nombre_selected + "'?", "Confirmacion de modificar",
-                                        MessageBoxButtons.YesNo);
-            if(nombreNuevo.Length > 0)
-                if (respuesta == System.Windows.Forms.DialogResult.Yes)
-                {
-                    if (Util.executeStoredProcedure("modificarColonia", nombre_selected, ID_selected, nombreNuevo, ID_nuevo, delegacionNuevo))
-                    {
-                        MessageBox.Show("La colonia se modifico con exito");
-                        Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
-                    }
-                }
-        }
-
-        private void eliminar_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea eliminar colonia:'" + nombre_selected + "'?", "Confirmacion de Eliminar",
-                                        MessageBoxButtons.YesNo);
-
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("eliminarColonia", nombre_selected, idMunicpio))
-                {
-                    MessageBox.Show("La colonia se elimino con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
-                }
-            }
-        }
 
         private void logout_Click(object sender, EventArgs e)
         {
@@ -158,7 +106,71 @@ namespace CSEQ
 
         private void nombre_txt_TextChanged(object sender, EventArgs e)
         {
-            Guardar.Enabled = true;
+            guardar_pb.Enabled = true;
+        }
+
+        private void Atras_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(Atras);
+        }
+
+        private void Atras_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(Atras);
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String cNombre = nombre_txt.Text;
+            int cID_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
+            String cDelegacion = delegacion_txt.Text;
+            if (cDelegacion == "")
+                cDelegacion = "null";
+
+            if (cNombre.Length > 0)
+                if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_municipio, cDelegacion))
+                {
+                    MessageBox.Show("La Colonia se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
+                }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            int ID_nuevo = Int32.Parse(ID_municipio.SelectedValue.ToString());
+            String delegacionNuevo = delegacion_txt.Text;
+            if (delegacionNuevo == "")
+                delegacionNuevo = "null";
+
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar la colonia: " + nombre_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (nombreNuevo.Length > 0)
+                if (respuesta == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (Util.executeStoredProcedure("modificarColonia", nombre_selected, ID_selected, nombreNuevo, ID_nuevo, delegacionNuevo))
+                    {
+                        MessageBox.Show("La colonia se modifico con exito");
+                        Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
+                    }
+                }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar colonia:'" + nombre_selected + "'?", "Confirmacion de Eliminar",
+                                        MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarColonia", nombre_selected, idMunicpio))
+                {
+                    MessageBox.Show("La colonia se elimino con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
+                }
+            }
         }
 
     }

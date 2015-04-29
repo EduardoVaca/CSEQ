@@ -45,6 +45,8 @@
             this.tienen_radio = new System.Windows.Forms.RadioButton();
             this.noTienen_radio = new System.Windows.Forms.RadioButton();
             this.estadoSalud_combo = new System.Windows.Forms.ComboBox();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -88,6 +90,7 @@
             this.x_picture.TabIndex = 13;
             this.x_picture.TabStop = false;
             this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
+            this.x_picture.MouseHover += new System.EventHandler(this.x_picture_MouseHover);
             // 
             // titulo
             // 
@@ -176,6 +179,7 @@
             this.logout.TabIndex = 22;
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
+            this.logout.MouseHover += new System.EventHandler(this.logout_MouseHover);
             // 
             // auxiliarAuditivo_combo
             // 
@@ -311,5 +315,7 @@
         private System.Windows.Forms.RadioButton tienen_radio;
         private System.Windows.Forms.RadioButton noTienen_radio;
         private System.Windows.Forms.ComboBox estadoSalud_combo;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
     }
 }

@@ -42,29 +42,19 @@ namespace CSEQ
 
         private void CrearMunicipio_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
 
             if (rol == 1)
             {
                 imagen.Visible = false;
                 Busqueda_grp.Visible = true;
-                modificar_btn.Visible = true;
-                eliminar_btn.Visible = true;
+                modificar_pb.Visible = true;
+                eliminar_pb.Visible = true;
             }
         }
 
-        //Metodo donde se agrega el registro a la base de datos
-        private void guardar_txt_Click(object sender, EventArgs e)
-        {
-            int mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
-            String mNombre = nombre_txt.Text; 
-            if(mNombre.Length > 0)
-                if (Util.executeStoredProcedure("registrarMunicipio", mNombre, mID_estado))
-                {
-                    MessageBox.Show("El Municipio se ha registrado con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
-                }
-        }
 
         private void Buscar_Click(object sender, EventArgs e)
         {
@@ -78,8 +68,8 @@ namespace CSEQ
         {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Municipio WHERE ";
                 sqlActiveRow += " nombre= '" + nombre_selected + "';";
@@ -88,40 +78,6 @@ namespace CSEQ
             }
         }
 
-        private void eliminar_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea eliminar municipio: '" + nombre_selected + "'?", "Confirmacion de eliminar",
-                                            MessageBoxButtons.YesNo);       
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("eliminarMunicipio", nombre_selected, mID_estado))
-                {
-                    MessageBox.Show("El municipio se elimino con exito");
-                    Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
-                }               
-            }
-        }
-
-        private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            String nombreNuevo = nombre_txt.Text;
-            int ID_nuevo = Int32.Parse(ID_estado.SelectedValue.ToString());
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar el municipio: " + nombre_selected + "'?", "Confirmacion de modificar",
-                                        MessageBoxButtons.YesNo);
-            if(nombreNuevo.Length > 0)
-                if (respuesta == System.Windows.Forms.DialogResult.Yes)
-                {
-                    if (Util.executeStoredProcedure("modificarMunicipio", nombre_selected, mID_estado, nombreNuevo,ID_nuevo))
-                    {
-                        MessageBox.Show("El municipio se modifico con exito");
-                        Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
-                    }
-                }
-
-
-        }
 
         private void logout_Click(object sender, EventArgs e)
         {
@@ -137,7 +93,62 @@ namespace CSEQ
 
         private void nombre_txt_TextChanged(object sender, EventArgs e)
         {
-            guardar.Enabled = true;
+            guardar_pb.Enabled = true;
+        }
+
+        private void Atras_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(Atras_picture);
+        }
+
+        private void Atras_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(Atras_picture);
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            int mID_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
+            String mNombre = nombre_txt.Text;
+            if (mNombre.Length > 0)
+                if (Util.executeStoredProcedure("registrarMunicipio", mNombre, mID_estado))
+                {
+                    MessageBox.Show("El Municipio se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
+                }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            int ID_nuevo = Int32.Parse(ID_estado.SelectedValue.ToString());
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar el municipio: " + nombre_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (nombreNuevo.Length > 0)
+                if (respuesta == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (Util.executeStoredProcedure("modificarMunicipio", nombre_selected, mID_estado, nombreNuevo, ID_nuevo))
+                    {
+                        MessageBox.Show("El municipio se modifico con exito");
+                        Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
+                    }
+                }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar municipio: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                            MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarMunicipio", nombre_selected, mID_estado))
+                {
+                    MessageBox.Show("El municipio se elimino con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
+                }
+            }
         }
     }
 }

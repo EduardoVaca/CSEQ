@@ -180,15 +180,14 @@
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.guardar_btn = new System.Windows.Forms.Button();
-            this.label74 = new System.Windows.Forms.Label();
-            this.modificar_btn = new System.Windows.Forms.Button();
-            this.modificar_lb = new System.Windows.Forms.Label();
-            this.eliminar_lb = new System.Windows.Forms.Label();
-            this.eliminar_btn = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.nuevo_registro_btn = new System.Windows.Forms.Button();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.eliminar_pb = new System.Windows.Forms.PictureBox();
+            this.modificar_pb = new System.Windows.Forms.PictureBox();
+            this.guardar_pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -202,6 +201,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -2057,82 +2059,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // guardar_btn
-            // 
-            this.guardar_btn.Enabled = false;
-            this.guardar_btn.Location = new System.Drawing.Point(292, 1027);
-            this.guardar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.guardar_btn.Name = "guardar_btn";
-            this.guardar_btn.Size = new System.Drawing.Size(88, 38);
-            this.guardar_btn.TabIndex = 21;
-            this.guardar_btn.UseVisualStyleBackColor = true;
-            this.guardar_btn.Click += new System.EventHandler(this.guardar_btn_Click);
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.BackColor = System.Drawing.Color.Transparent;
-            this.label74.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.label74.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label74.Location = new System.Drawing.Point(132, 1021);
-            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(145, 45);
-            this.label74.TabIndex = 67;
-            this.label74.Text = "Guardar";
-            // 
-            // modificar_btn
-            // 
-            this.modificar_btn.Enabled = false;
-            this.modificar_btn.Location = new System.Drawing.Point(664, 1027);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(96, 38);
-            this.modificar_btn.TabIndex = 68;
-            this.modificar_btn.UseVisualStyleBackColor = true;
-            this.modificar_btn.Visible = false;
-            this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
-            // 
-            // modificar_lb
-            // 
-            this.modificar_lb.AutoSize = true;
-            this.modificar_lb.BackColor = System.Drawing.Color.Transparent;
-            this.modificar_lb.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.modificar_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.modificar_lb.Location = new System.Drawing.Point(488, 1021);
-            this.modificar_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.modificar_lb.Name = "modificar_lb";
-            this.modificar_lb.Size = new System.Drawing.Size(169, 45);
-            this.modificar_lb.TabIndex = 69;
-            this.modificar_lb.Text = "Modificar";
-            this.modificar_lb.Visible = false;
-            // 
-            // eliminar_lb
-            // 
-            this.eliminar_lb.AutoSize = true;
-            this.eliminar_lb.BackColor = System.Drawing.Color.Transparent;
-            this.eliminar_lb.Font = new System.Drawing.Font("Candara", 13.875F);
-            this.eliminar_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.eliminar_lb.Location = new System.Drawing.Point(840, 1021);
-            this.eliminar_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.eliminar_lb.Name = "eliminar_lb";
-            this.eliminar_lb.Size = new System.Drawing.Size(144, 45);
-            this.eliminar_lb.TabIndex = 71;
-            this.eliminar_lb.Text = "Eliminar";
-            this.eliminar_lb.Visible = false;
-            // 
-            // eliminar_btn
-            // 
-            this.eliminar_btn.Enabled = false;
-            this.eliminar_btn.Location = new System.Drawing.Point(1016, 1023);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(96, 38);
-            this.eliminar_btn.TabIndex = 70;
-            this.eliminar_btn.UseVisualStyleBackColor = true;
-            this.eliminar_btn.Visible = false;
-            this.eliminar_btn.Click += new System.EventHandler(this.eliminar_btn_Click);
-            // 
             // label81
             // 
             this.label81.AutoSize = true;
@@ -2168,6 +2094,47 @@
             this.nuevo_registro_btn.UseVisualStyleBackColor = true;
             this.nuevo_registro_btn.Click += new System.EventHandler(this.nuevo_registro_btn_Click);
             // 
+            // eliminar_pb
+            // 
+            this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.eliminar_pb.Enabled = false;
+            this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
+            this.eliminar_pb.Location = new System.Drawing.Point(1119, 1017);
+            this.eliminar_pb.Name = "eliminar_pb";
+            this.eliminar_pb.Size = new System.Drawing.Size(49, 59);
+            this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eliminar_pb.TabIndex = 77;
+            this.eliminar_pb.TabStop = false;
+            this.eliminar_pb.Visible = false;
+            this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
+            // 
+            // modificar_pb
+            // 
+            this.modificar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.modificar_pb.Enabled = false;
+            this.modificar_pb.Image = global::CSEQ.Properties.Resources.Editar;
+            this.modificar_pb.Location = new System.Drawing.Point(777, 1017);
+            this.modificar_pb.Name = "modificar_pb";
+            this.modificar_pb.Size = new System.Drawing.Size(42, 59);
+            this.modificar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modificar_pb.TabIndex = 76;
+            this.modificar_pb.TabStop = false;
+            this.modificar_pb.Visible = false;
+            this.modificar_pb.Click += new System.EventHandler(this.modificar_pb_Click);
+            // 
+            // guardar_pb
+            // 
+            this.guardar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.guardar_pb.Enabled = false;
+            this.guardar_pb.Image = global::CSEQ.Properties.Resources.Guardar;
+            this.guardar_pb.Location = new System.Drawing.Point(424, 1017);
+            this.guardar_pb.Name = "guardar_pb";
+            this.guardar_pb.Size = new System.Drawing.Size(57, 56);
+            this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guardar_pb.TabIndex = 75;
+            this.guardar_pb.TabStop = false;
+            this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -2178,14 +2145,11 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1616, 1077);
+            this.Controls.Add(this.eliminar_pb);
+            this.Controls.Add(this.modificar_pb);
+            this.Controls.Add(this.guardar_pb);
             this.Controls.Add(this.nuevo_registro_btn);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.eliminar_lb);
-            this.Controls.Add(this.eliminar_btn);
-            this.Controls.Add(this.modificar_lb);
-            this.Controls.Add(this.modificar_btn);
-            this.Controls.Add(this.label74);
-            this.Controls.Add(this.guardar_btn);
             this.Controls.Add(this.back_picture);
             this.Controls.Add(this.Persona_tabControl);
             this.DoubleBuffered = true;
@@ -2215,6 +2179,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2332,16 +2299,10 @@
         private System.Windows.Forms.CheckBox examen_audiometria_check;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Button guardar_btn;
-        private System.Windows.Forms.Label label74;
         private System.Windows.Forms.TabPage BuscarRegistro_tab;
         private System.Windows.Forms.DataGridView busqueda_grid;
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;
-        private System.Windows.Forms.Button modificar_btn;
-        private System.Windows.Forms.Label modificar_lb;
-        private System.Windows.Forms.Label eliminar_lb;
-        private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.TextBox calleEmpleo_txt;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.CheckBox interpretacion_LSM_check;
@@ -2375,6 +2336,11 @@
         private System.Windows.Forms.Button eliminarHijo_btn;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Button modificarHijo_btn;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
+        private System.Windows.Forms.PictureBox eliminar_pb;
+        private System.Windows.Forms.PictureBox modificar_pb;
+        private System.Windows.Forms.PictureBox guardar_pb;
 
     }
 }

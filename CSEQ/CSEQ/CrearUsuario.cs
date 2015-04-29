@@ -32,20 +32,9 @@ namespace CSEQ
 
         private void CrearUsuario_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_rol, "SELECT ID_rol, nombre FROM Rol");
-        }
-
-        private void Guardar_txt_Click(object sender, EventArgs e)
-        {
-            String loginU = login_txt.Text;
-            String passwordU = password_usuario_txt.Text;
-            int rolU = Int32.Parse(ID_rol.SelectedValue.ToString());
-
-            if (Util.executeStoredProcedure("registrarUsuario", loginU, passwordU, rolU))
-            {
-                MessageBox.Show("El usuario se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
-            }
         }
 
         private void Buscar_Click(object sender, EventArgs e)
@@ -59,8 +48,8 @@ namespace CSEQ
         {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Usuario u, TieneRol t WHERE u.login = '" + nombre + "'  AND u.login = t.login;";
                 Util.showData(this, sqlActiveRow);
@@ -68,22 +57,42 @@ namespace CSEQ
             }
         }
 
-        private void eliminar_btn_Click(object sender, EventArgs e)
+        private void logout_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea eliminar al usuario:'" + nombre + "'?", "Confirmacion de eliminar", MessageBoxButtons.YesNo);
+            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
 
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("eliminarUsuario", nombre))
-                {
-                    MessageBox.Show("Se elimino usuario con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
-                }
+                this.Close();
+                Application.Restart();
             }
         }
 
-        private void modificar_btn_Click(object sender, EventArgs e)
+        private void Atras_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(Atras_picture);
+        }
+
+        private void Atras_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(Atras_picture);
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String loginU = login_txt.Text;
+            String passwordU = password_usuario_txt.Text;
+            int rolU = Int32.Parse(ID_rol.SelectedValue.ToString());
+
+            if (Util.executeStoredProcedure("registrarUsuario", loginU, passwordU, rolU))
+            {
+                MessageBox.Show("El usuario se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
+            }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
         {
             String nombreNuevo = login_txt.Text;
             String nuevoPass = password_usuario_txt.Text;
@@ -101,15 +110,18 @@ namespace CSEQ
             }
         }
 
-        private void logout_Click(object sender, EventArgs e)
+        private void eliminar_pb_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo);
+            respuesta = MessageBox.Show("¿Desea eliminar al usuario:'" + nombre + "'?", "Confirmacion de eliminar", MessageBoxButtons.YesNo);
 
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
-                Application.Restart();
+                if (Util.executeStoredProcedure("eliminarUsuario", nombre))
+                {
+                    MessageBox.Show("Se elimino usuario con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
+                }
             }
         }
     }
