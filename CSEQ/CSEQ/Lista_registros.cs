@@ -404,6 +404,17 @@ namespace CSEQ
             minimizarIcono(usuario_pb, usuario_lb, usuarioX, terceraFilaY, 367, 594);
         }
 
+        private void back_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(back_picture);
+            //MessageBox.Show("Top: " + back_picture.Top.ToString() + " Left: " + back_picture.Left.ToString());
+        }
+
+        private void back_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(back_picture);
+        }
+
 
     }
 }

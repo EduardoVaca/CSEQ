@@ -551,7 +551,20 @@ namespace CSEQ
             zgc.Refresh();
         }
 
+        //Metodo para agrandar la imagen de "Atras" cada vez que el mouse este sobre ella
+        public static void agrandarIconoAtras(PictureBox pb)
+        {
+            pb.Top -= 3;
+            pb.Left -= 3;
+            pb.Size = new Size(40, 39);
+        }
 
+        public static void minimizarIconoAtras(PictureBox pb)
+        {
+            pb.Top = 7;
+            pb.Left = 6;
+            pb.Size = new Size(33, 32);
+        }
 
     }
 }

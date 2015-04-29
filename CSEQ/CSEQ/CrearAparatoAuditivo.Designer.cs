@@ -147,7 +147,7 @@
             // 
             this.Atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.Atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("Atras_picture.Image")));
-            this.Atras_picture.Location = new System.Drawing.Point(12, 937);
+            this.Atras_picture.Location = new System.Drawing.Point(15, 15);
             this.Atras_picture.Margin = new System.Windows.Forms.Padding(6);
             this.Atras_picture.Name = "Atras_picture";
             this.Atras_picture.Size = new System.Drawing.Size(60, 56);

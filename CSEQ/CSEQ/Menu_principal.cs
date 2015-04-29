@@ -35,8 +35,7 @@ namespace CSEQ
         {
             Menu_consultas Menu_consultas = new Menu_consultas(rol);
             this.Close();
-            Menu_consultas.Show();
-          
+            Menu_consultas.Show();             
         }
 
         private void logout_Click(object sender, EventArgs e)

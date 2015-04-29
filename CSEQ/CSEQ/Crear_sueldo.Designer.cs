@@ -119,7 +119,7 @@
             // 
             this.atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("atras_picture.Image")));
-            this.atras_picture.Location = new System.Drawing.Point(12, 937);
+            this.atras_picture.Location = new System.Drawing.Point(15, 15);
             this.atras_picture.Margin = new System.Windows.Forms.Padding(6);
             this.atras_picture.Name = "atras_picture";
             this.atras_picture.Size = new System.Drawing.Size(60, 56);
@@ -149,7 +149,7 @@
             this.minimo_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.minimo_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.minimo_txt.Name = "minimo_txt";
-            this.minimo_txt.Size = new System.Drawing.Size(196, 40);
+            this.minimo_txt.Size = new System.Drawing.Size(196, 47);
             this.minimo_txt.TabIndex = 16;
             // 
             // sueldo_label
@@ -173,7 +173,7 @@
             this.maximo_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.maximo_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.maximo_txt.Name = "maximo_txt";
-            this.maximo_txt.Size = new System.Drawing.Size(196, 40);
+            this.maximo_txt.Size = new System.Drawing.Size(196, 47);
             this.maximo_txt.TabIndex = 24;
             // 
             // eliminar_btn

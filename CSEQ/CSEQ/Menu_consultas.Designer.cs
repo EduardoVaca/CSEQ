@@ -45,6 +45,7 @@
             this.educacion_combo = new System.Windows.Forms.ComboBox();
             this.empleo_combo = new System.Windows.Forms.ComboBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
@@ -80,7 +81,7 @@
             // 
             this.back_picture.BackColor = System.Drawing.Color.Transparent;
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
-            this.back_picture.Location = new System.Drawing.Point(12, 937);
+            this.back_picture.Location = new System.Drawing.Point(15, 15);
             this.back_picture.Margin = new System.Windows.Forms.Padding(6);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(60, 56);
@@ -252,6 +253,19 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(1066, 960);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
+            // 
             // Menu_consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -261,6 +275,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1596, 998);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.empleo_combo);
             this.Controls.Add(this.educacion_combo);
@@ -309,5 +324,6 @@
         private System.Windows.Forms.ComboBox educacion_combo;
         private System.Windows.Forms.ComboBox empleo_combo;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.Label label5;
     }
 }

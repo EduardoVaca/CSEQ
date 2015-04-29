@@ -41,8 +41,13 @@ namespace CSEQ
         {            
             if (index == 0)
             {
-                titulo.Text = "Auxiliares Auditivos";
-                AuxiliaresAuditivos_grp.Visible = true;
+                titulo.Text = "Auxiliares Auditivos";                
+                auxiliarAuditivo_combo.Visible = true;
+            }
+            if (index == 1)
+            {
+                titulo.Text = "Estado de Salud";
+                estadoSalud_combo.Visible = true;
             }
 
             Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");
@@ -207,6 +212,16 @@ namespace CSEQ
                 this.Close();
                 Application.Restart();
             }
+        }
+
+        private void back_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(back_picture);
+        }
+
+        private void back_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(back_picture);
         }
     }
 }

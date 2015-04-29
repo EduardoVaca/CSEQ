@@ -95,7 +95,7 @@
             // 
             this.Atras.BackColor = System.Drawing.Color.Transparent;
             this.Atras.Image = ((System.Drawing.Image)(resources.GetObject("Atras.Image")));
-            this.Atras.Location = new System.Drawing.Point(6, 487);
+            this.Atras.Location = new System.Drawing.Point(12, 12);
             this.Atras.Name = "Atras";
             this.Atras.Size = new System.Drawing.Size(30, 29);
             this.Atras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -129,7 +129,7 @@
             // 
             this.back_picture.BackColor = System.Drawing.Color.Transparent;
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
-            this.back_picture.Location = new System.Drawing.Point(22, 998);
+            this.back_picture.Location = new System.Drawing.Point(13, 13);
             this.back_picture.Margin = new System.Windows.Forms.Padding(4);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(60, 56);
@@ -137,6 +137,8 @@
             this.back_picture.TabIndex = 13;
             this.back_picture.TabStop = false;
             this.back_picture.Click += new System.EventHandler(this.back_picture_Click);
+            this.back_picture.MouseLeave += new System.EventHandler(this.back_picture_MouseLeave);
+            this.back_picture.MouseHover += new System.EventHandler(this.back_picture_MouseHover);
             // 
             // persona_lb
             // 

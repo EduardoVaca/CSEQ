@@ -38,7 +38,6 @@
             this.guardar_btn = new System.Windows.Forms.Button();
             this.close_picture = new System.Windows.Forms.PictureBox();
             this.atras_picture = new System.Windows.Forms.PictureBox();
-            this.rompiendoParadigmas_label = new System.Windows.Forms.Label();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
             this.Busqueda_grp = new System.Windows.Forms.GroupBox();
@@ -123,7 +122,7 @@
             // 
             this.atras_picture.BackColor = System.Drawing.Color.Transparent;
             this.atras_picture.Image = ((System.Drawing.Image)(resources.GetObject("atras_picture.Image")));
-            this.atras_picture.Location = new System.Drawing.Point(18, 1018);
+            this.atras_picture.Location = new System.Drawing.Point(21, 20);
             this.atras_picture.Margin = new System.Windows.Forms.Padding(24, 23, 24, 23);
             this.atras_picture.Name = "atras_picture";
             this.atras_picture.Size = new System.Drawing.Size(60, 56);
@@ -131,19 +130,6 @@
             this.atras_picture.TabIndex = 31;
             this.atras_picture.TabStop = false;
             this.atras_picture.Click += new System.EventHandler(this.atras_picture_Click);
-            // 
-            // rompiendoParadigmas_label
-            // 
-            this.rompiendoParadigmas_label.AutoSize = true;
-            this.rompiendoParadigmas_label.BackColor = System.Drawing.Color.Transparent;
-            this.rompiendoParadigmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rompiendoParadigmas_label.ForeColor = System.Drawing.SystemColors.Control;
-            this.rompiendoParadigmas_label.Location = new System.Drawing.Point(100, 100);
-            this.rompiendoParadigmas_label.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.rompiendoParadigmas_label.Name = "rompiendoParadigmas_label";
-            this.rompiendoParadigmas_label.Size = new System.Drawing.Size(342, 29);
-            this.rompiendoParadigmas_label.TabIndex = 32;
-            this.rompiendoParadigmas_label.Text = "ROMPIENDO PARADIGMAS";
             // 
             // eliminar_btn
             // 
@@ -293,7 +279,6 @@
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.eliminar_btn);
             this.Controls.Add(this.modificar_btn);
-            this.Controls.Add(this.rompiendoParadigmas_label);
             this.Controls.Add(this.atras_picture);
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.guardar_btn);
@@ -328,7 +313,6 @@
         private System.Windows.Forms.Button guardar_btn;
         private System.Windows.Forms.PictureBox close_picture;
         private System.Windows.Forms.PictureBox atras_picture;
-        private System.Windows.Forms.Label rompiendoParadigmas_label;
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.GroupBox Busqueda_grp;
