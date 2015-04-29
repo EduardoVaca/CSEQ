@@ -50,5 +50,15 @@ namespace CSEQ
             }
         }
 
+        private void x_picture_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(x_picture, "Salir de la aplicación");
+        }
+
+        private void logout_MouseHover(object sender, EventArgs e)
+        {
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar Sesión");
+        }
+
     }
 }

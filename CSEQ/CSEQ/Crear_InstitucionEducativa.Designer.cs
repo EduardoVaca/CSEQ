@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crear_InstitucionEducativa));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -63,6 +64,8 @@
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
@@ -84,6 +87,7 @@
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // back_picture
             // 
@@ -473,6 +477,7 @@
             this.logout.TabIndex = 65;
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
+            this.logout.MouseHover += new System.EventHandler(this.logout_MouseHover);
             // 
             // label12
             // 
@@ -580,5 +585,7 @@
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
     }
 }

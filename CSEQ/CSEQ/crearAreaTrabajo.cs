@@ -97,6 +97,8 @@ namespace CSEQ
 
         private void crearAreaTrabajo_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(close_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             if (rol == 1)
             {
                 imagen.Visible = false;

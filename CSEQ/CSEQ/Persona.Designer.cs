@@ -189,6 +189,8 @@
             this.label81 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.nuevo_registro_btn = new System.Windows.Forms.Button();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -2375,6 +2377,8 @@
         private System.Windows.Forms.Button eliminarHijo_btn;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Button modificarHijo_btn;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
 
     }
 }

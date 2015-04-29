@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lista_registros));
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
@@ -70,7 +71,8 @@
             this.usuario_press = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colonia_pb)).BeginInit();
@@ -98,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.areaTrabajo_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuario_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // x_picture
@@ -643,23 +644,12 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1070, 1054);
+            this.label5.Location = new System.Drawing.Point(1035, 1039);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(517, 29);
             this.label5.TabIndex = 68;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::CSEQ.Properties.Resources.personaMini;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 168);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 175);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 69;
-            this.pictureBox1.TabStop = false;
             // 
             // Lista_registros
             // 
@@ -670,7 +660,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1092);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.usuario_pb);
@@ -746,7 +735,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.areaTrabajo_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuario_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -795,6 +783,7 @@
         private System.Windows.Forms.PictureBox usuario_press;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
     }
 }

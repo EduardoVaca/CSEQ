@@ -37,6 +37,8 @@ namespace CSEQ
 
         private void CrearAparatoAuditivo_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
 
             if (rol == 1)

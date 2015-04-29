@@ -223,5 +223,15 @@ namespace CSEQ
         {
             Util.minimizarIconoAtras(back_picture);
         }
+
+        private void x_picture_MouseHover(object sender, EventArgs e)
+        {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+        }
+
+        private void logout_MouseHover(object sender, EventArgs e)
+        {
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+        }
     }
 }

@@ -292,6 +292,17 @@ END //
 DELIMITER ;
 
 DELIMITER //
+CREATE PROCEDURE buscarPersona
+(IN variable VARCHAR(80))
+BEGIN 
+	SELECT p.nombre as Nombre, p.CURP as CURP, p.ID_censo as Censo, p.tiene_empleo as Empleo,
+    p.tiene_aparato as Aparato
+    FROM Persona p
+	WHERE (p.nombre LIKE variable);
+END //
+DELIMITER ;
+
+DELIMITER //
 CREATE PROCEDURE encuentraColonia
 (IN variable VARCHAR(80))
 BEGIN	

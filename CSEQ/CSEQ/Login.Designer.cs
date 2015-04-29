@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.mensaje = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +106,7 @@
             // 
             this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(1192, 21);
+            this.x_picture.Location = new System.Drawing.Point(1216, 14);
             this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
@@ -177,6 +179,7 @@
         private System.Windows.Forms.PictureBox x_picture;
         private System.Windows.Forms.Label mensaje;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip salir_tt;
     }
 }
 

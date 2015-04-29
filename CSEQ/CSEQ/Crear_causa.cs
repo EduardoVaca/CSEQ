@@ -130,6 +130,16 @@ namespace CSEQ
             Util.minimizarIconoAtras(atras_picture);
         }
 
+        private void close_picture_MouseHover(object sender, EventArgs e)
+        {
+            salir_tt.SetToolTip(close_picture, "Salir de la aplicación");
+        }
+
+        private void logout_MouseHover(object sender, EventArgs e)
+        {
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+        }
+
 
     }
 }

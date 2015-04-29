@@ -73,6 +73,8 @@ namespace CSEQ
                 eliminar_btn.Visible = true;
                 eliminar_lb.Visible = true;
             }
+            salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
         }
 
         /*--------------------------------------------------------------------------------

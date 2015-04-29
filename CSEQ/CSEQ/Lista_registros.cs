@@ -51,6 +51,8 @@ namespace CSEQ
 
         private void Lista_registros_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             if (rol == 1)
             {                
                 usuario_lb.Visible = true;

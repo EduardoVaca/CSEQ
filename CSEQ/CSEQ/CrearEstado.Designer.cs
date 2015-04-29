@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearEstado));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,6 +49,8 @@
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -352,5 +355,7 @@
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
     }
 }

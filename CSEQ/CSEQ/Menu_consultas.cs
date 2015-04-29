@@ -100,5 +100,11 @@ namespace CSEQ
                 Application.Restart();
             }
         }
+
+        private void Menu_consultas_Load(object sender, EventArgs e)
+        {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearColonia));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -56,6 +57,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.delegacion_txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -462,5 +465,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox delegacion_txt;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
     }
 }

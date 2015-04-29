@@ -36,6 +36,8 @@ namespace CSEQ
 
         private void CrearColonia_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado;");
             int id_estado = 22;
             ID_estado.SelectedIndex = id_estado - 1;

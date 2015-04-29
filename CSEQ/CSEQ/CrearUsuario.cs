@@ -32,6 +32,8 @@ namespace CSEQ
 
         private void CrearUsuario_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_rol, "SELECT ID_rol, nombre FROM Rol");
         }
 

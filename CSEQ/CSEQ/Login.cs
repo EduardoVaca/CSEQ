@@ -60,6 +60,7 @@ namespace CSEQ
         {
             Util.creaConexion("localhost", "CSEQ", "root", "");
             //Util.creaConexion("hcdesarrollo.com", "hcdesarr_chess", "hcdesarr_chess", "pruebachess2015");
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");            
             Util.clear(this);
         }
 

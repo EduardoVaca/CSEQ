@@ -42,6 +42,8 @@ namespace CSEQ
 
         private void CrearMunicipio_Load(object sender, EventArgs e)
         {
+            salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
+            cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
 
             if (rol == 1)

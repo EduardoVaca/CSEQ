@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_principal));
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.consultas_btn = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +55,7 @@
             this.x_picture.TabIndex = 7;
             this.x_picture.TabStop = false;
             this.x_picture.Click += new System.EventHandler(this.x_picture_Click);
+            this.x_picture.MouseHover += new System.EventHandler(this.x_picture_MouseHover);
             // 
             // label1
             // 
@@ -113,6 +117,7 @@
             this.logout.TabIndex = 13;
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
+            this.logout.MouseHover += new System.EventHandler(this.logout_MouseHover);
             // 
             // label5
             // 
@@ -165,5 +170,7 @@
         private System.Windows.Forms.Button consultas_btn;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip cerrarSesion_tt;
     }
 }
