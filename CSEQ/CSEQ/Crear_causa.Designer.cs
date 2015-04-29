@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crear_causa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guardar_btn = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.nombreCausa_label = new System.Windows.Forms.Label();
             this.causa_txt = new System.Windows.Forms.TextBox();
             this.causa_label = new System.Windows.Forms.Label();
@@ -44,13 +43,14 @@
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
-            this.eliminar_btn = new System.Windows.Forms.Button();
-            this.modificar_btn = new System.Windows.Forms.Button();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.guardar_pb = new System.Windows.Forms.PictureBox();
+            this.modificar_pb = new System.Windows.Forms.PictureBox();
+            this.eliminar_pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -58,21 +58,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guardar_btn
-            // 
-            this.guardar_btn.AutoSize = true;
-            this.guardar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.guardar_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.guardar_btn.Location = new System.Drawing.Point(50, 823);
-            this.guardar_btn.Margin = new System.Windows.Forms.Padding(6);
-            this.guardar_btn.Name = "guardar_btn";
-            this.guardar_btn.Size = new System.Drawing.Size(160, 62);
-            this.guardar_btn.TabIndex = 28;
-            this.guardar_btn.Text = "Guardar";
-            this.guardar_btn.UseVisualStyleBackColor = true;
-            this.guardar_btn.Click += new System.EventHandler(this.guardar_btn_Click);
             // 
             // nombreCausa_label
             // 
@@ -175,36 +164,36 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 9.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 9.75F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle11;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(12, 176);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 9.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.busqueda_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.busqueda_grid.Size = new System.Drawing.Size(684, 504);
             this.busqueda_grid.TabIndex = 56;
@@ -233,34 +222,6 @@
             this.busqueda_txt.Name = "busqueda_txt";
             this.busqueda_txt.Size = new System.Drawing.Size(588, 47);
             this.busqueda_txt.TabIndex = 8;
-            // 
-            // eliminar_btn
-            // 
-            this.eliminar_btn.Enabled = false;
-            this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.eliminar_btn.Location = new System.Drawing.Point(586, 823);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(160, 62);
-            this.eliminar_btn.TabIndex = 62;
-            this.eliminar_btn.Text = "Eliminar";
-            this.eliminar_btn.UseVisualStyleBackColor = true;
-            this.eliminar_btn.Visible = false;
-            this.eliminar_btn.Click += new System.EventHandler(this.eliminar_btn_Click);
-            // 
-            // modificar_btn
-            // 
-            this.modificar_btn.Enabled = false;
-            this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.modificar_btn.Location = new System.Drawing.Point(318, 823);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(160, 62);
-            this.modificar_btn.TabIndex = 61;
-            this.modificar_btn.Text = "Modificar";
-            this.modificar_btn.UseVisualStyleBackColor = true;
-            this.modificar_btn.Visible = false;
-            this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
             // imagen
             // 
@@ -300,6 +261,42 @@
             this.label5.TabIndex = 65;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 
+            // guardar_pb
+            // 
+            this.guardar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.guardar_pb.Image = global::CSEQ.Properties.Resources.Guardar;
+            this.guardar_pb.Location = new System.Drawing.Point(90, 710);
+            this.guardar_pb.Name = "guardar_pb";
+            this.guardar_pb.Size = new System.Drawing.Size(84, 79);
+            this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guardar_pb.TabIndex = 66;
+            this.guardar_pb.TabStop = false;
+            this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
+            // 
+            // modificar_pb
+            // 
+            this.modificar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.modificar_pb.Image = global::CSEQ.Properties.Resources.Editar;
+            this.modificar_pb.Location = new System.Drawing.Point(365, 697);
+            this.modificar_pb.Name = "modificar_pb";
+            this.modificar_pb.Size = new System.Drawing.Size(71, 92);
+            this.modificar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modificar_pb.TabIndex = 67;
+            this.modificar_pb.TabStop = false;
+            this.modificar_pb.Click += new System.EventHandler(this.modificar_pb_Click);
+            // 
+            // eliminar_pb
+            // 
+            this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
+            this.eliminar_pb.Location = new System.Drawing.Point(635, 697);
+            this.eliminar_pb.Name = "eliminar_pb";
+            this.eliminar_pb.Size = new System.Drawing.Size(79, 92);
+            this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eliminar_pb.TabIndex = 68;
+            this.eliminar_pb.TabStop = false;
+            this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
+            // 
             // Crear_causa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -310,14 +307,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1590, 1039);
+            this.Controls.Add(this.eliminar_pb);
+            this.Controls.Add(this.modificar_pb);
+            this.Controls.Add(this.guardar_pb);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.imagen);
-            this.Controls.Add(this.eliminar_btn);
-            this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guardar_btn);
             this.Controls.Add(this.nombreCausa_label);
             this.Controls.Add(this.atras_picture);
             this.Controls.Add(this.close_picture);
@@ -338,6 +335,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,7 +345,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button guardar_btn;
         private System.Windows.Forms.Label nombreCausa_label;
         private System.Windows.Forms.PictureBox atras_picture;
         private System.Windows.Forms.PictureBox close_picture;
@@ -356,12 +355,13 @@
         private System.Windows.Forms.DataGridView busqueda_grid;
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;
-        private System.Windows.Forms.Button eliminar_btn;
-        private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolTip cerrarSesion_tt;
         private System.Windows.Forms.ToolTip salir_tt;
+        private System.Windows.Forms.PictureBox guardar_pb;
+        private System.Windows.Forms.PictureBox modificar_pb;
+        private System.Windows.Forms.PictureBox eliminar_pb;
     }
 }

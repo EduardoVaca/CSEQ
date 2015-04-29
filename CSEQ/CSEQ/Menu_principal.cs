@@ -24,20 +24,6 @@ namespace CSEQ
             Application.Exit();
         }
 
-        private void registros_btn_Click(object sender, EventArgs e)
-        {
-            Lista_registros Lista_registros = new Lista_registros(rol);
-            this.Close();
-            Lista_registros.Show();
-        }
-
-        private void consultas_btn_Click(object sender, EventArgs e)
-        {
-            Menu_consultas Menu_consultas = new Menu_consultas(rol);
-            this.Close();
-            Menu_consultas.Show();             
-        }
-
         private void logout_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
@@ -58,6 +44,20 @@ namespace CSEQ
         private void logout_MouseHover(object sender, EventArgs e)
         {
             cerrarSesion_tt.SetToolTip(logout, "Cerrar Sesión");
+        }
+
+        private void registros_pb_Click(object sender, EventArgs e)
+        {
+            Lista_registros Lista_registros = new Lista_registros(rol);
+            this.Close();
+            Lista_registros.Show();
+        }
+
+        private void consultas_pb_Click(object sender, EventArgs e)
+        {
+            Menu_consultas Menu_consultas = new Menu_consultas(rol);
+            this.Close();
+            Menu_consultas.Show();
         }
 
     }

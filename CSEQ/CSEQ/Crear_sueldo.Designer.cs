@@ -56,6 +56,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
             this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
+            this.eliminar_pb = new System.Windows.Forms.PictureBox();
+            this.modificar_pb = new System.Windows.Forms.PictureBox();
+            this.guardar_pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -63,6 +66,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // guardar_btn
@@ -367,6 +373,39 @@
             this.label5.TabIndex = 76;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 
+            // eliminar_pb
+            // 
+            this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
+            this.eliminar_pb.Location = new System.Drawing.Point(684, 703);
+            this.eliminar_pb.Name = "eliminar_pb";
+            this.eliminar_pb.Size = new System.Drawing.Size(79, 92);
+            this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eliminar_pb.TabIndex = 79;
+            this.eliminar_pb.TabStop = false;
+            // 
+            // modificar_pb
+            // 
+            this.modificar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.modificar_pb.Image = global::CSEQ.Properties.Resources.Editar;
+            this.modificar_pb.Location = new System.Drawing.Point(414, 703);
+            this.modificar_pb.Name = "modificar_pb";
+            this.modificar_pb.Size = new System.Drawing.Size(71, 92);
+            this.modificar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modificar_pb.TabIndex = 78;
+            this.modificar_pb.TabStop = false;
+            // 
+            // guardar_pb
+            // 
+            this.guardar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.guardar_pb.Image = global::CSEQ.Properties.Resources.Guardar;
+            this.guardar_pb.Location = new System.Drawing.Point(139, 716);
+            this.guardar_pb.Name = "guardar_pb";
+            this.guardar_pb.Size = new System.Drawing.Size(84, 79);
+            this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guardar_pb.TabIndex = 77;
+            this.guardar_pb.TabStop = false;
+            // 
             // Crear_sueldo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -377,6 +416,9 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1601, 1007);
+            this.Controls.Add(this.eliminar_pb);
+            this.Controls.Add(this.modificar_pb);
+            this.Controls.Add(this.guardar_pb);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -410,6 +452,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,6 +485,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolTip salir_tt;
         private System.Windows.Forms.ToolTip cerrarSesion_tt;
+        private System.Windows.Forms.PictureBox eliminar_pb;
+        private System.Windows.Forms.PictureBox modificar_pb;
+        private System.Windows.Forms.PictureBox guardar_pb;
 
     }
 }

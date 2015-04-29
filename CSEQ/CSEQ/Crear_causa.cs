@@ -32,17 +32,6 @@ namespace CSEQ
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
-        //Metodo donde se agrega el registro a la base de datos
-        private void guardar_btn_Click(object sender, EventArgs e)
-        {            
-            String cNombre = causa_txt.Text;
-                       
-            if (Util.executeStoredProcedure("registrarCausa", cNombre))
-            {
-                MessageBox.Show("La Causa se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
-            }
-        }
 
         private void Buscar_Click(object sender, EventArgs e)
         {
@@ -55,45 +44,12 @@ namespace CSEQ
         {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 causa_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Causa WHERE ";
                 sqlActiveRow += " causa= '" + causa_selected + "';";
                 Util.showData(this, sqlActiveRow);
-            }
-        }
-
-        private void eliminar_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea eliminar causa: " + causa_selected + "'?", "Confirmacion de eliminar",
-                                        MessageBoxButtons.YesNo);
-
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("eliminarCausa", causa_selected))
-                {
-                    MessageBox.Show("Se eliminó la causa:" + causa_selected + " con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
-                }
-            }
-
-        }
-
-        private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            String nombreNuevo=causa_txt.Text;
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar causa: " + causa_selected + "'?", "Confirmacion de modificar",
-                                        MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("modificarCausa", causa_selected, nombreNuevo))
-                {
-                    MessageBox.Show("La causa se modifico con exito");
-                    Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
-                }
             }
         }
 
@@ -102,8 +58,8 @@ namespace CSEQ
             if (rol == 1)
             {
                 Busqueda_grp.Visible = true;
-                modificar_btn.Visible = true;
-                eliminar_btn.Visible = true;
+                modificar_pb.Visible = true;
+                eliminar_pb.Visible = true;
                 imagen.Visible = false;
             }
         }
@@ -138,6 +94,49 @@ namespace CSEQ
         private void logout_MouseHover(object sender, EventArgs e)
         {
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String cNombre = causa_txt.Text;
+
+            if (Util.executeStoredProcedure("registrarCausa", cNombre))
+            {
+                MessageBox.Show("La Causa se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
+            }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = causa_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar causa: " + causa_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarCausa", causa_selected, nombreNuevo))
+                {
+                    MessageBox.Show("La causa se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
+                }
+            }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar causa: " + causa_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarCausa", causa_selected))
+                {
+                    MessageBox.Show("Se eliminó la causa:" + causa_selected + " con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
+                }
+            }
         }
 
 
