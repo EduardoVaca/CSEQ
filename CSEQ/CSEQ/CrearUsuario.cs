@@ -37,19 +37,6 @@ namespace CSEQ
             Util.llenarComboBox(ID_rol, "SELECT ID_rol, nombre FROM Rol");
         }
 
-        private void Guardar_txt_Click(object sender, EventArgs e)
-        {
-            String loginU = login_txt.Text;
-            String passwordU = password_usuario_txt.Text;
-            int rolU = Int32.Parse(ID_rol.SelectedValue.ToString());
-
-            if (Util.executeStoredProcedure("registrarUsuario", loginU, passwordU, rolU))
-            {
-                MessageBox.Show("El usuario se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
-            }
-        }
-
         private void Buscar_Click(object sender, EventArgs e)
         {
             busqueda_grid.Visible = true;
@@ -61,45 +48,12 @@ namespace CSEQ
         {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Usuario u, TieneRol t WHERE u.login = '" + nombre + "'  AND u.login = t.login;";
                 Util.showData(this, sqlActiveRow);
                 ID_rolViejo = Int32.Parse(ID_rol.SelectedValue.ToString());
-            }
-        }
-
-        private void eliminar_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea eliminar al usuario:'" + nombre + "'?", "Confirmacion de eliminar", MessageBoxButtons.YesNo);
-
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("eliminarUsuario", nombre))
-                {
-                    MessageBox.Show("Se elimino usuario con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
-                }
-            }
-        }
-
-        private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            String nombreNuevo = login_txt.Text;
-            String nuevoPass = password_usuario_txt.Text;
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar Usuario: " + nombre + "'?", "Confirmacion de modificar",
-                                        MessageBoxButtons.YesNo);
-            int ID_rolNuevo = Int32.Parse(ID_rol.SelectedValue.ToString());
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("modificarUsuario", nombre, nombreNuevo, nuevoPass, ID_rolViejo, ID_rolNuevo))
-                {
-                    MessageBox.Show("El area Usuario se modifico con exito");
-                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
-                }
             }
         }
 
@@ -123,6 +77,52 @@ namespace CSEQ
         private void Atras_picture_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarIconoAtras(Atras_picture);
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String loginU = login_txt.Text;
+            String passwordU = password_usuario_txt.Text;
+            int rolU = Int32.Parse(ID_rol.SelectedValue.ToString());
+
+            if (Util.executeStoredProcedure("registrarUsuario", loginU, passwordU, rolU))
+            {
+                MessageBox.Show("El usuario se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
+            }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = login_txt.Text;
+            String nuevoPass = password_usuario_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Usuario: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            int ID_rolNuevo = Int32.Parse(ID_rol.SelectedValue.ToString());
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarUsuario", nombre, nombreNuevo, nuevoPass, ID_rolViejo, ID_rolNuevo))
+                {
+                    MessageBox.Show("El area Usuario se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
+                }
+            }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea eliminar al usuario:'" + nombre + "'?", "Confirmacion de eliminar", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarUsuario", nombre))
+                {
+                    MessageBox.Show("Se elimino usuario con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
+                }
+            }
         }
     }
 }

@@ -68,10 +68,8 @@ namespace CSEQ
             masculino_check.Checked = true;
             if (rol == 1)
             {
-                modificar_btn.Visible = true;
-                modificar_lb.Visible = true;
-                eliminar_btn.Visible = true;
-                eliminar_lb.Visible = true;
+                modificar_pb.Visible = true;                
+                eliminar_pb.Visible = true;                
             }
             salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
@@ -126,8 +124,8 @@ namespace CSEQ
             {
                 registro_persona = true;
                 hijos_grid.Visible = true;
-                eliminar_btn.Enabled = true;
-                modificar_btn.Enabled = true;
+                eliminar_pb.Enabled = true;
+                modificar_pb.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 CURP = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 int censoInput = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[2].Value.ToString());
@@ -211,85 +209,6 @@ namespace CSEQ
             Util.fillGrid(hijos_grid, "BusquedaEnHijo", curpP);
         }
 
-        private void guardar_btn_Click(object sender, EventArgs e)
-        {
-            //Obtenion de datos **********************************************************************
-            String CURPP = CURP_txt.Text;
-            String nombreP = Nombre_txt.Text;
-            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
-            Boolean sexoH = masculino_check.Checked;
-            String telefonoP = telefono_txt.Text;
-            String correoP = Correo_txt.Text;
-            String calleP = calle_txt.Text;
-            Boolean examenP = examen_audiometria_check.Checked;
-            Boolean implanteP = implante_coclear_check.Checked;
-            Boolean comunidadIndP = comunidad_indigena_check.Checked;
-            Boolean alergiaP = alergia_check.Checked;
-            Boolean enfermedadP = enfermedad_check.Checked;
-            Boolean mexicanoP = mexicano_check.Checked;
-            Boolean ifeP = credencialIFE_check.Checked;
-            int ID_periodoP = Int32.Parse(ID_periodo.SelectedValue.ToString());
-            int ID_censoP = Int32.Parse(Censo.SelectedValue.ToString());
-            int ID_coloniaP = Int32.Parse(ID_colonia.SelectedValue.ToString());
-            int ID_estadoCivilP = Int32.Parse(ID_estadoCivil.SelectedValue.ToString());
-            int ID_nivelEducativoP = Int32.Parse(ID_nivelEducativo.SelectedValue.ToString());
-            int ID_institucionEducativaP = Int32.Parse(ID_institucionEducativa.SelectedValue.ToString());
-            int anoEstudioP =  Int32.Parse(ano_txt.Text);
-            int ID_lenguaDominanteP = Int32.Parse(ID_lenguaDominante.SelectedValue.ToString());
-            int ID_nivelEspanolP = Int32.Parse(ID_nivelEspanol.SelectedValue.ToString());
-            int ID_nivelInglesP = Int32.Parse(ID_nivelIngles.SelectedValue.ToString());
-            int ID_nivelLSMP = Int32.Parse(ID_nivelLSM.SelectedValue.ToString());
-            String descripcionEmpleoP = descripcion_txt.Text;
-            String nombreCompanyP = nombre_compania_txt.Text;
-            String correoEmpleoP = correoEmpleo_txt.Text;
-            String telefonoEmpleoP = telefonoEmpleo_txt.Text;
-            String calleEmpleoP = calleEmpleo_txt.Text;
-            Boolean interpretacionLSMP = interpretacion_LSM_check.Checked;
-            int ID_areaTrabajoP = Int32.Parse(ID_areaTrabajo.SelectedValue.ToString());
-            int ID_sueldoP = Int32.Parse(ID_sueldo.SelectedValue.ToString());
-            int ID_coloniaEmpleoP;
-            if (sinEmpleo_check.Checked)
-                ID_coloniaEmpleoP = 0;
-            else
-                ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());
-            int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
-            Boolean prelinguisticaP = prelinguistica_check.Checked;
-            int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
-            Boolean bilateralP = bilateral_check.Checked;
-            int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
-            int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
-            String modeloP = modelo_txt.Text;
-            Boolean tiene_empleoP;
-            Boolean tiene_aparatoP;
-
-            if (sinEmpleo_check.Checked)
-                tiene_empleoP = false;
-            else
-                tiene_empleoP = true;
-            if (noTieneAparato_check.Checked)
-                tiene_aparatoP = false;
-            else
-                tiene_aparatoP = true;
-
-   
-            //***********************************************************************************************          
-            if(Util.executeStoredProcedure("registrarPersonaCOMPLETO", CURPP, nombreP, fechaNacP, sexoH, telefonoP, 
-                                            correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
-                                            mexicanoP, ifeP, ID_periodoP, ID_censoP, ID_coloniaP, ID_estadoCivilP, 
-                                            ID_nivelEducativoP, ID_institucionEducativaP, anoEstudioP, ID_lenguaDominanteP,
-                                            ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
-                                            nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
-                                            ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
-                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
-                                            tiene_empleoP, tiene_aparatoP))
-            {
-                MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "buscarPersona", "%");
-                registro_persona = true;
-            }
-
-        }
-
         private void tieneHijo_check_CheckedChanged(object sender, EventArgs e)
         {
             if (tieneHijo_check.Checked)
@@ -348,7 +267,7 @@ namespace CSEQ
                     }
                 }
                 if (e.TabPage == PerdidaAuditiva_tab)
-                    guardar_btn.Enabled = true;
+                    guardar_pb.Enabled = true;
             }
         }
 
@@ -377,85 +296,7 @@ namespace CSEQ
 
             return false;
         }
-
-        private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            String CURPP = CURP_txt.Text;
-            String nombreP = Nombre_txt.Text;
-            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
-            Boolean sexoH = masculino_check.Checked;
-            String telefonoP = telefono_txt.Text;
-            String correoP = Correo_txt.Text;
-            String calleP = calle_txt.Text;
-            Boolean examenP = examen_audiometria_check.Checked;
-            Boolean implanteP = implante_coclear_check.Checked;
-            Boolean comunidadIndP = comunidad_indigena_check.Checked;
-            Boolean alergiaP = alergia_check.Checked;
-            Boolean enfermedadP = enfermedad_check.Checked;
-            Boolean mexicanoP = mexicano_check.Checked;
-            Boolean ifeP = credencialIFE_check.Checked;
-            int ID_periodoP = Int32.Parse(ID_periodo.SelectedValue.ToString());
-            int ID_censoP = Int16.Parse(Censo.SelectedValue.ToString());
-            int ID_coloniaP = Int32.Parse(ID_colonia.SelectedValue.ToString());
-            int ID_estadoCivilP = Int32.Parse(ID_estadoCivil.SelectedValue.ToString());
-            int ID_nivelEducativoP = Int32.Parse(ID_nivelEducativo.SelectedValue.ToString());
-            int ID_institucionEducativaP = Int32.Parse(ID_institucionEducativa.SelectedValue.ToString());
-            int anoEstudioP = Int32.Parse(ano_txt.Text);
-            int ID_lenguaDominanteP = Int32.Parse(ID_lenguaDominante.SelectedValue.ToString());
-            int ID_nivelEspanolP = Int32.Parse(ID_nivelEspanol.SelectedValue.ToString());
-            int ID_nivelInglesP = Int32.Parse(ID_nivelIngles.SelectedValue.ToString());
-            int ID_nivelLSMP = Int32.Parse(ID_nivelLSM.SelectedValue.ToString());
-            String descripcionEmpleoP = descripcion_txt.Text;
-            String nombreCompanyP = nombre_compania_txt.Text;
-            String correoEmpleoP = correoEmpleo_txt.Text;
-            String telefonoEmpleoP = telefonoEmpleo_txt.Text;
-            String calleEmpleoP = calleEmpleo_txt.Text;
-            Boolean interpretacionLSMP = interpretacion_LSM_check.Checked;
-            int ID_areaTrabajoP = Int32.Parse(ID_areaTrabajo.SelectedValue.ToString());
-            int ID_sueldoP = Int32.Parse(ID_sueldo.SelectedValue.ToString());
-            int ID_coloniaEmpleoP;
-            if (sinEmpleo_check.Checked)
-                ID_coloniaEmpleoP = 0;
-            else
-                ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());   int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
-            Boolean prelinguisticaP = prelinguistica_check.Checked;
-            int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
-            Boolean bilateralP = bilateral_check.Checked;
-            int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
-            int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
-            String modeloP = modelo_txt.Text;
-            Boolean tiene_empleoP;
-            Boolean tiene_aparatoP;
-
-            if (sinEmpleo_check.Checked)
-                tiene_empleoP = false;
-            else
-                tiene_empleoP = true;
-            if (noTieneAparato_check.Checked)
-                tiene_aparatoP = false;
-            else
-                tiene_aparatoP = true;
-
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar Persona: '" + nombre_selected + "'?", "Confirmacion de eliminar",
-                                        MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("modificarPersona", CURPP, nombreP, fechaNacP, sexoH, telefonoP,
-                                            correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
-                                            mexicanoP, ifeP, ID_periodoP, ID_censoP, ID_coloniaP, ID_estadoCivilP,
-                                            ID_nivelEducativoP, ID_institucionEducativaP, anoEstudioP, ID_lenguaDominanteP,
-                                            ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
-                                            nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
-                                            ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
-                                            prelinguisticaP, ID_gradoP,bilateralP, ID_causaP, ID_aparatoAuditivoP, 
-                                            modeloP, tiene_empleoP, tiene_aparatoP))
-                {
-                    MessageBox.Show("La persona se ha modificado con exito!");
-                    Util.fillGrid(busqueda_grid, "buscarPersona", "%");
-                }
-            }           
-        }
+     
 
         private void logout_Click(object sender, EventArgs e)
         {
@@ -469,20 +310,6 @@ namespace CSEQ
             }
         }
 
-        private void eliminar_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar a '" + nombre_selected + "'? TODA la " +
-                "informacion referente a esta persona se borrara...", "Confirmacion de eliminacion", MessageBoxButtons.YesNo);
-
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("eliminarPersona", CURP_selected))
-                {
-                    MessageBox.Show("Se elimino a la persona con exito!");
-                    Util.fillGrid(busqueda_grid, "buscarPersona", "%");
-                }
-            }
-        }
 
         //Metodo que permite que una persona sea registrada sin empleo
         private void sinEmpleo_check_CheckedChanged(object sender, EventArgs e)
@@ -598,6 +425,178 @@ namespace CSEQ
                 {
                     MessageBox.Show("El hijo se ha eliminado con exito!");
                     Util.fillGrid(hijos_grid, "BusquedaEnHijo", CURP_selected);
+                }
+            }
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            //Obtenion de datos **********************************************************************
+            String CURPP = CURP_txt.Text;
+            String nombreP = Nombre_txt.Text;
+            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
+            Boolean sexoH = masculino_check.Checked;
+            String telefonoP = telefono_txt.Text;
+            String correoP = Correo_txt.Text;
+            String calleP = calle_txt.Text;
+            Boolean examenP = examen_audiometria_check.Checked;
+            Boolean implanteP = implante_coclear_check.Checked;
+            Boolean comunidadIndP = comunidad_indigena_check.Checked;
+            Boolean alergiaP = alergia_check.Checked;
+            Boolean enfermedadP = enfermedad_check.Checked;
+            Boolean mexicanoP = mexicano_check.Checked;
+            Boolean ifeP = credencialIFE_check.Checked;
+            int ID_periodoP = Int32.Parse(ID_periodo.SelectedValue.ToString());
+            int ID_censoP = Int32.Parse(Censo.SelectedValue.ToString());
+            int ID_coloniaP = Int32.Parse(ID_colonia.SelectedValue.ToString());
+            int ID_estadoCivilP = Int32.Parse(ID_estadoCivil.SelectedValue.ToString());
+            int ID_nivelEducativoP = Int32.Parse(ID_nivelEducativo.SelectedValue.ToString());
+            int ID_institucionEducativaP = Int32.Parse(ID_institucionEducativa.SelectedValue.ToString());
+            int anoEstudioP = Int32.Parse(ano_txt.Text);
+            int ID_lenguaDominanteP = Int32.Parse(ID_lenguaDominante.SelectedValue.ToString());
+            int ID_nivelEspanolP = Int32.Parse(ID_nivelEspanol.SelectedValue.ToString());
+            int ID_nivelInglesP = Int32.Parse(ID_nivelIngles.SelectedValue.ToString());
+            int ID_nivelLSMP = Int32.Parse(ID_nivelLSM.SelectedValue.ToString());
+            String descripcionEmpleoP = descripcion_txt.Text;
+            String nombreCompanyP = nombre_compania_txt.Text;
+            String correoEmpleoP = correoEmpleo_txt.Text;
+            String telefonoEmpleoP = telefonoEmpleo_txt.Text;
+            String calleEmpleoP = calleEmpleo_txt.Text;
+            Boolean interpretacionLSMP = interpretacion_LSM_check.Checked;
+            int ID_areaTrabajoP = Int32.Parse(ID_areaTrabajo.SelectedValue.ToString());
+            int ID_sueldoP = Int32.Parse(ID_sueldo.SelectedValue.ToString());
+            int ID_coloniaEmpleoP;
+            if (sinEmpleo_check.Checked)
+                ID_coloniaEmpleoP = 0;
+            else
+                ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());
+            int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
+            Boolean prelinguisticaP = prelinguistica_check.Checked;
+            int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
+            Boolean bilateralP = bilateral_check.Checked;
+            int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
+            int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
+            String modeloP = modelo_txt.Text;
+            Boolean tiene_empleoP;
+            Boolean tiene_aparatoP;
+
+            if (sinEmpleo_check.Checked)
+                tiene_empleoP = false;
+            else
+                tiene_empleoP = true;
+            if (noTieneAparato_check.Checked)
+                tiene_aparatoP = false;
+            else
+                tiene_aparatoP = true;
+
+
+            //***********************************************************************************************          
+            if (Util.executeStoredProcedure("registrarPersonaCOMPLETO", CURPP, nombreP, fechaNacP, sexoH, telefonoP,
+                                            correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
+                                            mexicanoP, ifeP, ID_periodoP, ID_censoP, ID_coloniaP, ID_estadoCivilP,
+                                            ID_nivelEducativoP, ID_institucionEducativaP, anoEstudioP, ID_lenguaDominanteP,
+                                            ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
+                                            nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
+                                            ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
+                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP, modeloP,
+                                            tiene_empleoP, tiene_aparatoP))
+            {
+                MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "buscarPersona", "%");
+                registro_persona = true;
+            }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String CURPP = CURP_txt.Text;
+            String nombreP = Nombre_txt.Text;
+            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
+            Boolean sexoH = masculino_check.Checked;
+            String telefonoP = telefono_txt.Text;
+            String correoP = Correo_txt.Text;
+            String calleP = calle_txt.Text;
+            Boolean examenP = examen_audiometria_check.Checked;
+            Boolean implanteP = implante_coclear_check.Checked;
+            Boolean comunidadIndP = comunidad_indigena_check.Checked;
+            Boolean alergiaP = alergia_check.Checked;
+            Boolean enfermedadP = enfermedad_check.Checked;
+            Boolean mexicanoP = mexicano_check.Checked;
+            Boolean ifeP = credencialIFE_check.Checked;
+            int ID_periodoP = Int32.Parse(ID_periodo.SelectedValue.ToString());
+            int ID_censoP = Int16.Parse(Censo.SelectedValue.ToString());
+            int ID_coloniaP = Int32.Parse(ID_colonia.SelectedValue.ToString());
+            int ID_estadoCivilP = Int32.Parse(ID_estadoCivil.SelectedValue.ToString());
+            int ID_nivelEducativoP = Int32.Parse(ID_nivelEducativo.SelectedValue.ToString());
+            int ID_institucionEducativaP = Int32.Parse(ID_institucionEducativa.SelectedValue.ToString());
+            int anoEstudioP = Int32.Parse(ano_txt.Text);
+            int ID_lenguaDominanteP = Int32.Parse(ID_lenguaDominante.SelectedValue.ToString());
+            int ID_nivelEspanolP = Int32.Parse(ID_nivelEspanol.SelectedValue.ToString());
+            int ID_nivelInglesP = Int32.Parse(ID_nivelIngles.SelectedValue.ToString());
+            int ID_nivelLSMP = Int32.Parse(ID_nivelLSM.SelectedValue.ToString());
+            String descripcionEmpleoP = descripcion_txt.Text;
+            String nombreCompanyP = nombre_compania_txt.Text;
+            String correoEmpleoP = correoEmpleo_txt.Text;
+            String telefonoEmpleoP = telefonoEmpleo_txt.Text;
+            String calleEmpleoP = calleEmpleo_txt.Text;
+            Boolean interpretacionLSMP = interpretacion_LSM_check.Checked;
+            int ID_areaTrabajoP = Int32.Parse(ID_areaTrabajo.SelectedValue.ToString());
+            int ID_sueldoP = Int32.Parse(ID_sueldo.SelectedValue.ToString());
+            int ID_coloniaEmpleoP;
+            if (sinEmpleo_check.Checked)
+                ID_coloniaEmpleoP = 0;
+            else
+                ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString()); int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
+            Boolean prelinguisticaP = prelinguistica_check.Checked;
+            int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
+            Boolean bilateralP = bilateral_check.Checked;
+            int ID_causaP = Int32.Parse(ID_causa.SelectedValue.ToString());
+            int ID_aparatoAuditivoP = Int32.Parse(ID_aparatoAuditivo.SelectedValue.ToString());
+            String modeloP = modelo_txt.Text;
+            Boolean tiene_empleoP;
+            Boolean tiene_aparatoP;
+
+            if (sinEmpleo_check.Checked)
+                tiene_empleoP = false;
+            else
+                tiene_empleoP = true;
+            if (noTieneAparato_check.Checked)
+                tiene_aparatoP = false;
+            else
+                tiene_aparatoP = true;
+
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Persona: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarPersona", CURPP, nombreP, fechaNacP, sexoH, telefonoP,
+                                            correoP, calleP, examenP, implanteP, comunidadIndP, alergiaP, enfermedadP,
+                                            mexicanoP, ifeP, ID_periodoP, ID_censoP, ID_coloniaP, ID_estadoCivilP,
+                                            ID_nivelEducativoP, ID_institucionEducativaP, anoEstudioP, ID_lenguaDominanteP,
+                                            ID_nivelEspanolP, ID_nivelInglesP, ID_nivelLSMP, descripcionEmpleoP,
+                                            nombreCompanyP, correoEmpleoP, telefonoEmpleoP, calleEmpleoP, interpretacionLSMP,
+                                            ID_areaTrabajoP, ID_sueldoP, ID_coloniaEmpleoP, ID_perdidaAuditivaP,
+                                            prelinguisticaP, ID_gradoP, bilateralP, ID_causaP, ID_aparatoAuditivoP,
+                                            modeloP, tiene_empleoP, tiene_aparatoP))
+                {
+                    MessageBox.Show("La persona se ha modificado con exito!");
+                    Util.fillGrid(busqueda_grid, "buscarPersona", "%");
+                }
+            }           
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar a '" + nombre_selected + "'? TODA la " +
+                "informacion referente a esta persona se borrara...", "Confirmacion de eliminacion", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarPersona", CURP_selected))
+                {
+                    MessageBox.Show("Se elimino a la persona con exito!");
+                    Util.fillGrid(busqueda_grid, "buscarPersona", "%");
                 }
             }
         }

@@ -40,14 +40,11 @@
             this.login_txt = new System.Windows.Forms.TextBox();
             this.password_label = new System.Windows.Forms.Label();
             this.password_usuario_txt = new System.Windows.Forms.TextBox();
-            this.Guardar_txt = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ID_rol = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.eliminar_btn = new System.Windows.Forms.Button();
-            this.modificar_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.PictureBox();
@@ -155,18 +152,6 @@
             this.password_usuario_txt.Size = new System.Drawing.Size(490, 47);
             this.password_usuario_txt.TabIndex = 29;
             // 
-            // Guardar_txt
-            // 
-            this.Guardar_txt.Font = new System.Drawing.Font("Candara", 10F);
-            this.Guardar_txt.Location = new System.Drawing.Point(70, 787);
-            this.Guardar_txt.Margin = new System.Windows.Forms.Padding(6);
-            this.Guardar_txt.Name = "Guardar_txt";
-            this.Guardar_txt.Size = new System.Drawing.Size(160, 62);
-            this.Guardar_txt.TabIndex = 30;
-            this.Guardar_txt.Text = "Guardar";
-            this.Guardar_txt.UseVisualStyleBackColor = true;
-            this.Guardar_txt.Click += new System.EventHandler(this.Guardar_txt_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -226,32 +211,6 @@
             this.label4.Size = new System.Drawing.Size(32, 42);
             this.label4.TabIndex = 58;
             this.label4.Text = "*";
-            // 
-            // eliminar_btn
-            // 
-            this.eliminar_btn.Enabled = false;
-            this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.eliminar_btn.Location = new System.Drawing.Point(598, 787);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(160, 62);
-            this.eliminar_btn.TabIndex = 76;
-            this.eliminar_btn.Text = "Eliminar";
-            this.eliminar_btn.UseVisualStyleBackColor = true;
-            this.eliminar_btn.Click += new System.EventHandler(this.eliminar_btn_Click);
-            // 
-            // modificar_btn
-            // 
-            this.modificar_btn.Enabled = false;
-            this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.modificar_btn.Location = new System.Drawing.Point(334, 787);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(160, 62);
-            this.modificar_btn.TabIndex = 75;
-            this.modificar_btn.Text = "Modificar";
-            this.modificar_btn.UseVisualStyleBackColor = true;
-            this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
             // 
             // groupBox1
             // 
@@ -363,6 +322,7 @@
             // eliminar_pb
             // 
             this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.eliminar_pb.Enabled = false;
             this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
             this.eliminar_pb.Location = new System.Drawing.Point(651, 688);
             this.eliminar_pb.Name = "eliminar_pb";
@@ -370,10 +330,13 @@
             this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.eliminar_pb.TabIndex = 83;
             this.eliminar_pb.TabStop = false;
+            this.eliminar_pb.Visible = false;
+            this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
             // 
             // modificar_pb
             // 
             this.modificar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.modificar_pb.Enabled = false;
             this.modificar_pb.Image = global::CSEQ.Properties.Resources.Editar;
             this.modificar_pb.Location = new System.Drawing.Point(381, 688);
             this.modificar_pb.Name = "modificar_pb";
@@ -381,6 +344,8 @@
             this.modificar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.modificar_pb.TabIndex = 82;
             this.modificar_pb.TabStop = false;
+            this.modificar_pb.Visible = false;
+            this.modificar_pb.Click += new System.EventHandler(this.modificar_pb_Click);
             // 
             // guardar_pb
             // 
@@ -392,6 +357,7 @@
             this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guardar_pb.TabIndex = 81;
             this.guardar_pb.TabStop = false;
+            this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
             // 
             // CrearUsuario
             // 
@@ -408,14 +374,11 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.eliminar_btn);
-            this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ID_rol);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Guardar_txt);
             this.Controls.Add(this.password_usuario_txt);
             this.Controls.Add(this.password_label);
             this.Controls.Add(this.login_txt);
@@ -454,14 +417,11 @@
         private System.Windows.Forms.TextBox login_txt;
         private System.Windows.Forms.Label password_label;
         private System.Windows.Forms.TextBox password_usuario_txt;
-        private System.Windows.Forms.Button Guardar_txt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ID_rol;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button eliminar_btn;
-        private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView busqueda_grid;
         private System.Windows.Forms.PictureBox Buscar;

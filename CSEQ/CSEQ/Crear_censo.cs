@@ -32,23 +32,6 @@ namespace CSEQ
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
-        //Metodo donde se agrega el registro a la base de datos
-        private void guardar_btn_Click(object sender, EventArgs e)
-        {
-            if (ano_txt.TextLength == 4)
-            {                
-                int cAno = Int16.Parse(ano_txt.Text);
-                
-                if (Util.executeStoredProcedure("registrarCenso", cAno))
-                {
-                    MessageBox.Show("El Censo se ha registrado con exito!");
-                }
-            }
-            else
-                MessageBox.Show("El año debe tener 4 digitos");
-            
-        }
-
         private void Buscar_Click(object sender, EventArgs e)
         {
             busqueda_grid.Visible = true;
@@ -68,47 +51,12 @@ namespace CSEQ
         {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //activacion de botones
+                eliminar_pb.Enabled = true;
                 censo_selected = Convert.ToInt16(busqueda_grid.Rows[e.RowIndex].Cells[0].Value);
                 String sqlActiveRow = "SELECT * FROM Censo WHERE ";
                 sqlActiveRow += " ID_censo = '" + censo_selected + "';";
                 Util.showData(this, sqlActiveRow);
-            }
-        }
-
-
-        private void eliminar_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Eliminar Censo:'" + censo_selected + "'?", "Confirmación de eliminación", MessageBoxButtons.YesNo);
-
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                respuesta = MessageBox.Show("Se eliminará TODA la informacion respecto al censo " + censo_selected +
-                                            ". ¿Desea eliminarlo PERMANENTEMENTE?", "Mensaje de Seguridad", MessageBoxButtons.YesNo);
-                if (respuesta == System.Windows.Forms.DialogResult.Yes)
-                {
-                    if (Util.executeStoredProcedure("eliminarCenso", censo_selected))
-                    {
-                        MessageBox.Show("Se eliminó el Censo " + censo_selected + "con éxito!");
-                    }
-                }
-            }
-        }
-
-        private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            String nombreNuevo = ano_txt.Text;
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar Censo: " + censo_selected + "'?", "Confirmacion de modificar",
-                                        MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("modificarCenso", censo_selected, nombreNuevo))
-                {
-                    MessageBox.Show("El Censo se modifico con exito");
-                }
             }
         }
 
@@ -118,8 +66,8 @@ namespace CSEQ
             {
                 imagen.Visible = false;
                 Busqueda_grp.Visible = true;
-                modificar_btn.Visible = true;
-                eliminar_btn.Visible = true;
+                modificar_pb.Visible = true;
+                eliminar_pb.Visible = true;
             }
         }
 
@@ -153,6 +101,55 @@ namespace CSEQ
         private void logout_MouseHover(object sender, EventArgs e)
         {
             cerrarSesion_tt.SetToolTip(logout, "Cerrar Sesión");
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            if (ano_txt.TextLength == 4)
+            {
+                int cAno = Int16.Parse(ano_txt.Text);
+
+                if (Util.executeStoredProcedure("registrarCenso", cAno))
+                {
+                    MessageBox.Show("El Censo se ha registrado con exito!");
+                }
+            }
+            else
+                MessageBox.Show("El año debe tener 4 digitos");
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = ano_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Censo: " + censo_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarCenso", censo_selected, nombreNuevo))
+                {
+                    MessageBox.Show("El Censo se modifico con exito");
+                }
+            }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Eliminar Censo:'" + censo_selected + "'?", "Confirmación de eliminación", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                respuesta = MessageBox.Show("Se eliminará TODA la informacion respecto al censo " + censo_selected +
+                                            ". ¿Desea eliminarlo PERMANENTEMENTE?", "Mensaje de Seguridad", MessageBoxButtons.YesNo);
+                if (respuesta == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (Util.executeStoredProcedure("eliminarCenso", censo_selected))
+                    {
+                        MessageBox.Show("Se eliminó el Censo " + censo_selected + "con éxito!");
+                    }
+                }
+            }
         }
     }
 }

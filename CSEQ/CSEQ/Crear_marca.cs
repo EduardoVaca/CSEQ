@@ -55,8 +55,8 @@ namespace CSEQ
         {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //activacion de botones
+                eliminar_pb.Enabled = true;
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Marca WHERE ";
                 sqlActiveRow += " nombre= '" + nombre_selected + "';";
@@ -102,8 +102,8 @@ namespace CSEQ
             {
                 imagen.Visible = false;
                 Busqueda_grp.Visible = true;
-                modificar_btn.Visible = true;
-                eliminar_btn.Visible = true;
+                modificar_pb.Visible = true;
+                eliminar_pb.Visible = true;
             }
         }
 
@@ -137,6 +137,49 @@ namespace CSEQ
         private void logout_MouseHover(object sender, EventArgs e)
         {
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String mNombre = nombre_txt.Text;
+
+            if (Util.executeStoredProcedure("registrarMarca", mNombre))
+            {
+                MessageBox.Show("La Marca se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnMarca", "%");
+            }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Marca: " + nombre_selected + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarMarca", nombre_selected, nombreNuevo))
+                {
+                    MessageBox.Show("La marca se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMarca", "%");
+                }
+            }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Seguro quiere eliminar marca:'" + nombre_selected + "'?",
+                                    "Confirmación de Eliminar", MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarMarca", nombre_selected))
+                {
+                    MessageBox.Show("La marca:" + nombre_selected + " se elimino con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMarca", "%");
+                }
+            }
         }
     }
 }

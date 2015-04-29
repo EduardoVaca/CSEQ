@@ -57,8 +57,8 @@ namespace CSEQ
         {            
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
-                modificar_btn.Enabled = true; //Activacion de botones
-                eliminar_btn.Enabled = true;
+                modificar_pb.Enabled = true; //Activacion de botones
+                eliminar_pb.Enabled = true;
                 nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String sqlActiveRow = "SELECT * FROM Estado WHERE ";
                 sqlActiveRow += " nombre= '" + nombre_selected + "';";
@@ -107,8 +107,8 @@ namespace CSEQ
             {
                 imagen.Visible = false;
                 Busqueda_grp.Visible = true;
-                modificar_btn.Visible = true;
-                eliminar_btn.Visible = true;
+                modificar_pb.Visible = true;
+                eliminar_pb.Visible = true;
             }
         }
 
@@ -132,6 +132,51 @@ namespace CSEQ
         private void Atras_picture_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarIconoAtras(Atras_picture);
+        }
+
+        private void guardar_pb_Click(object sender, EventArgs e)
+        {
+            String eNombre = nombre_txt.Text;
+
+            if (eNombre.Length > 0)
+                if (Util.executeStoredProcedure("registrarEstado", eNombre))
+                {
+                    MessageBox.Show("El Estado se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
+                }
+        }
+
+        private void modificar_pb_Click(object sender, EventArgs e)
+        {
+            String nombreNuevo = nombre_txt.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea modificar Estado: " + nombre + "'?", "Confirmacion de modificar",
+                                        MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("modificarEstado", nombre, nombreNuevo))
+                {
+                    MessageBox.Show("El estado se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
+                }
+            }
+        }
+
+        private void eliminar_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+
+            respuesta = MessageBox.Show("¿Desea eliminar el estado: '" + nombre_selected + "'?", "Confirmacion de eliminar",
+                                        MessageBoxButtons.YesNo);
+
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarEstado", nombre_selected))
+                {
+                    MessageBox.Show("El estado se elimino con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
+                }
+            }
         }
     }
 }

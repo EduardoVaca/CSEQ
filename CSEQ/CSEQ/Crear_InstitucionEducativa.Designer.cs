@@ -53,13 +53,10 @@
             this.privada_check = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.especializada_check = new System.Windows.Forms.CheckBox();
-            this.guardar_btn = new System.Windows.Forms.Button();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.Busqueda_grp = new System.Windows.Forms.GroupBox();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
-            this.modificar_btn = new System.Windows.Forms.Button();
-            this.eliminar_btn = new System.Windows.Forms.Button();
             this.telefono_txt = new System.Windows.Forms.MaskedTextBox();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
@@ -341,19 +338,6 @@
             this.especializada_check.Text = "Sí";
             this.especializada_check.UseVisualStyleBackColor = false;
             // 
-            // guardar_btn
-            // 
-            this.guardar_btn.Enabled = false;
-            this.guardar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.guardar_btn.Location = new System.Drawing.Point(68, 842);
-            this.guardar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.guardar_btn.Name = "guardar_btn";
-            this.guardar_btn.Size = new System.Drawing.Size(174, 65);
-            this.guardar_btn.TabIndex = 52;
-            this.guardar_btn.Text = "Guardar";
-            this.guardar_btn.UseVisualStyleBackColor = true;
-            this.guardar_btn.Click += new System.EventHandler(this.guardar_btn_Click);
-            // 
             // Buscar
             // 
             this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
@@ -422,34 +406,6 @@
             this.busqueda_grid.Visible = false;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
-            // modificar_btn
-            // 
-            this.modificar_btn.Enabled = false;
-            this.modificar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.modificar_btn.Location = new System.Drawing.Point(388, 842);
-            this.modificar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(174, 65);
-            this.modificar_btn.TabIndex = 57;
-            this.modificar_btn.Text = "Modificar";
-            this.modificar_btn.UseVisualStyleBackColor = true;
-            this.modificar_btn.Visible = false;
-            this.modificar_btn.Click += new System.EventHandler(this.modificar_btn_Click);
-            // 
-            // eliminar_btn
-            // 
-            this.eliminar_btn.Enabled = false;
-            this.eliminar_btn.Font = new System.Drawing.Font("Candara", 10F);
-            this.eliminar_btn.Location = new System.Drawing.Point(708, 842);
-            this.eliminar_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(174, 65);
-            this.eliminar_btn.TabIndex = 58;
-            this.eliminar_btn.Text = "Eliminar";
-            this.eliminar_btn.UseVisualStyleBackColor = true;
-            this.eliminar_btn.Visible = false;
-            this.eliminar_btn.Click += new System.EventHandler(this.eliminar_btn_Click);
-            // 
             // telefono_txt
             // 
             this.telefono_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -501,6 +457,7 @@
             // eliminar_pb
             // 
             this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.eliminar_pb.Enabled = false;
             this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
             this.eliminar_pb.Location = new System.Drawing.Point(658, 862);
             this.eliminar_pb.Name = "eliminar_pb";
@@ -508,10 +465,13 @@
             this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.eliminar_pb.TabIndex = 71;
             this.eliminar_pb.TabStop = false;
+            this.eliminar_pb.Visible = false;
+            this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
             // 
             // modificar_pb
             // 
             this.modificar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.modificar_pb.Enabled = false;
             this.modificar_pb.Image = global::CSEQ.Properties.Resources.Editar;
             this.modificar_pb.Location = new System.Drawing.Point(388, 862);
             this.modificar_pb.Name = "modificar_pb";
@@ -519,6 +479,8 @@
             this.modificar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.modificar_pb.TabIndex = 70;
             this.modificar_pb.TabStop = false;
+            this.modificar_pb.Visible = false;
+            this.modificar_pb.Click += new System.EventHandler(this.modificar_pb_Click);
             // 
             // guardar_pb
             // 
@@ -530,6 +492,7 @@
             this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guardar_pb.TabIndex = 69;
             this.guardar_pb.TabStop = false;
+            this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
             // 
             // Crear_InstitucionEducativa
             // 
@@ -548,9 +511,6 @@
             this.Controls.Add(this.logout);
             this.Controls.Add(this.imagen);
             this.Controls.Add(this.telefono_txt);
-            this.Controls.Add(this.eliminar_btn);
-            this.Controls.Add(this.modificar_btn);
-            this.Controls.Add(this.guardar_btn);
             this.Controls.Add(this.especializada_check);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.privada_check);
@@ -619,13 +579,10 @@
         private System.Windows.Forms.CheckBox privada_check;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox especializada_check;
-        private System.Windows.Forms.Button guardar_btn;
         private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.TextBox busqueda_txt;
         private System.Windows.Forms.GroupBox Busqueda_grp;
         private System.Windows.Forms.DataGridView busqueda_grid;
-        private System.Windows.Forms.Button modificar_btn;
-        private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.MaskedTextBox telefono_txt;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
