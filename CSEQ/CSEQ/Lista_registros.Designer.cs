@@ -70,6 +70,7 @@
             this.usuario_press = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colonia_pb)).BeginInit();
@@ -97,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.areaTrabajo_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuario_press)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // x_picture
@@ -648,6 +650,17 @@
             this.label5.TabIndex = 68;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CSEQ.Properties.Resources.personaMini;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 168);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(172, 175);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 69;
+            this.pictureBox1.TabStop = false;
+            // 
             // Lista_registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -657,6 +670,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1092);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.usuario_pb);
@@ -732,6 +746,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.areaTrabajo_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuario_press)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -780,5 +795,6 @@
         private System.Windows.Forms.PictureBox usuario_press;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
