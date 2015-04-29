@@ -76,6 +76,7 @@ namespace CSEQ
             if (Util.executeStoredProcedure("registrarDelegacion", dNombre, dID_municipio))
             {
                 MessageBox.Show("La Delegacion se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnDelegacion", "%");
             }
         }
 
@@ -114,6 +115,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("modificarDelegacion", delegacion, municipio, nombreNuevo, municipioNuevo))
                 {
                     MessageBox.Show("La delegacion se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnDelegacion", "%");
                 }
             }
         }
@@ -129,6 +131,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarDelegacion", delegacion_selected, dID_municipio))
                 {
                     MessageBox.Show("La delegacion se elimino con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnDelegacion", "%");
                 }
             }
 

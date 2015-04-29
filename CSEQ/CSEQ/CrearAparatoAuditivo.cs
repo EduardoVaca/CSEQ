@@ -57,6 +57,7 @@ namespace CSEQ
             if (Util.executeStoredProcedure("registrarAparatoAuditivo", mTipo, mID_marca))
             {
                 MessageBox.Show("El Aparato Auditivo se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
             }
         }
 
@@ -98,6 +99,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarAparatoAuditivo", tipo_selected, ID_marca_selected))
                 {
                     MessageBox.Show("El aparato: '" + tipo_selected + "' se elimino con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
                 }
             }           
         }
@@ -114,6 +116,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("modificarAparatoAuditivo", nombreMarca_selected,mID_marca, nombreNuevo,IDnuevo))
                 {
                     MessageBox.Show("El Aparato Auditivo se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
                 }
             }
         }

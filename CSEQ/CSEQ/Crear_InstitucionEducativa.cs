@@ -85,20 +85,14 @@ namespace CSEQ
             String iCorreo = correo_txt.Text;
             String iCalle = calle_txt.Text;
             int iID_colonia = Int32.Parse(ID_colonia.SelectedValue.ToString());
-            int iPrivada;
-            int iEspecializada;
-            if (privada_check.Checked)
-                iPrivada = 1;
-            else
-                iPrivada = 0;
-            if (especializada_check.Checked)
-                iEspecializada = 1;
-            else
-                iEspecializada = 0;
+            Boolean iPrivada = privada_check.Checked;
+            Boolean iEspecializada = especializada_check.Checked;
+
             if(iNombre.Length > 0)
                 if (Util.executeStoredProcedure("registrarInstitucionEducativa", iNombre, iCalle, iTelefono, iCorreo, iPrivada, iEspecializada, iID_colonia))
                 {
                     MessageBox.Show("La Institucion Educativa se registro con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", "%");
                 }
 
         }
@@ -146,6 +140,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarInstitucionEducativa", nombre_selected))
                 {
                     MessageBox.Show("La institucion se ha eliminado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", "%");
                 }
             }
         }
@@ -173,6 +168,7 @@ namespace CSEQ
                                                IDcoloniaNuevo))
                 {
                     MessageBox.Show("La institucion se ha modificado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", "%");
                 }
             }
 

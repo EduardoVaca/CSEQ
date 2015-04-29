@@ -42,6 +42,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("registrarEstado", eNombre))
                 {
                     MessageBox.Show("El Estado se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
                 }
         }
 
@@ -77,6 +78,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarEstado", nombre_selected))
                 {
                     MessageBox.Show("El estado se elimino con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
                 }
             }
         }
@@ -92,6 +94,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("modificarEstado", nombre, nombreNuevo))
                 {
                     MessageBox.Show("El estado se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
                 }
             }
         }

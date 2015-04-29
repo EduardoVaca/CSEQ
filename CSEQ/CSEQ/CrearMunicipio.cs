@@ -62,6 +62,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("registrarMunicipio", mNombre, mID_estado))
                 {
                     MessageBox.Show("El Municipio se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
                 }
         }
 
@@ -97,6 +98,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarMunicipio", nombre_selected, mID_estado))
                 {
                     MessageBox.Show("El municipio se elimino con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
                 }               
             }
         }
@@ -114,6 +116,7 @@ namespace CSEQ
                     if (Util.executeStoredProcedure("modificarMunicipio", nombre_selected, mID_estado, nombreNuevo,ID_nuevo))
                     {
                         MessageBox.Show("El municipio se modifico con exito");
+                        Util.fillGrid(busqueda_grid, "busquedaEnMunicipio", "%");
                     }
                 }
 

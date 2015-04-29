@@ -40,6 +40,7 @@ namespace CSEQ
             if (Util.executeStoredProcedure("registrarCausa", cNombre))
             {
                 MessageBox.Show("La Causa se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
             }
         }
 
@@ -74,6 +75,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarCausa", causa_selected))
                 {
                     MessageBox.Show("Se eliminó la causa:" + causa_selected + " con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
                 }
             }
 
@@ -90,6 +92,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("modificarCausa", causa_selected, nombreNuevo))
                 {
                     MessageBox.Show("La causa se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
                 }
             }
         }

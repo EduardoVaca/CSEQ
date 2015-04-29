@@ -37,12 +37,13 @@ namespace CSEQ
 
         private void guardar_btn_Click(object sender, EventArgs e)
         {
-            String sMinimo = minimo_txt.Text;
-            String sMaximo = maximo_txt.Text;
+            String sMinimo = "$" + minimo_txt.Text;
+            String sMaximo = "$" + maximo_txt.Text;
 
             if (Util.executeStoredProcedure("registrarSueldo", sMinimo, sMaximo))
             {
                 MessageBox.Show("El Sueldo se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnSueldo", "%");
             }
         }
 
@@ -77,14 +78,15 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarSueldo", minimo_selected, maximo_selected))
                 {
                     MessageBox.Show("El sueldo se elimino con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnSueldo", "%");
                 }
             }
         }
 
         private void modificar_btn_Click(object sender, EventArgs e)
         {
-            String minimoNuevo = minimo_txt.Text;
-            String maximoNuevo = maximo_txt.Text;
+            String minimoNuevo = "$" + minimo_txt.Text;
+            String maximoNuevo = "$" + maximo_txt.Text;
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar salario minimo: " + minimo_selected + " y salario maximo: "+maximo_selected+"'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
@@ -93,6 +95,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("modificarSueldo", minimo_selected, maximo_selected,minimoNuevo,maximoNuevo))
                 {
                     MessageBox.Show("El salario se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnSueldo", "%");
                 }
             }
         }

@@ -40,6 +40,7 @@ namespace CSEQ
             if (Util.executeStoredProcedure("registrarMarca", mNombre))
             {
                 MessageBox.Show("La Marca se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnMarca", "%");
             }
         }
 
@@ -74,6 +75,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarMarca", nombre_selected))
                 {
                     MessageBox.Show("La marca:" + nombre_selected + " se elimino con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMarca", "%");
                 }
             }
         }
@@ -89,6 +91,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("modificarMarca", nombre_selected, nombreNuevo))
                 {
                     MessageBox.Show("La marca se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMarca", "%");
                 }
             }
         }

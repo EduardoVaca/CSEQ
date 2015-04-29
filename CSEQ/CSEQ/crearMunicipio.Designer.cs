@@ -247,6 +247,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.busqueda_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.busqueda_grid.Size = new System.Drawing.Size(608, 537);
             this.busqueda_grid.TabIndex = 56;
             this.busqueda_grid.Visible = false;

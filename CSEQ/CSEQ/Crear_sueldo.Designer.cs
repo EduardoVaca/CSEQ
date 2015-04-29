@@ -49,6 +49,10 @@
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -140,12 +144,12 @@
             // minimo_txt
             // 
             this.minimo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.minimo_txt.Location = new System.Drawing.Point(284, 365);
+            this.minimo_txt.Location = new System.Drawing.Point(316, 371);
             this.minimo_txt.Margin = new System.Windows.Forms.Padding(6);
             this.minimo_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.minimo_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.minimo_txt.Name = "minimo_txt";
-            this.minimo_txt.Size = new System.Drawing.Size(454, 47);
+            this.minimo_txt.Size = new System.Drawing.Size(196, 40);
             this.minimo_txt.TabIndex = 16;
             // 
             // sueldo_label
@@ -164,12 +168,12 @@
             // maximo_txt
             // 
             this.maximo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.maximo_txt.Location = new System.Drawing.Point(284, 531);
+            this.maximo_txt.Location = new System.Drawing.Point(316, 537);
             this.maximo_txt.Margin = new System.Windows.Forms.Padding(6);
             this.maximo_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.maximo_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.maximo_txt.Name = "maximo_txt";
-            this.maximo_txt.Size = new System.Drawing.Size(454, 47);
+            this.maximo_txt.Size = new System.Drawing.Size(196, 40);
             this.maximo_txt.TabIndex = 24;
             // 
             // eliminar_btn
@@ -253,6 +257,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.busqueda_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.busqueda_grid.Size = new System.Drawing.Size(588, 443);
             this.busqueda_grid.TabIndex = 56;
             this.busqueda_grid.Visible = false;
@@ -305,6 +310,58 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Candara", 14F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(273, 365);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 46);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "$";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Candara", 14F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(273, 531);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 46);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "$";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Candara", 14F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(522, 369);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 46);
+            this.label3.TabIndex = 74;
+            this.label3.Text = ".00";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Candara", 14F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(522, 535);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 46);
+            this.label4.TabIndex = 75;
+            this.label4.Text = ".00";
+            // 
             // Crear_sueldo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -315,6 +372,10 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1601, 1007);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.imagen);
             this.Controls.Add(this.Busqueda_grp);
@@ -368,6 +429,10 @@
         private System.Windows.Forms.TextBox busqueda_txt;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
 
     }
 }

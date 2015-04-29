@@ -75,6 +75,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_municipio, cDelegacion))
                 {
                     MessageBox.Show("La Colonia se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
                 }
             //Falta checar duda de atributos en nulo
         }
@@ -122,6 +123,7 @@ namespace CSEQ
                     if (Util.executeStoredProcedure("modificarColonia", nombre_selected, ID_selected, nombreNuevo, ID_nuevo, delegacionNuevo))
                     {
                         MessageBox.Show("La colonia se modifico con exito");
+                        Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
                     }
                 }
         }
@@ -137,6 +139,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarColonia", nombre_selected, idMunicpio))
                 {
                     MessageBox.Show("La colonia se elimino con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
                 }
             }
         }

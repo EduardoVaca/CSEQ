@@ -112,7 +112,7 @@ namespace CSEQ
         {
             busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
-            Util.fillGrid(busqueda_grid, "buscarP", busqueda);
+            Util.fillGrid(busqueda_grid, "buscarPersona", busqueda);
         }
 
         //Metodo que llena toda la forma dependiendo la persona que se le de clic en el gird
@@ -282,6 +282,7 @@ namespace CSEQ
                                             tiene_empleoP, tiene_aparatoP))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "buscarPersona", "%");
                 registro_persona = true;
             }
 
@@ -410,8 +411,11 @@ namespace CSEQ
             Boolean interpretacionLSMP = interpretacion_LSM_check.Checked;
             int ID_areaTrabajoP = Int32.Parse(ID_areaTrabajo.SelectedValue.ToString());
             int ID_sueldoP = Int32.Parse(ID_sueldo.SelectedValue.ToString());
-            int ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());
-            int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
+            int ID_coloniaEmpleoP;
+            if (sinEmpleo_check.Checked)
+                ID_coloniaEmpleoP = 0;
+            else
+                ID_coloniaEmpleoP = Int32.Parse(ID_coloniaEmpleo.SelectedValue.ToString());   int ID_perdidaAuditivaP = Int32.Parse(ID_perdidaAuditiva.SelectedValue.ToString());
             Boolean prelinguisticaP = prelinguistica_check.Checked;
             int ID_gradoP = Int32.Parse(ID_grado.SelectedValue.ToString());
             Boolean bilateralP = bilateral_check.Checked;
@@ -446,6 +450,7 @@ namespace CSEQ
                                             modeloP, tiene_empleoP, tiene_aparatoP))
                 {
                     MessageBox.Show("La persona se ha modificado con exito!");
+                    Util.fillGrid(busqueda_grid, "buscarPersona", "%");
                 }
             }           
         }
@@ -472,6 +477,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarPersona", CURP_selected))
                 {
                     MessageBox.Show("Se elimino a la persona con exito!");
+                    Util.fillGrid(busqueda_grid, "buscarPersona", "%");
                 }
             }
         }
@@ -573,6 +579,7 @@ namespace CSEQ
             if (Util.executeStoredProcedure("modificarHijo", ID_hijoSelected, nombreHijoP, fechaNacP, esSordoP))
             {
                 MessageBox.Show("El hijo se ha modificado con exito!");
+                Util.fillGrid(hijos_grid, "BusquedaEnHijo", CURP_selected);
             }
         }
 
@@ -588,6 +595,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarHijo", ID_hijoSelected))
                 {
                     MessageBox.Show("El hijo se ha eliminado con exito!");
+                    Util.fillGrid(hijos_grid, "BusquedaEnHijo", CURP_selected);
                 }
             }
         }

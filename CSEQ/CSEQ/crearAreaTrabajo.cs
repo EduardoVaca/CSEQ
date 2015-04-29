@@ -39,6 +39,7 @@ namespace CSEQ
             if (Util.executeStoredProcedure("registrarAreaTrabajo", aNombre))
             {
                 MessageBox.Show("Area de Trabajo se guardo con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
             }
         }
         
@@ -73,6 +74,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarAreaTrabajo", nombre_selected))
                 {
                     MessageBox.Show("El Area de Trabajo se ha elimnado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
                 }
             }
         }
@@ -88,6 +90,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("modificarAreaTrabajo", nombre_selected, nombreNuevo))
                 {
                     MessageBox.Show("El area de trabajo se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
                 }
             }
         }

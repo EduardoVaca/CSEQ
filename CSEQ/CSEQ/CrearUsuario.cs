@@ -44,6 +44,7 @@ namespace CSEQ
             if (Util.executeStoredProcedure("registrarUsuario", loginU, passwordU, rolU))
             {
                 MessageBox.Show("El usuario se ha registrado con exito!");
+                Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
             }
         }
 
@@ -77,6 +78,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("eliminarUsuario", nombre))
                 {
                     MessageBox.Show("Se elimino usuario con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
                 }
             }
         }
@@ -94,6 +96,7 @@ namespace CSEQ
                 if (Util.executeStoredProcedure("modificarUsuario", nombre, nombreNuevo, nuevoPass, ID_rolViejo, ID_rolNuevo))
                 {
                     MessageBox.Show("El area Usuario se modifico con exito");
+                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
                 }
             }
         }
