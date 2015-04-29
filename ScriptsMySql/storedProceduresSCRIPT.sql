@@ -13,7 +13,9 @@ DELIMITER //
 CREATE PROCEDURE registrarCausa
 (IN nombreCausa CHAR(50))
 BEGIN
-	INSERT INTO Causa VALUES (0, nombreCausa);
+	START TRANSACTION;
+		INSERT INTO Causa VALUES (0, nombreCausa);
+    COMMIT;
 END //
 DELIMITER ;
 
@@ -23,7 +25,9 @@ DELIMITER //
 CREATE PROCEDURE registrarColonia
 (IN nombreColonia CHAR(50), ID_municipio INT, delegacion VARCHAR(80))
 BEGIN
-	INSERT INTO Colonia VALUES (0, nombreColonia, ID_municipio, delegacion);
+	START TRANSACTION;
+		INSERT INTO Colonia VALUES (0, nombreColonia, ID_municipio, delegacion);
+	COMMIT;
 END //
 DELIMITER ;
 
@@ -32,7 +36,9 @@ DELIMITER //
 CREATE PROCEDURE registrarMunicipio
 (IN nombreMunicipio CHAR(70), ID_estado INT)
 BEGIN
-	INSERT INTO Municipio VALUES (0, nombreMunicipio, ID_estado);
+	START TRANSACTION;
+		INSERT INTO Municipio VALUES (0, nombreMunicipio, ID_estado);
+	COMMIT;
 END //
 DELIMITER ;
 
@@ -41,7 +47,9 @@ DELIMITER //
 CREATE PROCEDURE registrarEstado
 (IN nombreEstado CHAR(70))
 BEGIN
-	INSERT INTO Estado VALUES(0, nombreEstado);
+	START TRANSACTION;
+		INSERT INTO Estado VALUES(0, nombreEstado);
+	COMMIT;
 END //
 DELIMITER ;
 
@@ -49,7 +57,9 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE registrarCenso(IN ID_censo NUMERIC(4))
 BEGIN
-	INSERT INTO Censo VALUES (ID_censo);
+	START TRANSACTION;
+		INSERT INTO Censo VALUES (ID_censo);
+	COMMIT;
 END //
 DELIMITER ;
 
@@ -58,7 +68,9 @@ DELIMITER //
 CREATE PROCEDURE registrarAparatoAuditivo
 (IN tipo CHAR(70), ID_marca INT)
 BEGIN
-	INSERT INTO AparatoAuditivo VALUES(0, tipo, ID_marca);
+	START TRANSACTION;
+		INSERT INTO AparatoAuditivo VALUES(0, tipo, ID_marca);
+	COMMIT;
 END //
 DELIMITER ;
 
@@ -67,7 +79,9 @@ DELIMITER //
 CREATE PROCEDURE registrarMarca
 (IN nombreMarca CHAR(40))
 BEGIN
-	INSERT INTO Marca VALUES (0, nombreMarca);
+	START TRANSACTION;
+		INSERT INTO Marca VALUES (0, nombreMarca);
+	COMMIT;
 END //
 DELIMITER ;
 
@@ -76,7 +90,9 @@ DELIMITER //
 CREATE PROCEDURE registrarSueldo
 (IN minimo CHAR(20), maximo CHAR(20))
 BEGIN
-	INSERT INTO Sueldo VALUES (0, minimo, maximo);
+	START TRANSACTION;
+		INSERT INTO Sueldo VALUES (0, minimo, maximo);
+	COMMIT;
 END //
 DELIMITER ;
 
