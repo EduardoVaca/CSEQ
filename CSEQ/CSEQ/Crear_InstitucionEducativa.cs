@@ -190,5 +190,15 @@ namespace CSEQ
         {
             guardar_btn.Enabled = true;
         }
+
+        private void back_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(back_picture);
+        }
+
+        private void back_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(back_picture);
+        }
     }
 }

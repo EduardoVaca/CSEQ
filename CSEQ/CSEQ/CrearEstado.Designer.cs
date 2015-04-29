@@ -37,7 +37,6 @@
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.Guardar_txt = new System.Windows.Forms.Button();
             this.Atras_picture = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.x_picture = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Busqueda_grp = new System.Windows.Forms.GroupBox();
@@ -48,6 +47,7 @@
             this.modificar_btn = new System.Windows.Forms.Button();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -116,19 +116,8 @@
             this.Atras_picture.TabIndex = 31;
             this.Atras_picture.TabStop = false;
             this.Atras_picture.Click += new System.EventHandler(this.Atras_picture_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(1226, 962);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(342, 29);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "ROMPIENDO PARADIGMAS";
+            this.Atras_picture.MouseLeave += new System.EventHandler(this.Atras_picture_MouseLeave);
+            this.Atras_picture.MouseHover += new System.EventHandler(this.Atras_picture_MouseHover);
             // 
             // x_picture
             // 
@@ -289,6 +278,19 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(1070, 981);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.TabIndex = 77;
+            this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
+            // 
             // CrearEstado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -299,6 +301,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1019);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.imagen);
             this.Controls.Add(this.eliminar_btn);
@@ -306,7 +309,6 @@
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.x_picture);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.Atras_picture);
             this.Controls.Add(this.Guardar_txt);
             this.Controls.Add(this.Nombre_label);
@@ -339,7 +341,6 @@
         private System.Windows.Forms.TextBox nombre_txt;
         private System.Windows.Forms.Button Guardar_txt;
         private System.Windows.Forms.PictureBox Atras_picture;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox x_picture;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox Busqueda_grp;
@@ -350,5 +351,6 @@
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.Label label5;
     }
 }

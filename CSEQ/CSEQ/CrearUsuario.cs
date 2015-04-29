@@ -112,5 +112,15 @@ namespace CSEQ
                 Application.Restart();
             }
         }
+
+        private void Atras_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(Atras_picture);
+        }
+
+        private void Atras_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(Atras_picture);
+        }
     }
 }

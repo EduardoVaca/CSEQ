@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guardar_btn = new System.Windows.Forms.Button();
-            this.rompiendoParadigmas_label = new System.Windows.Forms.Label();
             this.sueldoMaximo_label = new System.Windows.Forms.Label();
             this.sueldoMinimo_label = new System.Windows.Forms.Label();
             this.atras_picture = new System.Windows.Forms.PictureBox();
@@ -53,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -75,19 +75,6 @@
             this.guardar_btn.Text = "Guardar";
             this.guardar_btn.UseVisualStyleBackColor = true;
             this.guardar_btn.Click += new System.EventHandler(this.guardar_btn_Click);
-            // 
-            // rompiendoParadigmas_label
-            // 
-            this.rompiendoParadigmas_label.AutoSize = true;
-            this.rompiendoParadigmas_label.BackColor = System.Drawing.Color.Transparent;
-            this.rompiendoParadigmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rompiendoParadigmas_label.ForeColor = System.Drawing.SystemColors.Control;
-            this.rompiendoParadigmas_label.Location = new System.Drawing.Point(1226, 962);
-            this.rompiendoParadigmas_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.rompiendoParadigmas_label.Name = "rompiendoParadigmas_label";
-            this.rompiendoParadigmas_label.Size = new System.Drawing.Size(342, 29);
-            this.rompiendoParadigmas_label.TabIndex = 22;
-            this.rompiendoParadigmas_label.Text = "ROMPIENDO PARADIGMAS";
             // 
             // sueldoMaximo_label
             // 
@@ -127,6 +114,8 @@
             this.atras_picture.TabIndex = 18;
             this.atras_picture.TabStop = false;
             this.atras_picture.Click += new System.EventHandler(this.atras_picture_Click);
+            this.atras_picture.MouseLeave += new System.EventHandler(this.atras_picture_MouseLeave);
+            this.atras_picture.MouseHover += new System.EventHandler(this.atras_picture_MouseHover);
             // 
             // close_picture
             // 
@@ -362,6 +351,19 @@
             this.label4.TabIndex = 75;
             this.label4.Text = ".00";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(1075, 969);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.TabIndex = 76;
+            this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
+            // 
             // Crear_sueldo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -372,6 +374,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1601, 1007);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -383,7 +386,6 @@
             this.Controls.Add(this.modificar_btn);
             this.Controls.Add(this.maximo_txt);
             this.Controls.Add(this.guardar_btn);
-            this.Controls.Add(this.rompiendoParadigmas_label);
             this.Controls.Add(this.sueldoMaximo_label);
             this.Controls.Add(this.sueldoMinimo_label);
             this.Controls.Add(this.atras_picture);
@@ -413,7 +415,6 @@
         #endregion
 
         private System.Windows.Forms.Button guardar_btn;
-        private System.Windows.Forms.Label rompiendoParadigmas_label;
         private System.Windows.Forms.Label sueldoMaximo_label;
         private System.Windows.Forms.Label sueldoMinimo_label;
         private System.Windows.Forms.PictureBox atras_picture;
@@ -433,6 +434,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
 
     }
 }

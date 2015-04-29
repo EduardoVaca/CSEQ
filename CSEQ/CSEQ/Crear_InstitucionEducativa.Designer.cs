@@ -62,6 +62,7 @@
             this.telefono_txt = new System.Windows.Forms.MaskedTextBox();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
@@ -96,6 +97,8 @@
             this.back_picture.TabIndex = 22;
             this.back_picture.TabStop = false;
             this.back_picture.Click += new System.EventHandler(this.back_picture_Click);
+            this.back_picture.MouseLeave += new System.EventHandler(this.back_picture_MouseLeave);
+            this.back_picture.MouseHover += new System.EventHandler(this.back_picture_MouseHover);
             // 
             // label3
             // 
@@ -471,6 +474,19 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
+            this.label12.Location = new System.Drawing.Point(1070, 962);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(517, 29);
+            this.label12.TabIndex = 66;
+            this.label12.Text = "FORTALECIENDO A LA PERSONA SORDA";
+            // 
             // Crear_InstitucionEducativa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -481,6 +497,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1019);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.imagen);
             this.Controls.Add(this.telefono_txt);
@@ -562,5 +579,6 @@
         private System.Windows.Forms.MaskedTextBox telefono_txt;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.Label label12;
     }
 }

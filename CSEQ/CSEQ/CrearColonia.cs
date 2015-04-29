@@ -161,6 +161,16 @@ namespace CSEQ
             Guardar.Enabled = true;
         }
 
+        private void Atras_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(Atras);
+        }
+
+        private void Atras_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(Atras);
+        }
+
     }
 }
 

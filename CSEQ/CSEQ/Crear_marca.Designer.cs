@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guardar_btn = new System.Windows.Forms.Button();
-            this.rompiendoParadigmas_label = new System.Windows.Forms.Label();
             this.nombre_label = new System.Windows.Forms.Label();
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.marca_label = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.modificar_btn = new System.Windows.Forms.Button();
             this.imagen = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -70,19 +70,6 @@
             this.guardar_btn.Text = "Guardar";
             this.guardar_btn.UseVisualStyleBackColor = true;
             this.guardar_btn.Click += new System.EventHandler(this.guardar_btn_Click);
-            // 
-            // rompiendoParadigmas_label
-            // 
-            this.rompiendoParadigmas_label.AutoSize = true;
-            this.rompiendoParadigmas_label.BackColor = System.Drawing.Color.Transparent;
-            this.rompiendoParadigmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rompiendoParadigmas_label.ForeColor = System.Drawing.SystemColors.Control;
-            this.rompiendoParadigmas_label.Location = new System.Drawing.Point(1226, 962);
-            this.rompiendoParadigmas_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.rompiendoParadigmas_label.Name = "rompiendoParadigmas_label";
-            this.rompiendoParadigmas_label.Size = new System.Drawing.Size(342, 29);
-            this.rompiendoParadigmas_label.TabIndex = 27;
-            this.rompiendoParadigmas_label.Text = "ROMPIENDO PARADIGMAS";
             // 
             // nombre_label
             // 
@@ -133,6 +120,8 @@
             this.atras_picture.TabIndex = 25;
             this.atras_picture.TabStop = false;
             this.atras_picture.Click += new System.EventHandler(this.atras_picture_Click);
+            this.atras_picture.MouseLeave += new System.EventHandler(this.atras_picture_MouseLeave);
+            this.atras_picture.MouseHover += new System.EventHandler(this.atras_picture_MouseHover);
             // 
             // close_picture
             // 
@@ -293,6 +282,19 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(1034, 962);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
+            // 
             // Crear_marca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -303,6 +305,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1618, 1028);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.imagen);
             this.Controls.Add(this.eliminar_btn);
@@ -310,7 +313,6 @@
             this.Controls.Add(this.Busqueda_grp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guardar_btn);
-            this.Controls.Add(this.rompiendoParadigmas_label);
             this.Controls.Add(this.nombre_label);
             this.Controls.Add(this.atras_picture);
             this.Controls.Add(this.close_picture);
@@ -339,7 +341,6 @@
         #endregion
 
         private System.Windows.Forms.Button guardar_btn;
-        private System.Windows.Forms.Label rompiendoParadigmas_label;
         private System.Windows.Forms.Label nombre_label;
         private System.Windows.Forms.PictureBox atras_picture;
         private System.Windows.Forms.PictureBox close_picture;
@@ -354,5 +355,6 @@
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.Label label5;
     }
 }

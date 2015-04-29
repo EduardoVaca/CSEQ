@@ -123,5 +123,15 @@ namespace CSEQ
             }
         }
 
+        private void atras_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(atras_picture);
+        }
+
+        private void atras_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(atras_picture);
+        }
+
     }
 }
