@@ -60,5 +60,27 @@ namespace CSEQ
             Menu_consultas.Show();
         }
 
+        private void registros_pb_MouseHover(object sender, EventArgs e)
+        {
+            //MessageBox.Show(registros_pb.Size.ToString() + "\n" + registros_pb.Top.ToString() + "\n" + registros_pb.Left.ToString());
+            Util.maximizarCualquierIcono(registros_pb, new Size(114, 132), 5);            
+        }
+
+        private void registros_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(registros_pb, new Size(104, 122), 162, 187);
+        }
+
+        private void consultas_pb_MouseHover(object sender, EventArgs e)
+        {
+            //MessageBox.Show(consultas_pb.Size.ToString() + "\n" + consultas_pb.Top.ToString() + "\n" + consultas_pb.Left.ToString());
+            Util.maximizarCualquierIcono(consultas_pb, new Size(114, 132), 5);
+        }
+
+        private void consultas_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(consultas_pb, new Size(104, 122), 162, 543);
+        }
+
     }
 }

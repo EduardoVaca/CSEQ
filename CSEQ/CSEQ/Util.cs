@@ -559,11 +559,40 @@ namespace CSEQ
             pb.Size = new Size(40, 39);
         }
 
+        //Metodo para minimizar la imagen de "Atras" cuando el mouse este sobre ella
         public static void minimizarIconoAtras(PictureBox pb)
         {
             pb.Top = 7;
             pb.Left = 6;
             pb.Size = new Size(33, 32);
+        }
+
+        /****************************************************************************
+         * Metodo que agranda el tamaño del icono una vez que el mouse este sobre el
+         * ParamterosÑ
+         * @PictureBox
+         * @Nuevo tamano
+         * @retroseso en entero
+         * **************************************************************************/
+        public static void maximizarCualquierIcono(PictureBox pb, Size newSize, int retroseso)
+        {
+            pb.Top -= retroseso;
+            pb.Left -= retroseso;
+            pb.Size = newSize;
+        }
+
+        /****************************************************************************
+         * Metodo que minimiza el tamaño del icono una vez que el mouse este sobre el
+         * ParamterosÑ
+         * @PictureBox
+         * @Viejo tamano
+         * @retroseso en entero -> Debe ser el mismo que el metodo maximizarCualquierIcono
+         * **************************************************************************/
+        public static void minimizarCualquierIcono(PictureBox pb, Size oldSize, int oldTop, int oldLeft)
+        {
+            pb.Top = oldTop;
+            pb.Left = oldLeft;
+            pb.Size = oldSize;
         }
 
     }

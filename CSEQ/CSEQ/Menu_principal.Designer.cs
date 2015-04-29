@@ -123,6 +123,8 @@
             this.registros_pb.TabIndex = 28;
             this.registros_pb.TabStop = false;
             this.registros_pb.Click += new System.EventHandler(this.registros_pb_Click);
+            this.registros_pb.MouseLeave += new System.EventHandler(this.registros_pb_MouseLeave);
+            this.registros_pb.MouseHover += new System.EventHandler(this.registros_pb_MouseHover);
             // 
             // consultas_pb
             // 
@@ -135,6 +137,8 @@
             this.consultas_pb.TabIndex = 29;
             this.consultas_pb.TabStop = false;
             this.consultas_pb.Click += new System.EventHandler(this.consultas_pb_Click);
+            this.consultas_pb.MouseLeave += new System.EventHandler(this.consultas_pb_MouseLeave);
+            this.consultas_pb.MouseHover += new System.EventHandler(this.consultas_pb_MouseHover);
             // 
             // Menu_principal
             // 
