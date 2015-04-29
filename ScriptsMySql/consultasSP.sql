@@ -100,8 +100,8 @@ BEGIN
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
 	SELECT COUNT(*) as 'PersonasConAparato',  (COUNT(*) / totalPersonas * 100) as 'Porcentaje' 
 	FROM PerteneceCenso p
-	WHERE ID_censo = censo;
-	AND CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p WHERE ID_censo = censo;);
+	WHERE ID_censo = censo
+	AND CURP IN (SELECT CURP FROM PoseeAparatoAuditivo p WHERE ID_censo = censo);
 END //
 DELIMITER ;
 -- ******************************************************************************************
@@ -141,19 +141,6 @@ BEGIN
 END //
 DELIMITER ;
 
-
--- Numero de hombres y mujeres
-DELIMITER // 
-CREATE PROCEDURE consultaHombresMujeres
-()
-BEGIN 
-	DECLARE totalPersonas INT;
-	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT sexo_masculino as EsHombre, COUNT(*) as Total, (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
-	FROM Persona 
-	GROUP BY sexo_masculino;
-END //
-DELIMITER ;
 
 -- Numero de personas que tienen implante coclear*********************************************************
 DELIMITER //
@@ -298,3 +285,62 @@ END //
 DELIMITER ;
 	
 
+-- **********************************************************************************************************************
+-- Consulta de pérdida de audición por etapas (periodos)
+DELIMITER //
+CREATE PROCEDURE consultaEtapasPerdidaAudicion
+()
+BEGIN
+	DECLARE totalPersonas INT;
+    SELECT COUNT(*) INTO totalPersonas FROM Persona p;
+    SELECT t.periodo as 'Etapa', COUNT(*) as 'No. de Personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+    FROM Periodo t, Persona p
+    WHERE t.ID_periodo = p.ID_periodo
+    GROUP BY t.periodo;
+END //
+DELIMITER ;
+
+-- *********************************************************************************************************************
+								-- DEMOGRAFÍA
+-- Consulta de personas con discapacidad auditiva por municipio...
+DELIMITER //
+CREATE PROCEDURE consultaPorMunicipio
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT m.nombre as 'Municipio', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM Municipio m, Vive v, Colonia c
+	WHERE c.ID_municipio = m.ID_municipio AND c.ID_colonia = v.ID_colonia
+	GROUP BY m.nombre;
+END //
+DELIMITER ;
+
+
+-- Número de hombres y mujeres (por sexo)
+DELIMITER // 
+CREATE PROCEDURE consultaHombresMujeres
+()
+BEGIN 
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
+	SELECT sexo_masculino as EsHombre, COUNT(*) as Total, (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM Persona 
+	GROUP BY sexo_masculino;
+END //
+DELIMITER ;
+
+
+-- Consulta de personas con discapacidad auditiva por estado civil...
+DELIMITER //
+CREATE PROCEDURE consultaPorEstadoCivil
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT e.nombre AS 'Estao civil', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM EstadoCivil e, TieneEstadoCivil c
+	WHERE c.ID_estadoCivil = e.ID_estadoCivil
+	GROUP BY e.nombre;
+END //
+DELIMITER ;
