@@ -299,6 +299,16 @@ namespace CSEQ
             Util.minimizarCualquierIcono(eliminar_pb, new Size(40, 48), 448, 320);
         }
 
+        private void Buscar_MouseHover(object sender, EventArgs e)
+        {
+            Util.maximizarCualquierIcono(Buscar, new Size(36, 44), 4);            
+        }
+
+        private void Buscar_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(Buscar, new Size(28, 36), 268, 275);
+        }
+
 
 
     }

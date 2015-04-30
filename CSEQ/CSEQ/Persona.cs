@@ -669,8 +669,7 @@ namespace CSEQ
         }
 
         private void Buscar_MouseLeave(object sender, EventArgs e)
-        {
-           
+        {           
            Util.minimizarCualquierIcono(buscar_blanco, new Size(32, 37), 54, 426);
         }
 

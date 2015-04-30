@@ -245,7 +245,7 @@ namespace CSEQ
                 contador_parametros++;
             }            
             comando += ");";
-            MessageBox.Show(comando); 
+            //MessageBox.Show(comando); 
             return execute(comando);
         }
 
