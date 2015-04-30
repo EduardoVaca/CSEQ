@@ -95,12 +95,12 @@
             // 
             this.mensaje.AutoSize = true;
             this.mensaje.BackColor = System.Drawing.Color.Transparent;
-            this.mensaje.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mensaje.Font = new System.Drawing.Font("Candara", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mensaje.ForeColor = System.Drawing.Color.White;
-            this.mensaje.Location = new System.Drawing.Point(486, 750);
+            this.mensaje.Location = new System.Drawing.Point(857, 505);
             this.mensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mensaje.Name = "mensaje";
-            this.mensaje.Size = new System.Drawing.Size(0, 46);
+            this.mensaje.Size = new System.Drawing.Size(0, 26);
             this.mensaje.TabIndex = 7;
             // 
             // pictureBox2

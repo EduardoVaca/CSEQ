@@ -16,7 +16,7 @@ namespace CSEQ
         int rol;
         String CURP_selected;
         Boolean registro_persona = false;
-        int ID_hijoSelected;
+        int ID_hijoSelected, censoInput;
         Boolean bandera_termino;
 
         public Persona(int rol)
@@ -125,12 +125,10 @@ namespace CSEQ
         private void Buscar_Click(object sender, EventArgs e)
         {
             busqueda_grid.Visible = true;
-            bandera_termino = false;            
             
-            String busqueda = "%" + busqueda_txt.Text + "%";
+            String busqueda = "%" + busqueda_txt.Text + "%";            
             Util.fillGrid(busqueda_grid, "buscarPersona", busqueda);
-            bandera_termino = true;
-            
+           
         }
 
         //Metodo que llena toda la forma dependiendo la persona que se le de clic en el gird
@@ -140,13 +138,16 @@ namespace CSEQ
             String CURP;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
+                //loading_lb.Visible = true;
+                buscar_blanco.Visible = true;
+                buscar_gris.Visible = false;
                 registro_persona = true;
                 hijos_grid.Visible = true;
                 eliminar_pb.Enabled = true;
                 modificar_pb.Enabled = true;
                 nombre = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 CURP = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
-                int censoInput = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[2].Value.ToString());
+                censoInput = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[2].Value.ToString());
                 Boolean tiene_empleo = Boolean.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
                 Boolean tiene_aparato = Boolean.Parse(busqueda_grid.Rows[e.RowIndex].Cells[4].Value.ToString());
 
@@ -600,7 +601,7 @@ namespace CSEQ
 
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("eliminarPersona", CURP_selected))
+                if (Util.executeStoredProcedure("eliminarPersona", CURP_selected, censoInput))
                 {
                     MessageBox.Show("Se elimino a la persona con exito!");
                     Util.fillGrid(busqueda_grid, "buscarPersona", "%");
@@ -664,12 +665,14 @@ namespace CSEQ
 
         private void Buscar_MouseHover(object sender, EventArgs e)
         {
-            Util.maximizarCualquierIcono(Buscar, new Size(45, 50), 5);
+           Util.maximizarCualquierIcono(buscar_blanco, new Size(45, 50), 5);
+           Util.maximizarCualquierIcono(buscar_gris, new Size(45, 50), 5);
         }
 
         private void Buscar_MouseLeave(object sender, EventArgs e)
         {
-            Util.minimizarCualquierIcono(Buscar, new Size(32, 37), 54, 426);
+           
+           Util.minimizarCualquierIcono(buscar_blanco, new Size(32, 37), 54, 426);
         }
 
 

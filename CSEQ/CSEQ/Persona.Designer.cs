@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persona));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Persona_tabControl = new System.Windows.Forms.TabControl();
             this.DatosPersonales_tab = new System.Windows.Forms.TabPage();
@@ -176,7 +176,7 @@
             this.label44 = new System.Windows.Forms.Label();
             this.BuscarRegistro_tab = new System.Windows.Forms.TabPage();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
-            this.Buscar = new System.Windows.Forms.PictureBox();
+            this.buscar_blanco = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
             this.nuevoRegistro_pb = new System.Windows.Forms.PictureBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
@@ -188,6 +188,8 @@
             this.eliminar_pb = new System.Windows.Forms.PictureBox();
             this.modificar_pb = new System.Windows.Forms.PictureBox();
             this.guardar_pb = new System.Windows.Forms.PictureBox();
+            this.buscar_gris = new System.Windows.Forms.PictureBox();
+            this.loading_lb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -199,12 +201,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.hijos_grid)).BeginInit();
             this.BuscarRegistro_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buscar_blanco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuevoRegistro_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buscar_gris)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -1794,36 +1797,36 @@
             this.hijos_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.hijos_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.hijos_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.hijos_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hijos_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.hijos_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.hijos_grid.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.hijos_grid.DefaultCellStyle = dataGridViewCellStyle11;
             this.hijos_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.hijos_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.hijos_grid.Location = new System.Drawing.Point(282, 424);
             this.hijos_grid.Margin = new System.Windows.Forms.Padding(4);
             this.hijos_grid.Name = "hijos_grid";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.hijos_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hijos_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.hijos_grid.RowTemplate.Height = 33;
             this.hijos_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.hijos_grid.Size = new System.Drawing.Size(953, 264);
@@ -1967,9 +1970,11 @@
             this.BuscarRegistro_tab.BackColor = System.Drawing.Color.Transparent;
             this.BuscarRegistro_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BuscarRegistro_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BuscarRegistro_tab.Controls.Add(this.loading_lb);
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_grid);
-            this.BuscarRegistro_tab.Controls.Add(this.Buscar);
+            this.BuscarRegistro_tab.Controls.Add(this.buscar_blanco);
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_txt);
+            this.BuscarRegistro_tab.Controls.Add(this.buscar_gris);
             this.BuscarRegistro_tab.Location = new System.Drawing.Point(4, 36);
             this.BuscarRegistro_tab.Margin = new System.Windows.Forms.Padding(4);
             this.BuscarRegistro_tab.Name = "BuscarRegistro_tab";
@@ -1982,36 +1987,36 @@
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle8;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.busqueda_grid.Location = new System.Drawing.Point(24, 308);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.busqueda_grid.Size = new System.Drawing.Size(1544, 608);
@@ -2019,19 +2024,19 @@
             this.busqueda_grid.Visible = false;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
             // 
-            // Buscar
+            // buscar_blanco
             // 
-            this.Buscar.Image = global::CSEQ.Properties.Resources.Consultas;
-            this.Buscar.Location = new System.Drawing.Point(851, 104);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(6);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(63, 72);
-            this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Buscar.TabIndex = 16;
-            this.Buscar.TabStop = false;
-            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
-            this.Buscar.MouseLeave += new System.EventHandler(this.Buscar_MouseLeave);
-            this.Buscar.MouseHover += new System.EventHandler(this.Buscar_MouseHover);
+            this.buscar_blanco.Image = global::CSEQ.Properties.Resources.BuscarBmini;
+            this.buscar_blanco.Location = new System.Drawing.Point(851, 104);
+            this.buscar_blanco.Margin = new System.Windows.Forms.Padding(6);
+            this.buscar_blanco.Name = "buscar_blanco";
+            this.buscar_blanco.Size = new System.Drawing.Size(63, 72);
+            this.buscar_blanco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.buscar_blanco.TabIndex = 16;
+            this.buscar_blanco.TabStop = false;
+            this.buscar_blanco.Click += new System.EventHandler(this.Buscar_Click);            
+            this.buscar_blanco.MouseLeave += new System.EventHandler(this.Buscar_MouseLeave);
+            this.buscar_blanco.MouseHover += new System.EventHandler(this.Buscar_MouseHover);
             // 
             // busqueda_txt
             // 
@@ -2148,6 +2153,31 @@
             this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
             this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
             // 
+            // buscar_gris
+            // 
+            this.buscar_gris.Image = global::CSEQ.Properties.Resources.BuscarGmini;
+            this.buscar_gris.Location = new System.Drawing.Point(851, 104);
+            this.buscar_gris.Margin = new System.Windows.Forms.Padding(6);
+            this.buscar_gris.Name = "buscar_gris";
+            this.buscar_gris.Size = new System.Drawing.Size(63, 72);
+            this.buscar_gris.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.buscar_gris.TabIndex = 18;
+            this.buscar_gris.TabStop = false;
+            this.buscar_gris.Visible = false;
+            // 
+            // loading_lb
+            // 
+            this.loading_lb.AutoSize = true;
+            this.loading_lb.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loading_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.loading_lb.Location = new System.Drawing.Point(924, 133);
+            this.loading_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.loading_lb.Name = "loading_lb";
+            this.loading_lb.Size = new System.Drawing.Size(70, 29);
+            this.loading_lb.TabIndex = 19;
+            this.loading_lb.Text = "CURP";
+            this.loading_lb.Visible = false;
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -2190,12 +2220,13 @@
             this.BuscarRegistro_tab.ResumeLayout(false);
             this.BuscarRegistro_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busqueda_grid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buscar_blanco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuevoRegistro_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buscar_gris)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2315,7 +2346,7 @@
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.TabPage BuscarRegistro_tab;
         private System.Windows.Forms.DataGridView busqueda_grid;
-        private System.Windows.Forms.PictureBox Buscar;
+        private System.Windows.Forms.PictureBox buscar_blanco;
         private System.Windows.Forms.TextBox busqueda_txt;
         private System.Windows.Forms.TextBox calleEmpleo_txt;
         private System.Windows.Forms.Label label78;
@@ -2355,6 +2386,8 @@
         private System.Windows.Forms.PictureBox modificar_pb;
         private System.Windows.Forms.PictureBox guardar_pb;
         private System.Windows.Forms.PictureBox nuevoRegistro_pb;
+        private System.Windows.Forms.PictureBox buscar_gris;
+        private System.Windows.Forms.Label loading_lb;
 
     }
 }

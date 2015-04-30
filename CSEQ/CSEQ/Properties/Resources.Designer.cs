@@ -103,6 +103,26 @@ namespace CSEQ.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BuscarBmini {
+            get {
+                object obj = ResourceManager.GetObject("BuscarBmini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BuscarGmini {
+            get {
+                object obj = ResourceManager.GetObject("BuscarGmini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CausaB {
             get {
                 object obj = ResourceManager.GetObject("CausaB", resourceCulture);
