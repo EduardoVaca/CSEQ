@@ -140,20 +140,38 @@ namespace CSEQ
         }
 
         private void guardar_pb_MouseHover(object sender, EventArgs e)
-        {
-            MessageBox.Show(guardar_pb.Size.ToString() + "\n" + guardar_pb.Top.ToString() + "\n" + guardar_pb.Left.ToString());
+        {           
+            Util.maximizarCualquierIcono(guardar_pb, new Size(50, 53), 3);
         }
 
         private void modificar_pb_MouseHover(object sender, EventArgs e)
-        {
-            MessageBox.Show(modificar_pb.Size.ToString() + "\n" + modificar_pb.Top.ToString() + "\n" + modificar_pb.Left.ToString());
+        {            
+            Util.maximizarCualquierIcono(modificar_pb, new Size(42, 54), 3);
         }
 
         private void eliminar_pb_MouseHover(object sender, EventArgs e)
-        {
-            MessageBox.Show(eliminar_pb.Size.ToString() + "\n" + eliminar_pb.Top.ToString() + "\n" + eliminar_pb.Left.ToString());
+        {           
+            Util.maximizarCualquierIcono(eliminar_pb, new Size(46, 54), 3);
         }
 
+        private void guardar_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(guardar_pb, new Size(44, 47), 362, 62);
+        }
+
+        private void modificar_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(modificar_pb, new Size(36, 48), 362, 182);
+        }
+
+        private void eliminar_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(eliminar_pb, new Size(40, 48), 362, 294);
+        }
+
+
+        // MessageBox.Show(eliminar_pb.Size.ToString() + "\n" + eliminar_pb.Top.ToString() + "\n" + eliminar_pb.Left.ToString());
+        //MessageBox.Show(modificar_pb.Size.ToString() + "\n" + modificar_pb.Top.ToString() + "\n" + modificar_pb.Left.ToString());
 
     }
 }

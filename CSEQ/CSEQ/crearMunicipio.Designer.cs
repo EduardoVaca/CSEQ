@@ -295,45 +295,49 @@
             this.label5.TabIndex = 79;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 
-            // eliminar_pb
-            // 
-            this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
-            this.eliminar_pb.Enabled = false;
-            this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
-            this.eliminar_pb.Location = new System.Drawing.Point(661, 711);
-            this.eliminar_pb.Name = "eliminar_pb";
-            this.eliminar_pb.Size = new System.Drawing.Size(79, 92);
-            this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.eliminar_pb.TabIndex = 82;
-            this.eliminar_pb.TabStop = false;
-            this.eliminar_pb.Visible = false;
-            this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
-            // 
-            // modificar_pb
-            // 
-            this.modificar_pb.BackColor = System.Drawing.Color.Transparent;
-            this.modificar_pb.Enabled = false;
-            this.modificar_pb.Image = global::CSEQ.Properties.Resources.Editar;
-            this.modificar_pb.Location = new System.Drawing.Point(391, 711);
-            this.modificar_pb.Name = "modificar_pb";
-            this.modificar_pb.Size = new System.Drawing.Size(71, 92);
-            this.modificar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.modificar_pb.TabIndex = 81;
-            this.modificar_pb.TabStop = false;
-            this.modificar_pb.Visible = false;
-            this.modificar_pb.Click += new System.EventHandler(this.modificar_pb_Click);
-            // 
             // guardar_pb
             // 
             this.guardar_pb.BackColor = System.Drawing.Color.Transparent;
             this.guardar_pb.Image = global::CSEQ.Properties.Resources.Guardar;
-            this.guardar_pb.Location = new System.Drawing.Point(116, 724);
+            this.guardar_pb.Location = new System.Drawing.Point(118, 697);
             this.guardar_pb.Name = "guardar_pb";
-            this.guardar_pb.Size = new System.Drawing.Size(84, 79);
+            this.guardar_pb.Size = new System.Drawing.Size(89, 90);
             this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guardar_pb.TabIndex = 80;
+            this.guardar_pb.TabIndex = 66;
             this.guardar_pb.TabStop = false;
             this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
+            this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
+            this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
+            // 
+            // modificar_pb
+            // 
+            this.modificar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.modificar_pb.Image = global::CSEQ.Properties.Resources.Editar;
+            this.modificar_pb.Location = new System.Drawing.Point(365, 697);
+            this.modificar_pb.Name = "modificar_pb";
+            this.modificar_pb.Size = new System.Drawing.Size(71, 92);
+            this.modificar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modificar_pb.TabIndex = 67;
+            this.modificar_pb.TabStop = false;
+            this.modificar_pb.Visible = false;
+            this.modificar_pb.Click += new System.EventHandler(this.modificar_pb_Click);
+            this.modificar_pb.MouseLeave += new System.EventHandler(this.modificar_pb_MouseLeave);
+            this.modificar_pb.MouseHover += new System.EventHandler(this.modificar_pb_MouseHover);
+            // 
+            // eliminar_pb
+            // 
+            this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
+            this.eliminar_pb.Location = new System.Drawing.Point(589, 697);
+            this.eliminar_pb.Name = "eliminar_pb";
+            this.eliminar_pb.Size = new System.Drawing.Size(79, 92);
+            this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eliminar_pb.TabIndex = 68;
+            this.eliminar_pb.TabStop = false;
+            this.eliminar_pb.Visible = false;
+            this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
+            this.eliminar_pb.MouseLeave += new System.EventHandler(this.eliminar_pb_MouseLeave);
+            this.eliminar_pb.MouseHover += new System.EventHandler(this.eliminar_pb_MouseHover);
             // 
             // CrearMunicipio
             // 
