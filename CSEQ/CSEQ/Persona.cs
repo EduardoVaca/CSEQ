@@ -16,8 +16,7 @@ namespace CSEQ
         int rol;
         String CURP_selected;
         Boolean registro_persona = false;
-        int ID_hijoSelected, censoInput;
-        Boolean bandera_termino;
+        int ID_hijoSelected, censoInput;        
 
         public Persona(int rol)
         {
