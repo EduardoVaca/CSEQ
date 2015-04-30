@@ -169,6 +169,17 @@ namespace CSEQ
             Util.minimizarCualquierIcono(eliminar_pb, new Size(40, 48), 362, 294);
         }
 
+        private void Buscar_MouseHover(object sender, EventArgs e)
+        {
+            Util.maximizarCualquierIcono(Buscar, new Size(45, 42), 4);
+            //MessageBox.Show(Buscar.Size.ToString() + "\n" + Buscar.Top.ToString() + "\n" + Buscar.Left.ToString());
+        }
+
+        private void Buscar_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(Buscar, new Size(39, 36), 32, 305);
+        }
+
 
         // MessageBox.Show(eliminar_pb.Size.ToString() + "\n" + eliminar_pb.Top.ToString() + "\n" + eliminar_pb.Left.ToString());
         //MessageBox.Show(modificar_pb.Size.ToString() + "\n" + modificar_pb.Top.ToString() + "\n" + modificar_pb.Left.ToString());

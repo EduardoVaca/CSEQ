@@ -39,8 +39,7 @@ namespace CSEQ
             salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado;");
-            int id_estado = 22;
-            ID_estado.SelectedIndex = id_estado - 1;
+            int id_estado = Int32.Parse(ID_estado.SelectedValue.ToString());            
             Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
 
 

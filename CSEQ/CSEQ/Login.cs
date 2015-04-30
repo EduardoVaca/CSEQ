@@ -59,7 +59,7 @@ namespace CSEQ
         private void Login_Load(object sender, EventArgs e)
         {
             Util.creaConexion("localhost", "CSEQ", "root", "");
-            //Util.creaConexion("hcdesarrollo.com", "hcdesarr_chess", "hcdesarr_chess", "pruebachess2015");
+            //Util.creaConexion("cpseqcenso.org", "cpseqcen_censos", "cpseqcen_Admin", "ajaksordos%25");
             salir_tt.SetToolTip(x_picture, "Salir de la aplicación");            
             Util.clear(this);
         }

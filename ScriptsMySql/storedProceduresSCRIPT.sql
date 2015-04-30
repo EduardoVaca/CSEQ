@@ -339,8 +339,8 @@ CREATE PROCEDURE busquedaEnInstitucionEducativa
 (IN variable VARCHAR(80))
 BEGIN 
 	SELECT i.nombre as Nombre, i.correo as Correo, c.ID_colonia as Colonia, m.ID_municipio as Municipio, m.ID_estado as Estado
-	FROM Institucioneducativa i, Colonia c, Estado e, Municipio m,
-	Localizainstitucioneducativa loc
+	FROM InstitucionEducativa i, Colonia c, Estado e, Municipio m,
+	LocalizaInstitucionEducativa loc
 	WHERE i.nombre LIKE variable
 	AND loc.ID_institucionEducativa = i.ID_institucionEducativa AND loc.ID_colonia = c.ID_colonia 
 	AND c.ID_municipio = m.ID_municipio AND m.ID_estado = e.ID_estado;

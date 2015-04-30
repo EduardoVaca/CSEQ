@@ -35,15 +35,13 @@ namespace CSEQ
         private void Crear_InstitucionEducativa_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
-            int id_estado = 22;
-            ID_estado.SelectedIndex = id_estado - 1;
+            int id_estado = Int32.Parse(ID_estado.SelectedValue.ToString());            
             Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
 
 
             if (ID_municipio.SelectedItem != null)
             {
-                int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
-                //MessageBox.Show(ID_municipio.SelectedValue.ToString());
+                int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());                
                 String inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Colonia c WHERE m.ID_municipio=c.ID_municipio;";
                 Util.llenarComboBox(ID_colonia, inicio);
             }
