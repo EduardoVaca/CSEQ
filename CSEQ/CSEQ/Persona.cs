@@ -17,6 +17,7 @@ namespace CSEQ
         String CURP_selected;
         Boolean registro_persona = false;
         int ID_hijoSelected;
+        Boolean bandera_termino;
 
         public Persona(int rol)
         {
@@ -124,8 +125,12 @@ namespace CSEQ
         private void Buscar_Click(object sender, EventArgs e)
         {
             busqueda_grid.Visible = true;
+            bandera_termino = false;            
+            
             String busqueda = "%" + busqueda_txt.Text + "%";
             Util.fillGrid(busqueda_grid, "buscarPersona", busqueda);
+            bandera_termino = true;
+            
         }
 
         //Metodo que llena toda la forma dependiendo la persona que se le de clic en el gird
@@ -655,6 +660,16 @@ namespace CSEQ
         private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(24, 30), 529, 734);
+        }
+
+        private void Buscar_MouseHover(object sender, EventArgs e)
+        {
+            Util.maximizarCualquierIcono(Buscar, new Size(45, 50), 5);
+        }
+
+        private void Buscar_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(Buscar, new Size(32, 37), 54, 426);
         }
 
 

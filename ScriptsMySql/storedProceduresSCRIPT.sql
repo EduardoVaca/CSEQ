@@ -987,7 +987,7 @@ BEGIN
 					TienePerdidaAuditiva tPA, EsGrado eG, Causado c, Estado, Colonia, Municipio 
 					WHERE (p.nombre = nombreIn) AND p.CURP = CURPIn
 					AND p.CURP = pC.CURP AND (pC.ID_censo = IDcensoInput) AND pC.ID_censo = ce.ID_censo AND p.CURP = v.CURP AND p.CURP = tEC.CURP AND p.CURP = tNE.CURP
-					AND p.CURP = es.CURP AND P.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP 
+					AND p.CURP = es.CURP AND p.CURP = tLD.CURP AND tNEsp.CURP = p.CURP AND p.CURP = tNI.CURP AND p.CURP = tNL.CURP 
 					AND p.CURP = tPA.CURP AND p.CURP = eG.CURP AND c.CURP = p.CURP
 					AND v.ID_colonia = Colonia.ID_colonia AND Colonia.ID_municipio = Municipio.ID_municipio AND Municipio.ID_estado = Estado.ID_estado
 					GROUP BY p.CURP) as Tabla_Persona
