@@ -261,19 +261,20 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 
-            // guardar_pb
+            // eliminar_pb
             // 
-            this.guardar_pb.BackColor = System.Drawing.Color.Transparent;
-            this.guardar_pb.Image = global::CSEQ.Properties.Resources.Guardar;
-            this.guardar_pb.Location = new System.Drawing.Point(118, 697);
-            this.guardar_pb.Name = "guardar_pb";
-            this.guardar_pb.Size = new System.Drawing.Size(89, 90);
-            this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guardar_pb.TabIndex = 66;
-            this.guardar_pb.TabStop = false;
-            this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
-            this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
-            this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
+            this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
+            this.eliminar_pb.Location = new System.Drawing.Point(589, 697);
+            this.eliminar_pb.Name = "eliminar_pb";
+            this.eliminar_pb.Size = new System.Drawing.Size(79, 92);
+            this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.eliminar_pb.TabIndex = 68;
+            this.eliminar_pb.TabStop = false;
+            this.eliminar_pb.Visible = false;
+            this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
+            this.eliminar_pb.MouseLeave += new System.EventHandler(this.eliminar_pb_MouseLeave);
+            this.eliminar_pb.MouseHover += new System.EventHandler(this.eliminar_pb_MouseHover);
             // 
             // modificar_pb
             // 
@@ -290,20 +291,19 @@
             this.modificar_pb.MouseLeave += new System.EventHandler(this.modificar_pb_MouseLeave);
             this.modificar_pb.MouseHover += new System.EventHandler(this.modificar_pb_MouseHover);
             // 
-            // eliminar_pb
+            // guardar_pb
             // 
-            this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
-            this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
-            this.eliminar_pb.Location = new System.Drawing.Point(589, 697);
-            this.eliminar_pb.Name = "eliminar_pb";
-            this.eliminar_pb.Size = new System.Drawing.Size(79, 92);
-            this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.eliminar_pb.TabIndex = 68;
-            this.eliminar_pb.TabStop = false;
-            this.eliminar_pb.Visible = false;
-            this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
-            this.eliminar_pb.MouseLeave += new System.EventHandler(this.eliminar_pb_MouseLeave);
-            this.eliminar_pb.MouseHover += new System.EventHandler(this.eliminar_pb_MouseHover);
+            this.guardar_pb.BackColor = System.Drawing.Color.Transparent;
+            this.guardar_pb.Image = global::CSEQ.Properties.Resources.Guardar;
+            this.guardar_pb.Location = new System.Drawing.Point(118, 697);
+            this.guardar_pb.Name = "guardar_pb";
+            this.guardar_pb.Size = new System.Drawing.Size(89, 90);
+            this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guardar_pb.TabIndex = 66;
+            this.guardar_pb.TabStop = false;
+            this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
+            this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
+            this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
             // 
             // Crear_censo
             // 
@@ -329,6 +329,7 @@
             this.Controls.Add(this.ano_txt);
             this.Controls.Add(this.censo_label);
             this.DoubleBuffered = true;
+            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Crear_censo";

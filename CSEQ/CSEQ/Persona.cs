@@ -372,18 +372,7 @@ namespace CSEQ
             telefonoEmpleo_txt.Text = "";
             calleEmpleo_txt.Text = "";
             correoEmpleo_txt.Text = "";
-        }
-
-        //Metodo que limpia todo el form para hacer un nuevo registro
-        private void nuevo_registro_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea continuar? Perderá los cambios sin guardar", "Confirmación", MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                Util.clear(this);
-            }            
-        }
+        }        
 
         //Metodo que rellena los campos asociados al hijo seleccionado en el grid
         private void hijos_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -600,6 +589,59 @@ namespace CSEQ
                 }
             }
         }
+
+        //Metodo que limpia todo el form para hacer un nuevo registro
+        private void nuevoRegistro_pb_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Desea continuar? Perderá los cambios sin guardar", "Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Util.clear(this);
+            }    
+        }
+
+        //Metodos que cambian de tamano los iconos
+        private void guardar_pb_MouseHover(object sender, EventArgs e)
+        {            
+            Util.maximizarCualquierIcono(guardar_pb, new Size(34, 35), 3);
+        }
+
+        private void modificar_pb_MouseHover(object sender, EventArgs e)
+        {           
+            Util.maximizarCualquierIcono(modificar_pb, new Size(27, 37), 3);
+        }
+
+        private void eliminar_pb_MouseHover(object sender, EventArgs e)
+        {           
+            Util.maximizarCualquierIcono(eliminar_pb, new Size(30, 37), 3);
+        }
+
+        private void nuevoRegistro_pb_MouseHover(object sender, EventArgs e)
+        {            
+            Util.maximizarCualquierIcono(nuevoRegistro_pb, new Size(30, 36), 3);
+        }
+
+        private void guardar_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(guardar_pb, new Size(28, 29), 529, 212);
+        }
+
+        private void modificar_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(modificar_pb, new Size(21, 31), 529, 362);
+        }
+
+        private void eliminar_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(eliminar_pb, new Size(24, 31), 529, 490);
+        }
+
+        private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(24, 30), 529, 734);
+        }
+
 
     }
 }

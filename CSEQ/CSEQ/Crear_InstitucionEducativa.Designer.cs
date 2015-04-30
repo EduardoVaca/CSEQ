@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crear_InstitucionEducativa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -379,22 +379,22 @@
             // 
             // busqueda_grid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            this.busqueda_grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
+            this.busqueda_grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle8;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.Location = new System.Drawing.Point(14, 131);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
@@ -459,7 +459,7 @@
             this.eliminar_pb.BackColor = System.Drawing.Color.Transparent;
             this.eliminar_pb.Enabled = false;
             this.eliminar_pb.Image = global::CSEQ.Properties.Resources.Eliminar;
-            this.eliminar_pb.Location = new System.Drawing.Point(658, 862);
+            this.eliminar_pb.Location = new System.Drawing.Point(640, 862);
             this.eliminar_pb.Name = "eliminar_pb";
             this.eliminar_pb.Size = new System.Drawing.Size(79, 92);
             this.eliminar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -467,6 +467,8 @@
             this.eliminar_pb.TabStop = false;
             this.eliminar_pb.Visible = false;
             this.eliminar_pb.Click += new System.EventHandler(this.eliminar_pb_Click);
+            this.eliminar_pb.MouseLeave += new System.EventHandler(this.eliminar_pb_MouseLeave);
+            this.eliminar_pb.MouseHover += new System.EventHandler(this.eliminar_pb_MouseHover);
             // 
             // modificar_pb
             // 
@@ -481,18 +483,22 @@
             this.modificar_pb.TabStop = false;
             this.modificar_pb.Visible = false;
             this.modificar_pb.Click += new System.EventHandler(this.modificar_pb_Click);
+            this.modificar_pb.MouseLeave += new System.EventHandler(this.modificar_pb_MouseLeave);
+            this.modificar_pb.MouseHover += new System.EventHandler(this.modificar_pb_MouseHover);
             // 
             // guardar_pb
             // 
             this.guardar_pb.BackColor = System.Drawing.Color.Transparent;
             this.guardar_pb.Image = global::CSEQ.Properties.Resources.Guardar;
-            this.guardar_pb.Location = new System.Drawing.Point(113, 875);
+            this.guardar_pb.Location = new System.Drawing.Point(122, 862);
             this.guardar_pb.Name = "guardar_pb";
-            this.guardar_pb.Size = new System.Drawing.Size(84, 79);
+            this.guardar_pb.Size = new System.Drawing.Size(88, 92);
             this.guardar_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guardar_pb.TabIndex = 69;
             this.guardar_pb.TabStop = false;
             this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
+            this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
+            this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
             // 
             // Crear_InstitucionEducativa
             // 
