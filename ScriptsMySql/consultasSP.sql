@@ -262,6 +262,52 @@ DELIMITER ;
 END //
 DELIMITER ;
 
+
+
+-- Número de personas sordas pertenecientes a cada grado de pérdida auditiva xrecibiendo 5 booleanos...
+DELIMITER //
+CREATE PROCEDURE consultaGradoPerdidaAuditivaPorCadaGrado
+(IN leve boolean, media boolean, profunda boolean, severa boolean, total boolean)
+BEGIN
+	
+	DECLARE perLeve VARCHAR(50);
+	DECLARE perMedia VARCHAR(50);
+	DECLARE perProf VARCHAR(50);
+	DECLARE perSev VARCHAR(50);
+	DECLARE perTotal VARCHAR(50);
+	DECLARE totalPersonas INT;
+
+	SET perLeve = 'Per', perMedia = 'Per', perProf = 'Per', perSev = 'Per', perTotal = 'Per';
+
+	IF (leve) THEN
+		SET perLeve = 'Perdida Auditiva Leve';
+	END IF;
+
+	IF (media) THEN
+		SET perMedia = 'Perdida Auditiva Media';
+	END IF;
+
+	IF (profunda) THEN
+		SET perProf = 'Perdida Auditiva Profunda';
+	END IF;
+
+	IF (severa) THEN
+		SET perSev = 'Perdida Auditiva Severa';
+	END IF;
+
+	IF (total) THEN
+		SET perTotal = 'Perdida Auditiva Total';
+	END IF;
+
+	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
+	SELECT g.grado as 'Grado', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM Grado g, EsGrado es
+	WHERE g.ID_grado = es.ID_grado AND g.grado IN(perLeve, perMedia, perProf, perSev, perTotal)
+	GROUP BY g.grado;
+END //
+DELIMITER ;
+
+
 -- Numero de personas que tienen Perdida Auditiva BILATERAL o Unilateral
 -- ?????????????????????????
 DELIMITER //
@@ -517,3 +563,22 @@ BEGIN
 		AND CURP IN(SELECT CURP FROM TieneNivelEducativo t WHERE ID_censo = censo)) as Tabla2;
 END //
 DELIMITER ;
+
+
+-- Consulta de personas con discapacidad auditiva que tienen educación por municipio...
+DELIMITER //
+CREATE PROCEDURE consultaTieneEducacionPorMunicipio
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT m.nombre as 'Municipio', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM Municipio m, Vive v, Colonia c
+	WHERE c.ID_municipio = m.ID_municipio AND c.ID_colonia = v.ID_colonia
+	AND v.CURP IN (SELECT t.CURP FROM TieneNivelEducativo t);
+	GROUP BY m.nombre;
+END //
+DELIMITER ;
+
+
+-- Consulta de personas con discapacidad auditiva que tienen educación por municipio por censo
