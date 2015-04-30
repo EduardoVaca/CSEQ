@@ -44,10 +44,16 @@ namespace CSEQ
             }            
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
-
-        private void Persona_Load(object sender, EventArgs e)
+        
+        /*********************************************************************
+         * Metodo que carga todos los combobox
+         * Les establece un valor
+         * *****************************************************************/
+        private void cargaCombosBoxes()
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
+            Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue);
+            Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue);
             Util.llenarComboBox(Censo, "Select * FROM Censo");
             Util.llenarComboBox(ID_estadoCivil, "Select ID_estadoCivil, nombre FROM EstadoCivil");
             Util.llenarComboBox(ID_nivelEducativo, "SELECT ID_nivelEducativo, nivel FROM NivelEducativo");
@@ -62,10 +68,16 @@ namespace CSEQ
             Util.llenarComboBox(ID_grado, "SELECT ID_grado, CONCAT(grado, ': ', descripcion) FROM Grado");
             Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa");
             Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, contenido FROM AparatoConMarca");
-            //Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
             Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT('$',minimo, ' a ','$',maximo) FROM Sueldo");
             Util.llenarComboBox(ID_estadoEmpleo, "SELECT ID_estado, nombre FROM Estado");
+            Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue);
+            Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue);
             masculino_check.Checked = true;
+        }
+
+        private void Persona_Load(object sender, EventArgs e)
+        {
+            cargaCombosBoxes();
             if (rol == 1)
             {
                 modificar_pb.Visible = true;                
@@ -73,6 +85,7 @@ namespace CSEQ
             }
             salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+            
         }
 
         /*--------------------------------------------------------------------------------
@@ -491,7 +504,7 @@ namespace CSEQ
                                             tiene_empleoP, tiene_aparatoP))
             {
                 MessageBox.Show("La persona " + nombreP + " se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "buscarPersona", "%");
+               // Util.fillGrid(busqueda_grid, "buscarPersona", "%");
                 registro_persona = true;
             }
         }
@@ -598,6 +611,8 @@ namespace CSEQ
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
                 Util.clear(this);
+                cargaCombosBoxes();
+                hijos_grid.Visible = false;
             }    
         }
 

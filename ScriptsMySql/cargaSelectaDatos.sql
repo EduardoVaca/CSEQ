@@ -109,6 +109,14 @@ INSERT INTO `NivelEducativo` (`ID_nivelEducativo`, `nivel`) VALUES
 (8, 'Maestria'),
 (9, 'Doctorado');
 
+-- Carga Perdida Auditiva
+INSERT INTO `PerdidaAuditiva` (`ID_perdidaAuditiva`, `tipo`, `descripcion`) VALUES
+(1, 'Perdida Auditiva Conductiva', 'Oido externo - medio'),
+(2, 'Perdida Auditiva Neurosensorial', 'Oido interno'),
+(3, 'Perdida Auditiva Mixta', 'Oido medio - interno'),
+(4, 'Perdida Auditiva Retrococlear', 'Oido interno / nervio auditivo'),
+(5, 'No lo se', 'N/a');
+
 -- Carga ROL
 
 INSERT INTO `Rol` (`ID_rol`, `nombre`) VALUES

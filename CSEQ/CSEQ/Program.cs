@@ -16,7 +16,7 @@ namespace CSEQ
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
-            Application.Run(new Crear_censo(1));
+            Application.Run(new Login());
         }
     }
 }

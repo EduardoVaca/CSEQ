@@ -50,7 +50,7 @@ namespace CSEQ
                 eliminar_pb.Enabled = true;
                 minimo_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 maximo_selected = busqueda_grid.Rows[e.RowIndex].Cells[1].Value.ToString();
-                String sqlActiveRow = "SELECT * FROM sueldo WHERE ";
+                String sqlActiveRow = "SELECT * FROM Sueldo WHERE ";
                 sqlActiveRow += " maximo= '" + maximo_selected + "' AND minimo= '" + minimo_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
