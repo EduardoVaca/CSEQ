@@ -328,8 +328,7 @@
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.ano_txt);
             this.Controls.Add(this.censo_label);
-            this.DoubleBuffered = true;
-            this.Enabled = false;
+            this.DoubleBuffered = true;            
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Crear_censo";
