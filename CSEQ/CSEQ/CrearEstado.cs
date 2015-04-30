@@ -33,19 +33,6 @@ namespace CSEQ
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
-        //Metodo donde se agrega el registro a la base de datos
-        private void Guardar_txt_Click(object sender, EventArgs e)
-        {            
-            String eNombre = nombre_txt.Text;
-
-            if(eNombre.Length > 0)
-                if (Util.executeStoredProcedure("registrarEstado", eNombre))
-                {
-                    MessageBox.Show("El Estado se ha registrado con exito!");
-                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
-                }
-        }
-
         private void Buscar_Click(object sender, EventArgs e)
         {
             busqueda_grid.Visible = true;
@@ -63,39 +50,6 @@ namespace CSEQ
                 String sqlActiveRow = "SELECT * FROM Estado WHERE ";
                 sqlActiveRow += " nombre= '" + nombre_selected + "';";
                 Util.showData(this, sqlActiveRow);  
-            }
-        }
-
-        private void eliminar_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta;
-
-            respuesta = MessageBox.Show("¿Desea eliminar el estado: '" + nombre_selected + "'?", "Confirmacion de eliminar",
-                                        MessageBoxButtons.YesNo);
-
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("eliminarEstado", nombre_selected))
-                {
-                    MessageBox.Show("El estado se elimino con exito");
-                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
-                }
-            }
-        }
-
-        private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            String nombreNuevo = nombre_txt.Text;
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar Estado: " + nombre + "'?", "Confirmacion de modificar",
-                                        MessageBoxButtons.YesNo);
-            if (respuesta == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (Util.executeStoredProcedure("modificarEstado", nombre, nombreNuevo))
-                {
-                    MessageBox.Show("El estado se modifico con exito");
-                    Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");
-                }
             }
         }
 
@@ -150,11 +104,11 @@ namespace CSEQ
         {
             String nombreNuevo = nombre_txt.Text;
             DialogResult respuesta;
-            respuesta = MessageBox.Show("¿Desea modificar Estado: " + nombre + "'?", "Confirmacion de modificar",
+            respuesta = MessageBox.Show("¿Desea modificar Estado: " + nombre_selected + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
-                if (Util.executeStoredProcedure("modificarEstado", nombre, nombreNuevo))
+                if (Util.executeStoredProcedure("modificarEstado", nombre_selected, nombreNuevo))
                 {
                     MessageBox.Show("El estado se modifico con exito");
                     Util.fillGrid(busqueda_grid, "busquedaEnEstado", "%");

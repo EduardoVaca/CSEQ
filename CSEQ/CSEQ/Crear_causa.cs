@@ -139,6 +139,21 @@ namespace CSEQ
             }
         }
 
+        private void guardar_pb_MouseHover(object sender, EventArgs e)
+        {
+            MessageBox.Show(guardar_pb.Size.ToString() + "\n" + guardar_pb.Top.ToString() + "\n" + guardar_pb.Left.ToString());
+        }
+
+        private void modificar_pb_MouseHover(object sender, EventArgs e)
+        {
+            MessageBox.Show(modificar_pb.Size.ToString() + "\n" + modificar_pb.Top.ToString() + "\n" + modificar_pb.Left.ToString());
+        }
+
+        private void eliminar_pb_MouseHover(object sender, EventArgs e)
+        {
+            MessageBox.Show(eliminar_pb.Size.ToString() + "\n" + eliminar_pb.Top.ToString() + "\n" + eliminar_pb.Left.ToString());
+        }
+
 
     }
 }

@@ -112,8 +112,8 @@ DELIMITER //
 CREATE PROCEDURE registrarInstitucionEducativa
 (IN nombre VARCHAR(90), calle VARCHAR(80), telefono VARCHAR(20), correo VARCHAR(80), privada BOOLEAN, especializada BOOLEAN, ID_colonia INT)
 BEGIN
+	DECLARE ID INT;
 	START TRANSACTION;
-	    DECLARE ID INT;
 		INSERT INTO InstitucionEducativa VALUES(0, nombre, calle, telefono, correo, privada, especializada);	
 	    SELECT @@IDENTITY as ID_Institucion;
 	    SELECT MAX(ID_InstitucionEducativa) INTO ID FROM InstitucionEducativa;
@@ -133,8 +133,8 @@ ID_nivelLSM INT, descripcion_empleo VARCHAR(80), nombreCompany VARCHAR(50), corr
 interpretacion_LSM BOOLEAN, ID_areaTrabajo INT, ID_sueldo INT, ID_coloniaEmpleo INT, ID_perdidaAuditiva INT, prelinguistica BOOLEAN, ID_grado INT, bilateral BOOLEAN,
 ID_causa INT, ID_aparatoAuditivo INT, modelo VARCHAR(30), tiene_empleo BOOLEAN, tiene_aparato BOOLEAN)
 BEGIN
-	START TRANSACTION;
-		DECLARE IDempleo INT;
+	DECLARE IDempleo INT;
+	START TRANSACTION;		
 		CALL registrarPersona(CURP, nombre, fechaNac, sexoH, telefono, correo, calle, examen, implante, comunidad, alergia, 
 							enfermedad, mexicano, ife, ID_periodo, ID_censo, tiene_empleo, tiene_aparato);
 		INSERT INTO PerteneceCenso VALUES(CURP, ID_censo);
@@ -495,8 +495,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarAparatoAuditivo
 (IN tipoA VARCHAR(70), ID_marcaA INT)
 BEGIN
-	START TRANSACTION;
-		DECLARE IDaparato INT;
+	DECLARE IDaparato INT;
+	START TRANSACTION;	
 		SELECT ID_aparatoAuditivo INTO IDaparato FROM AparatoAuditivo WHERE tipo = tipoA AND ID_marca = ID_marcaA;
 		DELETE FROM PoseeAparatoAuditivo WHERE ID_aparatoAuditivo = IDaparato;
 		DELETE FROM AparatoAuditivo WHERE tipoA = tipo AND ID_marcaA = ID_marca;
@@ -534,8 +534,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarMarca
 (IN nombreM VARCHAR(40))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDmarcaObtenido INT;    
+	DECLARE IDmarcaObtenido INT;
+	START TRANSACTION;		    
 		SELECT ID_marca INTO IDmarcaObtenido FROM Marca WHERE nombre = nombreM;    
 	    UPDATE AparatoAuditivo SET ID_marca = null WHERE ID_marca = IDmarcaObtenido;	
 		DELETE FROM Marca WHERE ID_marca = IDmarcaObtenido;
@@ -548,8 +548,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarCausa
 (IN causaC VARCHAR(50))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDcausaObtenido INT;
+	DECLARE IDcausaObtenido INT;
+	START TRANSACTION;		
 		SELECT ID_causa INTO IDcausaObtenido FROM Causa WHERE causa = causaC;
 		DELETE FROM Causado WHERE ID_causa = IDcausaObtenido;
 		DELETE FROM Causa WHERE ID_causa = IDcausaObtenido;
@@ -562,8 +562,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarSueldo
 (IN minimoS VARCHAR(20), maximoS VARCHAR(20))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDsueldoObtenido INT;
+	DECLARE IDsueldoObtenido INT;
+	START TRANSACTION;		
 		SELECT ID_sueldo INTO IDsueldoObtenido FROM Sueldo WHERE minimo = minimoS AND maximo = maximoS;
 		DELETE FROM Gana WHERE ID_sueldo = IDsueldoObtenido;
 		DELETE FROM Sueldo WHERE ID_sueldo = IDsueldoObtenido;
@@ -589,8 +589,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarAreaTrabajo
 (IN nombreA VARCHAR(60))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDareaTrabajoObtenido INT;
+	DECLARE IDareaTrabajoObtenido INT;
+	START TRANSACTION;		
 		SELECT ID_areaTrabajo INTO IDareaTrabajoObtenido FROM AreaTrabajo WHERE nombre = nombreA;
 		UPDATE Empleo SET ID_areaTrabajo = null WHERE ID_areaTrabajo = IDareaTrabajoObtenido;
 		DELETE FROM AreaTrabajo WHERE nombre = nombreA;
@@ -644,8 +644,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarColonia
 (IN nombreC VARCHAR(80), IDmunicipio INT)
 BEGIN
-	START TRANSACTION;
-		DECLARE IDcoloniaObtenido INT;
+	DECLARE IDcoloniaObtenido INT;
+	START TRANSACTION;	
 		SELECT ID_colonia INTO IDcoloniaObtenido FROM Colonia WHERE nombre = nombreC AND ID_municipio = IDmunicipio;
 		DELETE FROM Vive WHERE ID_colonia = IDcoloniaObtenido;
 		DELETE FROM LocalizaInstitucionEducativa WHERE ID_colonia = IDcoloniaObtenido;
@@ -661,8 +661,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarMunicipio
 (IN nombreM VARCHAR(80), IDestado INT)
 BEGIN
-	START TRANSACTION;
-		DECLARE IDmunicpioObtenido INT;
+	DECLARE IDmunicpioObtenido INT;
+	START TRANSACTION;		
 		SELECT ID_municipio INTO IDmunicpioObtenido FROM Municipio WHERE nombre = nombreM AND ID_estado = IDestado;
 		DELETE FROM Colonia WHERE ID_municipio = IDmunicpioObtenido;	
 		DELETE FROM Municipio WHERE ID_municipio = IDmunicpioObtenido;
@@ -676,8 +676,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarEstado
 (IN nombreE VARCHAR(80))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDestadoObtenido INT;
+	DECLARE IDestadoObtenido INT;
+	START TRANSACTION;		
 		SELECT ID_estado INTO IDestadoObtenido FROM Estado WHERE nombre = nombreE;
 		DELETE FROM Municipio WHERE ID_estado = IDestadoObtenido;
 		DELETE FROM Estado WHERE ID_estado = IDestadoObtenido;
@@ -690,8 +690,8 @@ DELIMITER //
 CREATE PROCEDURE eliminarInstitucionEducativa
 (IN nombreI VARCHAR(90))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDinstitucionObtenida INT;
+	DECLARE IDinstitucionObtenida INT;
+	START TRANSACTION;		
 		SELECT ID_institucionEducativa INTO IDinstitucionObtenida FROM InstitucionEducativa WHERE nombre = nombreI;
 		DELETE FROM Estudiado WHERE ID_institucionEducativa = IDinstitucionObtenida;
 		DELETE FROM LocalizaInstitucionEducativa WHERE ID_institucionEducativa = IDinstitucionObtenida;
@@ -708,8 +708,8 @@ DELIMITER //
 CREATE PROCEDURE modificarAparatoAuditivo
 (IN tipoA VARCHAR(70), ID_marcaA INT, tipoNuevo VARCHAR(70), ID_marcaNuevo INT)
 BEGIN
-	START TRANSACTION;
-		DECLARE IDaparatoObtenido INT;
+	DECLARE IDaparatoObtenido INT;
+	START TRANSACTION;		
 		SELECT ID_aparatoAuditivo INTO IDaparatoObtenido FROM AparatoAuditivo WHERE tipo = tipoA AND ID_marca = ID_marcaA;
 		UPDATE AparatoAuditivo SET tipo = tipoNuevo, ID_marca = ID_marcaNuevo
 		WHERE ID_aparatoAuditivo = IDaparatoObtenido;
@@ -748,8 +748,8 @@ DELIMITER //
 CREATE PROCEDURE modificarMarca
 (IN nombreM VARCHAR(40), nombreNuevo VARCHAR(40))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDmarcaObtenido INT;
+	DECLARE IDmarcaObtenido INT;
+	START TRANSACTION;		
 	    SELECT ID_marca INTO IDmarcaObtenido FROM Marca WHERE nombre = nombreM;
 		UPDATE Marca SET nombre = nombreNuevo WHERE nombre = nombreM;
 	COMMIT;
@@ -761,8 +761,8 @@ DELIMITER //
 CREATE PROCEDURE modificarCausa
 (IN causaC VARCHAR(50), causaNueva VARCHAR(50))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDcausaObtenido INT;
+	DECLARE IDcausaObtenido INT;
+	START TRANSACTION;		
 		SELECT ID_causa INTO IDcausaObtenido FROM Causa WHERE causa = causaC;
 		UPDATE Causa SET causa = causaNueva WHERE ID_causa = IDcausaObtenido;
 	COMMIT;
@@ -843,8 +843,8 @@ DELIMITER //
 CREATE PROCEDURE modificarColonia
 (IN nombreC VARCHAR(80), IDmunicipio INT, nombreNuevo VARCHAR(80), IDmunicipioNuevo INT, delegacionNuevo VARCHAR(80))
 BEGIN
-	START TRANSACTION;
-		DECLARE IDcoloniaObtenido INT;
+	DECLARE IDcoloniaObtenido INT;
+	START TRANSACTION;		
 		SELECT ID_colonia INTO IDcoloniaObtenido FROM Colonia WHERE nombre = nombreC AND ID_municipio = IDmunicipio;
 		UPDATE Colonia SET nombre = nombreNuevo, ID_municipio = IDmunicipioNuevo, delegacion = delegacionNuevo WHERE ID_colonia = IDcoloniaObtenido;
 	COMMIT;
@@ -880,8 +880,8 @@ CREATE PROCEDURE modificarInstitucionEducativa
 (IN nombreViejo VARCHAR(90), nombreNuevo VARCHAR(90), calleNuevo VARCHAR(80), telefonoNuevo VARCHAR(20), correoNuevo VARCHAR(80),
  privadaNuevo BOOLEAN, especializadaNuevo BOOLEAN, IDcoloniaNuevo INT)
 BEGIN
-	START TRANSACTION;
-		DECLARE IDinstitucion INT;
+	DECLARE IDinstitucion INT;
+	START TRANSACTION;		
 		SELECT ID_institucionEducativa INTO IDinstitucion FROM Institucioneducativa WHERE nombre = nombreViejo;
 		UPDATE InstitucionEducativa SET nombre = nombreNuevo, calle = calleNuevo, telefono = telefonoNuevo, correo = correoNuevo, privada = privadaNuevo,
 		especializada = especializadaNuevo WHERE nombre = nombreViejo;
