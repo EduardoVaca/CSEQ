@@ -25,6 +25,7 @@ namespace CSEQ
             this.index = index;
             this.rol=rol;
             InitializeComponent();
+            todoscensos_radio.Checked = true;
         }
 
         private void x_picture_Click(object sender, EventArgs e)
@@ -73,6 +74,8 @@ namespace CSEQ
                 case 2:
                     break;
             }
+            todoscensos_radio.Checked = false;
+            todoscensos_radio.Checked = true;
         }
 
         private void estadoSalud_combo_SelectionChangeCommitted(object sender, EventArgs e)
@@ -80,6 +83,8 @@ namespace CSEQ
             ID_censo.Enabled = true;
             todoscensos_radio.Enabled = true;
             indexReporte = auxiliarAuditivo_combo.SelectedIndex;
+            todoscensos_radio.Checked = false;
+            todoscensos_radio.Checked = true;
         }
 
         private void todoscensos_radio_CheckedChanged(object sender, EventArgs e)
@@ -123,6 +128,14 @@ namespace CSEQ
             {
                 switch (this.estadoSalud_combo.SelectedIndex)
                 {
+                    case 0:
+                        Reporte.Enabled = true;
+                        salida = 1;
+                        query = "CALL consultaTienenAlergia();";
+                        type = "Barra";
+                        indexReporte = 0;
+                        Util.graphData(zedGraph, query, type);
+                        break;
                     case 1:
                         Reporte.Enabled = true;
                         salida = 1;
@@ -183,6 +196,13 @@ namespace CSEQ
             {
                 switch (estadoSalud_combo.SelectedIndex)
                 {
+                    case 0:
+                        salida = 2;
+                        query = "CALL consultaTienenAlergiaPorCenso(" +id_censo+");";
+                        type = "Barra";
+                        indexReporte = 0;
+                        Util.graphData(zedGraph, query, type);
+                        break;
                     case 1:
                         query = "CALL consultaTienenEnfermedadPorCenso(" + id_censo + ");";
                         type = "Barra";
@@ -201,9 +221,7 @@ namespace CSEQ
 
         private void Reporte_Click(object sender, EventArgs e)
         {
-            
-
-            
+            //MessageBox.Show(query + "-" + index + "-" + indexReporte + "-" + salida);
             Reporte Nuevo = new Reporte(query,index,indexReporte,salida,getId_censo());
             Nuevo.Show();            
             

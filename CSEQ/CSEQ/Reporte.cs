@@ -30,6 +30,7 @@ namespace CSEQ
             this.index = index;
             this.entrada = entrada;
             this.censo = censo;
+            this.indexReporte = indexReporte;
             
         }
 
@@ -96,11 +97,26 @@ namespace CSEQ
                             MessageBox.Show("Reporte no valido");
                             break;
                     }
+
                     break;
                 case 1:
+                    //MessageBox.Show(query + "-" + index + "-" + indexReporte + "-" + entrada);
                     switch (indexReporte)
                     {
                         case 0:
+                            if (entrada == 1)
+                            {
+                                
+                                ReporteAlergia report = new ReporteAlergia();
+                                reportViewer.ReportSource = report;
+                            }
+                            if (entrada == 2)
+                            {
+                                ReporteAlergiaCenso report = new ReporteAlergiaCenso();
+                                reportViewer.ReportSource = report;
+                            }
+                            break;
+                        case 1:
                             if (entrada == 1)
                             {
                                 ReporteEnfermedad report = new ReporteEnfermedad();
@@ -116,49 +132,13 @@ namespace CSEQ
                                 reportViewer.ReportSource = report;
                             }
                             break;
-                        case 1:
-                            if (entrada == 1)
-                            {
-                                ReporteAuxiliares report = new ReporteAuxiliares();
-                                reportViewer.ReportSource = report;
-                            }
-                            if (entrada == 2)
-                            {
-
-                                if (query.Contains("SiTiene"))
-                                {
-                                    ReporteAuxiliaresCenso report = new ReporteAuxiliaresCenso();
-                                    report.SetParameterValue("censo", censo);
-                                    reportViewer.ReportSource = report;
-                                }
-                                else if (query.Contains("NoTiene"))
-                                {
-                                    ReporteNoAuxiliaresCenso report = new ReporteNoAuxiliaresCenso();
-                                    report.SetParameterValue("censo", censo);
-                                    reportViewer.ReportSource = report;
-                                }
-                                //report.SetDataSource(Util.getData(query));
-                                // report.Parameter_Año.CurrentValues.Insert(censo,censo);
-                                //report.SetParameterValue(censo, report.Parameter_censo);
-                            }
-                            break;
                         case 2:
-                            if (entrada == 1)
-                            {
-                                ReporteCoclear report = new ReporteCoclear();
-                                reportViewer.ReportSource = report;
-                            }
-                            if (entrada == 2)
-                            {
-                                ReporteCoclearCenso report = new ReporteCoclearCenso();
-                                report.SetParameterValue("censo", censo);
-                                reportViewer.ReportSource = report;
-                            }
                             break;
                         default:
                             MessageBox.Show("Reporte no valido");
                             break;
                     }
+
                 break;
             }
         }
