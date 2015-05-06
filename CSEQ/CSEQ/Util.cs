@@ -249,24 +249,6 @@ namespace CSEQ
             return execute(comando);
         }
 
-        public static string executeStoredProcedureS(String nombre, params Object[] parametros)
-        {
-            String comando;
-            comando = "CALL " + nombre + " (";
-            int size = parametros.Length;
-            int contador_parametros = 0;
-            foreach (Object param in parametros)
-            {
-                if (contador_parametros + 1 == size)
-                    comando += MySQLFormat(param);
-                else
-                    comando += MySQLFormat(param) + ", ";
-                contador_parametros++;
-            }
-            comando += ");";            
-            return comando;
-        }
-
 
         public static String consultaStoredProcedure(String nombre, params Object[] parametros)
         {
@@ -305,6 +287,18 @@ namespace CSEQ
            // MessageBox.Show(query);
             if (table != null)
                 grid.DataSource = table;
+        }
+
+        public static void fillGridAviso(DataGridView grid, String nombre, System.Windows.Forms.Label lb, params Object[] parametros)
+        {
+            lb.Visible = true;
+            DataTable table;
+            String query = consultaStoredProcedure(nombre, parametros);
+            table = getData(query);
+            // MessageBox.Show(query);
+            if (table != null)
+                grid.DataSource = table;
+            //lb.Visible = false;
         }
 
 

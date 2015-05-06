@@ -76,7 +76,7 @@ namespace CSEQ
         }
 
         private void Persona_Load(object sender, EventArgs e)
-        {
+        {            
             cargaCombosBoxes();
             if (rol == 1)
             {
@@ -123,10 +123,12 @@ namespace CSEQ
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-            busqueda_grid.Visible = true;
-            
-            String busqueda = "%" + busqueda_txt.Text + "%";            
+            busqueda_grid.Visible = true;           
+            String busqueda = "%" + busqueda_txt.Text + "%"; 
+           // MouseP
+            Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "buscarPersona", busqueda);
+            Cursor = Cursors.Default;
            
         }
 

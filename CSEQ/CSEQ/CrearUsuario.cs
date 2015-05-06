@@ -157,7 +157,7 @@ namespace CSEQ
 
         private void Buscar_MouseHover(object sender, EventArgs e)
         {
-            Util.maximizarCualquierIcono(Buscar, new Size(38, 36), 4);
+            Util.maximizarCualquierIcono(Buscar, new Size(34, 38), 4);
         }
 
         private void Buscar_MouseLeave(object sender, EventArgs e)

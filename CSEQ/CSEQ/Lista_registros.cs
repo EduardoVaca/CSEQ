@@ -63,7 +63,7 @@ namespace CSEQ
         private void persona_pb_MouseDown(object sender, MouseEventArgs e)
         {
             persona_press.Visible = true;
-            persona_pb.Visible = false;
+            persona_pb.Visible = false;            
         }
 
         private void colonia_pb_MouseDown(object sender, MouseEventArgs e)
@@ -128,7 +128,7 @@ namespace CSEQ
 
 
         private void persona_pb_MouseUp(object sender, MouseEventArgs e)
-        {
+        {            
             Form f = Application.OpenForms.Cast<Form>().FirstOrDefault(c => c is Persona);
             if (f == null)
             {
