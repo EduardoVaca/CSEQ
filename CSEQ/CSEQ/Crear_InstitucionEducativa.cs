@@ -309,6 +309,23 @@ namespace CSEQ
             Util.minimizarCualquierIcono(Buscar, new Size(28, 36), 268, 275);
         }
 
+        private void nuevoRegistro_pb_MouseHover(object sender, EventArgs e)
+        {
+            Util.maximizarCualquierIcono(nuevoRegistro_pb, new Size(41, 52), 3);
+            //MessageBox.Show(nuevoRegistro_pb.Top.ToString() + "left: " + nuevoRegistro_pb.Left.ToString() + "size: " + nuevoRegistro_pb.Size.Height.ToString() + nuevoRegistro_pb.Size.Width.ToString());
+        }
+
+        private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(37, 48), 448, 423);
+        }
+
+        private void nuevoRegistro_pb_Click(object sender, EventArgs e)
+        {
+            Util.clear(this);
+            //Volver a llenar registros1!!!
+        }
+
 
 
     }

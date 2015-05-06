@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Crear_InstitucionEducativa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,6 +66,8 @@
             this.eliminar_pb = new System.Windows.Forms.PictureBox();
             this.modificar_pb = new System.Windows.Forms.PictureBox();
             this.guardar_pb = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.nuevoRegistro_pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
@@ -76,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevoRegistro_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -381,22 +384,22 @@
             // 
             // busqueda_grid
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
-            this.busqueda_grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
+            this.busqueda_grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle8;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.Location = new System.Drawing.Point(14, 131);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
@@ -502,6 +505,33 @@
             this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
             this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(813, 968);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(170, 29);
+            this.label13.TabIndex = 74;
+            this.label13.Text = "Nuevo Registro";
+            // 
+            // nuevoRegistro_pb
+            // 
+            this.nuevoRegistro_pb.BackColor = System.Drawing.Color.Transparent;
+            this.nuevoRegistro_pb.Image = global::CSEQ.Properties.Resources.Registros;
+            this.nuevoRegistro_pb.Location = new System.Drawing.Point(846, 862);
+            this.nuevoRegistro_pb.Name = "nuevoRegistro_pb";
+            this.nuevoRegistro_pb.Size = new System.Drawing.Size(74, 92);
+            this.nuevoRegistro_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.nuevoRegistro_pb.TabIndex = 73;
+            this.nuevoRegistro_pb.TabStop = false;
+            this.nuevoRegistro_pb.Click += new System.EventHandler(this.nuevoRegistro_pb_Click);
+            this.nuevoRegistro_pb.MouseLeave += new System.EventHandler(this.nuevoRegistro_pb_MouseLeave);
+            this.nuevoRegistro_pb.MouseHover += new System.EventHandler(this.nuevoRegistro_pb_MouseHover);
+            // 
             // Crear_InstitucionEducativa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -512,6 +542,8 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1019);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.nuevoRegistro_pb);
             this.Controls.Add(this.eliminar_pb);
             this.Controls.Add(this.modificar_pb);
             this.Controls.Add(this.guardar_pb);
@@ -559,6 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eliminar_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modificar_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guardar_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevoRegistro_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,5 +633,7 @@
         private System.Windows.Forms.PictureBox eliminar_pb;
         private System.Windows.Forms.PictureBox modificar_pb;
         private System.Windows.Forms.PictureBox guardar_pb;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox nuevoRegistro_pb;
     }
 }
