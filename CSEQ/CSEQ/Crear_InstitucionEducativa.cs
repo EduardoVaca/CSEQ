@@ -32,19 +32,26 @@ namespace CSEQ
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
-        private void Crear_InstitucionEducativa_Load(object sender, EventArgs e)
+        /*Metodo que llena los combo boxes de la Forma*/
+        private void llenarComboBoxes()
         {
             Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
-            int id_estado = Int32.Parse(ID_estado.SelectedValue.ToString());            
+            int id_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
             Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
 
 
             if (ID_municipio.SelectedItem != null)
             {
-                int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());                
+                int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
                 String inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Colonia c WHERE m.ID_municipio=c.ID_municipio;";
                 Util.llenarComboBox(ID_colonia, inicio);
             }
+        }
+
+        private void Crear_InstitucionEducativa_Load(object sender, EventArgs e)
+        {
+
+            llenarComboBoxes();
 
             if (rol == 1)
             {
@@ -323,7 +330,7 @@ namespace CSEQ
         private void nuevoRegistro_pb_Click(object sender, EventArgs e)
         {
             Util.clear(this);
-            //Volver a llenar registros1!!!
+            llenarComboBoxes();
         }
 
 

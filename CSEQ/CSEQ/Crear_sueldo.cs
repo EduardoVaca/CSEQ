@@ -175,5 +175,20 @@ namespace CSEQ
             Util.minimizarCualquierIcono(Buscar, new Size(30, 36), 32, 305);
         }
 
+        private void nuevoRegistro_pb_Click(object sender, EventArgs e)
+        {
+            Util.clear(this);
+        }
+
+        private void nuevoRegistro_pb_MouseHover(object sender, EventArgs e)
+        {
+            Util.maximizarCualquierIcono(nuevoRegistro_pb, new Size(36, 42), 3);
+        }
+
+        private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(32, 38), 480, 6);
+        }
+
     }
 }
