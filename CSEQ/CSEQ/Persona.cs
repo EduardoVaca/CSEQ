@@ -620,10 +620,13 @@ namespace CSEQ
             respuesta = MessageBox.Show("¿Desea continuar? Perderá los cambios sin guardar", "Confirmación", MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
+                Cursor = Cursors.WaitCursor;
                 Util.clear(this);
                 cargaCombosBoxes();
                 hijos_grid.Visible = false;
-            }    
+                Cursor = Cursors.Default;
+            }
+            Persona_tabControl.SelectedTab = DatosPersonales_tab;
         }
 
         //Metodos que cambian de tamano los iconos
