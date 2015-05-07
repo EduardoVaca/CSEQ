@@ -2203,6 +2203,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Persona";
             this.Load += new System.EventHandler(this.Persona_Load);
+            this.VisibleChanged += new System.EventHandler(this.Persona_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.Persona_tabControl.ResumeLayout(false);
             this.DatosPersonales_tab.ResumeLayout(false);

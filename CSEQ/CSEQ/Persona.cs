@@ -675,6 +675,11 @@ namespace CSEQ
            Util.minimizarCualquierIcono(buscar_blanco, new Size(32, 37), 54, 426);
         }
 
-
+        //Metodo con el cual recarga los combo boxes una vez reabierto el borrador pendiente
+        //Esto con la razon de mantenerlos actualizados
+        private void Persona_VisibleChanged(object sender, EventArgs e)
+        {
+            cargaCombosBoxes();
+        }
     }
 }
