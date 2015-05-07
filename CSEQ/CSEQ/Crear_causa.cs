@@ -32,12 +32,19 @@ namespace CSEQ
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
-
-        private void Buscar_Click(object sender, EventArgs e)
+        private void buscar()
         {
             busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
+            Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "busquedaEnCausa", busqueda);
+            Cursor = Cursors.Default;
+        }
+
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -192,6 +199,15 @@ namespace CSEQ
         private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(32, 38), 496, 6);
+        }
+
+        //Metodo para habilitar el enter en la busqueda
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
         }
         
         // MessageBox.Show(nuevoRegistro_pb.Top.ToString() + "left: " + nuevoRegistro_pb.Left.ToString() + "size: " + nuevoRegistro_pb.Size.Height.ToString() + nuevoRegistro_pb.Size.Width.ToString());

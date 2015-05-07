@@ -102,11 +102,18 @@ namespace CSEQ
 
         }
 
-        private void Buscar_Click(object sender, EventArgs e)
+        private void buscar()
         {
             busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
+            Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", busqueda);
+            Cursor = Cursors.Default;
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -333,7 +340,13 @@ namespace CSEQ
             llenarComboBoxes();
         }
 
-
-
+        //Metodo para habilitar los enter en la busqueda
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
+        }
     }
 }

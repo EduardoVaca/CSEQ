@@ -175,7 +175,6 @@
             this.tieneHijo_check = new System.Windows.Forms.CheckBox();
             this.label44 = new System.Windows.Forms.Label();
             this.BuscarRegistro_tab = new System.Windows.Forms.TabPage();
-            this.loading_lb = new System.Windows.Forms.Label();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.buscar_blanco = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
@@ -1970,7 +1969,6 @@
             this.BuscarRegistro_tab.BackColor = System.Drawing.Color.Transparent;
             this.BuscarRegistro_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BuscarRegistro_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BuscarRegistro_tab.Controls.Add(this.loading_lb);
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_grid);
             this.BuscarRegistro_tab.Controls.Add(this.buscar_blanco);
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_txt);
@@ -1981,19 +1979,6 @@
             this.BuscarRegistro_tab.Size = new System.Drawing.Size(1597, 966);
             this.BuscarRegistro_tab.TabIndex = 5;
             this.BuscarRegistro_tab.Text = "Buscar Registro";
-            // 
-            // loading_lb
-            // 
-            this.loading_lb.AutoSize = true;
-            this.loading_lb.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loading_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.loading_lb.Location = new System.Drawing.Point(924, 133);
-            this.loading_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.loading_lb.Name = "loading_lb";
-            this.loading_lb.Size = new System.Drawing.Size(68, 29);
-            this.loading_lb.TabIndex = 19;
-            this.loading_lb.Text = "Listo!";
-            this.loading_lb.Visible = false;
             // 
             // busqueda_grid
             // 
@@ -2061,6 +2046,7 @@
             this.busqueda_txt.Name = "busqueda_txt";
             this.busqueda_txt.Size = new System.Drawing.Size(796, 56);
             this.busqueda_txt.TabIndex = 15;
+            this.busqueda_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.busqueda_txt_KeyPress);
             // 
             // buscar_gris
             // 
@@ -2388,7 +2374,6 @@
         private System.Windows.Forms.PictureBox guardar_pb;
         private System.Windows.Forms.PictureBox nuevoRegistro_pb;
         private System.Windows.Forms.PictureBox buscar_gris;
-        private System.Windows.Forms.Label loading_lb;
 
     }
 }

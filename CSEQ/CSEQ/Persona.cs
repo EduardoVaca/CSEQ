@@ -121,15 +121,18 @@ namespace CSEQ
         }
         /*-------------------------------------------------------------------------------------*/
 
-        private void Buscar_Click(object sender, EventArgs e)
+        private void buscar()
         {
-            busqueda_grid.Visible = true;           
-            String busqueda = "%" + busqueda_txt.Text + "%"; 
-           // MouseP
+            busqueda_grid.Visible = true;
+            String busqueda = "%" + busqueda_txt.Text + "%";
             Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "buscarPersona", busqueda);
             Cursor = Cursors.Default;
-           
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();  
         }
 
         //Metodo que llena toda la forma dependiendo la persona que se le de clic en el gird
@@ -680,6 +683,15 @@ namespace CSEQ
         private void Persona_VisibleChanged(object sender, EventArgs e)
         {
             cargaCombosBoxes();
+        }
+
+        //Metodo que habilita el Enter en las busquedas
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
         }
     }
 }
