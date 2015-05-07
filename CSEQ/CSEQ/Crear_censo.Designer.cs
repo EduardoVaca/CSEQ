@@ -40,6 +40,7 @@
             this.close_picture = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Busqueda_grp = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
@@ -147,6 +148,7 @@
             // Busqueda_grp
             // 
             this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
+            this.Busqueda_grp.Controls.Add(this.label3);
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
@@ -161,6 +163,19 @@
             this.Busqueda_grp.TabStop = false;
             this.Busqueda_grp.Text = "Búsqueda de registros";
             this.Busqueda_grp.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 128);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 29);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Ejemplo: 2010";
             // 
             // busqueda_grid
             // 
@@ -186,7 +201,7 @@
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.busqueda_grid.Location = new System.Drawing.Point(12, 208);
+            this.busqueda_grid.Location = new System.Drawing.Point(63, 172);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_grid.Name = "busqueda_grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -198,7 +213,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.busqueda_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.busqueda_grid.Size = new System.Drawing.Size(684, 504);
+            this.busqueda_grid.Size = new System.Drawing.Size(582, 504);
             this.busqueda_grid.TabIndex = 56;
             this.busqueda_grid.Visible = false;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
@@ -409,5 +424,6 @@
         private System.Windows.Forms.PictureBox guardar_pb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox nuevoRegistro_pb;
+        private System.Windows.Forms.Label label3;
     }
 }

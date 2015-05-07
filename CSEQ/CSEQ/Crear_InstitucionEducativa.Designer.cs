@@ -68,6 +68,7 @@
             this.guardar_pb = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.nuevoRegistro_pb = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
@@ -368,6 +369,7 @@
             // Busqueda_grp
             // 
             this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
+            this.Busqueda_grp.Controls.Add(this.label14);
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
             this.Busqueda_grp.Controls.Add(this.Buscar);
@@ -533,6 +535,19 @@
             this.nuevoRegistro_pb.MouseLeave += new System.EventHandler(this.nuevoRegistro_pb_MouseLeave);
             this.nuevoRegistro_pb.MouseHover += new System.EventHandler(this.nuevoRegistro_pb_MouseHover);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(18, 105);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 29);
+            this.label14.TabIndex = 75;
+            this.label14.Text = "Ejemplo: Tec";
+            // 
             // Crear_InstitucionEducativa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -636,5 +651,6 @@
         private System.Windows.Forms.PictureBox guardar_pb;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox nuevoRegistro_pb;
+        private System.Windows.Forms.Label label14;
     }
 }

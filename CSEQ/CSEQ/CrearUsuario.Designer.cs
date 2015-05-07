@@ -58,6 +58,7 @@
             this.guardar_pb = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.nuevoRegistro_pb = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -218,6 +219,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.busqueda_grid);
             this.groupBox1.Controls.Add(this.Buscar);
             this.groupBox1.Controls.Add(this.busqueda_txt);
@@ -256,7 +258,7 @@
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.busqueda_grid.Location = new System.Drawing.Point(50, 146);
+            this.busqueda_grid.Location = new System.Drawing.Point(50, 163);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_grid.Name = "busqueda_grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -396,6 +398,19 @@
             this.nuevoRegistro_pb.MouseLeave += new System.EventHandler(this.nuevoRegistro_pb_MouseLeave);
             this.nuevoRegistro_pb.MouseHover += new System.EventHandler(this.nuevoRegistro_pb_MouseHover);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(10, 128);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(204, 29);
+            this.label7.TabIndex = 84;
+            this.label7.Text = "Ejemplo: Alejandro";
+            // 
             // CrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -475,5 +490,6 @@
         private System.Windows.Forms.PictureBox guardar_pb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox nuevoRegistro_pb;
+        private System.Windows.Forms.Label label7;
     }
 }

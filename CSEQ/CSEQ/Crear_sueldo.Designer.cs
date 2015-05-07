@@ -58,6 +58,7 @@
             this.guardar_pb = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.nuevoRegistro_pb = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -163,6 +164,7 @@
             // Busqueda_grp
             // 
             this.Busqueda_grp.BackColor = System.Drawing.Color.Transparent;
+            this.Busqueda_grp.Controls.Add(this.label7);
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
@@ -407,6 +409,19 @@
             this.nuevoRegistro_pb.MouseLeave += new System.EventHandler(this.nuevoRegistro_pb_MouseLeave);
             this.nuevoRegistro_pb.MouseHover += new System.EventHandler(this.nuevoRegistro_pb_MouseHover);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(10, 128);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(153, 29);
+            this.label7.TabIndex = 79;
+            this.label7.Text = "Ejemplo: 1000";
+            // 
             // Crear_sueldo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -488,6 +503,7 @@
         private System.Windows.Forms.PictureBox guardar_pb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox nuevoRegistro_pb;
+        private System.Windows.Forms.Label label7;
 
     }
 }
