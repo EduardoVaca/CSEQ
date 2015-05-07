@@ -175,7 +175,6 @@
             this.tieneHijo_check = new System.Windows.Forms.CheckBox();
             this.label44 = new System.Windows.Forms.Label();
             this.BuscarRegistro_tab = new System.Windows.Forms.TabPage();
-            this.loading_lb = new System.Windows.Forms.Label();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.buscar_blanco = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
@@ -190,6 +189,7 @@
             this.eliminar_pb = new System.Windows.Forms.PictureBox();
             this.modificar_pb = new System.Windows.Forms.PictureBox();
             this.guardar_pb = new System.Windows.Forms.PictureBox();
+            this.label60 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -1970,7 +1970,7 @@
             this.BuscarRegistro_tab.BackColor = System.Drawing.Color.Transparent;
             this.BuscarRegistro_tab.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BuscarRegistro_tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BuscarRegistro_tab.Controls.Add(this.loading_lb);
+            this.BuscarRegistro_tab.Controls.Add(this.label60);
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_grid);
             this.BuscarRegistro_tab.Controls.Add(this.buscar_blanco);
             this.BuscarRegistro_tab.Controls.Add(this.busqueda_txt);
@@ -1981,19 +1981,6 @@
             this.BuscarRegistro_tab.Size = new System.Drawing.Size(1597, 966);
             this.BuscarRegistro_tab.TabIndex = 5;
             this.BuscarRegistro_tab.Text = "Buscar Registro";
-            // 
-            // loading_lb
-            // 
-            this.loading_lb.AutoSize = true;
-            this.loading_lb.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loading_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.loading_lb.Location = new System.Drawing.Point(924, 133);
-            this.loading_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.loading_lb.Name = "loading_lb";
-            this.loading_lb.Size = new System.Drawing.Size(68, 29);
-            this.loading_lb.TabIndex = 19;
-            this.loading_lb.Text = "Listo!";
-            this.loading_lb.Visible = false;
             // 
             // busqueda_grid
             // 
@@ -2019,7 +2006,7 @@
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle5;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.busqueda_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.busqueda_grid.Location = new System.Drawing.Point(24, 308);
+            this.busqueda_grid.Location = new System.Drawing.Point(24, 239);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -2032,7 +2019,7 @@
             this.busqueda_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.busqueda_grid.Size = new System.Drawing.Size(1544, 608);
+            this.busqueda_grid.Size = new System.Drawing.Size(1544, 674);
             this.busqueda_grid.TabIndex = 17;
             this.busqueda_grid.Visible = false;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
@@ -2061,6 +2048,7 @@
             this.busqueda_txt.Name = "busqueda_txt";
             this.busqueda_txt.Size = new System.Drawing.Size(796, 56);
             this.busqueda_txt.TabIndex = 15;
+            this.busqueda_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.busqueda_txt_KeyPress);
             // 
             // buscar_gris
             // 
@@ -2178,6 +2166,19 @@
             this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
             this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
             // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.BackColor = System.Drawing.Color.Transparent;
+            this.label60.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.White;
+            this.label60.Location = new System.Drawing.Point(19, 186);
+            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(192, 29);
+            this.label60.TabIndex = 72;
+            this.label60.Text = "Ejemplo: Eduardo";
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -2203,6 +2204,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Persona";
             this.Load += new System.EventHandler(this.Persona_Load);
+            this.VisibleChanged += new System.EventHandler(this.Persona_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.Persona_tabControl.ResumeLayout(false);
             this.DatosPersonales_tab.ResumeLayout(false);
@@ -2387,7 +2389,7 @@
         private System.Windows.Forms.PictureBox guardar_pb;
         private System.Windows.Forms.PictureBox nuevoRegistro_pb;
         private System.Windows.Forms.PictureBox buscar_gris;
-        private System.Windows.Forms.Label loading_lb;
+        private System.Windows.Forms.Label label60;
 
     }
 }

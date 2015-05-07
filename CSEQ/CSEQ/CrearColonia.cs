@@ -34,14 +34,19 @@ namespace CSEQ
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
+        private void llenarComboBoxes()
+        {
+            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado;");
+            int id_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
+            Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
+
+        }
+
         private void CrearColonia_Load(object sender, EventArgs e)
         {
             salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
-            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado;");
-            int id_estado = Int32.Parse(ID_estado.SelectedValue.ToString());            
-            Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
-
+            llenarComboBoxes();
 
             if (rol == 1)
             {
@@ -65,11 +70,18 @@ namespace CSEQ
 
         /*------------------------------------------------------------------------------------*/
 
-        private void Buscar_Click(object sender, EventArgs e)
+        private void buscar()
         {
             busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
+            Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "busquedaEnColonia", busqueda);
+            Cursor = Cursors.Default;
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -213,6 +225,32 @@ namespace CSEQ
         private void Buscar_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarCualquierIcono(Buscar, new Size(30, 36), 32, 305);
+        }
+
+        private void nuevoRegistro_pb_MouseHover(object sender, EventArgs e)
+        {
+            //MessageBox.Show(nuevoRegistro_pb.Top.ToString() + "left: " + nuevoRegistro_pb.Left.ToString() + "size: " + nuevoRegistro_pb.Size.Height.ToString() + nuevoRegistro_pb.Size.Width.ToString());
+            Util.maximizarCualquierIcono(nuevoRegistro_pb, new Size(36, 42), 3);
+        }
+
+        private void nuevoRegistro_pb_Click(object sender, EventArgs e)
+        {
+            Util.clear(this);
+            llenarComboBoxes();
+        }
+
+        private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(32, 38), 483, 6);
+        }
+
+        //Metodo que habilita los Enter en las busquedas
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
         }
 
     }

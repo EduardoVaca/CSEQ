@@ -121,15 +121,18 @@ namespace CSEQ
         }
         /*-------------------------------------------------------------------------------------*/
 
-        private void Buscar_Click(object sender, EventArgs e)
+        private void buscar()
         {
-            busqueda_grid.Visible = true;           
-            String busqueda = "%" + busqueda_txt.Text + "%"; 
-           // MouseP
+            busqueda_grid.Visible = true;
+            String busqueda = "%" + busqueda_txt.Text + "%";
             Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "buscarPersona", busqueda);
             Cursor = Cursors.Default;
-           
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();  
         }
 
         //Metodo que llena toda la forma dependiendo la persona que se le de clic en el gird
@@ -617,10 +620,13 @@ namespace CSEQ
             respuesta = MessageBox.Show("¿Desea continuar? Perderá los cambios sin guardar", "Confirmación", MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
+                Cursor = Cursors.WaitCursor;
                 Util.clear(this);
                 cargaCombosBoxes();
                 hijos_grid.Visible = false;
-            }    
+                Cursor = Cursors.Default;
+            }
+            Persona_tabControl.SelectedTab = DatosPersonales_tab;
         }
 
         //Metodos que cambian de tamano los iconos
@@ -675,6 +681,20 @@ namespace CSEQ
            Util.minimizarCualquierIcono(buscar_blanco, new Size(32, 37), 54, 426);
         }
 
+        //Metodo con el cual recarga los combo boxes una vez reabierto el borrador pendiente
+        //Esto con la razon de mantenerlos actualizados
+        private void Persona_VisibleChanged(object sender, EventArgs e)
+        {
+            cargaCombosBoxes();
+        }
 
+        //Metodo que habilita el Enter en las busquedas
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
+        }
     }
 }

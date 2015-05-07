@@ -37,11 +37,18 @@ namespace CSEQ
             Util.llenarComboBox(ID_rol, "SELECT ID_rol, nombre FROM Rol");
         }
 
-        private void Buscar_Click(object sender, EventArgs e)
+        private void buscar()
         {
             busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
+            Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "busquedaEnUsuario", busqueda);
+            Cursor = Cursors.Default;
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();
         }
 
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -163,6 +170,31 @@ namespace CSEQ
         private void Buscar_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarCualquierIcono(Buscar, new Size(30, 36), 32, 305);
+        }
+
+        private void nuevoRegistro_pb_Click(object sender, EventArgs e)
+        {
+            Util.clear(this);
+            Util.llenarComboBox(ID_rol, "SELECT ID_rol, nombre FROM Rol");
+        }
+
+        private void nuevoRegistro_pb_MouseHover(object sender, EventArgs e)
+        {
+            Util.maximizarCualquierIcono(nuevoRegistro_pb, new Size(36, 42), 3);
+        }
+
+        private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(32, 38), 485, 6);
+        }
+
+        //Metodo que habilita los Enter en las busquedas
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
         }
     }
 }
