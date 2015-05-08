@@ -35,17 +35,9 @@ namespace CSEQ
         /*Metodo que llena los combo boxes de la Forma*/
         private void llenarComboBoxes()
         {
-            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
-            int id_estado = Int32.Parse(ID_estado.SelectedValue.ToString());
-            Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
-
-
-            if (ID_municipio.SelectedItem != null)
-            {
-                int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());
-                String inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Colonia c WHERE m.ID_municipio=c.ID_municipio;";
-                Util.llenarComboBox(ID_colonia, inicio);
-            }
+            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado" + " ORDER BY nombre ASC");
+            Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC");
+            Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue + " ORDER BY nombre ASC");
         }
 
         private void Crear_InstitucionEducativa_Load(object sender, EventArgs e)
@@ -71,15 +63,14 @@ namespace CSEQ
         {
             String valorComboBox = ID_estado.SelectedValue.ToString();
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
-                                                "ID_estado = " + valorComboBox);            
+                                                "ID_estado = " + valorComboBox + " ORDER BY nombre ASC");            
         }
 
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int ID_municipio_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
-            MessageBox.Show(ID_municipio_selected.ToString());
+            int ID_municipio_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());            
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
-                                               "ID_municipio = " + ID_municipio_selected);            
+                                               "ID_municipio = " + ID_municipio_selected + " ORDER BY nombre ASC");            
         }
         /*---------------------------------------------------------------------*/
 
@@ -131,6 +122,7 @@ namespace CSEQ
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             String correo;
+            Cursor = Cursors.WaitCursor;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 modificar_pb.Enabled = true; //Activacion de botones
@@ -143,11 +135,12 @@ namespace CSEQ
                 Util.showData(this, sqlActiveRow);
                 //Se vuelven a llenar los comboBox DEPENDIENTES para que no sean valores nulos
                 ID_estado.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[4].Value.ToString());
-                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + ";");
+                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC" + ";");
                 ID_municipio.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
-                Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipio.SelectedValue + ";");
+                Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipio.SelectedValue + " ORDER BY nombre ASC" + ";");
                 ID_colonia.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[2].Value.ToString());
             }
+            Cursor = Cursors.Default;
 
 
 

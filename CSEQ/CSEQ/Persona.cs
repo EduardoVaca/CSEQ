@@ -107,28 +107,28 @@ namespace CSEQ
         {            
             String valorComboBox = ID_estado.SelectedValue.ToString();           
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
-                                                "ID_estado = " + valorComboBox);
+                                                "ID_estado = " + valorComboBox + " ORDER BY nombre ASC");
         }
 
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
         {            
             String valorComboBox = ID_municipio.SelectedValue.ToString();
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
-                                               "ID_municipio = " + valorComboBox);
+                                               "ID_municipio = " + valorComboBox + " ORDER BY nombre ASC");
         }
 
         private void estadoEmpleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = ID_estadoEmpleo.SelectedValue.ToString();
             Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
-                                                "ID_estado = " + valorComboBox);
+                                                "ID_estado = " + valorComboBox + " ORDER BY nombre ASC");
         }
 
         private void municipioEmpleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = ID_municipioEmpleo.SelectedValue.ToString();
             Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
-                                               "ID_municipio = " + valorComboBox);
+                                               "ID_municipio = " + valorComboBox + " ORDER BY nombre ASC");
         }
         /*-------------------------------------------------------------------------------------*/
 
