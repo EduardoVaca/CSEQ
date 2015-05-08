@@ -270,12 +270,11 @@ END //
 DELIMITER ;
 
 
-
 DELIMITER //
 CREATE PROCEDURE mostrarPersona
 (IN nombreIn VARCHAR(80), CURPIn CHAR(18), IDcensoInput numeric(4))
 BEGIN 
-	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, p.sexo_masculino, p.telefono, p.calle,  pC.ID_censo as Censo, Municipio.ID_estado,
+	SELECT * FROM (SELECT p.nombre as Nombre, p.CURP as CURP, p.Correo as Correo, p.sexo_masculino, p.fecha_nacimiento, p.telefono, p.calle,  pC.ID_censo as Censo, Municipio.ID_estado,
 					v.ID_colonia, Colonia.ID_municipio, p.mexicano, p.comunidad_indigena, p.credencialIFE, tEC.ID_estadoCivil, tNE.ID_nivelEducativo, es.ano,
 					es.ID_institucionEducativa, tLD.ID_lenguaDominante, tNEsp.ID_nivelEspanol, tNI.ID_nivelIngles, tNL.ID_nivelLSM, em.descripcion, em.nombre_compania,
 					g.ID_sueldo, em.ID_areaTrabajo, em.telefono as telefonoEmpleo, em.calle as calleEmpleo, em.correo as correoEmpleo, em.interpretacion_LSM, p.ID_periodo,

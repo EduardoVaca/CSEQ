@@ -175,6 +175,7 @@
             this.tieneHijo_check = new System.Windows.Forms.CheckBox();
             this.label44 = new System.Windows.Forms.Label();
             this.BuscarRegistro_tab = new System.Windows.Forms.TabPage();
+            this.label60 = new System.Windows.Forms.Label();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.buscar_blanco = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
@@ -189,7 +190,6 @@
             this.eliminar_pb = new System.Windows.Forms.PictureBox();
             this.modificar_pb = new System.Windows.Forms.PictureBox();
             this.guardar_pb = new System.Windows.Forms.PictureBox();
-            this.label60 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -715,7 +715,7 @@
             this.fecha_nacimiento.Margin = new System.Windows.Forms.Padding(8);
             this.fecha_nacimiento.Name = "fecha_nacimiento";
             this.fecha_nacimiento.Size = new System.Drawing.Size(402, 34);
-            this.fecha_nacimiento.TabIndex = 20;
+            this.fecha_nacimiento.TabIndex = 20;            
             // 
             // label4
             // 
@@ -1982,6 +1982,19 @@
             this.BuscarRegistro_tab.TabIndex = 5;
             this.BuscarRegistro_tab.Text = "Buscar Registro";
             // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.BackColor = System.Drawing.Color.Transparent;
+            this.label60.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.White;
+            this.label60.Location = new System.Drawing.Point(19, 186);
+            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(192, 29);
+            this.label60.TabIndex = 72;
+            this.label60.Text = "Ejemplo: Eduardo";
+            // 
             // busqueda_grid
             // 
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -2165,19 +2178,6 @@
             this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
             this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
             this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.BackColor = System.Drawing.Color.Transparent;
-            this.label60.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.White;
-            this.label60.Location = new System.Drawing.Point(19, 186);
-            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(192, 29);
-            this.label60.TabIndex = 72;
-            this.label60.Text = "Ejemplo: Eduardo";
             // 
             // Persona
             // 

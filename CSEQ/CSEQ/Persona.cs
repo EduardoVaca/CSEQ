@@ -143,6 +143,7 @@ namespace CSEQ
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 //loading_lb.Visible = true;
+                Cursor = Cursors.WaitCursor;
                 buscar_blanco.Visible = true;
                 buscar_gris.Visible = false;
                 registro_persona = true;
@@ -211,25 +212,9 @@ namespace CSEQ
                     ID_municipioEmpleo.SelectedValue = Int16.Parse(direccionPersona.Rows[0][1].ToString());
                     Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipioEmpleo.SelectedValue + ";");
                     ID_coloniaEmpleo.SelectedValue = Int16.Parse(direccionPersona.Rows[0][2].ToString());
-                }                                
+                }
+                Cursor = Cursors.Default;                
             }
-        }
-
-        //Procedimiento unicamente para registrar hijo y mostrar en el grid los hijos de esa persona
-        private void registraHijo_button_Click(object sender, EventArgs e)
-        {
-            String nombreH = nombreHijo_txt.Text;
-            String fechaNacH = fechaNacimientoHijo.Value.ToShortDateString();
-            Boolean sordoH = sordoHijo_check.Checked;
-            String curpP = CURP_txt.Text;
-
-            if(Util.executeStoredProcedure("registrarHijo", nombreH, fechaNacH, sordoH, curpP)){
-                MessageBox.Show("El Hijo se ha registrado con exito!");
-            }
-            hijos_grid.Visible = true;
-            nombreHijo_txt.Text = "";
-            sordoHijo_check.Checked = false;
-            Util.fillGrid(hijos_grid, "BusquedaEnHijo", curpP);
         }
 
         private void tieneHijo_check_CheckedChanged(object sender, EventArgs e)
@@ -409,13 +394,31 @@ namespace CSEQ
             eliminarHijo_btn.Enabled = true;
         }
 
+        //Procedimiento unicamente para registrar hijo y mostrar en el grid los hijos de esa persona
+        private void registraHijo_button_Click(object sender, EventArgs e)
+        {
+            String nombreH = nombreHijo_txt.Text;
+            String fechaNacH = Util.formatoFechaMySQL(fechaNacimientoHijo.Value.ToShortDateString());
+            Boolean sordoH = sordoHijo_check.Checked;
+            String curpP = CURP_txt.Text;
+
+            if (Util.executeStoredProcedure("registrarHijo", nombreH, fechaNacH, sordoH, curpP))
+            {
+                MessageBox.Show("El Hijo se ha registrado con exito!");
+            }
+            hijos_grid.Visible = true;
+            nombreHijo_txt.Text = "";
+            sordoHijo_check.Checked = false;
+            Util.fillGrid(hijos_grid, "BusquedaEnHijo", curpP);
+        }
+
         //Metodo para modificar el hijo seleccionado del grid, toma los nuevo valores y se basa en el ID del hijo
         // para modificarlo
         private void moficiarHijo_btn_Click(object sender, EventArgs e)
         {
             String nombreHijoP = nombreHijo_txt.Text;
             Boolean esSordoP = sordoHijo_check.Checked;
-            String fechaNacP = fechaNacimientoHijo.Value.ToShortDateString();
+            String fechaNacP = Util.formatoFechaMySQL(fechaNacimientoHijo.Value.ToShortDateString());
 
             if (Util.executeStoredProcedure("modificarHijo", ID_hijoSelected, nombreHijoP, fechaNacP, esSordoP))
             {
@@ -446,7 +449,7 @@ namespace CSEQ
             //Obtenion de datos **********************************************************************
             String CURPP = CURP_txt.Text;
             String nombreP = Nombre_txt.Text;
-            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
+            String fechaNacP = Util.formatoFechaMySQL(fecha_nacimiento.Value.ToShortDateString());
             Boolean sexoH = masculino_check.Checked;
             String telefonoP = telefono_txt.Text;
             String correoP = Correo_txt.Text;
@@ -523,7 +526,7 @@ namespace CSEQ
         {
             String CURPP = CURP_txt.Text;
             String nombreP = Nombre_txt.Text;
-            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
+            String fechaNacP = Util.formatoFechaMySQL(fecha_nacimiento.Value.ToShortDateString());
             Boolean sexoH = masculino_check.Checked;
             String telefonoP = telefono_txt.Text;
             String correoP = Correo_txt.Text;

@@ -333,8 +333,11 @@ namespace CSEQ
                             ctrl.Text = table.Rows[0][nombreTemporal].ToString();
                         else if (ctrl is ComboBox || ctrl is ListBox)
                             ((ComboBox)ctrl).SelectedValue = table.Rows[0][nombreTemporal].ToString();
-                        else if (ctrl is DateTimePicker)
-                            ((DateTimePicker)ctrl).Value = (DateTime)(table.Rows[0][nombreTemporal]);
+                        else if (ctrl is DateTimePicker){
+                            String fecha = formatoFechaVS(table.Rows[0][nombreTemporal].ToString());
+                            MessageBox.Show(fecha.ToString());
+                            ((DateTimePicker)ctrl).Value = Convert.ToDateTime(fecha);
+                        }                            
                         else if (ctrl is CheckBox)
                             ((CheckBox)ctrl).Checked = (bool)(table.Rows[0][nombreTemporal]);
                         else
@@ -388,8 +391,11 @@ namespace CSEQ
                         //MessageBox.Show(ctrl.Name);
                         ((ComboBox)ctrl).SelectedValue = table.Rows[0][nombreTemporal].ToString();
                     }
-                    else if (ctrl is DateTimePicker)
-                        ((DateTimePicker)ctrl).Value = (DateTime)(table.Rows[0][nombreTemporal]);
+                    else if (ctrl is DateTimePicker){
+                        String fecha = formatoFechaVS(table.Rows[0][nombreTemporal].ToString());
+                        //MessageBox.Show(fecha.ToString());
+                       ((DateTimePicker)ctrl).Value = Convert.ToDateTime(fecha);
+                    }                        
                     else if (ctrl is CheckBox)
                     {
                         if (nombreTemporal == "sexo_masculino")
@@ -589,6 +595,37 @@ namespace CSEQ
             pb.Top = oldTop;
             pb.Left = oldLeft;
             pb.Size = oldSize;
+        }
+
+
+        /***************************************************************************
+         * Metodo  que voltea la fecha al formato yyyy-mm-dd de MySQL
+         * Parametros:
+         * @String de fecha
+         * ************************************************************************/
+        public static String formatoFechaMySQL(String fecha)
+        {
+            String year, month, day;
+            char[] separators = { '/' };
+            String [] fechaSeparada = fecha.Split(separators);
+            day = fechaSeparada[0];
+            month = fechaSeparada[1];
+            year = fechaSeparada[2];
+            String MySQLdate = year + "-" + month + "-" + day;
+            return MySQLdate;
+        }
+
+        /**************************************************************************
+         * Metodo para regresar la fecha al formato de VS
+         * Parametros:
+         * @String fecha
+         * ***********************************************************************/
+        public static String formatoFechaVS(String fecha)
+        {
+            String f;
+            String[] stringSeparado = fecha.Split(' ');
+            f = stringSeparado[0];
+            return f;
         }
 
     }
