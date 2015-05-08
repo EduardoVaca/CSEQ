@@ -392,8 +392,7 @@ namespace CSEQ
                         ((ComboBox)ctrl).SelectedValue = table.Rows[0][nombreTemporal].ToString();
                     }
                     else if (ctrl is DateTimePicker){
-                        String fecha = formatoFechaVS(table.Rows[0][nombreTemporal].ToString());
-                        //MessageBox.Show(fecha.ToString());
+                        String fecha = formatoFechaVS(table.Rows[0][nombreTemporal].ToString());                        
                        ((DateTimePicker)ctrl).Value = Convert.ToDateTime(fecha);
                     }                        
                     else if (ctrl is CheckBox)
