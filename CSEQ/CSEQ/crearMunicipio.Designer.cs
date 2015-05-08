@@ -418,6 +418,7 @@
             this.Controls.Add(this.x_picture);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CrearMunicipio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

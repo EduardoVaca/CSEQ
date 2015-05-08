@@ -40,6 +40,7 @@
             this.close_picture = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Busqueda_grp = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.eliminar_pb = new System.Windows.Forms.PictureBox();
             this.nuevoRegistro_pb = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -163,6 +163,19 @@
             this.Busqueda_grp.TabStop = false;
             this.Busqueda_grp.Text = "Búsqueda de registros";
             this.Busqueda_grp.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 128);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(199, 29);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "Ejemplo: Infección";
             // 
             // busqueda_grid
             // 
@@ -343,19 +356,6 @@
             this.label1.TabIndex = 70;
             this.label1.Text = "Nuevo Registro";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(10, 128);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 29);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Ejemplo: Infección";
-            // 
             // Crear_causa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -383,6 +383,7 @@
             this.Controls.Add(this.causa_label);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Crear_causa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

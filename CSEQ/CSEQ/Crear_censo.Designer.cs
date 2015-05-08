@@ -380,6 +380,7 @@
             this.Controls.Add(this.censo_label);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Crear_censo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

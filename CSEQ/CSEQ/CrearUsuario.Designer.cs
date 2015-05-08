@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.busqueda_grid = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.PictureBox();
             this.busqueda_txt = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@
             this.guardar_pb = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.nuevoRegistro_pb = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Atras_picture)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -234,6 +234,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda de registros";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(10, 128);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(204, 29);
+            this.label7.TabIndex = 84;
+            this.label7.Text = "Ejemplo: Alejandro";
+            // 
             // busqueda_grid
             // 
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -398,19 +411,6 @@
             this.nuevoRegistro_pb.MouseLeave += new System.EventHandler(this.nuevoRegistro_pb_MouseLeave);
             this.nuevoRegistro_pb.MouseHover += new System.EventHandler(this.nuevoRegistro_pb_MouseHover);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(10, 128);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(204, 29);
-            this.label7.TabIndex = 84;
-            this.label7.Text = "Ejemplo: Alejandro";
-            // 
             // CrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -442,6 +442,7 @@
             this.Controls.Add(this.x_picture);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CrearUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

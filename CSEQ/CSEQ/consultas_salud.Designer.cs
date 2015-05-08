@@ -56,9 +56,10 @@
             // Reporte
             // 
             this.Reporte.Enabled = false;
-            this.Reporte.Location = new System.Drawing.Point(54, 357);
+            this.Reporte.Location = new System.Drawing.Point(108, 687);
+            this.Reporte.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Reporte.Name = "Reporte";
-            this.Reporte.Size = new System.Drawing.Size(66, 37);
+            this.Reporte.Size = new System.Drawing.Size(132, 71);
             this.Reporte.TabIndex = 18;
             this.Reporte.Text = "Crear Reporte";
             this.Reporte.UseVisualStyleBackColor = true;
@@ -68,9 +69,10 @@
             // 
             this.back_picture.BackColor = System.Drawing.Color.Transparent;
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
-            this.back_picture.Location = new System.Drawing.Point(8, 8);
+            this.back_picture.Location = new System.Drawing.Point(16, 15);
+            this.back_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.back_picture.Name = "back_picture";
-            this.back_picture.Size = new System.Drawing.Size(30, 29);
+            this.back_picture.Size = new System.Drawing.Size(60, 56);
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.back_picture.TabIndex = 14;
             this.back_picture.TabStop = false;
@@ -82,10 +84,10 @@
             // 
             this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(758, 10);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.x_picture.Location = new System.Drawing.Point(1516, 19);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.x_picture.Name = "x_picture";
-            this.x_picture.Size = new System.Drawing.Size(30, 29);
+            this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.x_picture.TabIndex = 13;
             this.x_picture.TabStop = false;
@@ -98,18 +100,18 @@
             this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.titulo.Location = new System.Drawing.Point(302, 10);
-            this.titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.titulo.Location = new System.Drawing.Point(604, 19);
+            this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(0, 27);
+            this.titulo.Size = new System.Drawing.Size(0, 53);
             this.titulo.TabIndex = 16;
             // 
             // zedGraph
             // 
             this.zedGraph.AutoSize = true;
             this.zedGraph.BackColor = System.Drawing.Color.Transparent;
-            this.zedGraph.Location = new System.Drawing.Point(172, 201);
-            this.zedGraph.Margin = new System.Windows.Forms.Padding(6);
+            this.zedGraph.Location = new System.Drawing.Point(344, 387);
+            this.zedGraph.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
             this.zedGraph.ScrollMaxX = 0D;
@@ -118,7 +120,7 @@
             this.zedGraph.ScrollMinX = 0D;
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
-            this.zedGraph.Size = new System.Drawing.Size(609, 319);
+            this.zedGraph.Size = new System.Drawing.Size(1218, 613);
             this.zedGraph.TabIndex = 17;
             // 
             // label2
@@ -127,10 +129,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(10, 218);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(20, 419);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 18);
+            this.label2.Size = new System.Drawing.Size(90, 36);
             this.label2.TabIndex = 19;
             this.label2.Text = "Censo";
             // 
@@ -141,10 +143,10 @@
             this.todoscensos_radio.Enabled = false;
             this.todoscensos_radio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todoscensos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.todoscensos_radio.Location = new System.Drawing.Point(7, 245);
-            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.todoscensos_radio.Location = new System.Drawing.Point(14, 471);
+            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.todoscensos_radio.Name = "todoscensos_radio";
-            this.todoscensos_radio.Size = new System.Drawing.Size(112, 18);
+            this.todoscensos_radio.Size = new System.Drawing.Size(213, 33);
             this.todoscensos_radio.TabIndex = 20;
             this.todoscensos_radio.TabStop = true;
             this.todoscensos_radio.Text = "Todos los censos";
@@ -160,10 +162,10 @@
             "Auxiliares auditivos por marca",
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
-            this.ID_censo.Location = new System.Drawing.Point(82, 218);
-            this.ID_censo.Margin = new System.Windows.Forms.Padding(2);
+            this.ID_censo.Location = new System.Drawing.Point(164, 419);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ID_censo.Name = "ID_censo";
-            this.ID_censo.Size = new System.Drawing.Size(82, 25);
+            this.ID_censo.Size = new System.Drawing.Size(160, 44);
             this.ID_censo.TabIndex = 21;
             this.ID_censo.SelectionChangeCommitted += new System.EventHandler(this.ID_censo_SelectionChangeCommitted);
             // 
@@ -171,10 +173,10 @@
             // 
             this.logout.BackColor = System.Drawing.Color.Transparent;
             this.logout.Image = global::CSEQ.Properties.Resources.logout;
-            this.logout.Location = new System.Drawing.Point(757, 40);
-            this.logout.Margin = new System.Windows.Forms.Padding(4);
+            this.logout.Location = new System.Drawing.Point(1514, 77);
+            this.logout.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(33, 31);
+            this.logout.Size = new System.Drawing.Size(66, 60);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logout.TabIndex = 22;
             this.logout.TabStop = false;
@@ -189,10 +191,10 @@
             "Auxiliares auditivos por marca",
             "Personas con y sin aparato auditivo",
             "Personas con implante coclear"});
-            this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(86, 99);
-            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(2);
+            this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(172, 190);
+            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.auxiliarAuditivo_combo.Name = "auxiliarAuditivo_combo";
-            this.auxiliarAuditivo_combo.Size = new System.Drawing.Size(298, 25);
+            this.auxiliarAuditivo_combo.Size = new System.Drawing.Size(592, 44);
             this.auxiliarAuditivo_combo.TabIndex = 0;
             this.auxiliarAuditivo_combo.Visible = false;
             this.auxiliarAuditivo_combo.SelectionChangeCommitted += new System.EventHandler(this.auxiliarAuditivo_combo_SelectionChangeCommitted);
@@ -203,10 +205,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(14, 101);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(28, 194);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 19);
+            this.label1.Size = new System.Drawing.Size(134, 39);
             this.label1.TabIndex = 15;
             this.label1.Text = "Consulta";
             // 
@@ -216,10 +218,10 @@
             this.tienen_radio.BackColor = System.Drawing.Color.Transparent;
             this.tienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tienen_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.tienen_radio.Location = new System.Drawing.Point(395, 86);
-            this.tienen_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.tienen_radio.Location = new System.Drawing.Point(790, 165);
+            this.tienen_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tienen_radio.Name = "tienen_radio";
-            this.tienen_radio.Size = new System.Drawing.Size(74, 19);
+            this.tienen_radio.Size = new System.Drawing.Size(141, 36);
             this.tienen_radio.TabIndex = 22;
             this.tienen_radio.TabStop = true;
             this.tienen_radio.Text = "Si tienen";
@@ -233,10 +235,10 @@
             this.noTienen_radio.BackColor = System.Drawing.Color.Transparent;
             this.noTienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noTienen_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.noTienen_radio.Location = new System.Drawing.Point(395, 116);
-            this.noTienen_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.noTienen_radio.Location = new System.Drawing.Point(790, 223);
+            this.noTienen_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.noTienen_radio.Name = "noTienen_radio";
-            this.noTienen_radio.Size = new System.Drawing.Size(80, 19);
+            this.noTienen_radio.Size = new System.Drawing.Size(153, 36);
             this.noTienen_radio.TabIndex = 23;
             this.noTienen_radio.TabStop = true;
             this.noTienen_radio.Text = "No tienen";
@@ -251,23 +253,23 @@
             this.estadoSalud_combo.Items.AddRange(new object[] {
             "Personas con alergia",
             "Personas con enfermedad"});
-            this.estadoSalud_combo.Location = new System.Drawing.Point(86, 99);
-            this.estadoSalud_combo.Margin = new System.Windows.Forms.Padding(2);
+            this.estadoSalud_combo.Location = new System.Drawing.Point(172, 190);
+            this.estadoSalud_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.estadoSalud_combo.Name = "estadoSalud_combo";
-            this.estadoSalud_combo.Size = new System.Drawing.Size(298, 25);
+            this.estadoSalud_combo.Size = new System.Drawing.Size(592, 44);
             this.estadoSalud_combo.TabIndex = 24;
             this.estadoSalud_combo.Visible = false;
             this.estadoSalud_combo.SelectionChangeCommitted += new System.EventHandler(this.estadoSalud_combo_SelectionChangeCommitted);
             // 
             // consultas_salud
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 530);
+            this.ClientSize = new System.Drawing.Size(1600, 1019);
             this.Controls.Add(this.noTienen_radio);
             this.Controls.Add(this.tienen_radio);
             this.Controls.Add(this.logout);
@@ -284,7 +286,8 @@
             this.Controls.Add(this.auxiliarAuditivo_combo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "consultas_salud";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultas_salud";

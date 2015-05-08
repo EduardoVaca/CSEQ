@@ -365,6 +365,7 @@
             this.Controls.Add(this.labelAreaTrabajo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(24, 23, 24, 23);
             this.Name = "crearAreaTrabajo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -324,7 +324,7 @@
             this.persona_pb.Size = new System.Drawing.Size(200, 200);
             this.persona_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.persona_pb.TabIndex = 42;
-            this.persona_pb.TabStop = false;            
+            this.persona_pb.TabStop = false;
             this.persona_pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.persona_pb_MouseDown);
             this.persona_pb.MouseLeave += new System.EventHandler(this.persona_pb_MouseLeave);
             this.persona_pb.MouseHover += new System.EventHandler(this.persona_pb_MouseHover);
@@ -703,6 +703,7 @@
             this.Controls.Add(this.causa_lb);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Lista_registros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
