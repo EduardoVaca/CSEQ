@@ -122,6 +122,7 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que modifica un registro en la Base*/
         private void modificar_pb_Click(object sender, EventArgs e)
         {
             String minimoNuevo = "$" + minimo_txt.Text;
@@ -139,6 +140,7 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que elimina un registro elegido de la base*/
         private void eliminar_pb_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;

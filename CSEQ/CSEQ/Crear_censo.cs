@@ -134,6 +134,7 @@ namespace CSEQ
                 MessageBox.Show("El año debe tener 4 digitos");
         }
 
+        /*Metodo que modifica un registro en la Base*/
         private void modificar_pb_Click(object sender, EventArgs e)
         {
             String nombreNuevo = ano_txt.Text;
@@ -149,6 +150,7 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que elimina un registro elegido de la base*/
         private void eliminar_pb_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;

@@ -66,7 +66,7 @@ namespace CSEQ
         /*--------------------------------------------------------------------------------
          * Metodos los cuales llenan un comboBox basandose en el contenido de otro comboBox
          * Ejemplo: Estado - > Municipios
-         */
+         *********************************************************************************/
         private void ID_estado_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = ID_estado.SelectedValue.ToString();
@@ -83,6 +83,7 @@ namespace CSEQ
         }
         /*---------------------------------------------------------------------*/
 
+        /*Metodo que guarda un nuevo registro en la base*/
         private void guardar_btn_Click(object sender, EventArgs e)
         {
             String iNombre = nombre_txt.Text;
@@ -167,11 +168,9 @@ namespace CSEQ
                 }
             }
         }
-
+        /*Metodo que modifica un registro en la Base*/
         private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            //nombreViejo VARCHAR(90), nombreNuevo VARCHAR(90), calleNuevo VARCHAR(80), telefonoNuevo VARCHAR(20), correoNuevo VARCHAR(80),
-            //privadaNuevo BOOLEAN, especializadaNuevo BOOLEAN
+        {            
             String nombreNuevo = nombre_txt.Text;
             String calleNuevo = calle_txt.Text;
             String telefonoNuevo = telefono_txt.Text;
@@ -279,6 +278,7 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que elimina un registro elegido de la base*/
         private void eliminar_pb_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
