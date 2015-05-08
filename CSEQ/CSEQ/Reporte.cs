@@ -19,6 +19,8 @@ namespace CSEQ
         int entrada;
         int censo;
         int indexReporte;
+        DataSet Tablas;
+        String nombre;
 
         //salida =1 Genera reporte de todos los censos
         //salida =2 Genera reporte de censo por año
@@ -44,6 +46,8 @@ namespace CSEQ
                             if (entrada == 1)
                             {
                                 ReporteMarca report = new ReporteMarca();
+
+                                report.SetDatabaseLogon("cpseqcen", "cww85Sj43O", "cpseqcensos.org", "cpseq_censos");
                                 reportViewer.ReportSource = report;
                             }
                             if (entrada == 2) { 
@@ -59,6 +63,7 @@ namespace CSEQ
                             if (entrada == 1)
                             {
                                 ReporteAuxiliares report = new ReporteAuxiliares();
+                                query = "CALL consultaAuxiliares();";
                                 reportViewer.ReportSource = report;
                             }
                             if (entrada == 2) {
@@ -67,6 +72,8 @@ namespace CSEQ
                                 {
                                     ReporteAuxiliaresCenso report = new ReporteAuxiliaresCenso();
                                     report.SetParameterValue("censo", censo);
+                                    report.SetDatabaseLogon("cpseqcen","cww85Sj43O","cpseqcensos.org","cpseq_censos");
+                                    MessageBox.Show("entro");
                                     reportViewer.ReportSource = report;
                                 }
                                 else if (query.Contains("NoTiene"))

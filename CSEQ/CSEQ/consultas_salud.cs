@@ -99,7 +99,7 @@ namespace CSEQ
                         salida = 1;
                         query = "CALL consultaMarca();";
                         type = "Barra";
-                        indexReporte = 1;
+                        indexReporte = 0;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 1:
@@ -118,7 +118,7 @@ namespace CSEQ
                         salida = 1;
                         query = " Call consultaTienenImplanteCoclear();";
                         type = "Pay";
-                        indexReporte = 1;
+                        indexReporte = 2;
                         Util.graphData(zedGraph, query, type);
                         break;
                 }
@@ -164,7 +164,7 @@ namespace CSEQ
                         query = "CALL consultaMarcaPorCenso(" + id_censo + ");";
                         type = "Barra";
                         salida = 2;
-                        indexReporte = 2;
+                        indexReporte = 0;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 1:
@@ -174,7 +174,7 @@ namespace CSEQ
                             query = " CALL consultaNoTienenAuxiliarPorCenso(" + id_censo + ");";
                         type = "Barra";
                         salida = 2;
-                        indexReporte = 2;
+                        indexReporte = 1;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 2:
@@ -221,9 +221,11 @@ namespace CSEQ
 
         private void Reporte_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(query + "-" + index + "-" + indexReporte + "-" + salida);
-            Reporte Nuevo = new Reporte(query,index,indexReporte,salida,getId_censo());
-            Nuevo.Show();            
+            MessageBox.Show("query:" + query + "-" + "index:" + index + "-" + "reporte:" + indexReporte + "-" + salida);
+            //Reporte Nuevo = new Reporte(query,index,indexReporte,salida,getId_censo());
+            Util.generaPDF(query);
+            //Nuevo.Show();    
+            
             
         }
 
@@ -246,7 +248,7 @@ namespace CSEQ
                 String type;
                 query = " CALL consultaSiTienenAuxiliarPorCenso(" + getId_censo() + ");";
                 type = "Barra";
-                indexReporte = 2;
+                indexReporte = 1;
                 Util.graphData(zedGraph, query, type);
             }
             
@@ -267,7 +269,7 @@ namespace CSEQ
                 String type;
                 query = " CALL consultaNoTienenAuxiliarPorCenso(" + getId_censo() + ");";
                 type = "Barra";
-                indexReporte = 2;
+                indexReporte = 1;
                 Util.graphData(zedGraph, query, type);
             }
            

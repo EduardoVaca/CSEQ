@@ -40,6 +40,15 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\..\..\..\Instaladores\itextsharp-all-5.5.6\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\..\..\..\..\..\Instaladores\itextsharp-all-5.5.6\itextsharp-dll-pdfa\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\..\..\..\..\..\Instaladores\itextsharp-all-5.5.6\itextsharp-dll-xtra\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -76,6 +85,15 @@
     </Compile>
     <Compile Include="consultas_salud.Designer.cs">
       <DependentUpon>consultas_salud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cpseqcen_censosDataSet.cs">
+      <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cpseqcen_censosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="CrearAparatoAuditivo.cs">
       <SubType>Form</SubType>
@@ -419,6 +437,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteNoAuxiliaresCenso.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="cpseqcen_censosDataSet.xsc">
+      <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cpseqcen_censosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cpseqcen_censosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cpseqcen_censosDataSet.xss">
+      <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -505,6 +534,7 @@
     <None Include="Resources\MarcaG.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\PlantillaReporte.pdf" />
     <None Include="Resources\SueldoB.png" />
   </ItemGroup>
   <ItemGroup>
@@ -517,7 +547,9 @@
     <None Include="Resources\UsuarioG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo.jpg" />
+    <EmbeddedResource Include="Resources\Logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo2N.png" />
@@ -569,6 +601,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BuscarGmini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="auxiliares.xml" />
+    <Content Include="Resources\itextsharp.dll" />
+    <Content Include="Resources\itextsharp.pdfa.dll" />
+    <Content Include="Resources\itextsharp.xtra.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
