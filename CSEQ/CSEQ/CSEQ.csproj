@@ -167,72 +167,6 @@
     <Compile Include="Crear_sueldo.Designer.cs">
       <DependentUpon>Crear_sueldo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteAlergia.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteAlergia.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteAlergiaCenso.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteAlergiaCenso.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteAuxiliares.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteAuxiliares.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteAuxiliaresCenso.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteAuxiliaresCenso.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteCoclear.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteCoclear.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteCoclearCenso.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteCoclearCenso.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteDiscapacidad.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteDiscapacidad.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteDiscapacidadCenso.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteDiscapacidadCenso.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteEnfermedadCenso.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteEnfermedadCenso.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteEnfermedad.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteEnfermedad.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteMarca.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteMarca.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Editar_registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,24 +217,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reporte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reporte.Designer.cs">
-      <DependentUpon>Reporte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReporteMarcaCenso.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteMarcaCenso.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ReporteNoAuxiliaresCenso.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteNoAuxiliaresCenso.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Util.cs" />
     <Compile Include="Ventana.cs" />
     <EmbeddedResource Include="ConsultaGrafica.resx">
@@ -348,50 +264,6 @@
     <EmbeddedResource Include="Crear_sueldo.resx">
       <DependentUpon>Crear_sueldo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteAlergia.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteAlergia.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteAlergiaCenso.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteAlergiaCenso.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteAuxiliares.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteAuxiliares.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteAuxiliaresCenso.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteAuxiliaresCenso.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteCoclear.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteCoclear.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteCoclearCenso.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteCoclearCenso.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteDiscapacidad.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteDiscapacidad.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteDiscapacidadCenso.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteDiscapacidadCenso.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteEnfermedadCenso.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteEnfermedadCenso.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteEnfermedad.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteEnfermedad.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteMarca.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteMarca.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Editar_registro.resx">
       <DependentUpon>Editar_registro.cs</DependentUpon>
     </EmbeddedResource>
@@ -426,17 +298,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reporte.resx">
-      <DependentUpon>Reporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteMarcaCenso.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteMarcaCenso.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteNoAuxiliaresCenso.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteNoAuxiliaresCenso.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="cpseqcen_censosDataSet.xsc">
       <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
     </None>

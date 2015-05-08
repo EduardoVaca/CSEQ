@@ -672,7 +672,7 @@ namespace CSEQ
             doc.Add(new Paragraph(" "));
 
             Paragraph Lema = new Paragraph("COMISIÓN DE PERSONAS SORDAS DEL ESTADO DE QUERÉTARO, A.C.");
-            Lema.Alignment = 1;
+            Lema.Alignment = 1; 
             Lema.Font.Size = 17f;
             Lema.IndentationLeft = 175f;
             doc.Add(Lema);
