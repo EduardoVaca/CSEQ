@@ -68,7 +68,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_grado, "SELECT ID_grado, CONCAT(grado, ': ', descripcion) FROM Grado");
             Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa" + " ORDER BY causa ASC");
             Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, contenido FROM AparatoConMarca" + " ORDER BY contenido ASC");
-            Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT('$',minimo, ' a ','$',maximo) FROM Sueldo");
+            Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT(minimo, ' a ',maximo) FROM Sueldo");
             Util.llenarComboBox(ID_estadoEmpleo, "SELECT ID_estado, nombre FROM Estado" + " ORDER BY nombre ASC");
             Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC");
             Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue + " ORDER BY nombre ASC");
@@ -85,7 +85,18 @@ namespace CSEQ
             }
             salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
-            
+            refresh_toolTip.SetToolTip(refresh_municipio, "Actualizar Municipios");
+            refresh_toolTip.SetToolTip(refresh_estado, "Actualizar Estados");
+            refresh_toolTip.SetToolTip(refresh_colonia, "Actualizar Colonias");
+            refresh_toolTip.SetToolTip(censo_refresh, "Actualizar Censos");
+            refresh_toolTip.SetToolTip(institucion_refresh, "Actualizar Instituciones");
+            refresh_toolTip.SetToolTip(sueldo_refresh, "Actualizar Sueldos");
+            refresh_toolTip.SetToolTip(areaTrabajo_refresh, "Actualizar Areas Trabajo");
+            refresh_toolTip.SetToolTip(estadoEmpelo_refresh, "Actualizar Estados");
+            refresh_toolTip.SetToolTip(municipioEmpleo_refresh, "Actualizar Municipios");
+            refresh_toolTip.SetToolTip(coloniaEmpleo_refresh, "Actualizar Colonias");
+            refresh_toolTip.SetToolTip(causa_refresh, "Actualizar Causas");
+            refresh_toolTip.SetToolTip(aparato_refresh, "Actualizar Aparatos");            
         }
 
         /*--------------------------------------------------------------------------------
