@@ -50,6 +50,11 @@ namespace CSEQ
             }
         }
 
+
+        /*********************************************************
+         * Metodo que busca en la Tabla un registro dado por el usuario
+         * llenando el grid con la tabla obtenida
+         * ******************************************************/
         private void buscar()
         {
             busqueda_grid.Visible = true;
@@ -64,6 +69,12 @@ namespace CSEQ
             buscar();
         }
 
+
+        /**********************************************************
+         * Metodo que llena todo el form con los datos obtenidos del
+         * registro seleccionado en el grid
+         * Se activan los botones de Modificar y Eliminar
+         * *******************************************************/
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -106,6 +117,7 @@ namespace CSEQ
             Util.minimizarIconoAtras(Atras_picture);
         }
 
+        /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
             String mTipo = tipo_txt.Text;
