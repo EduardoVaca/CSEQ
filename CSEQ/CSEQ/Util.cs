@@ -287,6 +287,8 @@ namespace CSEQ
            // MessageBox.Show(query);
             if (table != null)
                 grid.DataSource = table;
+            else
+                grid.Visible = false;
         }
 
         public static void fillGridAviso(DataGridView grid, String nombre, System.Windows.Forms.Label lb, params Object[] parametros)

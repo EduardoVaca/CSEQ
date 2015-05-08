@@ -69,6 +69,10 @@ namespace CSEQ
                 sqlActiveRow += " nombre= '" + nombre_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
+            else
+            {
+                MessageBox.Show("No existe");
+            }
         }
 
         private void eliminar_btn_Click(object sender, EventArgs e)
