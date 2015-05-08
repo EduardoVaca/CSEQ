@@ -230,6 +230,7 @@
             this.educacion_combo.Name = "educacion_combo";
             this.educacion_combo.Size = new System.Drawing.Size(551, 44);
             this.educacion_combo.TabIndex = 23;
+            this.educacion_combo.SelectionChangeCommitted += new System.EventHandler(this.educacion_combo_SelectionChangeCommitted);
             // 
             // empleo_combo
             // 

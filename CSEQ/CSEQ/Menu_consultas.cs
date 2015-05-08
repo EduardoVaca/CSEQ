@@ -106,5 +106,13 @@ namespace CSEQ
             salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
         }
+
+        private void educacion_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int index = educacion_combo.SelectedIndex;
+            consulta_educacion educacion = new consulta_educacion(index, rol);
+            educacion.Show();
+            this.Close();
+        }
     }
 }
