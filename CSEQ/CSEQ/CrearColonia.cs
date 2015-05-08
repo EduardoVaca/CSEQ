@@ -97,6 +97,7 @@ namespace CSEQ
          * *******************************************************/
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 modificar_pb.Enabled = true; //Activacion de botones
@@ -111,6 +112,7 @@ namespace CSEQ
                     ID_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
                 }
             }
+            Cursor = Cursors.Default;
         }
 
 

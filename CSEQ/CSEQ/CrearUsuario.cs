@@ -63,7 +63,8 @@ namespace CSEQ
          * Se activan los botones de Modificar y Eliminar
          * *******************************************************/
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {            
+        {
+            Cursor = Cursors.WaitCursor;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 modificar_pb.Enabled = true; //Activacion de botones
@@ -73,6 +74,7 @@ namespace CSEQ
                 Util.showData(this, sqlActiveRow);
                 ID_rolViejo = Int32.Parse(ID_rol.SelectedValue.ToString());
             }
+            Cursor = Cursors.Default;
         }
 
         private void logout_Click(object sender, EventArgs e)

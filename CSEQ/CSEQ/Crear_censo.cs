@@ -63,7 +63,8 @@ namespace CSEQ
          * Se activan los botones de Modificar y Eliminar
          * *******************************************************/
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {            
+        {
+            Cursor = Cursors.WaitCursor;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 modificar_pb.Enabled = true; //activacion de botones
@@ -73,6 +74,7 @@ namespace CSEQ
                 sqlActiveRow += " ID_censo = '" + censo_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
+            Cursor = Cursors.Default;
         }
 
         private void Crear_censo_Load(object sender, EventArgs e)
