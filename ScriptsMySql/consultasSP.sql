@@ -246,7 +246,7 @@ BEGIN
 	SELECT p.alergia AS 'Tienen alergia', COUNT(*) AS Total, (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Persona p, PerteneceCenso per
 	WHERE p.CURP = per.CURP AND per.ID_censo = censo
-	GROUP BY enfermedad;
+	GROUP BY p.alergia;
 END //
 DELIMITER ;
 
