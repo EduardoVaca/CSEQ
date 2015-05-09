@@ -140,10 +140,10 @@
             // nombre_txt
             // 
             this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.nombre_txt.Location = new System.Drawing.Point(160, 188);
+            this.nombre_txt.Location = new System.Drawing.Point(180, 188);
             this.nombre_txt.Margin = new System.Windows.Forms.Padding(4);
             this.nombre_txt.Name = "nombre_txt";
-            this.nombre_txt.Size = new System.Drawing.Size(760, 47);
+            this.nombre_txt.Size = new System.Drawing.Size(707, 47);
             this.nombre_txt.TabIndex = 25;
             this.nombre_txt.TextChanged += new System.EventHandler(this.nombre_txt_TextChanged);
             // 
@@ -189,7 +189,7 @@
             // correo_txt
             // 
             this.correo_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.correo_txt.Location = new System.Drawing.Point(146, 369);
+            this.correo_txt.Location = new System.Drawing.Point(180, 376);
             this.correo_txt.Margin = new System.Windows.Forms.Padding(4);
             this.correo_txt.Name = "correo_txt";
             this.correo_txt.Size = new System.Drawing.Size(404, 47);
@@ -198,10 +198,10 @@
             // calle_txt
             // 
             this.calle_txt.Font = new System.Drawing.Font("Candara", 12F);
-            this.calle_txt.Location = new System.Drawing.Point(146, 456);
+            this.calle_txt.Location = new System.Drawing.Point(180, 465);
             this.calle_txt.Margin = new System.Windows.Forms.Padding(4);
             this.calle_txt.Name = "calle_txt";
-            this.calle_txt.Size = new System.Drawing.Size(682, 47);
+            this.calle_txt.Size = new System.Drawing.Size(707, 47);
             this.calle_txt.TabIndex = 31;
             // 
             // label6
@@ -221,7 +221,7 @@
             // 
             this.ID_municipio.Font = new System.Drawing.Font("Candara", 10F);
             this.ID_municipio.FormattingEnabled = true;
-            this.ID_municipio.Location = new System.Drawing.Point(632, 587);
+            this.ID_municipio.Location = new System.Drawing.Point(649, 587);
             this.ID_municipio.Margin = new System.Windows.Forms.Padding(4);
             this.ID_municipio.Name = "ID_municipio";
             this.ID_municipio.Size = new System.Drawing.Size(296, 41);
@@ -234,7 +234,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(436, 583);
+            this.label11.Location = new System.Drawing.Point(467, 583);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(176, 46);
@@ -248,7 +248,7 @@
             this.ID_estado.Location = new System.Drawing.Point(160, 583);
             this.ID_estado.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estado.Name = "ID_estado";
-            this.ID_estado.Size = new System.Drawing.Size(264, 41);
+            this.ID_estado.Size = new System.Drawing.Size(299, 41);
             this.ID_estado.TabIndex = 42;
             this.ID_estado.SelectionChangeCommitted += new System.EventHandler(this.ID_estado_SelectionChangeCommitted);
             // 
@@ -434,7 +434,7 @@
             this.telefono_txt.Margin = new System.Windows.Forms.Padding(4);
             this.telefono_txt.Mask = "(999) 000-0000";
             this.telefono_txt.Name = "telefono_txt";
-            this.telefono_txt.Size = new System.Drawing.Size(370, 40);
+            this.telefono_txt.Size = new System.Drawing.Size(404, 40);
             this.telefono_txt.TabIndex = 59;
             // 
             // imagen
