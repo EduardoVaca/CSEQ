@@ -34,7 +34,11 @@ namespace CSEQ
 
         private void close_picture_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult respuesta = MessageBox.Show("¿Deseas salir de la aplicación?", "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            } 
         }
 
         private void logout_Click(object sender, EventArgs e)

@@ -24,7 +24,11 @@ namespace CSEQ
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult respuesta = MessageBox.Show("¿Deseas salir de la aplicación?", "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            } 
         }
 
         private void close_picture_MouseHover(object sender, EventArgs e)
