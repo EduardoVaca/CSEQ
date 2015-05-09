@@ -10,7 +10,12 @@ using MySql.Data.MySqlClient;
 //Librerias zedgraph
 using ZedGraph;
 using System.Drawing;
-
+//Librerias itextsharp
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using System.Diagnostics;
+ 
 
 
 namespace CSEQ
@@ -472,15 +477,17 @@ namespace CSEQ
             zgc.GraphPane.CurveList.Clear();
             zgc.GraphPane.GraphObjList.Clear();
             graph = zgc.GraphPane;
-            graph.Chart.Fill = new Fill(Color.Transparent, Color.FromArgb(220, 255, 220), 45.0F);
-            graph.Fill = new Fill(Color.Transparent, Color.FromArgb(220, 220, 255), 45.0F);
+            graph.Chart.Fill = new Fill(Color.White);
+            graph.Fill = new Fill(Color.White);
             dt = getData(query);
 
             if (dt != null && tipo=="Barra")
             {
                 graph.Title.Text = dt.TableName;
                 graph.XAxis.Title.Text = dt.Columns[0].ColumnName;
+                graph.XAxis.Title.FontSpec.Size = 15.0f;
                 graph.YAxis.Title.Text = dt.Columns[1].ColumnName;
+                graph.YAxis.Title.FontSpec.Size = 15.0f;
                 String[] nombres = new String[dt.Rows.Count];
                 // Obtenemos los encabezados de las columnas
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -489,7 +496,7 @@ namespace CSEQ
                 graph.XAxis.MajorTic.IsBetweenLabels = true;
                 graph.XAxis.Type = AxisType.Text;
                 graph.XAxis.Scale.TextLabels = nombres;
-                graph.XAxis.Scale.FontSpec.Size = 10.0F;
+                graph.XAxis.Scale.FontSpec.Size = 15.0F;
                 graph.XAxis.Scale.FontSpec.Angle = 90;
                 graph.YAxis.IsVisible = true;
                 graph.XAxis.IsVisible = true;
@@ -500,24 +507,26 @@ namespace CSEQ
                     double y = Double.Parse(dt.Rows[i].ItemArray[1].ToString());
                     double z = i / 4.0;
                     //Labels de numero
-                    TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(),x,y+.1);
+                    TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(),x,y+.5);
                     barLabel.FontSpec.Border.IsVisible = false;
-                    barLabel.FontSpec.Fill.IsVisible = true;
+                    barLabel.FontSpec.Fill.IsVisible = false;
                     list.Add(x, y, z);
                     graph.GraphObjList.Add(barLabel);
                 }
                 BarItem bar = graph.AddBar("Cantidad", list, Color.Blue);
-                bar.Bar.Fill = new Fill(colores);
-                bar.Bar.Fill.Type = FillType.GradientByColorValue;
+                bar.Bar.Fill = new Fill(Color.Aqua);
+                bar.Bar.Fill.Type = FillType.Brush;
                 bar.Bar.Fill.RangeMin = 0;
-                bar.Bar.Fill.RangeMax = 4;
+                bar.Bar.Fill.RangeMax = 6;
 
                 zgc.AxisChange();
                 zgc.Refresh();
             }
 
+
             if (dt != null && tipo=="Pay")
             {
+                zgc.GraphPane.GraphObjList.Clear();
                 graph.Title.Text = dt.TableName;
                 graph.XAxis.Title.Text = dt.Columns[0].ColumnName;
                 graph.YAxis.Title.Text = " " ;
@@ -533,24 +542,16 @@ namespace CSEQ
                 graph.XAxis.Scale.FontSpec.Size = 10.0F;
                 graph.XAxis.Scale.FontSpec.Angle = 90;
                 graph.YAxis.IsVisible = false;
-                //graph.XAxis.IsVisible = false;
                 // Llenamos la grafica
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     double x = i + 1;
                     double y = Double.Parse(dt.Rows[i].ItemArray[1].ToString());
-                    //Labels de numero
-                    
-                    TextObj barLabel = new TextObj(dt.Rows[i].ItemArray[1].ToString(), x, y + .5);
-                    barLabel.FontSpec.Border.IsVisible = false;
-                    barLabel.FontSpec.Fill.IsVisible = false;
                     PieItem pay = graph.AddPieSlice(y,colores[i],0F,dt.Rows[i].ItemArray[1].ToString());
-                    graph.GraphObjList.Add(barLabel);
                 }
 
-                //zgc.AxisChange();
             }
-
+            zgc.GetImage().Save("Grafica.png");
             zgc.Refresh();
         }
 
@@ -596,6 +597,124 @@ namespace CSEQ
             pb.Top = oldTop;
             pb.Left = oldLeft;
             pb.Size = oldSize;
+        }
+
+
+        public static void generaPDF(String query)
+        {
+            //Creacion del filestream
+            FileStream salida;
+            try
+            {
+                 salida = new FileStream("Reporte.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.Read); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Archivo abierto \n Cierre el reporte anterior para crear uno nuevo","Aceptar",MessageBoxButtons.OK);
+                return;
+            }
+            //Caracteristicas del pds
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER,10,10,42,35);
+            //Llamada al escritor de pdf
+            PdfWriter writer = PdfWriter.GetInstance(doc, salida);
+            //Creacion de datatable para llenar el reporte
+            DataTable dt;
+            doc.Open();
+            dt = getData(query);
+            String[] nombres = new String[dt.Rows.Count];
+            //Tablas
+            PdfPTable tabla = new PdfPTable(dt.Columns.Count);
+            // Obtenemos los encabezados de las columnas
+            List listaItems = new List(List.ALPHABETICAL);
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                PdfPCell celda = new PdfPCell(new Phrase(dt.Columns[i].ToString()));
+                celda.HorizontalAlignment = 1;
+                tabla.AddCell(celda);
+            }
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                PdfPCell celda = new PdfPCell(new Phrase(dt.Rows[i].ItemArray[0].ToString()));
+                celda.HorizontalAlignment = 1;
+                tabla.AddCell(celda);
+                for (int a = 1; a < dt.Columns.Count; a++)
+                {
+                    PdfPCell celdaNums = new PdfPCell(new Phrase(dt.Rows[i].ItemArray[a].ToString()));
+                    celdaNums.HorizontalAlignment = 1;
+                    tabla.AddCell(celdaNums);
+                }
+            }
+            //Grafica del reporte
+            iTextSharp.text.Image imgLogo = iTextSharp.text.Image.GetInstance("Resources/Logo.jpg");
+            imgLogo.ScalePercent(10);
+            imgLogo.SetAbsolutePosition(50,doc.PageSize.Height - 200);
+            iTextSharp.text.Image imgGrafica = iTextSharp.text.Image.GetInstance("Grafica.png");
+            imgGrafica.Alignment = (int)(HorizontalAlignment.Center-(int)imgGrafica.Width);
+            imgGrafica.ScalePercent(60);
+            Paragraph titulo = new Paragraph("Censo de Población y Desarrollo Integral para Personas con Discapacidad Auditiva \n\n");
+            titulo.Alignment = 1;
+            titulo.Font.Size= 10f;
+            doc.Add(titulo);
+
+            PdfContentByte Ob= writer.DirectContent;
+            Ob.MoveTo(0, doc.PageSize.Height-60);
+            Ob.LineTo(doc.PageSize.Width, doc.PageSize.Height-60);
+            Ob.Stroke();
+            Ob.SetColorStroke(BaseColor.RED);
+            Ob.MoveTo(0, doc.PageSize.Height - 215);
+            Ob.LineTo(doc.PageSize.Width, doc.PageSize.Height - 215);
+            Ob.Stroke();
+
+            doc.Add(imgLogo);
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph(" "));
+
+            Paragraph Lema = new Paragraph("COMISIÓN DE PERSONAS SORDAS DEL ESTADO DE QUERÉTARO, A.C.");
+            Lema.Alignment = 1; 
+            Lema.Font.Size = 17f;
+            Lema.IndentationLeft = 175f;
+            doc.Add(Lema);
+
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph(" "));
+            Paragraph fecha = new Paragraph("Fecha: " + DateTime.Now.Day +"/"+ DateTime.Now.Month+"/"+DateTime.Now.Year);
+            fecha.Alignment = 2;
+            fecha.Font.Size = 10f;
+            doc.Add(fecha);
+            doc.Add(new Paragraph(" "));
+            Paragraph TituloReporte = new Paragraph("Agregar titulo");
+            TituloReporte.Alignment = 1;
+            TituloReporte.Font.Size = 20f;
+            doc.Add(TituloReporte);
+            doc.Add(new Paragraph(" "));
+            doc.Add(tabla);
+            doc.Add(listaItems);
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph(" "));
+            doc.Add( imgGrafica );
+
+            PdfContentByte cbPie;
+            cbPie = writer.DirectContent;
+            cbPie.BeginText();
+            cbPie.SetFontAndSize(FontFactory.GetFont(FontFactory.HELVETICA, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont, 10);
+            cbPie.SetColorFill(iTextSharp.text.BaseColor.BLACK);
+            cbPie.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "Página: " + writer.PageNumber.ToString(), 540, 25, 0);
+            cbPie.EndText();
+            
+            Paragraph piePagina = new Paragraph("Esta muestra se realizó con datos cualitativos y cuantitativos obtenidos en el Censo de Población y Desarrollo Integral del (año o período):"
+                    +/*periodo+*/"para personas con discapacidad auditiva, realizado por la Comisión de Personas Sordas del Estado de Querétaro."
+                    +"\nNota 1: Los datos obtenidos exponen una realidad aproximada sobre la comunidad de personas Sordas."
+                    +"Análisis diversos de este programa calculan sus porcentajes en porción del número total de personas con discapacidad auditiva registradas en el sistema."
+                    +"\nNota 2: Según el Censo de Población y Vivienda 2010 (INEGI) se contaron 7,178 personas con discapacidad auditiva en el Estado de Querétaro.");
+            piePagina.IndentationLeft = 15f;
+            piePagina.IndentationRight = 15f;
+            piePagina.Font.Size = 10f;
+            doc.Add(piePagina);
+            doc.Close();
+            
+
+            string pdfPath = Path.Combine(Application.StartupPath, "Reporte.pdf");
+            Process.Start(pdfPath);
         }
 
 
