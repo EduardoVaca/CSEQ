@@ -221,10 +221,8 @@ namespace CSEQ
 
         private void Reporte_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("query:" + query + "-" + "index:" + index + "-" + "reporte:" + indexReporte + "-" + salida);
-            //Reporte Nuevo = new Reporte(query,index,indexReporte,salida,getId_censo());
+           // MessageBox.Show("query:" + query + "-" + "index:" + index + "-" + "reporte:" + indexReporte + "-" + salida);
             Util.generaPDF(query);
-            //Nuevo.Show();    
             
             
         }

@@ -86,15 +86,6 @@
     <Compile Include="consultas_salud.Designer.cs">
       <DependentUpon>consultas_salud.cs</DependentUpon>
     </Compile>
-    <Compile Include="cpseqcen_censosDataSet.cs">
-      <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="cpseqcen_censosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="CrearAparatoAuditivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,17 +289,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="cpseqcen_censosDataSet.xsc">
-      <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="cpseqcen_censosDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cpseqcen_censosDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cpseqcen_censosDataSet.xss">
-      <DependentUpon>cpseqcen_censosDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
