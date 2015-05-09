@@ -27,6 +27,16 @@ namespace CSEQ
             toolTip.SetToolTip(logout, "Cerrar Sesión");
             toolTip.SetToolTip(close_picture, "Salir");
             Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");
+            MessageBox.Show("Index " + index);
+            if (index == 0){
+                titulo.Text = "Estadísticas Generales";
+
+            }
+                
+            else if (index == 1)
+                titulo.Text = "Estado Civil y Familia";
+            else if (index == 2)
+                titulo.Text = "Migración";
         }
 
         private void close_picture_Click(object sender, EventArgs e)

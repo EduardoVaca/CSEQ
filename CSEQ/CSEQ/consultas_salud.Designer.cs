@@ -57,7 +57,7 @@
             // 
             this.Reporte.Enabled = false;
             this.Reporte.Location = new System.Drawing.Point(108, 687);
-            this.Reporte.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Reporte.Margin = new System.Windows.Forms.Padding(6);
             this.Reporte.Name = "Reporte";
             this.Reporte.Size = new System.Drawing.Size(132, 71);
             this.Reporte.TabIndex = 18;
@@ -70,7 +70,7 @@
             this.back_picture.BackColor = System.Drawing.Color.Transparent;
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
             this.back_picture.Location = new System.Drawing.Point(16, 15);
-            this.back_picture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.back_picture.Margin = new System.Windows.Forms.Padding(6);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(60, 56);
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,7 +85,7 @@
             this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(1516, 19);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +100,7 @@
             this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.titulo.Location = new System.Drawing.Point(604, 19);
+            this.titulo.Location = new System.Drawing.Point(604, 57);
             this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(0, 53);
@@ -111,7 +111,7 @@
             this.zedGraph.AutoSize = true;
             this.zedGraph.BackColor = System.Drawing.Color.Transparent;
             this.zedGraph.Location = new System.Drawing.Point(344, 387);
-            this.zedGraph.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.zedGraph.Margin = new System.Windows.Forms.Padding(12);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
             this.zedGraph.ScrollMaxX = 0D;
@@ -144,7 +144,7 @@
             this.todoscensos_radio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todoscensos_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.todoscensos_radio.Location = new System.Drawing.Point(14, 471);
-            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(4);
             this.todoscensos_radio.Name = "todoscensos_radio";
             this.todoscensos_radio.Size = new System.Drawing.Size(213, 33);
             this.todoscensos_radio.TabIndex = 20;
@@ -163,7 +163,7 @@
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
             this.ID_censo.Location = new System.Drawing.Point(164, 419);
-            this.ID_censo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_censo.Name = "ID_censo";
             this.ID_censo.Size = new System.Drawing.Size(160, 44);
             this.ID_censo.TabIndex = 21;
@@ -174,7 +174,7 @@
             this.logout.BackColor = System.Drawing.Color.Transparent;
             this.logout.Image = global::CSEQ.Properties.Resources.logout;
             this.logout.Location = new System.Drawing.Point(1514, 77);
-            this.logout.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.logout.Margin = new System.Windows.Forms.Padding(8);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(66, 60);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,7 +192,7 @@
             "Personas con y sin aparato auditivo",
             "Personas con implante coclear"});
             this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(172, 190);
-            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(4);
             this.auxiliarAuditivo_combo.Name = "auxiliarAuditivo_combo";
             this.auxiliarAuditivo_combo.Size = new System.Drawing.Size(592, 44);
             this.auxiliarAuditivo_combo.TabIndex = 0;
@@ -219,7 +219,7 @@
             this.tienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tienen_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.tienen_radio.Location = new System.Drawing.Point(790, 165);
-            this.tienen_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tienen_radio.Margin = new System.Windows.Forms.Padding(4);
             this.tienen_radio.Name = "tienen_radio";
             this.tienen_radio.Size = new System.Drawing.Size(141, 36);
             this.tienen_radio.TabIndex = 22;
@@ -236,7 +236,7 @@
             this.noTienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noTienen_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.noTienen_radio.Location = new System.Drawing.Point(790, 223);
-            this.noTienen_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.noTienen_radio.Margin = new System.Windows.Forms.Padding(4);
             this.noTienen_radio.Name = "noTienen_radio";
             this.noTienen_radio.Size = new System.Drawing.Size(153, 36);
             this.noTienen_radio.TabIndex = 23;
@@ -254,7 +254,7 @@
             "Personas con alergia",
             "Personas con enfermedad"});
             this.estadoSalud_combo.Location = new System.Drawing.Point(172, 190);
-            this.estadoSalud_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estadoSalud_combo.Margin = new System.Windows.Forms.Padding(4);
             this.estadoSalud_combo.Name = "estadoSalud_combo";
             this.estadoSalud_combo.Size = new System.Drawing.Size(592, 44);
             this.estadoSalud_combo.TabIndex = 24;
@@ -287,7 +287,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "consultas_salud";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultas_salud";

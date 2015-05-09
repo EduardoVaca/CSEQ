@@ -127,7 +127,7 @@ namespace CSEQ
 
         private void demografia_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int index = educacion_combo.SelectedIndex;
+            int index = demografia_combo.SelectedIndex;
             consultas_demografia demografia = new consultas_demografia(index, rol);
             demografia.Show();
             this.Close();
@@ -135,7 +135,7 @@ namespace CSEQ
 
         private void empleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int index = educacion_combo.SelectedIndex;
+            int index = empleo_combo.SelectedIndex;
             consultas_empleo empleo = new consultas_empleo(index, rol);
             empleo.Show();
             this.Close();

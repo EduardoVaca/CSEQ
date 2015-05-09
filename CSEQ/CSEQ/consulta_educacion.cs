@@ -59,6 +59,10 @@ namespace CSEQ
         private void consulta_educacion_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");
+            if (index == 0)
+                titulo.Text = "Comunicación y Lenguaje";
+            else if (index == 1)
+                titulo.Text = "Nivel Educativo y Tipo de Educación";
         }
 
         private void back_picture_MouseHover(object sender, EventArgs e)

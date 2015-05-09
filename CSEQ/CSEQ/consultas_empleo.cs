@@ -28,6 +28,8 @@ namespace CSEQ
             toolTip.SetToolTip(close_picture, "Salir");
             toolTip.SetToolTip(logout, "Cerrar Sesión");
             Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");
+            if (index == 0)
+                titulo.Text = "Estadísticas Generales";
         }
 
         private void close_picture_Click(object sender, EventArgs e)

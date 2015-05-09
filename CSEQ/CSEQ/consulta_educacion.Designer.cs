@@ -37,6 +37,7 @@
             this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
             this.ID_censo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
@@ -126,6 +127,18 @@
             this.label2.TabIndex = 71;
             this.label2.Text = "Censo";
             // 
+            // titulo
+            // 
+            this.titulo.AutoSize = true;
+            this.titulo.BackColor = System.Drawing.Color.Transparent;
+            this.titulo.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.titulo.Location = new System.Drawing.Point(541, 51);
+            this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(0, 53);
+            this.titulo.TabIndex = 80;
+            // 
             // consulta_educacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -135,6 +148,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1028);
+            this.Controls.Add(this.titulo);
             this.Controls.Add(this.ID_censo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label12);
@@ -165,5 +179,6 @@
         private System.Windows.Forms.ToolTip salir_tt;
         private System.Windows.Forms.ComboBox ID_censo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label titulo;
     }
 }

@@ -37,6 +37,7 @@
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.close_picture = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
@@ -124,6 +125,18 @@
             this.close_picture.TabStop = false;
             this.close_picture.Click += new System.EventHandler(this.close_picture_Click);
             // 
+            // titulo
+            // 
+            this.titulo.AutoSize = true;
+            this.titulo.BackColor = System.Drawing.Color.Transparent;
+            this.titulo.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.titulo.Location = new System.Drawing.Point(579, 57);
+            this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(0, 53);
+            this.titulo.TabIndex = 80;
+            // 
             // consultas_empleo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -133,6 +146,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1028);
+            this.Controls.Add(this.titulo);
             this.Controls.Add(this.ID_censo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label12);
@@ -163,5 +177,6 @@
         private System.Windows.Forms.PictureBox back_picture;
         private System.Windows.Forms.PictureBox close_picture;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Label titulo;
     }
 }
