@@ -114,5 +114,31 @@ namespace CSEQ
             educacion.Show();
             this.Close();
         }
+
+        private void back_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(back_picture);
+        }
+
+        private void back_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(back_picture);
+        }
+
+        private void demografia_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int index = educacion_combo.SelectedIndex;
+            consultas_demografia demografia = new consultas_demografia(index, rol);
+            demografia.Show();
+            this.Close();
+        }
+
+        private void empleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int index = educacion_combo.SelectedIndex;
+            consultas_empleo empleo = new consultas_empleo(index, rol);
+            empleo.Show();
+            this.Close();
+        }
     }
 }

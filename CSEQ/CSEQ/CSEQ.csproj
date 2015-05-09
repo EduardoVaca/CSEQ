@@ -74,6 +74,18 @@
     <Compile Include="ConsultaRedactada.Designer.cs">
       <DependentUpon>ConsultaRedactada.cs</DependentUpon>
     </Compile>
+    <Compile Include="consultas_demografia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultas_demografia.Designer.cs">
+      <DependentUpon>consultas_demografia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultas_empleo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultas_empleo.Designer.cs">
+      <DependentUpon>consultas_empleo.cs</DependentUpon>
+    </Compile>
     <Compile Include="consultas_salud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaRedactada.resx">
       <DependentUpon>ConsultaRedactada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultas_demografia.resx">
+      <DependentUpon>consultas_demografia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultas_empleo.resx">
+      <DependentUpon>consultas_empleo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consultas_salud.resx">
       <DependentUpon>consultas_salud.cs</DependentUpon>
