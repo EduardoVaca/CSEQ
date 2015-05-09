@@ -23,7 +23,11 @@ namespace CSEQ
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult respuesta = MessageBox.Show("¿Deseas salir de la aplicación?", "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            } 
         }
 
         private void back_picture_Click(object sender, EventArgs e)
@@ -32,19 +36,18 @@ namespace CSEQ
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
 
+        /*Metodo que llena los combo boxes de la Forma*/
+        private void llenarComboBoxes()
+        {
+            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado" + " ORDER BY nombre ASC");
+            Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC");
+            Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue + " ORDER BY nombre ASC");
+        }
+
         private void Crear_InstitucionEducativa_Load(object sender, EventArgs e)
         {
-            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
-            int id_estado = Int32.Parse(ID_estado.SelectedValue.ToString());            
-            Util.llenarComboBox(ID_municipio, "SELECT m.ID_municipio,m.nombre FROM Municipio m,Estado e WHERE m.ID_estado=e.ID_estado AND e.ID_estado=" + id_estado + ";");
 
-
-            if (ID_municipio.SelectedItem != null)
-            {
-                int id_municipio = Int32.Parse(ID_municipio.SelectedValue.ToString());                
-                String inicio = "SELECT distinct  c.ID_colonia, c.nombre FROM Municipio m, Colonia c WHERE m.ID_municipio=c.ID_municipio;";
-                Util.llenarComboBox(ID_colonia, inicio);
-            }
+            llenarComboBoxes();
 
             if (rol == 1)
             {
@@ -59,23 +62,23 @@ namespace CSEQ
         /*--------------------------------------------------------------------------------
          * Metodos los cuales llenan un comboBox basandose en el contenido de otro comboBox
          * Ejemplo: Estado - > Municipios
-         */
+         *********************************************************************************/
         private void ID_estado_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = ID_estado.SelectedValue.ToString();
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
-                                                "ID_estado = " + valorComboBox);            
+                                                "ID_estado = " + valorComboBox + " ORDER BY nombre ASC");            
         }
 
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int ID_municipio_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
-            MessageBox.Show(ID_municipio_selected.ToString());
+            int ID_municipio_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());            
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
-                                               "ID_municipio = " + ID_municipio_selected);            
+                                               "ID_municipio = " + ID_municipio_selected + " ORDER BY nombre ASC");            
         }
         /*---------------------------------------------------------------------*/
 
+        /*Metodo que guarda un nuevo registro en la base*/
         private void guardar_btn_Click(object sender, EventArgs e)
         {
             String iNombre = nombre_txt.Text;
@@ -95,16 +98,35 @@ namespace CSEQ
 
         }
 
-        private void Buscar_Click(object sender, EventArgs e)
+
+        /*********************************************************
+         * Metodo que busca en la Tabla un registro dado por el usuario
+         * llenando el grid con la tabla obtenida
+         * ******************************************************/
+        private void buscar()
         {
             busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
+            Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", busqueda);
+            Cursor = Cursors.Default;
         }
 
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+
+        /**********************************************************
+         * Metodo que llena todo el form con los datos obtenidos del
+         * registro seleccionado en el grid
+         * Se activan los botones de Modificar y Eliminar
+         * *******************************************************/
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             String correo;
+            Cursor = Cursors.WaitCursor;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 modificar_pb.Enabled = true; //Activacion de botones
@@ -117,11 +139,12 @@ namespace CSEQ
                 Util.showData(this, sqlActiveRow);
                 //Se vuelven a llenar los comboBox DEPENDIENTES para que no sean valores nulos
                 ID_estado.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[4].Value.ToString());
-                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + ";");
+                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC" + ";");
                 ID_municipio.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[3].Value.ToString());
-                Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipio.SelectedValue + ";");
+                Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipio.SelectedValue + " ORDER BY nombre ASC" + ";");
                 ID_colonia.SelectedValue = Int16.Parse(busqueda_grid.Rows[e.RowIndex].Cells[2].Value.ToString());
             }
+            Cursor = Cursors.Default;
 
 
 
@@ -142,11 +165,9 @@ namespace CSEQ
                 }
             }
         }
-
+        /*Metodo que modifica un registro en la Base*/
         private void modificar_btn_Click(object sender, EventArgs e)
-        {
-            //nombreViejo VARCHAR(90), nombreNuevo VARCHAR(90), calleNuevo VARCHAR(80), telefonoNuevo VARCHAR(20), correoNuevo VARCHAR(80),
-            //privadaNuevo BOOLEAN, especializadaNuevo BOOLEAN
+        {            
             String nombreNuevo = nombre_txt.Text;
             String calleNuevo = calle_txt.Text;
             String telefonoNuevo = telefono_txt.Text;
@@ -209,6 +230,7 @@ namespace CSEQ
             cerrarSesion_tt.SetToolTip(logout, "Cerrar Sesión");
         }
 
+        /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
             String iNombre = nombre_txt.Text;
@@ -253,6 +275,7 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que elimina un registro elegido de la base*/
         private void eliminar_pb_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
@@ -309,7 +332,30 @@ namespace CSEQ
             Util.minimizarCualquierIcono(Buscar, new Size(28, 36), 268, 275);
         }
 
+        private void nuevoRegistro_pb_MouseHover(object sender, EventArgs e)
+        {
+            Util.maximizarCualquierIcono(nuevoRegistro_pb, new Size(41, 52), 3);
+            //MessageBox.Show(nuevoRegistro_pb.Top.ToString() + "left: " + nuevoRegistro_pb.Left.ToString() + "size: " + nuevoRegistro_pb.Size.Height.ToString() + nuevoRegistro_pb.Size.Width.ToString());
+        }
 
+        private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(37, 48), 448, 423);
+        }
 
+        private void nuevoRegistro_pb_Click(object sender, EventArgs e)
+        {
+            Util.clear(this);
+            llenarComboBoxes();
+        }
+
+        //Metodo para habilitar los enter en la busqueda
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
+        }
     }
 }

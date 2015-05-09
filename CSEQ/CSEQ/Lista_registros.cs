@@ -39,7 +39,11 @@ namespace CSEQ
 
         private void x_picture_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult respuesta = MessageBox.Show("¿Deseas salir de la aplicación?", "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            } 
         }
 
         private void back_picture_Click(object sender, EventArgs e)
@@ -63,7 +67,7 @@ namespace CSEQ
         private void persona_pb_MouseDown(object sender, MouseEventArgs e)
         {
             persona_press.Visible = true;
-            persona_pb.Visible = false;
+            persona_pb.Visible = false;            
         }
 
         private void colonia_pb_MouseDown(object sender, MouseEventArgs e)
@@ -128,7 +132,7 @@ namespace CSEQ
 
 
         private void persona_pb_MouseUp(object sender, MouseEventArgs e)
-        {
+        {            
             Form f = Application.OpenForms.Cast<Form>().FirstOrDefault(c => c is Persona);
             if (f == null)
             {

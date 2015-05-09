@@ -92,6 +92,8 @@
             this.back_picture.TabIndex = 12;
             this.back_picture.TabStop = false;
             this.back_picture.Click += new System.EventHandler(this.back_picture_Click);
+            this.back_picture.MouseLeave += new System.EventHandler(this.back_picture_MouseLeave);
+            this.back_picture.MouseHover += new System.EventHandler(this.back_picture_MouseHover);
             // 
             // label1
             // 
@@ -217,6 +219,7 @@
             this.demografia_combo.Name = "demografia_combo";
             this.demografia_combo.Size = new System.Drawing.Size(551, 44);
             this.demografia_combo.TabIndex = 22;
+            this.demografia_combo.SelectionChangeCommitted += new System.EventHandler(this.demografia_combo_SelectionChangeCommitted);
             // 
             // educacion_combo
             // 
@@ -230,6 +233,7 @@
             this.educacion_combo.Name = "educacion_combo";
             this.educacion_combo.Size = new System.Drawing.Size(551, 44);
             this.educacion_combo.TabIndex = 23;
+            this.educacion_combo.SelectionChangeCommitted += new System.EventHandler(this.educacion_combo_SelectionChangeCommitted);
             // 
             // empleo_combo
             // 
@@ -242,6 +246,7 @@
             this.empleo_combo.Name = "empleo_combo";
             this.empleo_combo.Size = new System.Drawing.Size(551, 44);
             this.empleo_combo.TabIndex = 24;
+            this.empleo_combo.SelectionChangeCommitted += new System.EventHandler(this.empleo_combo_SelectionChangeCommitted);
             // 
             // logout
             // 
@@ -297,6 +302,7 @@
             this.Controls.Add(this.x_picture);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Menu_consultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

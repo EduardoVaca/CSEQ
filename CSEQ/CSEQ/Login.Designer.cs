@@ -83,7 +83,7 @@
             // 
             this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
-            this.x_picture.Location = new System.Drawing.Point(1216, 14);
+            this.x_picture.Location = new System.Drawing.Point(1229, 5);
             this.x_picture.Margin = new System.Windows.Forms.Padding(4);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(60, 56);
@@ -108,7 +108,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::CSEQ.Properties.Resources.Logo2B;
-            this.pictureBox2.Location = new System.Drawing.Point(476, 74);
+            this.pictureBox2.Location = new System.Drawing.Point(479, 74);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(332, 331);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +143,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(766, 780);
+            this.label5.Location = new System.Drawing.Point(751, 777);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(517, 29);
@@ -170,6 +170,7 @@
             this.Controls.Add(this.login_txt);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

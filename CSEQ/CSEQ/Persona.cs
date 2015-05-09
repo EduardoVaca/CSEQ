@@ -26,7 +26,11 @@ namespace CSEQ
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult respuesta = MessageBox.Show("¿Deseas salir de la aplicación?", "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            } 
         }
 
         private void back_picture_Click(object sender, EventArgs e)
@@ -51,32 +55,32 @@ namespace CSEQ
          * *****************************************************************/
         private void cargaCombosBoxes()
         {
-            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
-            Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue);
-            Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue);
+            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado" + " ORDER BY nombre ASC");
+            Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC");
+            Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue + " ORDER BY nombre ASC");
             Util.llenarComboBox(Censo, "Select * FROM Censo");
             Util.llenarComboBox(ID_estadoCivil, "Select ID_estadoCivil, nombre FROM EstadoCivil");
             Util.llenarComboBox(ID_nivelEducativo, "SELECT ID_nivelEducativo, nivel FROM NivelEducativo");
-            Util.llenarComboBox(ID_institucionEducativa, "SELECT ID_institucionEducativa, nombre FROM InstitucionEducativa");
+            Util.llenarComboBox(ID_institucionEducativa, "SELECT ID_institucionEducativa, nombre FROM InstitucionEducativa" + " ORDER BY nombre ASC");
             Util.llenarComboBox(ID_lenguaDominante, "SELECT ID_lenguaDominante, nombre FROM LenguaDominante");
             Util.llenarComboBox(ID_nivelEspanol, "SELECT ID_nivelEspanol, nivel FROM NivelEspanol");
             Util.llenarComboBox(ID_nivelIngles, "SELECT ID_nivelIngles, nivel FROM NivelIngles");
             Util.llenarComboBox(ID_nivelLSM, "SELECT ID_nivelLSM, nivel FROM NivelLSM");
-            Util.llenarComboBox(ID_areaTrabajo, "SELECT ID_areaTrabajo, nombre FROM AreaTrabajo");
+            Util.llenarComboBox(ID_areaTrabajo, "SELECT ID_areaTrabajo, nombre FROM AreaTrabajo" + " ORDER BY nombre ASC");
             Util.llenarComboBox(ID_periodo, "SELECT ID_periodo, periodo FROM Periodo");
             Util.llenarComboBox(ID_perdidaAuditiva, "SELECT ID_perdidaAuditiva, tipo FROM PerdidaAuditiva");
             Util.llenarComboBox(ID_grado, "SELECT ID_grado, CONCAT(grado, ': ', descripcion) FROM Grado");
-            Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa");
-            Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, contenido FROM AparatoConMarca");
-            Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT('$',minimo, ' a ','$',maximo) FROM Sueldo");
-            Util.llenarComboBox(ID_estadoEmpleo, "SELECT ID_estado, nombre FROM Estado");
-            Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue);
-            Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue);
+            Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa" + " ORDER BY causa ASC");
+            Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, contenido FROM AparatoConMarca" + " ORDER BY contenido ASC");
+            Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT(minimo, ' a ',maximo) FROM Sueldo");
+            Util.llenarComboBox(ID_estadoEmpleo, "SELECT ID_estado, nombre FROM Estado" + " ORDER BY nombre ASC");
+            Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC");
+            Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue + " ORDER BY nombre ASC");
             masculino_check.Checked = true;
         }
 
         private void Persona_Load(object sender, EventArgs e)
-        {
+        {            
             cargaCombosBoxes();
             if (rol == 1)
             {
@@ -85,7 +89,18 @@ namespace CSEQ
             }
             salir_tt.SetToolTip(pictureBox2, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
-            
+            refresh_toolTip.SetToolTip(refresh_municipio, "Actualizar Municipios");
+            refresh_toolTip.SetToolTip(refresh_estado, "Actualizar Estados");
+            refresh_toolTip.SetToolTip(refresh_colonia, "Actualizar Colonias");
+            refresh_toolTip.SetToolTip(censo_refresh, "Actualizar Censos");
+            refresh_toolTip.SetToolTip(institucion_refresh, "Actualizar Instituciones");
+            refresh_toolTip.SetToolTip(sueldo_refresh, "Actualizar Sueldos");
+            refresh_toolTip.SetToolTip(areaTrabajo_refresh, "Actualizar Areas Trabajo");
+            refresh_toolTip.SetToolTip(estadoEmpelo_refresh, "Actualizar Estados");
+            refresh_toolTip.SetToolTip(municipioEmpleo_refresh, "Actualizar Municipios");
+            refresh_toolTip.SetToolTip(coloniaEmpleo_refresh, "Actualizar Colonias");
+            refresh_toolTip.SetToolTip(causa_refresh, "Actualizar Causas");
+            refresh_toolTip.SetToolTip(aparato_refresh, "Actualizar Aparatos");            
         }
 
         /*--------------------------------------------------------------------------------
@@ -96,41 +111,55 @@ namespace CSEQ
         {            
             String valorComboBox = ID_estado.SelectedValue.ToString();           
             Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
-                                                "ID_estado = " + valorComboBox);
+                                                "ID_estado = " + valorComboBox + " ORDER BY nombre ASC");
         }
 
         private void ID_municipio_SelectionChangeCommitted(object sender, EventArgs e)
         {            
             String valorComboBox = ID_municipio.SelectedValue.ToString();
             Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
-                                               "ID_municipio = " + valorComboBox);
+                                               "ID_municipio = " + valorComboBox + " ORDER BY nombre ASC");
         }
 
         private void estadoEmpleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = ID_estadoEmpleo.SelectedValue.ToString();
             Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
-                                                "ID_estado = " + valorComboBox);
+                                                "ID_estado = " + valorComboBox + " ORDER BY nombre ASC");
         }
 
         private void municipioEmpleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             String valorComboBox = ID_municipioEmpleo.SelectedValue.ToString();
             Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE " +
-                                               "ID_municipio = " + valorComboBox);
+                                               "ID_municipio = " + valorComboBox + " ORDER BY nombre ASC");
         }
         /*-------------------------------------------------------------------------------------*/
 
-        private void Buscar_Click(object sender, EventArgs e)
+
+        /*********************************************************
+         * Metodo que busca en la Tabla un registro dado por el usuario
+         * llenando el grid con la tabla obtenida
+         * ******************************************************/
+        private void buscar()
         {
             busqueda_grid.Visible = true;
-            
-            String busqueda = "%" + busqueda_txt.Text + "%";            
+            String busqueda = "%" + busqueda_txt.Text + "%";
+            Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "buscarPersona", busqueda);
-           
+            Cursor = Cursors.Default;
         }
 
-        //Metodo que llena toda la forma dependiendo la persona que se le de clic en el gird
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();  
+        }
+
+        /**********************************************************
+         * Metodo que llena todo el form con los datos obtenidos del
+         * registro seleccionado en el grid
+         * Se activan los botones de Modificar y Eliminar
+         * *******************************************************/
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             String nombre;
@@ -138,6 +167,7 @@ namespace CSEQ
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 //loading_lb.Visible = true;
+                Cursor = Cursors.WaitCursor;
                 buscar_blanco.Visible = true;
                 buscar_gris.Visible = false;
                 registro_persona = true;
@@ -206,25 +236,9 @@ namespace CSEQ
                     ID_municipioEmpleo.SelectedValue = Int16.Parse(direccionPersona.Rows[0][1].ToString());
                     Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio = " + ID_municipioEmpleo.SelectedValue + ";");
                     ID_coloniaEmpleo.SelectedValue = Int16.Parse(direccionPersona.Rows[0][2].ToString());
-                }                                
+                }
+                Cursor = Cursors.Default;                
             }
-        }
-
-        //Procedimiento unicamente para registrar hijo y mostrar en el grid los hijos de esa persona
-        private void registraHijo_button_Click(object sender, EventArgs e)
-        {
-            String nombreH = nombreHijo_txt.Text;
-            String fechaNacH = fechaNacimientoHijo.Value.ToShortDateString();
-            Boolean sordoH = sordoHijo_check.Checked;
-            String curpP = CURP_txt.Text;
-
-            if(Util.executeStoredProcedure("registrarHijo", nombreH, fechaNacH, sordoH, curpP)){
-                MessageBox.Show("El Hijo se ha registrado con exito!");
-            }
-            hijos_grid.Visible = true;
-            nombreHijo_txt.Text = "";
-            sordoHijo_check.Checked = false;
-            Util.fillGrid(hijos_grid, "BusquedaEnHijo", curpP);
         }
 
         private void tieneHijo_check_CheckedChanged(object sender, EventArgs e)
@@ -404,13 +418,31 @@ namespace CSEQ
             eliminarHijo_btn.Enabled = true;
         }
 
+        //Procedimiento unicamente para registrar hijo y mostrar en el grid los hijos de esa persona
+        private void registraHijo_button_Click(object sender, EventArgs e)
+        {
+            String nombreH = nombreHijo_txt.Text;
+            String fechaNacH = Util.formatoFechaMySQL(fechaNacimientoHijo.Value.ToShortDateString());
+            Boolean sordoH = sordoHijo_check.Checked;
+            String curpP = CURP_txt.Text;
+
+            if (Util.executeStoredProcedure("registrarHijo", nombreH, fechaNacH, sordoH, curpP))
+            {
+                MessageBox.Show("El Hijo se ha registrado con exito!");
+            }
+            hijos_grid.Visible = true;
+            nombreHijo_txt.Text = "";
+            sordoHijo_check.Checked = false;
+            Util.fillGrid(hijos_grid, "BusquedaEnHijo", curpP);
+        }
+
         //Metodo para modificar el hijo seleccionado del grid, toma los nuevo valores y se basa en el ID del hijo
         // para modificarlo
         private void moficiarHijo_btn_Click(object sender, EventArgs e)
         {
             String nombreHijoP = nombreHijo_txt.Text;
             Boolean esSordoP = sordoHijo_check.Checked;
-            String fechaNacP = fechaNacimientoHijo.Value.ToShortDateString();
+            String fechaNacP = Util.formatoFechaMySQL(fechaNacimientoHijo.Value.ToShortDateString());
 
             if (Util.executeStoredProcedure("modificarHijo", ID_hijoSelected, nombreHijoP, fechaNacP, esSordoP))
             {
@@ -436,12 +468,13 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
             //Obtenion de datos **********************************************************************
             String CURPP = CURP_txt.Text;
             String nombreP = Nombre_txt.Text;
-            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
+            String fechaNacP = Util.formatoFechaMySQL(fecha_nacimiento.Value.ToShortDateString());
             Boolean sexoH = masculino_check.Checked;
             String telefonoP = telefono_txt.Text;
             String correoP = Correo_txt.Text;
@@ -514,11 +547,12 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que modifica un registro en la Base*/
         private void modificar_pb_Click(object sender, EventArgs e)
         {
             String CURPP = CURP_txt.Text;
             String nombreP = Nombre_txt.Text;
-            String fechaNacP = fecha_nacimiento.Value.ToShortDateString();
+            String fechaNacP = Util.formatoFechaMySQL(fecha_nacimiento.Value.ToShortDateString());
             Boolean sexoH = masculino_check.Checked;
             String telefonoP = telefono_txt.Text;
             String correoP = Correo_txt.Text;
@@ -593,6 +627,7 @@ namespace CSEQ
             }           
         }
 
+        /*Metodo que elimina un registro elegido de la base*/
         private void eliminar_pb_Click(object sender, EventArgs e)
         {
             DialogResult respuesta = MessageBox.Show("¿Estás seguro que quieres eliminar a '" + nombre_selected + "'? TODA la " +
@@ -615,10 +650,13 @@ namespace CSEQ
             respuesta = MessageBox.Show("¿Desea continuar? Perderá los cambios sin guardar", "Confirmación", MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
+                Cursor = Cursors.WaitCursor;
                 Util.clear(this);
                 cargaCombosBoxes();
                 hijos_grid.Visible = false;
-            }    
+                Cursor = Cursors.Default;
+            }
+            Persona_tabControl.SelectedTab = DatosPersonales_tab;
         }
 
         //Metodos que cambian de tamano los iconos
@@ -673,6 +711,103 @@ namespace CSEQ
            Util.minimizarCualquierIcono(buscar_blanco, new Size(32, 37), 54, 426);
         }
 
+        /*************************************************************************************
+        Metodos que recargan los combo boxes una vez reabierto el borrador pendiente
+        Esto con la razon de mantenerlos actualizados
+         * **********************************************************************************/
+        private void refresh_estado_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado" + " ORDER BY nombre ASC");
+            Cursor = Cursors.Default;
+        }
+        private void refresh_municipio_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC");
+            Cursor = Cursors.Default;
+        }
 
+        private void refresh_colonia_Click(object sender, EventArgs e)
+        {            
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_colonia, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue + " ORDER BY nombre ASC");
+            Cursor = Cursors.Default;
+        }
+
+        private void censo_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(Censo, "Select * FROM Censo");
+            Cursor = Cursors.Default;
+        }
+
+        private void institucion_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_institucionEducativa, "SELECT ID_institucionEducativa, nombre FROM InstitucionEducativa" + " ORDER BY nombre ASC");
+            Cursor = Cursors.Default;
+        }
+
+        private void sueldo_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_sueldo, "SELECT ID_sueldo, CONCAT(minimo, ' a ',maximo) FROM Sueldo");
+            Cursor = Cursors.Default;
+        }
+
+        private void areaTrabajo_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_areaTrabajo, "SELECT ID_areaTrabajo, nombre FROM AreaTrabajo" + " ORDER BY nombre ASC");
+            Cursor = Cursors.Default;
+        }
+
+        private void estadoEmpelo_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_estadoEmpleo, "SELECT ID_estado, nombre FROM Estado" + " ORDER BY nombre ASC");
+            Cursor = Cursors.Default;
+        }
+
+        private void municipioEmpleo_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_municipioEmpleo, "SELECT ID_municipio, nombre FROM Municipio WHERE ID_estado = " + ID_estado.SelectedValue + " ORDER BY nombre ASC");
+            Cursor = Cursors.Default;
+        }
+
+        private void coloniaEmpleo_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_coloniaEmpleo, "SELECT ID_colonia, nombre FROM Colonia WHERE ID_municipio =" + ID_municipio.SelectedValue + " ORDER BY nombre ASC");
+            Cursor = Cursors.Default;
+        }
+
+        private void causa_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa" + " ORDER BY causa ASC");
+            Cursor = Cursors.Default;
+        }
+
+        private void aparato_refresh_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, contenido FROM AparatoConMarca" + " ORDER BY contenido ASC");
+            Cursor = Cursors.Default;
+        }
+
+
+        //Metodo que habilita el Enter en las busquedas
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
+        }
+        
+       
     }
 }

@@ -23,7 +23,11 @@ namespace CSEQ
 
         private void x_picture_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult respuesta = MessageBox.Show("¿Deseas salir de la aplicación?", "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            } 
         }
 
         private void back_picture_Click(object sender, EventArgs e)
@@ -105,6 +109,40 @@ namespace CSEQ
         {
             salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+        }
+
+        private void educacion_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int index = educacion_combo.SelectedIndex;
+            consulta_educacion educacion = new consulta_educacion(index, rol);
+            educacion.Show();
+            this.Close();
+        }
+
+        private void back_picture_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(back_picture);
+        }
+
+        private void back_picture_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(back_picture);
+        }
+
+        private void demografia_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int index = demografia_combo.SelectedIndex;
+            consultas_demografia demografia = new consultas_demografia(index, rol);
+            demografia.Show();
+            this.Close();
+        }
+
+        private void empleo_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int index = empleo_combo.SelectedIndex;
+            consultas_empleo empleo = new consultas_empleo(index, rol);
+            empleo.Show();
+            this.Close();
         }
     }
 }

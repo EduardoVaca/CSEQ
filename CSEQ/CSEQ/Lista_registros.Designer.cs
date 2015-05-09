@@ -384,7 +384,7 @@
             this.censo_pb.Size = new System.Drawing.Size(200, 200);
             this.censo_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.censo_pb.TabIndex = 47;
-            this.censo_pb.TabStop = false;            
+            this.censo_pb.TabStop = false;
             this.censo_pb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.censo_pb_MouseDown);
             this.censo_pb.MouseLeave += new System.EventHandler(this.censo_pb_MouseLeave);
             this.censo_pb.MouseHover += new System.EventHandler(this.censo_pb_MouseHover);
@@ -703,6 +703,7 @@
             this.Controls.Add(this.causa_lb);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Lista_registros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

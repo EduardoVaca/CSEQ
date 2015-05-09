@@ -23,7 +23,11 @@ namespace CSEQ
 
         private void close_picture_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult respuesta = MessageBox.Show("¿Deseas salir de la aplicación?", "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            } 
         }
 
         private void atras_picture_Click(object sender, EventArgs e)
@@ -31,17 +35,35 @@ namespace CSEQ
             this.Close();
             Ventana.mostrarOculta(Ventana.Ventanas.ListaRegistros);
         }
-        
 
-        private void Buscar_Click(object sender, EventArgs e)
+
+        /*********************************************************
+         * Metodo que busca en la Tabla un registro dado por el usuario
+         * llenando el grid con la tabla obtenida
+         * ******************************************************/
+        private void buscar()
         {
             busqueda_grid.Visible = true;
             String busqueda = "%" + busqueda_txt.Text + "%";
+            Cursor = Cursors.WaitCursor;
             Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", busqueda);
+            Cursor = Cursors.Default;
         }
 
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+
+        /**********************************************************
+         * Metodo que llena todo el form con los datos obtenidos del
+         * registro seleccionado en el grid
+         * Se activan los botones de Modificar y Eliminar
+         * *******************************************************/
         private void busqueda_grid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {            
+        {
+            Cursor = Cursors.WaitCursor;
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 modificar_pb.Enabled = true; //Activacion de botones
@@ -51,6 +73,7 @@ namespace CSEQ
                 sqlActiveRow += " nombre= '" + nombre_selected + "';";
                 Util.showData(this, sqlActiveRow);
             }
+            Cursor = Cursors.Default;
         }
 
         private void crearAreaTrabajo_Load(object sender, EventArgs e)
@@ -88,6 +111,7 @@ namespace CSEQ
             Util.minimizarIconoAtras(atras_picture);
         }
 
+        /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
             String aNombre = nombreArea_txt.Text;
@@ -99,6 +123,7 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que modifica un registro en la Base*/
         private void modificar_pb_Click(object sender, EventArgs e)
         {
             String nombreNuevo = nombreArea_txt.Text;
@@ -115,6 +140,7 @@ namespace CSEQ
             }
         }
 
+        /*Metodo que elimina un registro elegido de la base*/
         private void eliminar_pb_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
@@ -168,6 +194,30 @@ namespace CSEQ
         private void Buscar_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarCualquierIcono(Buscar, new Size(32, 36), 37, 332);
+        }
+
+        private void nuevoRegistro_pb_Click(object sender, EventArgs e)
+        {
+            Util.clear(this);
+        }
+
+        private void nuevoRegistro_pb_MouseHover(object sender, EventArgs e)
+        {
+            Util.maximizarCualquierIcono(nuevoRegistro_pb, new Size(36, 42), 3);
+        }
+
+        private void nuevoRegistro_pb_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarCualquierIcono(nuevoRegistro_pb, new Size(32, 38), 515, 6);
+        }
+
+        //Metodo que habilita Enter para busquedas
+        private void busqueda_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                buscar();
+            }
         }
     }
 }
