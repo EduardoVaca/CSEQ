@@ -64,7 +64,7 @@
             this.nombre_label.BackColor = System.Drawing.Color.Transparent;
             this.nombre_label.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre_label.ForeColor = System.Drawing.Color.White;
-            this.nombre_label.Location = new System.Drawing.Point(531, 86);
+            this.nombre_label.Location = new System.Drawing.Point(622, 76);
             this.nombre_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nombre_label.Name = "nombre_label";
             this.nombre_label.Size = new System.Drawing.Size(354, 45);
@@ -103,7 +103,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(615, 590);
+            this.label4.Location = new System.Drawing.Point(689, 568);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(217, 39);
@@ -116,7 +116,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(413, 649);
+            this.label5.Location = new System.Drawing.Point(413, 662);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(315, 36);
@@ -129,7 +129,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(924, 654);
+            this.label6.Location = new System.Drawing.Point(924, 667);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(275, 29);
