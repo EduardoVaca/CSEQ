@@ -86,5 +86,27 @@ namespace CSEQ
             Util.minimizarCualquierIcono(consultas_pb, new Size(104, 122), 162, 543);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            informacion info = new informacion(rol);
+            this.Close();
+            info.Show();
+        }
+
+        private void info_MouseHover(object sender, EventArgs e)
+        {
+            Util.agrandarIconoAtras(info);
+        }
+
+        private void info_MouseLeave(object sender, EventArgs e)
+        {
+            Util.minimizarIconoAtras(info);
+        }
+
+        private void Menu_principal_Load(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(info, "Informacion de la aplicacion");
+        }
+
     }
 }

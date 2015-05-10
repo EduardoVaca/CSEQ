@@ -39,10 +39,12 @@
             this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             this.registros_pb = new System.Windows.Forms.PictureBox();
             this.consultas_pb = new System.Windows.Forms.PictureBox();
+            this.info = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registros_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultas_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
             this.SuspendLayout();
             // 
             // x_picture
@@ -140,6 +142,21 @@
             this.consultas_pb.MouseLeave += new System.EventHandler(this.consultas_pb_MouseLeave);
             this.consultas_pb.MouseHover += new System.EventHandler(this.consultas_pb_MouseHover);
             // 
+            // info
+            // 
+            this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.Image = global::CSEQ.Properties.Resources.question;
+            this.info.Location = new System.Drawing.Point(13, 13);
+            this.info.Margin = new System.Windows.Forms.Padding(4);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(68, 65);
+            this.info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.info.TabIndex = 30;
+            this.info.TabStop = false;
+            this.info.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.info.MouseLeave += new System.EventHandler(this.info_MouseLeave);
+            this.info.MouseHover += new System.EventHandler(this.info_MouseHover);
+            // 
             // Menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -149,6 +166,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1598, 1010);
+            this.Controls.Add(this.info);
             this.Controls.Add(this.consultas_pb);
             this.Controls.Add(this.registros_pb);
             this.Controls.Add(this.label5);
@@ -163,10 +181,12 @@
             this.Name = "Menu_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_principal";
+            this.Load += new System.EventHandler(this.Menu_principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registros_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultas_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.info)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +203,6 @@
         private System.Windows.Forms.ToolTip cerrarSesion_tt;
         private System.Windows.Forms.PictureBox registros_pb;
         private System.Windows.Forms.PictureBox consultas_pb;
+        private System.Windows.Forms.PictureBox info;
     }
 }
