@@ -21,7 +21,6 @@ namespace CSEQ
             this.index = index;
             this.rol=rol;
             InitializeComponent();
-            todoscensos_radio.Checked = true;
         }
 
         private void x_picture_Click(object sender, EventArgs e)
@@ -78,16 +77,18 @@ namespace CSEQ
                 case 2:
                     break;
             }
-            todoscensos_radio.Checked = false;
-            todoscensos_radio.Checked = true;
+
+            todoscensos_radio.Checked = !todoscensos_radio.Checked;
+            todoscensos_radio.Checked = !todoscensos_radio.Checked;
         }
 
         private void estadoSalud_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             ID_censo.Enabled = true;
             todoscensos_radio.Enabled = true;
-           // indexReporte = auxiliarAuditivo_combo.SelectedIndex;            
+            todoscensos_radio.Checked = false;
             todoscensos_radio.Checked = true;
+
         }
 
         private void todoscensos_radio_CheckedChanged(object sender, EventArgs e)
@@ -140,6 +141,43 @@ namespace CSEQ
                    
                 }
             }
+            if (index == 2)
+            {
+                switch (this.tipologia_combo.SelectedIndex)
+                {
+                    case 0:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaGradoPerdidaAuditivaPorCadaGrado(" + leve_checkbox.Checked.ToString() + "," + media_checkbox.Checked.ToString() + "," + severa_checkbox.Checked.ToString() + "," 
+                            + profunda_checkbox.Checked.ToString() + ","+ total_checkbox.Checked.ToString() + ");";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                    case 1:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaEsPerdidaBilateral();";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                    case 2:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaPorCausa();";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                    case 3:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaPorTipoPerdidaAuditiva();";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                    case 4:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaPerdidaPrelinguistica();";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                }
+            }
             
         }
 
@@ -171,9 +209,6 @@ namespace CSEQ
                         type = "Pay";
                         Util.graphData(zedGraph, query, type);
                         break;
-                    case 3:
-
-                        break;
                     default:
 
                         break;
@@ -196,6 +231,43 @@ namespace CSEQ
                     
                     default:
 
+                        break;
+                }
+            }
+            if (index == 2)
+            {
+                switch (this.tipologia_combo.SelectedIndex)
+                {
+                    case 0:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaGradoPerdidaAuditivaPorCadaGradoPorCenso(" + leve_checkbox.Checked.ToString() + "," + media_checkbox.Checked.ToString() + "," + severa_checkbox.Checked.ToString() + "," 
+                            + profunda_checkbox.Checked.ToString() + ","+ total_checkbox.Checked.ToString() + ","+ id_censo +");";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                    case 1:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaEsPerdidaBilateralPorCenso(" + id_censo + ");";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                    case 2:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaPorCausaPorCenso(" + id_censo + ");";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                    case 3:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaPorTipoPerdidaAuditivaPorCenso(" + id_censo + ");";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
+                        break;
+                    case 4:
+                        Reporte.Enabled = true;
+                        query = "CALL consultaPerdidaPrelinguisticaPorCenso(" + id_censo + ");";
+                        type = "Barra";
+                        Util.graphData(zedGraph, query, type);
                         break;
                 }
             }
@@ -296,8 +368,9 @@ namespace CSEQ
         {
             ID_censo.Enabled = true;
             todoscensos_radio.Enabled = true;
-           // indexReporte = tipologia_combo.SelectedIndex;
             Reporte.Enabled = true;
+            todoscensos_radio.Checked = false;
+            todoscensos_radio.Checked = true;
             if (tipologia_combo.SelectedIndex == 0)
             {
                 gradoPerdida_gp.Visible = true;
@@ -305,16 +378,6 @@ namespace CSEQ
             else
             {
                 gradoPerdida_gp.Visible = false;
-            }
-            if (tipologia_combo.SelectedIndex == 1)
-            {
-                unilateral_radio.Visible = true;
-                bilateral_radio.Visible = true;
-            }
-            else
-            {
-                unilateral_radio.Visible = false;
-                bilateral_radio.Visible = false;
             }
             if (tipologia_combo.SelectedIndex == 3)
             {
@@ -324,16 +387,47 @@ namespace CSEQ
             {
                 tipoPerdida_gp.Visible = false;
             }
-            if (tipologia_combo.SelectedIndex == 4)
+        }
+
+        private void leve_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCausa();
+        }
+
+        private void media_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCausa();
+        }
+
+        private void severa_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCausa();
+        }
+
+        private void profunda_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCausa();
+        }
+
+        private void total_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCausa();
+        }
+
+        //Metodo para actualizar la grafica al seleccionar un check box ( solo para perdida por grado) 
+        private void actualizaCausa()
+        {
+            if (todoscensos_radio.Checked)
             {
-                prelingual_radio.Visible = true;
-                postlingual_radio.Visible = true;
+                query = "CALL consultaGradoPerdidaAuditivaPorCadaGrado(" + leve_checkbox.Checked.ToString() + "," + media_checkbox.Checked.ToString() + ","
+                            + profunda_checkbox.Checked.ToString() + "," + severa_checkbox.Checked.ToString() + "," + total_checkbox.Checked.ToString() + ");";
             }
             else
             {
-                prelingual_radio.Visible = false;
-                postlingual_radio.Visible = false;
+                query = "CALL consultaGradoPerdidaAuditivaPorCadaGradoPorCenso(" + leve_checkbox.Checked.ToString() + "," + media_checkbox.Checked.ToString() + "," 
+                            + profunda_checkbox.Checked.ToString() + ","+ severa_checkbox.Checked.ToString() + "," + total_checkbox.Checked.ToString() + "," + getId_censo() + ");";
             }
+            Util.graphData(zedGraph, query, "Barra");
         }
     }
 }
