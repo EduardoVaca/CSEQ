@@ -54,14 +54,14 @@
             this.tipologia_combo = new System.Windows.Forms.ComboBox();
             this.eleccion_gp = new System.Windows.Forms.GroupBox();
             this.gradoPerdida_gp = new System.Windows.Forms.GroupBox();
+            this.profunda_checkbox = new System.Windows.Forms.CheckBox();
             this.tipoPerdida_gp = new System.Windows.Forms.GroupBox();
             this.noSabe_checkbox = new System.Windows.Forms.CheckBox();
             this.conductiva_checkbox = new System.Windows.Forms.CheckBox();
             this.neuro_checkbox = new System.Windows.Forms.CheckBox();
             this.mixta_checkbox = new System.Windows.Forms.CheckBox();
             this.retro_checkbox = new System.Windows.Forms.CheckBox();
-            this.profunda_checkbox = new System.Windows.Forms.CheckBox();
-            this.noSabe_checkbox = new System.Windows.Forms.CheckBox();
+            this.no_Sabe_checkbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -103,7 +103,7 @@
             this.x_picture.BackColor = System.Drawing.Color.Transparent;
             this.x_picture.Image = ((System.Drawing.Image)(resources.GetObject("x_picture.Image")));
             this.x_picture.Location = new System.Drawing.Point(758, 10);
-            this.x_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.x_picture.Margin = new System.Windows.Forms.Padding(2);
             this.x_picture.Name = "x_picture";
             this.x_picture.Size = new System.Drawing.Size(30, 29);
             this.x_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,7 +129,7 @@
             this.zedGraph.AutoSize = true;
             this.zedGraph.BackColor = System.Drawing.Color.Transparent;
             this.zedGraph.Location = new System.Drawing.Point(172, 201);
-            this.zedGraph.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.zedGraph.Margin = new System.Windows.Forms.Padding(6);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
             this.zedGraph.ScrollMaxX = 0D;
@@ -138,7 +138,7 @@
             this.zedGraph.ScrollMinX = 0D;
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
-            this.zedGraph.Size = new System.Drawing.Size(609, 319);
+            this.zedGraph.Size = new System.Drawing.Size(628, 328);
             this.zedGraph.TabIndex = 17;
             // 
             // label2
@@ -162,7 +162,7 @@
             this.todoscensos_radio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todoscensos_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.todoscensos_radio.Location = new System.Drawing.Point(6, 59);
-            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(2);
             this.todoscensos_radio.Name = "todoscensos_radio";
             this.todoscensos_radio.Size = new System.Drawing.Size(112, 18);
             this.todoscensos_radio.TabIndex = 20;
@@ -181,7 +181,7 @@
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
             this.ID_censo.Location = new System.Drawing.Point(59, 23);
-            this.ID_censo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(2);
             this.ID_censo.Name = "ID_censo";
             this.ID_censo.Size = new System.Drawing.Size(82, 29);
             this.ID_censo.TabIndex = 21;
@@ -192,7 +192,7 @@
             this.logout.BackColor = System.Drawing.Color.Transparent;
             this.logout.Image = global::CSEQ.Properties.Resources.logout;
             this.logout.Location = new System.Drawing.Point(757, 40);
-            this.logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logout.Margin = new System.Windows.Forms.Padding(4);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(33, 31);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,7 +210,7 @@
             "Personas con y sin aparato auditivo",
             "Personas con implante coclear"});
             this.auxiliarAuditivo_combo.Location = new System.Drawing.Point(86, 99);
-            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.auxiliarAuditivo_combo.Margin = new System.Windows.Forms.Padding(2);
             this.auxiliarAuditivo_combo.Name = "auxiliarAuditivo_combo";
             this.auxiliarAuditivo_combo.Size = new System.Drawing.Size(298, 25);
             this.auxiliarAuditivo_combo.TabIndex = 0;
@@ -237,7 +237,7 @@
             this.tienen_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tienen_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.tienen_radio.Location = new System.Drawing.Point(395, 86);
-            this.tienen_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tienen_radio.Margin = new System.Windows.Forms.Padding(2);
             this.tienen_radio.Name = "tienen_radio";
             this.tienen_radio.Size = new System.Drawing.Size(82, 23);
             this.tienen_radio.TabIndex = 22;
@@ -254,7 +254,7 @@
             this.noTienen_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noTienen_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.noTienen_radio.Location = new System.Drawing.Point(395, 116);
-            this.noTienen_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.noTienen_radio.Margin = new System.Windows.Forms.Padding(2);
             this.noTienen_radio.Name = "noTienen_radio";
             this.noTienen_radio.Size = new System.Drawing.Size(89, 23);
             this.noTienen_radio.TabIndex = 23;
@@ -272,7 +272,7 @@
             "Personas con alergia",
             "Personas con enfermedad"});
             this.estadoSalud_combo.Location = new System.Drawing.Point(86, 99);
-            this.estadoSalud_combo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estadoSalud_combo.Margin = new System.Windows.Forms.Padding(2);
             this.estadoSalud_combo.Name = "estadoSalud_combo";
             this.estadoSalud_combo.Size = new System.Drawing.Size(298, 29);
             this.estadoSalud_combo.TabIndex = 24;
@@ -286,7 +286,7 @@
             this.leve_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leve_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.leve_checkbox.Location = new System.Drawing.Point(8, 13);
-            this.leve_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leve_checkbox.Margin = new System.Windows.Forms.Padding(2);
             this.leve_checkbox.Name = "leve_checkbox";
             this.leve_checkbox.Size = new System.Drawing.Size(51, 20);
             this.leve_checkbox.TabIndex = 25;
@@ -301,7 +301,7 @@
             this.media_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.media_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.media_checkbox.Location = new System.Drawing.Point(8, 35);
-            this.media_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.media_checkbox.Margin = new System.Windows.Forms.Padding(2);
             this.media_checkbox.Name = "media_checkbox";
             this.media_checkbox.Size = new System.Drawing.Size(59, 20);
             this.media_checkbox.TabIndex = 26;
@@ -316,7 +316,7 @@
             this.severa_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.severa_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.severa_checkbox.Location = new System.Drawing.Point(8, 57);
-            this.severa_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.severa_checkbox.Margin = new System.Windows.Forms.Padding(2);
             this.severa_checkbox.Name = "severa_checkbox";
             this.severa_checkbox.Size = new System.Drawing.Size(61, 20);
             this.severa_checkbox.TabIndex = 27;
@@ -331,7 +331,7 @@
             this.total_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.total_checkbox.Location = new System.Drawing.Point(8, 103);
-            this.total_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.total_checkbox.Margin = new System.Windows.Forms.Padding(2);
             this.total_checkbox.Name = "total_checkbox";
             this.total_checkbox.Size = new System.Drawing.Size(53, 20);
             this.total_checkbox.TabIndex = 28;
@@ -350,7 +350,7 @@
             "Tipos de Pérdida Auditiva",
             "Sordera Prolingual/Prelingual"});
             this.tipologia_combo.Location = new System.Drawing.Point(86, 99);
-            this.tipologia_combo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipologia_combo.Margin = new System.Windows.Forms.Padding(2);
             this.tipologia_combo.Name = "tipologia_combo";
             this.tipologia_combo.Size = new System.Drawing.Size(298, 29);
             this.tipologia_combo.TabIndex = 30;
@@ -366,9 +366,9 @@
             this.eleccion_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eleccion_gp.ForeColor = System.Drawing.Color.White;
             this.eleccion_gp.Location = new System.Drawing.Point(8, 234);
-            this.eleccion_gp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eleccion_gp.Margin = new System.Windows.Forms.Padding(2);
             this.eleccion_gp.Name = "eleccion_gp";
-            this.eleccion_gp.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eleccion_gp.Padding = new System.Windows.Forms.Padding(2);
             this.eleccion_gp.Size = new System.Drawing.Size(156, 86);
             this.eleccion_gp.TabIndex = 33;
             this.eleccion_gp.TabStop = false;
@@ -385,90 +385,14 @@
             this.gradoPerdida_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradoPerdida_gp.ForeColor = System.Drawing.Color.White;
             this.gradoPerdida_gp.Location = new System.Drawing.Point(446, 55);
-            this.gradoPerdida_gp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gradoPerdida_gp.Margin = new System.Windows.Forms.Padding(2);
             this.gradoPerdida_gp.Name = "gradoPerdida_gp";
-            this.gradoPerdida_gp.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gradoPerdida_gp.Padding = new System.Windows.Forms.Padding(2);
             this.gradoPerdida_gp.Size = new System.Drawing.Size(127, 128);
             this.gradoPerdida_gp.TabIndex = 34;
             this.gradoPerdida_gp.TabStop = false;
             this.gradoPerdida_gp.Text = "Grado de Pérdida";
             this.gradoPerdida_gp.Visible = false;
-            // 
-            // tipoPerdida_gp
-            // 
-            this.tipoPerdida_gp.BackColor = System.Drawing.Color.Transparent;
-            this.tipoPerdida_gp.Controls.Add(this.noSabe_checkbox);
-            this.tipoPerdida_gp.Controls.Add(this.conductiva_checkbox);
-            this.tipoPerdida_gp.Controls.Add(this.neuro_checkbox);
-            this.tipoPerdida_gp.Controls.Add(this.mixta_checkbox);
-            this.tipoPerdida_gp.Controls.Add(this.retro_checkbox);
-            this.tipoPerdida_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoPerdida_gp.ForeColor = System.Drawing.Color.White;
-            this.tipoPerdida_gp.Location = new System.Drawing.Point(446, 50);
-            this.tipoPerdida_gp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tipoPerdida_gp.Name = "tipoPerdida_gp";
-            this.tipoPerdida_gp.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tipoPerdida_gp.Size = new System.Drawing.Size(130, 143);
-            this.tipoPerdida_gp.TabIndex = 35;
-            this.tipoPerdida_gp.TabStop = false;
-            this.tipoPerdida_gp.Text = "Tipo de Pérdida";
-            this.tipoPerdida_gp.Visible = false;
-            // 
-            // conductiva_checkbox
-            // 
-            this.conductiva_checkbox.AutoSize = true;
-            this.conductiva_checkbox.BackColor = System.Drawing.Color.Transparent;
-            this.conductiva_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conductiva_checkbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.conductiva_checkbox.Location = new System.Drawing.Point(8, 19);
-            this.conductiva_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.conductiva_checkbox.Name = "conductiva_checkbox";
-            this.conductiva_checkbox.Size = new System.Drawing.Size(86, 20);
-            this.conductiva_checkbox.TabIndex = 25;
-            this.conductiva_checkbox.Text = "Conductiva";
-            this.conductiva_checkbox.UseVisualStyleBackColor = false;
-            // 
-            // neuro_checkbox
-            // 
-            this.neuro_checkbox.AutoSize = true;
-            this.neuro_checkbox.BackColor = System.Drawing.Color.Transparent;
-            this.neuro_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.neuro_checkbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.neuro_checkbox.Location = new System.Drawing.Point(8, 44);
-            this.neuro_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.neuro_checkbox.Name = "neuro_checkbox";
-            this.neuro_checkbox.Size = new System.Drawing.Size(106, 20);
-            this.neuro_checkbox.TabIndex = 26;
-            this.neuro_checkbox.Text = "Neurosensorial";
-            this.neuro_checkbox.UseVisualStyleBackColor = false;
-            // 
-            // mixta_checkbox
-            // 
-            this.mixta_checkbox.AutoSize = true;
-            this.mixta_checkbox.BackColor = System.Drawing.Color.Transparent;
-            this.mixta_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mixta_checkbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.mixta_checkbox.Location = new System.Drawing.Point(8, 70);
-            this.mixta_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mixta_checkbox.Name = "mixta_checkbox";
-            this.mixta_checkbox.Size = new System.Drawing.Size(55, 20);
-            this.mixta_checkbox.TabIndex = 27;
-            this.mixta_checkbox.Text = "Mixta";
-            this.mixta_checkbox.UseVisualStyleBackColor = false;
-            // 
-            // retro_checkbox
-            // 
-            this.retro_checkbox.AutoSize = true;
-            this.retro_checkbox.BackColor = System.Drawing.Color.Transparent;
-            this.retro_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.retro_checkbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.retro_checkbox.Location = new System.Drawing.Point(8, 96);
-            this.retro_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.retro_checkbox.Name = "retro_checkbox";
-            this.retro_checkbox.Size = new System.Drawing.Size(91, 20);
-            this.retro_checkbox.TabIndex = 28;
-            this.retro_checkbox.Text = "Retrococlear";
-            this.retro_checkbox.UseVisualStyleBackColor = false;
             // 
             // profunda_checkbox
             // 
@@ -484,6 +408,28 @@
             this.profunda_checkbox.Text = "Profunda";
             this.profunda_checkbox.UseVisualStyleBackColor = false;
             this.profunda_checkbox.CheckedChanged += new System.EventHandler(this.profunda_checkbox_CheckedChanged);
+            // 
+            // tipoPerdida_gp
+            // 
+            this.tipoPerdida_gp.BackColor = System.Drawing.Color.Transparent;
+            this.tipoPerdida_gp.Controls.Add(this.no_Sabe_checkbox);
+            this.tipoPerdida_gp.Controls.Add(this.noSabe_checkbox);
+            this.tipoPerdida_gp.Controls.Add(this.conductiva_checkbox);
+            this.tipoPerdida_gp.Controls.Add(this.neuro_checkbox);
+            this.tipoPerdida_gp.Controls.Add(this.mixta_checkbox);
+            this.tipoPerdida_gp.Controls.Add(this.retro_checkbox);
+            this.tipoPerdida_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoPerdida_gp.ForeColor = System.Drawing.Color.White;
+            this.tipoPerdida_gp.Location = new System.Drawing.Point(446, 50);
+            this.tipoPerdida_gp.Margin = new System.Windows.Forms.Padding(2);
+            this.tipoPerdida_gp.Name = "tipoPerdida_gp";
+            this.tipoPerdida_gp.Padding = new System.Windows.Forms.Padding(2);
+            this.tipoPerdida_gp.Size = new System.Drawing.Size(130, 143);
+            this.tipoPerdida_gp.TabIndex = 35;
+            this.tipoPerdida_gp.TabStop = false;
+            this.tipoPerdida_gp.Text = "Tipo de Pérdida";
+            this.tipoPerdida_gp.Visible = false;
+            // 
             // noSabe_checkbox
             // 
             this.noSabe_checkbox.AutoSize = true;
@@ -492,10 +438,85 @@
             this.noSabe_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.noSabe_checkbox.Location = new System.Drawing.Point(15, 230);
             this.noSabe_checkbox.Name = "noSabe_checkbox";
-            this.noSabe_checkbox.Size = new System.Drawing.Size(133, 36);
+            this.noSabe_checkbox.Size = new System.Drawing.Size(70, 20);
             this.noSabe_checkbox.TabIndex = 29;
             this.noSabe_checkbox.Text = "No sabe";
-            this.noSabe_checkbox.UseVisualStyleBackColor = false;           
+            this.noSabe_checkbox.UseVisualStyleBackColor = false;
+            // 
+            // conductiva_checkbox
+            // 
+            this.conductiva_checkbox.AutoSize = true;
+            this.conductiva_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.conductiva_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conductiva_checkbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.conductiva_checkbox.Location = new System.Drawing.Point(8, 19);
+            this.conductiva_checkbox.Margin = new System.Windows.Forms.Padding(2);
+            this.conductiva_checkbox.Name = "conductiva_checkbox";
+            this.conductiva_checkbox.Size = new System.Drawing.Size(86, 20);
+            this.conductiva_checkbox.TabIndex = 25;
+            this.conductiva_checkbox.Text = "Conductiva";
+            this.conductiva_checkbox.UseVisualStyleBackColor = false;
+            this.conductiva_checkbox.CheckedChanged += new System.EventHandler(this.conductiva_checkbox_CheckedChanged);
+            // 
+            // neuro_checkbox
+            // 
+            this.neuro_checkbox.AutoSize = true;
+            this.neuro_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.neuro_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.neuro_checkbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.neuro_checkbox.Location = new System.Drawing.Point(8, 44);
+            this.neuro_checkbox.Margin = new System.Windows.Forms.Padding(2);
+            this.neuro_checkbox.Name = "neuro_checkbox";
+            this.neuro_checkbox.Size = new System.Drawing.Size(106, 20);
+            this.neuro_checkbox.TabIndex = 26;
+            this.neuro_checkbox.Text = "Neurosensorial";
+            this.neuro_checkbox.UseVisualStyleBackColor = false;
+            this.neuro_checkbox.CheckedChanged += new System.EventHandler(this.neuro_checkbox_CheckedChanged);
+            // 
+            // mixta_checkbox
+            // 
+            this.mixta_checkbox.AutoSize = true;
+            this.mixta_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.mixta_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mixta_checkbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.mixta_checkbox.Location = new System.Drawing.Point(8, 70);
+            this.mixta_checkbox.Margin = new System.Windows.Forms.Padding(2);
+            this.mixta_checkbox.Name = "mixta_checkbox";
+            this.mixta_checkbox.Size = new System.Drawing.Size(55, 20);
+            this.mixta_checkbox.TabIndex = 27;
+            this.mixta_checkbox.Text = "Mixta";
+            this.mixta_checkbox.UseVisualStyleBackColor = false;
+            this.mixta_checkbox.CheckedChanged += new System.EventHandler(this.mixta_checkbox_CheckedChanged);
+            // 
+            // retro_checkbox
+            // 
+            this.retro_checkbox.AutoSize = true;
+            this.retro_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.retro_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retro_checkbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.retro_checkbox.Location = new System.Drawing.Point(8, 96);
+            this.retro_checkbox.Margin = new System.Windows.Forms.Padding(2);
+            this.retro_checkbox.Name = "retro_checkbox";
+            this.retro_checkbox.Size = new System.Drawing.Size(91, 20);
+            this.retro_checkbox.TabIndex = 28;
+            this.retro_checkbox.Text = "Retrococlear";
+            this.retro_checkbox.UseVisualStyleBackColor = false;
+            this.retro_checkbox.CheckedChanged += new System.EventHandler(this.retro_checkbox_CheckedChanged);
+            // 
+            // no_Sabe_checkbox
+            // 
+            this.no_Sabe_checkbox.AutoSize = true;
+            this.no_Sabe_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.no_Sabe_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no_Sabe_checkbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.no_Sabe_checkbox.Location = new System.Drawing.Point(8, 119);
+            this.no_Sabe_checkbox.Margin = new System.Windows.Forms.Padding(2);
+            this.no_Sabe_checkbox.Name = "no_Sabe_checkbox";
+            this.no_Sabe_checkbox.Size = new System.Drawing.Size(70, 20);
+            this.no_Sabe_checkbox.TabIndex = 30;
+            this.no_Sabe_checkbox.Text = "No sabe";
+            this.no_Sabe_checkbox.UseVisualStyleBackColor = false;
+            this.no_Sabe_checkbox.CheckedChanged += new System.EventHandler(this.no_Sabe_checkbox_CheckedChanged);
             // 
             // consultas_salud
             // 
@@ -506,7 +527,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 530);
-            this.Controls.Add(this.gradoPerdida_gp);
+            this.Controls.Add(this.tipoPerdida_gp);
             this.Controls.Add(this.eleccion_gp);
             this.Controls.Add(this.tipologia_combo);
             this.Controls.Add(this.tienen_radio);
@@ -520,11 +541,11 @@
             this.Controls.Add(this.estadoSalud_combo);
             this.Controls.Add(this.auxiliarAuditivo_combo);
             this.Controls.Add(this.noTienen_radio);
-            this.Controls.Add(this.tipoPerdida_gp);
+            this.Controls.Add(this.gradoPerdida_gp);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "consultas_salud";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultas_salud";
@@ -577,5 +598,6 @@
         private System.Windows.Forms.CheckBox mixta_checkbox;
         private System.Windows.Forms.CheckBox retro_checkbox;
         private System.Windows.Forms.CheckBox profunda_checkbox;
+        private System.Windows.Forms.CheckBox no_Sabe_checkbox;
     }
 }

@@ -488,11 +488,11 @@ namespace CSEQ
                 for (int i = 0; i < dt.Rows.Count; i++)
                     nombres[i] = dt.Rows[i].ItemArray[0].ToString();
                 // Configuramos la gráfica
-                graph.XAxis.MajorTic.IsBetweenLabels = true;
+                graph.XAxis.MajorTic.IsBetweenLabels = false;
                 graph.XAxis.Type = AxisType.Text;
                 graph.XAxis.Scale.TextLabels = nombres;
                 graph.XAxis.Scale.FontSpec.Size = 15.0F;
-                graph.XAxis.Scale.FontSpec.Angle = 90;
+                graph.XAxis.Scale.FontSpec.Angle = 65;
                 graph.YAxis.IsVisible = true;
                 graph.XAxis.IsVisible = true;
                 // Llenamos la grafica
@@ -651,12 +651,13 @@ namespace CSEQ
             imgLogo.ScalePercent(10);
             imgLogo.SetAbsolutePosition(50,doc.PageSize.Height - 200);
             iTextSharp.text.Image imgGrafica = iTextSharp.text.Image.GetInstance("Grafica.png");
-            imgGrafica.Alignment = (int)(HorizontalAlignment.Center-(int)imgGrafica.Width);
             imgGrafica.ScalePercent(60);
+            imgGrafica.Alignment = 1;
             Paragraph titulo = new Paragraph("Censo de Población y Desarrollo Integral para Personas con Discapacidad Auditiva \n\n");
             titulo.Alignment = 1;
             titulo.Font.Size= 10f;
             doc.Add(titulo);
+            
             //Escritor de pdf, se utiliza para dibujar formas o mover texto a lugares especificos
             PdfContentByte Ob= writer.DirectContent;
             Ob.MoveTo(0, doc.PageSize.Height-60);
@@ -694,6 +695,9 @@ namespace CSEQ
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph(" "));
             doc.Add( imgGrafica );
+
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph(" "));
 
             PdfContentByte cbPie;
             cbPie = writer.DirectContent;

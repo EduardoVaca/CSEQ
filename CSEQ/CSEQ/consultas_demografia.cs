@@ -14,6 +14,7 @@ namespace CSEQ
     {
         int index;
         int rol;
+        String query;
 
         public consultas_demografia(int index, int rol)
         {
@@ -112,6 +113,9 @@ namespace CSEQ
                 empleo_gp.Visible = false;
                 areaTrabajo_gp.Visible = false;
             }
+            todoscensos_radio.Checked = !todoscensos_radio.Checked;
+            todoscensos_radio.Checked = !todoscensos_radio.Checked;
+
         }
 
         private void conEmpleo_radio_CheckedChanged(object sender, EventArgs e)
@@ -153,6 +157,105 @@ namespace CSEQ
         private void sinHijos_radio_CheckedChanged(object sender, EventArgs e)
         {
             hijos_gp.Visible = false;
+        }
+
+        private void todoscensos_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            String type;
+            if (todoscensos_radio.Checked)
+            {
+                switch (index)
+                {
+                    case 0:
+                        switch(generales_combo.SelectedIndex){
+                            case 0:
+                                Reporte.Enabled = true;
+                                query = "CALL consultaPorEstado();";
+                                type = "Barra";
+                                Util.graphData(zedGraph, query, type);
+                                break;
+                            case 1:
+                                Reporte.Enabled = true;
+                                query = "CALL consultaPorMunicipio();";
+                                type = "Barra";
+                                Util.graphData(zedGraph, query, type);
+                                break;
+                            case 2:
+                                Reporte.Enabled = true;
+                                query = "CALL consultaHombresMujeres();";
+                                type = "Barra";
+                                Util.graphData(zedGraph, query, type);
+                                break;
+                            case 3:
+                                Reporte.Enabled = true;
+                                //query = "CALL consultaPorEdad();";
+                                type = "Barra";
+                                //Util.graphData(zedGraph, query, type);
+                                break;
+                            case 4:
+                                Reporte.Enabled = true;
+                                query = "CALL consultaPorLenguaDominante();";
+                                type = "Barra";
+                                Util.graphData(zedGraph, query, type);
+                                break;
+                            case 5:
+                                Reporte.Enabled = true;
+                                query = "CALL consultaTienenEmpleo();";
+                                type = "Barra";
+                                Util.graphData(zedGraph, query, type);
+                                break;
+                            case 6:
+                                Reporte.Enabled = true;
+                                query = "CALL consultaPersonasPorCenso();";
+                                type = "Barra";
+                                Util.graphData(zedGraph, query, type);
+                                break;
+                        }
+                        break;
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                }
+            }
+            
+        }
+
+        private void espanol_check_CheckedChanged(object sender, EventArgs e)
+        {
+            actilizaLenguajes();
+        }
+
+        private void ingles_check_CheckedChanged(object sender, EventArgs e)
+        {
+            actilizaLenguajes();
+        }
+
+        private void LSM_check_CheckedChanged(object sender, EventArgs e)
+        {
+            actilizaLenguajes();
+        }
+
+        private void LSEUA_check_CheckedChanged(object sender, EventArgs e)
+        {
+            actilizaLenguajes();
+        }
+
+        private void actilizaLenguajes()
+        {
+            if (todoscensos_radio.Checked)
+            {
+                query = "CALL consultaGradoPerdidaAuditivaPorLenguaDominante(" + espanol_check.Checked.ToString() + "," + ingles_check.Checked.ToString() + ","
+                            + LSM_check.Checked.ToString() + "," + LSEUA_check.Checked.ToString() + ");";
+            }
+            else
+            {
+                query = "CALL consultaGradoPerdidaAuditivaPorLenguaDominantePorCenso(" + espanol_check.Checked.ToString() + "," + ingles_check.Checked.ToString() + ","
+                            + LSM_check.Checked.ToString() + "," + LSEUA_check.Checked.ToString() + ID_censo.SelectedValue.ToString() + ID_censo.SelectedValue.ToString() + ");";
+            }
+            Util.graphData(zedGraph, query, "Barra");
         }
     }
 }

@@ -166,7 +166,8 @@ namespace CSEQ
                         break;
                     case 3:
                         Reporte.Enabled = true;
-                        query = "CALL consultaPorTipoPerdidaAuditiva();";
+                        query = "CALL consultaPorCadaTipoPerdidaAuditiva(" + conductiva_checkbox.Checked.ToString() + "," + neuro_checkbox.Checked.ToString() + "," + mixta_checkbox.Checked.ToString() + "," 
+                            + retro_checkbox.Checked.ToString() + ","+ no_Sabe_checkbox.Checked.ToString() +");";
                         type = "Barra";
                         Util.graphData(zedGraph, query, type);
                         break;
@@ -259,7 +260,8 @@ namespace CSEQ
                         break;
                     case 3:
                         Reporte.Enabled = true;
-                        query = "CALL consultaPorTipoPerdidaAuditivaPorCenso(" + id_censo + ");";
+                        query = "CALL consultaPorCadaTipoPerdidaAuditivaPorCenso(" + conductiva_checkbox.Checked.ToString() + "," + neuro_checkbox.Checked.ToString() + "," + mixta_checkbox.Checked.ToString() + "," 
+                            + retro_checkbox.Checked.ToString() + ","+ no_Sabe_checkbox.Checked.ToString() + "," + id_censo + ");";
                         type = "Barra";
                         Util.graphData(zedGraph, query, type);
                         break;
@@ -426,6 +428,46 @@ namespace CSEQ
             {
                 query = "CALL consultaGradoPerdidaAuditivaPorCadaGradoPorCenso(" + leve_checkbox.Checked.ToString() + "," + media_checkbox.Checked.ToString() + "," 
                             + profunda_checkbox.Checked.ToString() + ","+ severa_checkbox.Checked.ToString() + "," + total_checkbox.Checked.ToString() + "," + getId_censo() + ");";
+            }
+            Util.graphData(zedGraph, query, "Barra");
+        }
+
+        private void no_Sabe_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaTipo();
+        }
+
+        private void retro_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaTipo();
+        }
+
+        private void mixta_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaTipo();
+        }
+
+        private void neuro_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaTipo();
+        }
+
+        private void conductiva_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaTipo();
+        }
+
+        private void actualizaTipo()
+        {
+            if (todoscensos_radio.Checked)
+            {
+                query = "CALL consultaPorCadaTipoPerdidaAuditiva(" + conductiva_checkbox.Checked.ToString() + "," + neuro_checkbox.Checked.ToString() + "," + mixta_checkbox.Checked.ToString() + ","
+                            + retro_checkbox.Checked.ToString() + "," + no_Sabe_checkbox.Checked.ToString() + ");";
+            }
+            else
+            {
+                query = "CALL consultaPorCadaTipoPerdidaAuditivaPorCenso(" + conductiva_checkbox.Checked.ToString() + "," + neuro_checkbox.Checked.ToString() + "," + mixta_checkbox.Checked.ToString() + ","
+                            + retro_checkbox.Checked.ToString() + "," + no_Sabe_checkbox.Checked.ToString() + "," + ID_censo.SelectedValue.ToString() + ");";
             }
             Util.graphData(zedGraph, query, "Barra");
         }
