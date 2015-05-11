@@ -1412,3 +1412,101 @@ BEGIN
 	GROUP BY e.nombre;
 END //
 DELIMITER ;
+
+
+-- Consulta por cada tipo de pérdida de audición...
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaTipoPerdidaAuditiva
+(IN conductiva boolean, neurosensorial boolean, mixta boolean, retrococlear boolean, noSe boolean)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE perdidaConduct VARCHAR(50);
+	DECLARE perdidaNeuro VARCHAR(50);
+	DECLARE perdidaMixta VARCHAR(50);
+	DECLARE perdidaRetro VARCHAR(50);
+	DECLARE perdidaNoSe VARCHAR(50);
+
+	SET perdidaConduct = ' ', perdidaNeuro = ' ', perdidaMixta = ' ', perdidaRetro = ' ', perdidaNoSe = ' ';
+
+	IF (conductiva)
+	THEN
+		SET perdidaConduct = 'Pérdida Auditiva Conductiva';
+	END IF;
+
+	IF (neurosensorial)
+	THEN
+		SET perdidaNeuro = 'Pérdida Auditiva Neurosensorial';
+	END IF;
+
+	IF (mixta)
+	THEN
+		SET perdidaMixta = 'Pérdida Auditiva Mixta';
+	END IF;
+
+	IF (retrococlear)
+	THEN
+		SET perdidaRetro = 'Pérdida Auditiva Retrococlear';
+	END IF;
+
+	IF (noSe)
+	THEN
+		SET perdidaNoSe = 'No lo sé';
+	END IF;
+
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT tipo as 'Tipo de pérdida', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM TienePerdidaAuditiva t, PerdidaAuditiva p
+	WHERE p.ID_perdidaAuditiva = t.ID_perdidaAuditiva AND p.tipo IN (perdidaConduct, perdidaNeuro, perdidaMixta, perdidaRetro, perdidaNoSe)
+	GROUP BY tipo;
+
+END //
+DELIMITER ;
+
+
+-- Consulta por cada tipo de pérdida auditiva por censo
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaTipoPerdidaAuditivaPorCenso
+(IN conductiva boolean, neurosensorial boolean, mixta boolean, retrococlear boolean, noSe boolean, censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE perdidaConduct VARCHAR(50);
+	DECLARE perdidaNeuro VARCHAR(50);
+	DECLARE perdidaMixta VARCHAR(50);
+	DECLARE perdidaRetro VARCHAR(50);
+	DECLARE perdidaNoSe VARCHAR(50);
+
+	SET perdidaConduct = ' ', perdidaNeuro = ' ', perdidaMixta = ' ', perdidaRetro = ' ', perdidaNoSe = ' ';
+
+	IF (conductiva)
+	THEN
+		SET perdidaConduct = 'Pérdida Auditiva Conductiva';
+	END IF;
+
+	IF (neurosensorial)
+	THEN
+		SET perdidaNeuro = 'Pérdida Auditiva Neurosensorial';
+	END IF;
+
+	IF (mixta)
+	THEN
+		SET perdidaMixta = 'Pérdida Auditiva Mixta';
+	END IF;
+
+	IF (retrococlear)
+	THEN
+		SET perdidaRetro = 'Pérdida Auditiva Retrococlear';
+	END IF;
+
+	IF (noSe)
+	THEN
+		SET perdidaNoSe = 'No lo sé';
+	END IF;
+
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT p.Tipo AS 'Tipo de perdida', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM TienePerdidaAuditiva t, PerdidaAuditiva p
+	WHERE p.ID_perdidaAuditiva = t.ID_perdidaAuditiva AND t.ID_censo = censo AND p.tipo IN (perdidaConduct, perdidaNeuro, perdidaMixta, perdidaRetro, perdidaNoSe)
+	GROUP BY p.Tipo;
+
+END //
+DELIMITER ;
