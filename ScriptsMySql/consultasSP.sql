@@ -1326,3 +1326,89 @@ BEGIN
 				AND p.CURP NOT IN (SELECT DISTINCT h.CURP FROM Hijo h)) AS TablaDos;
 END //
 DELIMITER ;
+
+
+-- Consulta por cada estado civil
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaEstadoCivil
+(IN soltero boolean, casado boolean, divorciado boolean, viudo boolean)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE estadoSoltero VARCHAR(50);
+	DECLARE estadoCasado VARCHAR(50);
+	DECLARE estadoDivorciado VARCHAR(50);
+	DECLARE estadoViudo VARCHAR(50);
+
+	SET estadoSoltero = ' ', estadoCasado = ' ', estadoDivorciado = ' ', estadoViudo = ' ';
+
+	IF (soltero)
+	THEN
+		SET estadoSoltero = 'Soltero(a)';
+	END IF;
+
+	IF (casado)
+	THEN
+		SET estadoCasado = 'Casado(a)';
+	END IF;
+
+	IF (divorciado)
+	THEN
+		SET estadoDivorciado = 'Divorciado(a)';
+	END IF;
+
+	IF (viudo)
+	THEN
+		SET estadoViudo = 'Viudo(a)';
+	END IF;
+
+
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT e.nombre AS 'Estado civil', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM EstadoCivil e, TieneEstadoCivil c
+	WHERE c.ID_estadoCivil = e.ID_estadoCivil AND e.nombre IN(estadoSoltero, estadoCasado, estadoDivorciado, estadoViudo)
+	GROUP BY e.nombre;
+END //
+DELIMITER ;
+
+
+-- Consulta por cada estado civil por censo
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaEstadoCivilPorCenso
+(IN soltero boolean, casado boolean, divorciado boolean, viudo boolean, censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE estadoSoltero VARCHAR(50);
+	DECLARE estadoCasado VARCHAR(50);
+	DECLARE estadoDivorciado VARCHAR(50);
+	DECLARE estadoViudo VARCHAR(50);
+
+	SET estadoSoltero = ' ', estadoCasado = ' ', estadoDivorciado = ' ', estadoViudo = ' ';
+
+	IF (soltero)
+	THEN
+		SET estadoSoltero = 'Soltero(a)';
+	END IF;
+
+	IF (casado)
+	THEN
+		SET estadoCasado = 'Casado(a)';
+	END IF;
+
+	IF (divorciado)
+	THEN
+		SET estadoDivorciado = 'Divorciado(a)';
+	END IF;
+
+	IF (viudo)
+	THEN
+		SET estadoViudo = 'Viudo(a)';
+	END IF;
+
+
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT e.nombre AS 'Estado civil', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM EstadoCivil e, TieneEstadoCivil c
+	WHERE c.ID_estadoCivil = e.ID_estadoCivil AND c.ID_censo = censo AND e.nombre IN (estadoSoltero, estadoCasado, estadoDivorciado, estadoViudo)
+	GROUP BY e.nombre;
+END //
+DELIMITER ;
