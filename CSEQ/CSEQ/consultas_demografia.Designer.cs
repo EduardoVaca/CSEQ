@@ -58,16 +58,6 @@
             this.areaTrabajo_radio = new System.Windows.Forms.RadioButton();
             this.sinEducacion_radio = new System.Windows.Forms.RadioButton();
             this.conEducacion_radio = new System.Windows.Forms.RadioButton();
-            this.nivelesEducativos_gp = new System.Windows.Forms.GroupBox();
-            this.prescolar_check = new System.Windows.Forms.CheckBox();
-            this.primaria_check = new System.Windows.Forms.CheckBox();
-            this.secundaria_check = new System.Windows.Forms.CheckBox();
-            this.preparatoria_check = new System.Windows.Forms.CheckBox();
-            this.carreraTecnica_check = new System.Windows.Forms.CheckBox();
-            this.licenciatura_check = new System.Windows.Forms.CheckBox();
-            this.especialidad_check = new System.Windows.Forms.CheckBox();
-            this.maestria_check = new System.Windows.Forms.CheckBox();
-            this.doctorado_check = new System.Windows.Forms.CheckBox();
             this.lenguaDom_gp = new System.Windows.Forms.GroupBox();
             this.espanol_check = new System.Windows.Forms.CheckBox();
             this.ingles_check = new System.Windows.Forms.CheckBox();
@@ -92,7 +82,6 @@
             this.edades_gp.SuspendLayout();
             this.empleo_gp.SuspendLayout();
             this.areaTrabajo_gp.SuspendLayout();
-            this.nivelesEducativos_gp.SuspendLayout();
             this.lenguaDom_gp.SuspendLayout();
             this.estadoCivil_gp.SuspendLayout();
             this.hijos_gp.SuspendLayout();
@@ -500,145 +489,6 @@
             this.conEducacion_radio.Visible = false;
             this.conEducacion_radio.CheckedChanged += new System.EventHandler(this.conEducacion_radio_CheckedChanged);
             // 
-            // nivelesEducativos_gp
-            // 
-            this.nivelesEducativos_gp.BackColor = System.Drawing.Color.Transparent;
-            this.nivelesEducativos_gp.Controls.Add(this.doctorado_check);
-            this.nivelesEducativos_gp.Controls.Add(this.maestria_check);
-            this.nivelesEducativos_gp.Controls.Add(this.especialidad_check);
-            this.nivelesEducativos_gp.Controls.Add(this.licenciatura_check);
-            this.nivelesEducativos_gp.Controls.Add(this.carreraTecnica_check);
-            this.nivelesEducativos_gp.Controls.Add(this.preparatoria_check);
-            this.nivelesEducativos_gp.Controls.Add(this.secundaria_check);
-            this.nivelesEducativos_gp.Controls.Add(this.primaria_check);
-            this.nivelesEducativos_gp.Controls.Add(this.prescolar_check);
-            this.nivelesEducativos_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nivelesEducativos_gp.ForeColor = System.Drawing.Color.White;
-            this.nivelesEducativos_gp.Location = new System.Drawing.Point(985, 132);
-            this.nivelesEducativos_gp.Name = "nivelesEducativos_gp";
-            this.nivelesEducativos_gp.Size = new System.Drawing.Size(496, 260);
-            this.nivelesEducativos_gp.TabIndex = 88;
-            this.nivelesEducativos_gp.TabStop = false;
-            this.nivelesEducativos_gp.Text = "Nivel Educativo";
-            this.nivelesEducativos_gp.Visible = false;
-            // 
-            // prescolar_check
-            // 
-            this.prescolar_check.AutoSize = true;
-            this.prescolar_check.BackColor = System.Drawing.Color.Transparent;
-            this.prescolar_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prescolar_check.ForeColor = System.Drawing.Color.White;
-            this.prescolar_check.Location = new System.Drawing.Point(7, 37);
-            this.prescolar_check.Name = "prescolar_check";
-            this.prescolar_check.Size = new System.Drawing.Size(140, 36);
-            this.prescolar_check.TabIndex = 89;
-            this.prescolar_check.Text = "Prescolar";
-            this.prescolar_check.UseVisualStyleBackColor = false;
-            // 
-            // primaria_check
-            // 
-            this.primaria_check.AutoSize = true;
-            this.primaria_check.BackColor = System.Drawing.Color.Transparent;
-            this.primaria_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.primaria_check.ForeColor = System.Drawing.Color.White;
-            this.primaria_check.Location = new System.Drawing.Point(7, 82);
-            this.primaria_check.Name = "primaria_check";
-            this.primaria_check.Size = new System.Drawing.Size(130, 36);
-            this.primaria_check.TabIndex = 90;
-            this.primaria_check.Text = "Primaria";
-            this.primaria_check.UseVisualStyleBackColor = false;
-            // 
-            // secundaria_check
-            // 
-            this.secundaria_check.AutoSize = true;
-            this.secundaria_check.BackColor = System.Drawing.Color.Transparent;
-            this.secundaria_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secundaria_check.ForeColor = System.Drawing.Color.White;
-            this.secundaria_check.Location = new System.Drawing.Point(7, 128);
-            this.secundaria_check.Name = "secundaria_check";
-            this.secundaria_check.Size = new System.Drawing.Size(159, 36);
-            this.secundaria_check.TabIndex = 90;
-            this.secundaria_check.Text = "Secundaria";
-            this.secundaria_check.UseVisualStyleBackColor = false;
-            // 
-            // preparatoria_check
-            // 
-            this.preparatoria_check.AutoSize = true;
-            this.preparatoria_check.BackColor = System.Drawing.Color.Transparent;
-            this.preparatoria_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.preparatoria_check.ForeColor = System.Drawing.Color.White;
-            this.preparatoria_check.Location = new System.Drawing.Point(7, 173);
-            this.preparatoria_check.Name = "preparatoria_check";
-            this.preparatoria_check.Size = new System.Drawing.Size(173, 36);
-            this.preparatoria_check.TabIndex = 91;
-            this.preparatoria_check.Text = "Preparatoria";
-            this.preparatoria_check.UseVisualStyleBackColor = false;
-            // 
-            // carreraTecnica_check
-            // 
-            this.carreraTecnica_check.AutoSize = true;
-            this.carreraTecnica_check.BackColor = System.Drawing.Color.Transparent;
-            this.carreraTecnica_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carreraTecnica_check.ForeColor = System.Drawing.Color.White;
-            this.carreraTecnica_check.Location = new System.Drawing.Point(7, 215);
-            this.carreraTecnica_check.Name = "carreraTecnica_check";
-            this.carreraTecnica_check.Size = new System.Drawing.Size(205, 36);
-            this.carreraTecnica_check.TabIndex = 92;
-            this.carreraTecnica_check.Text = "Carrera Técnica";
-            this.carreraTecnica_check.UseVisualStyleBackColor = false;
-            // 
-            // licenciatura_check
-            // 
-            this.licenciatura_check.AutoSize = true;
-            this.licenciatura_check.BackColor = System.Drawing.Color.Transparent;
-            this.licenciatura_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.licenciatura_check.ForeColor = System.Drawing.Color.White;
-            this.licenciatura_check.Location = new System.Drawing.Point(246, 37);
-            this.licenciatura_check.Name = "licenciatura_check";
-            this.licenciatura_check.Size = new System.Drawing.Size(168, 36);
-            this.licenciatura_check.TabIndex = 93;
-            this.licenciatura_check.Text = "Licenciatura";
-            this.licenciatura_check.UseVisualStyleBackColor = false;
-            // 
-            // especialidad_check
-            // 
-            this.especialidad_check.AutoSize = true;
-            this.especialidad_check.BackColor = System.Drawing.Color.Transparent;
-            this.especialidad_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.especialidad_check.ForeColor = System.Drawing.Color.White;
-            this.especialidad_check.Location = new System.Drawing.Point(246, 82);
-            this.especialidad_check.Name = "especialidad_check";
-            this.especialidad_check.Size = new System.Drawing.Size(173, 36);
-            this.especialidad_check.TabIndex = 94;
-            this.especialidad_check.Text = "Especialidad";
-            this.especialidad_check.UseVisualStyleBackColor = false;
-            // 
-            // maestria_check
-            // 
-            this.maestria_check.AutoSize = true;
-            this.maestria_check.BackColor = System.Drawing.Color.Transparent;
-            this.maestria_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maestria_check.ForeColor = System.Drawing.Color.White;
-            this.maestria_check.Location = new System.Drawing.Point(246, 128);
-            this.maestria_check.Name = "maestria_check";
-            this.maestria_check.Size = new System.Drawing.Size(135, 36);
-            this.maestria_check.TabIndex = 95;
-            this.maestria_check.Text = "Maestría";
-            this.maestria_check.UseVisualStyleBackColor = false;
-            // 
-            // doctorado_check
-            // 
-            this.doctorado_check.AutoSize = true;
-            this.doctorado_check.BackColor = System.Drawing.Color.Transparent;
-            this.doctorado_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doctorado_check.ForeColor = System.Drawing.Color.White;
-            this.doctorado_check.Location = new System.Drawing.Point(246, 173);
-            this.doctorado_check.Name = "doctorado_check";
-            this.doctorado_check.Size = new System.Drawing.Size(159, 36);
-            this.doctorado_check.TabIndex = 96;
-            this.doctorado_check.Text = "Doctorado";
-            this.doctorado_check.UseVisualStyleBackColor = false;
-            // 
             // lenguaDom_gp
             // 
             this.lenguaDom_gp.BackColor = System.Drawing.Color.Transparent;
@@ -897,7 +747,6 @@
             this.Controls.Add(this.estadoCivil_gp);
             this.Controls.Add(this.estadoCivil_combo);
             this.Controls.Add(this.lenguaDom_gp);
-            this.Controls.Add(this.nivelesEducativos_gp);
             this.Controls.Add(this.sinEducacion_radio);
             this.Controls.Add(this.empleo_gp);
             this.Controls.Add(this.conEducacion_radio);
@@ -931,8 +780,6 @@
             this.empleo_gp.PerformLayout();
             this.areaTrabajo_gp.ResumeLayout(false);
             this.areaTrabajo_gp.PerformLayout();
-            this.nivelesEducativos_gp.ResumeLayout(false);
-            this.nivelesEducativos_gp.PerformLayout();
             this.lenguaDom_gp.ResumeLayout(false);
             this.lenguaDom_gp.PerformLayout();
             this.estadoCivil_gp.ResumeLayout(false);
@@ -974,16 +821,6 @@
         private System.Windows.Forms.RadioButton areaTrabajo_radio;
         private System.Windows.Forms.RadioButton sinEducacion_radio;
         private System.Windows.Forms.RadioButton conEducacion_radio;
-        private System.Windows.Forms.GroupBox nivelesEducativos_gp;
-        private System.Windows.Forms.CheckBox doctorado_check;
-        private System.Windows.Forms.CheckBox maestria_check;
-        private System.Windows.Forms.CheckBox especialidad_check;
-        private System.Windows.Forms.CheckBox licenciatura_check;
-        private System.Windows.Forms.CheckBox carreraTecnica_check;
-        private System.Windows.Forms.CheckBox preparatoria_check;
-        private System.Windows.Forms.CheckBox secundaria_check;
-        private System.Windows.Forms.CheckBox primaria_check;
-        private System.Windows.Forms.CheckBox prescolar_check;
         private System.Windows.Forms.GroupBox lenguaDom_gp;
         private System.Windows.Forms.CheckBox LSEUA_check;
         private System.Windows.Forms.CheckBox LSM_check;
