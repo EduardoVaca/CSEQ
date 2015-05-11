@@ -132,6 +132,7 @@
             this.descripcion_txt = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.PerdidaAuditiva_tab = new System.Windows.Forms.TabPage();
+            this.label33 = new System.Windows.Forms.Label();
             this.aparato_refresh = new System.Windows.Forms.PictureBox();
             this.causa_refresh = new System.Windows.Forms.PictureBox();
             this.noTieneAparato_check = new System.Windows.Forms.CheckBox();
@@ -203,7 +204,6 @@
             this.modificar_pb = new System.Windows.Forms.PictureBox();
             this.guardar_pb = new System.Windows.Forms.PictureBox();
             this.refresh_toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Persona_tabControl.SuspendLayout();
             this.DatosPersonales_tab.SuspendLayout();
@@ -450,7 +450,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label30.Location = new System.Drawing.Point(788, 172);
+            this.label30.Location = new System.Drawing.Point(902, 172);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(32, 42);
@@ -787,7 +787,7 @@
             this.Nombre_txt.Location = new System.Drawing.Point(188, 167);
             this.Nombre_txt.Margin = new System.Windows.Forms.Padding(4);
             this.Nombre_txt.Name = "Nombre_txt";
-            this.Nombre_txt.Size = new System.Drawing.Size(592, 54);
+            this.Nombre_txt.Size = new System.Drawing.Size(706, 54);
             this.Nombre_txt.TabIndex = 18;
             // 
             // label2
@@ -1472,6 +1472,18 @@
             this.PerdidaAuditiva_tab.Size = new System.Drawing.Size(1597, 966);
             this.PerdidaAuditiva_tab.TabIndex = 3;
             this.PerdidaAuditiva_tab.Text = "Perdida Auditiva";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label33.Location = new System.Drawing.Point(15, 10);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(301, 49);
+            this.label33.TabIndex = 90;
+            this.label33.Text = "Perdida Auditiva";
             // 
             // aparato_refresh
             // 
@@ -2244,7 +2256,7 @@
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(796, 4);
             this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(796, 40);
+            this.busqueda_txt.Size = new System.Drawing.Size(796, 57);
             this.busqueda_txt.TabIndex = 15;
             this.busqueda_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.busqueda_txt_KeyPress);
             // 
@@ -2363,18 +2375,6 @@
             this.guardar_pb.Click += new System.EventHandler(this.guardar_pb_Click);
             this.guardar_pb.MouseLeave += new System.EventHandler(this.guardar_pb_MouseLeave);
             this.guardar_pb.MouseHover += new System.EventHandler(this.guardar_pb_MouseHover);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label33.Location = new System.Drawing.Point(15, 10);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(301, 49);
-            this.label33.TabIndex = 90;
-            this.label33.Text = "Perdida Auditiva";
             // 
             // Persona
             // 

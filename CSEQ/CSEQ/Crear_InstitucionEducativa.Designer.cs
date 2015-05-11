@@ -207,7 +207,7 @@
             // 
             this.ID_municipio.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_municipio.FormattingEnabled = true;
-            this.ID_municipio.Location = new System.Drawing.Point(649, 581);
+            this.ID_municipio.Location = new System.Drawing.Point(649, 580);
             this.ID_municipio.Margin = new System.Windows.Forms.Padding(4);
             this.ID_municipio.Name = "ID_municipio";
             this.ID_municipio.Size = new System.Drawing.Size(296, 46);
@@ -377,7 +377,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(18, 105);
+            this.label14.Location = new System.Drawing.Point(18, 117);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(144, 32);
@@ -403,12 +403,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.busqueda_grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.busqueda_grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.busqueda_grid.Location = new System.Drawing.Point(14, 131);
+            this.busqueda_grid.Location = new System.Drawing.Point(14, 173);
             this.busqueda_grid.Margin = new System.Windows.Forms.Padding(4);
             this.busqueda_grid.Name = "busqueda_grid";
             this.busqueda_grid.RowTemplate.Height = 33;
             this.busqueda_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.busqueda_grid.Size = new System.Drawing.Size(606, 600);
+            this.busqueda_grid.Size = new System.Drawing.Size(606, 558);
             this.busqueda_grid.TabIndex = 56;
             this.busqueda_grid.Visible = false;
             this.busqueda_grid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.busqueda_grid_RowEnter);
@@ -427,7 +427,7 @@
             // 
             this.imagen.BackColor = System.Drawing.Color.Transparent;
             this.imagen.Image = global::CSEQ.Properties.Resources.InstituciónEducativaB;
-            this.imagen.Location = new System.Drawing.Point(981, 259);
+            this.imagen.Location = new System.Drawing.Point(981, 277);
             this.imagen.Name = "imagen";
             this.imagen.Size = new System.Drawing.Size(500, 500);
             this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
