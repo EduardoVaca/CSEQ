@@ -379,7 +379,6 @@ namespace CSEQ
             {
                 gradoPerdida_gp.Visible = false;
             }
-            
             if (tipologia_combo.SelectedIndex == 3)
             {
                 tipoPerdida_gp.Visible = true;
@@ -388,7 +387,6 @@ namespace CSEQ
             {
                 tipoPerdida_gp.Visible = false;
             }
-            
         }
 
         private void leve_checkbox_CheckedChanged(object sender, EventArgs e)
