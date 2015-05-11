@@ -57,11 +57,11 @@
             this.eleccion_gp = new System.Windows.Forms.GroupBox();
             this.gradoPerdida_gp = new System.Windows.Forms.GroupBox();
             this.tipoPerdida_gp = new System.Windows.Forms.GroupBox();
+            this.noSabe_checkbox = new System.Windows.Forms.CheckBox();
             this.conductiva_checkbox = new System.Windows.Forms.CheckBox();
             this.neuro_checkbox = new System.Windows.Forms.CheckBox();
             this.mixta_checkbox = new System.Windows.Forms.CheckBox();
             this.retro_checkbox = new System.Windows.Forms.CheckBox();
-            this.noSabe_checkbox = new System.Windows.Forms.CheckBox();
             this.postlingual_radio = new System.Windows.Forms.RadioButton();
             this.prelingual_radio = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
@@ -435,6 +435,19 @@
             this.tipoPerdida_gp.Text = "Tipo de Pérdida";
             this.tipoPerdida_gp.Visible = false;
             // 
+            // noSabe_checkbox
+            // 
+            this.noSabe_checkbox.AutoSize = true;
+            this.noSabe_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.noSabe_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noSabe_checkbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.noSabe_checkbox.Location = new System.Drawing.Point(15, 230);
+            this.noSabe_checkbox.Name = "noSabe_checkbox";
+            this.noSabe_checkbox.Size = new System.Drawing.Size(133, 36);
+            this.noSabe_checkbox.TabIndex = 29;
+            this.noSabe_checkbox.Text = "No sabe";
+            this.noSabe_checkbox.UseVisualStyleBackColor = false;
+            // 
             // conductiva_checkbox
             // 
             this.conductiva_checkbox.AutoSize = true;
@@ -486,19 +499,6 @@
             this.retro_checkbox.TabIndex = 28;
             this.retro_checkbox.Text = "Retrococlear";
             this.retro_checkbox.UseVisualStyleBackColor = false;
-            // 
-            // noSabe_checkbox
-            // 
-            this.noSabe_checkbox.AutoSize = true;
-            this.noSabe_checkbox.BackColor = System.Drawing.Color.Transparent;
-            this.noSabe_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noSabe_checkbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.noSabe_checkbox.Location = new System.Drawing.Point(15, 230);
-            this.noSabe_checkbox.Name = "noSabe_checkbox";
-            this.noSabe_checkbox.Size = new System.Drawing.Size(133, 36);
-            this.noSabe_checkbox.TabIndex = 29;
-            this.noSabe_checkbox.Text = "No sabe";
-            this.noSabe_checkbox.UseVisualStyleBackColor = false;
             // 
             // postlingual_radio
             // 

@@ -86,7 +86,7 @@ namespace CSEQ
         {
             ID_censo.Enabled = true;
             todoscensos_radio.Enabled = true;
-            indexReporte = auxiliarAuditivo_combo.SelectedIndex;            
+           // indexReporte = auxiliarAuditivo_combo.SelectedIndex;            
             todoscensos_radio.Checked = true;
         }
 
@@ -296,7 +296,7 @@ namespace CSEQ
         {
             ID_censo.Enabled = true;
             todoscensos_radio.Enabled = true;
-            indexReporte = tipologia_combo.SelectedIndex;
+           // indexReporte = tipologia_combo.SelectedIndex;
             Reporte.Enabled = true;
             if (tipologia_combo.SelectedIndex == 0)
             {
