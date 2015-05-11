@@ -13,12 +13,8 @@ namespace CSEQ
     public partial class consultas_salud : Form
     {
         int index;
-        int indexReporte;
         String query;
-        int salida=1;
         int rol;
-        //salida =1 Genera reporte de todos los censos
-        //salida =2 Genera reporte de censo por año
 
         public consultas_salud(int index, int rol)
         {
@@ -69,7 +65,6 @@ namespace CSEQ
         {
             ID_censo.Enabled = true;
             todoscensos_radio.Enabled = true;
-            indexReporte = auxiliarAuditivo_combo.SelectedIndex;
             tienen_radio.Visible = false;
             noTienen_radio.Visible = false;
             tienen_radio.Checked = tienen_radio.Visible;
@@ -104,29 +99,23 @@ namespace CSEQ
                 {
                     case 0:
                         Reporte.Enabled = true;
-                        salida = 1;
                         query = "CALL consultaMarca();";
                         type = "Barra";
-                        indexReporte = 0;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 1:
                         Reporte.Enabled = true;
-                        salida = 1;
                         if (tienen_radio.Checked)
                             query = " CALL consultaSiTienenAuxiliar();";
                         if (noTienen_radio.Checked)
                             query = " CALL consultaNoTienenAuxiliar();";
                         type = "Barra";
-                        indexReporte = 1;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 2:
                         Reporte.Enabled = true;
-                        salida = 1;
                         query = " Call consultaTienenImplanteCoclear();";
                         type = "Pay";
-                        indexReporte = 2;
                         Util.graphData(zedGraph, query, type);
                         break;
                 }
@@ -138,18 +127,14 @@ namespace CSEQ
                 {
                     case 0:
                         Reporte.Enabled = true;
-                        salida = 1;
                         query = "CALL consultaTienenAlergia();";
                         type = "Barra";
-                        indexReporte = 0;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 1:
                         Reporte.Enabled = true;
-                        salida = 1;
                         query = "CALL consultaTienenEnfermedad();";
                         type = "Barra";
-                        indexReporte = 1;
                         Util.graphData(zedGraph, query, type);
                         break;
                    
@@ -171,8 +156,6 @@ namespace CSEQ
                     case 0:
                         query = "CALL consultaMarcaPorCenso(" + id_censo + ");";
                         type = "Barra";
-                        salida = 2;
-                        indexReporte = 0;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 1:
@@ -181,15 +164,11 @@ namespace CSEQ
                         if (noTienen_radio.Checked)
                             query = " CALL consultaNoTienenAuxiliarPorCenso(" + id_censo + ");";
                         type = "Barra";
-                        salida = 2;
-                        indexReporte = 1;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 2:
                         query = " CALL consultaTienenImplanteCoclearPorCenso(" + id_censo + ");";
                         type = "Pay";
-                        salida = 2;
-                        indexReporte = 2;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 3:
@@ -205,17 +184,13 @@ namespace CSEQ
                 switch (estadoSalud_combo.SelectedIndex)
                 {
                     case 0:
-                        salida = 2;
                         query = "CALL consultaTienenAlergiaPorCenso(" +id_censo+");";
                         type = "Barra";
-                        indexReporte = 0;
                         Util.graphData(zedGraph, query, type);
                         break;
                     case 1:
                         query = "CALL consultaTienenEnfermedadPorCenso(" + id_censo + ");";
                         type = "Barra";
-                        salida = 2;
-                        indexReporte = 1;
                         Util.graphData(zedGraph, query, type);
                         break;
                     
@@ -227,12 +202,20 @@ namespace CSEQ
             
         }
 
+
         private void Reporte_Click(object sender, EventArgs e)
         {
            // MessageBox.Show("query:" + query + "-" + "index:" + index + "-" + "reporte:" + indexReporte + "-" + salida);
-            Util.generaPDF(query);
-            
-            
+            String periodoRep;
+            if (todoscensos_radio.Checked)
+            {
+                periodoRep = "(Todos los censos)";
+            }
+            else
+            {
+                periodoRep = ID_censo.SelectedValue.ToString();
+            }
+            Util.generaPDF(query,titulo.Text,periodoRep);
         }
 
         private int getId_censo()
@@ -246,7 +229,6 @@ namespace CSEQ
                 String type;
                 query = "CALL consultaSiTienenAuxiliar();";
                 type = "Barra";
-                indexReporte = 1;
                 Util.graphData(zedGraph, query, type);
             }
             else if(tienen_radio.Checked)
@@ -254,7 +236,6 @@ namespace CSEQ
                 String type;
                 query = " CALL consultaSiTienenAuxiliarPorCenso(" + getId_censo() + ");";
                 type = "Barra";
-                indexReporte = 1;
                 Util.graphData(zedGraph, query, type);
             }
             
@@ -267,7 +248,6 @@ namespace CSEQ
                  String type;
                 query = "CALL consultaNoTienenAuxiliar();";
                 type = "Barra";
-                indexReporte = 1;
                 Util.graphData(zedGraph, query, type);
             }
             else if(noTienen_radio.Checked)
@@ -275,7 +255,6 @@ namespace CSEQ
                 String type;
                 query = " CALL consultaNoTienenAuxiliarPorCenso(" + getId_censo() + ");";
                 type = "Barra";
-                indexReporte = 1;
                 Util.graphData(zedGraph, query, type);
             }
            
