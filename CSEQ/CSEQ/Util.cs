@@ -443,18 +443,13 @@ namespace CSEQ
             }
         }
 
-        /**
-    '---------------------------------------------------------------------------------------------------------'
-    '  Grafica los puntos que se obtienen de ejecutar el query pasado como parámetro. El query debe tener la  '
-	'  forma "SELECT ejeX, ejeY FROM..." donde ejeX puede ser cualquier tipo que sea convertible a String y   '
-	'  ejeY tiene que ser numérico.                                                                           '
-    '                                                                                                         '
-    '  @param  zgc    El ZedGraphControl que se va a utilizar para graficar                                   '
-    '  @param  query  El query que se quiere ejecutar en la base de datos. El query debe tener la forma       '
-    '                 SELECT $, INTEGER FROM Tabla [...]                                                      ' 
-    '                 en donde $ es un dato de cualquier tipo que se pueda convertir a String.                '
-    '---------------------------------------------------------------------------------------------------------'
-    */
+        /***************************************************************************
+         * Metodo  que genera una grafica ZedGraph
+         * Parametros:
+         * @La grafica a llenar
+         * @La consulta para sacar la informacion
+         * @Tipo de la grafica
+         * ************************************************************************/
 
         public static void graphData(ZedGraphControl zgc, String query,String tipo)
         {
@@ -599,10 +594,17 @@ namespace CSEQ
             pb.Size = oldSize;
         }
 
-
+        /***************************************************************************
+         * Metodo  que genera un PDF apartir de un query
+         * Parametros:
+         * @Consulta
+         * @Titulo del reporte
+         * @Periodo del reporte
+         * ************************************************************************/
         public static void generaPDF(String query,String textoTitulo,String periodo)
         {
-            //Creacion del filestream
+            //Creacion del filestream para crear archivo
+            //Try catch para revisar si el archivo esta en uso 
             FileStream salida;
             try
             {
@@ -613,7 +615,7 @@ namespace CSEQ
                 MessageBox.Show("Archivo abierto \n Cierre el reporte anterior para crear uno nuevo","Aceptar",MessageBoxButtons.OK);
                 return;
             }
-            //Caracteristicas del pds
+            //Caracteristicas del pdf
             Document doc = new Document(iTextSharp.text.PageSize.LETTER,10,10,42,35);
             //Llamada al escritor de pdf
             PdfWriter writer = PdfWriter.GetInstance(doc, salida);
@@ -655,7 +657,7 @@ namespace CSEQ
             titulo.Alignment = 1;
             titulo.Font.Size= 10f;
             doc.Add(titulo);
-
+            //Escritor de pdf, se utiliza para dibujar formas o mover texto a lugares especificos
             PdfContentByte Ob= writer.DirectContent;
             Ob.MoveTo(0, doc.PageSize.Height-60);
             Ob.LineTo(doc.PageSize.Width, doc.PageSize.Height-60);
