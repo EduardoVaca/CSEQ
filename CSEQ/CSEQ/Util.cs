@@ -600,7 +600,7 @@ namespace CSEQ
         }
 
 
-        public static void generaPDF(String query)
+        public static void generaPDF(String query,String textoTitulo,String periodo)
         {
             //Creacion del filestream
             FileStream salida;
@@ -682,7 +682,7 @@ namespace CSEQ
             fecha.Font.Size = 10f;
             doc.Add(fecha);
             doc.Add(new Paragraph(" "));
-            Paragraph TituloReporte = new Paragraph("Agregar titulo");
+            Paragraph TituloReporte = new Paragraph(textoTitulo);
             TituloReporte.Alignment = 1;
             TituloReporte.Font.Size = 20f;
             doc.Add(TituloReporte);
@@ -701,8 +701,8 @@ namespace CSEQ
             cbPie.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "Página: " + writer.PageNumber.ToString(), 540, 25, 0);
             cbPie.EndText();
             
-            Paragraph piePagina = new Paragraph("Esta muestra se realizó con datos cualitativos y cuantitativos obtenidos en el Censo de Población y Desarrollo Integral del (año o período):"
-                    +/*periodo+*/"para personas con discapacidad auditiva, realizado por la Comisión de Personas Sordas del Estado de Querétaro."
+            Paragraph piePagina = new Paragraph("Esta muestra se realizó con datos cualitativos y cuantitativos obtenidos en el Censo de Población y Desarrollo Integral del (año o período): "
+                    +periodo+" para personas con discapacidad auditiva, realizado por la Comisión de Personas Sordas del Estado de Querétaro."
                     +"\nNota 1: Los datos obtenidos exponen una realidad aproximada sobre la comunidad de personas Sordas."
                     +"Análisis diversos de este programa calculan sus porcentajes en porción del número total de personas con discapacidad auditiva registradas en el sistema."
                     +"\nNota 2: Según el Censo de Población y Vivienda 2010 (INEGI) se contaron 7,178 personas con discapacidad auditiva en el Estado de Querétaro.");
