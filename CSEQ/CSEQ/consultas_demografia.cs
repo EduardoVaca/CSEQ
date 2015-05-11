@@ -92,18 +92,7 @@ namespace CSEQ
             {
                 edades_gp.Visible = false;
             }
-
-            if (generales_combo.SelectedIndex == 4)
-            {
-                conEducacion_radio.Visible = true;
-                sinEducacion_radio.Visible = true;
-            }
-            else
-            {
-                conEducacion_radio.Visible = false;
-                sinEducacion_radio.Visible = false;
-                nivelesEducativos_gp.Visible = false;
-            }
+            
 
             if (generales_combo.SelectedIndex == 4)
             {
@@ -133,16 +122,6 @@ namespace CSEQ
         private void sinEmpleo_radio_CheckedChanged(object sender, EventArgs e)
         {
             areaTrabajo_gp.Visible = false;
-        }
-
-        private void conEducacion_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            nivelesEducativos_gp.Visible = true;
-        }
-
-        private void sinEducacion_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            nivelesEducativos_gp.Visible = false;
         }
 
         private void estadoCivil_combo_SelectionChangeCommitted(object sender, EventArgs e)

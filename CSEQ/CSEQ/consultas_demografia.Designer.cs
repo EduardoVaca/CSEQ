@@ -469,8 +469,7 @@
             this.sinEducacion_radio.TabStop = true;
             this.sinEducacion_radio.Text = "Sin Educación";
             this.sinEducacion_radio.UseVisualStyleBackColor = false;
-            this.sinEducacion_radio.Visible = false;
-            this.sinEducacion_radio.CheckedChanged += new System.EventHandler(this.sinEducacion_radio_CheckedChanged);
+            this.sinEducacion_radio.Visible = false;            
             // 
             // conEducacion_radio
             // 
@@ -486,8 +485,7 @@
             this.conEducacion_radio.TabStop = true;
             this.conEducacion_radio.Text = "Con Educación";
             this.conEducacion_radio.UseVisualStyleBackColor = false;
-            this.conEducacion_radio.Visible = false;
-            this.conEducacion_radio.CheckedChanged += new System.EventHandler(this.conEducacion_radio_CheckedChanged);
+            this.conEducacion_radio.Visible = false;            
             // 
             // lenguaDom_gp
             // 
