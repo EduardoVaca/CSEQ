@@ -1510,3 +1510,58 @@ BEGIN
 
 END //
 DELIMITER ;
+
+
+
+
+-- Consulta que muestra cuantos niños(de 0 a 10 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadNinos
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad >= 0 AND Edad <= 10;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos niños(de 0 a 10 years) estan registrados en un censo determinado
+DELIMITER //
+CREATE PROCEDURE consultaEdadNinosPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad >= 0 AND Edad <= 10;
+END //
+DELIMITER ;
+
+
+-- Consulta que muestra cuantos niños(de 11 a 20 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdolescentes
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad >= 11 AND Edad <= 20;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos niños(de 11 a 20 years) estan registrados en un censo determinado
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdolescentesPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad >= 11 AND Edad <= 20;
+END //
+DELIMITER ;
+

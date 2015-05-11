@@ -277,7 +277,7 @@
             this.edades_gp.Controls.Add(this.ninos_radio);
             this.edades_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edades_gp.ForeColor = System.Drawing.Color.White;
-            this.edades_gp.Location = new System.Drawing.Point(779, 424);
+            this.edades_gp.Location = new System.Drawing.Point(779, 136);
             this.edades_gp.Name = "edades_gp";
             this.edades_gp.Size = new System.Drawing.Size(313, 271);
             this.edades_gp.TabIndex = 85;
