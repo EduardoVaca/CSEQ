@@ -277,7 +277,7 @@
             this.edades_gp.Controls.Add(this.ninos_radio);
             this.edades_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edades_gp.ForeColor = System.Drawing.Color.White;
-            this.edades_gp.Location = new System.Drawing.Point(763, 124);
+            this.edades_gp.Location = new System.Drawing.Point(779, 424);
             this.edades_gp.Name = "edades_gp";
             this.edades_gp.Size = new System.Drawing.Size(313, 271);
             this.edades_gp.TabIndex = 85;
@@ -388,7 +388,7 @@
             this.sinEmpleo_radio.TabIndex = 24;
             this.sinEmpleo_radio.TabStop = true;
             this.sinEmpleo_radio.Text = "Sin Empleo";
-            this.sinEmpleo_radio.UseVisualStyleBackColor = false;            
+            this.sinEmpleo_radio.UseVisualStyleBackColor = false;
             // 
             // conEmpleo_radio
             // 
@@ -403,7 +403,7 @@
             this.conEmpleo_radio.TabIndex = 22;
             this.conEmpleo_radio.TabStop = true;
             this.conEmpleo_radio.Text = "Con Empleo";
-            this.conEmpleo_radio.UseVisualStyleBackColor = false;            
+            this.conEmpleo_radio.UseVisualStyleBackColor = false;
             // 
             // sinEducacion_radio
             // 

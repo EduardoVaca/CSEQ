@@ -45,7 +45,7 @@
             this.conEmpleo_radio = new System.Windows.Forms.RadioButton();
             this.eleccion_gp = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ID_censo = new System.Windows.Forms.ComboBox();
             this.todoscensos_radio = new System.Windows.Forms.RadioButton();
             this.Reporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
@@ -233,7 +233,7 @@
             // 
             this.eleccion_gp.BackColor = System.Drawing.Color.Transparent;
             this.eleccion_gp.Controls.Add(this.label1);
-            this.eleccion_gp.Controls.Add(this.comboBox1);
+            this.eleccion_gp.Controls.Add(this.ID_censo);
             this.eleccion_gp.Controls.Add(this.todoscensos_radio);
             this.eleccion_gp.Enabled = false;
             this.eleccion_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,19 +258,19 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Censo";
             // 
-            // comboBox1
+            // ID_censo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.ID_censo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_censo.FormattingEnabled = true;
+            this.ID_censo.Items.AddRange(new object[] {
             "Auxiliares auditivos por marca",
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
-            this.comboBox1.Location = new System.Drawing.Point(118, 45);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 51);
-            this.comboBox1.TabIndex = 21;
+            this.ID_censo.Location = new System.Drawing.Point(118, 45);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_censo.Name = "ID_censo";
+            this.ID_censo.Size = new System.Drawing.Size(160, 51);
+            this.ID_censo.TabIndex = 21;
             // 
             // todoscensos_radio
             // 
@@ -357,7 +357,7 @@
         private System.Windows.Forms.RadioButton conEmpleo_radio;
         private System.Windows.Forms.GroupBox eleccion_gp;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ID_censo;
         private System.Windows.Forms.RadioButton todoscensos_radio;
         private System.Windows.Forms.Button Reporte;
     }

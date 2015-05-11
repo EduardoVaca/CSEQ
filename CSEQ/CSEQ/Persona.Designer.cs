@@ -471,12 +471,12 @@
             // 
             // ID_estadoCivil
             // 
-            this.ID_estadoCivil.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_estadoCivil.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_estadoCivil.FormattingEnabled = true;
             this.ID_estadoCivil.Location = new System.Drawing.Point(251, 866);
             this.ID_estadoCivil.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estadoCivil.Name = "ID_estadoCivil";
-            this.ID_estadoCivil.Size = new System.Drawing.Size(216, 51);
+            this.ID_estadoCivil.Size = new System.Drawing.Size(216, 46);
             this.ID_estadoCivil.TabIndex = 47;
             // 
             // label17
@@ -493,12 +493,12 @@
             // 
             // Censo
             // 
-            this.Censo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Censo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Censo.FormattingEnabled = true;
             this.Censo.Location = new System.Drawing.Point(646, 794);
             this.Censo.Margin = new System.Windows.Forms.Padding(4);
             this.Censo.Name = "Censo";
-            this.Censo.Size = new System.Drawing.Size(134, 51);
+            this.Censo.Size = new System.Drawing.Size(134, 46);
             this.Censo.TabIndex = 45;
             // 
             // label16
@@ -587,12 +587,12 @@
             // 
             // ID_municipio
             // 
-            this.ID_municipio.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_municipio.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_municipio.FormattingEnabled = true;
             this.ID_municipio.Location = new System.Drawing.Point(722, 635);
             this.ID_municipio.Margin = new System.Windows.Forms.Padding(4);
             this.ID_municipio.Name = "ID_municipio";
-            this.ID_municipio.Size = new System.Drawing.Size(274, 51);
+            this.ID_municipio.Size = new System.Drawing.Size(274, 46);
             this.ID_municipio.TabIndex = 35;
             this.ID_municipio.Text = "Selecciona Municipio";
             this.ID_municipio.SelectionChangeCommitted += new System.EventHandler(this.ID_municipio_SelectionChangeCommitted);
@@ -612,12 +612,12 @@
             // ID_estado
             // 
             this.ID_estado.DisplayMember = "1";
-            this.ID_estado.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_estado.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_estado.FormattingEnabled = true;
             this.ID_estado.Location = new System.Drawing.Point(188, 636);
             this.ID_estado.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estado.Name = "ID_estado";
-            this.ID_estado.Size = new System.Drawing.Size(264, 51);
+            this.ID_estado.Size = new System.Drawing.Size(264, 46);
             this.ID_estado.TabIndex = 33;
             this.ID_estado.Text = "Selecciona Estado";
             this.ID_estado.ValueMember = "1";
@@ -637,12 +637,12 @@
             // 
             // ID_colonia
             // 
-            this.ID_colonia.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_colonia.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_colonia.FormattingEnabled = true;
             this.ID_colonia.Location = new System.Drawing.Point(1209, 637);
             this.ID_colonia.Margin = new System.Windows.Forms.Padding(4);
             this.ID_colonia.Name = "ID_colonia";
-            this.ID_colonia.Size = new System.Drawing.Size(294, 51);
+            this.ID_colonia.Size = new System.Drawing.Size(294, 46);
             this.ID_colonia.TabIndex = 31;
             this.ID_colonia.Text = "Selecciona Colonia";
             // 
@@ -914,12 +914,12 @@
             // 
             // ID_nivelLSM
             // 
-            this.ID_nivelLSM.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_nivelLSM.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_nivelLSM.FormattingEnabled = true;
             this.ID_nivelLSM.Location = new System.Drawing.Point(396, 726);
             this.ID_nivelLSM.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelLSM.Name = "ID_nivelLSM";
-            this.ID_nivelLSM.Size = new System.Drawing.Size(214, 51);
+            this.ID_nivelLSM.Size = new System.Drawing.Size(214, 46);
             this.ID_nivelLSM.TabIndex = 49;
             // 
             // label23
@@ -936,12 +936,12 @@
             // 
             // ID_nivelIngles
             // 
-            this.ID_nivelIngles.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_nivelIngles.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_nivelIngles.FormattingEnabled = true;
             this.ID_nivelIngles.Location = new System.Drawing.Point(396, 621);
             this.ID_nivelIngles.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelIngles.Name = "ID_nivelIngles";
-            this.ID_nivelIngles.Size = new System.Drawing.Size(214, 51);
+            this.ID_nivelIngles.Size = new System.Drawing.Size(214, 46);
             this.ID_nivelIngles.TabIndex = 47;
             // 
             // label22
@@ -958,12 +958,12 @@
             // 
             // ID_nivelEspanol
             // 
-            this.ID_nivelEspanol.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_nivelEspanol.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_nivelEspanol.FormattingEnabled = true;
             this.ID_nivelEspanol.Location = new System.Drawing.Point(396, 515);
             this.ID_nivelEspanol.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelEspanol.Name = "ID_nivelEspanol";
-            this.ID_nivelEspanol.Size = new System.Drawing.Size(214, 51);
+            this.ID_nivelEspanol.Size = new System.Drawing.Size(214, 46);
             this.ID_nivelEspanol.TabIndex = 45;
             // 
             // label21
@@ -980,12 +980,12 @@
             // 
             // ID_lenguaDominante
             // 
-            this.ID_lenguaDominante.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_lenguaDominante.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_lenguaDominante.FormattingEnabled = true;
             this.ID_lenguaDominante.Location = new System.Drawing.Point(396, 413);
             this.ID_lenguaDominante.Margin = new System.Windows.Forms.Padding(4);
             this.ID_lenguaDominante.Name = "ID_lenguaDominante";
-            this.ID_lenguaDominante.Size = new System.Drawing.Size(416, 51);
+            this.ID_lenguaDominante.Size = new System.Drawing.Size(416, 46);
             this.ID_lenguaDominante.TabIndex = 43;
             // 
             // label20
@@ -1002,12 +1002,12 @@
             // 
             // ID_institucionEducativa
             // 
-            this.ID_institucionEducativa.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_institucionEducativa.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_institucionEducativa.FormattingEnabled = true;
             this.ID_institucionEducativa.Location = new System.Drawing.Point(396, 206);
             this.ID_institucionEducativa.Margin = new System.Windows.Forms.Padding(4);
             this.ID_institucionEducativa.Name = "ID_institucionEducativa";
-            this.ID_institucionEducativa.Size = new System.Drawing.Size(573, 51);
+            this.ID_institucionEducativa.Size = new System.Drawing.Size(573, 46);
             this.ID_institucionEducativa.TabIndex = 41;
             // 
             // label19
@@ -1024,12 +1024,12 @@
             // 
             // ID_nivelEducativo
             // 
-            this.ID_nivelEducativo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_nivelEducativo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_nivelEducativo.FormattingEnabled = true;
             this.ID_nivelEducativo.Location = new System.Drawing.Point(396, 114);
             this.ID_nivelEducativo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_nivelEducativo.Name = "ID_nivelEducativo";
-            this.ID_nivelEducativo.Size = new System.Drawing.Size(362, 44);
+            this.ID_nivelEducativo.Size = new System.Drawing.Size(362, 46);
             this.ID_nivelEducativo.TabIndex = 39;
             // 
             // label18
@@ -1090,7 +1090,7 @@
             // 
             this.areaTrabajo_refresh.BackColor = System.Drawing.Color.Transparent;
             this.areaTrabajo_refresh.Image = global::CSEQ.Properties.Resources.refresh;
-            this.areaTrabajo_refresh.Location = new System.Drawing.Point(661, 380);
+            this.areaTrabajo_refresh.Location = new System.Drawing.Point(721, 382);
             this.areaTrabajo_refresh.Name = "areaTrabajo_refresh";
             this.areaTrabajo_refresh.Size = new System.Drawing.Size(40, 43);
             this.areaTrabajo_refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1102,7 +1102,7 @@
             // 
             this.sueldo_refresh.BackColor = System.Drawing.Color.Transparent;
             this.sueldo_refresh.Image = global::CSEQ.Properties.Resources.refresh;
-            this.sueldo_refresh.Location = new System.Drawing.Point(661, 298);
+            this.sueldo_refresh.Location = new System.Drawing.Point(721, 300);
             this.sueldo_refresh.Name = "sueldo_refresh";
             this.sueldo_refresh.Size = new System.Drawing.Size(40, 43);
             this.sueldo_refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1271,12 +1271,12 @@
             // 
             // ID_municipioEmpleo
             // 
-            this.ID_municipioEmpleo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_municipioEmpleo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_municipioEmpleo.FormattingEnabled = true;
             this.ID_municipioEmpleo.Location = new System.Drawing.Point(973, 754);
             this.ID_municipioEmpleo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_municipioEmpleo.Name = "ID_municipioEmpleo";
-            this.ID_municipioEmpleo.Size = new System.Drawing.Size(294, 51);
+            this.ID_municipioEmpleo.Size = new System.Drawing.Size(294, 46);
             this.ID_municipioEmpleo.TabIndex = 49;
             this.ID_municipioEmpleo.SelectionChangeCommitted += new System.EventHandler(this.municipioEmpleo_combo_SelectionChangeCommitted);
             // 
@@ -1294,12 +1294,12 @@
             // 
             // ID_estadoEmpleo
             // 
-            this.ID_estadoEmpleo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_estadoEmpleo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_estadoEmpleo.FormattingEnabled = true;
             this.ID_estadoEmpleo.Location = new System.Drawing.Point(292, 754);
             this.ID_estadoEmpleo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_estadoEmpleo.Name = "ID_estadoEmpleo";
-            this.ID_estadoEmpleo.Size = new System.Drawing.Size(312, 51);
+            this.ID_estadoEmpleo.Size = new System.Drawing.Size(312, 46);
             this.ID_estadoEmpleo.TabIndex = 47;
             this.ID_estadoEmpleo.SelectionChangeCommitted += new System.EventHandler(this.estadoEmpleo_combo_SelectionChangeCommitted);
             // 
@@ -1317,12 +1317,12 @@
             // 
             // ID_coloniaEmpleo
             // 
-            this.ID_coloniaEmpleo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_coloniaEmpleo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_coloniaEmpleo.FormattingEnabled = true;
             this.ID_coloniaEmpleo.Location = new System.Drawing.Point(292, 834);
             this.ID_coloniaEmpleo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_coloniaEmpleo.Name = "ID_coloniaEmpleo";
-            this.ID_coloniaEmpleo.Size = new System.Drawing.Size(312, 51);
+            this.ID_coloniaEmpleo.Size = new System.Drawing.Size(312, 46);
             this.ID_coloniaEmpleo.TabIndex = 45;
             // 
             // label36
@@ -1339,12 +1339,12 @@
             // 
             // ID_areaTrabajo
             // 
-            this.ID_areaTrabajo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_areaTrabajo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_areaTrabajo.FormattingEnabled = true;
             this.ID_areaTrabajo.Location = new System.Drawing.Point(292, 383);
             this.ID_areaTrabajo.Margin = new System.Windows.Forms.Padding(8);
             this.ID_areaTrabajo.Name = "ID_areaTrabajo";
-            this.ID_areaTrabajo.Size = new System.Drawing.Size(362, 51);
+            this.ID_areaTrabajo.Size = new System.Drawing.Size(408, 46);
             this.ID_areaTrabajo.TabIndex = 42;
             // 
             // label27
@@ -1361,12 +1361,12 @@
             // 
             // ID_sueldo
             // 
-            this.ID_sueldo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_sueldo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_sueldo.FormattingEnabled = true;
             this.ID_sueldo.Location = new System.Drawing.Point(292, 298);
             this.ID_sueldo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_sueldo.Name = "ID_sueldo";
-            this.ID_sueldo.Size = new System.Drawing.Size(362, 51);
+            this.ID_sueldo.Size = new System.Drawing.Size(408, 46);
             this.ID_sueldo.TabIndex = 40;
             // 
             // label26
@@ -1807,12 +1807,12 @@
             // 
             // ID_aparatoAuditivo
             // 
-            this.ID_aparatoAuditivo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_aparatoAuditivo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_aparatoAuditivo.FormattingEnabled = true;
             this.ID_aparatoAuditivo.Location = new System.Drawing.Point(446, 796);
             this.ID_aparatoAuditivo.Margin = new System.Windows.Forms.Padding(8);
             this.ID_aparatoAuditivo.Name = "ID_aparatoAuditivo";
-            this.ID_aparatoAuditivo.Size = new System.Drawing.Size(499, 51);
+            this.ID_aparatoAuditivo.Size = new System.Drawing.Size(499, 46);
             this.ID_aparatoAuditivo.TabIndex = 52;
             // 
             // label41
@@ -1829,12 +1829,12 @@
             // 
             // ID_causa
             // 
-            this.ID_causa.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_causa.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_causa.FormattingEnabled = true;
             this.ID_causa.Location = new System.Drawing.Point(446, 368);
             this.ID_causa.Margin = new System.Windows.Forms.Padding(4);
             this.ID_causa.Name = "ID_causa";
-            this.ID_causa.Size = new System.Drawing.Size(498, 51);
+            this.ID_causa.Size = new System.Drawing.Size(498, 46);
             this.ID_causa.TabIndex = 47;
             // 
             // label39
@@ -1851,12 +1851,12 @@
             // 
             // ID_grado
             // 
-            this.ID_grado.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_grado.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_grado.FormattingEnabled = true;
             this.ID_grado.Location = new System.Drawing.Point(446, 278);
             this.ID_grado.Margin = new System.Windows.Forms.Padding(4);
             this.ID_grado.Name = "ID_grado";
-            this.ID_grado.Size = new System.Drawing.Size(499, 51);
+            this.ID_grado.Size = new System.Drawing.Size(499, 46);
             this.ID_grado.TabIndex = 45;
             // 
             // label38
@@ -1873,12 +1873,12 @@
             // 
             // ID_perdidaAuditiva
             // 
-            this.ID_perdidaAuditiva.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_perdidaAuditiva.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_perdidaAuditiva.FormattingEnabled = true;
             this.ID_perdidaAuditiva.Location = new System.Drawing.Point(446, 187);
             this.ID_perdidaAuditiva.Margin = new System.Windows.Forms.Padding(4);
             this.ID_perdidaAuditiva.Name = "ID_perdidaAuditiva";
-            this.ID_perdidaAuditiva.Size = new System.Drawing.Size(499, 51);
+            this.ID_perdidaAuditiva.Size = new System.Drawing.Size(499, 46);
             this.ID_perdidaAuditiva.TabIndex = 43;
             // 
             // label37
@@ -1895,12 +1895,12 @@
             // 
             // ID_periodo
             // 
-            this.ID_periodo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_periodo.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_periodo.FormattingEnabled = true;
             this.ID_periodo.Location = new System.Drawing.Point(446, 92);
             this.ID_periodo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_periodo.Name = "ID_periodo";
-            this.ID_periodo.Size = new System.Drawing.Size(499, 51);
+            this.ID_periodo.Size = new System.Drawing.Size(499, 46);
             this.ID_periodo.TabIndex = 41;
             // 
             // label28

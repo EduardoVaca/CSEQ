@@ -68,7 +68,7 @@ namespace CSEQ
             Util.llenarComboBox(ID_nivelLSM, "SELECT ID_nivelLSM, nivel FROM NivelLSM");
             Util.llenarComboBox(ID_areaTrabajo, "SELECT ID_areaTrabajo, nombre FROM AreaTrabajo" + " ORDER BY nombre ASC");
             Util.llenarComboBox(ID_periodo, "SELECT ID_periodo, periodo FROM Periodo");
-            Util.llenarComboBox(ID_perdidaAuditiva, "SELECT ID_perdidaAuditiva, tipo FROM PerdidaAuditiva");
+            Util.llenarComboBox(ID_perdidaAuditiva, "SELECT ID_perdidaAuditiva, CONCAT('Pérdida Auditiva ', tipo) FROM PerdidaAuditiva");
             Util.llenarComboBox(ID_grado, "SELECT ID_grado, CONCAT(grado, ': ', descripcion) FROM Grado");
             Util.llenarComboBox(ID_causa, "SELECT ID_causa, causa FROM Causa" + " ORDER BY causa ASC");
             Util.llenarComboBox(ID_aparatoAuditivo, "SELECT ID_aparatoAuditivo, contenido FROM AparatoConMarca" + " ORDER BY contenido ASC");
