@@ -26,15 +26,17 @@ namespace CSEQ
         {
             toolTip.SetToolTip(logout, "Cerrar Sesión");
             toolTip.SetToolTip(close_picture, "Salir");
-            Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");
-            MessageBox.Show("Index " + index);
+            Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");            
             if (index == 0){
                 titulo.Text = "Estadísticas Generales";
-
+                generales_combo.Visible = true;
             }
                 
-            else if (index == 1)
+            else if (index == 1){
                 titulo.Text = "Estado Civil y Familia";
+                estadoCivil_combo.Visible = true;
+            }
+                
             else if (index == 2)
                 titulo.Text = "Migración";
         }
@@ -75,6 +77,103 @@ namespace CSEQ
         private void back_picture_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarIconoAtras(back_picture);
+        }
+
+        private void generales_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            eleccion_gp.Enabled = true;
+            Reporte.Enabled = true;
+
+            if (generales_combo.SelectedIndex == 3)
+            {
+                edades_gp.Visible = true;
+            }
+            else
+            {
+                edades_gp.Visible = false;
+            }
+
+            if (generales_combo.SelectedIndex == 4)
+            {
+                conEducacion_radio.Visible = true;
+                sinEducacion_radio.Visible = true;
+            }
+            else
+            {
+                conEducacion_radio.Visible = false;
+                sinEducacion_radio.Visible = false;
+                nivelesEducativos_gp.Visible = false;
+            }
+
+            if (generales_combo.SelectedIndex == 4)
+            {
+                lenguaDom_gp.Visible = true;
+            }
+            else
+            {
+                lenguaDom_gp.Visible = false;
+            }
+
+            if (generales_combo.SelectedIndex == 5)
+            {
+                empleo_gp.Visible = true;
+            }
+            else
+            {
+                empleo_gp.Visible = false;
+                areaTrabajo_gp.Visible = false;
+            }
+        }
+
+        private void conEmpleo_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            areaTrabajo_gp.Visible = true;
+        }
+
+        private void sinEmpleo_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            areaTrabajo_gp.Visible = false;
+        }
+
+        private void conEducacion_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            nivelesEducativos_gp.Visible = true;
+        }
+
+        private void sinEducacion_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            nivelesEducativos_gp.Visible = false;
+        }
+
+        private void estadoCivil_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            eleccion_gp.Enabled = true;
+            Reporte.Enabled = true;
+
+            if (estadoCivil_combo.SelectedIndex == 0)
+            {
+                estadoCivil_gp.Visible = true;
+            }
+            else
+            {
+                estadoCivil_gp.Visible = false;
+            }
+
+            if (estadoCivil_combo.SelectedIndex == 1)
+            {
+                conHijos_radio.Visible = true;
+                sinHijos_radio.Visible = true;
+            }
+        }
+
+        private void conHijos_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            hijos_gp.Visible = true;
+        }
+
+        private void sinHijos_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            hijos_gp.Visible = false;
         }
     }
 }

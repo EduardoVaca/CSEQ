@@ -61,6 +61,7 @@
             this.mixta_checkbox = new System.Windows.Forms.CheckBox();
             this.retro_checkbox = new System.Windows.Forms.CheckBox();
             this.profunda_checkbox = new System.Windows.Forms.CheckBox();
+            this.noSabe_checkbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -413,20 +414,6 @@
             this.tipoPerdida_gp.Text = "Tipo de Pérdida";
             this.tipoPerdida_gp.Visible = false;
             // 
-            // noSabe_checkbox
-            // 
-            this.noSabe_checkbox.AutoSize = true;
-            this.noSabe_checkbox.BackColor = System.Drawing.Color.Transparent;
-            this.noSabe_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noSabe_checkbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.noSabe_checkbox.Location = new System.Drawing.Point(8, 120);
-            this.noSabe_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.noSabe_checkbox.Name = "noSabe_checkbox";
-            this.noSabe_checkbox.Size = new System.Drawing.Size(70, 20);
-            this.noSabe_checkbox.TabIndex = 29;
-            this.noSabe_checkbox.Text = "No sabe";
-            this.noSabe_checkbox.UseVisualStyleBackColor = false;
-            // 
             // conductiva_checkbox
             // 
             this.conductiva_checkbox.AutoSize = true;
@@ -497,6 +484,18 @@
             this.profunda_checkbox.Text = "Profunda";
             this.profunda_checkbox.UseVisualStyleBackColor = false;
             this.profunda_checkbox.CheckedChanged += new System.EventHandler(this.profunda_checkbox_CheckedChanged);
+            // noSabe_checkbox
+            // 
+            this.noSabe_checkbox.AutoSize = true;
+            this.noSabe_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.noSabe_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noSabe_checkbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.noSabe_checkbox.Location = new System.Drawing.Point(15, 230);
+            this.noSabe_checkbox.Name = "noSabe_checkbox";
+            this.noSabe_checkbox.Size = new System.Drawing.Size(133, 36);
+            this.noSabe_checkbox.TabIndex = 29;
+            this.noSabe_checkbox.Text = "No sabe";
+            this.noSabe_checkbox.UseVisualStyleBackColor = false;           
             // 
             // consultas_salud
             // 

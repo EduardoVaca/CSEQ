@@ -71,12 +71,12 @@
             // 
             this.ConsultaRedactada_label.AutoSize = true;
             this.ConsultaRedactada_label.BackColor = System.Drawing.Color.Transparent;
-            this.ConsultaRedactada_label.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConsultaRedactada_label.Font = new System.Drawing.Font("Microsoft MHei", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConsultaRedactada_label.ForeColor = System.Drawing.Color.White;
-            this.ConsultaRedactada_label.Location = new System.Drawing.Point(293, 285);
+            this.ConsultaRedactada_label.Location = new System.Drawing.Point(326, 286);
             this.ConsultaRedactada_label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ConsultaRedactada_label.Name = "ConsultaRedactada_label";
-            this.ConsultaRedactada_label.Size = new System.Drawing.Size(311, 53);
+            this.ConsultaRedactada_label.Size = new System.Drawing.Size(324, 57);
             this.ConsultaRedactada_label.TabIndex = 8;
             this.ConsultaRedactada_label.Text = "Estado de Salud";
             // 
@@ -99,12 +99,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft MHei", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(368, 446);
+            this.label1.Location = new System.Drawing.Point(326, 445);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 53);
+            this.label1.Size = new System.Drawing.Size(245, 57);
             this.label1.TabIndex = 13;
             this.label1.Text = "Demografía";
             // 
@@ -112,12 +112,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft MHei", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(397, 606);
+            this.label2.Location = new System.Drawing.Point(326, 603);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 53);
+            this.label2.Size = new System.Drawing.Size(215, 57);
             this.label2.TabIndex = 14;
             this.label2.Text = "Educación";
             // 
@@ -125,12 +125,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft MHei", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(444, 757);
+            this.label3.Location = new System.Drawing.Point(326, 749);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 53);
+            this.label3.Size = new System.Drawing.Size(165, 57);
             this.label3.TabIndex = 15;
             this.label3.Text = "Empleo";
             // 
@@ -138,12 +138,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Candara", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft MHei", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(663, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(275, 72);
+            this.label4.Size = new System.Drawing.Size(291, 79);
             this.label4.TabIndex = 16;
             this.label4.Text = "Consultas";
             // 
@@ -194,7 +194,7 @@
             // salud_combo
             // 
             this.salud_combo.Enabled = false;
-            this.salud_combo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salud_combo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salud_combo.FormattingEnabled = true;
             this.salud_combo.Items.AddRange(new object[] {
             "Auxiliares Auditivos",
@@ -202,14 +202,14 @@
             "Tipología de perdida de audición"});
             this.salud_combo.Location = new System.Drawing.Point(659, 292);
             this.salud_combo.Name = "salud_combo";
-            this.salud_combo.Size = new System.Drawing.Size(551, 44);
+            this.salud_combo.Size = new System.Drawing.Size(551, 51);
             this.salud_combo.TabIndex = 21;
             this.salud_combo.SelectionChangeCommitted += new System.EventHandler(this.salud_combo_SelectionChangeCommitted);
             // 
             // demografia_combo
             // 
             this.demografia_combo.Enabled = false;
-            this.demografia_combo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.demografia_combo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.demografia_combo.FormattingEnabled = true;
             this.demografia_combo.Items.AddRange(new object[] {
             "Estadísticas generales",
@@ -217,34 +217,34 @@
             "Migración"});
             this.demografia_combo.Location = new System.Drawing.Point(659, 451);
             this.demografia_combo.Name = "demografia_combo";
-            this.demografia_combo.Size = new System.Drawing.Size(551, 44);
+            this.demografia_combo.Size = new System.Drawing.Size(551, 51);
             this.demografia_combo.TabIndex = 22;
             this.demografia_combo.SelectionChangeCommitted += new System.EventHandler(this.demografia_combo_SelectionChangeCommitted);
             // 
             // educacion_combo
             // 
             this.educacion_combo.Enabled = false;
-            this.educacion_combo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.educacion_combo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.educacion_combo.FormattingEnabled = true;
             this.educacion_combo.Items.AddRange(new object[] {
             "Comunicación y lenguaje",
             "Nivel educativo y tipo de educación"});
             this.educacion_combo.Location = new System.Drawing.Point(659, 609);
             this.educacion_combo.Name = "educacion_combo";
-            this.educacion_combo.Size = new System.Drawing.Size(551, 44);
+            this.educacion_combo.Size = new System.Drawing.Size(551, 51);
             this.educacion_combo.TabIndex = 23;
             this.educacion_combo.SelectionChangeCommitted += new System.EventHandler(this.educacion_combo_SelectionChangeCommitted);
             // 
             // empleo_combo
             // 
             this.empleo_combo.Enabled = false;
-            this.empleo_combo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empleo_combo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empleo_combo.FormattingEnabled = true;
             this.empleo_combo.Items.AddRange(new object[] {
             "Estadísticas generales"});
             this.empleo_combo.Location = new System.Drawing.Point(659, 757);
             this.empleo_combo.Name = "empleo_combo";
-            this.empleo_combo.Size = new System.Drawing.Size(551, 44);
+            this.empleo_combo.Size = new System.Drawing.Size(551, 51);
             this.empleo_combo.TabIndex = 24;
             this.empleo_combo.SelectionChangeCommitted += new System.EventHandler(this.empleo_combo_SelectionChangeCommitted);
             // 
@@ -265,12 +265,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Microsoft MHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1066, 960);
+            this.label5.Location = new System.Drawing.Point(1132, 957);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.Size = new System.Drawing.Size(457, 32);
             this.label5.TabIndex = 26;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 
