@@ -21,6 +21,7 @@ namespace CSEQ
             this.index = index;
             this.rol = rol;
             InitializeComponent();
+            todoscensos_radio.Checked = true;
         }
 
         private void consultas_demografia_Load(object sender, EventArgs e)

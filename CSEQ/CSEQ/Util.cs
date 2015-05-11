@@ -492,7 +492,7 @@ namespace CSEQ
                 graph.XAxis.Type = AxisType.Text;
                 graph.XAxis.Scale.TextLabels = nombres;
                 graph.XAxis.Scale.FontSpec.Size = 15.0F;
-                graph.XAxis.Scale.FontSpec.Angle = 65;
+                graph.XAxis.Scale.FontSpec.Angle = 90;
                 graph.YAxis.IsVisible = true;
                 graph.XAxis.IsVisible = true;
                 // Llenamos la grafica
@@ -692,7 +692,6 @@ namespace CSEQ
             doc.Add(new Paragraph(" "));
             doc.Add(tabla);
             doc.Add(listaItems);
-            doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph(" "));
             doc.Add( imgGrafica );
 

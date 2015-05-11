@@ -283,6 +283,8 @@
             // 
             this.leve_checkbox.AutoSize = true;
             this.leve_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.leve_checkbox.Checked = true;
+            this.leve_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.leve_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leve_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.leve_checkbox.Location = new System.Drawing.Point(8, 13);
@@ -298,6 +300,8 @@
             // 
             this.media_checkbox.AutoSize = true;
             this.media_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.media_checkbox.Checked = true;
+            this.media_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.media_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.media_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.media_checkbox.Location = new System.Drawing.Point(8, 35);
@@ -313,6 +317,8 @@
             // 
             this.severa_checkbox.AutoSize = true;
             this.severa_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.severa_checkbox.Checked = true;
+            this.severa_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.severa_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.severa_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.severa_checkbox.Location = new System.Drawing.Point(8, 57);
@@ -328,6 +334,8 @@
             // 
             this.total_checkbox.AutoSize = true;
             this.total_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.total_checkbox.Checked = true;
+            this.total_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.total_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.total_checkbox.Location = new System.Drawing.Point(8, 103);
@@ -398,6 +406,8 @@
             // 
             this.profunda_checkbox.AutoSize = true;
             this.profunda_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.profunda_checkbox.Checked = true;
+            this.profunda_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.profunda_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profunda_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.profunda_checkbox.Location = new System.Drawing.Point(8, 79);
@@ -447,6 +457,8 @@
             // 
             this.conductiva_checkbox.AutoSize = true;
             this.conductiva_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.conductiva_checkbox.Checked = true;
+            this.conductiva_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.conductiva_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conductiva_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.conductiva_checkbox.Location = new System.Drawing.Point(8, 19);
@@ -462,6 +474,8 @@
             // 
             this.neuro_checkbox.AutoSize = true;
             this.neuro_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.neuro_checkbox.Checked = true;
+            this.neuro_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.neuro_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.neuro_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.neuro_checkbox.Location = new System.Drawing.Point(8, 44);
@@ -477,6 +491,8 @@
             // 
             this.mixta_checkbox.AutoSize = true;
             this.mixta_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.mixta_checkbox.Checked = true;
+            this.mixta_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mixta_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mixta_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.mixta_checkbox.Location = new System.Drawing.Point(8, 70);
@@ -492,6 +508,8 @@
             // 
             this.retro_checkbox.AutoSize = true;
             this.retro_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.retro_checkbox.Checked = true;
+            this.retro_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.retro_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.retro_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.retro_checkbox.Location = new System.Drawing.Point(8, 96);
@@ -507,6 +525,8 @@
             // 
             this.no_Sabe_checkbox.AutoSize = true;
             this.no_Sabe_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.no_Sabe_checkbox.Checked = true;
+            this.no_Sabe_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.no_Sabe_checkbox.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no_Sabe_checkbox.ForeColor = System.Drawing.SystemColors.Control;
             this.no_Sabe_checkbox.Location = new System.Drawing.Point(8, 119);
@@ -527,7 +547,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 530);
-            this.Controls.Add(this.tipoPerdida_gp);
+            this.Controls.Add(this.gradoPerdida_gp);
             this.Controls.Add(this.eleccion_gp);
             this.Controls.Add(this.tipologia_combo);
             this.Controls.Add(this.tienen_radio);
@@ -541,7 +561,7 @@
             this.Controls.Add(this.estadoSalud_combo);
             this.Controls.Add(this.auxiliarAuditivo_combo);
             this.Controls.Add(this.noTienen_radio);
-            this.Controls.Add(this.gradoPerdida_gp);
+            this.Controls.Add(this.tipoPerdida_gp);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
