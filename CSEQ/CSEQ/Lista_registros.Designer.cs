@@ -134,12 +134,12 @@
             // 
             this.persona_lb.AutoSize = true;
             this.persona_lb.BackColor = System.Drawing.Color.Transparent;
-            this.persona_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.persona_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.persona_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.persona_lb.Location = new System.Drawing.Point(261, 346);
             this.persona_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.persona_lb.Name = "persona_lb";
-            this.persona_lb.Size = new System.Drawing.Size(147, 45);
+            this.persona_lb.Size = new System.Drawing.Size(149, 49);
             this.persona_lb.TabIndex = 14;
             this.persona_lb.Text = "Persona";
             // 
@@ -147,12 +147,12 @@
             // 
             this.titulo.AutoSize = true;
             this.titulo.BackColor = System.Drawing.Color.Transparent;
-            this.titulo.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Font = new System.Drawing.Font("Microsoft MHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.titulo.Location = new System.Drawing.Point(692, 47);
             this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(220, 59);
+            this.titulo.Size = new System.Drawing.Size(232, 64);
             this.titulo.TabIndex = 15;
             this.titulo.Text = "Registros";
             // 
@@ -160,12 +160,12 @@
             // 
             this.colonia_lb.AutoSize = true;
             this.colonia_lb.BackColor = System.Drawing.Color.Transparent;
-            this.colonia_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.colonia_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colonia_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.colonia_lb.Location = new System.Drawing.Point(582, 346);
             this.colonia_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.colonia_lb.Name = "colonia_lb";
-            this.colonia_lb.Size = new System.Drawing.Size(136, 45);
+            this.colonia_lb.Size = new System.Drawing.Size(142, 49);
             this.colonia_lb.TabIndex = 16;
             this.colonia_lb.Text = "Colonia";
             // 
@@ -173,12 +173,12 @@
             // 
             this.municipio_lb.AutoSize = true;
             this.municipio_lb.BackColor = System.Drawing.Color.Transparent;
-            this.municipio_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.municipio_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.municipio_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.municipio_lb.Location = new System.Drawing.Point(893, 346);
             this.municipio_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.municipio_lb.Name = "municipio_lb";
-            this.municipio_lb.Size = new System.Drawing.Size(175, 45);
+            this.municipio_lb.Size = new System.Drawing.Size(177, 49);
             this.municipio_lb.TabIndex = 18;
             this.municipio_lb.Text = "Municipio";
             // 
@@ -186,12 +186,12 @@
             // 
             this.estado_lb.AutoSize = true;
             this.estado_lb.BackColor = System.Drawing.Color.Transparent;
-            this.estado_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.estado_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estado_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.estado_lb.Location = new System.Drawing.Point(1230, 346);
             this.estado_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.estado_lb.Name = "estado_lb";
-            this.estado_lb.Size = new System.Drawing.Size(127, 45);
+            this.estado_lb.Size = new System.Drawing.Size(129, 49);
             this.estado_lb.TabIndex = 19;
             this.estado_lb.Text = "Estado";
             // 
@@ -199,12 +199,12 @@
             // 
             this.institucion_lb.AutoSize = true;
             this.institucion_lb.BackColor = System.Drawing.Color.Transparent;
-            this.institucion_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.institucion_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.institucion_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.institucion_lb.Location = new System.Drawing.Point(160, 632);
             this.institucion_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.institucion_lb.Name = "institucion_lb";
-            this.institucion_lb.Size = new System.Drawing.Size(345, 45);
+            this.institucion_lb.Size = new System.Drawing.Size(346, 49);
             this.institucion_lb.TabIndex = 20;
             this.institucion_lb.Text = "Institución Educativa";
             // 
@@ -212,12 +212,12 @@
             // 
             this.censo_lb.AutoSize = true;
             this.censo_lb.BackColor = System.Drawing.Color.Transparent;
-            this.censo_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.censo_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.censo_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.censo_lb.Location = new System.Drawing.Point(588, 632);
             this.censo_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.censo_lb.Name = "censo_lb";
-            this.censo_lb.Size = new System.Drawing.Size(116, 45);
+            this.censo_lb.Size = new System.Drawing.Size(120, 49);
             this.censo_lb.TabIndex = 21;
             this.censo_lb.Text = "Censo";
             // 
@@ -225,12 +225,12 @@
             // 
             this.aparato_lb.AutoSize = true;
             this.aparato_lb.BackColor = System.Drawing.Color.Transparent;
-            this.aparato_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.aparato_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aparato_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.aparato_lb.Location = new System.Drawing.Point(844, 632);
             this.aparato_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aparato_lb.Name = "aparato_lb";
-            this.aparato_lb.Size = new System.Drawing.Size(286, 45);
+            this.aparato_lb.Size = new System.Drawing.Size(292, 49);
             this.aparato_lb.TabIndex = 22;
             this.aparato_lb.Text = "Aparato Auditivo";
             // 
@@ -238,12 +238,12 @@
             // 
             this.marca_lb.AutoSize = true;
             this.marca_lb.BackColor = System.Drawing.Color.Transparent;
-            this.marca_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.marca_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marca_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.marca_lb.Location = new System.Drawing.Point(1226, 632);
             this.marca_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.marca_lb.Name = "marca_lb";
-            this.marca_lb.Size = new System.Drawing.Size(118, 45);
+            this.marca_lb.Size = new System.Drawing.Size(122, 49);
             this.marca_lb.TabIndex = 23;
             this.marca_lb.Text = "Marca";
             // 
@@ -251,12 +251,12 @@
             // 
             this.causa_lb.AutoSize = true;
             this.causa_lb.BackColor = System.Drawing.Color.Transparent;
-            this.causa_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.causa_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.causa_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.causa_lb.Location = new System.Drawing.Point(280, 909);
             this.causa_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.causa_lb.Name = "causa_lb";
-            this.causa_lb.Size = new System.Drawing.Size(112, 45);
+            this.causa_lb.Size = new System.Drawing.Size(118, 49);
             this.causa_lb.TabIndex = 24;
             this.causa_lb.Text = "Causa";
             // 
@@ -264,12 +264,12 @@
             // 
             this.sueldo_lb.AutoSize = true;
             this.sueldo_lb.BackColor = System.Drawing.Color.Transparent;
-            this.sueldo_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.sueldo_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sueldo_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.sueldo_lb.Location = new System.Drawing.Point(582, 909);
             this.sueldo_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sueldo_lb.Name = "sueldo_lb";
-            this.sueldo_lb.Size = new System.Drawing.Size(127, 45);
+            this.sueldo_lb.Size = new System.Drawing.Size(130, 49);
             this.sueldo_lb.TabIndex = 25;
             this.sueldo_lb.Text = "Sueldo";
             // 
@@ -277,12 +277,12 @@
             // 
             this.areaTrabajo_lb.AutoSize = true;
             this.areaTrabajo_lb.BackColor = System.Drawing.Color.Transparent;
-            this.areaTrabajo_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.areaTrabajo_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.areaTrabajo_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.areaTrabajo_lb.Location = new System.Drawing.Point(870, 909);
             this.areaTrabajo_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.areaTrabajo_lb.Name = "areaTrabajo_lb";
-            this.areaTrabajo_lb.Size = new System.Drawing.Size(218, 45);
+            this.areaTrabajo_lb.Size = new System.Drawing.Size(227, 49);
             this.areaTrabajo_lb.TabIndex = 26;
             this.areaTrabajo_lb.Text = "Área Trabajo";
             // 
@@ -290,12 +290,12 @@
             // 
             this.usuario_lb.AutoSize = true;
             this.usuario_lb.BackColor = System.Drawing.Color.Transparent;
-            this.usuario_lb.Font = new System.Drawing.Font("Candara", 13.875F);
+            this.usuario_lb.Font = new System.Drawing.Font("Microsoft MHei", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuario_lb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.usuario_lb.Location = new System.Drawing.Point(1224, 909);
             this.usuario_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usuario_lb.Name = "usuario_lb";
-            this.usuario_lb.Size = new System.Drawing.Size(141, 45);
+            this.usuario_lb.Size = new System.Drawing.Size(143, 49);
             this.usuario_lb.TabIndex = 27;
             this.usuario_lb.Text = "Usuario";
             this.usuario_lb.Visible = false;
@@ -642,12 +642,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Microsoft MHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1035, 1039);
+            this.label5.Location = new System.Drawing.Point(1121, 1051);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.Size = new System.Drawing.Size(457, 32);
             this.label5.TabIndex = 68;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 

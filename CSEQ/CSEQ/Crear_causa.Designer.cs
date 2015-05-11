@@ -71,36 +71,36 @@
             // 
             this.nombreCausa_label.AutoSize = true;
             this.nombreCausa_label.BackColor = System.Drawing.Color.Transparent;
-            this.nombreCausa_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.nombreCausa_label.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreCausa_label.ForeColor = System.Drawing.Color.White;
-            this.nombreCausa_label.Location = new System.Drawing.Point(52, 413);
+            this.nombreCausa_label.Location = new System.Drawing.Point(52, 422);
             this.nombreCausa_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nombreCausa_label.Name = "nombreCausa_label";
-            this.nombreCausa_label.Size = new System.Drawing.Size(346, 46);
+            this.nombreCausa_label.Size = new System.Drawing.Size(331, 47);
             this.nombreCausa_label.TabIndex = 26;
             this.nombreCausa_label.Text = "Nombre de la causa:";
             // 
             // causa_txt
             // 
-            this.causa_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.causa_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.causa_txt.Location = new System.Drawing.Point(60, 490);
             this.causa_txt.Margin = new System.Windows.Forms.Padding(6);
             this.causa_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.causa_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.causa_txt.Name = "causa_txt";
-            this.causa_txt.Size = new System.Drawing.Size(608, 47);
+            this.causa_txt.Size = new System.Drawing.Size(608, 54);
             this.causa_txt.TabIndex = 23;
             // 
             // causa_label
             // 
             this.causa_label.AutoSize = true;
             this.causa_label.BackColor = System.Drawing.Color.Transparent;
-            this.causa_label.Font = new System.Drawing.Font("Candara", 18F);
+            this.causa_label.Font = new System.Drawing.Font("Microsoft MHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.causa_label.ForeColor = System.Drawing.Color.White;
-            this.causa_label.Location = new System.Drawing.Point(730, 58);
+            this.causa_label.Location = new System.Drawing.Point(714, 56);
             this.causa_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.causa_label.Name = "causa_label";
-            this.causa_label.Size = new System.Drawing.Size(145, 59);
+            this.causa_label.Size = new System.Drawing.Size(157, 64);
             this.causa_label.TabIndex = 22;
             this.causa_label.Text = "Causa";
             // 
@@ -168,12 +168,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(10, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 29);
+            this.label3.Size = new System.Drawing.Size(225, 36);
             this.label3.TabIndex = 71;
             this.label3.Text = "Ejemplo: Infección";
             // 
@@ -235,13 +235,13 @@
             // busqueda_txt
             // 
             this.busqueda_txt.AcceptsReturn = true;
-            this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.busqueda_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.busqueda_txt.Location = new System.Drawing.Point(12, 75);
             this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(577, 47);
+            this.busqueda_txt.Size = new System.Drawing.Size(577, 54);
             this.busqueda_txt.TabIndex = 8;
             this.busqueda_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.busqueda_txt_KeyPress);
             // 
@@ -274,12 +274,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Microsoft MHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1067, 1003);
+            this.label5.Location = new System.Drawing.Point(1124, 1000);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.Size = new System.Drawing.Size(457, 32);
             this.label5.TabIndex = 65;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 

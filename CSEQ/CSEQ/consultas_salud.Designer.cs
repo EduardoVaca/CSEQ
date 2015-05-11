@@ -56,6 +56,7 @@
             // Reporte
             // 
             this.Reporte.Enabled = false;
+            this.Reporte.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reporte.Location = new System.Drawing.Point(108, 687);
             this.Reporte.Margin = new System.Windows.Forms.Padding(6);
             this.Reporte.Name = "Reporte";
@@ -98,12 +99,12 @@
             // 
             this.titulo.AutoSize = true;
             this.titulo.BackColor = System.Drawing.Color.Transparent;
-            this.titulo.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Font = new System.Drawing.Font("Microsoft MHei", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.titulo.Location = new System.Drawing.Point(604, 57);
             this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(0, 53);
+            this.titulo.Size = new System.Drawing.Size(0, 57);
             this.titulo.TabIndex = 16;
             // 
             // zedGraph
@@ -156,16 +157,16 @@
             // ID_censo
             // 
             this.ID_censo.Enabled = false;
-            this.ID_censo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_censo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_censo.FormattingEnabled = true;
             this.ID_censo.Items.AddRange(new object[] {
             "Auxiliares auditivos por marca",
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
-            this.ID_censo.Location = new System.Drawing.Point(164, 419);
+            this.ID_censo.Location = new System.Drawing.Point(131, 415);
             this.ID_censo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_censo.Name = "ID_censo";
-            this.ID_censo.Size = new System.Drawing.Size(160, 44);
+            this.ID_censo.Size = new System.Drawing.Size(160, 51);
             this.ID_censo.TabIndex = 21;
             this.ID_censo.SelectionChangeCommitted += new System.EventHandler(this.ID_censo_SelectionChangeCommitted);
             // 
@@ -203,12 +204,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(28, 194);
+            this.label1.Location = new System.Drawing.Point(18, 183);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 39);
+            this.label1.Size = new System.Drawing.Size(151, 47);
             this.label1.TabIndex = 15;
             this.label1.Text = "Consulta";
             // 
@@ -216,12 +217,12 @@
             // 
             this.tienen_radio.AutoSize = true;
             this.tienen_radio.BackColor = System.Drawing.Color.Transparent;
-            this.tienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tienen_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tienen_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.tienen_radio.Location = new System.Drawing.Point(790, 165);
             this.tienen_radio.Margin = new System.Windows.Forms.Padding(4);
             this.tienen_radio.Name = "tienen_radio";
-            this.tienen_radio.Size = new System.Drawing.Size(141, 36);
+            this.tienen_radio.Size = new System.Drawing.Size(152, 40);
             this.tienen_radio.TabIndex = 22;
             this.tienen_radio.TabStop = true;
             this.tienen_radio.Text = "Si tienen";
@@ -233,12 +234,12 @@
             // 
             this.noTienen_radio.AutoSize = true;
             this.noTienen_radio.BackColor = System.Drawing.Color.Transparent;
-            this.noTienen_radio.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noTienen_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noTienen_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.noTienen_radio.Location = new System.Drawing.Point(790, 223);
             this.noTienen_radio.Margin = new System.Windows.Forms.Padding(4);
             this.noTienen_radio.Name = "noTienen_radio";
-            this.noTienen_radio.Size = new System.Drawing.Size(153, 36);
+            this.noTienen_radio.Size = new System.Drawing.Size(167, 40);
             this.noTienen_radio.TabIndex = 23;
             this.noTienen_radio.TabStop = true;
             this.noTienen_radio.Text = "No tienen";
@@ -248,15 +249,15 @@
             // 
             // estadoSalud_combo
             // 
-            this.estadoSalud_combo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadoSalud_combo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estadoSalud_combo.FormattingEnabled = true;
             this.estadoSalud_combo.Items.AddRange(new object[] {
             "Personas con alergia",
             "Personas con enfermedad"});
-            this.estadoSalud_combo.Location = new System.Drawing.Point(172, 190);
+            this.estadoSalud_combo.Location = new System.Drawing.Point(172, 187);
             this.estadoSalud_combo.Margin = new System.Windows.Forms.Padding(4);
             this.estadoSalud_combo.Name = "estadoSalud_combo";
-            this.estadoSalud_combo.Size = new System.Drawing.Size(592, 44);
+            this.estadoSalud_combo.Size = new System.Drawing.Size(592, 51);
             this.estadoSalud_combo.TabIndex = 24;
             this.estadoSalud_combo.Visible = false;
             this.estadoSalud_combo.SelectionChangeCommitted += new System.EventHandler(this.estadoSalud_combo_SelectionChangeCommitted);

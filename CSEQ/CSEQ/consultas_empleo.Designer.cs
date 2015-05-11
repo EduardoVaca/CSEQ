@@ -46,7 +46,7 @@
             // ID_censo
             // 
             this.ID_censo.Enabled = false;
-            this.ID_censo.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_censo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_censo.FormattingEnabled = true;
             this.ID_censo.Items.AddRange(new object[] {
             "Auxiliares auditivos por marca",
@@ -55,19 +55,19 @@
             this.ID_censo.Location = new System.Drawing.Point(150, 469);
             this.ID_censo.Margin = new System.Windows.Forms.Padding(4);
             this.ID_censo.Name = "ID_censo";
-            this.ID_censo.Size = new System.Drawing.Size(160, 44);
+            this.ID_censo.Size = new System.Drawing.Size(160, 51);
             this.ID_censo.TabIndex = 78;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Candara", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(6, 469);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 36);
+            this.label2.Size = new System.Drawing.Size(104, 43);
             this.label2.TabIndex = 77;
             this.label2.Text = "Censo";
             // 
@@ -129,12 +129,12 @@
             // 
             this.titulo.AutoSize = true;
             this.titulo.BackColor = System.Drawing.Color.Transparent;
-            this.titulo.Font = new System.Drawing.Font("Candara", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Font = new System.Drawing.Font("Microsoft MHei", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.titulo.Location = new System.Drawing.Point(579, 57);
             this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(0, 53);
+            this.titulo.Size = new System.Drawing.Size(0, 57);
             this.titulo.TabIndex = 80;
             // 
             // consultas_empleo
