@@ -48,7 +48,7 @@ namespace CSEQ
         {
             salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
-            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado");
+            Util.llenarComboBox(ID_estado, "SELECT ID_estado, nombre FROM Estado ORDER BY nombre ASC");
 
             if (rol == 1)
             {

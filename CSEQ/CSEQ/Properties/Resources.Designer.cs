@@ -463,6 +463,16 @@ namespace CSEQ.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap question {
+            get {
+                object obj = ResourceManager.GetObject("question", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap refresh {
             get {
                 object obj = ResourceManager.GetObject("refresh", resourceCulture);
@@ -476,6 +486,16 @@ namespace CSEQ.Properties {
         internal static System.Drawing.Bitmap Registros {
             get {
                 object obj = ResourceManager.GetObject("Registros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SplashWindow2 {
+            get {
+                object obj = ResourceManager.GetObject("SplashWindow2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

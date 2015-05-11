@@ -43,7 +43,7 @@ namespace CSEQ
         {
             salir_tt.SetToolTip(x_picture, "Salir de la aplicación");
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
-            Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca");
+            Util.llenarComboBox(ID_marca, "SELECT ID_marca, nombre FROM Marca ORDER BY nombre ASC");
 
             if (rol == 1)
             {

@@ -76,12 +76,12 @@
             // 
             this.sueldoMaximo_label.AutoSize = true;
             this.sueldoMaximo_label.BackColor = System.Drawing.Color.Transparent;
-            this.sueldoMaximo_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.sueldoMaximo_label.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sueldoMaximo_label.ForeColor = System.Drawing.Color.White;
             this.sueldoMaximo_label.Location = new System.Drawing.Point(124, 533);
             this.sueldoMaximo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sueldoMaximo_label.Name = "sueldoMaximo_label";
-            this.sueldoMaximo_label.Size = new System.Drawing.Size(150, 46);
+            this.sueldoMaximo_label.Size = new System.Drawing.Size(140, 47);
             this.sueldoMaximo_label.TabIndex = 21;
             this.sueldoMaximo_label.Text = "Máximo";
             // 
@@ -89,12 +89,12 @@
             // 
             this.sueldoMinimo_label.AutoSize = true;
             this.sueldoMinimo_label.BackColor = System.Drawing.Color.Transparent;
-            this.sueldoMinimo_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.sueldoMinimo_label.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sueldoMinimo_label.ForeColor = System.Drawing.Color.White;
             this.sueldoMinimo_label.Location = new System.Drawing.Point(124, 365);
             this.sueldoMinimo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sueldoMinimo_label.Name = "sueldoMinimo_label";
-            this.sueldoMinimo_label.Size = new System.Drawing.Size(141, 46);
+            this.sueldoMinimo_label.Size = new System.Drawing.Size(134, 47);
             this.sueldoMinimo_label.TabIndex = 20;
             this.sueldoMinimo_label.Text = "Mínimo";
             // 
@@ -128,37 +128,37 @@
             // 
             // minimo_txt
             // 
-            this.minimo_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.minimo_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimo_txt.Location = new System.Drawing.Point(316, 371);
             this.minimo_txt.Margin = new System.Windows.Forms.Padding(6);
             this.minimo_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.minimo_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.minimo_txt.Name = "minimo_txt";
-            this.minimo_txt.Size = new System.Drawing.Size(196, 47);
+            this.minimo_txt.Size = new System.Drawing.Size(196, 54);
             this.minimo_txt.TabIndex = 16;
             // 
             // sueldo_label
             // 
             this.sueldo_label.AutoSize = true;
             this.sueldo_label.BackColor = System.Drawing.Color.Transparent;
-            this.sueldo_label.Font = new System.Drawing.Font("Candara", 18F);
+            this.sueldo_label.Font = new System.Drawing.Font("Microsoft MHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sueldo_label.ForeColor = System.Drawing.Color.White;
             this.sueldo_label.Location = new System.Drawing.Point(718, 54);
             this.sueldo_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sueldo_label.Name = "sueldo_label";
-            this.sueldo_label.Size = new System.Drawing.Size(165, 59);
+            this.sueldo_label.Size = new System.Drawing.Size(179, 64);
             this.sueldo_label.TabIndex = 15;
             this.sueldo_label.Text = "Sueldo";
             // 
             // maximo_txt
             // 
-            this.maximo_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.maximo_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maximo_txt.Location = new System.Drawing.Point(316, 537);
             this.maximo_txt.Margin = new System.Windows.Forms.Padding(6);
             this.maximo_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.maximo_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.maximo_txt.Name = "maximo_txt";
-            this.maximo_txt.Size = new System.Drawing.Size(196, 47);
+            this.maximo_txt.Size = new System.Drawing.Size(196, 54);
             this.maximo_txt.TabIndex = 24;
             // 
             // Busqueda_grp
@@ -168,7 +168,7 @@
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
-            this.Busqueda_grp.Font = new System.Drawing.Font("Candara", 9.75F);
+            this.Busqueda_grp.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Busqueda_grp.ForeColor = System.Drawing.Color.White;
             this.Busqueda_grp.Location = new System.Drawing.Point(884, 152);
             this.Busqueda_grp.Margin = new System.Windows.Forms.Padding(6);
@@ -184,12 +184,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(10, 128);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 29);
+            this.label7.Size = new System.Drawing.Size(157, 32);
             this.label7.TabIndex = 79;
             this.label7.Text = "Ejemplo: 1000";
             // 
@@ -200,7 +200,7 @@
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -209,7 +209,7 @@
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -222,7 +222,7 @@
             this.busqueda_grid.Name = "busqueda_grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -250,13 +250,13 @@
             // 
             // busqueda_txt
             // 
-            this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.busqueda_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.busqueda_txt.Location = new System.Drawing.Point(12, 75);
             this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(588, 47);
+            this.busqueda_txt.Size = new System.Drawing.Size(588, 54);
             this.busqueda_txt.TabIndex = 8;
             this.busqueda_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.busqueda_txt_KeyPress);
             // 
@@ -288,12 +288,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 14F);
+            this.label1.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(273, 365);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 46);
+            this.label1.Size = new System.Drawing.Size(38, 47);
             this.label1.TabIndex = 72;
             this.label1.Text = "$";
             // 
@@ -301,12 +301,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Candara", 14F);
+            this.label2.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(273, 531);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 46);
+            this.label2.Size = new System.Drawing.Size(38, 47);
             this.label2.TabIndex = 73;
             this.label2.Text = "$";
             // 
@@ -314,12 +314,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Candara", 14F);
+            this.label3.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(522, 369);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 46);
+            this.label3.Size = new System.Drawing.Size(64, 47);
             this.label3.TabIndex = 74;
             this.label3.Text = ".00";
             // 
@@ -327,12 +327,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Candara", 14F);
+            this.label4.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(522, 535);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 46);
+            this.label4.Size = new System.Drawing.Size(64, 47);
             this.label4.TabIndex = 75;
             this.label4.Text = ".00";
             // 
@@ -340,12 +340,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Microsoft MHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1075, 970);
+            this.label5.Location = new System.Drawing.Point(1129, 970);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.Size = new System.Drawing.Size(457, 32);
             this.label5.TabIndex = 76;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 

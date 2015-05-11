@@ -39,10 +39,12 @@
             this.cerrarSesion_tt = new System.Windows.Forms.ToolTip(this.components);
             this.registros_pb = new System.Windows.Forms.PictureBox();
             this.consultas_pb = new System.Windows.Forms.PictureBox();
+            this.info = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registros_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultas_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
             this.SuspendLayout();
             // 
             // x_picture
@@ -63,12 +65,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft MHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(334, 561);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 78);
+            this.label1.Size = new System.Drawing.Size(289, 85);
             this.label1.TabIndex = 8;
             this.label1.Text = "Registros";
             // 
@@ -103,12 +105,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Microsoft MHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1069, 972);
+            this.label5.Location = new System.Drawing.Point(1133, 969);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.Size = new System.Drawing.Size(457, 32);
             this.label5.TabIndex = 27;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 
@@ -140,6 +142,21 @@
             this.consultas_pb.MouseLeave += new System.EventHandler(this.consultas_pb_MouseLeave);
             this.consultas_pb.MouseHover += new System.EventHandler(this.consultas_pb_MouseHover);
             // 
+            // info
+            // 
+            this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.Image = global::CSEQ.Properties.Resources.question;
+            this.info.Location = new System.Drawing.Point(13, 13);
+            this.info.Margin = new System.Windows.Forms.Padding(4);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(68, 65);
+            this.info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.info.TabIndex = 30;
+            this.info.TabStop = false;
+            this.info.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.info.MouseLeave += new System.EventHandler(this.info_MouseLeave);
+            this.info.MouseHover += new System.EventHandler(this.info_MouseHover);
+            // 
             // Menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -149,6 +166,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1598, 1010);
+            this.Controls.Add(this.info);
             this.Controls.Add(this.consultas_pb);
             this.Controls.Add(this.registros_pb);
             this.Controls.Add(this.label5);
@@ -163,10 +181,12 @@
             this.Name = "Menu_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_principal";
+            this.Load += new System.EventHandler(this.Menu_principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registros_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultas_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.info)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +203,6 @@
         private System.Windows.Forms.ToolTip cerrarSesion_tt;
         private System.Windows.Forms.PictureBox registros_pb;
         private System.Windows.Forms.PictureBox consultas_pb;
+        private System.Windows.Forms.PictureBox info;
     }
 }

@@ -48,28 +48,28 @@
             // 
             // login_txt
             // 
-            this.login_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_txt.Location = new System.Drawing.Point(574, 499);
+            this.login_txt.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_txt.Location = new System.Drawing.Point(565, 487);
             this.login_txt.Margin = new System.Windows.Forms.Padding(4);
             this.login_txt.Name = "login_txt";
-            this.login_txt.Size = new System.Drawing.Size(256, 38);
+            this.login_txt.Size = new System.Drawing.Size(290, 50);
             this.login_txt.TabIndex = 2;
             // 
             // password_txt
             // 
-            this.password_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_txt.Location = new System.Drawing.Point(574, 587);
+            this.password_txt.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_txt.Location = new System.Drawing.Point(565, 575);
             this.password_txt.Margin = new System.Windows.Forms.Padding(4);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '*';
-            this.password_txt.Size = new System.Drawing.Size(256, 38);
+            this.password_txt.Size = new System.Drawing.Size(290, 50);
             this.password_txt.TabIndex = 3;
             this.password_txt.Enter += new System.EventHandler(this.password_txt_Enter);
             this.password_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_txt_KeyPress);
             // 
             // ingresar_btn
             // 
-            this.ingresar_btn.Font = new System.Drawing.Font("Candara", 10F);
+            this.ingresar_btn.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ingresar_btn.Location = new System.Drawing.Point(574, 692);
             this.ingresar_btn.Margin = new System.Windows.Forms.Padding(4);
             this.ingresar_btn.Name = "ingresar_btn";
@@ -119,7 +119,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CSEQ.Properties.Resources.Login;
-            this.pictureBox1.Location = new System.Drawing.Point(494, 480);
+            this.pictureBox1.Location = new System.Drawing.Point(485, 480);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,7 +130,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::CSEQ.Properties.Resources.Contraseña;
-            this.pictureBox3.Location = new System.Drawing.Point(498, 568);
+            this.pictureBox3.Location = new System.Drawing.Point(489, 568);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(47, 63);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,12 +141,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Microsoft MHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(751, 777);
+            this.label5.Location = new System.Drawing.Point(827, 776);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.Size = new System.Drawing.Size(457, 32);
             this.label5.TabIndex = 66;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 

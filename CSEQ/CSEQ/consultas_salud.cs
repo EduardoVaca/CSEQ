@@ -52,6 +52,11 @@ namespace CSEQ
                 titulo.Text = "Estado de Salud";
                 estadoSalud_combo.Visible = true;
             }
+            if (index == 2)
+            {
+                titulo.Text = "Tipología de Pérdida Auditiva";
+                tipologia_combo.Visible = true;
+            }
 
             Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");
         }
@@ -81,7 +86,7 @@ namespace CSEQ
         {
             ID_censo.Enabled = true;
             todoscensos_radio.Enabled = true;
-            todoscensos_radio.Checked = false;
+            indexReporte = auxiliarAuditivo_combo.SelectedIndex;            
             todoscensos_radio.Checked = true;
         }
 
@@ -285,6 +290,50 @@ namespace CSEQ
         private void logout_MouseHover(object sender, EventArgs e)
         {
             cerrarSesion_tt.SetToolTip(logout, "Cerrar sesión");
+        }
+
+        private void tipologia_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ID_censo.Enabled = true;
+            todoscensos_radio.Enabled = true;
+            indexReporte = tipologia_combo.SelectedIndex;
+            Reporte.Enabled = true;
+            if (tipologia_combo.SelectedIndex == 0)
+            {
+                gradoPerdida_gp.Visible = true;
+            }
+            else
+            {
+                gradoPerdida_gp.Visible = false;
+            }
+            if (tipologia_combo.SelectedIndex == 1)
+            {
+                unilateral_radio.Visible = true;
+                bilateral_radio.Visible = true;
+            }
+            else
+            {
+                unilateral_radio.Visible = false;
+                bilateral_radio.Visible = false;
+            }
+            if (tipologia_combo.SelectedIndex == 3)
+            {
+                tipoPerdida_gp.Visible = true;
+            }
+            else
+            {
+                tipoPerdida_gp.Visible = false;
+            }
+            if (tipologia_combo.SelectedIndex == 4)
+            {
+                prelingual_radio.Visible = true;
+                postlingual_radio.Visible = true;
+            }
+            else
+            {
+                prelingual_radio.Visible = false;
+                postlingual_radio.Visible = false;
+            }
         }
     }
 }

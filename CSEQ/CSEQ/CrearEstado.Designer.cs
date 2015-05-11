@@ -71,12 +71,12 @@
             // 
             this.Mun.AutoSize = true;
             this.Mun.BackColor = System.Drawing.Color.Transparent;
-            this.Mun.Font = new System.Drawing.Font("Candara", 18F);
+            this.Mun.Font = new System.Drawing.Font("Microsoft MHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mun.ForeColor = System.Drawing.Color.White;
             this.Mun.Location = new System.Drawing.Point(658, 54);
             this.Mun.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Mun.Name = "Mun";
-            this.Mun.Size = new System.Drawing.Size(164, 59);
+            this.Mun.Size = new System.Drawing.Size(174, 64);
             this.Mun.TabIndex = 25;
             this.Mun.Text = "Estado";
             // 
@@ -84,22 +84,22 @@
             // 
             this.Nombre_label.AutoSize = true;
             this.Nombre_label.BackColor = System.Drawing.Color.Transparent;
-            this.Nombre_label.Font = new System.Drawing.Font("Candara", 14F);
+            this.Nombre_label.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre_label.ForeColor = System.Drawing.Color.White;
-            this.Nombre_label.Location = new System.Drawing.Point(52, 475);
+            this.Nombre_label.Location = new System.Drawing.Point(66, 475);
             this.Nombre_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nombre_label.Name = "Nombre_label";
-            this.Nombre_label.Size = new System.Drawing.Size(152, 46);
+            this.Nombre_label.Size = new System.Drawing.Size(144, 47);
             this.Nombre_label.TabIndex = 28;
             this.Nombre_label.Text = "Nombre";
             // 
             // nombre_txt
             // 
-            this.nombre_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.nombre_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre_txt.Location = new System.Drawing.Point(250, 475);
             this.nombre_txt.Margin = new System.Windows.Forms.Padding(6);
             this.nombre_txt.Name = "nombre_txt";
-            this.nombre_txt.Size = new System.Drawing.Size(490, 47);
+            this.nombre_txt.Size = new System.Drawing.Size(490, 54);
             this.nombre_txt.TabIndex = 27;
             // 
             // Atras_picture
@@ -149,7 +149,7 @@
             this.Busqueda_grp.Controls.Add(this.busqueda_grid);
             this.Busqueda_grp.Controls.Add(this.Buscar);
             this.Busqueda_grp.Controls.Add(this.busqueda_txt);
-            this.Busqueda_grp.Font = new System.Drawing.Font("Candara", 9.75F);
+            this.Busqueda_grp.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Busqueda_grp.ForeColor = System.Drawing.Color.White;
             this.Busqueda_grp.Location = new System.Drawing.Point(840, 140);
             this.Busqueda_grp.Margin = new System.Windows.Forms.Padding(6);
@@ -165,12 +165,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(10, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 29);
+            this.label3.Size = new System.Drawing.Size(214, 32);
             this.label3.TabIndex = 80;
             this.label3.Text = "Ejemplo: Querétaro";
             // 
@@ -181,7 +181,7 @@
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -190,7 +190,7 @@
             this.busqueda_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -203,7 +203,7 @@
             this.busqueda_grid.Name = "busqueda_grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 9.75F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -231,13 +231,13 @@
             // 
             // busqueda_txt
             // 
-            this.busqueda_txt.Font = new System.Drawing.Font("Candara", 12F);
+            this.busqueda_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.busqueda_txt.Location = new System.Drawing.Point(12, 75);
             this.busqueda_txt.Margin = new System.Windows.Forms.Padding(6);
             this.busqueda_txt.MaximumSize = new System.Drawing.Size(796, 40);
             this.busqueda_txt.MinimumSize = new System.Drawing.Size(196, 4);
             this.busqueda_txt.Name = "busqueda_txt";
-            this.busqueda_txt.Size = new System.Drawing.Size(588, 47);
+            this.busqueda_txt.Size = new System.Drawing.Size(588, 54);
             this.busqueda_txt.TabIndex = 8;
             this.busqueda_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.busqueda_txt_KeyPress);
             // 
@@ -269,12 +269,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Font = new System.Drawing.Font("Microsoft MHei", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1070, 981);
+            this.label5.Location = new System.Drawing.Point(1130, 981);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(517, 29);
+            this.label5.Size = new System.Drawing.Size(457, 32);
             this.label5.TabIndex = 77;
             this.label5.Text = "FORTALECIENDO A LA PERSONA SORDA";
             // 
