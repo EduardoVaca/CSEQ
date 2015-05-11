@@ -496,6 +496,7 @@
     <Content Include="Resources\itextsharp.dll" />
     <Content Include="Resources\itextsharp.pdfa.dll" />
     <Content Include="Resources\itextsharp.xtra.dll" />
+    <None Include="Resources\SplashWindow2.jpg" />
     <None Include="Resources\question.png" />
   </ItemGroup>
   <ItemGroup>

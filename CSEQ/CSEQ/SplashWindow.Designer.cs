@@ -37,18 +37,18 @@
             // timer
             // 
             this.timer.Enabled = true;
-            this.timer.Interval = 4000;
+            this.timer.Interval = 6000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(828, 472);
+            this.label1.Location = new System.Drawing.Point(894, 470);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
             // 
             // SplashWindow
             // 
@@ -56,8 +56,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::CSEQ.Properties.Resources.Logo2N;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImage = global::CSEQ.Properties.Resources.SplashWindow2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
