@@ -53,9 +53,6 @@
             this.empleo_gp = new System.Windows.Forms.GroupBox();
             this.sinEmpleo_radio = new System.Windows.Forms.RadioButton();
             this.conEmpleo_radio = new System.Windows.Forms.RadioButton();
-            this.areaTrabajo_gp = new System.Windows.Forms.GroupBox();
-            this.todaslasAreas_radio = new System.Windows.Forms.RadioButton();
-            this.areaTrabajo_radio = new System.Windows.Forms.RadioButton();
             this.sinEducacion_radio = new System.Windows.Forms.RadioButton();
             this.conEducacion_radio = new System.Windows.Forms.RadioButton();
             this.lenguaDom_gp = new System.Windows.Forms.GroupBox();
@@ -81,7 +78,6 @@
             this.eleccion_gp.SuspendLayout();
             this.edades_gp.SuspendLayout();
             this.empleo_gp.SuspendLayout();
-            this.areaTrabajo_gp.SuspendLayout();
             this.lenguaDom_gp.SuspendLayout();
             this.estadoCivil_gp.SuspendLayout();
             this.hijos_gp.SuspendLayout();
@@ -269,6 +265,7 @@
             this.Reporte.TabIndex = 83;
             this.Reporte.Text = "Crear Reporte";
             this.Reporte.UseVisualStyleBackColor = false;
+            this.Reporte.Click += new System.EventHandler(this.Reporte_Click);
             // 
             // edades_gp
             // 
@@ -391,8 +388,7 @@
             this.sinEmpleo_radio.TabIndex = 24;
             this.sinEmpleo_radio.TabStop = true;
             this.sinEmpleo_radio.Text = "Sin Empleo";
-            this.sinEmpleo_radio.UseVisualStyleBackColor = false;
-            this.sinEmpleo_radio.CheckedChanged += new System.EventHandler(this.sinEmpleo_radio_CheckedChanged);
+            this.sinEmpleo_radio.UseVisualStyleBackColor = false;            
             // 
             // conEmpleo_radio
             // 
@@ -407,53 +403,7 @@
             this.conEmpleo_radio.TabIndex = 22;
             this.conEmpleo_radio.TabStop = true;
             this.conEmpleo_radio.Text = "Con Empleo";
-            this.conEmpleo_radio.UseVisualStyleBackColor = false;
-            this.conEmpleo_radio.CheckedChanged += new System.EventHandler(this.conEmpleo_radio_CheckedChanged);
-            // 
-            // areaTrabajo_gp
-            // 
-            this.areaTrabajo_gp.BackColor = System.Drawing.Color.Transparent;
-            this.areaTrabajo_gp.Controls.Add(this.todaslasAreas_radio);
-            this.areaTrabajo_gp.Controls.Add(this.areaTrabajo_radio);
-            this.areaTrabajo_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaTrabajo_gp.ForeColor = System.Drawing.Color.White;
-            this.areaTrabajo_gp.Location = new System.Drawing.Point(1039, 143);
-            this.areaTrabajo_gp.Name = "areaTrabajo_gp";
-            this.areaTrabajo_gp.Size = new System.Drawing.Size(287, 164);
-            this.areaTrabajo_gp.TabIndex = 87;
-            this.areaTrabajo_gp.TabStop = false;
-            this.areaTrabajo_gp.Text = "Con Empleo";
-            this.areaTrabajo_gp.Visible = false;
-            // 
-            // todaslasAreas_radio
-            // 
-            this.todaslasAreas_radio.AutoSize = true;
-            this.todaslasAreas_radio.BackColor = System.Drawing.Color.Transparent;
-            this.todaslasAreas_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todaslasAreas_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.todaslasAreas_radio.Location = new System.Drawing.Point(7, 104);
-            this.todaslasAreas_radio.Margin = new System.Windows.Forms.Padding(4);
-            this.todaslasAreas_radio.Name = "todaslasAreas_radio";
-            this.todaslasAreas_radio.Size = new System.Drawing.Size(206, 36);
-            this.todaslasAreas_radio.TabIndex = 24;
-            this.todaslasAreas_radio.TabStop = true;
-            this.todaslasAreas_radio.Text = "Todas las Áreas";
-            this.todaslasAreas_radio.UseVisualStyleBackColor = false;
-            // 
-            // areaTrabajo_radio
-            // 
-            this.areaTrabajo_radio.AutoSize = true;
-            this.areaTrabajo_radio.BackColor = System.Drawing.Color.Transparent;
-            this.areaTrabajo_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaTrabajo_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.areaTrabajo_radio.Location = new System.Drawing.Point(7, 50);
-            this.areaTrabajo_radio.Margin = new System.Windows.Forms.Padding(4);
-            this.areaTrabajo_radio.Name = "areaTrabajo_radio";
-            this.areaTrabajo_radio.Size = new System.Drawing.Size(252, 36);
-            this.areaTrabajo_radio.TabIndex = 22;
-            this.areaTrabajo_radio.TabStop = true;
-            this.areaTrabajo_radio.Text = "Por Área de Trabajo";
-            this.areaTrabajo_radio.UseVisualStyleBackColor = false;
+            this.conEmpleo_radio.UseVisualStyleBackColor = false;            
             // 
             // sinEducacion_radio
             // 
@@ -748,7 +698,6 @@
             this.Controls.Add(this.sinEducacion_radio);
             this.Controls.Add(this.empleo_gp);
             this.Controls.Add(this.conEducacion_radio);
-            this.Controls.Add(this.areaTrabajo_gp);
             this.Controls.Add(this.edades_gp);
             this.Controls.Add(this.eleccion_gp);
             this.Controls.Add(this.label3);
@@ -776,8 +725,6 @@
             this.edades_gp.PerformLayout();
             this.empleo_gp.ResumeLayout(false);
             this.empleo_gp.PerformLayout();
-            this.areaTrabajo_gp.ResumeLayout(false);
-            this.areaTrabajo_gp.PerformLayout();
             this.lenguaDom_gp.ResumeLayout(false);
             this.lenguaDom_gp.PerformLayout();
             this.estadoCivil_gp.ResumeLayout(false);
@@ -814,9 +761,6 @@
         private System.Windows.Forms.GroupBox empleo_gp;
         private System.Windows.Forms.RadioButton sinEmpleo_radio;
         private System.Windows.Forms.RadioButton conEmpleo_radio;
-        private System.Windows.Forms.GroupBox areaTrabajo_gp;
-        private System.Windows.Forms.RadioButton todaslasAreas_radio;
-        private System.Windows.Forms.RadioButton areaTrabajo_radio;
         private System.Windows.Forms.RadioButton sinEducacion_radio;
         private System.Windows.Forms.RadioButton conEducacion_radio;
         private System.Windows.Forms.GroupBox lenguaDom_gp;

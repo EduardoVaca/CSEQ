@@ -112,20 +112,10 @@ namespace CSEQ
             }
             else
             {
-                empleo_gp.Visible = false;
-                areaTrabajo_gp.Visible = false;
+                empleo_gp.Visible = false;                
             }
         }
 
-        private void conEmpleo_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            areaTrabajo_gp.Visible = true;
-        }
-
-        private void sinEmpleo_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            areaTrabajo_gp.Visible = false;
-        }
 
         private void estadoCivil_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -156,6 +146,11 @@ namespace CSEQ
         private void sinHijos_radio_CheckedChanged(object sender, EventArgs e)
         {
             hijos_gp.Visible = false;
+        }
+
+        private void Reporte_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
