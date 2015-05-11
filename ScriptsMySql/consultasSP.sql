@@ -1189,3 +1189,161 @@ BEGIN
 	GROUP BY s.minimo;
 END //
 DELIMITER ;
+
+
+-- Consulta de personas que tienen empleo por sexo
+DELIMITER //
+CREATE PROCEDURE consultaEmpleadosPorSexo
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneEmpleo;
+	SELECT p.sexo_masculino AS 'Es hombre', COUNT(e.CURP) AS 'No. de Personas', (COUNT(e.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM Persona p, TieneEmpleo e
+	WHERE p.CURP = e.CURP AND p.CURP IN(SELECT e.CURP FROM TieneEmpleo e)
+	GROUP BY p.sexo_masculino;
+END //
+DELIMITER ;
+
+
+-- Consulta de personas que tienen empleo por sexo por censo
+DELIMITER //
+CREATE PROCEDURE consultaEmpleadosPorSexoPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneEmpleo WHERE ID_censo = censo;
+	SELECT p.sexo_masculino AS 'Es hombre', COUNT(e.CURP) AS 'No. de Personas', (COUNT(e.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM Persona p, TieneEmpleo e
+	WHERE p.CURP = e.CURP AND e.ID_censo = censo AND p.CURP IN (SELECT e.CURP FROM TieneEmpleo e WHERE e.ID_censo = censo)
+	GROUP BY p.sexo_masculino;
+END //
+DELIMITER ;
+
+
+-- Número de personas con discapacidad auditiva por censo...
+DELIMITER //
+CREATE PROCEDURE consultaPersonasPorCenso
+()
+BEGIN
+	SELECT ID_censo, COUNT(*) AS 'No. de Personas' FROM PerteneceCenso
+	GROUP BY ID_censo; 
+END //
+DELIMITER ;
+
+-- Consulta personas que tienen licenciatura o ingeniería
+DELIMITER //
+CREATE PROCEDURE consultaPersonasConLicenciatura
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneNivelEducativo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.ID_nivelEducativo = 6
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+
+-- Consulta personas que tienen licenciatura o ingeniería por censo
+DELIMITER //
+CREATE PROCEDURE consultaPersonasConLicenciaturaPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneNivelEducativo WHERE ID_Censo = censo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.ID_nivelEducativo = 6 AND t.ID_Censo = censo
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+
+-- Consulta personas que tienen especialidad
+DELIMITER //
+CREATE PROCEDURE consultaPersonasConEspecialidad
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneNivelEducativo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.ID_nivelEducativo = 7
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+
+-- Consulta personas que tienen especialidad por censo
+DELIMITER //
+CREATE PROCEDURE consultaPersonasConEspecialidadPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneNivelEducativo WHERE ID_Censo = censo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.ID_nivelEducativo = 7 AND t.ID_Censo = censo
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+-- Consulta personas que tienen maestría
+DELIMITER //
+CREATE PROCEDURE consultaPersonasConMaestria
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneNivelEducativo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.ID_nivelEducativo = 8
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+
+-- Consulta personas que tienen maestría por censo
+DELIMITER //
+CREATE PROCEDURE consultaPersonasConMaestriaPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneNivelEducativo WHERE ID_Censo = censo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.ID_nivelEducativo = 8 AND t.ID_Censo = censo
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+-- Consulta personas que tienen doctorado
+DELIMITER //
+CREATE PROCEDURE consultaPersonasConDoctorado
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneNivelEducativo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.ID_nivelEducativo = 9
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+
+-- Consulta personas que tienen maestría por censo
+DELIMITER //
+CREATE PROCEDURE consultaPersonasConDoctoradoPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneNivelEducativo WHERE ID_Censo = censo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.ID_nivelEducativo = 9 AND t.ID_Censo = censo
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
