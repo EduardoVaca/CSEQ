@@ -35,8 +35,6 @@
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.close_picture = new System.Windows.Forms.PictureBox();
             this.salir_tt = new System.Windows.Forms.ToolTip(this.components);
-            this.ID_censo = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.titulo = new System.Windows.Forms.Label();
             this.nivelesEducativos_gp = new System.Windows.Forms.GroupBox();
             this.doctorado_check = new System.Windows.Forms.CheckBox();
@@ -48,10 +46,21 @@
             this.secundaria_check = new System.Windows.Forms.CheckBox();
             this.primaria_check = new System.Windows.Forms.CheckBox();
             this.prescolar_check = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comunicacion_combo = new System.Windows.Forms.ComboBox();
+            this.eleccion_gp = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ID_censo = new System.Windows.Forms.ComboBox();
+            this.todoscensos_radio = new System.Windows.Forms.RadioButton();
+            this.Reporte = new System.Windows.Forms.Button();
+            this.nivelEducativo_combo = new System.Windows.Forms.ComboBox();
+            this.privada_radio = new System.Windows.Forms.RadioButton();
+            this.publica_radio = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             this.nivelesEducativos_gp.SuspendLayout();
+            this.eleccion_gp.SuspendLayout();
             this.SuspendLayout();
             // 
             // label12
@@ -110,34 +119,6 @@
             this.close_picture.Click += new System.EventHandler(this.pictureBox2_Click);
             this.close_picture.MouseHover += new System.EventHandler(this.close_picture_MouseHover);
             // 
-            // ID_censo
-            // 
-            this.ID_censo.Enabled = false;
-            this.ID_censo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_censo.FormattingEnabled = true;
-            this.ID_censo.Items.AddRange(new object[] {
-            "Auxiliares auditivos por marca",
-            "Personas que no tienen aparato auditivo",
-            "Personas con implante coclear"});
-            this.ID_censo.Location = new System.Drawing.Point(149, 480);
-            this.ID_censo.Margin = new System.Windows.Forms.Padding(4);
-            this.ID_censo.Name = "ID_censo";
-            this.ID_censo.Size = new System.Drawing.Size(160, 51);
-            this.ID_censo.TabIndex = 72;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(5, 480);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 43);
-            this.label2.TabIndex = 71;
-            this.label2.Text = "Censo";
-            // 
             // titulo
             // 
             this.titulo.AutoSize = true;
@@ -164,7 +145,7 @@
             this.nivelesEducativos_gp.Controls.Add(this.prescolar_check);
             this.nivelesEducativos_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nivelesEducativos_gp.ForeColor = System.Drawing.Color.White;
-            this.nivelesEducativos_gp.Location = new System.Drawing.Point(552, 384);
+            this.nivelesEducativos_gp.Location = new System.Drawing.Point(808, 114);
             this.nivelesEducativos_gp.Name = "nivelesEducativos_gp";
             this.nivelesEducativos_gp.Size = new System.Drawing.Size(496, 260);
             this.nivelesEducativos_gp.TabIndex = 89;
@@ -289,6 +270,155 @@
             this.prescolar_check.Text = "Prescolar";
             this.prescolar_check.UseVisualStyleBackColor = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(40, 163);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 47);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Consulta";
+            // 
+            // comunicacion_combo
+            // 
+            this.comunicacion_combo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comunicacion_combo.FormattingEnabled = true;
+            this.comunicacion_combo.Items.AddRange(new object[] {
+            "Por dominio del Español",
+            "Por dominio del Inglés",
+            "Por dominio de LSM"});
+            this.comunicacion_combo.Location = new System.Drawing.Point(203, 159);
+            this.comunicacion_combo.Margin = new System.Windows.Forms.Padding(4);
+            this.comunicacion_combo.Name = "comunicacion_combo";
+            this.comunicacion_combo.Size = new System.Drawing.Size(496, 51);
+            this.comunicacion_combo.TabIndex = 106;
+            this.comunicacion_combo.Visible = false;
+            this.comunicacion_combo.SelectionChangeCommitted += new System.EventHandler(this.comunicacion_combo_SelectionChangeCommitted);
+            // 
+            // eleccion_gp
+            // 
+            this.eleccion_gp.BackColor = System.Drawing.Color.Transparent;
+            this.eleccion_gp.Controls.Add(this.label2);
+            this.eleccion_gp.Controls.Add(this.ID_censo);
+            this.eleccion_gp.Controls.Add(this.todoscensos_radio);
+            this.eleccion_gp.Enabled = false;
+            this.eleccion_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eleccion_gp.ForeColor = System.Drawing.Color.White;
+            this.eleccion_gp.Location = new System.Drawing.Point(31, 472);
+            this.eleccion_gp.Name = "eleccion_gp";
+            this.eleccion_gp.Size = new System.Drawing.Size(313, 165);
+            this.eleccion_gp.TabIndex = 108;
+            this.eleccion_gp.TabStop = false;
+            this.eleccion_gp.Text = "Elección Censo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(7, 49);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 38);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Censo";
+            // 
+            // ID_censo
+            // 
+            this.ID_censo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_censo.FormattingEnabled = true;
+            this.ID_censo.Items.AddRange(new object[] {
+            "Auxiliares auditivos por marca",
+            "Personas que no tienen aparato auditivo",
+            "Personas con implante coclear"});
+            this.ID_censo.Location = new System.Drawing.Point(118, 45);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(4);
+            this.ID_censo.Name = "ID_censo";
+            this.ID_censo.Size = new System.Drawing.Size(160, 51);
+            this.ID_censo.TabIndex = 21;
+            // 
+            // todoscensos_radio
+            // 
+            this.todoscensos_radio.AutoSize = true;
+            this.todoscensos_radio.BackColor = System.Drawing.Color.Transparent;
+            this.todoscensos_radio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todoscensos_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.todoscensos_radio.Location = new System.Drawing.Point(13, 114);
+            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(4);
+            this.todoscensos_radio.Name = "todoscensos_radio";
+            this.todoscensos_radio.Size = new System.Drawing.Size(213, 33);
+            this.todoscensos_radio.TabIndex = 20;
+            this.todoscensos_radio.TabStop = true;
+            this.todoscensos_radio.Text = "Todos los censos";
+            this.todoscensos_radio.UseVisualStyleBackColor = false;
+            // 
+            // Reporte
+            // 
+            this.Reporte.BackColor = System.Drawing.Color.White;
+            this.Reporte.Enabled = false;
+            this.Reporte.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reporte.Location = new System.Drawing.Point(98, 707);
+            this.Reporte.Margin = new System.Windows.Forms.Padding(6);
+            this.Reporte.Name = "Reporte";
+            this.Reporte.Size = new System.Drawing.Size(183, 71);
+            this.Reporte.TabIndex = 107;
+            this.Reporte.Text = "Crear Reporte";
+            this.Reporte.UseVisualStyleBackColor = false;
+            // 
+            // nivelEducativo_combo
+            // 
+            this.nivelEducativo_combo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nivelEducativo_combo.FormattingEnabled = true;
+            this.nivelEducativo_combo.Items.AddRange(new object[] {
+            "Con Educación",
+            "Con Atención Educativa Espacializada",
+            "Por Nivel Educativo",
+            "Por Tipo de Educación"});
+            this.nivelEducativo_combo.Location = new System.Drawing.Point(199, 160);
+            this.nivelEducativo_combo.Margin = new System.Windows.Forms.Padding(4);
+            this.nivelEducativo_combo.Name = "nivelEducativo_combo";
+            this.nivelEducativo_combo.Size = new System.Drawing.Size(579, 51);
+            this.nivelEducativo_combo.TabIndex = 109;
+            this.nivelEducativo_combo.Visible = false;
+            this.nivelEducativo_combo.SelectionChangeCommitted += new System.EventHandler(this.nivelEducativo_combo_SelectionChangeCommitted);
+            // 
+            // privada_radio
+            // 
+            this.privada_radio.AutoSize = true;
+            this.privada_radio.BackColor = System.Drawing.Color.Transparent;
+            this.privada_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.privada_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.privada_radio.Location = new System.Drawing.Point(803, 143);
+            this.privada_radio.Margin = new System.Windows.Forms.Padding(4);
+            this.privada_radio.Name = "privada_radio";
+            this.privada_radio.Size = new System.Drawing.Size(133, 40);
+            this.privada_radio.TabIndex = 22;
+            this.privada_radio.TabStop = true;
+            this.privada_radio.Text = "Privada";
+            this.privada_radio.UseVisualStyleBackColor = false;
+            this.privada_radio.Visible = false;
+            // 
+            // publica_radio
+            // 
+            this.publica_radio.AutoSize = true;
+            this.publica_radio.BackColor = System.Drawing.Color.Transparent;
+            this.publica_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.publica_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.publica_radio.Location = new System.Drawing.Point(803, 191);
+            this.publica_radio.Margin = new System.Windows.Forms.Padding(4);
+            this.publica_radio.Name = "publica_radio";
+            this.publica_radio.Size = new System.Drawing.Size(129, 40);
+            this.publica_radio.TabIndex = 110;
+            this.publica_radio.TabStop = true;
+            this.publica_radio.Text = "Pública";
+            this.publica_radio.UseVisualStyleBackColor = false;
+            this.publica_radio.Visible = false;
+            // 
             // consulta_educacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -298,10 +428,15 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 1028);
+            this.Controls.Add(this.publica_radio);
+            this.Controls.Add(this.nivelEducativo_combo);
+            this.Controls.Add(this.eleccion_gp);
+            this.Controls.Add(this.privada_radio);
+            this.Controls.Add(this.Reporte);
+            this.Controls.Add(this.comunicacion_combo);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.nivelesEducativos_gp);
             this.Controls.Add(this.titulo);
-            this.Controls.Add(this.ID_censo);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.back_picture);
@@ -318,6 +453,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).EndInit();
             this.nivelesEducativos_gp.ResumeLayout(false);
             this.nivelesEducativos_gp.PerformLayout();
+            this.eleccion_gp.ResumeLayout(false);
+            this.eleccion_gp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,8 +467,6 @@
         private System.Windows.Forms.PictureBox back_picture;
         private System.Windows.Forms.PictureBox close_picture;
         private System.Windows.Forms.ToolTip salir_tt;
-        private System.Windows.Forms.ComboBox ID_censo;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.GroupBox nivelesEducativos_gp;
         private System.Windows.Forms.CheckBox doctorado_check;
@@ -343,5 +478,15 @@
         private System.Windows.Forms.CheckBox secundaria_check;
         private System.Windows.Forms.CheckBox primaria_check;
         private System.Windows.Forms.CheckBox prescolar_check;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comunicacion_combo;
+        private System.Windows.Forms.GroupBox eleccion_gp;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox ID_censo;
+        private System.Windows.Forms.RadioButton todoscensos_radio;
+        private System.Windows.Forms.Button Reporte;
+        private System.Windows.Forms.ComboBox nivelEducativo_combo;
+        private System.Windows.Forms.RadioButton privada_radio;
+        private System.Windows.Forms.RadioButton publica_radio;
     }
 }

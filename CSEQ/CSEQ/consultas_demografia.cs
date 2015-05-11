@@ -36,9 +36,12 @@ namespace CSEQ
                 titulo.Text = "Estado Civil y Familia";
                 estadoCivil_combo.Visible = true;
             }
-                
             else if (index == 2)
+            {
                 titulo.Text = "Migración";
+                migracion_combo.Visible = true;
+            }
+                
         }
 
         private void close_picture_Click(object sender, EventArgs e)

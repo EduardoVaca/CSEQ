@@ -63,10 +63,17 @@ namespace CSEQ
         private void consulta_educacion_Load(object sender, EventArgs e)
         {
             Util.llenarComboBox(ID_censo, "SELECT * FROM Censo");
-            if (index == 0)
+            if (index == 0){
                 titulo.Text = "Comunicación y Lenguaje";
+                comunicacion_combo.Visible = true;
+            }
+
             else if (index == 1)
+            {
                 titulo.Text = "Nivel Educativo y Tipo de Educación";
+                nivelEducativo_combo.Visible = true;
+            }
+                
         }
 
         private void back_picture_MouseHover(object sender, EventArgs e)
@@ -77,6 +84,38 @@ namespace CSEQ
         private void back_picture_MouseLeave(object sender, EventArgs e)
         {
             Util.minimizarIconoAtras(back_picture);
+        }
+
+        private void nivelEducativo_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            eleccion_gp.Enabled = true;
+            Reporte.Enabled = true;
+
+            if (nivelEducativo_combo.SelectedIndex == 2)
+            {
+                nivelesEducativos_gp.Visible = true;
+            }
+            else
+            {
+                nivelesEducativos_gp.Visible = false;
+            }
+
+            if (nivelEducativo_combo.SelectedIndex == 3)
+            {
+                privada_radio.Visible = true;
+                publica_radio.Visible = true;
+            }
+            else
+            {
+                privada_radio.Visible = false;
+                publica_radio.Visible = false;
+            }
+        }
+
+        private void comunicacion_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            eleccion_gp.Enabled = true;
+            Reporte.Enabled = true;
         }
     }
 }
