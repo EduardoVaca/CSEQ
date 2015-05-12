@@ -398,54 +398,6 @@
             this.conEmpleo_radio.TabStop = true;
             this.conEmpleo_radio.Text = "Con Empleo";
             this.conEmpleo_radio.UseVisualStyleBackColor = false;
-            this.conEmpleo_radio.CheckedChanged += new System.EventHandler(this.conEmpleo_radio_CheckedChanged);
-            // 
-            // areaTrabajo_gp
-            // 
-            this.areaTrabajo_gp.BackColor = System.Drawing.Color.Transparent;
-            this.areaTrabajo_gp.Controls.Add(this.todaslasAreas_radio);
-            this.areaTrabajo_gp.Controls.Add(this.areaTrabajo_radio);
-            this.areaTrabajo_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaTrabajo_gp.ForeColor = System.Drawing.Color.White;
-            this.areaTrabajo_gp.Location = new System.Drawing.Point(520, 74);
-            this.areaTrabajo_gp.Margin = new System.Windows.Forms.Padding(2);
-            this.areaTrabajo_gp.Name = "areaTrabajo_gp";
-            this.areaTrabajo_gp.Padding = new System.Windows.Forms.Padding(2);
-            this.areaTrabajo_gp.Size = new System.Drawing.Size(144, 85);
-            this.areaTrabajo_gp.TabIndex = 87;
-            this.areaTrabajo_gp.TabStop = false;
-            this.areaTrabajo_gp.Text = "Con Empleo";
-            this.areaTrabajo_gp.Visible = false;
-            // 
-            // todaslasAreas_radio
-            // 
-            this.todaslasAreas_radio.AutoSize = true;
-            this.todaslasAreas_radio.BackColor = System.Drawing.Color.Transparent;
-            this.todaslasAreas_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todaslasAreas_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.todaslasAreas_radio.Location = new System.Drawing.Point(4, 54);
-            this.todaslasAreas_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.todaslasAreas_radio.Name = "todaslasAreas_radio";
-            this.todaslasAreas_radio.Size = new System.Drawing.Size(106, 20);
-            this.todaslasAreas_radio.TabIndex = 24;
-            this.todaslasAreas_radio.TabStop = true;
-            this.todaslasAreas_radio.Text = "Todas las Áreas";
-            this.todaslasAreas_radio.UseVisualStyleBackColor = false;
-            // 
-            // areaTrabajo_radio
-            // 
-            this.areaTrabajo_radio.AutoSize = true;
-            this.areaTrabajo_radio.BackColor = System.Drawing.Color.Transparent;
-            this.areaTrabajo_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.areaTrabajo_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.areaTrabajo_radio.Location = new System.Drawing.Point(4, 26);
-            this.areaTrabajo_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.areaTrabajo_radio.Name = "areaTrabajo_radio";
-            this.areaTrabajo_radio.Size = new System.Drawing.Size(129, 20);
-            this.areaTrabajo_radio.TabIndex = 22;
-            this.areaTrabajo_radio.TabStop = true;
-            this.areaTrabajo_radio.Text = "Por Área de Trabajo";
-            this.areaTrabajo_radio.UseVisualStyleBackColor = false;
             // 
             // sinEducacion_radio
             // 
