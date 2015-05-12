@@ -289,7 +289,6 @@ namespace CSEQ
             DataTable table;
             String query = consultaStoredProcedure(nombre, parametros);
             table = getData(query);
-           // MessageBox.Show(query);
             if (table != null)
                 grid.DataSource = table;
             else
@@ -488,7 +487,7 @@ namespace CSEQ
                 for (int i = 0; i < dt.Rows.Count; i++)
                     nombres[i] = dt.Rows[i].ItemArray[0].ToString();
                 // Configuramos la gráfica
-                graph.XAxis.MajorTic.IsBetweenLabels = true;
+                graph.XAxis.MajorTic.IsBetweenLabels = false;
                 graph.XAxis.Type = AxisType.Text;
                 graph.XAxis.Scale.TextLabels = nombres;
                 graph.XAxis.Scale.FontSpec.Size = 15.0F;
@@ -651,12 +650,13 @@ namespace CSEQ
             imgLogo.ScalePercent(10);
             imgLogo.SetAbsolutePosition(50,doc.PageSize.Height - 200);
             iTextSharp.text.Image imgGrafica = iTextSharp.text.Image.GetInstance("Grafica.png");
-            imgGrafica.Alignment = (int)(HorizontalAlignment.Center-(int)imgGrafica.Width);
             imgGrafica.ScalePercent(60);
+            imgGrafica.Alignment = 1;
             Paragraph titulo = new Paragraph("Censo de Población y Desarrollo Integral para Personas con Discapacidad Auditiva \n\n");
             titulo.Alignment = 1;
             titulo.Font.Size= 10f;
             doc.Add(titulo);
+            
             //Escritor de pdf, se utiliza para dibujar formas o mover texto a lugares especificos
             PdfContentByte Ob= writer.DirectContent;
             Ob.MoveTo(0, doc.PageSize.Height-60);
@@ -692,8 +692,10 @@ namespace CSEQ
             doc.Add(tabla);
             doc.Add(listaItems);
             doc.Add(new Paragraph(" "));
-            doc.Add(new Paragraph(" "));
             doc.Add( imgGrafica );
+
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph(" "));
 
             PdfContentByte cbPie;
             cbPie = writer.DirectContent;
