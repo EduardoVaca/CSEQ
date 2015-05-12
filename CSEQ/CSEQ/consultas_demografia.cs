@@ -198,7 +198,8 @@ namespace CSEQ
                             break;
                         case 4:
                             Reporte.Enabled = true;
-                            query = "CALL consultaPorLenguaDominantePorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                            query = "CALL consultaPorCadaLenguaDominantePorCenso(" + espanol_check.Checked.ToString() + "," + ingles_check.Checked.ToString() + ","
+                            + LSM_check.Checked.ToString() + "," + LSEUA_check.Checked.ToString() + "," + ID_censo.SelectedValue.ToString() + ");";
                             type = "Barra";
                             Util.graphData(zedGraph, query, type);
                             break;
@@ -288,7 +289,8 @@ namespace CSEQ
                                 break;
                             case 4:
                                 Reporte.Enabled = true;
-                                query = "CALL consultaPorLenguaDominante();";
+                                query = "CALL consultaPorCadaLenguaDominante(" + espanol_check.Checked.ToString() + "," + ingles_check.Checked.ToString() + "," + LSM_check.Checked.ToString() + ","
+                                         + LSEUA_check.Checked.ToString() + ");";
                                 type = "Barra";
                                 Util.graphData(zedGraph, query, type);
                                 break;
@@ -369,13 +371,13 @@ namespace CSEQ
         {
             if (todoscensos_radio.Checked)
             {
-                query = "CALL consultaGradoPerdidaAuditivaPorLenguaDominante(" + espanol_check.Checked.ToString() + "," + ingles_check.Checked.ToString() + ","
+                query = "CALL consultaPorCadaLenguaDominante(" + espanol_check.Checked.ToString() + "," + ingles_check.Checked.ToString() + ","
                             + LSM_check.Checked.ToString() + "," + LSEUA_check.Checked.ToString() + ");";
             }
             else
             {
-                query = "CALL consultaGradoPerdidaAuditivaPorLenguaDominantePorCenso(" + espanol_check.Checked.ToString() + "," + ingles_check.Checked.ToString() + ","
-                            + LSM_check.Checked.ToString() + "," + LSEUA_check.Checked.ToString() + ID_censo.SelectedValue.ToString() + ID_censo.SelectedValue.ToString() + ");";
+                query = "CALL consultaPorCadaLenguaDominantePorCenso(" + espanol_check.Checked.ToString() + "," + ingles_check.Checked.ToString() + ","
+                            + LSM_check.Checked.ToString() + "," + LSEUA_check.Checked.ToString()+ "," + ID_censo.SelectedValue.ToString() + ");";
             }
             Util.graphData(zedGraph, query, "Barra");
         }
@@ -419,5 +421,7 @@ namespace CSEQ
         {
 
         }
+
+
     }
 }
