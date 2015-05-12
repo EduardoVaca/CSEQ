@@ -289,7 +289,6 @@ namespace CSEQ
             DataTable table;
             String query = consultaStoredProcedure(nombre, parametros);
             table = getData(query);
-           // MessageBox.Show(query);
             if (table != null)
                 grid.DataSource = table;
             else

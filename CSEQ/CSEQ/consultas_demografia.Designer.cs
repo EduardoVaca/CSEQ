@@ -217,6 +217,7 @@
             this.ID_censo.Name = "ID_censo";
             this.ID_censo.Size = new System.Drawing.Size(82, 29);
             this.ID_censo.TabIndex = 21;
+            this.ID_censo.SelectionChangeCommitted += new System.EventHandler(this.ID_censo_SelectionChangeCommitted);
             // 
             // todoscensos_radio
             // 
@@ -599,6 +600,8 @@
             // 
             this.viudo_check.AutoSize = true;
             this.viudo_check.BackColor = System.Drawing.Color.Transparent;
+            this.viudo_check.Checked = true;
+            this.viudo_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viudo_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viudo_check.ForeColor = System.Drawing.Color.White;
             this.viudo_check.Location = new System.Drawing.Point(3, 90);
@@ -608,11 +611,14 @@
             this.viudo_check.TabIndex = 101;
             this.viudo_check.Text = "Viudo(a)";
             this.viudo_check.UseVisualStyleBackColor = false;
+            this.viudo_check.CheckedChanged += new System.EventHandler(this.viudo_check_CheckedChanged);
             // 
             // divorciado_check
             // 
             this.divorciado_check.AutoSize = true;
             this.divorciado_check.BackColor = System.Drawing.Color.Transparent;
+            this.divorciado_check.Checked = true;
+            this.divorciado_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.divorciado_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.divorciado_check.ForeColor = System.Drawing.Color.White;
             this.divorciado_check.Location = new System.Drawing.Point(3, 68);
@@ -622,11 +628,14 @@
             this.divorciado_check.TabIndex = 100;
             this.divorciado_check.Text = "Divorciado(a)";
             this.divorciado_check.UseVisualStyleBackColor = false;
+            this.divorciado_check.CheckedChanged += new System.EventHandler(this.divorciado_check_CheckedChanged);
             // 
             // casado_check
             // 
             this.casado_check.AutoSize = true;
             this.casado_check.BackColor = System.Drawing.Color.Transparent;
+            this.casado_check.Checked = true;
+            this.casado_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.casado_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.casado_check.ForeColor = System.Drawing.Color.White;
             this.casado_check.Location = new System.Drawing.Point(3, 46);
@@ -636,11 +645,14 @@
             this.casado_check.TabIndex = 99;
             this.casado_check.Text = "Casado(a)";
             this.casado_check.UseVisualStyleBackColor = false;
+            this.casado_check.CheckedChanged += new System.EventHandler(this.casado_check_CheckedChanged);
             // 
             // soltero_check
             // 
             this.soltero_check.AutoSize = true;
             this.soltero_check.BackColor = System.Drawing.Color.Transparent;
+            this.soltero_check.Checked = true;
+            this.soltero_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.soltero_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soltero_check.ForeColor = System.Drawing.Color.White;
             this.soltero_check.Location = new System.Drawing.Point(3, 23);
@@ -650,6 +662,7 @@
             this.soltero_check.TabIndex = 98;
             this.soltero_check.Text = "Soltero(a)";
             this.soltero_check.UseVisualStyleBackColor = false;
+            this.soltero_check.CheckedChanged += new System.EventHandler(this.soltero_check_CheckedChanged);
             // 
             // sinHijos_radio
             // 
@@ -743,6 +756,7 @@
             this.migracion_combo.Size = new System.Drawing.Size(250, 29);
             this.migracion_combo.TabIndex = 105;
             this.migracion_combo.Visible = false;
+            this.migracion_combo.SelectionChangeCommitted += new System.EventHandler(this.migracion_combo_SelectionChangeCommitted);
             // 
             // zedGraph
             // 
@@ -770,12 +784,11 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 535);
-            this.Controls.Add(this.lenguaDom_gp);
+            this.Controls.Add(this.estadoCivil_gp);
             this.Controls.Add(this.zedGraph);
             this.Controls.Add(this.hijos_gp);
             this.Controls.Add(this.sinHijos_radio);
             this.Controls.Add(this.conHijos_radio);
-            this.Controls.Add(this.estadoCivil_gp);
             this.Controls.Add(this.sinEducacion_radio);
             this.Controls.Add(this.empleo_gp);
             this.Controls.Add(this.conEducacion_radio);
@@ -784,7 +797,6 @@
             this.Controls.Add(this.eleccion_gp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Reporte);
-            this.Controls.Add(this.generales_combo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.titulo);
             this.Controls.Add(this.logout);
@@ -792,6 +804,8 @@
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.migracion_combo);
             this.Controls.Add(this.estadoCivil_combo);
+            this.Controls.Add(this.lenguaDom_gp);
+            this.Controls.Add(this.generales_combo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

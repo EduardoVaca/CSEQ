@@ -38,9 +38,13 @@ namespace CSEQ
                 titulo.Text = "Estado Civil y Familia";
                 estadoCivil_combo.Visible = true;
             }
-                
+
             else if (index == 2)
+            {
                 titulo.Text = "Migración";
+                migracion_combo.Visible = true; 
+            }
+               
         }
 
         private void close_picture_Click(object sender, EventArgs e)
@@ -81,11 +85,19 @@ namespace CSEQ
             Util.minimizarIconoAtras(back_picture);
         }
 
+        private void migracion_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            eleccion_gp.Enabled = true;
+            Reporte.Enabled = true;
+            todoscensos_radio.Checked = true;
+
+        }
+
         private void generales_combo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             eleccion_gp.Enabled = true;
             Reporte.Enabled = true;
-
+            todoscensos_radio.Checked = true;
             if (generales_combo.SelectedIndex == 3)
             {
                 edades_gp.Visible = true;
@@ -148,6 +160,8 @@ namespace CSEQ
                 conHijos_radio.Visible = true;
                 sinHijos_radio.Visible = true;
             }
+            todoscensos_radio.Checked = !todoscensos_radio.Checked;
+            todoscensos_radio.Checked = !todoscensos_radio.Checked;
         }
 
         private void conHijos_radio_CheckedChanged(object sender, EventArgs e)
@@ -158,6 +172,96 @@ namespace CSEQ
         private void sinHijos_radio_CheckedChanged(object sender, EventArgs e)
         {
             hijos_gp.Visible = false;
+        }
+
+        private void ID_censo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            todoscensos_radio.Checked = false;
+            String type;
+            switch (index)
+            {
+                case 0:
+                    switch (generales_combo.SelectedIndex)
+                    {
+                        case 0:
+                            Reporte.Enabled = true;
+                            query = "CALL consultaPorEstadoPorCenso("+ID_censo.SelectedValue.ToString()+");";
+                            type = "Barra";
+                            Util.graphData(zedGraph, query, type);
+                            break;
+                        case 1:
+                            Reporte.Enabled = true;
+                            query = "CALL consultaPorMunicipioPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                            type = "Barra";
+                            Util.graphData(zedGraph, query, type);
+                            break;
+                        case 2:
+                            Reporte.Enabled = true;
+                            query = "CALL consultaHombresMujeresPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                            type = "Barra";
+                            Util.graphData(zedGraph, query, type);
+                            break;
+                        case 3:
+                            Reporte.Enabled = true;
+                            //query = "CALL consultaPorEdad();";
+                            type = "Barra";
+                            //Util.graphData(zedGraph, query, type);
+                            break;
+                        case 4:
+                            Reporte.Enabled = true;
+                            query = "CALL consultaPorLenguaDominantePorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                            type = "Barra";
+                            Util.graphData(zedGraph, query, type);
+                            break;
+                        case 5:
+                            Reporte.Enabled = true;
+                            query = "CALL consultaTienenEmpleoPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                            type = "Barra";
+                            Util.graphData(zedGraph, query, type);
+                            break;
+                        case 6:
+                            Reporte.Enabled = true;
+                            query = "CALL consultaPersonasPorCensoPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                            type = "Barra";
+                            Util.graphData(zedGraph, query, type);
+                            break;
+                    }
+                    break;
+                case 1:
+                    switch (estadoCivil_combo.SelectedIndex)
+                    {
+                        case 0:
+                            Reporte.Enabled = true;
+                            query = "CALL consultaPorCadaEstadoCivilPorCenso(" + soltero_check.Checked + "," + casado_check.Checked + "," + divorciado_check.Checked + "," + viudo_check.Checked + "," + ID_censo.SelectedValue.ToString() + ")";
+                            type = "Barra";
+                            Util.graphData(zedGraph, query, type);
+                            break;
+                        case 1:
+                            Reporte.Enabled = true;
+                            query = "CALL consultaHijosPorCenso(" + ID_censo.SelectedValue.ToString() + ")";
+                            type = "Barra";
+                            Util.graphData(zedGraph, query, type);
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch (migracion_combo.SelectedIndex)
+                    {
+                        case 0:
+                            Reporte.Enabled = true;
+                            query = "";
+                            type = "Barra";
+                            //Util.graphData(zedGraph, query, type);
+                            break;
+                        case 1:
+                            Reporte.Enabled = true;
+                            query = "CALL ";
+                            type = "Barra";
+                            //Util.graphData(zedGraph, query, type);
+                            break;
+                    }
+                    break;
+            }
         }
 
         private void todoscensos_radio_CheckedChanged(object sender, EventArgs e)
@@ -212,12 +316,40 @@ namespace CSEQ
                                 Util.graphData(zedGraph, query, type);
                                 break;
                         }
-                        break;
+                        break;  
                     case 1:
-
+                        switch (estadoCivil_combo.SelectedIndex)
+                        {
+                            case 0:
+                                Reporte.Enabled = true;
+                                query = "CALL consultaPorCadaEstadoCivil(" + soltero_check.Checked + "," + casado_check.Checked + "," + divorciado_check.Checked + "," + viudo_check.Checked + ");";
+                                type = "Barra";
+                                Util.graphData(zedGraph, query, type);
+                                break;
+                            case 1:
+                                Reporte.Enabled = true;
+                                query = "CALL consultaHijos();";
+                                type = "Barra";
+                                Util.graphData(zedGraph, query, type);
+                                break;
+                        }
                         break;
                     case 2:
-
+                        switch (migracion_combo.SelectedIndex)
+                        {
+                            case 0:
+                                Reporte.Enabled = true;
+                                query = "";
+                                type = "Barra";
+                                //Util.graphData(zedGraph, query, type);
+                                break;
+                            case 1:
+                                Reporte.Enabled = true;
+                                query = "CALL ";
+                                type = "Barra";
+                                //Util.graphData(zedGraph, query, type);
+                                break;
+                        }
                         break;
                 }
             }
@@ -258,5 +390,41 @@ namespace CSEQ
             }
             Util.graphData(zedGraph, query, "Barra");
         }
+
+        private void soltero_check_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCivil();
+        }
+
+        private void casado_check_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCivil();
+        }
+
+        private void divorciado_check_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCivil();
+        }
+
+        private void viudo_check_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaCivil();
+        }
+
+        private void actualizaCivil()
+        {
+            if (todoscensos_radio.Checked)
+            {
+                query = "CALL consultaPorCadaEstadoCivil(" + soltero_check.Checked + "," + casado_check.Checked + "," + divorciado_check.Checked + "," + viudo_check.Checked + ")";
+            }
+            else
+            {
+                query = "CALL consultaPorCadaEstadoCivilPorCenso(" + soltero_check.Checked + "," + casado_check.Checked + "," + divorciado_check.Checked + "," + viudo_check.Checked + "," + ID_censo.SelectedValue.ToString() + ");";
+            }
+            Util.graphData(zedGraph, query, "Barra");
+        }
+
+        
+        
     }
 }
