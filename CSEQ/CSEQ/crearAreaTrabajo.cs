@@ -114,7 +114,7 @@ namespace CSEQ
         /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
-            String aNombre = nombreArea_txt.Text;
+            String aNombre = nombre_txt.Text;
 
             if (Util.executeStoredProcedure("registrarAreaTrabajo", aNombre))
             {
@@ -126,7 +126,7 @@ namespace CSEQ
         /*Metodo que modifica un registro en la Base*/
         private void modificar_pb_Click(object sender, EventArgs e)
         {
-            String nombreNuevo = nombreArea_txt.Text;
+            String nombreNuevo = nombre_txt.Text;
             DialogResult respuesta;
             respuesta = MessageBox.Show("¿Desea modificar Area de trabajo: " + nombre_selected + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);

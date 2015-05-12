@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelAreaTrabajo = new System.Windows.Forms.Label();
-            this.nombreArea_txt = new System.Windows.Forms.TextBox();
+            this.nombre_txt = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.close_picture = new System.Windows.Forms.PictureBox();
             this.atras_picture = new System.Windows.Forms.PictureBox();
@@ -80,15 +80,15 @@
             this.labelAreaTrabajo.TabIndex = 23;
             this.labelAreaTrabajo.Text = "Área de trabajo";
             // 
-            // nombreArea_txt
+            // nombre_txt
             // 
-            this.nombreArea_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreArea_txt.Location = new System.Drawing.Point(248, 423);
-            this.nombreArea_txt.Margin = new System.Windows.Forms.Padding(24, 23, 24, 23);
-            this.nombreArea_txt.MaximumSize = new System.Drawing.Size(3172, 40);
-            this.nombreArea_txt.Name = "nombreArea_txt";
-            this.nombreArea_txt.Size = new System.Drawing.Size(487, 54);
-            this.nombreArea_txt.TabIndex = 24;
+            this.nombre_txt.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_txt.Location = new System.Drawing.Point(248, 423);
+            this.nombre_txt.Margin = new System.Windows.Forms.Padding(24, 23, 24, 23);
+            this.nombre_txt.MaximumSize = new System.Drawing.Size(3172, 40);
+            this.nombre_txt.Name = "nombre_txt";
+            this.nombre_txt.Size = new System.Drawing.Size(487, 54);
+            this.nombre_txt.TabIndex = 24;
             // 
             // labelNombre
             // 
@@ -366,7 +366,7 @@
             this.Controls.Add(this.atras_picture);
             this.Controls.Add(this.close_picture);
             this.Controls.Add(this.labelNombre);
-            this.Controls.Add(this.nombreArea_txt);
+            this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.labelAreaTrabajo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -396,7 +396,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelAreaTrabajo;
-        private System.Windows.Forms.TextBox nombreArea_txt;
+        private System.Windows.Forms.TextBox nombre_txt;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.PictureBox close_picture;
         private System.Windows.Forms.PictureBox atras_picture;
