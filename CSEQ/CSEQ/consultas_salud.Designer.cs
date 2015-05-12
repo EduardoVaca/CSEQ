@@ -62,6 +62,7 @@
             this.mixta_checkbox = new System.Windows.Forms.CheckBox();
             this.retro_checkbox = new System.Windows.Forms.CheckBox();
             this.no_Sabe_checkbox = new System.Windows.Forms.CheckBox();
+            this.profunda_checkbox = new System.Windows.Forms.CheckBox();            
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();

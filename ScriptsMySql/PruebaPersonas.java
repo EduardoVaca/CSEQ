@@ -342,7 +342,7 @@ public class PruebaPersonas{
 		prueba.hashMapEmpleos();
 		prueba.hashMapCompanias();
 		Boolean sexo;
-		int numero_registros = 100;
+		int numero_registros = 500;
 
 		while(numero_registros > 0){
 			numero_registros--;

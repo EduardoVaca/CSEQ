@@ -165,6 +165,11 @@
             // 
             // busqueda_grid
             // 
+            this.busqueda_grid.AllowUserToAddRows = false;
+            this.busqueda_grid.AllowUserToDeleteRows = false;
+            this.busqueda_grid.AllowUserToOrderColumns = true;
+            this.busqueda_grid.AllowUserToResizeColumns = false;
+            this.busqueda_grid.AllowUserToResizeRows = false;
             this.busqueda_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.busqueda_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             this.busqueda_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;

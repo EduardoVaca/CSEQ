@@ -69,5 +69,33 @@ namespace CSEQ
         {
             Util.minimizarIconoAtras(back_picture);
         }
+
+        private void generales_combo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            eleccion_gp.Enabled = true;
+            Reporte.Enabled = true;
+
+            if (generales_combo.SelectedIndex == 0)
+            {
+                conEmpleo_radio.Visible = true;
+                sinEmpleo_radio.Visible = true;
+            }
+            else
+            {
+                conEmpleo_radio.Visible = false;
+                sinEmpleo_radio.Visible = false;
+                areaTrabajo_gp.Visible = false;
+            }
+        }
+
+        private void conEmpleo_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            areaTrabajo_gp.Visible = true;
+        }
+
+        private void sinEmpleo_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            areaTrabajo_gp.Visible = false;
+        }
     }
 }

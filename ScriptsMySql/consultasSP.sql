@@ -1412,3 +1412,232 @@ BEGIN
 	GROUP BY e.nombre;
 END //
 DELIMITER ;
+
+
+-- Consulta por cada tipo de pérdida de audición...
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaTipoPerdidaAuditiva
+(IN conductiva boolean, neurosensorial boolean, mixta boolean, retrococlear boolean, noSe boolean)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE perdidaConduct VARCHAR(50);
+	DECLARE perdidaNeuro VARCHAR(50);
+	DECLARE perdidaMixta VARCHAR(50);
+	DECLARE perdidaRetro VARCHAR(50);
+	DECLARE perdidaNoSe VARCHAR(50);
+
+	SET perdidaConduct = ' ', perdidaNeuro = ' ', perdidaMixta = ' ', perdidaRetro = ' ', perdidaNoSe = ' ';
+
+	IF (conductiva)
+	THEN
+		SET perdidaConduct = 'Pérdida Auditiva Conductiva';
+	END IF;
+
+	IF (neurosensorial)
+	THEN
+		SET perdidaNeuro = 'Pérdida Auditiva Neurosensorial';
+	END IF;
+
+	IF (mixta)
+	THEN
+		SET perdidaMixta = 'Pérdida Auditiva Mixta';
+	END IF;
+
+	IF (retrococlear)
+	THEN
+		SET perdidaRetro = 'Pérdida Auditiva Retrococlear';
+	END IF;
+
+	IF (noSe)
+	THEN
+		SET perdidaNoSe = 'No lo sé';
+	END IF;
+
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT tipo as 'Tipo de pérdida', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM TienePerdidaAuditiva t, PerdidaAuditiva p
+	WHERE p.ID_perdidaAuditiva = t.ID_perdidaAuditiva AND p.tipo IN (perdidaConduct, perdidaNeuro, perdidaMixta, perdidaRetro, perdidaNoSe)
+	GROUP BY tipo;
+
+END //
+DELIMITER ;
+
+
+-- Consulta por cada tipo de pérdida auditiva por censo
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaTipoPerdidaAuditivaPorCenso
+(IN conductiva boolean, neurosensorial boolean, mixta boolean, retrococlear boolean, noSe boolean, censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE perdidaConduct VARCHAR(50);
+	DECLARE perdidaNeuro VARCHAR(50);
+	DECLARE perdidaMixta VARCHAR(50);
+	DECLARE perdidaRetro VARCHAR(50);
+	DECLARE perdidaNoSe VARCHAR(50);
+
+	SET perdidaConduct = ' ', perdidaNeuro = ' ', perdidaMixta = ' ', perdidaRetro = ' ', perdidaNoSe = ' ';
+
+	IF (conductiva)
+	THEN
+		SET perdidaConduct = 'Pérdida Auditiva Conductiva';
+	END IF;
+
+	IF (neurosensorial)
+	THEN
+		SET perdidaNeuro = 'Pérdida Auditiva Neurosensorial';
+	END IF;
+
+	IF (mixta)
+	THEN
+		SET perdidaMixta = 'Pérdida Auditiva Mixta';
+	END IF;
+
+	IF (retrococlear)
+	THEN
+		SET perdidaRetro = 'Pérdida Auditiva Retrococlear';
+	END IF;
+
+	IF (noSe)
+	THEN
+		SET perdidaNoSe = 'No lo sé';
+	END IF;
+
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT p.Tipo AS 'Tipo de perdida', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM TienePerdidaAuditiva t, PerdidaAuditiva p
+	WHERE p.ID_perdidaAuditiva = t.ID_perdidaAuditiva AND t.ID_censo = censo AND p.tipo IN (perdidaConduct, perdidaNeuro, perdidaMixta, perdidaRetro, perdidaNoSe)
+	GROUP BY p.Tipo;
+
+END //
+DELIMITER ;
+
+
+
+
+-- Consulta que muestra cuantos niños(de 0 a 10 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadNinos
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad >= 0 AND Edad <= 10;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos niños(de 0 a 10 years) estan registrados en un censo determinado
+DELIMITER //
+CREATE PROCEDURE consultaEdadNinosPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad >= 0 AND Edad <= 10;
+END //
+DELIMITER ;
+
+
+-- Consulta que muestra cuantos adolescentes(de 11 a 20 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdolescentes
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad > 10 AND Edad <= 20;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos adolescentes(de 11 a 20 years) estan registrados en un censo determinado
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdolescentesPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad > 10 AND Edad <= 20;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos adultos jovenes (21 a 40 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdultosJovenes
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad > 20 AND Edad <= 40;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos adultos jovenes (21 a 40 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdultosJovenesPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad > 20 AND Edad <= 40;
+END //
+DELIMITER ;
+
+
+-- Consulta que muestra cuantos adultos mayores (41 a 60 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdultosMayores
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad > 40 AND Edad <= 60;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos adultos mayores (41 a 60 years) estan registrados en un censo en especifico
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdultosMayoresPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad > 40 AND Edad <= 60;
+END //
+DELIMITER ;
+
+
+-- Consulta que muestra cuantos ancianos ( 60 a + years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAncianos
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad > 60;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos ancianos(60 a + years) estan registrados en un censo en especifico
+DELIMITER //
+CREATE PROCEDURE consultaEdadAncianosPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad > 60;
+END //
+DELIMITER ;
