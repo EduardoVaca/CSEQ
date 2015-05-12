@@ -711,7 +711,7 @@ BEGIN
 	START TRANSACTION;		
 		SELECT ID_aparatoAuditivo INTO IDaparatoObtenido FROM AparatoAuditivo WHERE tipo = tipoA AND ID_marca = ID_marcaA;
 		UPDATE AparatoAuditivo SET tipo = tipoNuevo, ID_marca = ID_marcaNuevo
-		WHERE ID_aparatoAuditivo = IDaparatoObtenido;
+		WHERE tipo = TipoA AND ID_marca = ID_marcaA;
 	COMMIT;
 END //
 DELIMITER ;
@@ -724,7 +724,8 @@ BEGIN
 	START TRANSACTION;
 		CALL registrarCenso(IDcensoNuevo);
 		UPDATE PerteneceCenso SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
-		UPDATE VIVE SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+		UPDATE Persona SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
+		UPDATE Vive SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
 		UPDATE TieneNivelEducativo SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
 		UPDATE Gana SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;
 		UPDATE TieneLenguaDominante SET ID_censo = IDcensoNuevo WHERE ID_censo = IDcenso;

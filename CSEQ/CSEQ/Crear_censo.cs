@@ -74,6 +74,7 @@ namespace CSEQ
                 modificar_pb.Enabled = true; //activacion de botones
                 eliminar_pb.Enabled = true;
                 censo_selected = Convert.ToInt16(busqueda_grid.Rows[e.RowIndex].Cells[0].Value);
+                ano_txt.Text = censo_selected.ToString();
                 String sqlActiveRow = "SELECT * FROM Censo WHERE ";
                 sqlActiveRow += " ID_censo = '" + censo_selected + "';";
                 Util.showData(this, sqlActiveRow);
