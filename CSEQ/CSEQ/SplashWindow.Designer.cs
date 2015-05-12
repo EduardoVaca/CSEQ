@@ -56,7 +56,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::CSEQ.Properties.Resources.SplashWindow2;
+            this.BackgroundImage = global::CSEQ.Properties.Resources.SlpashWindow;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.label1);
