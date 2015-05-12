@@ -386,6 +386,11 @@
             // 
             // busqueda_grid
             // 
+            this.busqueda_grid.AllowUserToAddRows = false;
+            this.busqueda_grid.AllowUserToDeleteRows = false;
+            this.busqueda_grid.AllowUserToOrderColumns = true;
+            this.busqueda_grid.AllowUserToResizeColumns = false;
+            this.busqueda_grid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(175)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;

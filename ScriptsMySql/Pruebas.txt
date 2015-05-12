@@ -1,200 +1,1000 @@
-CALL registrarPersonaCOMPLETO('C7LT0CA1CLD47EXA0C','Fernada Peña Nieto Rincon','1990-4-7',false,'95024983','','',false,false,false,false,true,false,false,3,2010,3,4,8,2,1857,4,4,4,3,'Recibidor de quejas','iCorp','','1598859187','',true,7,2,7,3,true,1,false,3,4,1397,false,false);
+CALL registrarPersonaCOMPLETO('EE2W8CFCFCLF71CAVV','Maru Choco Roles Jirafa','1986-2-7',false,'1703695364','','',true,false,true,true,true,false,true,3,2012,6,4,9,1,1862,4,4,4,1,'Mantenimiento de  servidores','Tec de Monterrey','','1351417858','',true,6,3,4,2,true,1,true,4,4,1515,false,false);
 
-CALL registrarPersonaCOMPLETO('F983MFHPR1EXPDCMSA','Saul Hernandez Jirazol','1989-5-19',true,'1250944397','','',true,true,false,true,false,true,true,3,2010,4,3,4,1,1850,4,4,2,2,'Secretario de planta','Bombardier','','464417459','',false,3,3,4,1,false,4,true,7,1,1875,true,false);
+CALL registrarPersonaCOMPLETO('SACFYALGABYO15K66Y','Beto Baca Cerrujo','1973-10-6',true,'334737658','','',true,true,true,false,false,true,false,3,2011,8,1,1,2,1863,3,2,2,2,'Secretario de planta','Bombardier','','1394367341','',true,3,3,8,5,false,1,true,4,5,2328,true,false);
 
-CALL registrarPersonaCOMPLETO('5MF8F064N5X8CT7OO8','Chicharron Venado Rincon','1960-10-6',true,'992253025','','',true,true,true,true,true,true,false,7,2010,10,3,5,1,1858,1,1,2,1,'Atencion a clientes','Cinemex','','312516876','',false,8,3,9,2,false,1,true,7,4,1824,true,false);
+CALL registrarPersonaCOMPLETO('3FK74EF5WFOAHUTD6V','Plutarco Serrano Ojeda','1987-1-2',true,'219757622','','',false,false,true,true,false,false,true,3,2012,5,4,4,3,1851,3,2,4,4,'Conserge de piso','Mazda','','764542228','',false,8,1,8,2,true,2,true,5,3,1368,true,false);
 
-CALL registrarPersonaCOMPLETO('AU9DVDQ91WFF8GE1DE','Sofia Marinela Baca','1954-7-7',false,'19764338','','',false,false,true,true,false,false,true,5,2012,1,1,1,4,1851,2,3,1,4,'Guardia de seguridad','McDonalds','','215951656','',false,8,3,11,3,true,2,true,8,5,1625,false,true);
+CALL registrarPersonaCOMPLETO('FE0D1OYC36BTPB114C','Jose Corral Oceano','1987-7-14',true,'1450684945','','',true,false,false,true,false,true,true,5,2011,3,3,4,2,1862,4,3,3,3,'Generador de cotizaciones','Cinemex','','95321708','',true,6,3,3,5,true,1,true,7,3,193,false,false);
 
-CALL registrarPersonaCOMPLETO('C4OKLJ51S80EW0L1BQ','Javier Luciernaga Jirafa','1968-11-1',true,'1913113658','','',false,false,false,true,true,false,true,2,2012,11,3,5,3,1852,2,1,2,4,'Agendar eventos','Mazda','','2074800945','',false,8,2,3,5,true,5,false,5,6,396,false,true);
+CALL registrarPersonaCOMPLETO('LAAA3E8HC3VEU2D2OL','Antonio Lagones Rincon','1981-1-24',true,'1190434892','','',true,false,true,false,true,true,true,4,2011,11,1,9,3,1864,4,2,4,2,'Agendar eventos','Toyota','','1727027988','',true,4,1,8,3,false,5,true,7,1,1393,false,true);
 
-CALL registrarPersonaCOMPLETO('5RMJJGO50A4P4A9VRT','Ximena Gutierrez Betral','1976-7-13',false,'574744231','','',false,true,false,false,true,true,true,3,2010,2,4,5,3,1854,1,3,4,4,'Generacion de imagenes publicitarias','Bombardier','','1363373570','',true,7,3,1,3,true,3,false,5,3,1475,false,false);
+CALL registrarPersonaCOMPLETO('E99DTT1CXMLDKU9FSV','Guadalupe Betral Ribas','1971-11-4',false,'1410143569','','',false,false,false,false,false,true,false,2,2012,6,1,2,1,1861,3,4,3,4,'Generador de cotizaciones','Toyota','','1762062103','',true,6,2,7,4,false,5,true,7,2,2570,true,true);
 
-CALL registrarPersonaCOMPLETO('NUFKDJ37WN89VA3WOF','Isabella Cardenas Murcer','1966-5-19',false,'2052449815','','',true,false,false,false,true,false,false,2,2010,2,1,5,4,1860,3,4,4,4,'Registrar contactos de agenda','Cinemex','','1950957565','',true,6,3,7,1,true,3,false,2,2,2123,true,true);
+CALL registrarPersonaCOMPLETO('RFEEN6DGEFE2UBBWAA','America Peña Nieto Baca','1994-1-17',false,'597843973','','',false,false,false,false,false,true,true,5,2010,5,4,3,4,1859,4,4,1,1,'Generador de cotizaciones','McDonalds','','838960075','',true,7,2,1,2,false,1,false,2,4,2805,true,false);
 
-CALL registrarPersonaCOMPLETO('C5BRU9KAD35O9WCI4S','Jamon Lagones Hidalgo','1995-10-20',true,'1067281552','','',false,true,true,true,true,true,false,3,2012,9,3,5,1,1862,1,3,3,4,'Secretario de planta','PNG','','1501587650','',false,8,1,4,4,false,3,true,2,1,1470,true,false);
+CALL registrarPersonaCOMPLETO('C6DP0BM0AGEF9R26FF','Ileana Cardenas Gonzalez','1954-3-19',false,'1680320948','','',false,false,true,false,true,true,true,3,2012,7,3,5,4,1850,1,4,3,2,'Generacion de imagenes publicitarias','Imagination','','1684519737','',false,3,3,11,1,true,1,false,4,2,2177,false,true);
 
-CALL registrarPersonaCOMPLETO('3PIQAWMDRF9ALCP3J5','Ricardo Wesley Gonzalez','1998-1-3',true,'1095203255','','',false,false,true,false,true,false,false,6,2011,10,1,5,2,1861,2,4,2,2,'Vigilante nocturno','McDonalds','','451557778','',false,7,1,10,4,false,5,true,1,5,2662,true,false);
+CALL registrarPersonaCOMPLETO('YACCJ0CCO88P32FPLS','Pabel Quesos Gutierrez','1964-4-23',true,'1111840716','','',true,false,true,false,false,true,true,6,2012,3,4,9,3,1855,4,4,1,3,'Evaluador de proyectos','iCorp','','2121978162','',false,8,2,9,5,false,1,false,5,1,1428,true,false);
 
-CALL registrarPersonaCOMPLETO('B3E6YMNCDY0C9WED8D','Juana Dragone Choco Roles','1952-11-20',false,'798777620','','',true,true,true,false,true,true,true,5,2010,4,1,2,1,1862,4,2,1,1,'Generacion de imagenes publicitarias','Imagination','','552191261','',false,6,3,8,5,false,5,true,1,1,2247,true,false);
+CALL registrarPersonaCOMPLETO('JQATVCQ5WCVLICTGKG','Europa Luciernaga Jirafa','1995-1-14',false,'1659816676','','',true,true,true,true,false,false,false,6,2011,4,1,2,4,1856,1,4,2,4,'Conserge de piso','Imagination','','2094140233','',false,4,1,7,2,true,2,false,5,1,1027,false,false);
 
-CALL registrarPersonaCOMPLETO('H9ITGDGGAGN6NHLCXQ','Julian Rincon Willliam Primero Del la Fila','1981-9-24',true,'959180835','','',false,true,false,true,false,true,false,6,2012,7,3,8,3,1859,2,4,2,4,'Capturador de datos','Toyota','','1852332914','',false,5,1,5,5,false,3,false,7,1,2827,true,false);
+CALL registrarPersonaCOMPLETO('IDFY0X85WRA4UPFI2A','Luis Guerra Betral','1998-3-16',true,'1409278730','','',true,true,true,true,false,false,false,8,2012,10,3,4,2,1856,2,3,4,2,'Vigilante nocturno','Palacio de Hierro','','1164424083','',true,7,3,10,5,true,5,true,4,5,2209,false,false);
 
-CALL registrarPersonaCOMPLETO('83EDUXIR3ASG86DSKE','Clericot Ezquivel Lagones','1979-4-4',false,'258328846','','',false,true,true,false,false,true,false,4,2010,2,4,1,4,1855,2,3,2,2,'Generador de cotizaciones','Soriana','','408026669','',true,7,1,5,2,false,3,true,5,4,3013,false,false);
+CALL registrarPersonaCOMPLETO('J7XBFCJAHFOCSACQBK','Carmela Jirafa Rodriguez','1969-7-5',false,'428244125','','',true,false,false,true,true,true,false,3,2011,6,4,9,4,1856,1,4,4,1,'Agendar eventos','General Electric','','160421591','',true,3,1,7,3,false,1,false,6,6,2419,false,false);
 
-CALL registrarPersonaCOMPLETO('BOOCQXXC7PCWFHMNWU','Isabella Cerdo Hidalgo','1970-12-13',false,'916296259','','',false,false,false,true,true,true,true,5,2010,10,4,1,3,1861,4,2,2,2,'Recibidor de quejas','McDonalds','','1816171744','',true,2,2,7,1,false,1,true,5,3,2227,true,false);
+CALL registrarPersonaCOMPLETO('Y44EK1HPCGC5RQG2RM','Pinguin Tumbas Ribas','1991-1-27',true,'306532592','','',false,true,true,true,true,false,true,8,2012,6,4,6,3,1860,1,1,3,2,'Vigilante nocturno','Soriana','','476678634','',true,7,1,6,3,false,5,true,2,6,2709,false,false);
 
-CALL registrarPersonaCOMPLETO('HKENXNVGY5XXCEHPQC','Cecilia Huges Serrano','1953-7-21',false,'922568563','','',false,true,true,true,false,false,true,5,2012,2,2,8,3,1854,4,3,2,3,'Mantenimiento de  servidores','Tec de Monterrey','','1398701578','',false,5,1,9,2,true,3,false,4,3,2818,true,true);
+CALL registrarPersonaCOMPLETO('5BEODQFJBCHANTC1BM','Hermenejildo Gutierrez Hernandez','1978-4-22',true,'1159809388','','',true,false,true,false,true,false,false,4,2010,3,3,9,1,1851,1,3,3,1,'Agendar eventos','Bombardier','','1824661200','',true,6,2,8,2,false,1,true,6,2,2810,false,true);
 
-CALL registrarPersonaCOMPLETO('GVWH2M9HLAQXGSS508','Clericot Ojeda Rojo','1986-12-6',false,'1316527111','','',false,false,false,true,false,true,true,2,2012,2,4,9,2,1850,1,2,2,4,'Agendar eventos','Mazda','','1264450571','',false,3,3,8,2,false,2,true,4,2,466,true,true);
+CALL registrarPersonaCOMPLETO('AFUXD8GMNCGCEK51GV','Susana Jernation Huges','1988-3-15',false,'323689068','','',false,false,true,true,true,false,false,6,2011,2,1,7,2,1857,4,1,4,1,'Generacion de imagenes publicitarias','Imagination','','446131729','',true,3,1,2,1,true,5,true,1,6,572,false,true);
 
-CALL registrarPersonaCOMPLETO('9MQEBBH1SPRNAWCK3D','Chicharron Quesos Huges','1987-1-24',true,'216013313','','',true,true,true,false,false,true,false,2,2012,5,4,9,3,1854,2,4,2,2,'Generador de cotizaciones','Palacio de Hierro','','2106606589','',false,7,1,11,4,true,1,true,4,1,2066,true,true);
+CALL registrarPersonaCOMPLETO('G54TPABERBRXETO960','Galaxia Rincon Cuevas','1999-11-24',false,'1092887341','','',true,true,false,false,true,false,true,4,2012,11,3,8,2,1854,4,2,3,4,'Guardia de seguridad','Tec de Monterrey','','479484630','',true,3,3,4,4,false,5,false,4,2,696,false,false);
 
-CALL registrarPersonaCOMPLETO('7GNNIWFC5U8LUASWTE','Pedro Corral Jernation','1978-7-18',true,'1635756693','','',false,false,false,false,false,false,false,5,2012,10,3,5,3,1858,4,2,3,4,'Generador de cotizaciones','Toyota','','208758733','',true,4,1,3,3,false,4,true,4,5,2447,false,false);
+CALL registrarPersonaCOMPLETO('EIRWW0265BBGVS2BAF','Julian Quesos Hidalgo','1970-1-6',true,'1160249582','','',true,false,true,true,false,false,true,4,2011,1,2,1,3,1850,3,2,4,4,'Masajista','Construcciones ASM','','1248742636','',false,4,3,4,4,true,3,true,4,2,2989,false,false);
 
-CALL registrarPersonaCOMPLETO('EN90PC6ODA4EBA9WXG','Guadalupe Guyen Gonzalez','1971-8-23',false,'509901879','','',true,false,false,true,true,true,false,4,2011,6,2,9,4,1853,3,2,1,2,'Atencion a clientes','iCorp','','169939134','',false,2,1,7,5,true,1,true,2,3,2788,false,true);
+CALL registrarPersonaCOMPLETO('B6KEL0FFS03DSK19YA','Maria Jose Oceano Lagones','1956-3-11',false,'1674317716','','',false,false,false,true,false,true,false,7,2012,7,3,9,4,1851,3,2,2,4,'Secretario de planta','Palacio de Hierro','','1642354166','',false,4,3,10,4,true,5,false,8,6,1194,false,true);
 
-CALL registrarPersonaCOMPLETO('TOECS2AXEPEBFDE6SF','Ana Cardenas Guyen','1998-11-6',false,'51105403','','',false,true,false,true,false,true,false,3,2010,9,1,6,2,1855,4,3,4,2,'Conserge de piso','PNG','','143593999','',true,8,3,1,5,true,5,false,8,6,596,true,true);
+CALL registrarPersonaCOMPLETO('CNO3833HJB7MO1JT66','Marco Martiale Cerrujo','1971-7-6',true,'1110965857','','',true,true,true,true,true,false,false,4,2011,10,3,8,3,1855,3,3,4,4,'Capturador de datos','Construcciones ASM','','83393024','',false,6,2,7,3,true,2,false,2,3,1757,true,false);
 
-CALL registrarPersonaCOMPLETO('UH3LE1CC1EDLBKGQ18','Daniel Jirazol Ojeda','1963-5-27',true,'573550681','','',true,false,false,true,false,true,false,5,2012,1,2,9,3,1864,3,1,4,2,'Generador de cotizaciones','PNG','','208949487','',true,4,2,1,1,true,2,false,4,5,1168,false,false);
+CALL registrarPersonaCOMPLETO('CNGB01BUTHOP5N4UQI','Emmanuel Tumbas Hidalgo','1984-11-11',true,'558621417','','',true,false,false,true,false,true,false,3,2011,7,2,5,3,1856,4,1,2,1,'Conserge de piso','Kellogs','','860257236','',true,1,3,5,3,true,5,false,8,6,2956,true,true);
 
-CALL registrarPersonaCOMPLETO('3C4PEQCT4M5WJ5STF2','Julian Hidalgo Luciernaga','1992-10-22',true,'607044146','','',true,true,false,true,true,false,false,1,2012,1,2,6,2,1854,1,4,4,1,'Capturador de datos','Soriana','','193768441','',false,7,3,5,4,false,2,false,8,4,221,false,true);
+CALL registrarPersonaCOMPLETO('TSV1CAS7AYUCVPHBDB','Maria Jose Venado Saponeta','1981-10-11',false,'2061819519','','',true,false,false,true,true,false,false,6,2010,2,3,7,4,1855,4,2,3,2,'Recibidor de quejas','Mabe','','1491190996','',true,5,3,3,3,false,5,false,7,4,1386,true,true);
 
-CALL registrarPersonaCOMPLETO('S3YJS271ODS32YL454','Julian Quesos Plutarco','1985-9-5',true,'851910139','','',false,true,true,false,false,true,true,7,2011,10,3,9,4,1859,2,3,3,1,'Capturador de datos','Toyota','','1710632958','',false,7,3,7,5,true,4,false,1,1,1079,false,true);
+CALL registrarPersonaCOMPLETO('AEF5O94YO3OSWBBELV','Ricardo Martinez Gutierrez','1968-7-3',true,'1515244358','','',true,false,true,false,false,false,true,8,2011,5,3,2,3,1864,3,4,4,4,'Generador de cotizaciones','Cinemex','','859602891','',false,5,3,9,4,true,1,false,7,4,2137,false,true);
 
-CALL registrarPersonaCOMPLETO('GMJ25V2FJPACDBASKQ','Ricardo Lagones Oceano','1959-8-23',true,'1670515774','','',true,false,true,true,false,true,true,8,2010,6,2,1,4,1860,1,4,4,3,'Capturador de datos','General Electric','','1211327626','',false,7,2,9,5,true,4,false,7,5,1046,true,true);
+CALL registrarPersonaCOMPLETO('ASYBRVE2AO4W2H6FGI','Luis Guyen Murcer','1999-9-27',true,'661850414','','',false,false,false,false,true,true,true,3,2011,9,2,9,4,1856,3,4,3,1,'Agendar eventos','Imagination','','822659168','',true,5,3,7,3,true,5,true,6,4,2187,false,true);
 
-CALL registrarPersonaCOMPLETO('57X71M83WXNW3YFXDN','Hugo Saturno Wesley','1982-6-15',true,'107426320','','',true,false,false,false,true,true,true,8,2011,2,3,5,3,1852,4,2,4,2,'Conserge de piso','Mabe','','182975185','',false,8,3,2,3,false,3,true,4,5,597,false,false);
+CALL registrarPersonaCOMPLETO('RC19OCSL61FFMN3CAE','Andrea Murcer Jirafa','1981-3-7',false,'1244422624','','',false,true,false,false,false,false,false,6,2012,6,2,1,1,1862,3,4,1,1,'Vigilante nocturno','McDonalds','','540837716','',true,4,1,2,1,false,5,true,3,3,2615,true,false);
 
-CALL registrarPersonaCOMPLETO('QXIDFPB53D7WTBTCYU','America Ojeda Martinez','1960-7-17',false,'838087794','','',true,true,true,true,false,true,true,4,2012,1,1,6,2,1851,4,1,1,3,'Conserge de piso','General Electric','','1227910762','',true,3,3,11,5,true,4,false,2,5,1576,false,true);
+CALL registrarPersonaCOMPLETO('A4XCLEJWLAKUMUAA5E','Willia Murcer Saturno','1952-9-16',false,'2065295258','','',false,true,false,false,false,false,false,6,2011,1,3,1,2,1856,1,3,2,3,'Consejero general','iCorp','','369923369','',false,7,1,8,5,false,1,true,7,3,2703,false,false);
 
-CALL registrarPersonaCOMPLETO('LPBXQD5EMOOXBBL3GD','Fernada Corral Plutarco','1976-8-22',false,'35051072','','',false,false,true,false,false,false,true,5,2011,2,1,2,2,1851,3,1,1,2,'Capturador de datos','Kellogs','','882264061','',false,4,1,7,2,false,5,true,8,4,2580,true,false);
+CALL registrarPersonaCOMPLETO('6CCGCADQYEPCCB5O58','Daniel Juarez Baca','1999-3-3',true,'1703081743','','',true,false,false,true,false,true,false,1,2010,8,4,7,4,1850,1,2,2,1,'Conserge de piso','McDonalds','','339240349','',false,3,3,10,1,true,4,false,4,5,217,true,true);
 
-CALL registrarPersonaCOMPLETO('N2GYMEMED3VAYHUG8U','Galaxia Huges Gutierrez','1970-1-5',false,'1533303609','','',true,false,false,false,true,false,true,7,2011,2,4,7,2,1852,1,1,1,4,'Evaluador de proyectos','Soriana','','1629514233','',true,2,3,10,5,true,1,false,1,4,2238,false,true);
+CALL registrarPersonaCOMPLETO('FLWKVW4NBKX4UAJ8W1','Enrique Marinela Lagones','1996-1-1',true,'1604539664','','',true,false,false,true,false,false,true,2,2011,5,4,3,2,1850,1,1,4,3,'Mantenimiento de  servidores','Kellogs','','1681878153','',true,7,2,1,5,false,2,true,6,2,1855,true,true);
 
-CALL registrarPersonaCOMPLETO('RDWTN57MB8QRG3RG3V','Isabella Jernation Huges','1956-8-15',false,'346711104','','',true,false,true,true,false,false,false,5,2010,4,2,4,2,1857,3,1,4,2,'Capturador de datos','Kellogs','','1897145114','',true,4,2,7,5,true,4,true,6,6,1902,false,true);
+CALL registrarPersonaCOMPLETO('5EPG6BTDQH5DFD2AYD','Jose Serrano Bermudez','1959-7-4',true,'696113601','','',true,false,true,false,true,true,true,8,2012,1,1,4,2,1850,3,1,4,4,'Recibidor de quejas','Kellogs','','162489904','',false,1,3,7,3,true,5,false,8,6,1136,true,false);
 
-CALL registrarPersonaCOMPLETO('L0EGIISHRRL8A08FPB','Hugo Hernandez Guyen','1953-7-2',true,'640669831','','',false,false,true,false,false,false,false,1,2012,4,2,4,4,1863,2,4,2,2,'Atencion a clientes','Palacio de Hierro','','841217894','',true,4,1,11,5,false,2,false,8,3,1094,false,true);
+CALL registrarPersonaCOMPLETO('QHL4J9SAA8526M7KV2','Sandia Wesley Campos','1975-9-14',false,'96545609','','',false,false,true,true,false,false,true,4,2010,7,3,6,4,1850,2,3,3,2,'Atencion a clientes','Imagination','','235521858','',false,7,1,3,2,false,5,false,3,2,1424,false,false);
 
-CALL registrarPersonaCOMPLETO('DA2Q6BYB8LE4C08WRN','Perla Dragone Ribas','1952-5-11',false,'912620402','','',true,true,true,false,false,true,true,3,2010,1,3,4,3,1850,1,1,2,2,'Secretario de planta','Kellogs','','1979621930','',false,2,1,3,4,true,5,false,3,3,1165,true,true);
+CALL registrarPersonaCOMPLETO('GAELPOGJ4BW4LQCCR6','Eduardo Jirazol Saponeta','1995-9-4',true,'814532345','','',true,true,true,true,true,true,false,2,2011,6,2,1,4,1850,4,1,1,3,'Registrar contactos de agenda','Construcciones ASM','','898788254','',false,2,1,6,2,false,2,true,4,5,1983,true,true);
 
-CALL registrarPersonaCOMPLETO('NQ3G3IWIPFBBBY42XR','Francisco Betral Hidalgo','1951-5-13',true,'613977772','','',false,true,true,false,true,false,false,4,2010,6,2,4,1,1862,3,3,4,2,'Registrar contactos de agenda','Kellogs','','1441991775','',false,4,2,11,3,true,3,false,3,6,2711,true,true);
+CALL registrarPersonaCOMPLETO('1N1OPXWYAPPL45OJCA','Rafael Bermudez Luciernaga','1971-4-11',true,'416338048','','',false,false,false,false,true,false,true,4,2012,9,3,6,4,1864,4,3,2,4,'Consejero general','Mazda','','799451835','',false,5,3,4,3,true,5,false,2,5,1429,true,true);
 
-CALL registrarPersonaCOMPLETO('DVBBC6R9CAIMCC0LW3','Maru Choco Roles Rodriguez','1989-4-7',false,'1283325735','','',true,false,true,true,true,true,true,5,2010,11,4,9,4,1856,4,1,3,2,'Consejero general','Cinemex','','1677451501','',false,8,3,1,1,true,4,true,2,6,1356,true,true);
+CALL registrarPersonaCOMPLETO('7F5A2Y8B4NYHTL7NDR','Risitas Saponeta Choco Roles','1997-12-8',false,'72411404','','',false,false,false,false,false,false,true,1,2011,2,3,2,3,1861,1,4,2,4,'Generacion de imagenes publicitarias','Cinemex','','1315256936','',true,5,1,6,4,true,5,false,5,2,1080,false,false);
 
-CALL registrarPersonaCOMPLETO('FAMLDQGEHGM2XDWGQR','Juan Pablo Murcer Lagones','1985-4-28',true,'1339140962','','',false,false,true,false,false,true,true,7,2012,2,1,1,3,1858,2,1,2,2,'Registrar contactos de agenda','Construcciones ASM','','123765767','',false,4,1,7,1,true,1,true,1,6,2874,false,true);
+CALL registrarPersonaCOMPLETO('TYCFAAGNDGF1XF7DSI','Clericot Hidalgo Venado','1976-5-26',false,'1023183292','','',true,true,true,true,false,false,true,5,2011,5,2,9,2,1851,4,3,4,1,'Generador de cotizaciones','Tec de Monterrey','','826349430','',true,7,3,6,2,false,2,true,7,1,252,false,true);
 
-CALL registrarPersonaCOMPLETO('PLP0CDFJQYW0PKU6XP','Risitas Marinela Hernandez','1982-5-21',false,'1764762867','','',false,true,true,true,true,true,true,5,2012,9,1,9,3,1855,2,1,1,3,'Vigilante nocturno','Cinemex','','1858027911','',true,7,3,2,4,false,5,true,6,3,2059,false,true);
+CALL registrarPersonaCOMPLETO('WC3G36TB9BHKDEHGLC','Guadalupe Rodriguez Plutarco','1979-11-2',false,'359742658','','',false,true,false,true,true,true,false,2,2011,1,2,5,1,1864,2,2,2,2,'Generador de cotizaciones','Bombardier','','1788070864','',true,3,2,9,2,false,2,true,8,6,847,false,false);
 
-CALL registrarPersonaCOMPLETO('9DQBTASU1CJ0VESDFG','Paulina Ribas Samita','1950-2-4',false,'186319199','','',true,false,false,false,true,true,false,7,2012,7,2,5,4,1856,4,2,3,4,'Capturador de datos','Palacio de Hierro','','2094886028','',false,2,3,3,3,false,5,false,6,5,1743,false,false);
+CALL registrarPersonaCOMPLETO('TDDA7VLQUF4ABSGESS','Blanca Ojeda Gutierrez','1996-3-28',false,'1772707417','','',false,true,false,true,false,false,false,8,2010,7,4,5,1,1863,1,3,3,2,'Registrar contactos de agenda','Tec de Monterrey','','549874403','',true,5,1,11,3,true,3,false,3,6,1847,false,true);
 
-CALL registrarPersonaCOMPLETO('J3TB58CN44NCNW803F','Sandia Guyen Rincon','1999-9-27',false,'318744992','','',false,false,false,false,false,false,true,1,2011,9,1,8,4,1857,2,2,4,3,'Consejero general','Imagination','','406357180','',false,2,1,6,4,true,5,true,2,1,710,false,false);
+CALL registrarPersonaCOMPLETO('VJ85LM9DRXH8TQNQEI','Eduardo Hasburgo Rodriguez','1970-11-27',true,'2065689113','','',false,false,false,false,true,true,true,4,2012,10,2,5,4,1853,1,2,1,4,'Recibidor de quejas','Cinemex','','708260835','',false,3,2,10,4,false,1,true,6,3,1984,true,false);
 
-CALL registrarPersonaCOMPLETO('GU6TNAC8X2BDRJPYE7','Hermenejildo Wesley Saturno','1987-2-3',true,'35731677','','',false,false,true,false,false,true,true,2,2010,11,2,1,2,1852,1,3,4,2,'Generador de cotizaciones','iCorp','','1330583712','',true,6,2,1,3,false,2,true,8,3,484,false,true);
+CALL registrarPersonaCOMPLETO('KY3FGOEYPVUNAMXHMR','Denise Wesley Hasburgo','1971-3-5',false,'161920117','','',false,true,false,false,true,false,true,1,2010,7,2,8,3,1863,3,3,4,4,'Mantenimiento de  servidores','Bombardier','','1732813062','',false,7,2,6,2,true,4,true,3,4,877,false,true);
 
-CALL registrarPersonaCOMPLETO('PIAY3FB13DG3AGWGGB','Martha Gutierrez Wesley','1996-3-20',false,'1469308018','','',true,true,false,false,false,false,true,6,2010,3,1,1,4,1859,1,4,4,3,'Consejero general','Imagination','','815565393','',true,6,1,5,4,false,4,true,8,6,1783,true,true);
+CALL registrarPersonaCOMPLETO('YNXEGC4CHX8C4VE6VP','Pinguin Corral Betral','1976-7-1',true,'1057752778','','',false,true,true,true,false,false,false,4,2012,7,2,7,1,1852,4,1,1,2,'Agendar eventos','Cinemex','','1864647721','',false,6,3,8,4,false,2,true,7,6,1113,true,true);
 
-CALL registrarPersonaCOMPLETO('FO7TEY5NAPUV39H7G6','Javier Ribas Quesos','1957-1-15',true,'1803518050','','',true,false,true,false,false,false,false,8,2011,11,1,7,2,1862,2,2,2,2,'Guardia de seguridad','McDonalds','','441249927','',true,4,1,4,5,false,4,true,8,6,2888,true,true);
+CALL registrarPersonaCOMPLETO('JSFRTCRCDCBQAEFDIY','Willia Juarez Gutierrez','1978-12-14',false,'1482120252','','',false,false,false,false,true,false,false,5,2012,5,2,3,2,1851,4,4,1,2,'Atencion a clientes','Imagination','','438638594','',true,8,1,2,5,false,4,false,1,2,2177,true,false);
 
-CALL registrarPersonaCOMPLETO('8E1FEYG9XYHC5UIPEA','Isabella Ribas Cuevas','1990-4-9',false,'2032696400','','',false,false,false,false,true,true,false,8,2012,5,2,2,2,1861,4,1,3,4,'Registrar contactos de agenda','Palacio de Hierro','','929148921','',true,8,1,7,2,false,1,false,5,4,381,true,false);
+CALL registrarPersonaCOMPLETO('DQBBG52KCPKB4R5X9C','Denise Gonzalez Lagones','1990-7-1',false,'1417006818','','',true,true,true,true,true,true,true,8,2011,2,2,8,4,1862,2,4,4,3,'Capturador de datos','Mabe','','1813628617','',false,2,3,1,5,false,5,false,6,4,1919,true,false);
 
-CALL registrarPersonaCOMPLETO('EE399GYGRW5KLADD5K','Isabella Rodriguez Campos','1967-8-10',false,'558082626','','',true,false,true,false,false,true,true,2,2010,9,4,4,3,1854,4,2,3,4,'Mantenimiento de  servidores','Cinemex','','171921937','',true,1,1,7,5,true,2,false,2,2,1304,true,true);
+CALL registrarPersonaCOMPLETO('BFWDMUN4ACCNJAECA2','Beatriz Samita Willliam Primero Del la Fila','1975-5-19',false,'2025496631','','',true,true,true,false,false,true,true,5,2012,1,1,8,4,1851,4,4,1,1,'Guardia de seguridad','Imagination','','1450481914','',true,5,3,8,5,true,4,true,5,6,451,true,true);
 
-CALL registrarPersonaCOMPLETO('W1CGRFKGAVIGKLC6VA','Ismael Samita Gutierrez','1957-3-21',true,'2127293059','','',true,false,false,false,true,true,true,4,2011,6,4,4,4,1864,1,1,4,3,'Evaluador de proyectos','Mazda','','2115763689','',false,7,2,8,3,false,4,true,5,5,2998,true,true);
+CALL registrarPersonaCOMPLETO('Y91UT2EA7P29E73QEU','Fernando Guyen Bermudez','1964-4-26',true,'729768476','','',false,true,false,true,true,true,true,5,2012,3,3,2,3,1864,2,1,2,3,'Secretario de planta','Palacio de Hierro','','1060076339','',true,6,2,10,1,false,4,false,5,4,2419,false,true);
 
-CALL registrarPersonaCOMPLETO('PLTI4GQ99GVOJ93QDN','Clericot Dragone Ramirez','1964-7-28',false,'141210351','','',true,true,false,true,false,false,false,8,2011,7,4,2,2,1856,2,3,1,4,'Capturador de datos','Cinemex','','225605917','',false,7,3,9,5,true,2,true,4,1,856,false,false);
+CALL registrarPersonaCOMPLETO('JV0EMAEC69EFDMG6JB','Denise Garcia Cerdo','1997-6-2',false,'926680103','','',false,true,true,true,false,false,false,4,2011,3,3,6,1,1859,3,1,4,3,'Vigilante nocturno','Cinemex','','1090710484','',true,7,1,7,2,true,5,false,1,2,2987,true,true);
 
-CALL registrarPersonaCOMPLETO('BVKY0OPOCKM75CX1Y2','Europa Murcer Jirazol','1961-3-7',false,'1338489147','','',true,true,true,true,false,true,true,1,2011,7,3,3,1,1859,1,1,2,2,'Mantenimiento de  servidores','McDonalds','','1998654223','',false,7,2,10,4,true,1,true,4,2,2030,false,true);
+CALL registrarPersonaCOMPLETO('7DHOFCUSF6NW926MI8','Plutarco Marinela Lagones','1995-5-22',true,'2048812843','','',true,true,false,true,true,false,false,2,2012,8,1,2,2,1864,4,1,4,2,'Vigilante nocturno','Bombardier','','975770113','',false,4,1,5,3,true,5,false,7,4,1330,true,true);
 
-CALL registrarPersonaCOMPLETO('F6DDH49FPPEOFMDJHR','Alicia Baca Plutarco','1992-7-21',false,'1614396713','','',true,true,true,true,false,false,false,4,2011,5,1,1,3,1851,2,2,4,2,'Vigilante nocturno','iCorp','','401675637','',true,3,2,11,2,true,5,false,8,5,561,false,false);
+CALL registrarPersonaCOMPLETO('L3BYVRG9CCD9PXDB9M','Cesar Saturno Cerdo','1993-4-23',true,'2143167672','','',true,true,true,true,true,false,false,7,2011,1,3,4,3,1864,2,2,4,1,'Consejero general','Soriana','','1826933000','',true,7,3,2,2,false,2,false,1,6,2551,true,false);
 
-CALL registrarPersonaCOMPLETO('9ATRENH3GC9E6LTKGF','Willia Cerrujo Huges','1985-3-11',false,'655935612','','',false,false,true,false,true,true,false,2,2011,6,2,5,3,1850,3,3,3,4,'Registrar contactos de agenda','Palacio de Hierro','','1820157607','',true,1,1,10,3,true,5,true,2,2,2100,true,false);
+CALL registrarPersonaCOMPLETO('DCAD9EBD1CVVUE0JEE','Jose Hidalgo Cerrujo','1950-8-1',true,'1361281327','','',true,true,true,false,true,false,true,8,2012,11,4,7,1,1854,4,3,4,1,'Masajista','Construcciones ASM','','36518902','',true,7,1,11,5,false,4,false,1,3,2555,false,false);
 
-CALL registrarPersonaCOMPLETO('EE9P7V0E99QAJPXIAG','Paulina Saponeta Hernandez','1978-7-6',false,'1369249449','','',false,true,false,true,false,true,true,1,2012,6,1,7,4,1851,2,1,1,2,'Vigilante nocturno','Cinemex','','190552196','',true,8,1,10,3,true,5,true,8,1,2238,true,true);
+CALL registrarPersonaCOMPLETO('7VA03R3ABFB0FWDQOK','Cecilia Willliam Primero Del la Fila Cardenas','1980-5-19',false,'783568296','','',false,false,true,false,true,false,true,4,2011,8,1,6,1,1861,4,2,2,3,'Generacion de imagenes publicitarias','Cinemex','','740553700','',false,4,1,10,1,true,1,true,7,3,1753,false,false);
 
-CALL registrarPersonaCOMPLETO('3BBSYAM9126D6DCXEI','Samantha Guerra Ojeda','1982-3-28',false,'678016636','','',false,true,false,true,false,true,false,6,2012,1,3,3,1,1853,2,3,4,4,'Secretario de planta','Kellogs','','1235686082','',true,3,1,7,3,false,3,true,7,6,1034,true,true);
+CALL registrarPersonaCOMPLETO('NCFCBFBQFDFSA42MNE','Alejandra Corral Wesley','1961-9-3',false,'1086489244','','',true,false,false,true,true,false,true,5,2010,8,2,4,4,1856,3,3,1,1,'Vigilante nocturno','Palacio de Hierro','','239237826','',true,1,1,3,1,true,5,false,6,5,2360,false,true);
 
-CALL registrarPersonaCOMPLETO('CCVW6FVAE3DKBA0DY8','Raul Cerrujo Garcia','1977-4-15',true,'477005254','','',true,false,false,true,false,true,true,5,2011,6,2,9,1,1861,3,3,4,2,'Guardia de seguridad','McDonalds','','669116557','',false,2,1,9,3,false,5,true,8,1,2121,false,false);
+CALL registrarPersonaCOMPLETO('A83CW18R54GJXOL8E1','Ismael Corral Corral','1989-8-27',true,'1392136331','','',false,true,true,true,false,true,true,7,2012,1,4,3,1,1855,2,2,2,2,'Generacion de imagenes publicitarias','Kellogs','','53664231','',true,5,1,7,5,true,3,false,8,4,1891,true,true);
 
-CALL registrarPersonaCOMPLETO('EG7N804A5A1AB1C4MP','Willia Quesos Gonzalez','1984-2-23',false,'524848698','','',true,true,true,false,false,false,true,8,2011,7,3,6,1,1856,3,4,4,2,'Generacion de imagenes publicitarias','Toyota','','1406679618','',true,5,1,8,5,false,4,false,2,5,603,false,false);
+CALL registrarPersonaCOMPLETO('C3OGF06RG2XYN8568G','Rosario Rojo Campos','1960-11-4',false,'1831532630','','',false,false,false,true,true,false,true,2,2012,7,4,8,1,1859,1,1,1,2,'Recibidor de quejas','Mabe','','1204320027','',false,8,2,8,4,false,4,true,6,2,2072,false,true);
 
-CALL registrarPersonaCOMPLETO('C2N68SG3NBT35VE6KR','Matias Gonzalez Marinela','1960-1-20',true,'331059501','','',true,true,false,false,true,true,false,5,2010,2,1,1,4,1857,3,4,2,3,'Atencion a clientes','Mazda','','934584','',false,6,3,7,2,false,2,true,6,5,2011,false,true);
+CALL registrarPersonaCOMPLETO('AABGN05OEE8WQTC36X','America Murcer Gutierrez','1995-2-3',false,'1429172133','','',true,true,false,true,true,false,false,1,2012,1,4,9,1,1859,2,2,1,4,'Capturador de datos','iCorp','','466386850','',true,4,3,9,5,false,2,true,4,2,2606,true,true);
 
-CALL registrarPersonaCOMPLETO('CMXMEGD5F4VSCUWV7K','Maria Plutarco Martinez','1999-12-7',false,'959818762','','',true,true,false,true,true,false,true,6,2012,2,1,9,3,1853,1,3,1,2,'Agendar eventos','Soriana','','1613014384','',false,2,2,2,4,true,5,true,5,6,2665,false,false);
+CALL registrarPersonaCOMPLETO('189WG3N4L47W1MV9RB','Maria Jose Campos Rojo','1992-1-1',false,'1405623241','','',true,false,true,true,true,true,true,2,2010,7,2,4,1,1863,4,3,4,4,'Generacion de imagenes publicitarias','Kellogs','','444470662','',true,8,3,7,4,false,3,false,2,4,2849,false,false);
 
-CALL registrarPersonaCOMPLETO('QUKD0LBD0PUQP5E6RA','Maria Ribas Ramirez','1977-3-14',false,'213726632','','',false,true,true,true,false,false,true,7,2012,6,2,8,2,1854,2,4,2,2,'Vigilante nocturno','Tec de Monterrey','','1689000586','',true,6,1,6,3,false,3,true,6,4,2494,false,true);
+CALL registrarPersonaCOMPLETO('0TOW3XCB8K0B7JCE6C','Sandra Cerrujo Cerrujo','1999-5-6',false,'751289527','','',false,false,false,false,true,true,false,7,2010,1,4,8,3,1851,4,1,2,4,'Atencion a clientes','Mazda','','526371941','',false,8,1,7,2,true,3,false,3,3,438,false,false);
 
-CALL registrarPersonaCOMPLETO('3EU4V5EBJ4VJAFEEEF','Maria Luciernaga Jirazol','1996-11-2',false,'664938368','','',false,false,false,true,true,false,true,3,2012,6,3,9,1,1859,2,1,1,3,'Atencion a clientes','Cinemex','','1100454187','',true,3,2,5,4,true,2,true,7,3,2685,false,false);
+CALL registrarPersonaCOMPLETO('FPUTFEE8PASWJ1O19R','Sandra Plutarco Hasburgo','1992-9-8',false,'1910908158','','',false,false,true,false,false,false,true,3,2010,7,2,2,2,1864,1,3,1,3,'Guardia de seguridad','McDonalds','','586084113','',false,7,2,3,4,true,4,true,8,6,2580,false,false);
 
-CALL registrarPersonaCOMPLETO('55MSNCYI9DOB4W9FRG','Christopher Baca Venado','1987-5-9',true,'1976070857','','',false,false,false,false,true,true,true,4,2010,8,1,8,1,1864,2,4,1,2,'Registrar contactos de agenda','McDonalds','','295468688','',false,8,3,2,3,true,5,false,8,3,2993,true,false);
+CALL registrarPersonaCOMPLETO('FNADVKA7E33GVVF5FC','Raul Luciernaga Oceano','1975-1-18',true,'2072256214','','',false,false,true,true,true,false,true,1,2010,8,4,8,2,1850,4,4,1,4,'Atencion a clientes','General Electric','','2071207259','',true,3,2,8,4,true,1,true,5,4,830,true,false);
 
-CALL registrarPersonaCOMPLETO('AE566IB1YQ7ABNRL84','CLaudia Bermudez Murcer','1986-11-8',false,'588272309','','',false,false,true,false,true,false,true,5,2011,2,4,9,2,1852,2,2,2,4,'Atencion a clientes','Mabe','','1823530561','',false,7,2,2,3,true,3,false,5,6,253,true,false);
+CALL registrarPersonaCOMPLETO('LT5EHMLLQPVX8WI7YN','Alicia Hasburgo Ojeda','1980-9-26',false,'1839168468','','',false,true,true,false,false,false,false,4,2011,11,3,2,4,1856,3,1,2,1,'Evaluador de proyectos','Mazda','','796348608','',true,5,2,2,4,true,5,false,4,2,1356,false,false);
 
-CALL registrarPersonaCOMPLETO('TVE4XYULGPK74TQJED','Marco Quesos Cardenas','1951-11-21',true,'801026496','','',true,true,true,true,true,true,false,7,2011,3,4,1,1,1851,2,2,3,2,'Guardia de seguridad','Palacio de Hierro','','1872018871','',false,7,2,11,1,true,4,true,6,5,2627,true,false);
+CALL registrarPersonaCOMPLETO('4A6HLCHYD34AESHHO7','Vanesa Samita Guerra','1970-11-12',false,'2096137195','','',false,true,false,false,true,false,true,3,2012,6,2,5,3,1863,1,4,3,3,'Agendar eventos','Mabe','','49142995','',false,8,2,9,1,true,1,false,8,6,909,false,false);
 
-CALL registrarPersonaCOMPLETO('EP2HSBCX2ECL0CID0G','Eduardo Campos Ribas','1985-12-20',true,'780172978','','',true,true,false,true,true,false,true,1,2011,6,2,6,3,1851,4,1,2,4,'Generador de cotizaciones','Toyota','','298231398','',false,1,1,10,1,false,4,false,4,5,2101,true,true);
+CALL registrarPersonaCOMPLETO('65DJPD0QFRQSBAE7LL','Ana Jirafa Cuevas','1952-6-20',false,'1333418272','','',true,false,false,false,true,false,true,8,2011,8,1,2,3,1857,1,2,4,1,'Conserge de piso','PNG','','310254794','',true,2,2,10,4,false,2,false,3,3,1361,true,false);
 
-CALL registrarPersonaCOMPLETO('7F4GGGM5CQ4DFVLUEC','Alejandro Cerdo Rojo','1964-6-26',true,'1085957478','','',false,false,true,false,false,false,false,1,2010,5,1,3,2,1858,2,3,1,3,'Masajista','General Electric','','1336407827','',false,2,3,7,4,false,2,false,2,6,348,false,true);
+CALL registrarPersonaCOMPLETO('CAA1AE05STGXJBLEU7','Mauricio Wesley Selacanto','1959-3-23',true,'116765305','','',true,true,false,false,false,true,false,5,2012,6,2,3,3,1860,1,2,2,3,'Capturador de datos','Construcciones ASM','','1601417860','',false,3,3,5,4,true,2,true,1,1,1435,true,false);
 
-CALL registrarPersonaCOMPLETO('MIF5MT4QP0C5DM9BMC','Ricardo Guerra Bermudez','1968-5-23',true,'824475712','','',true,false,true,false,false,true,false,3,2011,7,4,2,2,1850,4,2,1,1,'Evaluador de proyectos','Mabe','','1546068484','',true,8,3,6,2,false,5,false,8,3,299,true,false);
+CALL registrarPersonaCOMPLETO('KWE576EO6BMREQNL7B','Tomas Serrano Juarez','1954-4-25',true,'145852463','','',true,false,true,false,true,false,false,2,2011,6,3,7,2,1853,2,2,3,4,'Consejero general','McDonalds','','140837096','',true,8,2,4,5,true,2,false,5,6,395,true,false);
 
-CALL registrarPersonaCOMPLETO('6GKCRJC4LFD0R1WRDE','Susana Juarez Juarez','1989-4-11',false,'1755521982','','',true,true,true,false,false,true,false,6,2012,6,2,9,2,1859,3,3,3,2,'Consejero general','Palacio de Hierro','','415022570','',true,4,2,2,2,false,3,true,6,3,3081,false,false);
+CALL registrarPersonaCOMPLETO('6K4XXUBP2WKD6LVYT4','Girasol Peña Nieto Betral','1996-3-14',true,'2073661198','','',true,false,false,true,true,false,false,8,2010,9,2,9,3,1861,1,4,4,1,'Agendar eventos','General Electric','','923318452','',false,2,1,7,3,false,1,true,1,3,653,false,false);
 
-CALL registrarPersonaCOMPLETO('FMFVRFYDLBH4HV0YU1','Monica Saturno Hasburgo','1977-3-26',false,'1992184379','','',true,false,true,false,true,true,true,8,2010,5,4,5,3,1858,1,3,3,1,'Recibidor de quejas','Soriana','','1132558009','',false,2,1,1,1,false,3,false,7,6,388,true,true);
+CALL registrarPersonaCOMPLETO('57U034318D28B6C8E4','Gustavo Gonzalez Huges','1990-2-17',true,'1955411164','','',false,true,false,true,false,false,false,7,2011,11,4,7,1,1851,2,2,3,1,'Atencion a clientes','Imagination','','572994932','',false,8,2,2,2,false,1,true,1,3,2878,true,false);
 
-CALL registrarPersonaCOMPLETO('9KI8YPCHPU9W4AGW94','Hermenejildo Peña Nieto Juarez','1956-7-26',true,'773228840','','',false,false,false,true,false,true,true,8,2010,1,4,8,4,1850,4,1,4,1,'Generacion de imagenes publicitarias','PNG','','503514786','',false,2,1,8,4,true,5,false,8,5,2162,true,false);
+CALL registrarPersonaCOMPLETO('OKPEXUO4FL14UJEMC0','Alejandra Selacanto Jirafa','1964-12-8',false,'1063682410','','',false,false,false,true,false,false,false,5,2011,5,4,7,4,1863,3,4,2,3,'Atencion a clientes','Mazda','','500477001','',true,8,2,1,4,false,4,false,2,3,2383,false,true);
 
-CALL registrarPersonaCOMPLETO('JC2CCQCGFG7LA817GL','Willia Dragone Dragone','1971-1-7',false,'1945481639','','',true,true,false,false,true,true,false,4,2010,9,1,5,1,1855,1,3,1,3,'Generacion de imagenes publicitarias','Bombardier','','1541282913','',true,3,1,2,3,true,5,false,6,6,2107,true,false);
+CALL registrarPersonaCOMPLETO('OPB0EHIQJILFUCGU6F','Antonio Cuevas Corral','1962-12-6',true,'1912325868','','',false,false,true,true,true,true,true,2,2010,4,3,2,1,1853,3,3,1,1,'Generador de cotizaciones','Mazda','','179637923','',true,8,3,7,4,false,1,false,7,2,1741,true,false);
 
-CALL registrarPersonaCOMPLETO('EGDEY1TUBSOFYQ2VRA','Luis Lagones Gutierrez','1976-12-17',true,'331892510','','',false,false,true,false,false,false,false,6,2010,5,4,1,1,1861,2,4,1,4,'Capturador de datos','Mabe','','2067514066','',true,8,2,6,4,false,5,false,4,6,265,false,true);
+CALL registrarPersonaCOMPLETO('XW5DXCD10IAB7HF59H','Alejandra Selacanto Martinez','1975-8-14',false,'455176663','','',false,true,false,false,true,true,true,1,2011,2,4,9,1,1859,4,1,2,2,'Masajista','PNG','','474357561','',false,3,3,1,1,false,3,false,5,4,116,false,false);
 
-CALL registrarPersonaCOMPLETO('DU412G8BU2E3GCCMCF','Risitas Baca Guerra','1969-1-18',false,'1740041736','','',true,false,true,true,false,true,true,8,2011,3,4,8,3,1855,1,4,1,4,'Evaluador de proyectos','General Electric','','294486036','',false,2,1,7,3,false,5,true,2,1,1062,true,true);
+CALL registrarPersonaCOMPLETO('OFC58NABD5DNY3I1D7','Elizabeth Jirazol Marinela','1966-3-6',false,'1684826599','','',true,false,true,false,false,false,true,7,2012,4,2,3,3,1857,1,2,1,2,'Conserge de piso','Soriana','','1614249347','',true,1,3,9,4,true,4,true,5,3,1893,true,true);
 
-CALL registrarPersonaCOMPLETO('LN758G0CGNKTHQNMU0','Ximena Venado Wesley','1961-3-6',false,'616638486','','',true,false,true,false,true,false,true,5,2012,10,2,4,4,1858,2,4,1,2,'Registrar contactos de agenda','Bombardier','','1402901459','',true,6,1,6,1,true,4,true,5,3,2512,true,true);
+CALL registrarPersonaCOMPLETO('WYMK5CK0CJR82VIGKC','Juan Pablo Saturno Lagones','1998-3-18',true,'651748537','','',true,true,true,true,true,false,true,8,2010,6,1,8,2,1861,2,1,2,2,'Secretario de planta','Soriana','','2145324300','',false,3,3,5,1,true,2,false,7,6,1208,true,true);
 
-CALL registrarPersonaCOMPLETO('BQ0BWGDRYGSR52MYN4','Sofia Ribas Murcer','1989-8-22',false,'173917399','','',true,true,true,true,false,false,false,3,2010,5,3,9,3,1858,3,3,2,3,'Recibidor de quejas','General Electric','','1333440230','',false,6,2,7,5,false,2,true,1,1,2401,false,true);
+CALL registrarPersonaCOMPLETO('92DO8B5OU3IFXGLBUL','Ximena Garcia Rodriguez','1980-2-25',false,'322573921','','',true,true,true,true,true,false,false,6,2010,8,4,5,3,1857,1,1,1,1,'Generador de cotizaciones','Construcciones ASM','','1960016702','',false,2,1,7,3,false,2,true,6,6,510,true,true);
 
-CALL registrarPersonaCOMPLETO('CRPCCXQFRDB8F1P9FK','Rafael Ojeda Choco Roles','1979-8-1',true,'1267385112','','',true,false,false,false,true,false,false,3,2011,1,2,1,3,1859,3,4,2,2,'Vigilante nocturno','Kellogs','','1062793336','',false,7,3,5,5,false,4,true,1,4,2216,true,false);
+CALL registrarPersonaCOMPLETO('WUWEFGICQ7CWNRDE93','Elizabeth Martinez Baca','1983-4-3',false,'2070228530','','',true,true,false,false,true,false,true,6,2012,4,2,2,4,1864,2,3,2,2,'Capturador de datos','Mazda','','1917273716','',false,5,2,10,1,true,2,false,8,3,2975,false,false);
 
-CALL registrarPersonaCOMPLETO('EDX6FWG4DGP1MOQ30X','Francisco Corral Serrano','1951-3-12',true,'1006755126','','',true,false,true,true,false,false,true,2,2010,7,1,3,1,1863,4,1,4,4,'Recibidor de quejas','Imagination','','1963602515','',true,4,2,1,4,false,2,false,7,3,316,true,false);
+CALL registrarPersonaCOMPLETO('2LY62HH74D9TG95QU6','Alejandra Cardenas Cuevas','1972-6-17',false,'1663350690','','',true,true,true,true,false,false,true,8,2012,6,4,9,3,1853,2,3,2,4,'Agendar eventos','Imagination','','1398029652','',false,1,1,8,4,false,4,false,4,3,1539,true,false);
 
-CALL registrarPersonaCOMPLETO('PDBDY049AE4WYQ0QQJ','Martha Bermudez Huges','1968-6-27',false,'1339969889','','',false,false,false,true,false,false,false,3,2011,2,1,5,4,1858,3,4,4,3,'Vigilante nocturno','Construcciones ASM','','1550888654','',false,2,3,7,2,true,4,false,3,5,2035,true,false);
+CALL registrarPersonaCOMPLETO('I6XEE5P22A94B1JBLC','Neptuno Tumbas Ojeda','1989-7-20',true,'739063539','','',false,true,false,true,true,false,false,8,2011,7,2,3,4,1863,2,4,3,4,'Secretario de planta','Imagination','','510464720','',true,4,1,7,4,false,4,true,7,1,2425,true,true);
 
-CALL registrarPersonaCOMPLETO('RK2T554RKT0DQXHYV8','Lisa Garcia Baca','1981-2-7',false,'182246814','','',true,true,true,false,true,true,true,1,2010,8,1,7,3,1864,4,3,1,2,'Capturador de datos','Mabe','','1669365074','',false,6,1,2,3,false,4,false,3,1,3028,false,true);
+CALL registrarPersonaCOMPLETO('BKLG5CPC6PKAXBMKSQ','Eduardo Martiale Ojeda','1970-6-27',true,'2041628691','','',false,true,false,false,false,false,true,2,2012,1,2,5,4,1851,3,3,1,1,'Secretario de planta','Cinemex','','469119816','',false,3,3,8,2,true,3,true,4,2,460,true,false);
 
-CALL registrarPersonaCOMPLETO('8FY38DDH0QVDLA6FGN','Carmela Marinela Marinela','1962-2-4',false,'174078085','','',false,false,true,true,true,true,true,1,2010,9,3,1,1,1853,2,2,2,3,'Registrar contactos de agenda','Imagination','','2099175409','',false,2,1,5,5,true,2,true,1,1,3045,false,true);
+CALL registrarPersonaCOMPLETO('CRS315NB531WBXP1HI','Willia Juarez Hidalgo','1989-8-3',false,'1194529842','','',false,false,false,false,false,false,true,3,2011,11,1,2,1,1862,4,4,1,4,'Guardia de seguridad','PNG','','1317494506','',false,3,2,11,4,false,4,false,3,4,1454,true,true);
 
-CALL registrarPersonaCOMPLETO('DPFFIOP95AEABR28E4','Jose Martinez Peña Nieto','1954-4-13',true,'2139559831','','',false,true,true,true,false,true,false,6,2012,11,2,7,3,1853,3,4,3,1,'Conserge de piso','Kellogs','','1144658020','',true,8,3,8,1,true,1,true,5,5,2349,true,true);
+CALL registrarPersonaCOMPLETO('NSQVEIAPAQHABNDC13','Christopher Baca Saturno','1968-7-17',true,'1033049517','','',true,true,true,true,false,true,false,4,2010,5,2,7,2,1858,1,2,2,4,'Consejero general','Tec de Monterrey','','1788629058','',false,6,1,9,4,false,2,false,2,1,2619,true,true);
 
-CALL registrarPersonaCOMPLETO('13LE3FRBJVWHULCEDS','Diego Hasburgo Bermudez','1983-12-4',true,'51141758','','',false,false,true,true,false,false,false,5,2010,4,2,9,1,1856,1,1,1,3,'Secretario de planta','Mabe','','1529252171','',false,1,1,10,3,true,5,false,2,5,2208,false,false);
+CALL registrarPersonaCOMPLETO('GDPTDJDGJBG1KW0HE9','Enrique Saturno Cardenas','1996-8-23',true,'1982510274','','',true,true,true,false,true,false,true,2,2012,5,2,9,3,1863,4,1,4,1,'Atencion a clientes','Mazda','','1170424283','',false,2,3,3,1,false,5,true,6,1,2821,false,false);
 
-CALL registrarPersonaCOMPLETO('HEBU0EFYKECEY3DCLU','Monica Choco Roles Hidalgo','1971-10-18',false,'832280495','','',false,false,false,true,true,true,false,5,2010,10,1,2,4,1862,2,2,3,3,'Guardia de seguridad','Palacio de Hierro','','110993843','',false,7,3,5,4,false,5,true,3,5,1707,false,true);
+CALL registrarPersonaCOMPLETO('C8GAVEDLGDPHBPH492','Fernando Plutarco Rodriguez','1957-7-27',true,'220269435','','',false,true,true,true,false,true,false,7,2010,7,4,2,2,1861,4,1,1,1,'Capturador de datos','Tec de Monterrey','','576018907','',true,7,3,8,5,false,1,false,2,1,1185,false,true);
 
-CALL registrarPersonaCOMPLETO('UBIBEDC5E8GGCG3RKP','Serafin Corral Saponeta','1984-11-13',true,'162339153','','',false,true,true,false,false,false,false,6,2011,6,2,2,4,1864,3,3,1,1,'Recibidor de quejas','Toyota','','194295107','',true,1,3,10,1,false,1,false,8,2,1299,true,false);
+CALL registrarPersonaCOMPLETO('8D5KFEXAMF2PS9GGD9','Serafin Serrano Ribas','1986-4-13',true,'566313446','','',true,true,true,false,false,false,true,2,2011,10,4,7,2,1852,2,4,3,3,'Consejero general','McDonalds','','1939531396','',true,1,2,6,2,false,4,true,2,6,212,false,true);
 
-CALL registrarPersonaCOMPLETO('PUACCFIMADU7DNFG63','Javier Huges Samita','1961-5-22',true,'2102665672','','',true,false,false,false,true,true,false,6,2010,7,3,4,1,1852,4,2,4,1,'Capturador de datos','Tec de Monterrey','','131223108','',false,4,1,9,1,true,5,false,4,1,197,false,true);
+CALL registrarPersonaCOMPLETO('RC5BJNL1T65C7PIJU7','Tomas Garcia Choco Roles','1967-2-2',true,'209761620','','',true,false,false,false,true,false,true,4,2011,2,2,3,3,1850,2,4,4,1,'Masajista','Mabe','','1900642138','',true,6,2,4,3,false,4,true,6,6,1056,true,true);
 
-CALL registrarPersonaCOMPLETO('AYLAB44DC48FCHE3QY','Julia Garcia Martiale','1986-8-15',false,'122682047','','',false,false,true,true,true,false,true,8,2011,5,3,1,2,1853,3,3,3,2,'Agendar eventos','Tec de Monterrey','','756344889','',true,1,1,4,1,true,3,false,3,1,1714,false,true);
+CALL registrarPersonaCOMPLETO('6CXF9SBYAKOG9YTET6','Sandia Betral Martiale','1998-10-3',false,'1471663192','','',true,true,false,false,false,false,false,4,2012,9,2,3,2,1855,1,1,2,4,'Mantenimiento de  servidores','Mazda','','613967431','',false,2,1,10,1,true,5,true,2,4,1198,false,false);
 
-CALL registrarPersonaCOMPLETO('C8MMAQEGGW3DKPYAXH','Emmanuel Cuevas Plutarco','1970-10-21',true,'1600746993','','',false,false,true,false,true,false,false,3,2012,3,1,2,4,1858,2,4,4,1,'Generacion de imagenes publicitarias','General Electric','','1136870061','',true,2,3,6,4,true,1,true,6,6,1519,false,true);
+CALL registrarPersonaCOMPLETO('FYIFTGRPTGW5AYY5MU','Margot Plutarco Choco Roles','1979-9-7',false,'1120596797','','',true,false,true,true,false,false,true,4,2011,9,1,4,3,1857,4,3,2,2,'Agendar eventos','Mabe','','296631849','',true,8,1,1,3,false,2,false,1,1,2985,true,false);
 
-CALL registrarPersonaCOMPLETO('B2PXCE2SX154D8PL3I','Daniel Jirazol Jernation','1973-2-5',true,'1276932960','','',true,true,false,true,true,false,true,5,2010,2,3,5,3,1861,1,4,2,1,'Generacion de imagenes publicitarias','Tec de Monterrey','','916358783','',false,5,2,4,1,true,1,false,2,6,1207,true,false);
+CALL registrarPersonaCOMPLETO('1ADGGEES6DOC21CPCF','Gisela Campos Luciernaga','1976-10-26',false,'696587866','','',true,false,true,true,false,true,false,6,2011,11,4,6,1,1862,1,2,1,1,'Capturador de datos','McDonalds','','908752291','',true,4,3,3,5,true,4,false,5,2,179,false,true);
 
-CALL registrarPersonaCOMPLETO('BBC37YY8MFDECGYC5X','Juan Pablo Jernation Marinela','1981-7-24',true,'1512870295','','',false,false,false,false,false,false,false,3,2011,7,1,6,2,1858,4,3,1,2,'Masajista','Mazda','','1343866428','',false,2,2,4,3,false,5,false,8,2,1943,true,false);
+CALL registrarPersonaCOMPLETO('93WEADH2EB96JD7NF9','Ruiodoso Martiale Cerrujo','1980-11-3',true,'3509089','','',false,true,true,false,true,false,true,5,2010,2,3,9,3,1862,4,2,2,4,'Registrar contactos de agenda','McDonalds','','1283923860','',true,7,1,1,5,false,5,true,3,1,1950,true,true);
 
-CALL registrarPersonaCOMPLETO('2OYS7BYFQ4UF2IYTBC','America Jirazol Plutarco','1994-4-22',false,'460277299','','',true,true,true,true,false,false,true,8,2010,5,2,1,4,1851,4,4,4,1,'Recibidor de quejas','Toyota','','1789986155','',true,1,1,4,3,false,4,false,8,2,1854,false,false);
+CALL registrarPersonaCOMPLETO('BYRU3YD9BDA9V4F4E2','Mauricio Lagones Saturno','1988-12-11',true,'2111099897','','',true,false,false,true,true,false,false,4,2010,5,1,5,4,1850,4,4,3,2,'Masajista','Imagination','','131473377','',false,7,2,5,2,true,2,false,6,5,2643,true,true);
 
-CALL registrarPersonaCOMPLETO('ACDKAKODVNG2S4DVEF','Denise Cerdo Saturno','1983-10-8',false,'585323624','','',true,true,true,true,true,true,false,8,2012,7,1,6,2,1859,3,2,1,1,'Conserge de piso','iCorp','','2081579502','',true,7,2,1,4,true,2,true,5,2,619,false,false);
+CALL registrarPersonaCOMPLETO('42FACDGKDAHJ25BM8A','Perla Jernation Guyen','1988-1-24',false,'655780083','','',true,false,false,false,false,true,false,6,2011,9,3,5,4,1860,3,3,3,1,'Secretario de planta','Bombardier','','416489841','',true,1,1,11,2,false,4,true,4,3,2417,false,true);
 
-CALL registrarPersonaCOMPLETO('8P55MPALXXDSDFT5PM','Elizabeth Jirafa Betral','1972-8-17',false,'1934385909','','',false,true,false,false,true,true,false,2,2010,7,2,7,2,1859,3,3,2,1,'Guardia de seguridad','Soriana','','1857484756','',false,2,3,9,3,true,5,false,3,5,949,false,false);
+CALL registrarPersonaCOMPLETO('FTD39KBCI7EQ9YGF3K','Christopher Guyen Lagones','1966-12-18',true,'660590605','','',false,true,false,true,false,true,false,4,2010,3,1,3,1,1859,3,2,4,3,'Evaluador de proyectos','Cinemex','','1782844842','',false,2,3,6,3,true,4,true,4,5,1171,true,false);
 
-CALL registrarPersonaCOMPLETO('DCLCEMSJQGSVMQF9UD','Elba Alicia Tumbas Corral','1979-5-8',false,'2025413955','','',true,false,false,true,true,false,true,3,2010,8,4,6,4,1851,1,1,2,2,'Secretario de planta','Imagination','','1184179148','',false,4,3,1,3,false,2,false,6,4,479,true,true);
+CALL registrarPersonaCOMPLETO('9QDBCH833NM2T06ABP','Luis Lagones Marinela','1964-12-2',true,'1482033813','','',false,true,true,false,false,false,true,8,2012,6,2,3,3,1860,1,2,4,2,'Recibidor de quejas','Toyota','','577374829','',false,1,3,11,2,true,5,false,6,2,1349,true,false);
 
-CALL registrarPersonaCOMPLETO('DQ7B9C5CKGHFRLFN4C','Vanesa Huges Baca','1971-2-22',false,'1958127104','','',true,false,true,false,false,true,false,1,2011,10,2,1,4,1860,2,3,2,4,'Secretario de planta','Toyota','','2094511203','',true,4,1,1,3,true,5,true,4,1,190,false,true);
+CALL registrarPersonaCOMPLETO('2PX1OFIBATQRB9DYJJ','Fernada Betral Corral','1977-8-24',false,'1595863136','','',false,false,false,false,false,true,false,5,2010,11,3,3,2,1856,1,1,4,4,'Secretario de planta','Construcciones ASM','','340879978','',false,5,2,5,3,false,4,true,8,4,2176,true,false);
 
-CALL registrarPersonaCOMPLETO('2I5MG36BBAQPL7GPD6','Maru Willliam Primero Del la Fila Wesley','1964-2-18',false,'1887431497','','',true,true,false,false,false,true,false,1,2010,6,1,2,1,1852,4,2,1,2,'Conserge de piso','Mabe','','1937020995','',false,6,1,7,1,false,4,false,7,6,2839,true,false);
+CALL registrarPersonaCOMPLETO('HGDAWD9AGVECRXDL9R','Otilia Corral Ribas','1964-6-23',false,'574808938','','',false,false,true,false,true,false,true,6,2012,3,2,1,2,1860,2,3,4,3,'Generador de cotizaciones','General Electric','','1256323836','',false,4,2,1,5,false,5,false,7,1,2699,false,true);
 
-CALL registrarPersonaCOMPLETO('BCEBC8QFOHOBBOVG3D','Maria Ezquivel Rincon','1970-9-27',false,'1891527117','','',true,false,false,false,false,true,false,7,2012,3,2,7,2,1859,3,1,2,4,'Atencion a clientes','Tec de Monterrey','','1154917300','',false,7,3,4,3,false,2,false,1,1,1636,false,false);
+CALL registrarPersonaCOMPLETO('0CBHSMMONVFQEDOESM','Sandra Bermudez Ramirez','1988-3-11',false,'907326477','','',false,true,true,true,true,false,false,8,2010,4,4,6,1,1858,4,4,4,2,'Registrar contactos de agenda','iCorp','','706153038','',true,3,3,11,2,false,1,true,4,4,1490,true,true);
 
-CALL registrarPersonaCOMPLETO('VC4Q71JT0PXX2DAEMK','Estrella Jernation Jirafa','1985-1-15',false,'580253149','','',false,false,true,true,false,false,true,4,2012,4,3,5,1,1861,2,3,4,3,'Recibidor de quejas','Cinemex','','1687843393','',true,3,1,2,3,false,5,false,1,5,2784,true,true);
+CALL registrarPersonaCOMPLETO('U27VLABT3JRYG9SD6B','Emiliano Saponeta Saturno','1976-8-6',true,'477913224','','',true,false,false,false,true,true,true,8,2011,3,1,8,1,1856,2,1,1,3,'Generador de cotizaciones','PNG','','244472898','',false,7,3,11,1,true,3,true,1,5,3026,true,true);
 
-CALL registrarPersonaCOMPLETO('L31GIF2ADEA2PUXM4F','Willia Martiale Cerdo','1980-1-16',false,'15366638','','',true,false,false,false,false,false,false,3,2010,5,4,8,1,1862,4,2,4,3,'Generador de cotizaciones','Soriana','','183629096','',true,8,2,3,3,true,2,true,2,5,2791,true,true);
+CALL registrarPersonaCOMPLETO('VWQEE542N3XPKFN82N','Antartida Saturno Cardenas','1950-5-10',false,'647177958','','',false,false,true,true,false,true,true,6,2011,9,3,8,3,1857,3,4,3,2,'Conserge de piso','Palacio de Hierro','','1043811845','',true,3,3,7,5,true,2,true,5,1,967,false,true);
 
-CALL registrarPersonaCOMPLETO('PCEBPEFVIAPWCJFVY5','Susana Garcia Samita','1959-5-27',false,'537619335','','',false,false,true,false,true,true,true,4,2010,10,1,4,2,1851,1,2,2,2,'Secretario de planta','Imagination','','2101664320','',false,1,2,1,1,true,4,false,3,2,308,false,false);
+CALL registrarPersonaCOMPLETO('QCF84J9GK5CDJQ6LF7','Alicia Serrano Rojo','1972-5-3',false,'1622626059','','',false,true,false,false,true,true,false,5,2012,1,3,3,1,1864,4,4,4,4,'Secretario de planta','iCorp','','838322656','',false,5,1,11,3,true,2,true,5,3,2584,true,true);
 
-CALL registrarPersonaCOMPLETO('F1TWGW3D2DLUALCI13','Maria Oceano Hidalgo','1967-3-2',false,'2048194495','','',true,false,false,true,true,false,false,2,2010,5,3,6,2,1863,1,2,2,2,'Vigilante nocturno','iCorp','','1128613695','',false,7,2,1,1,true,4,true,5,4,267,false,false);
+CALL registrarPersonaCOMPLETO('FECMJANJQXP9AA88XI','Blanca Saturno Luciernaga','1996-8-6',false,'157327934','','',false,false,true,true,true,false,false,4,2010,2,3,5,4,1862,1,3,1,1,'Guardia de seguridad','Imagination','','1615666732','',true,4,3,4,2,true,5,false,3,2,430,true,true);
 
-CALL registrarPersonaCOMPLETO('7GFSAATPVRBADEEJBJ','Andrea Ribas Peña Nieto','1995-8-16',false,'516880147','','',false,true,false,true,true,false,true,6,2012,11,1,7,1,1863,2,2,3,4,'Evaluador de proyectos','Soriana','','908082760','',true,7,1,1,4,true,5,false,5,1,940,false,false);
+CALL registrarPersonaCOMPLETO('MJDPUE3W06GXI0B3CW','Guadalupe Plutarco Guerra','1963-5-9',false,'389876752','','',false,false,true,true,true,false,true,6,2011,5,2,7,4,1850,2,2,2,1,'Capturador de datos','General Electric','','491305649','',false,1,3,8,2,false,1,true,3,5,3042,false,true);
 
-CALL registrarPersonaCOMPLETO('FX3439A0DTC3PWDYCC','Guillermo Ojeda Samita','1963-12-16',true,'1275188537','','',true,true,false,true,true,false,false,2,2012,10,1,1,2,1850,4,1,2,4,'Vigilante nocturno','Mabe','','137353016','',false,1,2,4,3,false,2,false,2,1,791,true,false);
+CALL registrarPersonaCOMPLETO('U4EPUJR3RNOQHO4FJ4','Daniel Selacanto Murcer','1986-5-21',true,'716192629','','',false,true,false,false,true,false,true,8,2012,1,2,2,1,1851,3,3,3,2,'Generador de cotizaciones','iCorp','','36622635','',true,7,3,4,4,false,1,false,4,6,2300,true,false);
 
-CALL registrarPersonaCOMPLETO('29CGQPM8F0CQCSEG0X','Elizabeth Choco Roles Juarez','1985-2-24',false,'1305019026','','',true,true,true,true,false,true,true,3,2011,11,4,2,3,1858,4,1,3,3,'Capturador de datos','Construcciones ASM','','660902900','',false,3,1,10,2,false,2,false,4,4,1154,true,true);
+CALL registrarPersonaCOMPLETO('1WDM3IJB06FLSSAWFK','Armando Ezquivel Garcia','1982-4-9',true,'343968321','','',true,false,true,true,false,true,false,6,2010,4,4,4,4,1856,3,4,2,3,'Evaluador de proyectos','Tec de Monterrey','','2124216916','',true,5,1,6,5,true,2,false,1,2,2164,true,false);
 
-CALL registrarPersonaCOMPLETO('228EE64NEUG8W0FAQW','Daniel Garcia Juarez','1987-3-14',true,'2120410100','','',false,true,true,false,true,false,false,8,2010,5,1,1,1,1852,4,1,1,3,'Generacion de imagenes publicitarias','General Electric','','1390179331','',false,1,2,9,3,true,4,true,4,6,1823,false,true);
+CALL registrarPersonaCOMPLETO('A6YXW8DV23DDBBXJ9T','Maria Rincon Plutarco','1989-8-10',false,'1783257053','','',true,false,false,true,true,true,false,6,2012,5,1,7,1,1859,2,4,1,4,'Capturador de datos','PNG','','748380860','',false,2,2,9,2,false,2,false,5,4,1936,false,true);
 
-CALL registrarPersonaCOMPLETO('DBBTBH5T1WHSF10JJL','Yamal Ribas Hernandez','1983-7-6',true,'1521802369','','',false,true,false,true,false,false,true,2,2010,10,4,8,4,1852,1,1,3,4,'Conserge de piso','Toyota','','1854791679','',false,8,3,7,3,true,2,false,2,1,2385,true,false);
+CALL registrarPersonaCOMPLETO('J6TJ0ADX7AWGT32O5U','Elba Alicia Gonzalez Bermudez','1953-8-25',false,'592930746','','',true,true,true,false,false,false,false,7,2010,2,2,9,4,1861,2,1,2,2,'Mantenimiento de  servidores','PNG','','1222047562','',true,6,3,10,2,false,1,false,7,4,2533,true,true);
 
-CALL registrarPersonaCOMPLETO('2KUTLKPCNWFABBMU5A','Juana Jernation Murcer','1971-1-10',false,'1645935263','','',false,false,true,true,false,true,true,5,2011,2,3,2,3,1855,4,4,4,2,'Generador de cotizaciones','General Electric','','2050273696','',false,5,2,1,1,false,4,true,3,1,2831,false,false);
+CALL registrarPersonaCOMPLETO('QJXLGH5566F03BUCA5','Pedro Tumbas Jirazol','1964-11-5',true,'716958627','','',true,true,false,true,false,true,true,1,2010,5,3,5,1,1862,3,2,2,3,'Evaluador de proyectos','Tec de Monterrey','','1012073012','',false,5,3,5,5,false,3,false,6,2,134,false,true);
 
-CALL registrarPersonaCOMPLETO('EXSBYSHT551TI7FJAK','Alejandra Samita Selacanto','1958-2-11',false,'2105857091','','',true,false,true,true,true,true,false,3,2012,3,1,4,3,1857,3,2,1,4,'Generacion de imagenes publicitarias','Palacio de Hierro','','335423298','',false,5,2,5,3,false,4,true,4,3,2973,true,true);
+CALL registrarPersonaCOMPLETO('DP7PEBKOK0BRC2VNI7','Monica Cardenas Lagones','1999-6-22',false,'374842941','','',true,true,false,true,true,true,false,7,2011,8,2,6,2,1855,4,1,2,4,'Masajista','Toyota','','1459235265','',true,6,1,4,1,true,3,true,4,4,1359,true,false);
+
+CALL registrarPersonaCOMPLETO('4I67FJW5QLECD3T6TI','Julia Garcia Peña Nieto','1995-1-2',false,'1649686155','','',false,false,false,false,false,true,true,8,2010,1,1,2,2,1860,3,4,2,1,'Recibidor de quejas','Bombardier','','1151076746','',true,3,2,4,1,true,5,false,6,6,211,true,false);
+
+CALL registrarPersonaCOMPLETO('YHQHDDGEGTOFOGEAD8','Matias Wesley Gutierrez','1953-10-11',true,'291946590','','',true,false,true,true,true,true,false,7,2011,10,3,7,4,1860,1,3,4,3,'Secretario de planta','Mazda','','1058296684','',true,1,1,7,1,true,5,true,7,6,235,false,false);
+
+CALL registrarPersonaCOMPLETO('GK5VXFBBXY02H8LBEJ','Perla Jernation Bermudez','1971-11-14',false,'2081079861','','',false,false,true,false,false,false,true,6,2011,2,3,7,3,1856,3,4,1,4,'Capturador de datos','Imagination','','22791119','',false,5,3,4,4,true,3,true,8,4,2929,true,false);
+
+CALL registrarPersonaCOMPLETO('F7PUUOJF70KOOKUIDR','Gisela Choco Roles Rojo','1989-10-13',false,'1266602642','','',false,true,true,true,false,false,false,2,2011,5,3,3,2,1851,3,1,2,1,'Agendar eventos','Mabe','','2041173842','',true,5,1,8,5,true,5,false,8,1,2126,false,true);
+
+CALL registrarPersonaCOMPLETO('XM2VIDGS1MPSKEWF91','Serafin Ribas Samita','1955-10-18',true,'957407260','','',true,false,true,true,false,true,true,6,2010,8,2,6,3,1857,4,1,3,1,'Secretario de planta','Mabe','','1642791222','',false,3,3,11,4,true,5,false,2,3,2442,true,true);
+
+CALL registrarPersonaCOMPLETO('XFQ41Y4V7EAVELESBL','Otilia Guerra Juarez','1992-10-27',false,'149822583','','',false,true,true,true,false,false,true,6,2012,6,4,3,1,1850,3,1,3,4,'Vigilante nocturno','Imagination','','225404968','',true,1,1,2,4,false,3,true,2,1,1854,true,false);
+
+CALL registrarPersonaCOMPLETO('UBIIPL2U1HRUQHA537','Andrea Ramirez Guerra','1953-6-1',false,'639474219','','',false,false,true,true,true,true,false,3,2012,7,4,2,4,1861,3,3,3,2,'Generador de cotizaciones','Imagination','','330145954','',false,6,1,2,2,true,1,true,1,3,2624,false,false);
+
+CALL registrarPersonaCOMPLETO('GLDSXDBG23MEDCSW8W','Emmanuel Campos Martinez','1962-6-25',true,'1639098684','','',false,false,false,true,false,false,false,8,2010,11,2,1,3,1853,3,3,1,1,'Secretario de planta','Bombardier','','733601322','',true,6,2,2,4,false,5,false,3,3,2389,true,true);
+
+CALL registrarPersonaCOMPLETO('1NE9EA5UPJO7T2VRMQ','Estrella Venado Rincon','1951-11-8',false,'1981862632','','',false,false,false,true,false,false,false,3,2011,7,2,2,2,1864,3,1,1,4,'Generacion de imagenes publicitarias','Imagination','','661720400','',false,4,1,1,2,false,2,true,1,5,2335,true,true);
+
+CALL registrarPersonaCOMPLETO('O858X2YWSL0MWTCB23','Jeronimo Hasburgo Ojeda','1997-5-10',true,'1698582416','','',false,false,true,true,true,true,true,8,2011,2,3,4,4,1858,3,3,3,3,'Capturador de datos','Imagination','','1732009','',true,6,3,2,3,false,4,true,6,1,2765,true,false);
+
+CALL registrarPersonaCOMPLETO('FWCUT4Y0X2MALPOA1N','Lisa Rodriguez Hernandez','1951-1-20',false,'1118607418','','',true,true,false,false,false,true,false,7,2012,3,3,3,4,1853,1,1,4,4,'Registrar contactos de agenda','Mazda','','841164175','',false,5,2,9,1,false,1,true,6,3,840,false,false);
+
+CALL registrarPersonaCOMPLETO('RL020JD5DLW63DAE2N','Regina Hernandez Juarez','1959-2-12',false,'1601959625','','',true,true,false,true,false,false,true,6,2010,10,1,7,1,1857,3,2,3,2,'Vigilante nocturno','Imagination','','444741900','',false,6,1,3,4,true,4,true,2,1,423,false,true);
+
+CALL registrarPersonaCOMPLETO('8Y5W2G10RUA3VGWOTF','Juana Marinela Hidalgo','1974-9-7',false,'2098078224','','',false,false,false,false,false,true,false,4,2012,2,4,8,3,1857,4,4,2,2,'Atencion a clientes','Soriana','','475535364','',false,8,1,3,5,true,2,true,3,1,815,false,true);
+
+CALL registrarPersonaCOMPLETO('AHEEX80Q7R0X39R6FB','Mariana Wesley Serrano','1978-4-13',false,'616376306','','',true,true,false,true,false,true,true,1,2011,6,3,4,1,1856,1,3,2,2,'Evaluador de proyectos','Mazda','','1611680111','',false,1,1,3,3,true,5,true,4,4,2448,false,false);
+
+CALL registrarPersonaCOMPLETO('C5CQC62RPIH0EUR0AC','Fernada Venado Samita','1969-8-15',false,'169042710','','',false,true,false,true,false,false,true,2,2010,11,4,4,4,1850,3,3,4,2,'Masajista','Tec de Monterrey','','1782345439','',true,7,2,2,1,true,5,false,6,4,2135,true,false);
+
+CALL registrarPersonaCOMPLETO('9I5AJSTP1CRA1U6YPG','Ileana Saturno Campos','1999-12-21',false,'2139742802','','',true,false,false,false,false,true,true,5,2010,8,4,9,2,1864,1,1,2,2,'Generacion de imagenes publicitarias','Construcciones ASM','','809806873','',true,1,3,1,5,false,4,false,1,5,1429,true,false);
+
+CALL registrarPersonaCOMPLETO('EE3K1VIPSKN4OXC0KL','Guillermo Dragone Cardenas','1980-6-2',true,'1417745817','','',true,true,false,false,false,true,true,2,2012,9,2,1,4,1851,3,3,4,3,'Secretario de planta','General Electric','','1452702557','',false,2,3,2,1,true,5,false,7,1,635,false,false);
+
+CALL registrarPersonaCOMPLETO('WJKEFE5T2ABG0DA2XI','Paulina Dragone Betral','1955-5-9',false,'566815133','','',false,true,true,false,false,false,true,8,2011,7,3,2,4,1859,3,1,3,2,'Consejero general','Cinemex','','1778079441','',false,5,1,6,5,false,3,true,4,1,974,false,true);
+
+CALL registrarPersonaCOMPLETO('XHC4KSMN6EI32FGSAF','Estrella Saturno Garcia','1977-11-13',false,'1005358572','','',false,false,true,false,false,true,false,2,2011,10,3,5,1,1862,2,1,2,3,'Guardia de seguridad','McDonalds','','653504819','',true,8,2,11,4,true,4,true,2,3,243,true,false);
+
+CALL registrarPersonaCOMPLETO('GTNGJAFXID3USJEAGT','Willia Hasburgo Ezquivel','1977-4-25',false,'1908040512','','',true,true,true,false,true,true,false,6,2012,1,2,3,1,1852,4,3,1,2,'Agendar eventos','Tec de Monterrey','','726954902','',false,2,2,6,1,true,5,false,7,5,1064,true,true);
+
+CALL registrarPersonaCOMPLETO('G3J0L3VI16K4PGL38C','Girasol Bermudez Saturno','1999-8-1',true,'703454203','','',false,true,true,true,false,true,false,6,2011,7,4,2,2,1859,3,2,1,3,'Generacion de imagenes publicitarias','Toyota','','1313697556','',true,2,2,1,5,false,4,false,3,2,2713,false,true);
+
+CALL registrarPersonaCOMPLETO('EA8QKNGBGFSEMC3JDH','Andrea Bermudez Willliam Primero Del la Fila','1968-11-9',false,'1829139311','','',false,false,false,true,false,true,true,1,2012,7,4,1,3,1857,4,3,3,2,'Generacion de imagenes publicitarias','Imagination','','1245570154','',false,5,1,7,3,true,3,true,5,2,496,true,true);
+
+CALL registrarPersonaCOMPLETO('DKMAAEB5919AH8U4CP','Maru Martinez Dragone','1958-8-27',false,'1702639305','','',true,false,false,false,true,true,true,7,2010,10,1,2,4,1861,4,4,4,1,'Registrar contactos de agenda','Construcciones ASM','','1630975617','',false,3,2,1,5,false,4,true,3,1,2343,true,true);
+
+CALL registrarPersonaCOMPLETO('G3CO1Y1FYBK7T8GIA5','Ximena Oceano Garcia','1965-9-8',false,'612391334','','',false,true,false,true,true,true,false,4,2010,6,4,3,4,1858,1,3,3,3,'Mantenimiento de  servidores','Imagination','','2029125200','',true,5,1,6,4,true,2,false,6,4,2668,false,false);
+
+CALL registrarPersonaCOMPLETO('5TRB4D3NYOAUXO6BT3','Cesar Jernation Ezquivel','1971-5-27',true,'1340323267','','',false,true,false,true,true,true,false,5,2011,10,3,6,2,1850,1,4,2,2,'Secretario de planta','PNG','','2098072651','',true,8,2,1,5,true,4,false,6,3,2233,false,false);
+
+CALL registrarPersonaCOMPLETO('56KDC4W1UFPACACF6F','Max Luciernaga Cuevas','1992-8-20',true,'722310962','','',true,true,true,true,false,true,false,7,2012,7,3,6,2,1859,1,2,4,4,'Vigilante nocturno','iCorp','','1596082862','',false,6,2,11,2,true,4,false,6,1,1592,true,true);
+
+CALL registrarPersonaCOMPLETO('YAFFV62GGLY6SA4SDI','Serafin Rodriguez Guyen','1988-9-28',true,'884366025','','',false,true,false,true,true,true,true,5,2011,10,4,4,1,1864,1,3,1,2,'Atencion a clientes','Bombardier','','1739764217','',true,1,1,2,1,false,5,false,6,5,2792,false,true);
+
+CALL registrarPersonaCOMPLETO('82K3CHDH7TABYF0CSP','Pedro Garcia Huges','1986-6-13',true,'1014830813','','',true,true,true,true,false,true,false,1,2011,5,1,9,4,1851,2,1,2,2,'Masajista','General Electric','','604204169','',true,3,1,6,3,true,4,false,4,3,1442,false,true);
+
+CALL registrarPersonaCOMPLETO('H3Y5C0C1FUFQ93FEW5','Luis Saturno Oceano','1971-12-15',true,'670057630','','',false,false,true,false,false,false,false,4,2011,1,4,8,3,1857,2,3,3,2,'Guardia de seguridad','Imagination','','1723441527','',false,3,2,7,1,true,2,false,5,5,435,true,false);
+
+CALL registrarPersonaCOMPLETO('BBCIQ7CQ6D7BE3IGIP','Manuel Saturno Lagones','1987-3-18',true,'1922137711','','',true,true,false,false,true,true,false,3,2011,6,4,4,3,1860,1,2,3,3,'Registrar contactos de agenda','Soriana','','1286289070','',false,1,1,8,5,false,4,false,7,4,1034,true,true);
+
+CALL registrarPersonaCOMPLETO('OGDDCWQLAOBE89VDE2','Diego Cuevas Luciernaga','1970-9-2',true,'678040719','','',false,true,true,true,false,true,true,4,2011,11,1,4,3,1857,2,4,3,4,'Evaluador de proyectos','Cinemex','','2013854921','',false,7,2,3,4,false,2,false,3,5,1646,false,false);
+
+CALL registrarPersonaCOMPLETO('SUB9TLRD7BFH8OBGVX','Daniel Quesos Rodriguez','1957-12-12',true,'1408248782','','',true,false,false,true,false,false,false,5,2011,2,4,5,3,1857,4,3,2,3,'Capturador de datos','Tec de Monterrey','','1054883182','',false,6,3,8,2,false,1,false,1,2,336,false,true);
+
+CALL registrarPersonaCOMPLETO('GOMBF8AHTONF4LLLIM','Europa Ojeda Jirafa','1984-1-22',false,'1700650824','','',true,true,false,false,true,false,true,3,2010,9,2,4,1,1864,1,3,3,3,'Atencion a clientes','Soriana','','1940708978','',true,8,1,11,2,false,1,true,7,5,2957,true,true);
+
+CALL registrarPersonaCOMPLETO('C83AMRDDW9229E09KS','Marco Lagones Samita','1952-7-3',true,'2044032013','','',false,false,true,true,false,false,true,5,2012,10,2,2,2,1850,1,1,2,1,'Generacion de imagenes publicitarias','Palacio de Hierro','','1799015465','',true,7,3,8,3,true,2,true,3,2,982,true,false);
+
+CALL registrarPersonaCOMPLETO('M2KUMAC7BO8I4COGYF','Yamal Wesley Cuevas','1989-3-3',true,'1928435054','','',false,true,true,true,false,true,true,5,2010,4,2,5,1,1853,1,2,3,2,'Generacion de imagenes publicitarias','Mazda','','1111859268','',false,4,3,11,1,true,5,true,7,3,877,true,false);
+
+CALL registrarPersonaCOMPLETO('IE4KB1D6NAKNITQO4Q','Neptuno Serrano Samita','1963-6-17',true,'1460887162','','',false,true,true,true,true,true,false,3,2010,3,1,2,2,1860,3,1,3,1,'Consejero general','iCorp','','916327411','',true,6,1,8,5,false,5,false,6,6,615,true,false);
+
+CALL registrarPersonaCOMPLETO('SSWHA502C3RE8ARD68','Cesar Marinela Betral','1954-2-22',true,'26416026','','',true,true,true,false,false,true,false,7,2010,6,1,5,1,1856,1,4,3,4,'Recibidor de quejas','Tec de Monterrey','','1803035255','',false,7,1,4,5,true,1,true,6,3,2346,false,true);
+
+CALL registrarPersonaCOMPLETO('MVRP01TKYIGLGUB18T','Diego Guyen Lagones','1961-6-11',true,'2134954074','','',false,false,false,true,true,false,false,4,2010,8,3,6,1,1851,3,2,2,1,'Guardia de seguridad','Bombardier','','1301866191','',true,7,1,2,5,false,5,false,4,6,1088,false,true);
+
+CALL registrarPersonaCOMPLETO('V4F71A8PAPYKO7LQGH','Ximena Gonzalez Lagones','1994-1-12',false,'358942939','','',true,false,true,true,false,true,false,3,2012,2,4,4,2,1850,2,2,2,3,'Recibidor de quejas','Soriana','','247422654','',false,4,3,2,3,true,5,false,2,1,1098,true,false);
+
+CALL registrarPersonaCOMPLETO('5RTCE1XWK8CGBIMI2D','Elizabeth Rodriguez Samita','1955-11-4',false,'480890647','','',true,false,false,false,false,true,false,2,2012,3,3,8,1,1859,4,2,4,2,'Consejero general','Mabe','','1284328894','',true,3,1,3,1,false,4,true,6,3,433,true,false);
+
+CALL registrarPersonaCOMPLETO('BY8VGOPQEOJRIXNOL5','Max Corral Jirazol','1954-2-27',true,'1218078029','','',true,false,true,false,false,false,true,8,2010,10,2,6,3,1863,2,3,1,4,'Generador de cotizaciones','Palacio de Hierro','','858945202','',true,2,1,9,3,true,3,true,7,4,1109,false,true);
+
+CALL registrarPersonaCOMPLETO('VAX0XD5E8GMMDTSDAY','Elba Alicia Saturno Hasburgo','1992-3-16',false,'1586936855','','',true,true,true,true,false,true,true,6,2012,9,2,5,1,1863,4,3,3,1,'Generador de cotizaciones','Soriana','','2004433981','',false,4,2,7,5,false,4,false,7,2,2501,false,false);
+
+CALL registrarPersonaCOMPLETO('2YGRPEBDDYPGCIEQCL','Beatriz Jirazol Betral','1963-5-9',false,'96059821','','',true,false,false,true,false,false,true,4,2010,4,4,3,4,1862,2,1,3,2,'Capturador de datos','Imagination','','154169596','',false,6,1,3,5,true,1,true,6,3,355,true,false);
+
+CALL registrarPersonaCOMPLETO('BUYLCYA20CURC3C49B','Chicharron Garcia Jirazol','1974-6-8',true,'887264812','','',false,false,true,false,true,true,false,8,2012,4,2,7,4,1861,4,1,1,3,'Consejero general','Cinemex','','1742076362','',false,8,3,10,3,false,3,true,3,4,2430,true,false);
+
+CALL registrarPersonaCOMPLETO('0F0GHG2D0BSMJDPGB0','Itzel Marinela Huges','1970-11-10',false,'840916280','','',true,true,true,false,true,false,false,4,2012,2,4,3,4,1850,1,1,2,2,'Atencion a clientes','Construcciones ASM','','48677971','',true,7,3,2,1,false,3,true,7,2,2293,true,true);
+
+CALL registrarPersonaCOMPLETO('8A8QI5CKQ8E6DAN2CC','Maria Jose Saponeta Rincon','1974-11-15',false,'692343071','','',true,false,false,true,false,false,true,3,2011,9,3,3,2,1855,3,4,3,2,'Masajista','Tec de Monterrey','','932965284','',true,1,1,6,3,false,2,false,6,4,1675,true,true);
+
+CALL registrarPersonaCOMPLETO('YTAG6H38EJKBT900OG','Maria Jose Cuevas Samita','1982-8-20',false,'1422960844','','',true,true,false,true,true,true,true,7,2010,6,3,4,1,1859,2,2,2,2,'Registrar contactos de agenda','Kellogs','','1982646602','',false,8,3,10,4,true,4,true,4,3,359,false,true);
+
+CALL registrarPersonaCOMPLETO('HE6AB650U97L3MDNWJ','Fernada Huges Cerrujo','1952-7-7',false,'25552759','','',true,true,true,true,false,true,true,5,2012,10,3,2,1,1857,3,3,4,1,'Agendar eventos','Mabe','','1574242749','',true,3,3,8,1,true,1,true,5,5,2523,true,true);
+
+CALL registrarPersonaCOMPLETO('MRWCQVIR5IPCBI7FLF','CLaudia Dragone Quesos','1954-11-21',false,'266363271','','',true,false,false,true,false,true,false,1,2010,8,2,8,1,1858,2,3,4,3,'Conserge de piso','Mazda','','20474819','',true,7,1,5,4,false,1,true,3,3,2667,true,true);
+
+CALL registrarPersonaCOMPLETO('SQKAVH48DKAK12BD2I','Daniel Ezquivel Hasburgo','1954-2-17',true,'823333265','','',false,true,false,false,false,true,true,3,2012,5,4,2,1,1851,2,4,3,1,'Atencion a clientes','Palacio de Hierro','','1253122004','',false,6,2,10,3,true,3,false,1,4,2188,false,false);
+
+CALL registrarPersonaCOMPLETO('LEBFI3G6AF0FCYDW3C','Margot Choco Roles Ramirez','1996-10-5',false,'23152632','','',false,false,false,false,false,false,false,7,2012,6,1,3,3,1850,1,4,4,1,'Vigilante nocturno','iCorp','','1689704558','',true,7,1,5,3,true,5,false,4,1,501,false,true);
+
+CALL registrarPersonaCOMPLETO('KJB0X03IKXHWHOBGM0','Antartida Bermudez Ribas','1959-6-8',false,'398597808','','',false,true,false,true,true,false,false,3,2010,6,3,5,3,1864,3,3,2,1,'Agendar eventos','Soriana','','920387023','',false,4,1,1,5,false,1,true,4,3,2919,true,true);
+
+CALL registrarPersonaCOMPLETO('V6KAHBKRQ8LGUJAN9Y','Alicia Cuevas Ribas','1989-9-8',false,'942793993','','',true,true,true,true,false,false,false,7,2012,9,3,3,3,1859,2,2,2,2,'Agendar eventos','PNG','','2111220766','',true,7,3,6,4,true,1,true,3,2,2590,true,true);
+
+CALL registrarPersonaCOMPLETO('K0B47T1CFBFDDFW3IO','Chicharron Jernation Huges','1989-4-16',true,'1409768179','','',true,true,true,false,true,false,false,2,2011,8,4,8,2,1861,2,4,3,1,'Secretario de planta','Mazda','','1528589202','',false,8,1,2,3,true,4,true,7,6,1367,true,true);
+
+CALL registrarPersonaCOMPLETO('QTDF0GNBYBUUCBFDME','Alicia Willliam Primero Del la Fila Garcia','1964-6-17',false,'1300517078','','',false,false,false,false,true,true,true,6,2011,6,4,3,3,1858,4,4,1,2,'Vigilante nocturno','Construcciones ASM','','1586968540','',true,4,2,8,3,false,1,false,4,6,2448,true,true);
+
+CALL registrarPersonaCOMPLETO('BCCUGSPU8VPYHCJ5CA','Emmanuel Ojeda Wesley','1987-7-9',true,'1364811147','','',true,true,false,true,true,true,true,6,2012,11,2,7,4,1852,3,3,4,2,'Recibidor de quejas','Mazda','','200776423','',true,3,3,8,5,false,4,true,5,5,1442,false,false);
+
+CALL registrarPersonaCOMPLETO('ELMFQBQODD4E46FWK9','Santiago Cerrujo Tumbas','1982-7-24',true,'1481901643','','',false,false,true,false,true,true,false,5,2012,5,1,5,4,1858,2,4,2,2,'Atencion a clientes','PNG','','322048633','',false,4,2,1,1,false,3,false,3,6,1440,false,false);
+
+CALL registrarPersonaCOMPLETO('VAM3F7QBPCXGTWA8QX','Yamal Lagones Rodriguez','1976-5-24',true,'2073209595','','',true,false,true,true,false,false,true,4,2010,7,4,9,2,1857,2,2,3,2,'Secretario de planta','Construcciones ASM','','1842781731','',true,6,1,7,2,true,2,false,6,5,188,true,true);
+
+CALL registrarPersonaCOMPLETO('7D71GVLQJDMFEHCBDW','Jose Dragone Lagones','1974-9-21',true,'1637065250','','',false,true,true,false,false,false,true,8,2010,10,4,2,3,1861,2,4,3,2,'Recibidor de quejas','Tec de Monterrey','','562453082','',true,8,1,2,5,true,4,false,2,6,927,false,true);
+
+CALL registrarPersonaCOMPLETO('ABFKXDU4AHFVSDS4K6','Martin Hidalgo Serrano','1966-4-20',true,'436882164','','',true,true,true,true,true,true,false,1,2010,10,2,5,3,1856,2,4,4,1,'Recibidor de quejas','Bombardier','','108299402','',false,5,3,10,2,false,1,false,7,3,2674,true,true);
+
+CALL registrarPersonaCOMPLETO('LD0AONP8IVIGXGEH6T','Maria Jose Ramirez Guerra','1962-12-1',false,'330292942','','',false,true,false,false,false,true,true,3,2011,9,4,2,1,1852,3,4,1,1,'Evaluador de proyectos','Tec de Monterrey','','911018961','',false,7,3,9,4,true,5,true,7,4,817,false,true);
+
+CALL registrarPersonaCOMPLETO('K1T1FDM6BSQ2S9PH9D','Clericot Rincon Luciernaga','1983-11-21',false,'208334870','','',false,true,false,true,true,false,false,2,2010,3,1,7,1,1864,4,2,3,3,'Masajista','Mabe','','1120025310','',false,5,2,5,4,true,4,true,2,2,1274,true,false);
+
+CALL registrarPersonaCOMPLETO('1QACFA8EMCI46V1ED5','Diego Ribas Cardenas','1985-10-17',true,'625324026','','',false,false,true,true,false,true,true,3,2012,1,4,8,3,1860,4,4,2,3,'Generacion de imagenes publicitarias','Bombardier','','1284338811','',false,2,1,3,4,false,5,true,1,2,2635,true,true);
+
+CALL registrarPersonaCOMPLETO('BU41PIQ5A2ULEWJFQF','Sandra Campos Choco Roles','1966-7-9',false,'683864149','','',false,true,true,false,false,false,false,8,2012,11,2,7,4,1858,2,2,2,3,'Consejero general','Mazda','','252533874','',false,5,1,8,3,true,4,true,2,6,2492,true,true);
+
+CALL registrarPersonaCOMPLETO('DG4TVDJQPGQ5H1253S','Andrea Hidalgo Cerdo','1995-3-6',false,'493987909','','',true,false,true,true,false,true,true,2,2011,7,3,5,3,1858,3,1,2,2,'Secretario de planta','Mabe','','1615361321','',false,3,3,1,3,true,4,false,1,6,3032,false,true);
+
+CALL registrarPersonaCOMPLETO('PEV6ERPDQF9POQ0F4E','Sofia Cerdo Tumbas','1986-11-24',false,'795981986','','',true,true,false,false,false,true,true,2,2010,7,2,8,1,1860,2,2,4,3,'Secretario de planta','Cinemex','','798917497','',true,4,3,10,2,false,5,true,4,3,344,false,true);
+
+CALL registrarPersonaCOMPLETO('8PEGEGT0YBV4YJG82N','Juan Jose Rojo Cerdo','1953-5-10',true,'1198643716','','',true,false,false,true,false,true,true,3,2010,11,3,2,2,1861,1,1,4,3,'Secretario de planta','McDonalds','','2074124121','',true,4,1,9,1,false,4,true,7,4,2593,true,false);
+
+CALL registrarPersonaCOMPLETO('3E48WPKOHXJPNELSI3','Gisela Ramirez Rincon','1973-9-15',false,'1720071305','','',false,false,true,true,true,true,true,8,2012,9,1,9,3,1851,4,4,1,4,'Masajista','Toyota','','621061114','',false,1,3,8,4,true,4,true,1,2,668,false,true);
+
+CALL registrarPersonaCOMPLETO('3PAFDE2DKIPMIRX4PJ','Alejandro Tumbas Hernandez','1966-6-14',true,'1752197794','','',true,false,true,false,true,false,false,6,2012,10,2,1,2,1854,1,2,2,1,'Conserge de piso','Cinemex','','1415584577','',false,8,3,9,5,false,1,true,7,5,1890,true,true);
+
+CALL registrarPersonaCOMPLETO('XHNTUP2BHB31JW4VXK','Maria Jose Corral Luciernaga','1961-3-20',false,'1029392603','','',false,true,true,true,false,true,false,1,2010,11,1,3,2,1853,4,1,2,1,'Masajista','Imagination','','1141023144','',true,7,1,8,2,true,2,true,6,4,101,true,false);
+
+CALL registrarPersonaCOMPLETO('I2ARKE402A3CTKGA20','Regina Corral Selacanto','1989-7-9',false,'504787334','','',true,false,false,true,true,false,false,6,2011,7,1,1,4,1864,3,1,4,2,'Agendar eventos','Tec de Monterrey','','1118552849','',false,5,1,7,4,true,5,true,6,5,1511,true,false);
+
+CALL registrarPersonaCOMPLETO('9I55SFEXLNADNAB5FG','Itzel Selacanto Dragone','1990-1-1',false,'520904382','','',true,false,true,true,false,false,false,8,2010,11,3,5,2,1864,2,2,3,2,'Evaluador de proyectos','Cinemex','','93740646','',true,8,2,8,1,false,2,false,3,5,962,true,true);
+
+CALL registrarPersonaCOMPLETO('E1NEBD8RFPRQ5I6GRU','Antartida Rincon Hasburgo','1973-2-4',false,'1950756396','','',true,true,false,true,false,false,false,4,2011,9,1,9,1,1854,2,3,4,1,'Evaluador de proyectos','Palacio de Hierro','','2089438502','',false,7,3,2,3,true,1,false,6,3,1394,false,false);
+
+CALL registrarPersonaCOMPLETO('DWJF5EKGFPA5W0HI8P','Neptuno Willliam Primero Del la Fila Cerdo','1999-2-13',true,'466847465','','',false,true,true,false,true,true,true,6,2012,5,3,6,2,1864,1,4,2,2,'Secretario de planta','Imagination','','2131859722','',true,2,1,7,1,true,2,false,6,3,2557,false,false);
+
+CALL registrarPersonaCOMPLETO('04PMLE3HP6O2IJHJGT','Guillermo Hernandez Guerra','1992-4-23',true,'247558319','','',false,true,false,false,true,true,false,2,2012,8,2,1,3,1862,4,1,4,2,'Vigilante nocturno','Construcciones ASM','','436996449','',false,7,3,2,3,false,5,false,6,6,1579,true,false);
+
+CALL registrarPersonaCOMPLETO('JB9UTNBF0CGYI6BCDT','Serafin Guyen Venado','1984-9-27',true,'68291385','','',true,false,true,false,true,true,false,4,2011,11,3,1,1,1862,4,1,2,1,'Generacion de imagenes publicitarias','Palacio de Hierro','','1919874286','',false,8,3,11,1,false,3,false,8,1,2506,true,false);
+
+CALL registrarPersonaCOMPLETO('LG1MKVFRKSP2DBE3SJ','Susana Jirafa Baca','1979-6-19',false,'2125943316','','',true,true,true,true,true,false,false,3,2012,8,1,7,3,1852,2,4,3,1,'Agendar eventos','McDonalds','','2130165957','',false,4,1,8,1,true,5,true,7,6,2792,false,false);
+
+CALL registrarPersonaCOMPLETO('8GOVUNBGP68AWQVIVF','Cesar Ezquivel Venado','1989-7-23',true,'695377935','','',false,true,true,true,true,false,false,7,2011,5,1,6,2,1861,2,4,1,3,'Masajista','Bombardier','','583512267','',true,8,3,5,1,false,5,false,2,5,1434,false,true);
+
+CALL registrarPersonaCOMPLETO('XMAC5WLFJ1EDBBBJ5A','Fernando Jirafa Ribas','1994-7-3',true,'911492886','','',false,true,false,true,false,false,false,7,2011,7,2,1,1,1861,2,3,1,2,'Generador de cotizaciones','General Electric','','599644056','',true,4,3,2,5,true,1,false,2,2,1447,false,false);
+
+CALL registrarPersonaCOMPLETO('9YSF2ELROCVQQSBTMB','Daniel Cerdo Cardenas','1999-3-23',true,'994948727','','',false,false,true,true,false,true,false,4,2011,11,4,1,1,1860,2,1,1,4,'Mantenimiento de  servidores','Kellogs','','1383250049','',false,1,1,8,1,true,4,true,1,1,1495,false,true);
+
+CALL registrarPersonaCOMPLETO('AG6KBG55LHSY1FU7JK','Beto Rodriguez Willliam Primero Del la Fila','1987-2-2',true,'1617770919','','',true,false,true,true,false,true,true,6,2012,6,2,3,3,1862,3,1,3,4,'Consejero general','Kellogs','','1756541605','',false,1,1,7,1,false,1,false,7,6,2639,true,false);
+
+CALL registrarPersonaCOMPLETO('QCCYBFCMTACT8DGB48','Serafin Rincon Bermudez','1959-9-16',true,'1409131095','','',false,true,true,true,true,true,true,6,2011,10,4,5,1,1855,3,3,4,1,'Consejero general','Toyota','','1619995418','',true,4,2,3,1,true,5,false,3,4,1298,false,true);
+
+CALL registrarPersonaCOMPLETO('AYITA7CGS3PLDTMYTE','Norma Quesos Choco Roles','1966-12-5',false,'2099443637','','',false,true,true,true,false,false,false,6,2012,11,1,8,4,1861,2,4,4,3,'Registrar contactos de agenda','Imagination','','1399015758','',true,7,3,8,2,false,2,false,5,6,992,true,false);
+
+CALL registrarPersonaCOMPLETO('LFPYC35LOUD411XDV7','Ximena Jernation Lagones','1967-11-27',false,'979986573','','',false,true,false,true,true,false,true,6,2010,7,3,5,4,1864,1,2,1,2,'Secretario de planta','Cinemex','','608109335','',true,6,3,11,3,true,2,true,5,1,396,true,false);
+
+CALL registrarPersonaCOMPLETO('88W5TKJBAEFSD5TMAG','Vanesa Luciernaga Rojo','1987-1-20',false,'34083161','','',true,true,true,true,true,false,false,1,2010,7,2,5,1,1857,1,3,4,4,'Atencion a clientes','Palacio de Hierro','','599069491','',true,8,3,5,3,true,1,false,3,1,1014,true,true);
+
+CALL registrarPersonaCOMPLETO('G5HEBX8OFSDPWQWDF0','Armando Guyen Marinela','1958-5-21',true,'1114795214','','',true,true,false,false,false,false,true,1,2011,11,2,2,4,1862,3,1,4,1,'Consejero general','Imagination','','139907880','',false,6,3,6,5,false,4,true,6,4,323,false,false);
+
+CALL registrarPersonaCOMPLETO('MSNPB78Q741G47TCSE','Cesar Cerdo Ezquivel','1988-8-27',true,'706876358','','',false,false,true,false,false,false,false,6,2010,10,4,1,4,1858,2,1,4,1,'Generador de cotizaciones','PNG','','557351406','',false,3,1,10,1,true,4,true,2,3,422,false,true);
+
+CALL registrarPersonaCOMPLETO('K9ADS8VWWOEA9J4HBN','Sandia Gutierrez Venado','1951-4-25',false,'1211245239','','',true,true,false,true,false,false,true,1,2010,4,2,9,4,1850,3,3,2,2,'Recibidor de quejas','General Electric','','1146847891','',false,6,2,6,4,false,2,true,6,6,2134,true,true);
+
+CALL registrarPersonaCOMPLETO('GYHC1SE8HMPLK57JYC','Margot Baca Corral','1953-5-27',false,'279482379','','',false,false,false,false,false,false,true,4,2011,7,4,8,2,1855,3,3,1,1,'Vigilante nocturno','Palacio de Hierro','','1684684079','',true,6,1,1,4,false,1,true,8,3,1328,false,true);
+
+CALL registrarPersonaCOMPLETO('BR6GIAGH18MCKWHDYR','Juan Pablo Juarez Cerdo','1970-8-8',true,'2129614708','','',true,true,false,false,true,false,true,5,2012,7,1,2,4,1863,1,3,4,4,'Evaluador de proyectos','Mabe','','1752593417','',true,7,3,1,5,false,4,true,3,4,185,true,false);
+
+CALL registrarPersonaCOMPLETO('UB0BEKBN7KPXLH3S23','Plutarco Ribas Saturno','1970-4-22',true,'100708440','','',true,false,true,true,false,false,false,2,2012,10,3,6,2,1854,1,2,3,1,'Consejero general','McDonalds','','860130311','',true,5,1,6,5,false,4,false,8,3,2558,true,true);
+
+CALL registrarPersonaCOMPLETO('RCAJ8BBSTB6A7OT2CM','Blanca Baca Guerra','1983-5-22',false,'1921176334','','',true,true,false,true,true,false,true,7,2010,3,2,7,1,1860,4,2,2,4,'Recibidor de quejas','Mabe','','267780879','',false,3,1,5,2,true,4,false,5,1,442,false,false);
+
+CALL registrarPersonaCOMPLETO('YLOJJVHT3V9MKF0KDF','Regina Rojo Hasburgo','1969-11-17',false,'1014869433','','',true,true,false,true,true,true,true,2,2012,11,1,1,3,1864,1,2,4,3,'Registrar contactos de agenda','Imagination','','574168176','',false,8,2,3,2,true,3,false,4,6,2782,false,true);
+
+CALL registrarPersonaCOMPLETO('RKAG3OFL8HABLY0UQC','Jamon Jernation Garcia','1979-5-16',true,'1143628787','','',true,false,false,false,false,false,true,2,2012,7,3,6,4,1859,2,2,1,2,'Generador de cotizaciones','Bombardier','','130865253','',false,1,2,10,2,true,2,true,4,2,889,false,false);
+
+CALL registrarPersonaCOMPLETO('UMBFB9BWE71ITLDBFW','Jeronimo Hidalgo Baca','1981-8-27',true,'1839175109','','',true,false,true,false,false,true,true,6,2012,4,3,5,3,1855,2,1,2,3,'Secretario de planta','Palacio de Hierro','','2057651048','',false,8,1,2,3,false,5,true,5,2,2066,true,true);
+
+CALL registrarPersonaCOMPLETO('ELOP2BG69L1ECM9IQI','Hermenejildo Rojo Gutierrez','1990-11-15',true,'96251305','','',true,true,true,true,false,true,false,7,2011,6,3,8,2,1856,3,1,3,1,'Guardia de seguridad','McDonalds','','1369235402','',false,2,3,1,4,false,3,true,1,3,1216,false,false);
+
+CALL registrarPersonaCOMPLETO('PGXCHTDURADVVACASX','Cesar Gonzalez Jirazol','1990-9-28',true,'1197547680','','',true,false,true,true,true,false,true,7,2011,8,3,9,3,1864,2,1,4,1,'Agendar eventos','Construcciones ASM','','1101837898','',false,5,2,8,2,false,1,false,2,6,2593,true,false);
+
+CALL registrarPersonaCOMPLETO('AM1C08WSGFK50RDSL4','Carmela Quesos Hernandez','1996-7-6',false,'1093019700','','',false,false,true,true,false,true,true,7,2012,10,4,1,3,1857,3,1,3,4,'Mantenimiento de  servidores','Construcciones ASM','','263796683','',true,4,3,9,4,true,3,false,7,5,2356,false,false);
+
+CALL registrarPersonaCOMPLETO('1UFNI6H9E9UVEMPLFY','Martin Guyen Luciernaga','1986-8-6',true,'1974367206','','',true,false,false,true,true,true,true,1,2010,8,1,8,1,1861,3,3,1,1,'Atencion a clientes','Construcciones ASM','','1169816282','',false,6,3,9,1,true,2,true,5,5,1169,true,false);
+
+CALL registrarPersonaCOMPLETO('BOXG49ON7Y5PE451WX','Julian Campos Marinela','1953-2-16',true,'1627334710','','',true,true,true,false,false,true,true,7,2011,4,4,7,4,1861,4,4,4,2,'Vigilante nocturno','McDonalds','','1308567136','',true,4,3,8,4,false,2,true,8,5,1033,false,false);
+
+CALL registrarPersonaCOMPLETO('93CUGNGC0BD1PYFE3R','Juana Lagones Betral','1963-7-27',false,'1459957847','','',false,true,true,true,true,true,false,3,2012,4,3,7,4,1861,1,3,2,3,'Vigilante nocturno','Tec de Monterrey','','365932381','',true,2,3,2,3,false,4,true,5,2,854,true,false);
+
+CALL registrarPersonaCOMPLETO('RBDABFTK0D5HBAM99H','Julia Cardenas Cerdo','1965-7-18',false,'1539251618','','',true,true,false,false,true,false,true,1,2010,6,1,1,3,1864,2,3,4,2,'Conserge de piso','PNG','','1202932895','',false,4,2,5,4,false,3,true,6,4,1586,false,true);
+
+CALL registrarPersonaCOMPLETO('9QAMD2K27HN33DGYF4','Cesar Ezquivel Jernation','1995-1-2',true,'2151763','','',true,false,true,true,false,true,true,6,2011,5,1,9,3,1855,4,3,4,1,'Recibidor de quejas','General Electric','','380446436','',false,5,3,5,3,false,1,true,2,3,2890,true,false);
+
+CALL registrarPersonaCOMPLETO('641YP71PEJCB77ID21','Chicharron Saturno Garcia','1959-12-24',true,'186519717','','',true,false,true,false,false,false,true,8,2010,8,2,4,1,1855,2,2,1,4,'Vigilante nocturno','Kellogs','','656166393','',false,3,1,11,2,true,5,true,6,5,2011,false,false);
+
+CALL registrarPersonaCOMPLETO('1C3GBSWXTP1CIX4VUD','Raquel Hernandez Martinez','1957-4-8',false,'743805492','','',true,false,false,false,false,true,true,4,2011,3,1,1,2,1861,4,2,1,4,'Mantenimiento de  servidores','Toyota','','1926819574','',true,6,1,1,4,true,1,false,8,1,1490,false,false);
+
+CALL registrarPersonaCOMPLETO('8AMCMD54P5GVFWNDYY','Julia Cardenas Garcia','1967-1-21',false,'316178321','','',false,true,true,true,true,true,false,2,2012,4,3,8,2,1850,3,4,3,4,'Mantenimiento de  servidores','Cinemex','','1038830175','',false,7,1,6,3,true,3,true,3,5,1592,false,true);
+
+CALL registrarPersonaCOMPLETO('7E4HRNEBXRY7OO5QBC','Vanesa Willliam Primero Del la Fila Lagones','1977-2-20',false,'729353534','','',false,true,false,true,false,true,true,7,2011,10,3,4,2,1860,3,4,4,2,'Atencion a clientes','Tec de Monterrey','','289729439','',false,1,2,10,3,false,2,false,5,2,1677,true,true);
+
+CALL registrarPersonaCOMPLETO('7CO0TWS7RWPHCD8E8H','Pinguin Baca Rincon','1999-9-18',true,'1956642934','','',true,false,true,true,false,true,false,6,2011,3,2,2,1,1853,2,4,4,4,'Vigilante nocturno','Bombardier','','915281533','',true,2,3,8,3,true,1,true,7,5,567,false,true);
+
+CALL registrarPersonaCOMPLETO('LEC27QAJI1J56DJQDL','Ruiodoso Garcia Rincon','1987-6-8',true,'107212718','','',true,false,false,true,false,true,false,8,2011,3,2,4,2,1856,2,4,2,3,'Atencion a clientes','Imagination','','922573800','',false,3,3,3,4,false,3,true,7,1,2909,false,true);
+
+CALL registrarPersonaCOMPLETO('WO4842VKLGYSBFGETN','Eduardo Campos Guerra','1963-6-24',true,'1498711929','','',false,true,true,true,true,true,false,4,2012,2,4,7,3,1854,3,4,3,1,'Capturador de datos','Imagination','','1935226425','',false,3,1,7,4,true,1,true,7,1,184,false,false);
+
+CALL registrarPersonaCOMPLETO('2GGMFSWPCDGL6NCBFM','Daniel Choco Roles Saponeta','1996-1-7',true,'723575973','','',false,true,true,true,true,false,true,1,2010,7,3,5,4,1859,4,2,4,2,'Secretario de planta','General Electric','','1123810466','',true,1,1,6,4,true,3,false,7,3,810,true,false);
+
+CALL registrarPersonaCOMPLETO('TI52QXOWV3O2AOF9B0','Sandia Lagones Hidalgo','1969-3-21',false,'698215639','','',false,true,true,true,false,true,false,5,2010,11,4,6,3,1860,4,2,3,2,'Evaluador de proyectos','Soriana','','775830048','',true,2,1,10,4,false,1,true,2,5,1988,true,true);
+
+CALL registrarPersonaCOMPLETO('QC9FPOBCBMQ5D6FGT3','Pabel Jirafa Lagones','1953-10-27',true,'1235525993','','',true,true,true,false,true,true,false,6,2010,3,1,7,3,1857,3,4,4,1,'Consejero general','Palacio de Hierro','','2147416447','',true,5,3,3,5,false,2,false,8,2,2298,false,true);
+
+CALL registrarPersonaCOMPLETO('GXDAYLG2RIRGGVGDVO','Ruiodoso Hernandez Venado','1983-10-11',true,'582751096','','',false,true,false,false,false,false,true,5,2011,3,1,8,2,1851,1,1,4,1,'Recibidor de quejas','Construcciones ASM','','771968104','',false,7,3,10,3,false,4,true,3,5,1405,false,true);
+
+CALL registrarPersonaCOMPLETO('GE5HE6T17W75PB21CE','Martin Samita Choco Roles','1972-8-5',true,'1180534735','','',false,false,false,true,false,true,true,2,2012,7,2,1,2,1855,4,4,2,3,'Recibidor de quejas','Palacio de Hierro','','1836596812','',false,4,1,9,3,true,3,false,2,4,2346,true,true);
+
+CALL registrarPersonaCOMPLETO('2C9NA528RGI4FQLDLK','Otilia Ojeda Cerdo','1990-4-15',false,'1908853321','','',true,true,true,false,true,true,false,2,2010,9,2,1,4,1856,3,1,2,1,'Guardia de seguridad','Mazda','','1138999003','',true,1,2,2,2,true,5,true,8,1,1786,false,true);
+
+CALL registrarPersonaCOMPLETO('4U7LV115DGEUAE8LRB','Carmela Cuevas Corral','1965-9-23',false,'1402475855','','',false,true,true,false,false,false,true,2,2011,1,4,2,1,1864,4,1,4,3,'Mantenimiento de  servidores','iCorp','','1936619808','',true,3,2,4,5,true,3,true,7,6,1724,false,true);
+
+CALL registrarPersonaCOMPLETO('ALFB4ND3LO0QCR0GJR','Maru Hidalgo Quesos','1973-1-28',false,'1918980859','','',true,false,true,false,false,false,false,6,2012,2,1,7,3,1860,4,1,3,3,'Conserge de piso','Tec de Monterrey','','1023699547','',true,7,2,8,2,true,4,false,4,5,1657,false,false);
+
+CALL registrarPersonaCOMPLETO('QCAUXROBTFAFN78UHS','Paulina Bermudez Rodriguez','1972-1-1',false,'1409569809','','',false,false,true,true,false,true,true,8,2012,9,4,9,2,1850,2,1,2,4,'Evaluador de proyectos','PNG','','950607236','',true,8,2,8,4,true,5,true,5,2,2836,false,false);
+
+CALL registrarPersonaCOMPLETO('EFFWGQQP2I354J3BTV','Julia Willliam Primero Del la Fila Guerra','1983-3-5',false,'1704452758','','',true,false,false,true,true,false,false,7,2010,1,4,9,2,1861,2,1,4,3,'Generacion de imagenes publicitarias','Construcciones ASM','','1378404528','',false,1,1,7,1,false,4,false,8,3,725,false,true);
+
+CALL registrarPersonaCOMPLETO('4KMVVAFYQ9IBLIN4RG','Matias Selacanto Jirafa','1957-5-4',true,'283980280','','',false,false,false,true,false,true,true,6,2011,5,3,8,3,1860,1,1,2,3,'Guardia de seguridad','iCorp','','6067049','',true,5,2,4,2,false,4,false,1,1,2652,false,true);
+
+CALL registrarPersonaCOMPLETO('Q3VQEKHFLEXPCNYAQE','Gustavo Saponeta Ojeda','1965-11-26',true,'678419938','','',true,true,true,false,false,true,false,3,2011,10,1,5,4,1854,3,4,3,3,'Generacion de imagenes publicitarias','PNG','','216450309','',true,2,2,8,4,true,5,false,4,2,100,false,false);
+
+CALL registrarPersonaCOMPLETO('OQ2J811EVWAPAEQ9XV','Plutarco Cardenas Hidalgo','1952-1-12',true,'201552766','','',true,false,false,false,false,false,false,5,2012,10,3,6,4,1862,3,3,3,1,'Guardia de seguridad','General Electric','','1970871443','',true,6,2,6,3,false,1,false,1,2,143,true,false);
+
+CALL registrarPersonaCOMPLETO('TEBGVC5BNBAG4SOXTB','Cecilia Guerra Jirafa','1981-5-21',false,'1792846503','','',true,false,false,false,true,true,false,3,2012,3,2,1,2,1861,1,4,4,3,'Consejero general','Mazda','','1345291877','',false,3,1,5,2,true,1,true,5,4,485,false,false);
+
+CALL registrarPersonaCOMPLETO('FDT0GMN1SDESWDHB2A','Juana Lagones Venado','1998-10-18',false,'139899189','','',true,true,true,false,false,false,true,5,2011,9,1,9,4,1858,3,2,4,1,'Capturador de datos','Palacio de Hierro','','1852181218','',true,4,1,4,2,false,2,true,2,5,655,false,true);
+
+CALL registrarPersonaCOMPLETO('TMJ7ATI6GCNMCNJSGP','Fernando Cardenas Saturno','1986-9-7',true,'596306841','','',true,false,true,true,false,true,false,1,2011,11,1,2,2,1857,4,1,3,4,'Evaluador de proyectos','Cinemex','','177922626','',true,4,1,9,5,false,1,true,7,1,217,true,false);
+
+CALL registrarPersonaCOMPLETO('PU58JXGCEDTO0TVI4N','Julian Jirafa Oceano','1987-8-27',true,'1066370402','','',true,true,false,true,true,true,true,7,2011,9,1,9,4,1864,4,2,4,2,'Evaluador de proyectos','General Electric','','705039100','',false,5,2,1,3,false,3,true,8,3,2550,false,true);
+
+CALL registrarPersonaCOMPLETO('Q1AS4MDB9D7DPP1MA9','Pabel Lagones Rincon','1964-11-14',true,'30676345','','',false,true,true,false,true,true,true,5,2011,6,3,8,2,1860,4,1,3,1,'Registrar contactos de agenda','General Electric','','31954202','',true,2,1,5,4,false,3,false,7,5,1199,false,false);
+
+CALL registrarPersonaCOMPLETO('PEG5OF1MFI4UC43D0N','Beto Cuevas Betral','1966-2-4',true,'1190950269','','',false,true,true,true,true,true,true,2,2011,10,4,3,1,1856,4,1,3,4,'Secretario de planta','PNG','','2117728733','',true,8,2,4,4,false,2,false,6,1,852,true,true);
+
+CALL registrarPersonaCOMPLETO('B9KU9CPBFY8RFMIB5E','Jeronimo Rodriguez Luciernaga','1990-9-27',true,'837556126','','',true,false,false,true,false,true,false,1,2011,9,3,8,4,1861,1,2,3,3,'Mantenimiento de  servidores','McDonalds','','414411859','',false,4,3,2,3,false,3,false,1,2,1263,true,false);
+
+CALL registrarPersonaCOMPLETO('6CL8NRD1XGV24GMFMG','Pinguin Jirazol Martinez','1959-10-12',true,'227137825','','',false,false,true,false,true,false,true,3,2010,2,2,8,4,1851,3,3,3,4,'Registrar contactos de agenda','Kellogs','','1483904691','',false,2,3,10,5,true,3,true,4,5,1057,false,true);
+
+CALL registrarPersonaCOMPLETO('AWIFQE3CBNDUBK8WAT','Gustavo Rincon Betral','1992-6-20',true,'1410149712','','',false,true,false,true,false,true,true,6,2011,5,1,6,4,1856,4,4,4,1,'Agendar eventos','Mabe','','652917413','',true,4,1,4,4,true,2,true,5,6,354,false,false);
+
+CALL registrarPersonaCOMPLETO('E4F50VGROG8LT2A57G','Rafael Saturno Huges','1989-11-19',true,'481918596','','',false,false,false,false,true,true,true,2,2010,9,1,1,3,1864,2,3,3,2,'Atencion a clientes','PNG','','940981546','',true,1,1,6,1,true,1,true,3,4,1803,true,true);
+
+CALL registrarPersonaCOMPLETO('E08IK45WLQG00BDR2V','Enrique Corral Jirazol','1956-11-5',true,'403060519','','',false,false,false,false,false,false,false,5,2012,4,1,9,4,1859,4,3,4,3,'Evaluador de proyectos','Mabe','','399040836','',true,6,2,8,1,false,5,false,2,3,1321,false,false);
+
+CALL registrarPersonaCOMPLETO('3O18Q9UHGDIWSMFRO8','Raul Hernandez Guerra','1989-5-11',true,'602561612','','',false,true,true,false,true,true,false,6,2012,10,1,8,3,1854,3,4,2,2,'Guardia de seguridad','Toyota','','920389755','',false,5,2,3,5,false,5,true,3,2,1408,false,false);
+
+CALL registrarPersonaCOMPLETO('FVLVMA28056IBFAPFG','Gustavo Lagones Martinez','1991-9-24',true,'64652968','','',true,true,true,false,false,false,false,6,2012,2,4,9,1,1860,4,1,4,2,'Agendar eventos','Mazda','','608635833','',true,4,3,5,5,true,1,false,5,1,1809,true,true);
+
+CALL registrarPersonaCOMPLETO('4CI1YIMD8F08AI8NDW','Antonio Willliam Primero Del la Fila Hidalgo','1959-1-21',true,'1165646254','','',true,true,true,false,true,false,true,3,2011,4,4,5,4,1863,4,2,2,4,'Masajista','Bombardier','','841527419','',false,8,1,3,1,false,4,false,1,4,944,false,false);
+
+CALL registrarPersonaCOMPLETO('8H5M1S5R7H2GC0NFAK','Paulina Samita Jernation','1992-12-6',false,'1410991316','','',true,true,false,false,false,true,false,2,2012,10,4,4,4,1850,2,3,3,3,'Atencion a clientes','General Electric','','800325564','',false,6,3,6,4,true,4,false,3,3,348,false,true);
+
+CALL registrarPersonaCOMPLETO('A6RG9CTPPSJDKNWFBY','Julian Jernation Hasburgo','1988-11-1',true,'1339702019','','',false,true,false,true,true,true,true,2,2011,8,3,5,1,1850,3,3,2,1,'Vigilante nocturno','Imagination','','1647046226','',true,8,1,9,2,true,1,false,5,6,1899,false,false);
+
+CALL registrarPersonaCOMPLETO('OE4YGCEFCGOF8CEGCS','Tomas Lagones Samita','1961-11-21',true,'618869639','','',false,true,false,true,false,false,false,6,2011,6,3,6,2,1851,3,3,1,2,'Atencion a clientes','Palacio de Hierro','','1372842940','',false,1,2,10,4,true,1,false,6,1,2088,true,false);
+
+CALL registrarPersonaCOMPLETO('EKFGD98VJQQQM9WBBT','Ana Tumbas Serrano','1950-12-19',false,'1626633107','','',false,false,true,true,false,false,true,5,2011,9,1,2,3,1857,4,2,3,3,'Conserge de piso','Construcciones ASM','','778625345','',true,1,1,10,1,true,4,true,2,2,2535,true,true);
+
+CALL registrarPersonaCOMPLETO('GKA70MBIFX7PYCOI9C','Emiliano Samita Jirafa','1993-1-5',true,'1465641424','','',true,false,true,true,true,false,true,2,2012,9,1,4,4,1855,1,2,3,2,'Generador de cotizaciones','Mazda','','521404470','',false,5,1,6,5,true,1,true,8,5,723,true,false);
+
+CALL registrarPersonaCOMPLETO('FDVIF2A4QPQBY1PQYS','Pedro Campos Corral','1964-5-16',true,'776064110','','',true,true,true,false,true,false,true,5,2011,2,3,3,3,1853,1,4,1,3,'Agendar eventos','Soriana','','2008944811','',false,8,2,8,2,true,2,true,3,2,1908,true,true);
+
+CALL registrarPersonaCOMPLETO('CCB29GPAB7AMOYF6RX','Regina Ezquivel Jirazol','1982-12-12',false,'139061038','','',false,true,false,false,true,false,true,5,2010,8,2,4,4,1857,1,4,2,2,'Consejero general','iCorp','','1245240416','',true,8,2,4,4,true,1,false,6,2,1438,true,false);
+
+CALL registrarPersonaCOMPLETO('FYVG8MU9BFPONIELW7','Santiago Jernation Venado','1989-11-20',true,'1987620960','','',false,false,true,false,true,true,true,4,2011,8,1,6,3,1864,1,1,1,3,'Consejero general','Cinemex','','316745193','',false,2,3,11,4,true,4,false,3,5,170,true,true);
+
+CALL registrarPersonaCOMPLETO('Q0MLXIUCBGMDAJBFDG','Ileana Selacanto Selacanto','1994-1-17',false,'1253218143','','',false,true,true,false,false,false,false,7,2012,6,1,5,2,1860,1,3,2,4,'Atencion a clientes','Imagination','','1421298616','',true,7,3,5,3,false,2,false,3,3,2705,true,true);
+
+CALL registrarPersonaCOMPLETO('YO7UYGUDFJTEXKKNPG','Lisa Ojeda Guerra','1980-9-8',false,'1645334593','','',false,true,true,false,false,false,true,7,2012,4,2,2,2,1855,3,1,1,4,'Atencion a clientes','General Electric','','1030929801','',false,4,3,5,5,false,1,true,7,4,398,false,true);
+
+CALL registrarPersonaCOMPLETO('Y9OOAAHNBGL0Q5HIN9','Rosario Guerra Marinela','1961-8-25',false,'818565996','','',true,true,false,true,false,false,false,7,2012,1,2,4,1,1861,4,4,3,4,'Vigilante nocturno','Tec de Monterrey','','1337917138','',true,3,2,6,4,true,2,true,4,4,2967,false,true);
+
+CALL registrarPersonaCOMPLETO('FCJT1RRW1QPBI831UW','Fernada Murcer Tumbas','1989-4-2',false,'1673204186','','',true,false,false,false,false,false,false,1,2011,5,1,8,2,1850,3,4,4,1,'Vigilante nocturno','Kellogs','','1177081441','',true,8,2,10,2,false,1,false,4,4,2668,true,true);
+
+CALL registrarPersonaCOMPLETO('F8N8YTNL6GPC2FDDPH','Blanca Hasburgo Cuevas','1985-8-14',false,'602540047','','',true,false,true,false,false,true,true,3,2011,6,1,6,3,1864,4,4,4,4,'Vigilante nocturno','Palacio de Hierro','','1629419878','',true,3,3,6,4,false,4,false,3,4,611,false,false);
+
+CALL registrarPersonaCOMPLETO('IJXTBJBSLKXE5O4B1W','Europa Choco Roles Luciernaga','1952-6-24',false,'1371912410','','',false,true,false,false,true,true,true,8,2012,1,1,8,3,1862,1,1,4,4,'Capturador de datos','Cinemex','','2098757485','',true,8,1,11,5,true,4,true,5,4,1382,false,true);
+
+CALL registrarPersonaCOMPLETO('9X3BCXYJA5UI4QCGGU','Lisa Oceano Campos','1952-12-12',false,'866091139','','',true,true,true,false,false,false,true,4,2012,9,2,4,4,1853,4,4,1,2,'Registrar contactos de agenda','Palacio de Hierro','','354104141','',false,7,1,4,2,false,5,false,2,2,1051,false,true);
+
+CALL registrarPersonaCOMPLETO('6GFJVOQUA7J5VUDSCY','Sofia Jirazol Juarez','1978-7-24',false,'174394066','','',false,false,true,true,false,true,true,3,2010,5,1,7,3,1860,1,4,4,2,'Generador de cotizaciones','Soriana','','1655743876','',true,6,1,7,4,true,5,false,1,4,1666,true,true);
+
+CALL registrarPersonaCOMPLETO('RPD41DG6IDWFKKLQWL','Beatriz Garcia Bermudez','1956-12-5',false,'678190150','','',true,false,true,false,true,true,false,4,2012,5,1,1,1,1858,2,2,2,3,'Consejero general','Imagination','','544600269','',false,6,3,7,5,true,1,true,6,4,248,true,false);
+
+CALL registrarPersonaCOMPLETO('JA3FFMBIDL0D2KR2U6','Julia Martinez Rincon','1999-6-26',false,'1800189543','','',true,true,false,true,false,true,false,8,2011,5,1,8,1,1858,2,4,4,1,'Recibidor de quejas','Bombardier','','1600860003','',true,8,3,10,2,false,3,false,7,4,2079,true,true);
+
+CALL registrarPersonaCOMPLETO('4AIGPMA4TAXUTGUJQG','Rosario Peña Nieto Hernandez','1957-11-3',false,'44589642','','',true,false,false,false,true,false,false,2,2011,7,3,7,1,1852,1,2,2,3,'Generacion de imagenes publicitarias','Cinemex','','767305789','',true,6,3,1,4,false,2,true,7,1,654,true,false);
+
+CALL registrarPersonaCOMPLETO('SB9FM3NKCM1MUJUACM','Mariana Wesley Tumbas','1954-9-11',false,'1817860628','','',false,false,true,true,false,true,false,3,2011,3,1,3,3,1862,3,4,3,4,'Vigilante nocturno','Tec de Monterrey','','578566695','',true,2,2,9,2,true,4,false,5,2,2999,true,false);
+
+CALL registrarPersonaCOMPLETO('CEED14SO4CTL6SE9OF','Pedro Quesos Serrano','1959-9-5',true,'1782418297','','',false,true,false,true,false,true,false,2,2011,6,1,5,4,1860,2,1,1,3,'Capturador de datos','General Electric','','1699845901','',true,2,3,6,4,true,3,true,7,1,2231,false,false);
+
+CALL registrarPersonaCOMPLETO('GGB0C7TDCGMSJ8JKVB','Regina Plutarco Quesos','1962-10-11',false,'787572635','','',false,false,false,false,false,true,true,7,2010,2,1,7,3,1852,1,4,1,1,'Evaluador de proyectos','Kellogs','','1585950351','',true,7,1,5,5,false,2,false,8,1,1236,false,true);
+
+CALL registrarPersonaCOMPLETO('3VXM921L3OJDCYGYAY','Itzel Serrano Cuevas','1953-5-14',false,'686500746','','',true,false,false,false,true,true,true,7,2010,1,1,5,4,1853,4,3,2,3,'Consejero general','Kellogs','','1619559817','',true,1,1,4,3,false,1,true,7,1,3053,true,true);
+
+CALL registrarPersonaCOMPLETO('HCQ6CY30YDGD9YED8G','Risitas Wesley Marinela','1984-7-12',false,'1103880893','','',true,false,true,true,false,true,true,4,2010,7,1,7,1,1863,2,3,2,3,'Vigilante nocturno','Mazda','','600399333','',false,1,2,6,1,true,4,false,8,5,3029,false,false);
+
+CALL registrarPersonaCOMPLETO('QVTDGV3W5BQDNATXFK','Paulina Jirafa Cerdo','1984-10-14',false,'120483226','','',false,true,true,false,false,true,false,1,2010,8,4,1,4,1852,4,1,2,4,'Guardia de seguridad','Palacio de Hierro','','353529503','',false,7,2,7,3,false,5,false,6,6,2548,false,false);
+
+CALL registrarPersonaCOMPLETO('A6G53UH8X7IFYLXOY4','Antonio Quesos Plutarco','1973-3-14',true,'1509804469','','',true,true,false,true,false,true,false,1,2011,5,2,2,1,1862,4,4,1,2,'Atencion a clientes','Cinemex','','1925597360','',true,8,3,6,2,false,5,false,5,3,2782,true,false);
+
+CALL registrarPersonaCOMPLETO('IFF7YDSHKJQBKSEFLL','Gustavo Cerrujo Lagones','1992-9-26',true,'1289655429','','',false,true,true,true,false,false,true,8,2012,5,2,9,3,1853,1,3,1,1,'Masajista','Toyota','','2037717902','',true,8,1,5,1,true,4,true,8,3,2123,true,true);
+
+CALL registrarPersonaCOMPLETO('O693BI5EWHFHOFJU3P','Denise Choco Roles Guerra','1994-1-23',false,'133089293','','',false,false,true,true,true,true,false,8,2010,7,4,6,4,1863,2,3,4,1,'Consejero general','Mabe','','1765579880','',false,8,2,2,2,true,3,true,6,3,1931,true,false);
+
+CALL registrarPersonaCOMPLETO('SGUC9OAGYU99J8DJNF','Christopher Willliam Primero Del la Fila Quesos','1957-7-25',true,'1660229921','','',false,true,false,false,false,false,false,1,2011,1,2,8,2,1853,1,4,1,1,'Evaluador de proyectos','Palacio de Hierro','','370318496','',true,8,2,10,1,true,2,false,2,3,776,true,false);
+
+CALL registrarPersonaCOMPLETO('ATB8EMJVJXW9UBDJS0','Max Hidalgo Martiale','1991-7-1',true,'830121691','','',false,false,false,true,false,false,false,3,2011,3,4,8,2,1862,2,2,1,1,'Evaluador de proyectos','Toyota','','1542114931','',false,5,2,10,3,false,2,true,7,5,2821,false,true);
+
+CALL registrarPersonaCOMPLETO('1RRGDVW17PE6XE6W12','Denise Martiale Jernation','1976-3-4',false,'1312574182','','',false,false,false,false,false,false,false,4,2012,3,1,1,1,1856,2,2,3,3,'Mantenimiento de  servidores','Tec de Monterrey','','722015987','',true,1,3,11,1,false,3,true,4,1,2159,false,false);
+
+CALL registrarPersonaCOMPLETO('IFFCKWNH0QYM64D65E','Europa Martiale Cardenas','1961-6-1',false,'1190191527','','',false,false,false,true,false,false,false,6,2012,9,2,1,3,1850,1,3,4,2,'Vigilante nocturno','Kellogs','','1037493210','',false,3,1,3,5,true,4,true,1,4,2762,false,true);
+
+CALL registrarPersonaCOMPLETO('UAB3VHT1JLQGJCG3CS','Blanca Serrano Garcia','1980-4-10',false,'2017809937','','',true,true,false,true,true,false,true,1,2010,10,4,6,1,1858,4,4,4,3,'Guardia de seguridad','Tec de Monterrey','','1970122121','',false,4,2,8,5,false,5,true,6,4,1034,false,true);
+
+CALL registrarPersonaCOMPLETO('457EM5AGM50I6RK9CF','Itzel Marinela Baca','1962-9-19',false,'723916102','','',true,false,true,false,false,true,true,6,2011,11,2,7,2,1864,1,2,3,4,'Masajista','Tec de Monterrey','','1647370107','',false,2,3,9,4,true,3,false,4,4,2634,false,true);
+
+CALL registrarPersonaCOMPLETO('F20VBUKKMCDCF9DA6F','Isabella Lagones Huges','1978-1-27',false,'39970015','','',false,true,true,false,true,false,false,7,2012,1,1,2,4,1855,1,1,3,1,'Generacion de imagenes publicitarias','Tec de Monterrey','','212218101','',false,7,1,2,4,true,3,true,7,4,2971,true,false);
+
+CALL registrarPersonaCOMPLETO('8FGWJUJWE2N28S832T','Mariana Selacanto Martiale','1951-10-17',false,'546363306','','',false,true,false,false,false,false,false,5,2011,10,1,2,2,1859,3,1,3,4,'Evaluador de proyectos','McDonalds','','1065031939','',true,2,3,3,1,true,4,false,8,6,2306,false,true);
+
+CALL registrarPersonaCOMPLETO('R5EENBC4CMLBEGAB7B','Raul Serrano Guerra','1979-2-9',true,'666361125','','',false,false,true,true,false,false,false,8,2010,4,4,5,3,1851,4,2,1,4,'Mantenimiento de  servidores','iCorp','','1194827623','',false,1,2,1,4,false,2,true,7,1,1686,false,true);
+
+CALL registrarPersonaCOMPLETO('TCEDDTI9FTDCL68EFX','Luis Samita Marinela','1986-10-23',true,'1865751906','','',true,true,true,true,false,true,false,8,2011,7,2,9,2,1852,4,2,3,3,'Mantenimiento de  servidores','Imagination','','1804856354','',false,8,2,11,3,true,1,true,1,5,2131,true,true);
+
+CALL registrarPersonaCOMPLETO('076AGK6ED43JXKR0JX','Ricardo Huges Gonzalez','1997-2-1',true,'1321219856','','',false,false,true,false,true,false,true,6,2012,8,4,6,2,1858,4,1,1,2,'Agendar eventos','Palacio de Hierro','','382758427','',false,5,3,10,2,true,3,false,8,2,170,true,false);
+
+CALL registrarPersonaCOMPLETO('4GCUSFB0G600OECBD8','Yamal Campos Dragone','1963-1-24',true,'2117070396','','',true,false,false,false,false,false,true,2,2011,11,3,6,4,1856,3,2,2,3,'Vigilante nocturno','Cinemex','','1755374226','',true,4,3,4,4,true,3,false,6,3,929,true,false);
+
+CALL registrarPersonaCOMPLETO('BYCNGQTJCCO2JDUGT1','Marco Guerra Dragone','1956-8-13',true,'5203002','','',false,false,true,true,false,true,false,3,2010,1,1,6,2,1851,1,4,3,4,'Evaluador de proyectos','General Electric','','611547442','',true,3,3,6,1,false,1,false,2,1,465,false,true);
+
+CALL registrarPersonaCOMPLETO('AGGFVMKODR4WMGFADU','Sofia Corral Rincon','1965-3-10',false,'1117923621','','',false,true,true,false,false,true,false,5,2011,11,2,3,1,1864,1,3,1,3,'Masajista','Cinemex','','1005209828','',true,4,1,3,5,false,2,false,3,1,2751,false,true);
+
+CALL registrarPersonaCOMPLETO('4EQFG83J8SEVJILAHR','Sandra Cardenas Huges','1988-12-27',false,'1944641182','','',true,false,false,true,false,false,true,6,2011,7,2,4,1,1851,3,1,1,4,'Mantenimiento de  servidores','Cinemex','','187925585','',true,5,1,5,4,false,4,false,1,1,1053,true,true);
+
+CALL registrarPersonaCOMPLETO('AD66S5I1X1BWCTO0H0','Perla Juarez Plutarco','1993-2-1',false,'65237903','','',false,false,true,true,true,true,false,8,2012,3,1,2,1,1850,2,3,1,4,'Agendar eventos','Soriana','','1719509354','',false,1,3,11,4,true,1,true,8,6,2435,true,true);
+
+CALL registrarPersonaCOMPLETO('2JNX84LVDN65FPJQCU','Mariana Serrano Garcia','1985-3-27',false,'1433795003','','',true,true,false,false,false,false,false,6,2011,9,3,4,4,1850,3,4,3,4,'Masajista','Construcciones ASM','','755988760','',true,5,3,4,3,false,1,false,2,4,1175,false,false);
+
+CALL registrarPersonaCOMPLETO('IFVKF60WA17VBMEPIO','Maria Jose Gonzalez Jirafa','1975-7-27',false,'584680450','','',true,false,false,true,false,true,false,2,2010,2,3,4,3,1855,1,4,3,3,'Conserge de piso','Tec de Monterrey','','119822893','',false,4,3,4,1,true,5,true,3,5,2290,false,false);
+
+CALL registrarPersonaCOMPLETO('VS2EWF43HD69YWGQNM','Plutarco Hernandez Baca','1981-11-19',true,'1025891932','','',false,false,true,true,true,false,false,8,2011,2,4,3,2,1852,2,4,1,4,'Generacion de imagenes publicitarias','General Electric','','865889998','',false,2,1,3,3,false,5,false,6,1,850,true,true);
+
+CALL registrarPersonaCOMPLETO('VIRGALJGHA4PLCKBQB','Hermenejildo Luciernaga Jirazol','1960-10-20',true,'977843967','','',false,true,false,true,true,false,true,1,2010,7,3,7,4,1859,2,2,2,1,'Guardia de seguridad','iCorp','','1713312002','',true,4,1,1,1,true,4,false,5,2,2036,true,true);
+
+CALL registrarPersonaCOMPLETO('9CNX2FDDGIAQDO5KDT','Tomas Betral Juarez','1962-11-24',true,'35428135','','',false,true,false,true,true,false,false,7,2011,1,4,5,3,1856,2,1,4,4,'Atencion a clientes','McDonalds','','1849062425','',false,8,2,7,1,true,4,true,3,3,2586,false,false);
+
+CALL registrarPersonaCOMPLETO('RAAFHU1OD1R19YSII0','Otilia Jirazol Oceano','1978-2-8',false,'1064949713','','',false,true,true,false,false,true,false,7,2010,5,1,2,4,1862,3,1,1,4,'Vigilante nocturno','Mazda','','952364047','',true,8,2,1,5,false,3,false,6,3,3042,true,true);
+
+CALL registrarPersonaCOMPLETO('06O4PLV0QL4L1E8RAL','Jeronimo Lagones Guerra','1985-2-7',true,'602102850','','',false,false,true,true,true,true,true,3,2012,9,1,6,4,1861,4,2,3,3,'Agendar eventos','PNG','','172051818','',true,7,2,10,1,true,2,true,7,2,1963,false,true);
+
+CALL registrarPersonaCOMPLETO('EH1EL5X0HXH5I3EQN9','Diego Ezquivel Garcia','1971-5-18',true,'1904268774','','',false,true,false,true,true,true,false,3,2011,8,2,6,1,1858,1,3,4,1,'Vigilante nocturno','Toyota','','570909783','',false,2,2,7,2,false,1,true,3,2,2714,false,false);
+
+CALL registrarPersonaCOMPLETO('3C2PA00IUEFGPCX4EC','Sofia Juarez Rincon','1981-3-12',false,'42055243','','',false,true,true,true,true,false,true,2,2012,11,2,1,4,1857,4,3,2,2,'Generacion de imagenes publicitarias','Tec de Monterrey','','1310040110','',true,5,2,1,2,false,5,true,2,6,1480,false,false);
+
+CALL registrarPersonaCOMPLETO('3WKFFA8JKF43CB570P','Diego Hidalgo Campos','1953-2-6',true,'694386781','','',false,false,false,false,true,true,true,8,2012,7,2,6,3,1860,2,1,2,1,'Generacion de imagenes publicitarias','Construcciones ASM','','1643020741','',false,2,1,7,1,true,1,false,1,3,2479,false,false);
+
+CALL registrarPersonaCOMPLETO('JK7BGDALMOLGQ8W0E9','Rosario Jernation Cerdo','1971-3-24',false,'1206366842','','',false,true,false,false,false,true,false,7,2010,5,2,8,1,1862,4,4,3,2,'Generacion de imagenes publicitarias','PNG','','158421028','',true,5,3,3,1,true,1,false,7,6,3047,false,true);
+
+CALL registrarPersonaCOMPLETO('STAYQ1FBU3C8CLSDT7','Samantha Jirafa Ojeda','1965-10-12',false,'367782923','','',true,false,false,true,false,true,true,4,2011,2,3,3,1,1859,4,3,1,3,'Mantenimiento de  servidores','Toyota','','1116083995','',true,2,3,1,3,true,5,false,2,3,2303,false,true);
+
+CALL registrarPersonaCOMPLETO('GCVEVESBGXHCRE2DXQ','Maru Saponeta Lagones','1982-10-27',false,'444288986','','',false,false,false,true,true,true,true,5,2011,1,3,2,1,1861,1,2,4,1,'Conserge de piso','PNG','','2065447402','',false,8,2,11,1,true,2,true,5,1,1961,false,false);
+
+CALL registrarPersonaCOMPLETO('NM1BBTG1DRELLEMGDE','Pabel Bermudez Venado','1988-12-12',true,'1281225375','','',false,true,true,true,true,false,false,4,2010,10,1,3,3,1859,2,1,2,4,'Evaluador de proyectos','iCorp','','1537654978','',false,5,3,7,3,false,4,false,2,2,202,false,true);
+
+CALL registrarPersonaCOMPLETO('XHG9ECBFTEXGAWXNRA','Galaxia Samita Gonzalez','1957-3-17',false,'551107996','','',false,true,false,false,true,true,false,7,2010,2,3,2,4,1852,4,4,2,3,'Masajista','Imagination','','1651419246','',false,2,3,4,2,true,2,true,3,5,2664,true,false);
+
+CALL registrarPersonaCOMPLETO('LDDTGDPCH2TUMB7FRO','Elba Alicia Rincon Cuevas','1975-12-16',false,'1750068841','','',true,true,true,false,false,false,true,4,2011,9,1,4,2,1851,4,2,4,2,'Evaluador de proyectos','Mazda','','1234878725','',false,6,2,11,1,true,3,true,7,5,2845,true,false);
+
+CALL registrarPersonaCOMPLETO('EE3LFGHUFI54BCRDY5','Ana Venado Wesley','1959-10-12',false,'994280137','','',true,true,false,true,false,false,false,5,2011,7,4,8,1,1852,3,4,4,3,'Evaluador de proyectos','Bombardier','','1422130570','',true,8,3,9,4,true,1,false,7,6,1026,true,true);
+
+CALL registrarPersonaCOMPLETO('4TO58W292MD43X2FJU','Manuel Cardenas Huges','1990-7-18',true,'787570060','','',false,false,false,true,false,false,false,4,2012,5,3,3,4,1854,3,3,3,1,'Mantenimiento de  servidores','Palacio de Hierro','','15512125','',false,3,1,3,5,false,5,false,6,5,1860,false,false);
+
+CALL registrarPersonaCOMPLETO('EECIUN94ERXAACXFPL','Margot Garcia Oceano','1957-10-4',false,'1275458686','','',true,false,true,true,true,true,true,1,2010,5,3,2,3,1858,2,3,4,2,'Secretario de planta','Mabe','','122850806','',false,6,3,6,5,true,2,true,8,1,2977,true,true);
+
+CALL registrarPersonaCOMPLETO('F685DG3A7JU7SQ1ODR','Ileana Murcer Ojeda','1972-9-4',false,'1914615646','','',true,false,true,true,false,true,false,3,2011,6,3,1,4,1854,1,3,1,4,'Masajista','McDonalds','','636761476','',true,2,3,9,5,false,5,false,2,1,2426,true,false);
+
+CALL registrarPersonaCOMPLETO('FHSYXQF96IEGQU4B5L','Beto Peña Nieto Plutarco','1967-1-6',true,'436216465','','',false,true,true,true,false,false,false,5,2010,3,2,8,4,1856,4,1,2,2,'Conserge de piso','Palacio de Hierro','','1792070687','',false,3,1,11,4,true,4,true,8,6,3065,false,false);
+
+CALL registrarPersonaCOMPLETO('FIAEFUSV8EBDVO3JOB','Risitas Saponeta Guyen','1997-6-27',false,'2143133906','','',false,false,true,false,false,true,false,8,2011,6,4,3,2,1860,4,4,2,1,'Vigilante nocturno','iCorp','','1641467744','',false,6,2,5,1,true,2,false,7,4,1694,false,false);
+
+CALL registrarPersonaCOMPLETO('PG25DAF6OC24BDMGR4','Martha Hasburgo Tumbas','1985-2-26',false,'153755506','','',true,false,false,false,false,true,true,3,2012,1,3,7,4,1856,1,3,2,2,'Evaluador de proyectos','PNG','','1117071177','',false,7,2,5,3,false,5,false,3,5,2282,true,true);
+
+CALL registrarPersonaCOMPLETO('EJLMBVQNW3BHEC1FTB','Elizabeth Marinela Quesos','1979-9-15',false,'1085501181','','',true,true,true,true,true,true,false,3,2012,7,3,7,2,1856,3,1,3,1,'Atencion a clientes','PNG','','696169755','',false,2,1,2,2,true,3,false,5,5,1682,true,false);
+
+CALL registrarPersonaCOMPLETO('QXO24054CUYC2CT0FD','Mariana Marinela Bermudez','1955-6-10',false,'693986053','','',true,false,false,true,false,true,true,3,2010,1,1,1,4,1851,2,4,1,3,'Generador de cotizaciones','Bombardier','','825550580','',true,5,2,4,3,true,3,true,8,5,3054,true,true);
+
+CALL registrarPersonaCOMPLETO('MNGR00VUJ5T2B3DDVV','Jeronimo Selacanto Choco Roles','1957-5-21',true,'1660989939','','',true,true,false,false,true,true,false,7,2012,4,1,3,2,1859,2,4,2,4,'Secretario de planta','Toyota','','1047847105','',true,4,1,3,5,false,2,false,4,2,888,false,true);
+
+CALL registrarPersonaCOMPLETO('DVUJUDUYRC5P1TYPLY','Maru Tumbas Hidalgo','1995-1-2',false,'443841808','','',false,false,true,false,true,false,true,3,2011,2,3,6,2,1862,1,4,3,3,'Capturador de datos','Bombardier','','898413922','',false,1,1,6,2,false,3,false,5,2,987,true,true);
+
+CALL registrarPersonaCOMPLETO('3LN9AD0BUSAHQ30A5C','Sandia Choco Roles Saponeta','1977-9-26',false,'419037489','','',true,true,true,true,true,false,false,1,2012,9,2,7,4,1863,3,1,2,1,'Secretario de planta','iCorp','','1313628638','',true,7,2,4,5,true,5,true,3,5,508,true,false);
+
+CALL registrarPersonaCOMPLETO('UEOUCFR0HMMLVCQT2F','Girasol Quesos Willliam Primero Del la Fila','1996-1-7',true,'1498254429','','',false,true,true,true,true,true,true,8,2010,8,2,8,1,1858,2,2,1,1,'Evaluador de proyectos','Bombardier','','706052465','',false,2,3,8,1,false,2,false,2,2,202,true,false);
+
+CALL registrarPersonaCOMPLETO('3BWOOW0070YTTFAJA5','Juan Pablo Venado Murcer','1994-11-1',true,'1788507473','','',false,true,true,false,false,true,true,4,2010,11,1,8,2,1858,1,4,3,3,'Secretario de planta','General Electric','','1803508674','',true,6,1,2,5,false,5,false,3,6,2547,true,true);
+
+CALL registrarPersonaCOMPLETO('TBYBRGV0CAEDKFFRY6','Paulina Cerrujo Corral','1952-12-22',false,'822830120','','',true,true,true,false,true,true,true,8,2012,8,3,2,3,1853,3,4,1,2,'Agendar eventos','Kellogs','','685586909','',false,6,3,11,1,false,1,false,8,2,1929,true,true);
+
+CALL registrarPersonaCOMPLETO('0NERQDXHGCFBDWJ10F','Hugo Hidalgo Selacanto','1963-6-27',true,'1683190675','','',false,true,true,true,false,true,true,6,2010,7,4,9,2,1859,3,3,3,3,'Generador de cotizaciones','Palacio de Hierro','','1089066314','',false,7,1,10,5,false,2,false,4,5,3003,false,false);
+
+CALL registrarPersonaCOMPLETO('MD0A3KOFHPNUCQPWXG','Daniel Martiale Peña Nieto','1967-2-24',true,'256791456','','',true,true,false,true,false,true,false,5,2010,4,2,7,2,1855,3,3,3,4,'Recibidor de quejas','Imagination','','98574029','',true,8,1,1,2,true,3,false,1,4,808,false,false);
+
+CALL registrarPersonaCOMPLETO('LA21OQQRROD4QPP2GU','Blanca Cerrujo Ribas','1994-12-12',false,'105386175','','',false,true,false,false,false,false,true,8,2012,10,1,5,4,1864,1,4,1,1,'Agendar eventos','General Electric','','1542792316','',false,1,1,6,1,true,1,true,7,4,1081,true,false);
+
+CALL registrarPersonaCOMPLETO('AUBYQDWHBRH23Q1X2O','Beto Hasburgo Lagones','1965-10-10',true,'892245806','','',true,true,true,false,false,false,false,4,2010,11,3,2,3,1851,3,4,4,1,'Capturador de datos','Construcciones ASM','','189094867','',false,7,3,5,3,false,5,true,5,2,1376,false,true);
+
+CALL registrarPersonaCOMPLETO('GEFAEX102SREPIBJJ8','Alejandro Ribas Gonzalez','1985-5-19',true,'181522436','','',false,false,false,false,true,true,false,1,2010,3,2,5,4,1853,1,3,1,1,'Capturador de datos','Toyota','','762779804','',false,7,1,8,4,true,5,false,6,1,423,true,true);
+
+CALL registrarPersonaCOMPLETO('FKNG914REUEE3TMNXJ','Beto Tumbas Venado','1987-1-17',true,'1925004771','','',false,true,true,false,true,true,false,3,2012,8,3,6,1,1862,3,2,2,2,'Evaluador de proyectos','Bombardier','','590515184','',false,8,2,9,2,false,3,true,4,1,430,false,false);
+
+CALL registrarPersonaCOMPLETO('AAB3BEPOQ6QCODESOK','Sandia Samita Willliam Primero Del la Fila','1975-1-10',false,'795752115','','',true,false,true,true,true,false,false,4,2012,7,4,1,3,1852,2,4,2,2,'Conserge de piso','iCorp','','960032397','',false,1,3,6,4,false,1,false,4,1,2133,true,false);
+
+CALL registrarPersonaCOMPLETO('KF3L1OVFAEJKGGN9M0','Rafael Rincon Murcer','1985-3-6',true,'496417365','','',false,true,false,true,false,false,true,4,2010,10,2,5,1,1853,3,3,3,3,'Secretario de planta','Palacio de Hierro','','726410304','',false,6,3,6,1,true,4,true,6,2,2254,false,false);
+
+CALL registrarPersonaCOMPLETO('EUS5CAAB8NDMTXD0EP','Susana Wesley Cerrujo','1969-6-25',false,'1488125210','','',false,true,true,false,true,false,true,5,2010,6,4,7,2,1858,1,1,4,3,'Consejero general','PNG','','37844522','',true,5,2,1,3,true,3,false,4,4,2252,true,false);
+
+CALL registrarPersonaCOMPLETO('BJQFQR8FYGX44G5BVA','Ricardo Hernandez Lagones','1995-4-21',true,'387100959','','',false,true,false,false,false,false,false,7,2012,3,1,9,4,1863,1,2,4,1,'Generacion de imagenes publicitarias','Toyota','','1628185210','',true,7,2,11,3,true,3,false,6,3,199,false,false);
+
+CALL registrarPersonaCOMPLETO('P4FHIJB5GHAEMCL8VO','Monica Cerdo Selacanto','1980-4-25',false,'559262456','','',false,true,true,false,false,true,true,4,2012,3,4,9,2,1850,4,2,3,2,'Atencion a clientes','Kellogs','','870587877','',true,2,3,2,5,true,5,false,5,4,2364,false,true);
+
+CALL registrarPersonaCOMPLETO('VTUDDAG0JB1R4BC7BD','Armando Cerdo Rincon','1979-9-1',true,'1430528433','','',false,false,false,true,false,false,true,7,2010,7,2,4,4,1864,3,4,2,4,'Recibidor de quejas','Imagination','','1575917644','',false,4,2,11,2,true,1,true,3,6,1248,true,false);
+
+CALL registrarPersonaCOMPLETO('NWUQSKFTKH9P09CXQC','Tomas Venado Peña Nieto','1958-4-12',true,'1141915141','','',true,true,true,true,true,false,false,2,2011,1,3,8,3,1858,1,4,1,3,'Secretario de planta','PNG','','1256977958','',false,7,2,3,1,true,5,true,5,1,1832,true,false);
+
+CALL registrarPersonaCOMPLETO('95FAPNQFO6CBNU5AC2','Willia Huges Murcer','1973-5-26',false,'1556578595','','',false,true,false,false,false,false,true,8,2012,3,2,4,2,1864,2,4,4,1,'Secretario de planta','Mabe','','154333894','',false,1,2,10,3,true,2,true,5,2,1591,true,true);
+
+CALL registrarPersonaCOMPLETO('YQTW9LG3R573EUDDO7','Clericot Martiale Jernation','1969-4-7',false,'1982662208','','',true,false,true,false,true,false,true,4,2011,9,1,5,4,1859,4,3,1,1,'Registrar contactos de agenda','Mazda','','763245121','',false,4,2,3,3,true,3,false,2,4,2138,true,false);
+
+CALL registrarPersonaCOMPLETO('9UKLHHWUQEGEIJGBCB','Martha Marinela Jernation','1970-12-13',false,'1151007514','','',true,true,true,true,false,true,false,4,2010,7,1,8,2,1864,3,2,4,1,'Vigilante nocturno','Imagination','','420904562','',false,1,2,1,5,true,2,false,8,4,2901,false,false);
+
+CALL registrarPersonaCOMPLETO('GO37B5CGFXK1J7CEQF','Risitas Juarez Peña Nieto','1952-1-1',false,'1871139504','','',false,true,true,false,true,true,false,5,2011,11,4,7,3,1851,2,4,2,4,'Registrar contactos de agenda','iCorp','','2084333230','',true,3,1,10,3,false,4,true,2,2,674,true,true);
+
+CALL registrarPersonaCOMPLETO('NMD7BH5HCHY4SAC5DB','Armando Jirazol Dragone','1967-6-24',true,'625400844','','',false,false,false,false,true,true,false,2,2011,8,1,2,1,1852,3,1,1,3,'Vigilante nocturno','General Electric','','1318366288','',false,4,1,10,2,true,3,true,4,5,2155,false,false);
+
+CALL registrarPersonaCOMPLETO('KJ1GDFTP8RJ8A2BCTC','Max Baca Ojeda','1984-11-24',true,'1204624133','','',true,true,true,false,true,false,true,2,2010,7,1,4,1,1861,2,3,1,2,'Generador de cotizaciones','iCorp','','167997106','',true,3,1,6,1,false,4,true,8,1,1625,false,true);
+
+CALL registrarPersonaCOMPLETO('3FX0X9FR5G6B3HOIG0','Santiago Saturno Saturno','1960-12-17',true,'1661820428','','',false,false,true,false,false,false,true,4,2010,8,2,1,2,1861,1,1,2,3,'Agendar eventos','Bombardier','','1208868607','',false,3,3,11,1,false,5,true,4,3,2116,false,true);
+
+CALL registrarPersonaCOMPLETO('6P08WYVX32IWBEPB6P','Elizabeth Murcer Garcia','1961-6-27',false,'23931270','','',false,true,false,false,false,true,false,8,2010,11,3,2,3,1856,4,1,1,1,'Conserge de piso','Soriana','','700644452','',true,1,3,4,1,false,3,false,5,1,2901,true,false);
+
+CALL registrarPersonaCOMPLETO('G2ESFT9U0CNIVUAKF0','Perla Tumbas Quesos','1999-8-21',false,'943549897','','',true,true,false,true,false,true,false,5,2011,6,1,4,3,1858,1,1,2,4,'Evaluador de proyectos','Soriana','','772893450','',true,1,3,4,5,false,3,false,6,3,1291,false,true);
+
+CALL registrarPersonaCOMPLETO('1CVE0RXG8D203C8SAF','Serafin Murcer Guerra','1977-2-27',true,'1244815858','','',false,false,true,true,false,false,true,2,2012,4,3,7,1,1857,4,1,2,2,'Generador de cotizaciones','PNG','','1948585849','',true,7,2,1,5,true,3,false,4,4,764,false,false);
+
+CALL registrarPersonaCOMPLETO('XSWXLRBPWNE2FEBC1C','Beto Jirafa Saturno','1991-11-2',true,'473313053','','',true,false,false,true,false,true,false,2,2012,11,2,2,2,1857,1,4,1,4,'Masajista','Palacio de Hierro','','892052078','',false,4,2,1,4,true,3,true,8,1,2315,true,true);
+
+CALL registrarPersonaCOMPLETO('AFIR8JORVWSMVBY73O','Cesar Plutarco Huges','1986-3-10',true,'339540669','','',true,false,false,false,false,true,true,7,2012,1,1,3,1,1864,2,1,4,3,'Guardia de seguridad','Bombardier','','2018816209','',true,1,3,8,4,true,2,true,1,2,1764,true,true);
+
+CALL registrarPersonaCOMPLETO('VAEJ0FUADTNO4AWSOF','Beto Luciernaga Marinela','1998-6-3',true,'2041830334','','',false,false,true,true,false,true,true,7,2011,1,1,1,1,1861,3,2,4,1,'Secretario de planta','PNG','','2144412641','',false,3,3,4,4,true,1,false,6,4,1661,false,true);
+
+CALL registrarPersonaCOMPLETO('YGHX3KCKBUGJPVHLWP','Martin Luciernaga Peña Nieto','1975-4-11',true,'935229585','','',true,false,false,false,false,true,true,2,2011,11,3,1,1,1860,3,2,1,3,'Capturador de datos','General Electric','','1129728109','',false,1,1,2,4,false,3,false,3,3,1009,true,true);
+
+CALL registrarPersonaCOMPLETO('Y0ANOXM1GBH8MQTDFU','Hugo Plutarco Guerra','1994-10-19',true,'397023990','','',false,false,false,true,false,true,true,4,2010,7,3,6,4,1857,1,1,4,1,'Generacion de imagenes publicitarias','PNG','','1631188092','',true,3,1,5,4,true,4,false,1,4,2973,false,true);
+
+CALL registrarPersonaCOMPLETO('9B2USBADMAKU3XM7J1','Emiliano Martinez Cardenas','1953-5-5',true,'647347072','','',true,true,true,true,true,false,true,4,2012,9,4,2,4,1860,1,4,3,2,'Atencion a clientes','Cinemex','','1360812298','',true,1,3,2,4,true,3,true,4,5,2006,false,true);
+
+CALL registrarPersonaCOMPLETO('43VXG5CCADLMI7RFDI','Samantha Baca Serrano','1986-3-7',false,'766931166','','',false,true,false,true,true,false,false,5,2012,11,3,9,1,1850,1,3,2,1,'Conserge de piso','Mazda','','1094121791','',true,4,2,5,5,true,5,true,4,2,2064,false,false);
+
+CALL registrarPersonaCOMPLETO('D08LJD1M2B0H311WRA','Tomas Corral Rodriguez','1994-2-14',true,'710468737','','',false,true,false,false,false,false,false,2,2010,8,2,2,2,1861,4,4,3,3,'Atencion a clientes','Imagination','','1995791538','',true,3,2,11,4,true,5,true,5,5,517,false,false);
+
+CALL registrarPersonaCOMPLETO('4GEKFMIPM8DAMDYYVH','Julian Cardenas Huges','1987-3-12',true,'2049914797','','',true,false,false,false,true,true,false,5,2010,4,2,7,2,1862,2,2,2,2,'Masajista','PNG','','686767178','',false,3,2,10,2,false,2,true,3,5,2063,false,false);
+
+CALL registrarPersonaCOMPLETO('GSFEADL0ITELIQ0KN1','Tobias Wesley Plutarco','1965-1-4',true,'1898177664','','',false,true,false,true,true,true,false,8,2011,2,4,8,4,1861,3,1,3,4,'Atencion a clientes','Mazda','','311665114','',true,3,2,1,4,true,5,false,4,5,346,true,true);
+
+CALL registrarPersonaCOMPLETO('UVH6EPE516P2N6NG47','Martha Ribas Peña Nieto','1963-2-22',false,'1840436164','','',true,true,false,false,false,true,true,7,2012,4,2,1,3,1858,1,3,3,4,'Atencion a clientes','Kellogs','','1508864933','',false,2,1,11,5,false,3,false,5,1,506,false,false);
+
+CALL registrarPersonaCOMPLETO('MYGJC6HAK3S1RQXGBW','Regina Jernation Cerdo','1977-5-15',false,'685036136','','',true,true,true,true,true,false,false,5,2012,1,1,1,3,1854,4,2,1,2,'Consejero general','Imagination','','2117503392','',false,8,1,1,5,true,1,false,1,2,417,true,true);
+
+CALL registrarPersonaCOMPLETO('F3RE2FUBBPMXVUUUB8','Rosario Saturno Guerra','1996-2-17',false,'333211622','','',false,false,true,false,true,true,true,5,2011,4,1,4,1,1861,2,4,1,4,'Recibidor de quejas','General Electric','','475518902','',false,7,1,10,3,false,2,true,2,5,2057,true,true);
+
+CALL registrarPersonaCOMPLETO('0T8AVFROC66J14039N','Hugo Juarez Hernandez','1960-6-27',true,'400170803','','',false,true,false,true,false,true,false,1,2010,11,2,3,2,1858,4,3,1,2,'Atencion a clientes','Mabe','','1154551584','',false,3,2,4,4,true,3,false,7,6,2014,true,false);
+
+CALL registrarPersonaCOMPLETO('T7WT801TFA49OVUT3C','Armando Ramirez Garcia','1994-6-25',true,'1892564735','','',true,false,false,true,true,false,true,6,2010,1,2,8,2,1856,3,1,1,1,'Masajista','PNG','','1907515615','',true,2,2,3,2,false,3,true,6,4,432,false,false);
+
+CALL registrarPersonaCOMPLETO('DBDER7U9NRMAV43K7B','Itzel Hernandez Juarez','1980-3-1',false,'444592247','','',false,true,false,true,false,false,false,6,2011,8,1,2,3,1850,3,2,1,3,'Atencion a clientes','General Electric','','1814514908','',false,8,3,2,5,false,3,true,8,1,2106,true,true);
+
+CALL registrarPersonaCOMPLETO('LMCB96RW869OKBK7XX','Risitas Hernandez Rojo','1961-11-22',false,'1892489472','','',true,false,true,false,true,true,true,2,2011,2,4,5,4,1863,1,2,4,4,'Masajista','McDonalds','','2071872464','',true,3,2,5,1,false,3,true,7,2,2676,false,true);
+
+CALL registrarPersonaCOMPLETO('2BQJOIESDFGH3P378E','Risitas Rincon Juarez','1999-4-11',false,'1438959800','','',false,true,true,false,true,true,false,2,2011,8,1,4,1,1863,1,4,1,2,'Guardia de seguridad','Mazda','','1238326829','',false,6,3,9,1,true,3,false,5,3,2202,true,false);
+
+CALL registrarPersonaCOMPLETO('3MARAE72WTAISNDXCH','Raquel Bermudez Huges','1981-12-23',false,'122573790','','',true,false,true,true,false,true,true,6,2011,2,3,1,1,1858,3,2,1,1,'Mantenimiento de  servidores','Cinemex','','515349664','',true,2,1,8,1,true,2,false,7,2,3032,false,true);
+
+CALL registrarPersonaCOMPLETO('DFGQCEFIADSDAN8FGD','Matias Samita Willliam Primero Del la Fila','1967-8-16',true,'1774142451','','',false,false,true,false,false,true,true,7,2011,3,1,2,3,1858,3,4,4,3,'Evaluador de proyectos','Kellogs','','1705960098','',true,5,1,2,5,true,2,false,8,3,1879,true,false);
+
+CALL registrarPersonaCOMPLETO('FTQCSLL4DSFMC3X7C9','Martin Betral Samita','1998-2-21',true,'37608006','','',true,false,false,true,true,false,false,6,2010,4,4,9,3,1855,3,3,2,4,'Generador de cotizaciones','Construcciones ASM','','962530741','',true,2,1,9,3,false,1,false,1,5,2197,false,false);
+
+CALL registrarPersonaCOMPLETO('C3TKCXFAA2K0PQ4M11','Lisa Dragone Rodriguez','1998-12-1',false,'970743324','','',true,false,false,true,true,false,false,2,2010,11,2,3,2,1853,2,3,4,4,'Mantenimiento de  servidores','Cinemex','','1108046759','',false,4,1,5,5,false,2,true,7,5,2706,false,false);
+
+CALL registrarPersonaCOMPLETO('B76R5Y1TDR7X4SHGQS','Margot Gutierrez Ramirez','1964-7-16',false,'267172841','','',true,true,true,true,false,true,false,6,2011,6,1,9,3,1850,4,2,4,4,'Consejero general','Cinemex','','1778150799','',false,1,3,5,4,true,3,false,3,5,189,false,false);
+
+CALL registrarPersonaCOMPLETO('GMU6616AABBW17CBWM','Juan Jose Hasburgo Rodriguez','1999-8-25',true,'1748686577','','',false,true,false,true,false,false,false,1,2012,7,2,9,2,1851,2,1,3,2,'Recibidor de quejas','McDonalds','','663982084','',true,8,2,9,1,true,3,false,2,3,2122,true,false);
+
+CALL registrarPersonaCOMPLETO('OFU8KRCYYV9KWAFRCC','Yamal Tumbas Saturno','1996-10-11',true,'1848205520','','',true,true,false,false,false,false,false,6,2011,7,2,6,2,1852,4,4,2,4,'Mantenimiento de  servidores','Toyota','','1228561307','',true,6,1,6,2,false,2,false,5,1,677,true,false);
+
+CALL registrarPersonaCOMPLETO('FHNA5WEXA2H0H5G8MS','CLaudia Garcia Saturno','1950-4-7',false,'1172669383','','',true,false,false,true,false,false,false,5,2011,3,1,4,1,1861,4,1,4,4,'Secretario de planta','Mabe','','448379960','',false,8,3,3,1,true,1,true,2,4,1736,false,false);
+
+CALL registrarPersonaCOMPLETO('QUSYXQJNDDQ7OYG908','Andrea Samita Jirazol','1977-7-4',false,'135817613','','',true,true,true,false,true,false,true,3,2011,2,1,6,3,1857,4,2,4,3,'Conserge de piso','Mazda','','1580835399','',false,7,3,7,1,true,4,true,7,6,1271,false,true);
+
+CALL registrarPersonaCOMPLETO('CJ1TCYEAKG4M48EFVI','Beto Rincon Rincon','1967-8-3',true,'386609574','','',false,true,true,false,true,true,true,2,2012,7,2,6,4,1860,3,1,4,3,'Agendar eventos','Imagination','','1960662856','',true,7,3,7,3,true,1,true,2,3,1689,false,false);
+
+CALL registrarPersonaCOMPLETO('FQ1ENDL9KAI9L1U9UA','Elizabeth Guerra Plutarco','1976-11-28',false,'1948271721','','',false,false,false,false,false,true,true,7,2011,11,2,2,3,1854,4,3,1,3,'Masajista','Toyota','','945964525','',false,1,2,7,2,true,2,true,1,3,1691,false,false);
+
+CALL registrarPersonaCOMPLETO('6BNRER2WAB8AW5FUCY','Europa Corral Rincon','1956-10-16',false,'1188189855','','',true,false,false,true,true,true,true,1,2010,10,2,6,4,1852,4,4,4,2,'Registrar contactos de agenda','Toyota','','569332858','',false,3,3,2,5,true,2,true,4,3,390,false,true);
+
+CALL registrarPersonaCOMPLETO('T5GKGLAKU7EGK1D4UA','Max Corral Lagones','1981-4-17',true,'1405702043','','',true,false,false,true,false,false,false,5,2010,6,4,7,4,1851,2,3,1,2,'Registrar contactos de agenda','Palacio de Hierro','','237978875','',true,3,1,6,5,true,3,true,6,1,341,true,true);
+
+CALL registrarPersonaCOMPLETO('JIFP7HOGQDDD1NH9UE','Risitas Corral Oceano','1996-10-18',false,'511633465','','',false,false,false,true,true,false,true,1,2010,3,1,2,4,1860,4,2,1,4,'Generador de cotizaciones','Construcciones ASM','','1298895109','',true,8,2,3,4,false,3,false,4,1,2214,true,false);
+
+CALL registrarPersonaCOMPLETO('EFGHAAG5RDTG7DWQXF','Raquel Guerra Guyen','1976-8-28',false,'1365201443','','',false,false,false,true,true,false,false,6,2010,8,3,5,3,1856,4,2,4,4,'Generador de cotizaciones','General Electric','','1217563467','',false,3,1,8,3,false,3,true,2,3,2816,true,false);
+
+CALL registrarPersonaCOMPLETO('BOK1M0RKYEGLJC4CO4','Margot Ezquivel Samita','1993-7-23',false,'255741578','','',true,true,true,true,false,true,false,6,2010,2,4,2,3,1853,1,4,1,2,'Generador de cotizaciones','General Electric','','990035166','',false,3,1,10,4,false,2,true,6,2,1738,false,true);
+
+CALL registrarPersonaCOMPLETO('17X4P1WNSCXIYE2F8B','Manuel Luciernaga Marinela','1987-9-10',true,'2097275549','','',true,true,false,true,true,false,false,8,2011,2,2,9,1,1850,1,4,4,2,'Generacion de imagenes publicitarias','Construcciones ASM','','147939228','',true,3,2,4,4,false,5,true,8,5,3008,false,true);
+
+CALL registrarPersonaCOMPLETO('FWKEV12ATEH2WWDK64','Galaxia Tumbas Oceano','1991-1-23',false,'419473375','','',true,false,true,false,false,false,true,2,2011,11,4,7,1,1856,2,1,3,4,'Capturador de datos','Mazda','','1025832151','',false,7,1,2,2,false,2,true,2,6,2698,true,false);
+
+CALL registrarPersonaCOMPLETO('9BXAFLBQU98WE3YBRC','Saul Plutarco Willliam Primero Del la Fila','1996-8-5',true,'425408364','','',false,true,true,false,false,false,true,1,2011,7,1,1,1,1863,2,4,1,1,'Conserge de piso','Tec de Monterrey','','953937973','',false,2,1,6,1,false,1,false,7,4,3085,false,true);
+
+CALL registrarPersonaCOMPLETO('QMD25DQ2YEERBWU0FD','Ximena Choco Roles Samita','1976-12-8',false,'585621501','','',true,true,true,false,false,true,false,5,2011,10,2,8,3,1864,4,2,3,1,'Secretario de planta','Kellogs','','182940995','',true,1,1,6,5,true,2,false,6,2,3093,true,true);
+
+CALL registrarPersonaCOMPLETO('4BKABXFE8DS0TVUJDJ','Diego Jernation Ribas','1962-12-20',true,'436715339','','',true,true,true,true,true,false,true,7,2010,9,3,8,2,1856,2,1,2,4,'Conserge de piso','Bombardier','','1725972244','',true,6,3,9,3,false,1,true,5,5,2582,false,false);
+
+CALL registrarPersonaCOMPLETO('HNCDUUXRCKXYF8GPBM','Ruiodoso Cuevas Rodriguez','1973-6-17',true,'925120986','','',false,true,false,false,true,false,false,2,2012,10,4,2,4,1864,2,2,3,2,'Masajista','Toyota','','1828711246','',true,3,2,7,5,false,2,true,5,2,2601,false,false);
+
+CALL registrarPersonaCOMPLETO('D4IXC8T4255YJ6A6MW','Juan Pablo Ezquivel Ezquivel','1990-12-3',true,'494450658','','',false,true,false,false,true,false,true,2,2012,10,1,3,2,1852,3,1,3,4,'Mantenimiento de  servidores','Toyota','','1716782151','',true,7,1,11,4,false,4,false,4,3,195,false,true);
+
+CALL registrarPersonaCOMPLETO('H72A5OAFC18MG3EM2M','Chicharron Hasburgo Venado','1960-2-27',true,'1443385302','','',false,true,false,true,false,true,true,4,2012,9,4,3,4,1852,3,4,2,4,'Capturador de datos','General Electric','','1433232946','',true,7,1,9,5,true,5,true,4,5,1700,false,true);
+
+CALL registrarPersonaCOMPLETO('OHYAYFOCE7K9T04TTU','Plutarco Peña Nieto Cerdo','1967-7-4',true,'1840086788','','',true,true,false,true,false,false,true,8,2011,7,3,2,4,1856,1,3,2,1,'Secretario de planta','Toyota','','1276734266','',false,2,2,10,1,false,3,false,8,6,1041,true,false);
+
+CALL registrarPersonaCOMPLETO('K76FJM2R98PCLCD5UV','Mariana Martinez Jernation','1989-12-11',false,'217399074','','',true,false,false,true,false,true,true,8,2012,3,3,1,4,1852,4,2,3,2,'Conserge de piso','Kellogs','','1735899061','',true,2,3,9,5,true,5,true,6,3,446,true,true);
+
+CALL registrarPersonaCOMPLETO('KB5X15FUDCNOB1BGIC','Enrique Campos Huges','1964-7-17',true,'666640189','','',true,true,true,true,true,true,true,2,2010,3,4,1,3,1859,3,2,2,1,'Vigilante nocturno','McDonalds','','857363962','',false,6,2,4,5,false,1,true,3,2,2479,false,true);
+
+CALL registrarPersonaCOMPLETO('PB0GBB2G9EC093F4JR','Alicia Garcia Plutarco','1964-11-27',false,'1475961718','','',false,false,false,true,false,true,true,4,2010,6,1,3,4,1857,2,1,3,3,'Masajista','Mabe','','1483698717','',false,7,3,4,5,false,1,true,1,3,1255,false,true);
+
+CALL registrarPersonaCOMPLETO('G66G0RMTQ5GD1W2XGX','Estrella Guerra Gutierrez','1993-8-28',false,'138179391','','',true,false,true,false,true,true,false,2,2012,5,2,4,4,1859,4,2,3,3,'Generacion de imagenes publicitarias','Toyota','','1116014769','',false,4,2,4,4,false,2,true,2,5,1971,true,false);
+
+CALL registrarPersonaCOMPLETO('BVDI64FFK918Y2VNMA','Mariana Rodriguez Guyen','1967-2-20',false,'1013893095','','',false,false,false,false,true,false,false,4,2012,6,2,2,4,1851,2,1,1,2,'Consejero general','Tec de Monterrey','','589227974','',true,3,3,10,1,true,1,false,7,5,447,true,false);
+
+CALL registrarPersonaCOMPLETO('GKBVK11WQFM7FE2YS8','Alejandro Betral Baca','1965-6-14',true,'1543203421','','',true,true,true,false,true,true,false,2,2011,1,3,8,3,1857,4,4,2,4,'Secretario de planta','Mabe','','1741089792','',true,4,2,1,5,false,3,true,8,3,2426,false,true);
+
+CALL registrarPersonaCOMPLETO('ADQDG0TENWFJ3CB3EO','Risitas Jirazol Venado','1976-4-21',false,'1201911776','','',true,true,true,true,true,true,true,3,2010,3,3,2,4,1864,3,4,4,4,'Conserge de piso','General Electric','','2065805771','',false,7,2,6,1,false,5,true,5,4,1583,true,false);
+
+CALL registrarPersonaCOMPLETO('F565Q0IPGBJG6HRGEN','Vanesa Gutierrez Peña Nieto','1967-6-27',false,'1805517550','','',true,true,false,true,true,false,true,8,2011,5,2,6,3,1853,4,4,3,4,'Generador de cotizaciones','Kellogs','','530993645','',true,2,3,10,4,false,5,true,1,6,1495,false,false);
+
+CALL registrarPersonaCOMPLETO('RR7JH7FN5BN1QGH3GW','Plutarco Jirafa Hidalgo','1956-2-23',true,'1918252876','','',true,true,true,false,true,true,true,7,2011,3,4,7,4,1862,4,3,4,4,'Secretario de planta','Kellogs','','1058965517','',true,7,1,1,4,true,1,true,7,5,3067,false,true);
+
+CALL registrarPersonaCOMPLETO('8GHLFTNEN6GJXHBAGC','Ricardo Venado Saturno','1994-8-3',true,'2078329710','','',false,true,false,true,true,true,false,8,2011,3,1,9,3,1853,4,2,1,3,'Generador de cotizaciones','Kellogs','','453475310','',false,1,3,8,5,false,5,false,5,3,521,false,true);
+
+CALL registrarPersonaCOMPLETO('4CV7HE0JWE8MNDIQQA','Emmanuel Willliam Primero Del la Fila Campos','1955-12-15',true,'2050635741','','',false,false,false,true,true,true,false,8,2011,7,1,8,3,1852,1,1,2,4,'Mantenimiento de  servidores','Construcciones ASM','','1950027783','',true,1,3,4,1,true,3,false,5,3,554,false,true);
+
+CALL registrarPersonaCOMPLETO('GFMY5MNPB46B0SQAI8','Hugo Martinez Campos','1999-1-8',true,'1461173370','','',false,false,true,false,true,false,false,4,2010,11,4,2,2,1858,3,3,4,2,'Vigilante nocturno','McDonalds','','1288472775','',false,2,3,4,5,true,5,true,2,3,1285,false,false);
+
+CALL registrarPersonaCOMPLETO('8FGHP6O87O4P14IVWL','America Quesos Oceano','1954-5-8',false,'1504227372','','',false,false,true,true,false,true,false,3,2011,2,1,8,1,1861,1,3,4,1,'Atencion a clientes','Kellogs','','2051539325','',false,4,2,3,3,true,1,true,6,1,583,true,false);
+
+CALL registrarPersonaCOMPLETO('97BVT3APLGFHD8X7GP','Paulina Lagones Hasburgo','1979-12-21',false,'623975385','','',true,false,false,false,true,true,true,3,2010,3,2,3,4,1853,4,1,1,2,'Guardia de seguridad','General Electric','','1273508206','',false,2,3,6,3,false,2,false,1,1,2622,true,true);
+
+CALL registrarPersonaCOMPLETO('MWMFAFWNTOVPJNUXHK','Cesar Martinez Samita','1953-6-15',true,'1491134931','','',true,true,false,false,false,false,true,6,2010,5,1,7,4,1851,3,3,2,4,'Atencion a clientes','PNG','','996620789','',false,8,1,3,1,true,4,true,7,2,2810,true,true);
+
+CALL registrarPersonaCOMPLETO('6W8DGAXSNWAUEIGQ3U','Mauricio Cuevas Cerdo','1970-11-22',true,'102247306','','',true,false,true,false,false,true,true,5,2011,9,3,7,3,1853,1,4,4,1,'Capturador de datos','iCorp','','1337767888','',false,1,1,6,4,false,4,false,5,5,3058,true,false);
+
+CALL registrarPersonaCOMPLETO('F3EMBS7CGVKNQJTABN','Itzel Hidalgo Quesos','1953-12-13',false,'1171587931','','',true,false,true,true,false,true,true,4,2011,10,2,6,4,1862,4,4,1,2,'Masajista','McDonalds','','2022096329','',false,1,3,5,3,false,4,true,6,6,623,false,false);
+
+CALL registrarPersonaCOMPLETO('6QY9CGKGJVB8SA8YEA','America Samita Ezquivel','1992-3-27',false,'1094622383','','',false,false,true,true,true,true,false,3,2011,8,4,2,2,1855,2,2,3,2,'Atencion a clientes','Toyota','','1307985373','',true,2,1,1,4,false,4,false,4,3,995,true,false);
+
+CALL registrarPersonaCOMPLETO('XYJKACFPY5B8C4K67B','Alejandro Ojeda Saturno','1973-5-1',true,'750588529','','',false,false,false,false,false,false,true,7,2012,10,3,2,4,1855,1,2,3,3,'Generacion de imagenes publicitarias','Bombardier','','1921865032','',false,1,1,11,2,true,5,false,8,5,1907,false,false);
+
+CALL registrarPersonaCOMPLETO('EMSBFGI5CFBFDO5CAG','Pinguin Quesos Campos','1961-11-1',true,'349075397','','',false,true,true,true,true,false,false,8,2012,8,3,3,3,1854,4,3,2,3,'Evaluador de proyectos','PNG','','2043734411','',false,7,2,8,5,true,2,false,8,5,1466,false,false);
+
+CALL registrarPersonaCOMPLETO('TD10F8AVEQYOAA0G0G','Monica Venado Saponeta','1951-7-27',false,'658114252','','',true,true,true,true,false,false,true,4,2011,4,3,9,4,1863,2,4,3,1,'Mantenimiento de  servidores','Kellogs','','1783129937','',false,3,1,4,1,false,1,true,2,4,1026,true,false);
+
+CALL registrarPersonaCOMPLETO('2E53B7JJ826WV0D73O','Norma Lagones Oceano','1987-3-14',false,'399175434','','',false,false,true,false,false,true,false,2,2012,3,3,1,2,1850,4,1,3,1,'Vigilante nocturno','Cinemex','','601330138','',true,5,3,5,3,true,5,true,3,4,2110,true,true);
+
+CALL registrarPersonaCOMPLETO('B3YALEL3O7UIMG2UV6','Regina Luciernaga Jirafa','1981-3-11',false,'736701661','','',true,false,true,false,false,true,true,3,2011,5,3,8,3,1863,2,3,3,2,'Evaluador de proyectos','Mazda','','265820468','',true,7,2,3,1,true,2,true,6,4,1659,false,true);
+
+CALL registrarPersonaCOMPLETO('BWBD01CWWNJRJEDDJE','Perla Ribas Murcer','1980-5-8',false,'432663919','','',true,false,false,true,true,false,false,8,2012,6,2,4,3,1851,2,3,3,1,'Generacion de imagenes publicitarias','PNG','','1983391130','',false,2,2,2,5,true,2,true,1,6,2596,false,true);
+
+CALL registrarPersonaCOMPLETO('4O5DNSFWKKTMNWCEFC','Rafael Gutierrez Baca','1993-4-13',true,'756186616','','',true,false,false,false,false,false,true,7,2012,4,1,4,1,1853,1,3,1,3,'Consejero general','Imagination','','1120443063','',false,6,1,8,5,true,4,true,8,5,494,false,true);
+
+CALL registrarPersonaCOMPLETO('NUE6ISHBSCGLFBALFQ','Santiago Wesley Cerrujo','1986-2-16',true,'1513898672','','',true,false,false,true,true,true,true,6,2011,4,3,6,4,1861,2,3,2,4,'Evaluador de proyectos','Toyota','','1992203672','',true,2,1,7,1,false,3,false,1,2,1302,true,false);
+
+CALL registrarPersonaCOMPLETO('DDLAFFC168S5HR6QKW','Yamal Wesley Peña Nieto','1969-8-8',true,'690713042','','',true,false,false,false,false,false,true,2,2012,8,2,5,4,1859,1,1,4,3,'Vigilante nocturno','PNG','','1304608205','',false,7,2,2,1,true,4,true,7,4,267,true,false);
+
+CALL registrarPersonaCOMPLETO('YB8YNSQ38BRSG7DO3N','Ruiodoso Lagones Ramirez','1957-8-6',true,'1244539990','','',false,false,false,false,true,true,false,2,2011,5,1,3,3,1850,2,3,3,1,'Capturador de datos','Soriana','','1702524267','',false,2,2,5,3,false,5,true,6,3,1281,false,false);
+
+CALL registrarPersonaCOMPLETO('AF0GCJG5THGPHBM310','Max Plutarco Samita','1952-10-22',true,'868199387','','',false,true,false,true,false,true,false,6,2012,10,1,3,3,1861,4,2,3,2,'Capturador de datos','General Electric','','1099454348','',false,5,3,4,2,true,5,false,8,3,555,false,true);
+
+CALL registrarPersonaCOMPLETO('17RK5HOX7CCNTE22YS','Galaxia Saturno Quesos','1961-10-25',false,'616858458','','',true,false,true,true,true,true,true,3,2012,8,1,2,3,1859,2,2,3,1,'Recibidor de quejas','PNG','','1330029392','',true,8,3,7,5,true,3,true,6,3,961,false,false);
+
+CALL registrarPersonaCOMPLETO('GRJKBBAPYDE378Q8UR','Fernando Jirafa Gonzalez','1959-4-11',true,'125292550','','',false,true,true,false,false,true,true,7,2011,2,2,5,2,1857,4,4,1,4,'Atencion a clientes','Toyota','','1437607394','',true,4,2,6,4,false,1,false,4,4,2443,false,false);
+
+CALL registrarPersonaCOMPLETO('FR6H42VHQ14VOIA9HE','Matias Lagones Gonzalez','1971-8-18',true,'659689142','','',false,false,false,true,true,false,false,8,2012,11,2,8,2,1861,2,3,1,2,'Consejero general','Mabe','','1286115772','',true,2,3,6,4,false,3,false,3,6,1410,false,true);
+
+CALL registrarPersonaCOMPLETO('4DS8P0RJLDPF3CAMOS','Estrella Dragone Lagones','1952-8-12',false,'757084451','','',false,true,true,false,true,true,true,3,2011,1,3,2,1,1857,1,3,4,4,'Secretario de planta','Mazda','','302960035','',true,7,1,11,5,true,4,false,4,2,307,true,false);
+
+CALL registrarPersonaCOMPLETO('BYNNFDKGR94AABLIUJ','Maru Samita Campos','1969-8-18',false,'1352085949','','',false,false,false,false,true,false,true,1,2011,9,3,2,1,1862,2,2,2,1,'Capturador de datos','Construcciones ASM','','1382431397','',true,2,3,7,5,false,2,true,8,1,1801,false,true);
+
+CALL registrarPersonaCOMPLETO('YJ41NJ4D59F6X4E4UW','Julian Campos Cerdo','1971-4-12',true,'1584227696','','',true,false,false,true,false,false,false,5,2011,3,2,8,3,1857,1,4,3,3,'Evaluador de proyectos','Palacio de Hierro','','1931983877','',false,3,3,1,5,false,1,true,8,4,2236,true,false);
+
+CALL registrarPersonaCOMPLETO('3UW5T5EJBV4S6JX6KI','Margot Gutierrez Choco Roles','1971-4-18',false,'398329278','','',false,false,true,true,false,false,false,3,2011,2,2,3,2,1861,4,2,3,4,'Recibidor de quejas','General Electric','','697193545','',true,3,3,11,1,false,2,true,6,3,2620,false,true);
+
+CALL registrarPersonaCOMPLETO('X3O94JIIPB0WDXMDCI','Cesar Gutierrez Choco Roles','1953-11-1',true,'594190170','','',true,false,false,true,true,true,true,2,2010,6,3,6,4,1855,3,3,3,2,'Masajista','Construcciones ASM','','1952819966','',false,2,1,6,3,true,4,false,2,5,710,true,true);
+
+CALL registrarPersonaCOMPLETO('9VMYKFXB4NEP542V99','Perla Luciernaga Ezquivel','1963-12-27',false,'1167573077','','',true,true,false,false,true,true,false,3,2010,7,4,3,4,1853,4,3,1,1,'Vigilante nocturno','Bombardier','','2134044530','',true,2,3,7,3,true,1,false,3,6,1178,true,true);
+
+CALL registrarPersonaCOMPLETO('DI01FA9OD45AG6BL9P','Sofia Jirazol Huges','1955-10-2',false,'422498962','','',false,true,false,true,false,false,true,7,2011,8,4,3,1,1853,1,2,2,4,'Generador de cotizaciones','Soriana','','626902237','',false,8,1,3,1,true,2,false,5,6,327,false,false);
+
+CALL registrarPersonaCOMPLETO('AVT3CFRK574DDEUVBB','Estrella Samita Hernandez','1999-4-17',false,'1204849589','','',true,true,false,false,false,true,false,5,2011,10,2,8,2,1853,4,1,4,3,'Registrar contactos de agenda','General Electric','','576877671','',false,6,1,1,2,true,1,true,2,1,1120,false,true);
+
+CALL registrarPersonaCOMPLETO('GCEJA0BA9GW1P1HB8N','Ricardo Murcer Martiale','1956-3-27',true,'691953486','','',false,true,false,false,false,false,false,1,2010,8,4,2,4,1863,3,1,3,3,'Secretario de planta','Toyota','','1957045104','',false,5,1,1,1,false,5,true,5,2,2244,false,false);
+
+CALL registrarPersonaCOMPLETO('FDT8CB2PDTLDKXWTC4','Elizabeth Martinez Ramirez','1958-12-1',false,'1901864286','','',true,true,false,true,false,true,false,7,2010,1,2,3,3,1855,4,1,3,1,'Agendar eventos','Soriana','','776273200','',true,3,1,4,4,false,4,false,8,4,1785,true,true);
+
+CALL registrarPersonaCOMPLETO('DB1APP9EMGBIIEVBOR','Elba Alicia Garcia Oceano','1984-12-23',false,'1901833483','','',false,true,true,true,true,true,false,3,2012,4,3,7,3,1855,1,2,3,1,'Agendar eventos','General Electric','','2070310684','',false,4,1,2,4,false,3,false,3,1,1211,false,true);
+
+CALL registrarPersonaCOMPLETO('FC8SNLW033LCQCCUEF','Galaxia Ramirez Cerrujo','1982-10-17',false,'311461229','','',true,true,false,true,false,false,true,5,2011,2,4,2,1,1860,1,1,3,1,'Registrar contactos de agenda','iCorp','','609425329','',true,4,3,5,3,false,2,false,7,5,148,true,true);
+
+CALL registrarPersonaCOMPLETO('FJ21OTC5YEC8TVHVO4','Eduardo Quesos Ezquivel','1978-2-19',true,'1873823457','','',false,true,true,true,false,false,false,2,2011,5,3,2,1,1863,3,2,3,2,'Masajista','Bombardier','','119708638','',false,1,2,9,5,true,1,false,5,6,1971,true,true);
+
+CALL registrarPersonaCOMPLETO('N91J7SPXBQFTDBUDJ7','Maria Lagones Juarez','1993-3-3',false,'539291165','','',true,true,false,false,true,true,false,6,2011,3,4,3,4,1860,2,2,4,2,'Mantenimiento de  servidores','Mabe','','591212371','',true,7,2,8,2,true,1,false,5,1,690,false,true);
+
+CALL registrarPersonaCOMPLETO('BDC7BGS8DKEHGMO2YC','Pedro Campos Samita','1950-10-2',true,'213188695','','',true,true,true,true,true,true,false,7,2012,11,4,5,1,1860,3,2,2,1,'Conserge de piso','Imagination','','368079643','',true,5,2,3,2,false,2,false,2,6,1196,true,false);
+
+CALL registrarPersonaCOMPLETO('TX9YEU6SFUNAQAXVEY','Alejandra Juarez Cerrujo','1986-11-26',false,'2069524829','','',true,false,true,false,false,true,true,8,2010,10,1,4,4,1853,2,4,3,2,'Conserge de piso','Mabe','','1885074716','',false,1,2,8,2,false,3,false,7,3,3000,false,false);
+
+CALL registrarPersonaCOMPLETO('AHNOKMSAAVA6ABN2NF','Willia Gonzalez Selacanto','1976-9-5',false,'142066927','','',true,true,false,true,false,false,true,1,2010,10,3,9,1,1850,4,3,4,4,'Agendar eventos','Mabe','','1466290566','',false,4,2,1,3,true,2,true,2,5,2168,false,true);
+
+CALL registrarPersonaCOMPLETO('SJAA8KIAX16CAC1894','Blanca Marinela Cerrujo','1961-7-1',false,'237657375','','',false,false,true,true,true,true,true,5,2011,2,4,6,1,1862,1,3,4,3,'Mantenimiento de  servidores','Mazda','','1954454287','',true,3,3,4,3,true,2,false,1,4,1207,false,false);
+
+CALL registrarPersonaCOMPLETO('54EEPM9PUSEOUIDA1Q','Juan Pablo Guerra Oceano','1985-2-23',true,'1186091255','','',true,false,true,false,true,false,true,5,2011,2,3,6,1,1860,1,4,2,4,'Consejero general','Palacio de Hierro','','1340398444','',true,6,3,4,1,true,1,false,7,4,174,false,false);
+
+CALL registrarPersonaCOMPLETO('1GGUF0XCJO4AEAEALA','Girasol Luciernaga Saturno','1968-12-10',true,'1009526679','','',true,true,false,true,false,false,true,7,2010,4,3,7,1,1854,3,1,2,1,'Guardia de seguridad','Kellogs','','1872709129','',true,6,3,10,4,false,5,true,8,2,3023,true,false);
+
+CALL registrarPersonaCOMPLETO('NEUTCOMR1E6AS2G8U8','Sofia Ribas Marinela','1954-7-20',false,'110407727','','',true,true,true,true,true,false,false,8,2011,5,3,6,1,1858,2,4,4,4,'Mantenimiento de  servidores','Palacio de Hierro','','251572314','',true,4,2,11,4,true,2,true,7,4,410,false,true);
+
+CALL registrarPersonaCOMPLETO('QAKCPAEQ4I0KAIA4T9','Plutarco Campos Betral','1963-1-9',true,'785626935','','',true,true,true,false,true,true,true,5,2010,8,2,2,2,1862,4,1,4,2,'Registrar contactos de agenda','Soriana','','322444790','',true,2,2,6,4,true,4,false,5,5,1761,true,true);
+
+CALL registrarPersonaCOMPLETO('MNCRRFLGEAOR7A461D','Francisco Guerra Guerra','1966-2-12',true,'387726886','','',false,true,true,false,false,true,true,4,2012,7,3,4,3,1860,1,2,4,4,'Generacion de imagenes publicitarias','Palacio de Hierro','','1894138120','',true,2,3,1,3,true,5,true,2,1,792,true,false);
+
+CALL registrarPersonaCOMPLETO('35TDBUL7BVXBKOBWKK','Carmela Venado Juarez','1962-7-23',false,'606166792','','',false,true,true,false,false,false,true,1,2011,7,1,9,4,1852,1,4,1,4,'Agendar eventos','Bombardier','','2003049396','',true,3,2,7,3,false,3,true,2,1,1036,false,false);
+
+CALL registrarPersonaCOMPLETO('A6CCBPE05PRA4KBY9N','Gustavo Tumbas Ojeda','1986-4-18',true,'217677795','','',true,true,false,false,false,true,true,6,2011,9,2,9,1,1860,1,3,3,1,'Agendar eventos','Mazda','','456236432','',false,4,1,3,5,false,1,false,4,6,2450,true,true);
+
+CALL registrarPersonaCOMPLETO('5EVHG8TWJNPX782SD3','Raquel Martiale Cardenas','1970-12-3',false,'1359696971','','',false,true,false,false,true,true,false,6,2012,1,1,8,1,1854,1,3,3,1,'Generacion de imagenes publicitarias','Bombardier','','1812917973','',false,3,1,3,1,false,1,false,2,2,1573,true,false);
+
+CALL registrarPersonaCOMPLETO('Y3OOG7IKVD2B2FY7CM','Serafin Dragone Oceano','1989-12-24',true,'88812540','','',true,false,false,true,true,false,true,7,2011,4,1,5,4,1858,2,4,2,1,'Masajista','Mazda','','393958936','',false,2,2,6,2,false,5,false,7,5,3093,true,true);
+
+CALL registrarPersonaCOMPLETO('MYH7R7NGGWG2DEKVPP','CLaudia Jernation Murcer','1975-4-10',false,'636901253','','',true,false,true,false,true,true,false,8,2010,9,2,1,2,1858,1,2,1,3,'Atencion a clientes','PNG','','2118454288','',true,2,1,10,3,true,5,true,3,6,2781,false,true);
+
+CALL registrarPersonaCOMPLETO('P4AFO94L4OTM4PNJA8','Isabella Ezquivel Betral','1974-2-9',false,'384814923','','',true,false,true,true,true,true,false,6,2011,4,3,6,1,1853,3,1,2,1,'Registrar contactos de agenda','Kellogs','','1555466337','',false,7,3,9,5,true,1,false,7,1,1006,false,false);
+
+CALL registrarPersonaCOMPLETO('5VBJ2GJBDOC51JPQG1','Ricardo Gonzalez Ojeda','1983-1-1',true,'1981524574','','',true,false,true,true,false,true,true,3,2011,6,1,2,4,1857,3,3,2,4,'Agendar eventos','iCorp','','1154468951','',false,3,3,7,3,true,5,true,6,2,3037,false,true);
+
+CALL registrarPersonaCOMPLETO('ITCRVWKKDH92RB7CDG','Lisa Wesley Quesos','1969-8-19',false,'2038066197','','',false,true,true,false,true,false,true,2,2011,9,2,1,2,1860,1,4,2,4,'Atencion a clientes','iCorp','','1629292867','',false,3,3,1,2,true,3,false,2,3,2709,true,false);
+
+CALL registrarPersonaCOMPLETO('EJPWA7SYCA304XOKQU','Paulina Corral Juarez','1966-7-17',false,'1224379012','','',false,false,true,false,true,false,true,2,2010,8,2,6,1,1853,2,2,3,1,'Capturador de datos','Soriana','','20931878','',false,3,3,4,3,true,1,true,5,3,2695,false,false);
+
+CALL registrarPersonaCOMPLETO('RFVC252USMGYKFOD7J','Otilia Tumbas Juarez','1990-1-24',false,'1588158902','','',false,true,false,true,true,true,false,2,2012,8,2,3,3,1856,1,2,3,4,'Masajista','Kellogs','','778125528','',false,4,3,9,3,true,2,true,1,2,373,true,true);
+
+CALL registrarPersonaCOMPLETO('MGLFEJU9BYYLNM1FWD','Sandia Jirazol Cuevas','1974-1-22',false,'1882101073','','',true,true,false,true,false,true,true,5,2012,8,1,5,3,1862,3,1,1,1,'Recibidor de quejas','McDonalds','','1827177548','',true,1,3,11,2,false,5,true,7,2,2808,true,true);
+
+CALL registrarPersonaCOMPLETO('U6AWLJFND2GFRUMKWK','Luis Lagones Bermudez','1980-12-28',true,'926335299','','',false,false,false,false,true,false,true,7,2010,6,4,7,3,1864,1,3,3,2,'Generacion de imagenes publicitarias','iCorp','','1941195124','',false,8,2,1,2,false,2,true,1,3,578,false,true);
+
+CALL registrarPersonaCOMPLETO('W9AXX8PYIBDXXCYF5A','CLaudia Murcer Rojo','1956-12-23',false,'1705835936','','',true,false,true,false,false,false,false,7,2010,1,1,4,4,1851,1,3,1,1,'Generador de cotizaciones','PNG','','1275840271','',false,2,2,1,2,false,5,false,6,6,2502,false,true);
+
+CALL registrarPersonaCOMPLETO('LS2RF7RKCE8TVFJGXE','Hermenejildo Cerrujo Rodriguez','1953-2-19',true,'1445744954','','',false,false,false,false,false,true,true,3,2012,8,3,9,2,1852,3,2,4,1,'Registrar contactos de agenda','Mazda','','559822333','',true,5,2,7,5,true,3,true,6,6,2837,false,true);
+
+CALL registrarPersonaCOMPLETO('HA85JMGSUEKX1SRNUN','Daniel Saponeta Martinez','1963-4-9',true,'1204884192','','',false,false,false,true,true,true,true,4,2010,1,3,4,4,1850,3,3,4,4,'Atencion a clientes','Imagination','','1323996679','',false,4,3,11,4,false,4,false,2,6,2665,false,true);
+
+CALL registrarPersonaCOMPLETO('S29PW1Y727ABKO4BNL','Europa Serrano Ramirez','1971-6-5',false,'2006023017','','',true,true,true,true,true,true,false,3,2012,11,3,2,2,1853,1,4,2,1,'Evaluador de proyectos','iCorp','','2134669742','',false,4,1,9,4,true,2,true,8,5,2711,false,true);
+
+CALL registrarPersonaCOMPLETO('CXLIXMU5THBBJHNQAD','Ximena Rojo Huges','1962-6-1',false,'1041373644','','',true,true,false,false,false,true,false,4,2011,11,1,8,2,1858,1,1,3,3,'Capturador de datos','McDonalds','','311180549','',false,2,1,3,3,true,2,true,5,3,2160,false,false);
+
+CALL registrarPersonaCOMPLETO('HA3T4XETYD3AABMSXC','Raul Tumbas Marinela','1958-7-12',true,'2134712179','','',true,true,true,false,true,true,false,7,2012,1,3,4,4,1859,2,3,2,4,'Mantenimiento de  servidores','PNG','','775376318','',false,3,2,3,3,false,2,true,6,2,951,true,false);
+
+CALL registrarPersonaCOMPLETO('6OL4FWU3TISATGMDT9','Marco Ezquivel Betral','1994-5-25',true,'442088370','','',false,true,false,true,true,false,true,3,2010,4,3,5,1,1860,3,1,1,4,'Conserge de piso','Imagination','','948111088','',true,3,1,8,4,true,5,true,4,2,928,true,false);
+
+CALL registrarPersonaCOMPLETO('J2FXNMDGCS6MFX3CAN','Carmela Ojeda Betral','1993-11-19',false,'1271055774','','',true,false,false,false,true,true,false,8,2011,2,2,6,4,1853,1,3,2,1,'Masajista','Bombardier','','89475257','',false,5,3,10,1,true,2,true,5,3,1795,true,false);
+
+CALL registrarPersonaCOMPLETO('IFSW82AVB3MDOTLP18','Antonio Gutierrez Tumbas','1966-9-26',true,'471397307','','',true,true,false,true,true,false,false,5,2012,8,3,5,1,1852,1,2,2,3,'Mantenimiento de  servidores','Toyota','','1003759502','',false,5,1,6,3,true,5,false,2,1,549,false,false);
+
+CALL registrarPersonaCOMPLETO('4D7DA4CV6P65PB9CSL','Max Gutierrez Dragone','1983-1-21',true,'596757852','','',true,true,true,true,false,false,false,8,2012,7,4,6,2,1854,2,1,4,2,'Capturador de datos','Toyota','','1051395787','',true,6,3,7,4,false,2,true,7,3,1675,false,false);
+
+CALL registrarPersonaCOMPLETO('WIS395E43DH6ECRBGE','Isabella Ribas Ezquivel','1962-7-18',false,'2120135257','','',true,true,true,true,false,false,false,3,2010,11,2,5,1,1864,3,3,2,3,'Secretario de planta','Imagination','','2129357112','',true,4,2,10,2,false,4,false,2,2,2311,false,true);
+
+CALL registrarPersonaCOMPLETO('2PD64CCJFA215IW0AQ','Antartida Selacanto Samita','1979-6-19',false,'238008099','','',true,true,true,true,true,true,true,4,2012,10,3,8,2,1864,3,4,2,4,'Masajista','Kellogs','','814822868','',false,2,3,2,1,true,4,false,5,5,634,true,true);
+
+CALL registrarPersonaCOMPLETO('BDPTOJDCRFOPD6F4GF','Ana Wesley Samita','1955-1-26',false,'426080291','','',false,true,false,false,false,false,true,5,2012,4,1,3,4,1864,1,3,3,1,'Consejero general','Mabe','','1940576863','',false,8,2,4,3,false,1,true,1,1,1510,false,false);
+
+CALL registrarPersonaCOMPLETO('A8OGDMSXP1BXBA7J1G','Otilia Betral Garcia','1984-2-5',false,'676901546','','',true,false,true,true,false,true,true,3,2010,10,4,6,1,1864,3,4,2,1,'Conserge de piso','Bombardier','','50956575','',false,8,1,9,5,true,3,true,7,6,2824,false,true);
+
+CALL registrarPersonaCOMPLETO('7WT84EFKBWCGG3MBF4','Tomas Lagones Cardenas','1953-5-9',true,'1025141645','','',false,true,true,false,true,true,false,4,2012,7,3,2,4,1863,2,4,3,1,'Agendar eventos','Construcciones ASM','','499640325','',false,6,2,3,5,true,2,true,6,5,2859,true,false);
+
+CALL registrarPersonaCOMPLETO('LM39DPKEEGKC2KKYE6','Pinguin Quesos Jirazol','1974-12-19',true,'1734664114','','',true,true,true,true,true,true,false,8,2012,6,2,6,2,1862,4,4,1,1,'Generador de cotizaciones','Bombardier','','467975304','',false,4,2,4,2,false,2,true,4,5,820,true,true);
+
+CALL registrarPersonaCOMPLETO('0UCAYDBAJVO6Q3UMF9','America Ojeda Ramirez','1955-12-6',false,'1331554493','','',true,false,true,true,false,false,true,4,2012,11,2,1,1,1860,3,1,2,3,'Atencion a clientes','Soriana','','353900969','',true,4,3,1,4,false,5,false,3,5,1688,true,true);
+
+CALL registrarPersonaCOMPLETO('POHO8ACCAPW9EJ44L0','Denise Peña Nieto Cerdo','1953-7-21',false,'691733137','','',true,false,false,false,true,false,true,8,2012,4,3,7,2,1859,4,2,2,1,'Evaluador de proyectos','McDonalds','','346254146','',false,3,3,11,2,true,2,false,3,5,500,false,true);
+
+CALL registrarPersonaCOMPLETO('AOX5EBIFR2WODN7KIO','Hermenejildo Corral Hasburgo','1961-5-13',true,'137871700','','',true,true,false,false,true,false,true,5,2011,7,4,5,3,1855,2,2,3,4,'Vigilante nocturno','Toyota','','1927690273','',true,1,2,6,4,true,2,true,3,6,2589,false,true);
+
+CALL registrarPersonaCOMPLETO('CJ1C9MHA2OGUBDE0Y8','Sandia Guyen Willliam Primero Del la Fila','1965-10-18',false,'906859924','','',true,false,true,false,false,true,false,6,2011,5,4,2,2,1851,2,2,4,4,'Secretario de planta','Tec de Monterrey','','875187562','',false,7,1,3,4,true,5,true,3,2,527,false,true);
+
+CALL registrarPersonaCOMPLETO('FHL87AD7QI4DEJDQJV','Juan Jose Jernation Jernation','1994-9-6',true,'2070408618','','',false,true,false,true,false,true,true,7,2011,5,1,1,3,1850,3,3,2,4,'Consejero general','Palacio de Hierro','','2056299594','',true,6,1,5,2,true,2,false,3,5,2100,true,true);
+
+CALL registrarPersonaCOMPLETO('SO6AXFEDTGN2FGKEWB','Susana Quesos Tumbas','1981-11-7',false,'1237974665','','',true,false,false,true,false,false,true,5,2011,7,4,8,4,1851,3,4,4,1,'Secretario de planta','PNG','','218742101','',false,5,2,9,1,false,3,false,5,6,249,false,false);
+
+CALL registrarPersonaCOMPLETO('RBDTJCDQPJHRGDX0S8','Pinguin Luciernaga Choco Roles','1975-5-4',true,'1188540165','','',false,false,false,false,false,false,false,2,2011,3,3,4,3,1851,4,2,4,3,'Agendar eventos','Soriana','','1011735844','',true,1,3,9,1,false,1,false,6,6,2021,true,true);
+
+CALL registrarPersonaCOMPLETO('RFWAG1CC0S0OFXNKTF','Antonio Rincon Oceano','1974-12-27',true,'1942773229','','',true,true,false,false,false,true,false,5,2011,8,3,9,2,1864,2,1,4,1,'Generador de cotizaciones','Tec de Monterrey','','1499764372','',true,8,1,9,2,false,3,true,5,4,2815,true,true);
+
+CALL registrarPersonaCOMPLETO('RFAJ5GGF42L2YE9GIL','Gustavo Cerdo Guyen','1983-12-8',true,'36883726','','',false,true,false,true,true,false,false,2,2010,3,3,9,2,1854,1,1,1,4,'Generacion de imagenes publicitarias','Kellogs','','361852712','',false,6,3,9,5,true,4,false,2,4,629,true,false);
+
+CALL registrarPersonaCOMPLETO('BUEA1EVFHEAF3HYEWO','Jose Rincon Luciernaga','1967-2-27',true,'1035095737','','',false,true,false,true,true,false,true,7,2012,7,4,8,2,1857,4,2,4,1,'Masajista','Kellogs','','229960709','',true,5,1,4,2,false,1,false,3,1,968,false,true);
+
+CALL registrarPersonaCOMPLETO('66EACHX8QMEAPGUXDA','Estrella Tumbas Murcer','1964-1-28',false,'1595170720','','',false,false,true,false,false,true,false,4,2012,11,4,4,3,1855,1,1,4,2,'Guardia de seguridad','iCorp','','383084714','',false,8,2,11,2,false,1,true,8,4,923,false,false);
+
+CALL registrarPersonaCOMPLETO('VPB29LEBGPBAPTEEX5','Guadalupe Guerra Jernation','1996-7-9',false,'70577104','','',false,false,false,false,false,true,true,5,2012,9,4,5,4,1859,4,4,4,3,'Masajista','Tec de Monterrey','','986235349','',false,3,2,11,3,true,3,false,3,5,1966,true,false);
+
+CALL registrarPersonaCOMPLETO('GFJ0UWUFIF1EJBEA6C','Guadalupe Selacanto Saturno','1982-11-18',false,'2099536809','','',true,true,true,true,true,false,true,5,2012,2,1,8,4,1853,2,1,2,4,'Generador de cotizaciones','Toyota','','472734405','',true,7,3,4,1,false,1,false,7,2,1086,false,true);
+
+CALL registrarPersonaCOMPLETO('FKVD933UUBBUN3P4EC','Julia Willliam Primero Del la Fila Hernandez','1985-1-10',false,'409209174','','',true,true,false,false,false,false,false,2,2011,6,3,7,3,1856,1,1,1,1,'Secretario de planta','Cinemex','','1205683332','',true,6,1,10,5,true,3,true,3,4,1879,false,true);
+
+CALL registrarPersonaCOMPLETO('6TUSCWCRDTC1G413AV','Ricardo Peña Nieto Quesos','1976-8-16',true,'1934573018','','',false,true,false,false,false,false,true,6,2010,11,3,3,2,1859,2,2,4,2,'Evaluador de proyectos','Construcciones ASM','','791479099','',false,6,2,6,4,true,5,true,4,6,1242,false,false);
+
+CALL registrarPersonaCOMPLETO('31T7Y23BQLB4JOGDGA','Margot Marinela Hidalgo','1955-7-19',false,'321704664','','',false,false,true,false,true,true,true,8,2012,7,2,6,2,1858,4,3,3,2,'Secretario de planta','PNG','','1425971673','',false,6,1,2,1,true,1,false,5,4,1085,true,false);
+
+CALL registrarPersonaCOMPLETO('2997BCX0G1GAHCEFBA','Jamon Garcia Venado','1977-12-17',true,'1652052207','','',false,true,false,false,true,true,false,4,2010,4,4,6,4,1863,2,4,2,1,'Guardia de seguridad','Mazda','','892831954','',false,4,2,6,5,false,2,true,1,3,302,false,false);
+
+CALL registrarPersonaCOMPLETO('MLW4C4DCOD6AEPJ9PJ','Clericot Hidalgo Ribas','1996-1-21',false,'1125295419','','',true,false,true,true,false,true,false,6,2010,2,1,9,2,1857,4,4,3,2,'Recibidor de quejas','PNG','','1742920794','',false,1,3,8,3,true,5,true,5,2,2070,true,true);
+
+CALL registrarPersonaCOMPLETO('IIH2GVJHXDRUQBFEEJ','Cesar Huges Martinez','1988-2-4',true,'549818013','','',false,false,true,true,false,true,false,3,2012,3,3,8,1,1862,1,3,2,2,'Secretario de planta','Mazda','','1743229293','',true,2,2,8,1,true,1,true,3,4,2475,true,true);
+
+CALL registrarPersonaCOMPLETO('YUX3UBTQPAIAIFWQCG','Hugo Oceano Ribas','1955-6-10',true,'1637846568','','',true,true,true,true,false,true,false,2,2012,6,4,2,1,1855,1,2,1,3,'Masajista','Tec de Monterrey','','1095298481','',true,7,2,6,3,false,4,true,5,6,1266,true,true);
+
+CALL registrarPersonaCOMPLETO('UCCXSWG385VEF1IAUU','Norma Selacanto Plutarco','1975-8-5',false,'1832540829','','',true,false,true,true,false,false,true,7,2010,5,1,3,1,1860,2,3,4,4,'Masajista','McDonalds','','2128732766','',true,6,2,10,1,true,3,false,3,5,1265,false,true);
+
+CALL registrarPersonaCOMPLETO('ICEF6A4FR3A0NMDQJF','Tobias Hidalgo Hidalgo','1991-9-3',true,'1930448415','','',true,true,false,false,true,false,false,7,2011,2,2,4,1,1859,4,2,2,1,'Atencion a clientes','Toyota','','656881412','',false,6,1,10,1,true,5,false,5,6,744,true,true);
+
+CALL registrarPersonaCOMPLETO('3CF4WALDGX3HBFFULG','Ileana Guerra Gonzalez','1999-12-1',false,'1214469355','','',false,true,true,true,false,false,false,4,2011,8,4,9,1,1855,1,1,4,4,'Agendar eventos','Tec de Monterrey','','950539131','',false,3,2,2,3,true,4,true,2,1,2994,false,false);
+
+CALL registrarPersonaCOMPLETO('DSDDRMPTIGGMFEWAOR','Rosario Jirafa Ezquivel','1983-7-12',false,'428580532','','',true,true,false,false,true,false,false,2,2011,11,2,5,4,1855,3,4,4,4,'Secretario de planta','Palacio de Hierro','','1830903696','',false,3,3,1,1,true,2,true,8,3,2492,false,true);
+
+CALL registrarPersonaCOMPLETO('R5QAJU7IM4KQ0PG4AB','Carmela Hasburgo Quesos','1999-5-7',false,'803277922','','',false,false,false,true,false,true,false,1,2010,9,1,5,3,1854,4,3,2,2,'Generacion de imagenes publicitarias','iCorp','','906027882','',false,7,2,9,5,true,5,true,2,6,2062,false,false);
+
+CALL registrarPersonaCOMPLETO('5F5S89T361RL3P7J6M','Beatriz Hidalgo Rodriguez','1985-11-19',false,'432281885','','',true,true,false,false,true,true,true,5,2012,7,2,7,1,1860,4,4,2,3,'Atencion a clientes','Construcciones ASM','','366962774','',true,5,2,6,3,true,5,false,1,5,1356,true,false);
+
+CALL registrarPersonaCOMPLETO('3R4KYR3SDS1RTEGEJB','Daniel Luciernaga Cuevas','1994-2-11',true,'1624001532','','',true,false,true,true,true,true,false,5,2012,7,1,9,3,1859,2,3,3,1,'Recibidor de quejas','McDonalds','','820435473','',true,1,3,11,5,true,1,false,7,1,319,true,true);
+
+CALL registrarPersonaCOMPLETO('JW5FVQ1BFORGDNKCB3','Chicharron Jirazol Gonzalez','1959-1-12',true,'1491367475','','',true,false,true,true,true,false,false,2,2010,11,4,3,1,1856,3,1,2,4,'Guardia de seguridad','iCorp','','1866729655','',false,4,2,7,1,false,1,true,7,6,929,true,false);
+
+CALL registrarPersonaCOMPLETO('OOTBFKGW9L8285XAIA','Beto Rojo Rodriguez','1976-1-5',true,'1968143583','','',false,true,true,true,false,true,false,1,2012,9,4,5,4,1864,1,3,2,3,'Atencion a clientes','Construcciones ASM','','1403081185','',true,2,2,7,4,false,5,false,6,5,767,false,false);
+
+CALL registrarPersonaCOMPLETO('W960QJTQDCU42FTTHI','Hugo Hasburgo Rincon','1998-7-11',true,'654505540','','',false,true,false,true,false,true,true,1,2012,6,1,3,4,1855,4,2,2,3,'Secretario de planta','Imagination','','670400955','',false,3,2,3,5,true,2,true,6,2,746,false,true);
+
+CALL registrarPersonaCOMPLETO('7GP99L4FYGU99YSO34','Rosario Martinez Saponeta','1951-8-27',false,'539606494','','',true,true,true,false,true,true,true,4,2011,9,2,6,3,1863,4,2,3,3,'Agendar eventos','Imagination','','1524187212','',false,4,2,10,3,false,1,false,4,6,1876,false,true);
+
+CALL registrarPersonaCOMPLETO('KGEVMNU2E2UBGRDQ0R','Armando Serrano Rodriguez','1953-11-19',true,'229742673','','',false,false,false,false,false,false,false,5,2010,3,1,2,1,1857,4,3,4,1,'Consejero general','Bombardier','','416702644','',false,2,2,6,5,false,3,false,6,1,3017,true,true);
+
+CALL registrarPersonaCOMPLETO('KE1XHM4AGIWOACQW5D','Isabella Choco Roles Rodriguez','1981-11-4',false,'1071733990','','',true,true,true,false,false,true,true,2,2012,6,3,7,4,1854,2,2,3,4,'Mantenimiento de  servidores','iCorp','','1862735674','',true,7,3,3,3,true,3,true,1,3,1489,false,false);
+
+CALL registrarPersonaCOMPLETO('3XBW3ORPDEMC8YJBGP','Emmanuel Cerdo Corral','1968-9-1',true,'1387602011','','',false,false,true,false,false,false,true,6,2012,2,1,2,2,1861,3,1,4,4,'Vigilante nocturno','Mabe','','1436478791','',true,1,1,8,3,false,2,true,6,4,2610,false,true);
+
+CALL registrarPersonaCOMPLETO('GBDTD7UYBJ844DH8A5','Juan Pablo Lagones Rincon','1966-12-12',true,'1040475972','','',true,true,true,false,false,true,true,3,2011,9,4,4,2,1854,1,1,4,3,'Capturador de datos','Soriana','','312597510','',true,2,3,8,5,false,3,false,3,6,2990,true,true);
+
+CALL registrarPersonaCOMPLETO('778A7WKITAKD7HHQVH','Hugo Huges Tumbas','1972-10-10',true,'1704941386','','',false,true,true,false,true,false,true,7,2011,2,1,4,2,1854,3,4,4,2,'Mantenimiento de  servidores','Mazda','','1431887309','',false,7,3,2,2,true,5,false,2,6,1275,false,true);
+
+CALL registrarPersonaCOMPLETO('LDH0EHQ8RQY92SHETK','Willia Hernandez Gutierrez','1980-3-21',false,'368863267','','',false,true,true,false,true,true,true,4,2011,3,4,3,3,1864,1,1,2,1,'Masajista','Soriana','','2109956882','',false,4,1,6,2,false,4,true,3,1,1840,false,true);
+
+CALL registrarPersonaCOMPLETO('AX2GII9A93G3EEWRKP','Gustavo Hernandez Saturno','1995-6-23',true,'560582766','','',false,true,true,false,true,false,false,6,2011,6,1,7,4,1858,2,1,4,3,'Consejero general','Palacio de Hierro','','851631137','',true,1,1,11,4,true,2,false,8,3,712,false,false);
+
+CALL registrarPersonaCOMPLETO('INFIRNFSYATGUDM2G2','Carmela Hasburgo Samita','1987-2-7',false,'1524319221','','',false,true,false,true,false,false,false,5,2012,7,1,3,2,1863,2,1,4,1,'Generador de cotizaciones','General Electric','','638484256','',true,7,3,3,3,true,4,false,6,2,2835,false,true);
 
