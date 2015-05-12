@@ -1479,22 +1479,22 @@ BEGIN
 
 	IF (conductiva)
 	THEN
-		SET perdidaConduct = 'Pérdida Auditiva Conductiva';
+		SET perdidaConduct = 'Conductiva';
 	END IF;
 
 	IF (neurosensorial)
 	THEN
-		SET perdidaNeuro = 'Pérdida Auditiva Neurosensorial';
+		SET perdidaNeuro = 'Neurosensorial';
 	END IF;
 
 	IF (mixta)
 	THEN
-		SET perdidaMixta = 'Pérdida Auditiva Mixta';
+		SET perdidaMixta = 'Mixta';
 	END IF;
 
 	IF (retrococlear)
 	THEN
-		SET perdidaRetro = 'Pérdida Auditiva Retrococlear';
+		SET perdidaRetro = 'Retrococlear';
 	END IF;
 
 	IF (noSe)
@@ -1512,6 +1512,7 @@ END //
 DELIMITER ;
 
 
+-- ************************************************ Consultas de edades **************************************************************
 
 
 -- Consulta que muestra cuantos niños(de 0 a 10 years) estan registrados en todos los censos
@@ -1639,5 +1640,319 @@ BEGIN
 	WHERE ID_censo = censo
 	GROUP BY Edad
 	HAVING Edad > 60;
+END //
+DELIMITER ;
+
+
+-- ******************************************************************************************************************************************
+
+-- Consulta por cada nivel educativo
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaNivelEducativo
+(IN preescolar boolean, primaria boolean, secundaria boolean, prepa boolean, tecnica boolean,
+	licenciatura boolean, especialidad boolean, maestria boolean, doctorado boolean)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE nivelPrees VARCHAR(50);
+	DECLARE nivelPrim VARCHAR(50);
+	DECLARE nivelSec VARCHAR(50);
+	DECLARE nivelPrepa VARCHAR(50);
+	DECLARE nivelTecnica VARCHAR(50);
+	DECLARE nivelLic VARCHAR(50);
+	DECLARE nivelEsp VARCHAR(50);
+	DECLARE nivelMaes VARCHAR(50);
+	DECLARE nivelDocto VARCHAR(50);
+
+	SET nivelPrees = ' ', nivelPrim = ' ', nivelSec = ' ', nivelPrepa = ' ', nivelTecnica = ' ', nivelLic = ' ', nivelEsp = ' ', nivelMaes = ' ', nivelDocto = ' ';
+
+	IF(preescolar)
+	THEN
+		SET nivelPrees = 'Preescolar';
+	END IF;
+
+	IF(primaria)
+	THEN
+		SET nivelPrim = 'Primaria';
+	END IF;
+
+	IF(secundaria)
+	THEN
+		SET nivelSec = 'Secundaria';
+	END IF;
+
+	IF(prepa)
+	THEN
+		SET nivelPrepa = 'Preparatoria';
+	END IF;
+
+	IF(tecnica)
+	THEN
+		SET nivelTecnica = 'Carrera técnica';
+	END IF;
+
+	IF(licenciatura)
+		THEN SET nivelLic = 'Licenciatura';
+	END IF;
+
+	IF(especialidad)
+		THEN SET nivelEsp = 'Especialidad';
+	END IF;
+
+	IF(maestria)
+		THEN SET nivelMaes = 'Maestría';
+	END IF;
+
+	IF(doctorado)
+		THEN SET nivelDocto = 'Doctorado';
+	END IF;
+
+
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND n.nivel IN (nivelPrees, nivelPrim, nivelSec, nivelPrepa, nivelTecnica,
+																	nivelLic, nivelEsp, nivelMaes, nivelDocto)
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+
+
+-- Consulta por cada nivel educativo por censo...
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaNivelEducativoPorCenso
+(IN preescolar boolean, primaria boolean, secundaria boolean, prepa boolean, tecnica boolean,
+	licenciatura boolean, especialidad boolean, maestria boolean, doctorado boolean, censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE nivelPrees VARCHAR(50);
+	DECLARE nivelPrim VARCHAR(50);
+	DECLARE nivelSec VARCHAR(50);
+	DECLARE nivelPrepa VARCHAR(50);
+	DECLARE nivelTecnica VARCHAR(50);
+	DECLARE nivelLic VARCHAR(50);
+	DECLARE nivelEsp VARCHAR(50);
+	DECLARE nivelMaes VARCHAR(50);
+	DECLARE nivelDocto VARCHAR(50);
+
+	SET nivelPrees = ' ', nivelPrim = ' ', nivelSec = ' ', nivelPrepa = ' ', nivelTecnica = ' ', nivelLic = ' ', nivelEsp = ' ', nivelMaes = ' ', nivelDocto = ' ';
+
+	IF(preescolar)
+	THEN
+		SET nivelPrees = 'Preescolar';
+	END IF;
+
+	IF(primaria)
+	THEN
+		SET nivelPrim = 'Primaria';
+	END IF;
+
+	IF(secundaria)
+	THEN
+		SET nivelSec = 'Secundaria';
+	END IF;
+
+	IF(prepa)
+	THEN
+		SET nivelPrepa = 'Preparatoria';
+	END IF;
+
+	IF(tecnica)
+	THEN
+		SET nivelTecnica = 'Carrera técnica';
+	END IF;
+
+	IF(licenciatura)
+		THEN SET nivelLic = 'Licenciatura';
+	END IF;
+
+	IF(especialidad)
+		THEN SET nivelEsp = 'Especialidad';
+	END IF;
+
+	IF(maestria)
+		THEN SET nivelMaes = 'Maestría';
+	END IF;
+
+	IF(doctorado)
+		THEN SET nivelDocto = 'Doctorado';
+	END IF;
+
+
+	SSELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT n.nivel AS 'Nivel educativo', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM NivelEducativo n, TieneNivelEducativo t
+	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND t.ID_censo = censo
+	AND n.nivel IN (nivelPrees, nivelPrim, nivelSec, nivelPrepa, nivelTecnica, nivelLic, nivelEsp, nivelMaes, nivelDocto)
+	GROUP BY n.nivel;
+END //
+DELIMITER ;
+
+
+-- Consulta por cada lengua dominante...
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaLenguaDominante
+(IN espanol boolean, ingles boolean, LSM boolean, LSEUA boolean)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE lenguaEsp VARCHAR(50);
+	DECLARE lenguaIng VARCHAR(50);
+	DECLARE lenguaLSM VARCHAR(50);
+	DECLARE lenguaLSEUA VARCHAR(50);
+
+	IF(espanol)
+	THEN
+		SET lenguaEsp = 'Español';
+	END IF;
+
+	IF(ingles)
+	THEN
+		SET lenguaIng = 'Inglés';
+	END IF;
+
+	IF(LSM)
+	THEN
+		SET lenguaLSM = 'Lengua de Señas Mexicana';
+	END IF;
+
+	IF(LSEUA)
+	THEN
+		SET lenguaLSEUA = 'Lengua de Señas EUA';
+	END IF;
+
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT l.nombre AS 'Lengua dominante', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM LenguaDominante l, TieneLenguaDominante t
+	WHERE l.ID_lenguaDominante = t.ID_lenguaDominante AND l.nombre IN(lenguaEsp, lenguaIng, lenguaLSM, lenguaLSEUA)
+	GROUP BY l.nombre;
+
+END //
+DELIMITER ; 
+
+
+-- Consulta por cada lengua dominante por censo...
+DELIMITER //
+CREATE PROCEDURE consultaPorCadaLenguaDominantePorCenso
+(IN espanol boolean, ingles boolean, LSM boolean, LSEUA boolean, censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	DECLARE lenguaEsp VARCHAR(50);
+	DECLARE lenguaIng VARCHAR(50);
+	DECLARE lenguaLSM VARCHAR(50);
+	DECLARE lenguaLSEUA VARCHAR(50);
+
+	IF(espanol)
+	THEN
+		SET lenguaEsp = 'Español';
+	END IF;
+
+	IF(ingles)
+	THEN
+		SET lenguaIng = 'Inglés';
+	END IF;
+
+	IF(LSM)
+	THEN
+		SET lenguaLSM = 'Lengua de Señas Mexicana';
+	END IF;
+
+	IF(LSEUA)
+	THEN
+		SET lenguaLSEUA = 'Lengua de Señas EUA';
+	END IF;
+
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT l.nombre AS 'Lengua dominante', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM LenguaDominante l, TieneLenguaDominante t
+	WHERE l.ID_lenguaDominante = t.ID_lenguaDominante AND t.ID_censo = censo AND l.nombre IN(lenguaEsp, lenguaIng, lenguaLSM, lenguaLSEUA)
+	GROUP BY l.nombre;
+
+END //
+DELIMITER ; 
+
+
+
+-- *********************************************** Consultas de Max ************************************************************
+
+-- Número de personas que tienen discapacidad auditiva que estudian en institución privada por censo.
+
+DELIMITER //
+CREATE PROCEDURE consultaPersonasInstitucionPrivadaPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso
+	WHERE ID_censo = censo;
+	SELECT i.privada AS 'Institucion', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM Estudiado e, InstitucionEducativa i, Persona p, PerteneceCenso per
+	WHERE i.ID_institucionEducativa = e.ID_institucionEducativa
+	AND e.CURP = p.CURP
+	AND e.CURP = per.CURP
+	AND i.privada = 1
+	AND per.ID_censo = censo
+	GROUP BY i.privada;
+END //
+DELIMITER ;
+
+-- Número de personas sordas que estudian en institución especializada y utilizan LSM por censo
+
+DELIMITER // 
+CREATE PROCEDURE consultaPersonasEspecializadaLSMPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso
+	WHERE ID_censo = censo;
+	SELECT l.nombre as 'Lengua Dominante', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM estudiado e, InstitucionEducativa i, Persona p, TieneLenguaDominante t, LenguaDominante l, PerteneceCenso per
+	WHERE i.ID_institucionEducativa=e.ID_institucionEducativa AND e.CURP=p.CURP AND p.CURP=t.CURP
+	AND t.ID_lenguaDominante=l.ID_lenguaDominante
+	AND i.especializada=1
+	AND t.ID_lenguaDominante=3
+	AND per.ID_censo = censo
+	GROUP BY l.nombre;
+END //
+DELIMITER ;
+
+-- Número de personas sordas que estudian en institución especializada y utilizan lengua oral por censo
+
+DELIMITER // 
+CREATE PROCEDURE consultaPersonasEspecializadaOralPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso
+	WHERE ID_censo = censo;
+	SELECT l.nombre as 'Lengua Dominante', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM Estudiado e, InstitucionEducativa i, Persona p, TieneLenguaDominante t, LenguaDominante l, PerteneceCenso per
+	WHERE i.ID_institucionEducativa=e.ID_institucionEducativa AND e.CURP=p.CURP AND p.CURP=t.CURP
+	AND t.ID_lenguaDominante=l.ID_lenguaDominante
+	AND i.especializada=1
+	AND t.ID_lenguaDominante=1
+	OR t.ID_lenguaDominante=2
+	AND per.ID_censo = censo
+	GROUP BY l.nombre;
+END //
+DELIMITER ;
+
+
+
+-- Número de personas sordas que estudian en institución especializada de sexo masculino por censo
+DELIMITER //
+CREATE PROCEDURE consultaPersonasEspecializadaMasculinoPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso;
+	SELECT p.sexo_masculino as 'Sexo', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM Estudiado e, InstitucionEducativa i, Persona p, TieneLenguaDominante t, LenguaDominante l, PerteneceCenso per
+	WHERE i.ID_institucionEducativa=e.ID_institucionEducativa
+	AND e.CURP=p.CURP
+	AND p.CURP=t.CURP
+	AND t.ID_lenguaDominante=l.ID_lenguaDominante
+	AND i.especializada=1
+	AND p.sexo_masculino=1
+	AND per.ID_censo = censo
+	GROUP BY p.sexo_masculino;
 END //
 DELIMITER ;
