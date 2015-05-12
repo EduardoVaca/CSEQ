@@ -2179,7 +2179,7 @@ CREATE PROCEDURE consultaPersonasInstitucionPublica
 BEGIN 
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT i.privada as 'Institución', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	SELECT i.privada as 'Institucion', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p
 	WHERE i.ID_institucionEducativa=e.ID_institucionEducativa
 	AND e.CURP=p.CURP
@@ -2196,7 +2196,7 @@ CREATE PROCEDURE consultaPersonasInstitucionPublicaPorCenso
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
-	SELECT i.privada AS 'Institución', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT i.privada AS 'Institucion', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p, PerteneceCenso per
 	WHERE i.ID_institucionEducativa = e.ID_institucionEducativa AND e.CURP = p.CURP AND e.CURP = per.CURP
 	AND i.privada = 0 AND per.ID_censo = censo
@@ -2213,7 +2213,7 @@ CREATE PROCEDURE consultaPersonasInstitucionEspecializada
 BEGIN 
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT i.especializada as 'Institución', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	SELECT i.especializada as 'Institucion', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p
 	WHERE i.ID_institucionEducativa=e.ID_institucionEducativa
 	AND e.CURP=p.CURP
@@ -2231,7 +2231,7 @@ CREATE PROCEDURE consultaPersonasInstitucionEspecializadaPorCenso
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
-	SELECT i.especializada AS 'Institución', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT i.especializada AS 'Institucion', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p, PerteneceCenso per
 	WHERE i.ID_institucionEducativa = e.ID_institucionEducativa AND e.CURP = p.CURP AND e.CURP = per.CURP
 	AND i.especializada = 1 AND per.ID_censo = censo
@@ -2247,7 +2247,7 @@ CREATE PROCEDURE consultaPersonasInstitucionNoEspecializada
 BEGIN 
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT i.especializada as 'Institución', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	SELECT i.especializada as 'Institucion', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p
 	WHERE i.ID_institucionEducativa=e.ID_institucionEducativa
 	AND e.CURP=p.CURP
@@ -2263,11 +2263,45 @@ CREATE PROCEDURE consultaPersonasInstitucionNoEspecializadaPorCenso
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
-	SELECT i.especializada AS 'Institución', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT i.especializada AS 'Institucion', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p, PerteneceCenso per
 	WHERE i.ID_institucionEducativa = e.ID_institucionEducativa AND e.CURP = p.CURP AND e.CURP = per.CURP
 	AND i.especializada = 1 AND per.ID_censo = censo
 	GROUP BY i.especializada;
 END //
 DELIMITER ;
+
+
+-- Consultaa de Empleos con Interpretacion LSM en todos los censos
+
+DELIMITER //
+CREATE PROCEDURE consultaEmpleoInterpretacionLSM
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
+	SELECT interpretacion_LSM AS 'Interpretacion LSM', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM Empleo e, TieneEmpleo tE
+	WHERE e.ID_empleo = tE.ID_empleo
+	GROUP BY interpretacion_LSM;
+END //
+DELIMITER ; 
+
+
+-- Consultaa de Empleos con Interpretacion LSM en un censo Especifico
+
+DELIMITER //
+CREATE PROCEDURE consultaEmpleoInterpretacionLSMPorCenso
+(IN censo NUMERIC(4))
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT interpretacion_LSM AS 'Interpretacion LSM', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	FROM Empleo e, TieneEmpleo tE
+	WHERE tE.ID_censo = censo AND e.ID_empleo = tE.ID_empleo 
+	GROUP BY interpretacion_LSM;
+END //
+DELIMITER ; 
+
+
 

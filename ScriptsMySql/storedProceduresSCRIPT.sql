@@ -881,10 +881,10 @@ CREATE PROCEDURE modificarInstitucionEducativa
 BEGIN
 	DECLARE IDinstitucion INT;
 	START TRANSACTION;		
-		SELECT ID_institucionEducativa INTO IDinstitucion FROM Institucioneducativa WHERE nombre = nombreViejo;
+		SELECT ID_institucionEducativa INTO IDinstitucion FROM InstitucionEducativa WHERE nombre = nombreViejo;
 		UPDATE InstitucionEducativa SET nombre = nombreNuevo, calle = calleNuevo, telefono = telefonoNuevo, correo = correoNuevo, privada = privadaNuevo,
 		especializada = especializadaNuevo WHERE nombre = nombreViejo;
-		UPDATE Localizainstitucioneducativa SET ID_colonia = IDcoloniaNuevo WHERE ID_institucionEducativa = IDinstitucion;
+		UPDATE LocalizaInstitucionEducativa SET ID_colonia = IDcoloniaNuevo WHERE ID_institucionEducativa = IDinstitucion;
 	COMMIT;
 END //
 DELIMITER ;
