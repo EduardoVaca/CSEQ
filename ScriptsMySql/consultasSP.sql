@@ -1540,7 +1540,7 @@ END //
 DELIMITER ;
 
 
--- Consulta que muestra cuantos niños(de 11 a 20 years) estan registrados en todos los censos
+-- Consulta que muestra cuantos adolescentes(de 11 a 20 years) estan registrados en todos los censos
 DELIMITER //
 CREATE PROCEDURE consultaEdadAdolescentes
 ()
@@ -1548,11 +1548,11 @@ BEGIN
 	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
 	FROM Persona
 	GROUP BY Edad
-	HAVING Edad >= 11 AND Edad <= 20;
+	HAVING Edad > 10 AND Edad <= 20;
 END //
 DELIMITER ;
 
--- Consulta que muestra cuantos niños(de 11 a 20 years) estan registrados en un censo determinado
+-- Consulta que muestra cuantos adolescentes(de 11 a 20 years) estan registrados en un censo determinado
 DELIMITER //
 CREATE PROCEDURE consultaEdadAdolescentesPorCenso
 (IN censo NUMERIC(4))
@@ -1561,7 +1561,83 @@ BEGIN
 	FROM Persona
 	WHERE ID_censo = censo
 	GROUP BY Edad
-	HAVING Edad >= 11 AND Edad <= 20;
+	HAVING Edad > 10 AND Edad <= 20;
 END //
 DELIMITER ;
 
+-- Consulta que muestra cuantos adultos jovenes (21 a 40 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdultosJovenes
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad > 20 AND Edad <= 40;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos adultos jovenes (21 a 40 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdultosJovenesPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad > 20 AND Edad <= 40;
+END //
+DELIMITER ;
+
+
+-- Consulta que muestra cuantos adultos mayores (41 a 60 years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdultosMayores
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad > 40 AND Edad <= 60;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos adultos mayores (41 a 60 years) estan registrados en un censo en especifico
+DELIMITER //
+CREATE PROCEDURE consultaEdadAdultosMayoresPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad > 40 AND Edad <= 60;
+END //
+DELIMITER ;
+
+
+-- Consulta que muestra cuantos ancianos ( 60 a + years) estan registrados en todos los censos
+DELIMITER //
+CREATE PROCEDURE consultaEdadAncianos
+()
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	GROUP BY Edad
+	HAVING Edad > 60;
+END //
+DELIMITER ;
+
+-- Consulta que muestra cuantos ancianos(60 a + years) estan registrados en un censo en especifico
+DELIMITER //
+CREATE PROCEDURE consultaEdadAncianosPorCenso
+(IN censo NUMERIC(4))
+BEGIN	
+	SELECT YEAR(CURDATE()) - YEAR(fecha_nacimiento) as 'Edad', COUNT(*) as 'No.Personas'
+	FROM Persona
+	WHERE ID_censo = censo
+	GROUP BY Edad
+	HAVING Edad > 60;
+END //
+DELIMITER ;
