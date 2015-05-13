@@ -66,11 +66,11 @@ INSERT INTO `Marca` (`ID_marca`, `nombre`) VALUES
 -- Carga GRADO
 
 INSERT INTO `Grado` (`ID_grado`, `grado`, `descripcion`) VALUES
-(1, 'Perdida Auditiva Leve', 'Umbral entre 20 y 40  dB'),
-(2, 'Perdida Auditiva Media', 'Umbral entre 40 y 70 dB'),
-(3, 'Perdida Auditiva Severa', 'Umbral entre 70 y 90 dB'),
-(4, 'Perdida Auditiva Profunda', 'Umbral superior a 90 dB '),
-(5, 'Perdida Auditiva Total', 'Cofosis');
+(1, 'Leve', 'Umbral entre 20 y 40  dB'),
+(2, 'Media', 'Umbral entre 40 y 70 dB'),
+(3, 'Severa', 'Umbral entre 70 y 90 dB'),
+(4, 'Profunda', 'Umbral superior a 90 dB '),
+(5, 'Total', 'Cofosis');
 
 -- Carga CAUSA
 
@@ -111,10 +111,10 @@ INSERT INTO `NivelEducativo` (`ID_nivelEducativo`, `nivel`) VALUES
 
 -- Carga Perdida Auditiva
 INSERT INTO `PerdidaAuditiva` (`ID_perdidaAuditiva`, `tipo`, `descripcion`) VALUES
-(1, 'Perdida Auditiva Conductiva', 'Oido externo - medio'),
-(2, 'Perdida Auditiva Neurosensorial', 'Oido interno'),
-(3, 'Perdida Auditiva Mixta', 'Oido medio - interno'),
-(4, 'Perdida Auditiva Retrococlear', 'Oido interno / nervio auditivo'),
+(1, 'Conductiva', 'Oido externo - medio'),
+(2, 'Neurosensorial', 'Oido interno'),
+(3, 'Mixta', 'Oido medio - interno'),
+(4, 'Retrococlear', 'Oido interno / nervio auditivo'),
 (5, 'No lo se', 'N/a');
 
 -- Carga ROL
