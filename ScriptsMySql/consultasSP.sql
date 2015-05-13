@@ -199,7 +199,7 @@ CREATE PROCEDURE consultaTienenEnfermedad
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT enfermedad as 'TienenEnfermedad', COUNT(*) as 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	SELECT enfermedad as 'Tienen enfermedad', COUNT(*) as 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Persona
 	GROUP BY Enfermedad;
 END //
@@ -229,7 +229,7 @@ CREATE PROCEDURE consultaTienenAlergia
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT alergia as 'TienenAlergia', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	SELECT alergia as 'Tienen alergia', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Persona
 	GROUP BY alergia;
 END //
@@ -257,7 +257,7 @@ CREATE PROCEDURE consultaExamenAudiometria
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT examen_audiometria AS 'HanRealizadoExamenAudiometria',  COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	SELECT examen_audiometria AS 'Han realizado examen audiometria',  COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Persona
 	GROUP BY examen_audiometria;
 END //
@@ -855,6 +855,35 @@ END //
 DELIMITER ;
 
 
+-- Consulta empleados por área de trabajo
+DELIMITER //
+CREATE PROCEDURE consultaEmpleadosPorAreaTrabajo
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneEmpleo;
+	SELECT a.nombre AS 'Area de trabajo', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM TieneEmpleo t, Empleo e, AreaTrabajo a
+	WHERE e.ID_empleo = t.ID_empleo AND e.ID_areaTrabajo = a.ID_areaTrabajo
+	GROUP BY a.nombre;
+END //
+DELIMITER ;
+
+
+-- Consulta empleados por área de trabajo por censo
+DELIMITER //
+CREATE PROCEDURE consultaEmpleadosPorAreaTrabajoPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM TieneEmpleo WHERE ID_censo = censo;
+	SELECT a.nombre AS 'Area de trabajo', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	FROM TieneEmpleo t, Empleo e, AreaTrabajo a
+	WHERE e.ID_empleo = t.ID_empleo AND e.ID_areaTrabajo = a.ID_areaTrabajo AND t.ID_censo = censo
+	GROUP BY a.nombre;
+END //
+DELIMITER ;
+
 -- *******************************************************************************************************************************
 
 
@@ -928,10 +957,10 @@ BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona;
 	SELECT * FROM(
-	SELECT COUNT(*) as 'Personas sin educación', (COUNT(*) / totalPersonas * 100) as 'Porcentaje sin educación'
+	SELECT COUNT(*) as 'Personas sin educacion', (COUNT(*) / totalPersonas * 100) as 'Porcentaje sin educacion'
 	FROM Persona p
-	WHERE CURP NOT IN(SELECT CURP FROM TieneNivelEducativo t)) as Tabla1, (SELECT COUNT(*) as 'Personas con educación',
-					  (COUNT(*) / totalPersonas * 100) as 'Porcentaje con educación' FROM Persona p
+	WHERE CURP NOT IN(SELECT CURP FROM TieneNivelEducativo t)) as Tabla1, (SELECT COUNT(*) as 'Personas con educacion',
+					  (COUNT(*) / totalPersonas * 100) as 'Porcentaje con educacion' FROM Persona p
 					  WHERE CURP IN (SELECT CURP FROM TieneNivelEducativo t)) as Tabla2;
 END //
 DELIMITER ;
@@ -946,12 +975,69 @@ BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
 	SELECT * FROM(
-		SELECT COUNT(*) as 'Personas sin educación', (COUNT(*) / totalPersonas * 100) as 'Porcentaje sin educación'
+		SELECT COUNT(*) as 'Personas sin educacion', (COUNT(*) / totalPersonas * 100) as 'Porcentaje sin educacion'
 		FROM Persona  p WHERE ID_censo = censo
-		AND CURP NOT IN(SELECT CURP FROM TieneNivelEducativo t WHERE ID_censo = censo)) as Tabla1, (SELECT COUNT(*) AS 'Personas con educación',
-		(COUNT(*) / totalPersonas * 100) as 'Porcentaje con educación' FROM PerteneceCenso per
+		AND CURP NOT IN(SELECT CURP FROM TieneNivelEducativo t WHERE ID_censo = censo)) as Tabla1, (SELECT COUNT(*) AS 'Personas con educacion',
+		(COUNT(*) / totalPersonas * 100) as 'Porcentaje con educacion' FROM PerteneceCenso per
 		WHERE ID_censo = censo
 		AND CURP IN(SELECT CURP FROM TieneNivelEducativo t WHERE ID_censo = censo)) as Tabla2;
+END //
+DELIMITER ;
+
+
+
+-- Consulta de personas con educacion
+DELIMITER //
+CREATE PROCEDURE consultaConEducacion
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT COUNT(*) as 'Personas con educacion', (COUNT(*) / totalPersonas * 100) as 'Porcentaje con educacion'
+	FROM Persona p
+	WHERE CURP IN(SELECT CURP FROM TieneNivelEducativo t);
+END //
+DELIMITER ;
+
+
+-- Con educación por censo...
+DELIMITER //
+CREATE PROCEDURE consultaConEducacionPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT COUNT(*) as 'Personas con educacion', (COUNT(*) / totalPersonas * 100) as 'Porcentaje con educacion'
+	FROM Persona p, PerteneceCenso per
+	WHERE p.CURP = per.CURP AND per.ID_censo = censo AND p.CURP IN(SELECT CURP FROM TieneNivelEducativo t);
+END //
+DELIMITER ;
+
+
+-- Sin educación...
+DELIMITER //
+CREATE PROCEDURE consultaSinEducacion
+()
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM Persona;
+	SELECT COUNT(*) as 'Personas con educacion', (COUNT(*) / totalPersonas * 100) as 'Porcentaje sin educacion'
+	FROM Persona p
+	WHERE CURP NOT IN(SELECT CURP FROM TieneNivelEducativo t);
+END //
+DELIMITER ;
+
+
+-- Sin educación por censo...
+DELIMITER //
+CREATE PROCEDURE consultaSinEducacionPorCenso
+(IN censo INT)
+BEGIN
+	DECLARE totalPersonas INT;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT COUNT(*) as 'Personas con educacion', (COUNT(*) / totalPersonas * 100) as 'Porcentaje sin educacion'
+	FROM Persona p, PerteneceCenso per
+	WHERE p.CURP = per.CURP AND per.ID_censo = censo AND p.CURP NOT IN(SELECT CURP FROM TieneNivelEducativo t);
 END //
 DELIMITER ;
 
@@ -998,7 +1084,7 @@ CREATE PROCEDURE consultaPersonasInstitucionPrivada
 BEGIN 
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona p;
-	SELECT i.privada as 'Institución', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	SELECT i.privada as 'Institucion', COUNT(*) as 'No. de personas', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p
 	WHERE i.ID_institucionEducativa=e.ID_institucionEducativa
 	AND e.CURP=p.CURP
@@ -1015,7 +1101,7 @@ CREATE PROCEDURE consultaPersonasInstitucionPrivadaPorCenso
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
-	SELECT i.privada AS 'Institución', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT i.privada AS 'Institucion', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p, PerteneceCenso per
 	WHERE i.ID_institucionEducativa = e.ID_institucionEducativa AND e.CURP = p.CURP AND e.CURP = per.CURP
 	AND i.privada = 1 AND per.ID_censo = censo
@@ -1121,7 +1207,7 @@ CREATE PROCEDURE consultaPorDominioEspanol
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona;
-	SELECT n.nivel AS 'Nivel de español', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT n.nivel AS 'Nivel de espanol', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM NivelEspanol n, TieneNivelEspanol t 
 	WHERE n.ID_nivelEspanol = t.ID_nivelEspanol
 	GROUP BY n.nivel;
@@ -1136,7 +1222,7 @@ CREATE PROCEDURE consultaPorDominioEspanolPorCenso
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
-	SELECT n.nivel AS 'Nivel de español', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT n.nivel AS 'Nivel de espanol', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM NivelEspanol n, TieneNivelEspanol t
 	WHERE n.ID_nivelEspanol = t.ID_nivelEspanol AND t.ID_censo = censo
 	GROUP BY n.nivel;
@@ -1151,7 +1237,7 @@ CREATE PROCEDURE consultaPorDominioIngles
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM Persona;
-	SELECT n.nivel AS 'Nivel de inglés', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT n.nivel AS 'Nivel de ingles', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM NivelIngles n, TieneNivelIngles t 
 	WHERE n.ID_nivelIngles = t.ID_nivelIngles
 	GROUP BY n.nivel;
@@ -1166,7 +1252,7 @@ CREATE PROCEDURE consultaPorDominioInglesPorCenso
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
-	SELECT n.nivel AS 'Nivel de inglés', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT n.nivel AS 'Nivel de ingles', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM NivelIngles n, TieneNivelIngles t 
 	WHERE n.ID_nivelIngles = t.ID_nivelIngles AND t.ID_censo = censo
 	GROUP BY n.nivel;
@@ -1243,7 +1329,7 @@ CREATE PROCEDURE consultaIngresosPersonasEmpleadas
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM TieneEmpleo;
-	SELECT s.minimo AS 'Mínimo', s.maximo AS 'Máximo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT s.minimo AS 'Minimo', s.maximo AS 'Maximo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
 	FROM Sueldo s, Gana g, Empleo e, TieneEmpleo t 
 	WHERE s.ID_sueldo = g.ID_sueldo AND g.ID_empleo = e.ID_empleo AND e.ID_empleo = t.ID_empleo
 	GROUP BY s.minimo;
@@ -1257,7 +1343,7 @@ CREATE PROCEDURE consultaIngresosPersonasEmpleadasPorCenso
 BEGIN
 	DECLARE totalPersonas INT;
 	SELECT COUNT(*) INTO totalPersonas FROM TieneEmpleo WHERE ID_censo = censo;
-	SELECT s.minimo AS 'Mínimo', s.maximo AS 'Máximo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
+	SELECT s.minimo AS 'Minimo', s.maximo AS 'Maximo', COUNT(t.CURP) AS 'No. de Personas', (COUNT(t.CURP) / totalPersonas * 100) AS 'Porcentaje'
 	FROM Sueldo s, Gana g, Empleo e, TieneEmpleo t 
 	WHERE s.ID_sueldo = g.ID_sueldo AND g.ID_empleo = e.ID_empleo AND e.ID_empleo = t.ID_empleo AND t.ID_censo = censo
 	GROUP BY s.minimo;
@@ -1641,31 +1727,31 @@ BEGIN
 
 	IF (conductiva)
 	THEN
-		SET perdidaConduct = 'Pérdida Auditiva Conductiva';
+		SET perdidaConduct = 'Conductiva';
 	END IF;
 
 	IF (neurosensorial)
 	THEN
-		SET perdidaNeuro = 'Pérdida Auditiva Neurosensorial';
+		SET perdidaNeuro = 'Neurosensorial';
 	END IF;
 
 	IF (mixta)
 	THEN
-		SET perdidaMixta = 'Pérdida Auditiva Mixta';
+		SET perdidaMixta = 'Mixta';
 	END IF;
 
 	IF (retrococlear)
 	THEN
-		SET perdidaRetro = 'Pérdida Auditiva Retrococlear';
+		SET perdidaRetro = 'Retrococlear';
 	END IF;
 
 	IF (noSe)
 	THEN
-		SET perdidaNoSe = 'No lo sé';
+		SET perdidaNoSe = 'No lo se';
 	END IF;
 
 	SELECT COUNT(*) INTO totalPersonas FROM Persona;
-	SELECT tipo as 'Tipo de pérdida', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
+	SELECT tipo as 'Tipo de perdida', COUNT(*) AS 'Total', (COUNT(*) / totalPersonas * 100) as 'Porcentaje'
 	FROM TienePerdidaAuditiva t, PerdidaAuditiva p
 	WHERE p.ID_perdidaAuditiva = t.ID_perdidaAuditiva AND p.tipo IN (perdidaConduct, perdidaNeuro, perdidaMixta, perdidaRetro, perdidaNoSe)
 	GROUP BY tipo;
@@ -1710,7 +1796,7 @@ BEGIN
 
 	IF (noSe)
 	THEN
-		SET perdidaNoSe = 'No lo sé';
+		SET perdidaNoSe = 'No lo se';
 	END IF;
 
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
@@ -1898,7 +1984,7 @@ BEGIN
 
 	IF(tecnica)
 	THEN
-		SET nivelTecnica = 'Carrera técnica';
+		SET nivelTecnica = 'Carrera tecnica';
 	END IF;
 
 	IF(licenciatura)
@@ -1910,7 +1996,7 @@ BEGIN
 	END IF;
 
 	IF(maestria)
-		THEN SET nivelMaes = 'Maestría';
+		THEN SET nivelMaes = 'Maestria';
 	END IF;
 
 	IF(doctorado)
@@ -1970,7 +2056,7 @@ BEGIN
 
 	IF(tecnica)
 	THEN
-		SET nivelTecnica = 'Carrera técnica';
+		SET nivelTecnica = 'Carrera tecnica';
 	END IF;
 
 	IF(licenciatura)
@@ -1982,7 +2068,7 @@ BEGIN
 	END IF;
 
 	IF(maestria)
-		THEN SET nivelMaes = 'Maestría';
+		THEN SET nivelMaes = 'Maestria';
 	END IF;
 
 	IF(doctorado)
@@ -1990,7 +2076,7 @@ BEGIN
 	END IF;
 
 
-	SSELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
+	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
 	SELECT n.nivel AS 'Nivel educativo', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM NivelEducativo n, TieneNivelEducativo t
 	WHERE n.ID_nivelEducativo = t.ID_nivelEducativo AND t.ID_censo = censo
@@ -2013,22 +2099,22 @@ BEGIN
 
 	IF(espanol)
 	THEN
-		SET lenguaEsp = 'Español';
+		SET lenguaEsp = 'Espanol';
 	END IF;
 
 	IF(ingles)
 	THEN
-		SET lenguaIng = 'Inglés';
+		SET lenguaIng = 'Ingles';
 	END IF;
 
 	IF(LSM)
 	THEN
-		SET lenguaLSM = 'Lengua de Señas Mexicana';
+		SET lenguaLSM = 'Lengua de Senas Mexicana';
 	END IF;
 
 	IF(LSEUA)
 	THEN
-		SET lenguaLSEUA = 'Lengua de Señas EUA';
+		SET lenguaLSEUA = 'Lengua de Senas EUA';
 	END IF;
 
 	SELECT COUNT(*) INTO totalPersonas FROM Persona;
@@ -2054,22 +2140,22 @@ BEGIN
 
 	IF(espanol)
 	THEN
-		SET lenguaEsp = 'Español';
+		SET lenguaEsp = 'Espanol';
 	END IF;
 
 	IF(ingles)
 	THEN
-		SET lenguaIng = 'Inglés';
+		SET lenguaIng = 'Ingles';
 	END IF;
 
 	IF(LSM)
 	THEN
-		SET lenguaLSM = 'Lengua de Señas Mexicana';
+		SET lenguaLSM = 'Lengua de Senas Mexicana';
 	END IF;
 
 	IF(LSEUA)
 	THEN
-		SET lenguaLSEUA = 'Lengua de Señas EUA';
+		SET lenguaLSEUA = 'Lengua de Senas EUA';
 	END IF;
 
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
