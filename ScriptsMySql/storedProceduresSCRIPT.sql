@@ -711,7 +711,7 @@ BEGIN
 	START TRANSACTION;		
 		SELECT ID_aparatoAuditivo INTO IDaparatoObtenido FROM AparatoAuditivo WHERE tipo = tipoA AND ID_marca = ID_marcaA;
 		UPDATE AparatoAuditivo SET tipo = tipoNuevo, ID_marca = ID_marcaNuevo
-		WHERE tipo = TipoA AND ID_marca = ID_marcaA;
+		WHERE ID_aparatoAuditivo = IDaparatoObtenido;
 	COMMIT;
 END //
 DELIMITER ;
@@ -810,7 +810,7 @@ CREATE PROCEDURE modificarUsuario
 (IN loginU VARCHAR(30), loginNuevo VARCHAR(30), passwordNuevo VARCHAR(30), IDrolViejo INT, IDrolNevo INT)
 BEGIN
 	START TRANSACTION;
-		UPDATE TieneRol SET ID_rol = IDrolNevo WHERE login = loginU AND ID_rol = IDrolViejo;	
+		UPDATE TieneRol SET ID_rol = IDrolNevo, login = loginNuevo WHERE login = loginU AND ID_rol = IDrolViejo;	
 		UPDATE Usuario SET login = loginNuevo, password_usuario = passwordNuevo WHERE login = loginU;
 	COMMIT;
 END //

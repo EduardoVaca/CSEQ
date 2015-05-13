@@ -126,6 +126,7 @@ namespace CSEQ
             respuesta = MessageBox.Show("¿Desea modificar Usuario: " + nombre + "'?", "Confirmacion de modificar",
                                         MessageBoxButtons.YesNo);
             int ID_rolNuevo = Int32.Parse(ID_rol.SelectedValue.ToString());
+            
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
                 if (Util.executeStoredProcedure("modificarUsuario", nombre, nombreNuevo, nuevoPass, ID_rolViejo, ID_rolNuevo))
