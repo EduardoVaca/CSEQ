@@ -5,7 +5,7 @@
 INSERT INTO `Periodo` (`ID_periodo`, `periodo`, `descripcion`) VALUES
 (1, 'Nacimiento', 'Perdida congenita de audicion/desarrollo intreuterino'),
 (2, 'Infancia', 'Nacimiento - 7 años de edad'),
-(3, 'Niñez', '7 - 11 años de edad'),
+(3, 'Ninez', '7 - 11 años de edad'),
 (4, 'Adolescencia', '11 - 16 años de edad'),
 (5, 'Juventud', '16 - 25 años de edad'),
 (6, 'Adultez', '25 - 65 años de edad'),
@@ -66,11 +66,11 @@ INSERT INTO `Marca` (`ID_marca`, `nombre`) VALUES
 -- Carga GRADO
 
 INSERT INTO `Grado` (`ID_grado`, `grado`, `descripcion`) VALUES
-(1, 'Leve', 'Umbral entre 20 y 40  dB'),
-(2, 'Media', 'Umbral entre 40 y 70 dB'),
-(3, 'Severa', 'Umbral entre 70 y 90 dB'),
-(4, 'Profunda', 'Umbral superior a 90 dB '),
-(5, 'Total', 'Cofosis');
+(1, 'Perdida Auditiva Leve', 'Umbral entre 20 y 40  dB'),
+(2, 'Perdida Auditiva Media', 'Umbral entre 40 y 70 dB'),
+(3, 'Perdida Auditiva Severa', 'Umbral entre 70 y 90 dB'),
+(4, 'Perdida Auditiva Profunda', 'Umbral superior a 90 dB '),
+(5, 'Perdida Auditiva Total', 'Cofosis');
 
 -- Carga CAUSA
 
@@ -99,7 +99,7 @@ INSERT INTO `AreaTrabajo` (`ID_areaTrabajo`, `nombre`) VALUES
 -- Carga NIVELEDUCATIVO
 
 INSERT INTO `NivelEducativo` (`ID_nivelEducativo`, `nivel`) VALUES
-(1, 'Prescolar'),
+(1, 'Preescolar'),
 (2, 'Primaria'),
 (3, 'Secundaria'),
 (4, 'Preparatoria'),
