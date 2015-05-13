@@ -1525,7 +1525,7 @@
             // 
             this.bilateral_check.AutoSize = true;
             this.bilateral_check.Font = new System.Drawing.Font("Candara", 9F);
-            this.bilateral_check.Location = new System.Drawing.Point(1141, 277);
+            this.bilateral_check.Location = new System.Drawing.Point(1364, 280);
             this.bilateral_check.Margin = new System.Windows.Forms.Padding(8);
             this.bilateral_check.Name = "bilateral_check";
             this.bilateral_check.Size = new System.Drawing.Size(62, 33);
@@ -1538,7 +1538,7 @@
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label43.Location = new System.Drawing.Point(991, 269);
+            this.label43.Location = new System.Drawing.Point(1214, 272);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(141, 47);
@@ -1621,7 +1621,7 @@
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label70.Location = new System.Drawing.Point(951, 269);
+            this.label70.Location = new System.Drawing.Point(1140, 275);
             this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(32, 42);
@@ -1856,7 +1856,7 @@
             this.ID_grado.Location = new System.Drawing.Point(446, 278);
             this.ID_grado.Margin = new System.Windows.Forms.Padding(4);
             this.ID_grado.Name = "ID_grado";
-            this.ID_grado.Size = new System.Drawing.Size(499, 46);
+            this.ID_grado.Size = new System.Drawing.Size(686, 46);
             this.ID_grado.TabIndex = 45;
             // 
             // label38
