@@ -65,10 +65,10 @@
             this.sinHijos_radio = new System.Windows.Forms.RadioButton();
             this.conHijos_radio = new System.Windows.Forms.RadioButton();
             this.hijos_gp = new System.Windows.Forms.GroupBox();
+            this.hijos_noSordos_radio = new System.Windows.Forms.RadioButton();
+            this.hijos_sordos_radio = new System.Windows.Forms.RadioButton();
             this.migracion_combo = new System.Windows.Forms.ComboBox();
             this.zedGraph = new ZedGraph.ZedGraphControl();
-            this.hijos_sordos_radio = new System.Windows.Forms.RadioButton();
-            this.hijos_noSordos_radio = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
@@ -622,6 +622,40 @@
             this.hijos_gp.Text = "Hijos";
             this.hijos_gp.Visible = false;
             // 
+            // hijos_noSordos_radio
+            // 
+            this.hijos_noSordos_radio.AutoSize = true;
+            this.hijos_noSordos_radio.BackColor = System.Drawing.Color.Transparent;
+            this.hijos_noSordos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hijos_noSordos_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.hijos_noSordos_radio.Location = new System.Drawing.Point(21, 55);
+            this.hijos_noSordos_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.hijos_noSordos_radio.Name = "hijos_noSordos_radio";
+            this.hijos_noSordos_radio.Size = new System.Drawing.Size(110, 20);
+            this.hijos_noSordos_radio.TabIndex = 105;
+            this.hijos_noSordos_radio.TabStop = true;
+            this.hijos_noSordos_radio.Text = "Hijos No Sordos";
+            this.hijos_noSordos_radio.UseVisualStyleBackColor = false;
+            this.hijos_noSordos_radio.Visible = false;
+            this.hijos_noSordos_radio.CheckedChanged += new System.EventHandler(this.hijos_noSordos_radio_CheckedChanged);
+            // 
+            // hijos_sordos_radio
+            // 
+            this.hijos_sordos_radio.AutoSize = true;
+            this.hijos_sordos_radio.BackColor = System.Drawing.Color.Transparent;
+            this.hijos_sordos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hijos_sordos_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.hijos_sordos_radio.Location = new System.Drawing.Point(21, 23);
+            this.hijos_sordos_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.hijos_sordos_radio.Name = "hijos_sordos_radio";
+            this.hijos_sordos_radio.Size = new System.Drawing.Size(91, 20);
+            this.hijos_sordos_radio.TabIndex = 104;
+            this.hijos_sordos_radio.TabStop = true;
+            this.hijos_sordos_radio.Text = "Hijos Sordos";
+            this.hijos_sordos_radio.UseVisualStyleBackColor = false;
+            this.hijos_sordos_radio.Visible = false;
+            this.hijos_sordos_radio.CheckedChanged += new System.EventHandler(this.hijos_sordos_radio_CheckedChanged);
+            // 
             // migracion_combo
             // 
             this.migracion_combo.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -653,40 +687,8 @@
             this.zedGraph.ScrollMinY2 = 0D;
             this.zedGraph.Size = new System.Drawing.Size(626, 328);
             this.zedGraph.TabIndex = 106;
-            // 
-            // hijos_sordos_radio
-            // 
-            this.hijos_sordos_radio.AutoSize = true;
-            this.hijos_sordos_radio.BackColor = System.Drawing.Color.Transparent;
-            this.hijos_sordos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hijos_sordos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.hijos_sordos_radio.Location = new System.Drawing.Point(21, 23);
-            this.hijos_sordos_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.hijos_sordos_radio.Name = "hijos_sordos_radio";
-            this.hijos_sordos_radio.Size = new System.Drawing.Size(91, 20);
-            this.hijos_sordos_radio.TabIndex = 104;
-            this.hijos_sordos_radio.TabStop = true;
-            this.hijos_sordos_radio.Text = "Hijos Sordos";
-            this.hijos_sordos_radio.UseVisualStyleBackColor = false;
-            this.hijos_sordos_radio.Visible = false;
-            this.hijos_sordos_radio.CheckedChanged += new System.EventHandler(this.hijos_sordos_radio_CheckedChanged);
-            // 
-            // hijos_noSordos_radio
-            // 
-            this.hijos_noSordos_radio.AutoSize = true;
-            this.hijos_noSordos_radio.BackColor = System.Drawing.Color.Transparent;
-            this.hijos_noSordos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hijos_noSordos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.hijos_noSordos_radio.Location = new System.Drawing.Point(21, 55);
-            this.hijos_noSordos_radio.Margin = new System.Windows.Forms.Padding(2);
-            this.hijos_noSordos_radio.Name = "hijos_noSordos_radio";
-            this.hijos_noSordos_radio.Size = new System.Drawing.Size(110, 20);
-            this.hijos_noSordos_radio.TabIndex = 105;
-            this.hijos_noSordos_radio.TabStop = true;
-            this.hijos_noSordos_radio.Text = "Hijos No Sordos";
-            this.hijos_noSordos_radio.UseVisualStyleBackColor = false;
-            this.hijos_noSordos_radio.Visible = false;
-            this.hijos_noSordos_radio.CheckedChanged += new System.EventHandler(this.hijos_noSordos_radio_CheckedChanged);
+            this.zedGraph.ZoomButtons = System.Windows.Forms.MouseButtons.None;
+            this.zedGraph.ZoomStepFraction = 0D;
             // 
             // consultas_demografia
             // 

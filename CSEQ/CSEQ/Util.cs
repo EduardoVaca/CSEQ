@@ -512,7 +512,7 @@ namespace CSEQ
                 bar.Bar.Fill.Type = FillType.Brush;
                 bar.Bar.Fill.RangeMin = 0;
                 bar.Bar.Fill.RangeMax = 6;
-
+                
                 zgc.AxisChange();
                 zgc.Refresh();
             }
@@ -622,6 +622,10 @@ namespace CSEQ
             DataTable dt;
             doc.Open();
             dt = getData(query);
+            if (dt == null)
+            {
+                return;
+            }
             String[] nombres = new String[dt.Rows.Count];
             //Tablas
             PdfPTable tabla; //= new PdfPTable(dt.Columns.Count);
@@ -638,9 +642,10 @@ namespace CSEQ
             // Obtenemos los encabezados de las columnas
             for (int i = 0; i < dt.Columns.Count; i++)
             {
-                
-                PdfPCell celda = new PdfPCell(new Phrase(dt.Columns[i].ToString()));
-                
+
+                var boldFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12f);
+                PdfPCell celda = new PdfPCell(new Phrase(dt.Columns[i].ToString(), boldFont));
+
                 celda.HorizontalAlignment = 1;
                 tabla.AddCell(celda);
             }
@@ -649,7 +654,8 @@ namespace CSEQ
                 for (int i = 0; i < dt.Columns.Count; i++)
                 {
 
-                    PdfPCell celda = new PdfPCell(new Phrase(dt.Columns[i].ToString()));
+                    var boldFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12f);
+                    PdfPCell celda = new PdfPCell(new Phrase(dt.Columns[i].ToString(),boldFont));
 
                     celda.HorizontalAlignment = 1;
                     tabla.AddCell(celda);
@@ -692,7 +698,6 @@ namespace CSEQ
             Ob.MoveTo(0, doc.PageSize.Height - 215);
             Ob.LineTo(doc.PageSize.Width, doc.PageSize.Height - 215);
             Ob.Stroke();
-
             doc.Add(imgLogo);
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph(" "));
@@ -717,17 +722,18 @@ namespace CSEQ
             doc.Add(new Paragraph(" "));
             doc.Add(tabla);
             doc.Add( imgGrafica );
-
+            doc.Add(new Paragraph("Comentarios:"));
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph(" "));
-
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph(" "));
+            /*
             PdfContentByte cbPie;
-            cbPie = writer.DirectContent;
             cbPie.BeginText();
             cbPie.SetFontAndSize(FontFactory.GetFont(FontFactory.HELVETICA, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL).BaseFont, 10);
             cbPie.SetColorFill(iTextSharp.text.BaseColor.BLACK);
             cbPie.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "Página: " + writer.PageNumber.ToString(), 540, 25, 0);
-            cbPie.EndText();
+            cbPie.EndText();*/
 
             doc.Add(new Paragraph(" "));
             doc.Add(new Paragraph(" "));
@@ -739,14 +745,14 @@ namespace CSEQ
                     +"\nNota 2: Según el Censo de Población y Vivienda 2010 (INEGI) se contaron 7,178 personas con discapacidad auditiva en el Estado de Querétaro.");
             piePagina.IndentationLeft = 15f;
             piePagina.IndentationRight = 15f;
-            piePagina.SpacingBefore = 15f;
-            piePagina.SpacingAfter = 15f;
-            piePagina.Font.Size = 10f;
-
+            //piePagina.SpacingBefore = 15f;
+           // piePagina.SpacingAfter = 15f;
+            piePagina.Font.Size = 7f;
 
             doc.Add(piePagina);
             doc.Close();
-            
+            salida.Close();
+
 
             string pdfPath = Path.Combine(Application.StartupPath, "Reporte.pdf");
             Process.Start(pdfPath);

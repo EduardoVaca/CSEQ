@@ -470,6 +470,8 @@
             this.zedGraph.ScrollMinY2 = 0D;
             this.zedGraph.Size = new System.Drawing.Size(628, 328);
             this.zedGraph.TabIndex = 111;
+            this.zedGraph.ZoomButtons = System.Windows.Forms.MouseButtons.None;
+            this.zedGraph.ZoomStepFraction = 0D;
             // 
             // noHanEstudiado_radio
             // 
