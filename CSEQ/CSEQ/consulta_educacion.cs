@@ -73,7 +73,6 @@ namespace CSEQ
             {
                 titulo.Text = "Nivel Educativo y Tipo de Educación";
                 nivelEducativo_combo.Visible = true;
-                publica_radio.Checked = true;
             }
             todoscensos_radio.Checked = true;
                 
@@ -94,6 +93,18 @@ namespace CSEQ
             eleccion_gp.Enabled = true;
             Reporte.Enabled = true;
 
+            if (nivelEducativo_combo.SelectedIndex == 0)
+            {
+                hanEstudiado_radio.Visible = true;
+                noHanEstudiado_radio.Visible = true;
+                hanEstudiado_radio.Checked = true;
+            }else
+            {
+                hanEstudiado_radio.Visible = false;
+                noHanEstudiado_radio.Visible = false;
+            }
+
+           
             if (nivelEducativo_combo.SelectedIndex == 2)
             {
                 nivelesEducativos_gp.Visible = true;
@@ -103,10 +114,23 @@ namespace CSEQ
                 nivelesEducativos_gp.Visible = false;
             }
 
+            if (nivelEducativo_combo.SelectedIndex == 1)
+            {
+                especial_radio.Visible = true;
+                especial_radio.Checked = true;
+                normal_radio.Visible = true;
+            }
+            else
+            {
+                especial_radio.Visible = false;
+                normal_radio.Visible = false;
+            }
+
             if (nivelEducativo_combo.SelectedIndex == 3)
             {
-                privada_radio.Visible = true;
+                privada_radio.Visible = true;   
                 publica_radio.Visible = true;
+                publica_radio.Checked = true;
             }
             else
             {
@@ -161,12 +185,11 @@ namespace CSEQ
                     {
                         case 0:
                             Reporte.Enabled = true;
-                            query = "CALL consultaTienenEducacionPorCenso("+ ID_censo.SelectedValue.ToString() +");";
-                            type = "Barra";
-                            Util.graphData(zedGraph, query, type);
+                            actualizaEstudiado();
                             break;
                         case 1:
-
+                            Reporte.Enabled = true;
+                            actualizaEducacionEspecial();
                             break;
                         case 2:
                             Reporte.Enabled = true;
@@ -178,16 +201,8 @@ namespace CSEQ
                             break;
                         case 3:
                             Reporte.Enabled = true;
-                            if (publica_radio.Checked)
-                            {
-                                query = "CALL consultaPersonasInstitucionPublicaPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
-                            }
-                            if (privada_radio.Checked)
-                            {
-                                query = "CALL consultaPersonasInstitucionPrivadaPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
-                            }
-                            type = "Barra";
-                            Util.graphData(zedGraph, query, type);
+                            publica_radio.Checked = !publica_radio.Checked;
+                            publica_radio.Checked = !publica_radio.Checked;
                             break;
                     }
                     break;
@@ -231,12 +246,11 @@ namespace CSEQ
                         {
                             case 0:
                                 Reporte.Enabled = true;
-                                query = "CALL consultaTienenEducacion();";
-                                type = "Barra";
-                                Util.graphData(zedGraph, query, type);
+                                actualizaEstudiado();
                                 break;
                             case 1:
-
+                                Reporte.Enabled = true;
+                                actualizaEducacionEspecial();
                                 break;
                             case 2:
                                 Reporte.Enabled = true;
@@ -248,16 +262,8 @@ namespace CSEQ
                                 break;
                             case 3:
                                 Reporte.Enabled = true;
-                                if (publica_radio.Checked)
-                                {
-                                    query = "CALL consultaPersonasInstitucionPublica();";
-                                }
-                                if (privada_radio.Checked)
-                                {
-                                    query = "CALL consultaPersonasInstitucionPrivada();";
-                                }
-                                type = "Barra";
-                                Util.graphData(zedGraph, query, type);
+                                publica_radio.Checked = !publica_radio.Checked;
+                                publica_radio.Checked = !publica_radio.Checked;
                                 break;
                         }
                         break;
@@ -360,6 +366,96 @@ namespace CSEQ
                 {
                     query = "CALL consultaPersonasInstitucionPrivadaPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
                 }
+            }
+
+            Util.graphData(zedGraph, query, "Barra");
+        }
+
+        private void Reporte_Click(object sender, EventArgs e)
+        {
+            String periodoRep;
+            if (todoscensos_radio.Checked)
+            {
+                periodoRep = "(Todos los censos)";
+            }
+            else
+            {
+                periodoRep = ID_censo.SelectedValue.ToString();
+            }
+            Util.generaPDF(query, titulo.Text, periodoRep);
+        }
+
+        private void hanEstudiado_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEstudiado();
+        }
+
+        private void noHanEstudiado_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEstudiado();
+        }
+
+        private void actualizaEstudiado()
+        {
+            if (todoscensos_radio.Checked)
+            {
+                if (hanEstudiado_radio.Checked)
+                {
+                    query = "CALL consultaConEducacion();";
+                }
+                if (noHanEstudiado_radio.Checked)
+                {
+                    query = "CALL consultaSinEducacion();";
+                }
+            }
+            else
+            {
+                if (hanEstudiado_radio.Checked)
+                {
+                    query = "CALL consultaConEducacionPorCenso("+ ID_censo.SelectedValue.ToString() +");";
+                }
+                if (noHanEstudiado_radio.Checked)
+                {
+                    query = "CALL consultaSinEducacionPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                }
+            }
+            Util.graphData(zedGraph, query, "Barra");
+        }
+
+        private void especial_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEducacionEspecial();
+        }
+
+        private void normal_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEducacionEspecial();
+        }
+
+        private void actualizaEducacionEspecial()
+        {
+            if (todoscensos_radio.Checked)
+            {
+                if (especial_radio.Checked)
+                {
+                    query = "CALL consultaPersonasInstitucionEspecializada();";
+                }
+                if (normal_radio.Checked)
+                {
+                    query = "CALL consultaPersonasInstitucionNoEspecializada();";
+                }
+            }
+            else
+            {
+                
+                if (especial_radio.Checked)
+                {
+                    query = "CALL consultaPersonasInstitucionEspecializadaPorCenso("+ ID_censo.SelectedValue.ToString() +");";
+                }
+                if (normal_radio.Checked)
+                {
+                    query = "CALL consultaPersonasInstitucionNoEspecializadaPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                }   
             }
 
             Util.graphData(zedGraph, query, "Barra");
