@@ -2433,7 +2433,7 @@ BEGIN
 	SELECT i.especializada AS 'Institucion', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM Estudiado e, InstitucionEducativa i, Persona p, PerteneceCenso per
 	WHERE i.ID_institucionEducativa = e.ID_institucionEducativa AND e.CURP = p.CURP AND e.CURP = per.CURP
-	AND i.especializada = 1 AND per.ID_censo = censo
+	AND i.especializada = 0 AND per.ID_censo = censo
 	GROUP BY i.especializada;
 END //
 DELIMITER ;
