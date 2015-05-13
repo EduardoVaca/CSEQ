@@ -461,7 +461,7 @@ DELIMITER ;
 
 -- Consulta de tipos de pérdida por censo: si es bilateral o unilateral con booleanos...
 DELIMITER //
-CREATE PROCEDURE consultaPerdidaBilateralUnilateral
+CREATE PROCEDURE consultaPerdidaBilateralUnilateralPorCenso
 (IN bilateral boolean, unilateral boolean, censo INT)
 BEGIN
 	DECLARE totalPersonas INT;
@@ -608,7 +608,7 @@ BEGIN
 	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso WHERE ID_censo = censo;
 	SELECT t.periodo AS 'Etapa', COUNT(*) AS 'No. de Personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
 	FROM Periodo t, Persona p, PerteneceCenso per
-	WHERE t.ID_periodo = p.ID_periodo AND per.CURP = p.CURP AND per.ID_censo = censo;
+	WHERE t.ID_periodo = p.ID_periodo AND per.CURP = p.CURP AND per.ID_censo = censo
 	GROUP BY t.periodo;
 END //
 DELIMITER ;
@@ -2252,25 +2252,6 @@ DELIMITER ;
 
 -- *********************************************** Consultas de Max ************************************************************
 
--- Número de personas que tienen discapacidad auditiva que estudian en institución privada por censo.
--- ?????????????????????????????????????????
-DELIMITER //
-CREATE PROCEDURE consultaPersonasInstitucionPrivadaPorCenso
-(IN censo INT)
-BEGIN
-	DECLARE totalPersonas INT;
-	SELECT COUNT(*) INTO totalPersonas FROM PerteneceCenso
-	WHERE ID_censo = censo;
-	SELECT i.privada AS 'Institucion', COUNT(*) AS 'No. de personas', (COUNT(*) / totalPersonas * 100) AS 'Porcentaje'
-	FROM Estudiado e, InstitucionEducativa i, Persona p, PerteneceCenso per
-	WHERE i.ID_institucionEducativa = e.ID_institucionEducativa
-	AND e.CURP = p.CURP
-	AND e.CURP = per.CURP
-	AND i.privada = 1
-	AND per.ID_censo = censo
-	GROUP BY i.privada;
-END //
-DELIMITER ;
 
 -- Número de personas sordas que estudian en institución especializada y utilizan LSM por censo
 -- ??????????????????????????????????????????????

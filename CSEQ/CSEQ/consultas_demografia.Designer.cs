@@ -83,10 +83,10 @@
             // 
             this.logout.BackColor = System.Drawing.Color.Transparent;
             this.logout.Image = global::CSEQ.Properties.Resources.logout;
-            this.logout.Location = new System.Drawing.Point(766, 42);
-            this.logout.Margin = new System.Windows.Forms.Padding(2);
+            this.logout.Location = new System.Drawing.Point(1532, 81);
+            this.logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(30, 29);
+            this.logout.Size = new System.Drawing.Size(60, 56);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logout.TabIndex = 75;
             this.logout.TabStop = false;
@@ -96,10 +96,10 @@
             // 
             this.back_picture.BackColor = System.Drawing.Color.Transparent;
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
-            this.back_picture.Location = new System.Drawing.Point(6, 8);
-            this.back_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.back_picture.Location = new System.Drawing.Point(12, 15);
+            this.back_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.back_picture.Name = "back_picture";
-            this.back_picture.Size = new System.Drawing.Size(30, 29);
+            this.back_picture.Size = new System.Drawing.Size(60, 56);
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.back_picture.TabIndex = 74;
             this.back_picture.TabStop = false;
@@ -111,10 +111,10 @@
             // 
             this.close_picture.BackColor = System.Drawing.Color.Transparent;
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
-            this.close_picture.Location = new System.Drawing.Point(766, 8);
-            this.close_picture.Margin = new System.Windows.Forms.Padding(2);
+            this.close_picture.Location = new System.Drawing.Point(1532, 15);
+            this.close_picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.close_picture.Name = "close_picture";
-            this.close_picture.Size = new System.Drawing.Size(30, 29);
+            this.close_picture.Size = new System.Drawing.Size(60, 56);
             this.close_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.close_picture.TabIndex = 73;
             this.close_picture.TabStop = false;
@@ -126,10 +126,10 @@
             this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Microsoft MHei", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.titulo.Location = new System.Drawing.Point(306, 22);
-            this.titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.titulo.Location = new System.Drawing.Point(612, 42);
+            this.titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(0, 30);
+            this.titulo.Size = new System.Drawing.Size(0, 57);
             this.titulo.TabIndex = 79;
             // 
             // label1
@@ -138,10 +138,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft MHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(16, 99);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 190);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 21);
+            this.label1.Size = new System.Drawing.Size(139, 43);
             this.label1.TabIndex = 80;
             this.label1.Text = "Consulta";
             // 
@@ -156,11 +156,11 @@
             "Por Edad",
             "Por Lengua",
             "Por Empleo",
-            "Tasa de Crecimiento de Personas Sordas"});
-            this.generales_combo.Location = new System.Drawing.Point(89, 98);
-            this.generales_combo.Margin = new System.Windows.Forms.Padding(2);
+            "Tasa Crecimiento Personas Sordas"});
+            this.generales_combo.Location = new System.Drawing.Point(178, 188);
+            this.generales_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.generales_combo.Name = "generales_combo";
-            this.generales_combo.Size = new System.Drawing.Size(250, 29);
+            this.generales_combo.Size = new System.Drawing.Size(514, 51);
             this.generales_combo.TabIndex = 81;
             this.generales_combo.Visible = false;
             this.generales_combo.SelectionChangeCommitted += new System.EventHandler(this.generales_combo_SelectionChangeCommitted);
@@ -174,11 +174,11 @@
             this.eleccion_gp.Enabled = false;
             this.eleccion_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eleccion_gp.ForeColor = System.Drawing.Color.White;
-            this.eleccion_gp.Location = new System.Drawing.Point(6, 238);
-            this.eleccion_gp.Margin = new System.Windows.Forms.Padding(2);
+            this.eleccion_gp.Location = new System.Drawing.Point(12, 458);
+            this.eleccion_gp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.eleccion_gp.Name = "eleccion_gp";
-            this.eleccion_gp.Padding = new System.Windows.Forms.Padding(2);
-            this.eleccion_gp.Size = new System.Drawing.Size(156, 86);
+            this.eleccion_gp.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eleccion_gp.Size = new System.Drawing.Size(312, 165);
             this.eleccion_gp.TabIndex = 84;
             this.eleccion_gp.TabStop = false;
             this.eleccion_gp.Text = "Elección Censo";
@@ -189,10 +189,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft MHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(4, 25);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(8, 48);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.Size = new System.Drawing.Size(95, 38);
             this.label2.TabIndex = 19;
             this.label2.Text = "Censo";
             // 
@@ -204,10 +204,10 @@
             "Auxiliares auditivos por marca",
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
-            this.ID_censo.Location = new System.Drawing.Point(59, 23);
-            this.ID_censo.Margin = new System.Windows.Forms.Padding(2);
+            this.ID_censo.Location = new System.Drawing.Point(118, 44);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ID_censo.Name = "ID_censo";
-            this.ID_censo.Size = new System.Drawing.Size(82, 29);
+            this.ID_censo.Size = new System.Drawing.Size(160, 51);
             this.ID_censo.TabIndex = 21;
             this.ID_censo.SelectionChangeCommitted += new System.EventHandler(this.ID_censo_SelectionChangeCommitted);
             // 
@@ -217,10 +217,10 @@
             this.todoscensos_radio.BackColor = System.Drawing.Color.Transparent;
             this.todoscensos_radio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todoscensos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.todoscensos_radio.Location = new System.Drawing.Point(6, 59);
-            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.todoscensos_radio.Location = new System.Drawing.Point(12, 113);
+            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.todoscensos_radio.Name = "todoscensos_radio";
-            this.todoscensos_radio.Size = new System.Drawing.Size(112, 18);
+            this.todoscensos_radio.Size = new System.Drawing.Size(213, 33);
             this.todoscensos_radio.TabIndex = 20;
             this.todoscensos_radio.TabStop = true;
             this.todoscensos_radio.Text = "Todos los censos";
@@ -233,10 +233,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft MHei", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(7, 99);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(14, 190);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 24);
+            this.label3.Size = new System.Drawing.Size(151, 47);
             this.label3.TabIndex = 82;
             this.label3.Text = "Consulta";
             // 
@@ -245,9 +245,10 @@
             this.Reporte.BackColor = System.Drawing.Color.White;
             this.Reporte.Enabled = false;
             this.Reporte.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reporte.Location = new System.Drawing.Point(40, 360);
+            this.Reporte.Location = new System.Drawing.Point(80, 692);
+            this.Reporte.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Reporte.Name = "Reporte";
-            this.Reporte.Size = new System.Drawing.Size(92, 37);
+            this.Reporte.Size = new System.Drawing.Size(184, 71);
             this.Reporte.TabIndex = 83;
             this.Reporte.Text = "Crear Reporte";
             this.Reporte.UseVisualStyleBackColor = false;
@@ -263,11 +264,11 @@
             this.edades_gp.Controls.Add(this.ninos_radio);
             this.edades_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edades_gp.ForeColor = System.Drawing.Color.White;
-            this.edades_gp.Location = new System.Drawing.Point(382, 64);
-            this.edades_gp.Margin = new System.Windows.Forms.Padding(2);
+            this.edades_gp.Location = new System.Drawing.Point(764, 123);
+            this.edades_gp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.edades_gp.Name = "edades_gp";
-            this.edades_gp.Padding = new System.Windows.Forms.Padding(2);
-            this.edades_gp.Size = new System.Drawing.Size(156, 132);
+            this.edades_gp.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edades_gp.Size = new System.Drawing.Size(312, 254);
             this.edades_gp.TabIndex = 85;
             this.edades_gp.TabStop = false;
             this.edades_gp.Text = "Rangos de Edad";
@@ -279,10 +280,10 @@
             this.anciano_radio.BackColor = System.Drawing.Color.Transparent;
             this.anciano_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.anciano_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.anciano_radio.Location = new System.Drawing.Point(7, 104);
-            this.anciano_radio.Margin = new System.Windows.Forms.Padding(4);
+            this.anciano_radio.Location = new System.Drawing.Point(14, 200);
+            this.anciano_radio.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.anciano_radio.Name = "anciano_radio";
-            this.anciano_radio.Size = new System.Drawing.Size(99, 20);
+            this.anciano_radio.Size = new System.Drawing.Size(194, 36);
             this.anciano_radio.TabIndex = 24;
             this.anciano_radio.TabStop = true;
             this.anciano_radio.Text = "61 años o más";
@@ -295,10 +296,10 @@
             this.adultoMayor_radio.BackColor = System.Drawing.Color.Transparent;
             this.adultoMayor_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adultoMayor_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.adultoMayor_radio.Location = new System.Drawing.Point(7, 82);
-            this.adultoMayor_radio.Margin = new System.Windows.Forms.Padding(4);
+            this.adultoMayor_radio.Location = new System.Drawing.Point(14, 158);
+            this.adultoMayor_radio.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.adultoMayor_radio.Name = "adultoMayor_radio";
-            this.adultoMayor_radio.Size = new System.Drawing.Size(107, 20);
+            this.adultoMayor_radio.Size = new System.Drawing.Size(212, 36);
             this.adultoMayor_radio.TabIndex = 23;
             this.adultoMayor_radio.TabStop = true;
             this.adultoMayor_radio.Text = "De 41 a 60 años";
@@ -311,10 +312,10 @@
             this.adulto_mayor_radio.BackColor = System.Drawing.Color.Transparent;
             this.adulto_mayor_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adulto_mayor_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.adulto_mayor_radio.Location = new System.Drawing.Point(7, 60);
-            this.adulto_mayor_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.adulto_mayor_radio.Location = new System.Drawing.Point(14, 115);
+            this.adulto_mayor_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.adulto_mayor_radio.Name = "adulto_mayor_radio";
-            this.adulto_mayor_radio.Size = new System.Drawing.Size(107, 20);
+            this.adulto_mayor_radio.Size = new System.Drawing.Size(212, 36);
             this.adulto_mayor_radio.TabIndex = 22;
             this.adulto_mayor_radio.TabStop = true;
             this.adulto_mayor_radio.Text = "De 21 a 40 años";
@@ -327,10 +328,10 @@
             this.adolescentes_radio.BackColor = System.Drawing.Color.Transparent;
             this.adolescentes_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adolescentes_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.adolescentes_radio.Location = new System.Drawing.Point(7, 37);
-            this.adolescentes_radio.Margin = new System.Windows.Forms.Padding(4);
+            this.adolescentes_radio.Location = new System.Drawing.Point(14, 71);
+            this.adolescentes_radio.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.adolescentes_radio.Name = "adolescentes_radio";
-            this.adolescentes_radio.Size = new System.Drawing.Size(105, 20);
+            this.adolescentes_radio.Size = new System.Drawing.Size(208, 36);
             this.adolescentes_radio.TabIndex = 21;
             this.adolescentes_radio.TabStop = true;
             this.adolescentes_radio.Text = "De 11 a 20 años";
@@ -343,10 +344,10 @@
             this.ninos_radio.BackColor = System.Drawing.Color.Transparent;
             this.ninos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ninos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.ninos_radio.Location = new System.Drawing.Point(7, 17);
-            this.ninos_radio.Margin = new System.Windows.Forms.Padding(4);
+            this.ninos_radio.Location = new System.Drawing.Point(14, 33);
+            this.ninos_radio.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.ninos_radio.Name = "ninos_radio";
-            this.ninos_radio.Size = new System.Drawing.Size(100, 20);
+            this.ninos_radio.Size = new System.Drawing.Size(199, 36);
             this.ninos_radio.TabIndex = 20;
             this.ninos_radio.TabStop = true;
             this.ninos_radio.Text = "De 0 a 10 años";
@@ -359,10 +360,10 @@
             this.sinEducacion_radio.BackColor = System.Drawing.Color.Transparent;
             this.sinEducacion_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sinEducacion_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.sinEducacion_radio.Location = new System.Drawing.Point(350, 116);
-            this.sinEducacion_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.sinEducacion_radio.Location = new System.Drawing.Point(700, 223);
+            this.sinEducacion_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sinEducacion_radio.Name = "sinEducacion_radio";
-            this.sinEducacion_radio.Size = new System.Drawing.Size(98, 20);
+            this.sinEducacion_radio.Size = new System.Drawing.Size(188, 36);
             this.sinEducacion_radio.TabIndex = 26;
             this.sinEducacion_radio.TabStop = true;
             this.sinEducacion_radio.Text = "Sin Educación";
@@ -375,10 +376,10 @@
             this.conEducacion_radio.BackColor = System.Drawing.Color.Transparent;
             this.conEducacion_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conEducacion_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.conEducacion_radio.Location = new System.Drawing.Point(350, 89);
-            this.conEducacion_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.conEducacion_radio.Location = new System.Drawing.Point(700, 171);
+            this.conEducacion_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.conEducacion_radio.Name = "conEducacion_radio";
-            this.conEducacion_radio.Size = new System.Drawing.Size(103, 20);
+            this.conEducacion_radio.Size = new System.Drawing.Size(200, 36);
             this.conEducacion_radio.TabIndex = 25;
             this.conEducacion_radio.TabStop = true;
             this.conEducacion_radio.Text = "Con Educación";
@@ -394,11 +395,11 @@
             this.lenguaDom_gp.Controls.Add(this.espanol_check);
             this.lenguaDom_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lenguaDom_gp.ForeColor = System.Drawing.Color.White;
-            this.lenguaDom_gp.Location = new System.Drawing.Point(364, 64);
-            this.lenguaDom_gp.Margin = new System.Windows.Forms.Padding(2);
+            this.lenguaDom_gp.Location = new System.Drawing.Point(728, 123);
+            this.lenguaDom_gp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lenguaDom_gp.Name = "lenguaDom_gp";
-            this.lenguaDom_gp.Padding = new System.Windows.Forms.Padding(2);
-            this.lenguaDom_gp.Size = new System.Drawing.Size(182, 130);
+            this.lenguaDom_gp.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lenguaDom_gp.Size = new System.Drawing.Size(364, 250);
             this.lenguaDom_gp.TabIndex = 87;
             this.lenguaDom_gp.TabStop = false;
             this.lenguaDom_gp.Text = "Lengua Dominante";
@@ -412,9 +413,10 @@
             this.LSEUA_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.LSEUA_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSEUA_check.ForeColor = System.Drawing.Color.White;
-            this.LSEUA_check.Location = new System.Drawing.Point(6, 93);
+            this.LSEUA_check.Location = new System.Drawing.Point(12, 179);
+            this.LSEUA_check.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.LSEUA_check.Name = "LSEUA_check";
-            this.LSEUA_check.Size = new System.Drawing.Size(140, 20);
+            this.LSEUA_check.Size = new System.Drawing.Size(271, 36);
             this.LSEUA_check.TabIndex = 101;
             this.LSEUA_check.Text = "Lengua de Señas EUA";
             this.LSEUA_check.UseVisualStyleBackColor = false;
@@ -428,10 +430,10 @@
             this.LSM_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.LSM_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSM_check.ForeColor = System.Drawing.Color.White;
-            this.LSM_check.Location = new System.Drawing.Point(6, 50);
-            this.LSM_check.Margin = new System.Windows.Forms.Padding(2);
+            this.LSM_check.Location = new System.Drawing.Point(12, 96);
+            this.LSM_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LSM_check.Name = "LSM_check";
-            this.LSM_check.Size = new System.Drawing.Size(166, 20);
+            this.LSM_check.Size = new System.Drawing.Size(325, 36);
             this.LSM_check.TabIndex = 100;
             this.LSM_check.Text = "Lengua de Señas Mexicana";
             this.LSM_check.UseVisualStyleBackColor = false;
@@ -445,9 +447,10 @@
             this.ingles_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ingles_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ingles_check.ForeColor = System.Drawing.Color.White;
-            this.ingles_check.Location = new System.Drawing.Point(6, 70);
+            this.ingles_check.Location = new System.Drawing.Point(12, 135);
+            this.ingles_check.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ingles_check.Name = "ingles_check";
-            this.ingles_check.Size = new System.Drawing.Size(58, 20);
+            this.ingles_check.Size = new System.Drawing.Size(107, 36);
             this.ingles_check.TabIndex = 99;
             this.ingles_check.Text = "Inglés";
             this.ingles_check.UseVisualStyleBackColor = false;
@@ -461,9 +464,10 @@
             this.espanol_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.espanol_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.espanol_check.ForeColor = System.Drawing.Color.White;
-            this.espanol_check.Location = new System.Drawing.Point(6, 25);
+            this.espanol_check.Location = new System.Drawing.Point(12, 48);
+            this.espanol_check.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.espanol_check.Name = "espanol_check";
-            this.espanol_check.Size = new System.Drawing.Size(68, 20);
+            this.espanol_check.Size = new System.Drawing.Size(127, 36);
             this.espanol_check.TabIndex = 98;
             this.espanol_check.Text = "Español";
             this.espanol_check.UseVisualStyleBackColor = false;
@@ -476,10 +480,10 @@
             this.estadoCivil_combo.Items.AddRange(new object[] {
             "Por Estado Civil",
             "Por Hijos"});
-            this.estadoCivil_combo.Location = new System.Drawing.Point(89, 98);
-            this.estadoCivil_combo.Margin = new System.Windows.Forms.Padding(2);
+            this.estadoCivil_combo.Location = new System.Drawing.Point(178, 188);
+            this.estadoCivil_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.estadoCivil_combo.Name = "estadoCivil_combo";
-            this.estadoCivil_combo.Size = new System.Drawing.Size(250, 29);
+            this.estadoCivil_combo.Size = new System.Drawing.Size(496, 51);
             this.estadoCivil_combo.TabIndex = 89;
             this.estadoCivil_combo.Visible = false;
             this.estadoCivil_combo.SelectionChangeCommitted += new System.EventHandler(this.estadoCivil_combo_SelectionChangeCommitted);
@@ -493,11 +497,11 @@
             this.estadoCivil_gp.Controls.Add(this.soltero_check);
             this.estadoCivil_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estadoCivil_gp.ForeColor = System.Drawing.Color.White;
-            this.estadoCivil_gp.Location = new System.Drawing.Point(356, 70);
-            this.estadoCivil_gp.Margin = new System.Windows.Forms.Padding(2);
+            this.estadoCivil_gp.Location = new System.Drawing.Point(712, 135);
+            this.estadoCivil_gp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.estadoCivil_gp.Name = "estadoCivil_gp";
-            this.estadoCivil_gp.Padding = new System.Windows.Forms.Padding(2);
-            this.estadoCivil_gp.Size = new System.Drawing.Size(182, 121);
+            this.estadoCivil_gp.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estadoCivil_gp.Size = new System.Drawing.Size(364, 233);
             this.estadoCivil_gp.TabIndex = 102;
             this.estadoCivil_gp.TabStop = false;
             this.estadoCivil_gp.Text = "Estado Civil";
@@ -511,10 +515,10 @@
             this.viudo_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viudo_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viudo_check.ForeColor = System.Drawing.Color.White;
-            this.viudo_check.Location = new System.Drawing.Point(3, 90);
-            this.viudo_check.Margin = new System.Windows.Forms.Padding(2);
+            this.viudo_check.Location = new System.Drawing.Point(6, 173);
+            this.viudo_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viudo_check.Name = "viudo_check";
-            this.viudo_check.Size = new System.Drawing.Size(72, 20);
+            this.viudo_check.Size = new System.Drawing.Size(134, 36);
             this.viudo_check.TabIndex = 101;
             this.viudo_check.Text = "Viudo(a)";
             this.viudo_check.UseVisualStyleBackColor = false;
@@ -528,10 +532,10 @@
             this.divorciado_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.divorciado_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.divorciado_check.ForeColor = System.Drawing.Color.White;
-            this.divorciado_check.Location = new System.Drawing.Point(3, 68);
-            this.divorciado_check.Margin = new System.Windows.Forms.Padding(2);
+            this.divorciado_check.Location = new System.Drawing.Point(6, 131);
+            this.divorciado_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.divorciado_check.Name = "divorciado_check";
-            this.divorciado_check.Size = new System.Drawing.Size(97, 20);
+            this.divorciado_check.Size = new System.Drawing.Size(184, 36);
             this.divorciado_check.TabIndex = 100;
             this.divorciado_check.Text = "Divorciado(a)";
             this.divorciado_check.UseVisualStyleBackColor = false;
@@ -545,10 +549,10 @@
             this.casado_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.casado_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.casado_check.ForeColor = System.Drawing.Color.White;
-            this.casado_check.Location = new System.Drawing.Point(3, 46);
-            this.casado_check.Margin = new System.Windows.Forms.Padding(2);
+            this.casado_check.Location = new System.Drawing.Point(6, 88);
+            this.casado_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.casado_check.Name = "casado_check";
-            this.casado_check.Size = new System.Drawing.Size(79, 20);
+            this.casado_check.Size = new System.Drawing.Size(150, 36);
             this.casado_check.TabIndex = 99;
             this.casado_check.Text = "Casado(a)";
             this.casado_check.UseVisualStyleBackColor = false;
@@ -562,10 +566,10 @@
             this.soltero_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.soltero_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soltero_check.ForeColor = System.Drawing.Color.White;
-            this.soltero_check.Location = new System.Drawing.Point(3, 23);
-            this.soltero_check.Margin = new System.Windows.Forms.Padding(2);
+            this.soltero_check.Location = new System.Drawing.Point(6, 44);
+            this.soltero_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.soltero_check.Name = "soltero_check";
-            this.soltero_check.Size = new System.Drawing.Size(78, 20);
+            this.soltero_check.Size = new System.Drawing.Size(146, 36);
             this.soltero_check.TabIndex = 98;
             this.soltero_check.Text = "Soltero(a)";
             this.soltero_check.UseVisualStyleBackColor = false;
@@ -577,10 +581,10 @@
             this.sinHijos_radio.BackColor = System.Drawing.Color.Transparent;
             this.sinHijos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sinHijos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.sinHijos_radio.Location = new System.Drawing.Point(350, 118);
-            this.sinHijos_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.sinHijos_radio.Location = new System.Drawing.Point(700, 227);
+            this.sinHijos_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sinHijos_radio.Name = "sinHijos_radio";
-            this.sinHijos_radio.Size = new System.Drawing.Size(71, 20);
+            this.sinHijos_radio.Size = new System.Drawing.Size(134, 36);
             this.sinHijos_radio.TabIndex = 104;
             this.sinHijos_radio.TabStop = true;
             this.sinHijos_radio.Text = "Sin Hijos";
@@ -594,10 +598,10 @@
             this.conHijos_radio.BackColor = System.Drawing.Color.Transparent;
             this.conHijos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conHijos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.conHijos_radio.Location = new System.Drawing.Point(350, 90);
-            this.conHijos_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.conHijos_radio.Location = new System.Drawing.Point(700, 173);
+            this.conHijos_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.conHijos_radio.Name = "conHijos_radio";
-            this.conHijos_radio.Size = new System.Drawing.Size(76, 20);
+            this.conHijos_radio.Size = new System.Drawing.Size(146, 36);
             this.conHijos_radio.TabIndex = 103;
             this.conHijos_radio.TabStop = true;
             this.conHijos_radio.Text = "Con Hijos";
@@ -612,11 +616,11 @@
             this.hijos_gp.Controls.Add(this.hijos_sordos_radio);
             this.hijos_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hijos_gp.ForeColor = System.Drawing.Color.White;
-            this.hijos_gp.Location = new System.Drawing.Point(449, 77);
-            this.hijos_gp.Margin = new System.Windows.Forms.Padding(2);
+            this.hijos_gp.Location = new System.Drawing.Point(898, 148);
+            this.hijos_gp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hijos_gp.Name = "hijos_gp";
-            this.hijos_gp.Padding = new System.Windows.Forms.Padding(2);
-            this.hijos_gp.Size = new System.Drawing.Size(154, 83);
+            this.hijos_gp.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hijos_gp.Size = new System.Drawing.Size(308, 160);
             this.hijos_gp.TabIndex = 103;
             this.hijos_gp.TabStop = false;
             this.hijos_gp.Text = "Hijos";
@@ -628,10 +632,10 @@
             this.hijos_noSordos_radio.BackColor = System.Drawing.Color.Transparent;
             this.hijos_noSordos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hijos_noSordos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.hijos_noSordos_radio.Location = new System.Drawing.Point(21, 55);
-            this.hijos_noSordos_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.hijos_noSordos_radio.Location = new System.Drawing.Point(42, 106);
+            this.hijos_noSordos_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hijos_noSordos_radio.Name = "hijos_noSordos_radio";
-            this.hijos_noSordos_radio.Size = new System.Drawing.Size(110, 20);
+            this.hijos_noSordos_radio.Size = new System.Drawing.Size(214, 36);
             this.hijos_noSordos_radio.TabIndex = 105;
             this.hijos_noSordos_radio.TabStop = true;
             this.hijos_noSordos_radio.Text = "Hijos No Sordos";
@@ -645,10 +649,10 @@
             this.hijos_sordos_radio.BackColor = System.Drawing.Color.Transparent;
             this.hijos_sordos_radio.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hijos_sordos_radio.ForeColor = System.Drawing.SystemColors.Control;
-            this.hijos_sordos_radio.Location = new System.Drawing.Point(21, 23);
-            this.hijos_sordos_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.hijos_sordos_radio.Location = new System.Drawing.Point(42, 44);
+            this.hijos_sordos_radio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hijos_sordos_radio.Name = "hijos_sordos_radio";
-            this.hijos_sordos_radio.Size = new System.Drawing.Size(91, 20);
+            this.hijos_sordos_radio.Size = new System.Drawing.Size(176, 36);
             this.hijos_sordos_radio.TabIndex = 104;
             this.hijos_sordos_radio.TabStop = true;
             this.hijos_sordos_radio.Text = "Hijos Sordos";
@@ -663,10 +667,10 @@
             this.migracion_combo.Items.AddRange(new object[] {
             "Personas de otro estado",
             "Personas de otra nacionalidad"});
-            this.migracion_combo.Location = new System.Drawing.Point(89, 98);
-            this.migracion_combo.Margin = new System.Windows.Forms.Padding(2);
+            this.migracion_combo.Location = new System.Drawing.Point(178, 188);
+            this.migracion_combo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.migracion_combo.Name = "migracion_combo";
-            this.migracion_combo.Size = new System.Drawing.Size(250, 29);
+            this.migracion_combo.Size = new System.Drawing.Size(496, 51);
             this.migracion_combo.TabIndex = 105;
             this.migracion_combo.Visible = false;
             this.migracion_combo.SelectionChangeCommitted += new System.EventHandler(this.migracion_combo_SelectionChangeCommitted);
@@ -675,8 +679,8 @@
             // 
             this.zedGraph.AutoSize = true;
             this.zedGraph.BackColor = System.Drawing.Color.Transparent;
-            this.zedGraph.Location = new System.Drawing.Point(170, 204);
-            this.zedGraph.Margin = new System.Windows.Forms.Padding(6);
+            this.zedGraph.Location = new System.Drawing.Point(340, 392);
+            this.zedGraph.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
             this.zedGraph.ScrollMaxX = 0D;
@@ -685,20 +689,20 @@
             this.zedGraph.ScrollMinX = 0D;
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
-            this.zedGraph.Size = new System.Drawing.Size(626, 328);
+            this.zedGraph.Size = new System.Drawing.Size(1252, 631);
             this.zedGraph.TabIndex = 106;
             this.zedGraph.ZoomButtons = System.Windows.Forms.MouseButtons.None;
             this.zedGraph.ZoomStepFraction = 0D;
             // 
             // consultas_demografia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 535);
+            this.ClientSize = new System.Drawing.Size(1600, 1029);
             this.Controls.Add(this.eleccion_gp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Reporte);
@@ -722,7 +726,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "consultas_demografia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultas_demografia";
