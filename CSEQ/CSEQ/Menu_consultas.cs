@@ -37,21 +37,6 @@ namespace CSEQ
             this.Close();
         }
 
-        private void ConsultaGrafica_btn_Click(object sender, EventArgs e)
-        {
-            ConsultaGrafica consulta = new ConsultaGrafica(rol);
-            this.Close();
-            consulta.Show();
-            
-        }
-
-        private void ConsultaRedactada_btn_Click(object sender, EventArgs e)
-        {
-            ConsultaRedactada consulta = new ConsultaRedactada();
-            this.Close();
-            consulta.Show();
-            
-        }
 
         private void salud_radiobtn_CheckedChanged(object sender, EventArgs e)
         {

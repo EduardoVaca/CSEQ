@@ -56,6 +56,10 @@
             this.privada_radio = new System.Windows.Forms.RadioButton();
             this.publica_radio = new System.Windows.Forms.RadioButton();
             this.zedGraph = new ZedGraph.ZedGraphControl();
+            this.noHanEstudiado_radio = new System.Windows.Forms.RadioButton();
+            this.hanEstudiado_radio = new System.Windows.Forms.RadioButton();
+            this.normal_radio = new System.Windows.Forms.RadioButton();
+            this.especial_radio = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
@@ -68,7 +72,7 @@
             this.logout.BackColor = System.Drawing.Color.Transparent;
             this.logout.Image = global::CSEQ.Properties.Resources.logout;
             this.logout.Location = new System.Drawing.Point(765, 47);
-            this.logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logout.Margin = new System.Windows.Forms.Padding(2);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(30, 29);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,7 +86,7 @@
             this.back_picture.BackColor = System.Drawing.Color.Transparent;
             this.back_picture.Image = ((System.Drawing.Image)(resources.GetObject("back_picture.Image")));
             this.back_picture.Location = new System.Drawing.Point(6, 14);
-            this.back_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back_picture.Margin = new System.Windows.Forms.Padding(2);
             this.back_picture.Name = "back_picture";
             this.back_picture.Size = new System.Drawing.Size(30, 29);
             this.back_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -97,7 +101,7 @@
             this.close_picture.BackColor = System.Drawing.Color.Transparent;
             this.close_picture.Image = ((System.Drawing.Image)(resources.GetObject("close_picture.Image")));
             this.close_picture.Location = new System.Drawing.Point(765, 14);
-            this.close_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.close_picture.Margin = new System.Windows.Forms.Padding(2);
             this.close_picture.Name = "close_picture";
             this.close_picture.Size = new System.Drawing.Size(30, 29);
             this.close_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,9 +137,9 @@
             this.nivelesEducativos_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nivelesEducativos_gp.ForeColor = System.Drawing.Color.White;
             this.nivelesEducativos_gp.Location = new System.Drawing.Point(404, 59);
-            this.nivelesEducativos_gp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nivelesEducativos_gp.Margin = new System.Windows.Forms.Padding(2);
             this.nivelesEducativos_gp.Name = "nivelesEducativos_gp";
-            this.nivelesEducativos_gp.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nivelesEducativos_gp.Padding = new System.Windows.Forms.Padding(2);
             this.nivelesEducativos_gp.Size = new System.Drawing.Size(248, 135);
             this.nivelesEducativos_gp.TabIndex = 89;
             this.nivelesEducativos_gp.TabStop = false;
@@ -151,7 +155,7 @@
             this.doctorado_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doctorado_check.ForeColor = System.Drawing.Color.White;
             this.doctorado_check.Location = new System.Drawing.Point(123, 90);
-            this.doctorado_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.doctorado_check.Margin = new System.Windows.Forms.Padding(2);
             this.doctorado_check.Name = "doctorado_check";
             this.doctorado_check.Size = new System.Drawing.Size(82, 20);
             this.doctorado_check.TabIndex = 96;
@@ -168,7 +172,7 @@
             this.maestria_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maestria_check.ForeColor = System.Drawing.Color.White;
             this.maestria_check.Location = new System.Drawing.Point(123, 67);
-            this.maestria_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maestria_check.Margin = new System.Windows.Forms.Padding(2);
             this.maestria_check.Name = "maestria_check";
             this.maestria_check.Size = new System.Drawing.Size(71, 20);
             this.maestria_check.TabIndex = 95;
@@ -185,7 +189,7 @@
             this.especialidad_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.especialidad_check.ForeColor = System.Drawing.Color.White;
             this.especialidad_check.Location = new System.Drawing.Point(123, 43);
-            this.especialidad_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.especialidad_check.Margin = new System.Windows.Forms.Padding(2);
             this.especialidad_check.Name = "especialidad_check";
             this.especialidad_check.Size = new System.Drawing.Size(91, 20);
             this.especialidad_check.TabIndex = 94;
@@ -202,7 +206,7 @@
             this.licenciatura_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.licenciatura_check.ForeColor = System.Drawing.Color.White;
             this.licenciatura_check.Location = new System.Drawing.Point(123, 19);
-            this.licenciatura_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.licenciatura_check.Margin = new System.Windows.Forms.Padding(2);
             this.licenciatura_check.Name = "licenciatura_check";
             this.licenciatura_check.Size = new System.Drawing.Size(89, 20);
             this.licenciatura_check.TabIndex = 93;
@@ -219,7 +223,7 @@
             this.carreraTecnica_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carreraTecnica_check.ForeColor = System.Drawing.Color.White;
             this.carreraTecnica_check.Location = new System.Drawing.Point(4, 112);
-            this.carreraTecnica_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.carreraTecnica_check.Margin = new System.Windows.Forms.Padding(2);
             this.carreraTecnica_check.Name = "carreraTecnica_check";
             this.carreraTecnica_check.Size = new System.Drawing.Size(105, 20);
             this.carreraTecnica_check.TabIndex = 92;
@@ -236,7 +240,7 @@
             this.preparatoria_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preparatoria_check.ForeColor = System.Drawing.Color.White;
             this.preparatoria_check.Location = new System.Drawing.Point(4, 90);
-            this.preparatoria_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.preparatoria_check.Margin = new System.Windows.Forms.Padding(2);
             this.preparatoria_check.Name = "preparatoria_check";
             this.preparatoria_check.Size = new System.Drawing.Size(91, 20);
             this.preparatoria_check.TabIndex = 91;
@@ -253,7 +257,7 @@
             this.secundaria_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secundaria_check.ForeColor = System.Drawing.Color.White;
             this.secundaria_check.Location = new System.Drawing.Point(4, 67);
-            this.secundaria_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.secundaria_check.Margin = new System.Windows.Forms.Padding(2);
             this.secundaria_check.Name = "secundaria_check";
             this.secundaria_check.Size = new System.Drawing.Size(84, 20);
             this.secundaria_check.TabIndex = 90;
@@ -270,7 +274,7 @@
             this.primaria_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.primaria_check.ForeColor = System.Drawing.Color.White;
             this.primaria_check.Location = new System.Drawing.Point(4, 43);
-            this.primaria_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.primaria_check.Margin = new System.Windows.Forms.Padding(2);
             this.primaria_check.Name = "primaria_check";
             this.primaria_check.Size = new System.Drawing.Size(70, 20);
             this.primaria_check.TabIndex = 90;
@@ -287,7 +291,7 @@
             this.prescolar_check.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prescolar_check.ForeColor = System.Drawing.Color.White;
             this.prescolar_check.Location = new System.Drawing.Point(4, 19);
-            this.prescolar_check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.prescolar_check.Margin = new System.Windows.Forms.Padding(2);
             this.prescolar_check.Name = "prescolar_check";
             this.prescolar_check.Size = new System.Drawing.Size(74, 20);
             this.prescolar_check.TabIndex = 89;
@@ -317,7 +321,7 @@
             "Por dominio del Inglés",
             "Por dominio de LSM"});
             this.comunicacion_combo.Location = new System.Drawing.Point(102, 83);
-            this.comunicacion_combo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comunicacion_combo.Margin = new System.Windows.Forms.Padding(2);
             this.comunicacion_combo.Name = "comunicacion_combo";
             this.comunicacion_combo.Size = new System.Drawing.Size(250, 29);
             this.comunicacion_combo.TabIndex = 106;
@@ -334,9 +338,9 @@
             this.eleccion_gp.Font = new System.Drawing.Font("Microsoft MHei", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eleccion_gp.ForeColor = System.Drawing.Color.White;
             this.eleccion_gp.Location = new System.Drawing.Point(16, 245);
-            this.eleccion_gp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eleccion_gp.Margin = new System.Windows.Forms.Padding(2);
             this.eleccion_gp.Name = "eleccion_gp";
-            this.eleccion_gp.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eleccion_gp.Padding = new System.Windows.Forms.Padding(2);
             this.eleccion_gp.Size = new System.Drawing.Size(156, 86);
             this.eleccion_gp.TabIndex = 108;
             this.eleccion_gp.TabStop = false;
@@ -364,7 +368,7 @@
             "Personas que no tienen aparato auditivo",
             "Personas con implante coclear"});
             this.ID_censo.Location = new System.Drawing.Point(59, 23);
-            this.ID_censo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID_censo.Margin = new System.Windows.Forms.Padding(2);
             this.ID_censo.Name = "ID_censo";
             this.ID_censo.Size = new System.Drawing.Size(82, 29);
             this.ID_censo.TabIndex = 21;
@@ -377,7 +381,7 @@
             this.todoscensos_radio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todoscensos_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.todoscensos_radio.Location = new System.Drawing.Point(6, 59);
-            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.todoscensos_radio.Margin = new System.Windows.Forms.Padding(2);
             this.todoscensos_radio.Name = "todoscensos_radio";
             this.todoscensos_radio.Size = new System.Drawing.Size(112, 18);
             this.todoscensos_radio.TabIndex = 20;
@@ -397,6 +401,7 @@
             this.Reporte.TabIndex = 107;
             this.Reporte.Text = "Crear Reporte";
             this.Reporte.UseVisualStyleBackColor = false;
+            this.Reporte.Click += new System.EventHandler(this.Reporte_Click);
             // 
             // nivelEducativo_combo
             // 
@@ -408,7 +413,7 @@
             "Por Nivel Educativo",
             "Por Tipo de Educación"});
             this.nivelEducativo_combo.Location = new System.Drawing.Point(100, 83);
-            this.nivelEducativo_combo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nivelEducativo_combo.Margin = new System.Windows.Forms.Padding(2);
             this.nivelEducativo_combo.Name = "nivelEducativo_combo";
             this.nivelEducativo_combo.Size = new System.Drawing.Size(292, 29);
             this.nivelEducativo_combo.TabIndex = 109;
@@ -422,7 +427,7 @@
             this.privada_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.privada_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.privada_radio.Location = new System.Drawing.Point(402, 74);
-            this.privada_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.privada_radio.Margin = new System.Windows.Forms.Padding(2);
             this.privada_radio.Name = "privada_radio";
             this.privada_radio.Size = new System.Drawing.Size(72, 23);
             this.privada_radio.TabIndex = 22;
@@ -439,7 +444,7 @@
             this.publica_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.publica_radio.ForeColor = System.Drawing.SystemColors.Control;
             this.publica_radio.Location = new System.Drawing.Point(402, 99);
-            this.publica_radio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.publica_radio.Margin = new System.Windows.Forms.Padding(2);
             this.publica_radio.Name = "publica_radio";
             this.publica_radio.Size = new System.Drawing.Size(70, 23);
             this.publica_radio.TabIndex = 110;
@@ -466,6 +471,74 @@
             this.zedGraph.Size = new System.Drawing.Size(628, 328);
             this.zedGraph.TabIndex = 111;
             // 
+            // noHanEstudiado_radio
+            // 
+            this.noHanEstudiado_radio.AutoSize = true;
+            this.noHanEstudiado_radio.BackColor = System.Drawing.Color.Transparent;
+            this.noHanEstudiado_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noHanEstudiado_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.noHanEstudiado_radio.Location = new System.Drawing.Point(402, 100);
+            this.noHanEstudiado_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.noHanEstudiado_radio.Name = "noHanEstudiado_radio";
+            this.noHanEstudiado_radio.Size = new System.Drawing.Size(135, 23);
+            this.noHanEstudiado_radio.TabIndex = 113;
+            this.noHanEstudiado_radio.TabStop = true;
+            this.noHanEstudiado_radio.Text = "No han estudiado";
+            this.noHanEstudiado_radio.UseVisualStyleBackColor = false;
+            this.noHanEstudiado_radio.Visible = false;
+            this.noHanEstudiado_radio.CheckedChanged += new System.EventHandler(this.noHanEstudiado_radio_CheckedChanged);
+            // 
+            // hanEstudiado_radio
+            // 
+            this.hanEstudiado_radio.AutoSize = true;
+            this.hanEstudiado_radio.BackColor = System.Drawing.Color.Transparent;
+            this.hanEstudiado_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hanEstudiado_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.hanEstudiado_radio.Location = new System.Drawing.Point(402, 75);
+            this.hanEstudiado_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.hanEstudiado_radio.Name = "hanEstudiado_radio";
+            this.hanEstudiado_radio.Size = new System.Drawing.Size(115, 23);
+            this.hanEstudiado_radio.TabIndex = 112;
+            this.hanEstudiado_radio.TabStop = true;
+            this.hanEstudiado_radio.Text = "Han estudiado";
+            this.hanEstudiado_radio.UseVisualStyleBackColor = false;
+            this.hanEstudiado_radio.Visible = false;
+            this.hanEstudiado_radio.CheckedChanged += new System.EventHandler(this.hanEstudiado_radio_CheckedChanged);
+            // 
+            // normal_radio
+            // 
+            this.normal_radio.AutoSize = true;
+            this.normal_radio.BackColor = System.Drawing.Color.Transparent;
+            this.normal_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.normal_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.normal_radio.Location = new System.Drawing.Point(403, 101);
+            this.normal_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.normal_radio.Name = "normal_radio";
+            this.normal_radio.Size = new System.Drawing.Size(72, 23);
+            this.normal_radio.TabIndex = 115;
+            this.normal_radio.TabStop = true;
+            this.normal_radio.Text = "Normal";
+            this.normal_radio.UseVisualStyleBackColor = false;
+            this.normal_radio.Visible = false;
+            this.normal_radio.CheckedChanged += new System.EventHandler(this.normal_radio_CheckedChanged);
+            // 
+            // especial_radio
+            // 
+            this.especial_radio.AutoSize = true;
+            this.especial_radio.BackColor = System.Drawing.Color.Transparent;
+            this.especial_radio.Font = new System.Drawing.Font("Microsoft MHei", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.especial_radio.ForeColor = System.Drawing.SystemColors.Control;
+            this.especial_radio.Location = new System.Drawing.Point(403, 75);
+            this.especial_radio.Margin = new System.Windows.Forms.Padding(2);
+            this.especial_radio.Name = "especial_radio";
+            this.especial_radio.Size = new System.Drawing.Size(74, 23);
+            this.especial_radio.TabIndex = 114;
+            this.especial_radio.TabStop = true;
+            this.especial_radio.Text = "Especial";
+            this.especial_radio.UseVisualStyleBackColor = false;
+            this.especial_radio.Visible = false;
+            this.especial_radio.CheckedChanged += new System.EventHandler(this.especial_radio_CheckedChanged);
+            // 
             // consulta_educacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,11 +548,11 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 535);
+            this.Controls.Add(this.normal_radio);
+            this.Controls.Add(this.especial_radio);
             this.Controls.Add(this.zedGraph);
-            this.Controls.Add(this.publica_radio);
             this.Controls.Add(this.nivelEducativo_combo);
             this.Controls.Add(this.eleccion_gp);
-            this.Controls.Add(this.privada_radio);
             this.Controls.Add(this.Reporte);
             this.Controls.Add(this.comunicacion_combo);
             this.Controls.Add(this.label3);
@@ -487,11 +560,15 @@
             this.Controls.Add(this.logout);
             this.Controls.Add(this.back_picture);
             this.Controls.Add(this.close_picture);
+            this.Controls.Add(this.noHanEstudiado_radio);
+            this.Controls.Add(this.hanEstudiado_radio);
             this.Controls.Add(this.nivelesEducativos_gp);
+            this.Controls.Add(this.publica_radio);
+            this.Controls.Add(this.privada_radio);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "consulta_educacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consulta_educacion";
@@ -536,5 +613,9 @@
         private System.Windows.Forms.RadioButton privada_radio;
         private System.Windows.Forms.RadioButton publica_radio;
         private ZedGraph.ZedGraphControl zedGraph;
+        private System.Windows.Forms.RadioButton noHanEstudiado_radio;
+        private System.Windows.Forms.RadioButton hanEstudiado_radio;
+        private System.Windows.Forms.RadioButton normal_radio;
+        private System.Windows.Forms.RadioButton especial_radio;
     }
 }

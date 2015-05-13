@@ -71,18 +71,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultaGrafica.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultaGrafica.Designer.cs">
-      <DependentUpon>ConsultaGrafica.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConsultaRedactada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultaRedactada.Designer.cs">
-      <DependentUpon>ConsultaRedactada.cs</DependentUpon>
-    </Compile>
     <Compile Include="consultas_demografia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,12 +143,6 @@
     <Compile Include="Crear_censo.Designer.cs">
       <DependentUpon>Crear_censo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Crear_delegacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Crear_delegacion.Designer.cs">
-      <DependentUpon>Crear_delegacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Crear_InstitucionEducativa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,18 +160,6 @@
     </Compile>
     <Compile Include="Crear_sueldo.Designer.cs">
       <DependentUpon>Crear_sueldo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Editar_registro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Editar_registro.Designer.cs">
-      <DependentUpon>Editar_registro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Eliminar_registro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Eliminar_registro.Designer.cs">
-      <DependentUpon>Eliminar_registro.cs</DependentUpon>
     </Compile>
     <Compile Include="informacion.cs">
       <SubType>Form</SubType>
@@ -221,12 +191,6 @@
     <Compile Include="Menu_principal.Designer.cs">
       <DependentUpon>Menu_principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_registros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu_registros.Designer.cs">
-      <DependentUpon>Menu_registros.cs</DependentUpon>
-    </Compile>
     <Compile Include="Persona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,12 +207,6 @@
     </Compile>
     <Compile Include="Util.cs" />
     <Compile Include="Ventana.cs" />
-    <EmbeddedResource Include="ConsultaGrafica.resx">
-      <DependentUpon>ConsultaGrafica.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConsultaRedactada.resx">
-      <DependentUpon>ConsultaRedactada.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="consultas_demografia.resx">
       <DependentUpon>consultas_demografia.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,9 +243,6 @@
     <EmbeddedResource Include="Crear_censo.resx">
       <DependentUpon>Crear_censo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Crear_delegacion.resx">
-      <DependentUpon>Crear_delegacion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Crear_InstitucionEducativa.resx">
       <DependentUpon>Crear_InstitucionEducativa.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,12 +251,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crear_sueldo.resx">
       <DependentUpon>Crear_sueldo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editar_registro.resx">
-      <DependentUpon>Editar_registro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Eliminar_registro.resx">
-      <DependentUpon>Eliminar_registro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="informacion.resx">
       <DependentUpon>informacion.cs</DependentUpon>
@@ -317,9 +266,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_principal.resx">
       <DependentUpon>Menu_principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu_registros.resx">
-      <DependentUpon>Menu_registros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persona.resx">
       <DependentUpon>Persona.cs</DependentUpon>

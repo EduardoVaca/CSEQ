@@ -89,6 +89,8 @@ namespace CSEQ
             eleccion_gp.Enabled = true;
             Reporte.Enabled = true;
             todoscensos_radio.Checked = true;
+            todoscensos_radio.Checked = !todoscensos_radio.Checked;
+            todoscensos_radio.Checked = !todoscensos_radio.Checked;
 
         }
 
@@ -116,13 +118,19 @@ namespace CSEQ
                 lenguaDom_gp.Visible = false;
             }
 
-            if (generales_combo.SelectedIndex == 5)
+            if (generales_combo.SelectedIndex == 6)
             {
-                empleo_gp.Visible = true;
+                label2.Visible = false;
+                ID_censo.Visible = false;
             }
             else
             {
-                empleo_gp.Visible = false;                
+                ID_censo.Visible = true;
+                label2.Visible = true;
+            }
+            if (generales_combo.SelectedIndex == 3)
+            {
+                ninos_radio.Checked = true;
             }
             todoscensos_radio.Checked = !todoscensos_radio.Checked;
             todoscensos_radio.Checked = !todoscensos_radio.Checked;
@@ -148,6 +156,8 @@ namespace CSEQ
             {
                 conHijos_radio.Visible = true;
                 sinHijos_radio.Visible = true;
+                conHijos_radio.Checked = true;
+                hijos_sordos_radio.Checked = true;
             }
             todoscensos_radio.Checked = !todoscensos_radio.Checked;
             todoscensos_radio.Checked = !todoscensos_radio.Checked;
@@ -155,12 +165,24 @@ namespace CSEQ
 
         private void conHijos_radio_CheckedChanged(object sender, EventArgs e)
         {
-            hijos_gp.Visible = true;
+            
+            if (conHijos_radio.Checked)
+            {
+                hijos_gp.Visible = true;
+                hijos_sordos_radio.Visible = true;
+                hijos_noSordos_radio.Visible = true;
+
+            }
+            
         }
 
         private void sinHijos_radio_CheckedChanged(object sender, EventArgs e)
         {
-            hijos_gp.Visible = false;
+            if (sinHijos_radio.Checked)
+            {
+                hijos_gp.Visible = false;
+            }
+            actualizaHijos();
         }
 
         private void ID_censo_SelectionChangeCommitted(object sender, EventArgs e)
@@ -192,9 +214,7 @@ namespace CSEQ
                             break;
                         case 3:
                             Reporte.Enabled = true;
-                            //query = "CALL consultaPorEdad();";
-                            type = "Barra";
-                            //Util.graphData(zedGraph, query, type);
+                            actualizaEdades();
                             break;
                         case 4:
                             Reporte.Enabled = true;
@@ -228,9 +248,7 @@ namespace CSEQ
                             break;
                         case 1:
                             Reporte.Enabled = true;
-                            query = "CALL consultaHijosPorCenso(" + ID_censo.SelectedValue.ToString() + ")";
-                            type = "Barra";
-                            Util.graphData(zedGraph, query, type);
+                            actualizaHijos();
                             break;
                     }
                     break;
@@ -239,15 +257,15 @@ namespace CSEQ
                     {
                         case 0:
                             Reporte.Enabled = true;
-                            query = "";
+                            query = "CALL consultaOtrosEstadosPorCenso("+ ID_censo.SelectedValue.ToString() +");";
                             type = "Barra";
-                            //Util.graphData(zedGraph, query, type);
+                            Util.graphData(zedGraph, query, type);
                             break;
                         case 1:
                             Reporte.Enabled = true;
-                            query = "CALL ";
+                            query = "CALL consultaExtranjerosPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
                             type = "Barra";
-                            //Util.graphData(zedGraph, query, type);
+                            Util.graphData(zedGraph, query, type);
                             break;
                     }
                     break;
@@ -283,9 +301,7 @@ namespace CSEQ
                                 break;
                             case 3:
                                 Reporte.Enabled = true;
-                                //query = "CALL consultaPorEdad();";
-                                type = "Barra";
-                                //Util.graphData(zedGraph, query, type);
+                                actualizaEdades();
                                 break;
                             case 4:
                                 Reporte.Enabled = true;
@@ -330,15 +346,15 @@ namespace CSEQ
                         {
                             case 0:
                                 Reporte.Enabled = true;
-                                query = "";
+                                query = "CALL consultaOtrosEstados();";
                                 type = "Barra";
-                                //Util.graphData(zedGraph, query, type);
+                                Util.graphData(zedGraph, query, type);
                                 break;
                             case 1:
                                 Reporte.Enabled = true;
-                                query = "CALL ";
+                                query = "CALL consultaExtranjeros();";
                                 type = "Barra";
-                                //Util.graphData(zedGraph, query, type);
+                                Util.graphData(zedGraph, query, type);
                                 break;
                         }
                         break;
@@ -366,6 +382,7 @@ namespace CSEQ
         {
             actilizaLenguajes();
         }
+
 
         private void actilizaLenguajes()
         {
@@ -419,9 +436,148 @@ namespace CSEQ
 
         private void Reporte_Click(object sender, EventArgs e)
         {
-
+            String periodoRep;
+            if (todoscensos_radio.Checked)
+            {
+                periodoRep = "(Todos los censos)";
+            }
+            else
+            {
+                periodoRep = ID_censo.SelectedValue.ToString();
+            }
+            Util.generaPDF(query, titulo.Text, periodoRep);
         }
 
+        private void ninos_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEdades();
+        }
+
+        private void adolescentes_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEdades();
+        }
+
+        private void adulto_mayor_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEdades();
+        }
+
+        private void adultoMayor_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEdades();
+        }
+
+        private void anciano_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaEdades();
+        }
+
+        private void actualizaEdades()
+        {
+            if (todoscensos_radio.Checked)
+            {
+                if (ninos_radio.Checked)
+                {
+                    query = "CALL consultaEdadNinos();";
+                }
+                if (adolescentes_radio.Checked)
+                {
+                    query = "CALL consultaEdadAdolescentes();";
+                }
+                if (adulto_mayor_radio.Checked)
+                {
+                    query = "CALL consultaEdadAdultosJovenes();";
+                }
+                if (adultoMayor_radio.Checked)
+                {
+                    query = "CALL consultaEdadAdultosMayores();";
+                }
+                if (anciano_radio.Checked)
+                {
+                    query = "CALL consultaEdadAncianos();";
+                }
+            }
+            else
+            {
+                if (ninos_radio.Checked)
+                {
+                    query = "CALL consultaEdadNinosPorCenso("+ ID_censo.SelectedValue.ToString() +");";
+                }
+                if (adolescentes_radio.Checked)
+                {
+                    query = "CALL consultaEdadAdolescentesPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                }
+                if (adulto_mayor_radio.Checked)
+                {
+                    query = "CALL consultaEdadAdultosJovenesPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                }
+                if (adultoMayor_radio.Checked)
+                {
+                    query = "CALL consultaEdadAdultosMayoresPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                }
+                if (anciano_radio.Checked)
+                {
+                    query = "CALL consultaEdadAncianosPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                }
+            }
+
+            Util.graphData(zedGraph, query, "Barra");
+        }
+
+
+        private void actualizaHijos()
+        {
+            if (todoscensos_radio.Checked)
+            {
+                if (conHijos_radio.Checked)
+                {
+                    if (hijos_sordos_radio.Checked)
+                    {
+                        query = "CALL consultaConHijosSordos();";
+                    }
+                    else
+                    {
+                        query = "CALL consultaConHijosNoSordos();";
+                    }
+                }
+                if (sinHijos_radio.Checked)
+                {
+                    query = "CALL consultaSinHijos();";
+                }
+            }
+            else
+            {
+                if (conHijos_radio.Checked)
+                {
+                    if (hijos_sordos_radio.Checked)
+                    {
+                        query = "CALL consultaConHijosSordosPorCenso("+ ID_censo.SelectedValue.ToString() +");";
+                    }
+                    else
+                    {
+                        query = "CALL consultaConHijosNoSordosPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                    }
+                }
+                if (sinHijos_radio.Checked)
+                {
+                    query = "CALL consultaSinHijosPorCenso(" + ID_censo.SelectedValue.ToString() + ");";
+                }
+            }
+
+            Util.graphData(zedGraph, query, "Barra");
+            
+        }
+
+        private void hijos_noSordos_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaHijos();
+        }
+
+        private void hijos_sordos_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            actualizaHijos();
+        }
 
     }
 }

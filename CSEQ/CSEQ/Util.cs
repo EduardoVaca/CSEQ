@@ -624,14 +624,36 @@ namespace CSEQ
             dt = getData(query);
             String[] nombres = new String[dt.Rows.Count];
             //Tablas
-            PdfPTable tabla = new PdfPTable(dt.Columns.Count);
+            PdfPTable tabla; //= new PdfPTable(dt.Columns.Count);
+            Boolean multiples=false;
+            if (dt.Rows.Count > 15)
+            {
+                tabla = new PdfPTable(dt.Columns.Count * 2);
+                multiples = true;
+            }
+            else
+            {
+                tabla = new PdfPTable(dt.Columns.Count);
+            }
             // Obtenemos los encabezados de las columnas
-            List listaItems = new List(List.ALPHABETICAL);
             for (int i = 0; i < dt.Columns.Count; i++)
             {
+                
                 PdfPCell celda = new PdfPCell(new Phrase(dt.Columns[i].ToString()));
+                
                 celda.HorizontalAlignment = 1;
                 tabla.AddCell(celda);
+            }
+            if (multiples)
+            {
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+
+                    PdfPCell celda = new PdfPCell(new Phrase(dt.Columns[i].ToString()));
+
+                    celda.HorizontalAlignment = 1;
+                    tabla.AddCell(celda);
+                }
             }
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -648,10 +670,14 @@ namespace CSEQ
             //Grafica del reporte
             iTextSharp.text.Image imgLogo = iTextSharp.text.Image.GetInstance("Resources/Logo.jpg");
             imgLogo.ScalePercent(10);
+            //imgLogo.Alignment = 0;
+
             imgLogo.SetAbsolutePosition(50,doc.PageSize.Height - 200);
+
             iTextSharp.text.Image imgGrafica = iTextSharp.text.Image.GetInstance("Grafica.png");
             imgGrafica.ScalePercent(60);
             imgGrafica.Alignment = 1;
+
             Paragraph titulo = new Paragraph("Censo de Población y Desarrollo Integral para Personas con Discapacidad Auditiva \n\n");
             titulo.Alignment = 1;
             titulo.Font.Size= 10f;
@@ -690,8 +716,6 @@ namespace CSEQ
             doc.Add(TituloReporte);
             doc.Add(new Paragraph(" "));
             doc.Add(tabla);
-            doc.Add(listaItems);
-            doc.Add(new Paragraph(" "));
             doc.Add( imgGrafica );
 
             doc.Add(new Paragraph(" "));
@@ -704,7 +728,10 @@ namespace CSEQ
             cbPie.SetColorFill(iTextSharp.text.BaseColor.BLACK);
             cbPie.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "Página: " + writer.PageNumber.ToString(), 540, 25, 0);
             cbPie.EndText();
-            
+
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph(" "));
+
             Paragraph piePagina = new Paragraph("Esta muestra se realizó con datos cualitativos y cuantitativos obtenidos en el Censo de Población y Desarrollo Integral del (año o período): "
                     +periodo+" para personas con discapacidad auditiva, realizado por la Comisión de Personas Sordas del Estado de Querétaro."
                     +"\nNota 1: Los datos obtenidos exponen una realidad aproximada sobre la comunidad de personas Sordas."
@@ -712,7 +739,11 @@ namespace CSEQ
                     +"\nNota 2: Según el Censo de Población y Vivienda 2010 (INEGI) se contaron 7,178 personas con discapacidad auditiva en el Estado de Querétaro.");
             piePagina.IndentationLeft = 15f;
             piePagina.IndentationRight = 15f;
+            piePagina.SpacingBefore = 15f;
+            piePagina.SpacingAfter = 15f;
             piePagina.Font.Size = 10f;
+
+
             doc.Add(piePagina);
             doc.Close();
             
