@@ -691,6 +691,8 @@
             this.zedGraph.ScrollMinY2 = 0D;
             this.zedGraph.Size = new System.Drawing.Size(1252, 631);
             this.zedGraph.TabIndex = 106;
+            this.zedGraph.ZoomButtons = System.Windows.Forms.MouseButtons.None;
+            this.zedGraph.ZoomStepFraction = 0D;
             // 
             // consultas_demografia
             // 
