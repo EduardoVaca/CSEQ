@@ -167,6 +167,7 @@ namespace CSEQ
             if (busqueda_grid.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 //loading_lb.Visible = true;
+                CURP_txt.Enabled = false;
                 Cursor = Cursors.WaitCursor;
                 buscar_blanco.Visible = true;
                 buscar_gris.Visible = false;
@@ -650,6 +651,7 @@ namespace CSEQ
             respuesta = MessageBox.Show("¿Desea continuar? Perderá los cambios sin guardar", "Confirmación", MessageBoxButtons.YesNo);
             if (respuesta == System.Windows.Forms.DialogResult.Yes)
             {
+                CURP_txt.Enabled = true;
                 Cursor = Cursors.WaitCursor;
                 Util.clear(this);
                 cargaCombosBoxes();
