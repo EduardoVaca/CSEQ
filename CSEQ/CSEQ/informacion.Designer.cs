@@ -131,12 +131,12 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(924, 667);
+            this.label6.Location = new System.Drawing.Point(912, 667);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(275, 32);
             this.label6.TabIndex = 18;
-            this.label6.Text = "giselacasamr@gmail.com";
+            this.label6.Text = "giselacasamr@gmail.com";           
             // 
             // label7
             // 
@@ -170,12 +170,12 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(924, 430);
+            this.label9.Location = new System.Drawing.Point(912, 430);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(268, 32);
             this.label9.TabIndex = 21;
-            this.label9.Text = "max.ram.car@gmail.com";
+            this.label9.Text = "max.ram.car@gmail.com";            
             // 
             // back_picture
             // 
@@ -224,12 +224,12 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(924, 194);
+            this.label11.Location = new System.Drawing.Point(912, 194);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(301, 32);
             this.label11.TabIndex = 27;
-            this.label11.Text = "eduardo.vaca.g@gmail.com";
+            this.label11.Text = "eduardo.vaca.g@gmail.com";            
             // 
             // label12
             // 
@@ -237,12 +237,12 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(924, 354);
+            this.label12.Location = new System.Drawing.Point(912, 354);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(297, 32);
             this.label12.TabIndex = 28;
-            this.label12.Text = "azu.barraza.jim@gmail.com";
+            this.label12.Text = "azu.barraza.jim@gmail.com";            
             // 
             // label13
             // 
@@ -250,12 +250,12 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft MHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(924, 281);
+            this.label13.Location = new System.Drawing.Point(912, 281);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(316, 32);
+            this.label13.Size = new System.Drawing.Size(345, 32);
             this.label13.TabIndex = 29;
-            this.label13.Text = "cor.sistemas.oj@outlook.com";
+            this.label13.Text = "ojeda.christphoer@outlook.com";            
             // 
             // informacion
             // 
