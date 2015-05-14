@@ -106,15 +106,21 @@ namespace CSEQ
             {
                 modificar_pb.Enabled = true; //Activacion de botones
                 eliminar_pb.Enabled = true;
-                nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                nombre_selected = busqueda_grid.Rows[e.RowIndex].Cells[0].Value.ToString();                
+
                 String sqlActiveRow = "SELECT DISTINCT * FROM Colonia c, Estado e, Municipio m WHERE ";
-                sqlActiveRow += " c.nombre= '" + nombre_selected + "' AND c.ID_municipio=m.ID_municipio AND m.ID_estado=e.ID_estado;";
+                sqlActiveRow += " c.nombre= '" + nombre_selected + "' AND c.ID_municipio=m.ID_municipio AND m.ID_estado=e.ID_estado;";                
+                
                 Util.showData(this, sqlActiveRow);
                 if (ID_municipio.SelectedItem != null)
                 {
                     idMunicpio = Int32.Parse(ID_municipio.SelectedValue.ToString());
                     ID_selected = Int32.Parse(ID_municipio.SelectedValue.ToString());
                 }
+                String valorComboBox = ID_estado.SelectedValue.ToString();
+                Util.llenarComboBox(ID_municipio, "SELECT ID_municipio, nombre FROM Municipio WHERE " +
+                                                    "ID_estado = " + valorComboBox + ";");
+                Util.showData(this, sqlActiveRow);
             }
             Cursor = Cursors.Default;
         }

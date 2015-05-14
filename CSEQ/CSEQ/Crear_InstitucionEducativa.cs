@@ -329,7 +329,7 @@ namespace CSEQ
 
         private void Buscar_MouseLeave(object sender, EventArgs e)
         {
-            Util.minimizarCualquierIcono(Buscar, new Size(28, 36), 268, 275);
+            Util.minimizarCualquierIcono(Buscar, new Size(28, 36), 26, 275);
         }
 
         private void nuevoRegistro_pb_MouseHover(object sender, EventArgs e)
