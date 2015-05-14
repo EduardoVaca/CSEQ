@@ -624,6 +624,8 @@ namespace CSEQ
             dt = getData(query);
             if (dt == null)
             {
+                //doc.Close();
+                salida.Close();
                 return;
             }
             String[] nombres = new String[dt.Rows.Count];
