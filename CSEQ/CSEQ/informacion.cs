@@ -36,5 +36,6 @@ namespace CSEQ
         {
             Util.minimizarIconoAtras(back_picture);
         }
+
     }
 }
