@@ -22,48 +22,5 @@ namespace CSEQ.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=cseq")]
-        public string cseqConnectionString {
-            get {
-                return ((string)(this["cseqConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=cpseqcenso.org;user id=cpseqcen;persistsecurityinfo=True;database=cpseqcen" +
-            "_censos")]
-        public string cpseqcen_censosConnectionString {
-            get {
-                return ((string)(this["cpseqcen_censosConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=cpseqcenso.org;user id=cpseqcen;database=cpseqcen_censos;persistsecurityin" +
-            "fo=True")]
-        public string censosPrueba {
-            get {
-                return ((string)(this["censosPrueba"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=cpseqcenso.org;user id=cpseqcen_Admin;password=ajaksordos%25;database=cpse" +
-            "qcen_censos;persistsecurityinfo=True")]
-        public string cpseqcen_censosConnectionString1 {
-            get {
-                return ((string)(this["cpseqcen_censosConnectionString1"]));
-            }
-        }
     }
 }

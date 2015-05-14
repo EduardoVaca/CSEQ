@@ -341,6 +341,36 @@ namespace CSEQ.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] itextsharp {
+            get {
+                object obj = ResourceManager.GetObject("itextsharp", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] itextsharp_pdfa {
+            get {
+                object obj = ResourceManager.GetObject("itextsharp_pdfa", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] itextsharp_xtra {
+            get {
+                object obj = ResourceManager.GetObject("itextsharp_xtra", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Login {
@@ -417,6 +447,16 @@ namespace CSEQ.Properties {
             get {
                 object obj = ResourceManager.GetObject("MarcaG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MySql_Data {
+            get {
+                object obj = ResourceManager.GetObject("MySql_Data", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
