@@ -351,9 +351,11 @@ namespace CSEQ
                             {
                                 ctrl.Text = table.Rows[0][nombreTemporal].ToString();
                             }
+                            #pragma warning disable 0168
                             catch (Exception ex)
+                            #pragma warning restore 0168
                             {
-
+                                
                             }
                     }
                 }
@@ -418,7 +420,9 @@ namespace CSEQ
                         {
                             ctrl.Text = table.Rows[0][nombreTemporal].ToString();
                         }
+                        #pragma warning disable 0168
                         catch (Exception ex)
+                        #pragma warning restore 0168
                         {
 
                         }
@@ -607,10 +611,12 @@ namespace CSEQ
             FileStream salida;
             try
             {
-                 salida = new FileStream("Reporte.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.Read); 
+                 salida = new FileStream("Reporte.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.Read);
             }
+            #pragma warning disable 0168
             catch (Exception ex)
-            {
+            #pragma warning restore 0168
+            {   
                 MessageBox.Show("Archivo abierto \n Cierre el reporte anterior para crear uno nuevo","Aceptar",MessageBoxButtons.OK);
                 return;
             }
