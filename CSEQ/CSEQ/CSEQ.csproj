@@ -305,7 +305,6 @@
     <EmbeddedResource Include="SplashWindow.resx">
       <DependentUpon>SplashWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CSEQ_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -461,7 +460,6 @@
     <None Include="Resources\BuscarGmini.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="auxiliares.xml" />
     <None Include="Resources\itextsharp.dll" />
     <None Include="Resources\itextsharp.pdfa.dll" />
     <None Include="Resources\itextsharp.xtra.dll" />
