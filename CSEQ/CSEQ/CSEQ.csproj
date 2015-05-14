@@ -23,7 +23,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>6</ApplicationRevision>
+    <SupportUrl>http://cpseq.org</SupportUrl>
+    <ErrorReportUrl>http://cpseq.org</ErrorReportUrl>
+    <ProductName>CPSEQ</ProductName>
+    <PublisherName>Tech Hands</PublisherName>
+    <SuiteName>CPSEQ</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -406,9 +412,9 @@
     <None Include="Resources\UsuarioG.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Logo.jpg">
+    <Resource Include="Resources\Logo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo2N.png" />
@@ -490,6 +496,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CPSEQ.ico" />
+    <None Include="Resources\Logo.bmp" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="MySql.Data">
@@ -504,6 +511,11 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client,KB2468871">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29 and Update for .NET Framework 4 %28KB2468871%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
