@@ -682,7 +682,8 @@ namespace CSEQ
                 }
             }
             //Grafica del reporte
-            iTextSharp.text.Image imgLogo = iTextSharp.text.Image.GetInstance("Resources/Logo.jpg");
+            CSEQ.Properties.Resources.Logo.Save("Logo.jpeg");
+            iTextSharp.text.Image imgLogo = iTextSharp.text.Image.GetInstance("Logo.jpeg");
             imgLogo.ScalePercent(10);
             //imgLogo.Alignment = 0;
 
