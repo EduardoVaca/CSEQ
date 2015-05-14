@@ -118,14 +118,22 @@ namespace CSEQ
         /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
-            String sMinimo = "$" + minimo_txt.Text;
-            String sMaximo = "$" + maximo_txt.Text;
-
-            if (Util.executeStoredProcedure("registrarSueldo", sMinimo, sMaximo))
+            if (minimo_txt.Text.Length > 0 && maximo_txt.Text.Length > 0)
             {
-                MessageBox.Show("El Sueldo se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnSueldo", "%");
+                String sMinimo = "$" + minimo_txt.Text;
+                String sMaximo = "$" + maximo_txt.Text;
+
+                if (Util.executeStoredProcedure("registrarSueldo", sMinimo, sMaximo))
+                {
+                    MessageBox.Show("El Sueldo se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnSueldo", "%");
+                }
             }
+            else
+            {
+                MessageBox.Show("No se puede guardar un registro vacío");
+            }
+            
         }
 
         /*Metodo que modifica un registro en la Base*/

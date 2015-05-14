@@ -114,13 +114,21 @@ namespace CSEQ
         /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
-            String aNombre = nombre_txt.Text;
-
-            if (Util.executeStoredProcedure("registrarAreaTrabajo", aNombre))
+            if (nombre_txt.Text.Length > 0)
             {
-                MessageBox.Show("Area de Trabajo se guardo con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
+                String aNombre = nombre_txt.Text;
+
+                if (Util.executeStoredProcedure("registrarAreaTrabajo", aNombre))
+                {
+                    MessageBox.Show("Area de Trabajo se guardo con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAreaTrabajo", "%");
+                }
             }
+            else
+            {
+                MessageBox.Show("No se puede guardar un registro vacío");
+            }
+            
         }
 
         /*Metodo que modifica un registro en la Base*/

@@ -163,11 +163,17 @@ namespace CSEQ
                 cDelegacion = "null";
 
             if (cNombre.Length > 0)
+            {
                 if (Util.executeStoredProcedure("registrarColonia", cNombre, cID_municipio, cDelegacion))
                 {
                     MessageBox.Show("La Colonia se ha registrado con exito!");
                     Util.fillGrid(busqueda_grid, "busquedaEnColonia", "%");
                 }
+            }
+            else
+            {
+                MessageBox.Show("No se puede guardar un registro vacío");
+            }  
         }
 
         /*Metodo que modifica un registro en la Base*/

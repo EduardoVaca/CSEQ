@@ -170,13 +170,21 @@ namespace CSEQ
         /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
-            String mNombre = nombre_txt.Text;
-
-            if (Util.executeStoredProcedure("registrarMarca", mNombre))
+            if (nombre_txt.Text.Length > 0)
             {
-                MessageBox.Show("La Marca se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnMarca", "%");
+                String mNombre = nombre_txt.Text;
+
+                if (Util.executeStoredProcedure("registrarMarca", mNombre))
+                {
+                    MessageBox.Show("La Marca se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnMarca", "%");
+                }
             }
+            else
+            {
+                MessageBox.Show("No se puede guardar un registro vacío");
+            }
+           
         }
 
         /*Metodo que modifica un registro en la Base*/

@@ -109,12 +109,19 @@ namespace CSEQ
             String loginU = login_txt.Text;
             String passwordU = password_usuario_txt.Text;
             int rolU = Int32.Parse(ID_rol.SelectedValue.ToString());
-
-            if (Util.executeStoredProcedure("registrarUsuario", loginU, passwordU, rolU))
+            if (loginU.Length > 0 && passwordU.Length > 0)
             {
-                MessageBox.Show("El usuario se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
+                if (Util.executeStoredProcedure("registrarUsuario", loginU, passwordU, rolU))
+                {
+                    MessageBox.Show("El usuario se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnUsuario", "%");
+                }
             }
+            else
+            {
+                MessageBox.Show("No se puede guardar un registro vacío");
+            }
+            
         }
 
         /*Metodo que modifica un registro en la Base*/

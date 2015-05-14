@@ -122,13 +122,21 @@ namespace CSEQ
         /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
-            String cNombre = causa_txt.Text;
-
-            if (Util.executeStoredProcedure("registrarCausa", cNombre))
+            if (causa_txt.Text.Length > 0)
             {
-                MessageBox.Show("La Causa se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
+                String cNombre = causa_txt.Text;
+
+                if (Util.executeStoredProcedure("registrarCausa", cNombre))
+                {
+                    MessageBox.Show("La Causa se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnCausa", "%");
+                }
             }
+            else
+            {
+                MessageBox.Show("No se puede guardar un registro vacío");
+            }
+                       
         }
 
         /*Metodo que modifica un registro en la Base*/

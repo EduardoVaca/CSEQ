@@ -809,6 +809,52 @@ namespace CSEQ
                 buscar();
             }
         }
+
+        private void label49_Click(object sender, EventArgs e)
+        {
+            String nombreH = nombreHijo_txt.Text;
+            String fechaNacH = Util.formatoFechaMySQL(fechaNacimientoHijo.Value.ToShortDateString());
+            Boolean sordoH = sordoHijo_check.Checked;
+            String curpP = CURP_txt.Text;
+
+            if (Util.executeStoredProcedure("registrarHijo", nombreH, fechaNacH, sordoH, curpP))
+            {
+                MessageBox.Show("El Hijo se ha registrado con exito!");
+            }
+            hijos_grid.Visible = true;
+            nombreHijo_txt.Text = "";
+            sordoHijo_check.Checked = false;
+            Util.fillGrid(hijos_grid, "BusquedaEnHijo", curpP);
+        }
+
+        private void label51_Click(object sender, EventArgs e)
+        {
+            String nombreHijoP = nombreHijo_txt.Text;
+            Boolean esSordoP = sordoHijo_check.Checked;
+            String fechaNacP = Util.formatoFechaMySQL(fechaNacimientoHijo.Value.ToShortDateString());
+
+            if (Util.executeStoredProcedure("modificarHijo", ID_hijoSelected, nombreHijoP, fechaNacP, esSordoP))
+            {
+                MessageBox.Show("El hijo se ha modificado con exito!");
+                Util.fillGrid(hijos_grid, "BusquedaEnHijo", CURP_selected);
+            }
+        }
+
+        private void label68_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+
+            respuesta = MessageBox.Show("¿Seguro desea eliminar al hijo: " + nombreHijo_txt.Text + "?",
+                                           "Mensaje de Confirmación", MessageBoxButtons.YesNo);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (Util.executeStoredProcedure("eliminarHijo", ID_hijoSelected))
+                {
+                    MessageBox.Show("El hijo se ha eliminado con exito!");
+                    Util.fillGrid(hijos_grid, "BusquedaEnHijo", CURP_selected);
+                }
+            }
+        }
         
        
     }

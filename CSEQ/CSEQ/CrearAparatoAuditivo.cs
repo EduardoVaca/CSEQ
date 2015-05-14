@@ -125,14 +125,21 @@ namespace CSEQ
         /*Metodo que guarda un nuevo registro en la Base*/
         private void guardar_pb_Click(object sender, EventArgs e)
         {
-            String mTipo = tipo_txt.Text;
-            int mID_marca = Int32.Parse(ID_marca.SelectedValue.ToString());
-
-            if (Util.executeStoredProcedure("registrarAparatoAuditivo", mTipo, mID_marca))
+            if (tipo_txt.Text.Length > 0)
             {
-                MessageBox.Show("El Aparato Auditivo se ha registrado con exito!");
-                Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
+                String mTipo = tipo_txt.Text;
+                int mID_marca = Int32.Parse(ID_marca.SelectedValue.ToString());
+
+                if (Util.executeStoredProcedure("registrarAparatoAuditivo", mTipo, mID_marca))
+                {
+                    MessageBox.Show("El Aparato Auditivo se ha registrado con exito!");
+                    Util.fillGrid(busqueda_grid, "busquedaEnAparatoAuditivo", "%");
+                }
             }
+            else
+            {
+                MessageBox.Show("No se puede guardar un registro vacío");
+            }            
         }
 
         /*Metodo que modifica un registro en la Base*/

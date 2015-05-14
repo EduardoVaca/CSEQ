@@ -242,11 +242,18 @@ namespace CSEQ
             Boolean iEspecializada = especializada_check.Checked;
 
             if (iNombre.Length > 0)
+            {
                 if (Util.executeStoredProcedure("registrarInstitucionEducativa", iNombre, iCalle, iTelefono, iCorreo, iPrivada, iEspecializada, iID_colonia))
                 {
                     MessageBox.Show("La Institucion Educativa se registro con exito!");
                     Util.fillGrid(busqueda_grid, "busquedaEnInstitucionEducativa", "%");
                 }
+            }
+            else
+            {
+                MessageBox.Show("No se puede guardar un registro vacío");
+            }
+               
         }
 
         private void modificar_pb_Click(object sender, EventArgs e)

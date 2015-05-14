@@ -54,6 +54,7 @@
             this.guardar_pb = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nuevoRegistro_pb = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.close_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atras_picture)).BeginInit();
             this.Busqueda_grp.SuspendLayout();
@@ -344,6 +345,18 @@
             this.nuevoRegistro_pb.MouseLeave += new System.EventHandler(this.nuevoRegistro_pb_MouseLeave);
             this.nuevoRegistro_pb.MouseHover += new System.EventHandler(this.nuevoRegistro_pb_MouseHover);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(740, 423);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 42);
+            this.label2.TabIndex = 77;
+            this.label2.Text = "*";
+            // 
             // crearAreaTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -354,6 +367,7 @@
             this.BackgroundImage = global::CSEQ.Properties.Resources.fondonopesado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1829, 1076);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nuevoRegistro_pb);
             this.Controls.Add(this.eliminar_pb);
@@ -416,5 +430,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox nuevoRegistro_pb;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
