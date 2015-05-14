@@ -3,7 +3,7 @@
 DROP TABLE IF EXISTS Persona;
 CREATE TABLE Persona
 (
-	CURP char(18) not null unique, 
+	CURP char(18) not null, 
 	nombre varchar(80) not null, 
 	fecha_nacimiento DATETIME not null,
 	sexo_masculino boolean not null,
